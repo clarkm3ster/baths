@@ -1,0 +1,143 @@
+/**
+ * DOMES API client — fetch wrapper for all backend endpoints.
+ *
+ * All functions return typed promises. Errors are thrown with
+ * a descriptive message so callers can catch and display.
+ */
+
+import type {
+  Profile,
+  DomeData,
+  CostBenchmark,
+  CostCalculation,
+  ROIResult,
+  ScaleResult,
+  AvoidableEvent,
+  Circumstance,
+  CompareResult,
+} from '../types';
+
+// ---------------------------------------------------------------------------
+// Base fetch helper
+// ---------------------------------------------------------------------------
+
+const BASE = '/api';
+
+async function request<T>(path: string, options?: RequestInit): Promise<T> {
+  const res = await fetch(`${BASE}${path}`, {
+    headers: { 'Content-Type': 'application/json' },
+    ...options,
+  });
+  if (!res.ok) {
+    const body = await res.text().catch(() => '');
+    throw new Error(`API ${res.status}: ${body || res.statusText}`);
+  }
+  return res.json();
+}
+
+function get<T>(path: string): Promise<T> {
+  return request<T>(path);
+}
+
+function post<T>(path: string, body: unknown): Promise<T> {
+  return request<T>(path, {
+    method: 'POST',
+    body: JSON.stringify(body),
+  });
+}
+
+function put<T>(path: string, body: unknown): Promise<T> {
+  return request<T>(path, {
+    method: 'PUT',
+    body: JSON.stringify(body),
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Profile routes
+// ---------------------------------------------------------------------------
+
+export function generateProfile(
+  circumstances: Record<string, boolean | string>,
+  name?: string
+): Promise<Profile> {
+  return post('/profiles/generate', { circumstances, name });
+}
+
+export function listProfiles(params?: {
+  is_sample?: boolean;
+  limit?: number;
+  offset?: number;
+}): Promise<Profile[]> {
+  const qs = new URLSearchParams();
+  if (params?.is_sample !== undefined) qs.set('is_sample', String(params.is_sample));
+  if (params?.limit !== undefined) qs.set('limit', String(params.limit));
+  if (params?.offset !== undefined) qs.set('offset', String(params.offset));
+  const q = qs.toString();
+  return get(`/profiles${q ? `?${q}` : ''}`);
+}
+
+export function getProfile(id: string): Promise<Profile> {
+  return get(`/profiles/${id}`);
+}
+
+export function getDomeData(id: string): Promise<DomeData> {
+  return get(`/profiles/${id}/dome`);
+}
+
+export function compareProfiles(profileIds: string[]): Promise<CompareResult> {
+  return post('/profiles/compare', { profile_ids: profileIds });
+}
+
+export function updateProfile(
+  id: string,
+  circumstances: Record<string, boolean | string>
+): Promise<Profile> {
+  return put(`/profiles/${id}`, { circumstances });
+}
+
+export function getProfileVersions(id: string): Promise<Profile[]> {
+  return get(`/profiles/${id}/versions`);
+}
+
+export function getCircumstances(): Promise<Circumstance[]> {
+  return get('/profiles/circumstances');
+}
+
+// ---------------------------------------------------------------------------
+// Cost routes
+// ---------------------------------------------------------------------------
+
+export function calculateCost(
+  circumstances: Record<string, boolean | string>,
+  systems: string[]
+): Promise<CostCalculation> {
+  return post('/cost/calculate', { circumstances, systems });
+}
+
+export function getCostBenchmarks(): Promise<CostBenchmark[]> {
+  return get('/cost/benchmarks');
+}
+
+export function getSystemBenchmark(systemId: string): Promise<CostBenchmark> {
+  return get(`/cost/benchmarks/${systemId}`);
+}
+
+export function calculateROI(params: {
+  coordination_cost: number;
+  annual_savings: number;
+  years: number;
+}): Promise<ROIResult> {
+  return post('/cost/roi', params);
+}
+
+export function calculateScale(params: {
+  per_person_savings: number;
+  populations: Record<string, number>;
+}): Promise<ScaleResult> {
+  return post('/cost/scale', params);
+}
+
+export function getAvoidableEvents(): Promise<AvoidableEvent[]> {
+  return get('/cost/avoidable-events');
+}
