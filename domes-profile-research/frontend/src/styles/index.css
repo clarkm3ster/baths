@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Crimson Text", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-bg: #FFFFFF;
+  --color-surface: #FAFAFA;
+  --color-surface-alt: #F5F5F5;
+  --color-border: #E0E0E0;
+  --color-border-light: #F0F0F0;
+  --color-text-primary: #000000;
+  --color-text-secondary: #444444;
+  --color-text-tertiary: #888888;
+
+  --color-health: #1A6B3C;
+  --color-justice: #8B1A1A;
+  --color-housing: #1A3D8B;
+  --color-income: #6B5A1A;
+  --color-education: #5A1A6B;
+  --color-child-welfare: #1A6B6B;
+
+  --color-savings: #006600;
+  --color-cost: #CC0000;
+  --color-neutral: #666666;
+}
+
+@layer base {
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0 !important;
+  }
+
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: #000000;
+    color: #FFFFFF;
+  }
+}
+
+@layer components {
+  .detail-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 90;
+    animation: fadeIn 0.15s ease-out;
+  }
+
+  .detail-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 520px;
+    max-width: 90vw;
+    background: #FFFFFF;
+    border-left: 2px solid #000000;
+    z-index: 100;
+    overflow-y: auto;
+    animation: slideIn 0.2s ease-out;
+  }
+
+  .timeline-line {
+    position: absolute;
+    left: 23px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-border);
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000000;
+    background: #FFFFFF;
+  }
+
+  .timeline-dot--crisis {
+    background: #CC0000;
+    border-color: #CC0000;
+  }
+
+  .timeline-dot--gap {
+    background: #FFFFFF;
+    border-color: #CC0000;
+  }
+
+  .timeline-dot--entry {
+    background: #000000;
+    border-color: #000000;
+  }
+
+  .timeline-dot--current {
+    background: #000000;
+    border-color: #000000;
+    width: 20px;
+    height: 20px;
+    left: 14px;
+  }
+
+  .cost-bar {
+    height: 24px;
+    background: var(--color-surface-alt);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cost-bar__fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: width 0.6s ease-out;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-tertiary);
+    margin-bottom: 8px;
+  }
+
+  .stat-number {
+    font-family: var(--font-mono);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .citation-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-tertiary);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .citation-tag:hover {
+    border-color: #000000;
+    color: #000000;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+}
