@@ -74,7 +74,7 @@ export function listProfiles(params?: {
   if (params?.limit !== undefined) qs.set('limit', String(params.limit));
   if (params?.offset !== undefined) qs.set('offset', String(params.offset));
   const q = qs.toString();
-  return get(`/profiles${q ? `?${q}` : ''}`);
+  return get<{ items: Profile[] }>(`/profiles${q ? `?${q}` : ''}`).then(r => r.items);
 }
 
 export function getProfile(id: string): Promise<Profile> {
@@ -86,7 +86,28 @@ export function getDomeData(id: string): Promise<DomeData> {
 }
 
 export function compareProfiles(profileIds: string[]): Promise<CompareResult> {
-  return post('/profiles/compare', { profile_ids: profileIds });
+  return post<Record<string, unknown>>('/profiles/compare', { profile_ids: profileIds }).then(r => {
+    const p1 = r.profile_1 as Profile;
+    const p2 = r.profile_2 as Profile;
+    const diff = r.differences as Record<string, unknown>;
+    return {
+      profiles: [p1, p2],
+      deltas: {
+        cost_delta: (diff.cost_difference as number) ?? 0,
+        savings_delta: (diff.savings_difference as number) ?? 0,
+        systems_delta: ((diff.systems_only_in_1 as string[])?.length ?? 0) - ((diff.systems_only_in_2 as string[])?.length ?? 0),
+        gaps_delta: 0,
+        circumstances_diff: Object.keys({
+          ...((p1.circumstances ?? {}) as Record<string, unknown>),
+          ...((p2.circumstances ?? {}) as Record<string, unknown>),
+        }).filter(k => {
+          const c1 = (p1.circumstances as Record<string, unknown>)?.[k];
+          const c2 = (p2.circumstances as Record<string, unknown>)?.[k];
+          return c1 !== c2;
+        }),
+      },
+    };
+  });
 }
 
 export function updateProfile(
@@ -139,5 +160,5 @@ export function calculateScale(params: {
 }
 
 export function getAvoidableEvents(): Promise<AvoidableEvent[]> {
-  return get('/cost/avoidable-events');
+  return get<{ events: AvoidableEvent[] }>('/cost/avoidable-events').then(r => r.events);
 }
