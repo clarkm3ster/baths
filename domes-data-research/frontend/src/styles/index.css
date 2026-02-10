@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Crimson Text", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-bg: #FFFFFF;
+  --color-surface: #F5F5F5;
+  --color-border: #E0E0E0;
+  --color-border-light: #EEEEEE;
+  --color-text: #000000;
+  --color-text-secondary: #555555;
+  --color-text-tertiary: #888888;
+  --color-health: #1A6B3C;
+  --color-justice: #8B1A1A;
+  --color-housing: #1A3D8B;
+  --color-income: #6B5A1A;
+  --color-education: #5A1A6B;
+  --color-child-welfare: #1A6B6B;
+  --color-connected: #333333;
+  --color-gap: #CC0000;
+  --color-consent: #006600;
+  --color-critical: #CC0000;
+  --color-high: #994400;
+  --color-moderate: #666600;
+  --color-low: #446644;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  /* Enforce brutalist no-radius on all elements */
+  *, *::before, *::after {
+    border-radius: 0 !important;
+  }
+}
+
+@layer components {
+  /* Slide-in detail panel */
+  .detail-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 480px;
+    max-width: 100vw;
+    background: #FFFFFF;
+    border-left: 2px solid #000000;
+    overflow-y: auto;
+    z-index: 100;
+    animation: slide-in 0.2s ease-out;
+  }
+
+  .detail-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.08);
+    z-index: 99;
+    animation: fade-in 0.15s ease-out;
+  }
+
+  /* Constellation fills available space with explicit height */
+  .constellation-wrapper {
+    position: relative;
+    width: 100%;
+    flex: 1 1 0%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .constellation-wrapper svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .detail-panel {
+      width: 100vw;
+    }
+  }
+}
