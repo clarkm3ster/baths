@@ -82,7 +82,62 @@ export function getProfile(id: string): Promise<Profile> {
 }
 
 export function getDomeData(id: string): Promise<DomeData> {
-  return get(`/profiles/${id}/dome`);
+  return get<Record<string, unknown>>(`/profiles/${id}/dome`).then(raw => {
+    const rawDomains = raw.domains as Array<Record<string, unknown>>;
+    const domains = rawDomains.map(d => {
+      const rawSystems = (d.systems ?? []) as Array<Record<string, unknown>>;
+      const domainKey = d.domain as string;
+      const systems = rawSystems.map(s => ({
+        id: s.id as string,
+        name: (s.label ?? s.name ?? s.id) as string,
+        acronym: ((s.id as string) ?? '').toUpperCase(),
+        domain: domainKey,
+        annual_cost: s.annual_cost as number,
+        coordinated_cost: Math.round((s.annual_cost as number) * (1 - ((s.coord_savings_pct as number) ?? 0.3))),
+      }));
+      const rawProvisions = (d.provisions ?? d.top_provisions ?? []) as Array<Record<string, unknown>>;
+      const rawGaps = (d.gaps ?? []) as Array<Record<string, unknown>>;
+      const rawBridges = (d.bridges ?? []) as Array<Record<string, unknown>>;
+      return {
+        domain: domainKey,
+        label: d.label as string,
+        color: d.color as string,
+        systems,
+        provisions_count: rawProvisions.length,
+        gaps_count: rawGaps.length,
+        annual_cost: d.annual_cost as number,
+        coordinated_cost: d.coordinated_cost as number,
+        savings: d.savings as number,
+        top_provisions: rawProvisions.slice(0, 6).map(p => ({
+          citation: (p.id ?? p.citation ?? '') as string,
+          title: (p.title ?? '') as string,
+          type: (p.type ?? '') as string,
+        })),
+        gaps: rawGaps.map((g, i) => ({
+          id: i,
+          system_a: (g.label ?? g.system_a ?? '') as string,
+          system_b: '',
+          barrier_type: (g.severity ?? g.barrier_type ?? '') as string,
+          severity: (g.severity ?? 'medium') as string,
+          consent_closable: false,
+        })),
+        bridges: rawBridges.map((b, i) => ({
+          id: i,
+          title: (b.label ?? b.title ?? '') as string,
+          bridge_type: (b.type ?? b.bridge_type ?? '') as string,
+          priority_score: b.impact === 'high' ? 9 : b.impact === 'medium' ? 6 : 3,
+          estimated_cost: (b.estimated_cost ?? '') as string,
+        })),
+      };
+    });
+    return {
+      profile: raw.profile as DomeData['profile'],
+      domains,
+      totals: raw.totals as DomeData['totals'],
+      connections: (raw.connections ?? []) as DomeData['connections'],
+      consent_pathways: raw.consent_pathways as DomeData['consent_pathways'],
+    } as DomeData;
+  });
 }
 
 export function compareProfiles(profileIds: string[]): Promise<CompareResult> {
