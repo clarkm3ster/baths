@@ -2,6 +2,7 @@ import { useState } from "react";
 import { generateArchitecture } from "../api/client";
 import type { Architecture } from "../types";
 import { DOMAIN_LABELS, DOMAIN_COLORS } from "../types";
+import BlueprintDiagram from "./BlueprintDiagram";
 
 type Tab = "models" | "designer" | "blueprints" | "compare" | "timeline" | "budget" | "risks";
 
@@ -290,6 +291,11 @@ export default function ArchitectureDesigner({ onGenerated, onNavigate }: Props)
                 })}
               </div>
             )}
+          </div>
+
+          {/* Architecture Blueprint Diagram */}
+          <div className="p-4 border-b border-[var(--color-border)]">
+            <BlueprintDiagram architecture={result} />
           </div>
 
           {/* Quick Navigation */}

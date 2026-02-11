@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import type { Architecture, Risk, Stakeholder, WorkforcePlan, AuthorityMap } from "../types";
+import type { Architecture, Risk, Stakeholder, WorkforcePlan, AuthorityMap, Phase } from "../types";
 
 interface Props {
   architectures: Architecture[];
@@ -131,6 +131,7 @@ export default function RiskDashboard({ architectures }: Props) {
               highSeverity={highSeverity}
               withMitigation={withMitigation}
               groupedRisks={groupedRisks}
+              phases={arch?.implementation_phases ?? []}
             />
           )}
 
@@ -156,33 +157,61 @@ export default function RiskDashboard({ architectures }: Props) {
 
 /* ============ RISK SECTION ============ */
 
+const SEVERITY_COLORS: Record<string, string> = {
+  high: "#8B1A1A",
+  moderate: "#6B5A1A",
+  low: "#1A6B3C",
+  none: "#E0E0E0",
+};
+
+const SEVERITY_LABELS: Record<string, string> = {
+  high: "H",
+  moderate: "M",
+  low: "L",
+  none: "",
+};
+
+function computeCellSeverity(
+  baseSeverity: string,
+  phaseIndex: number,
+  totalPhases: number
+): string {
+  if (baseSeverity === "none") return "none";
+
+  // Severity score: high=3, moderate=2, low=1
+  const scoreMap: Record<string, number> = { high: 3, moderate: 2, low: 1 };
+  const base = scoreMap[baseSeverity] ?? 2;
+
+  // Phase adjustment: early phases (0,1) get +0.5 boost, later phases get reduction
+  // The further into implementation, the more risk diminishes
+  const phaseRatio = totalPhases > 1 ? phaseIndex / (totalPhases - 1) : 0;
+  const adjustment = 0.5 - phaseRatio * 1.0; // +0.5 at start, -0.5 at end
+  const adjusted = base + adjustment;
+
+  if (adjusted >= 2.5) return "high";
+  if (adjusted >= 1.5) return "moderate";
+  return "low";
+}
+
 function RiskSection({
   risks,
   highSeverity,
   withMitigation,
   groupedRisks,
+  phases,
 }: {
   risks: Risk[];
   highSeverity: number;
   withMitigation: number;
   groupedRisks: Record<string, Risk[]>;
+  phases: Phase[];
 }) {
-  const matrixRef = useRef<HTMLDivElement>(null);
-  const [matrixSize, setMatrixSize] = useState({ w: 0, h: 0 });
-
-  const handleResize = useCallback(() => {
-    if (matrixRef.current) {
-      const rect = matrixRef.current.getBoundingClientRect();
-      setMatrixSize({ w: rect.width, h: rect.height });
-    }
-  }, []);
-
-  useEffect(() => {
-    handleResize();
-    const observer = new ResizeObserver(handleResize);
-    if (matrixRef.current) observer.observe(matrixRef.current);
-    return () => observer.disconnect();
-  }, [handleResize]);
+  const [tooltipCell, setTooltipCell] = useState<{
+    category: string;
+    phaseIndex: number;
+    x: number;
+    y: number;
+  } | null>(null);
 
   if (risks.length === 0) {
     return (
@@ -192,12 +221,41 @@ function RiskSection({
     );
   }
 
-  // Build risk matrix data
-  const likelihoodLabels = ["Low", "Moderate", "High"];
-  const impactLabels = ["Low", "Moderate", "High"];
-  const matrixCellSize = Math.min(120, (matrixSize.w - 80) / 3);
-  const svgW = matrixCellSize * 3 + 80;
-  const svgH = matrixCellSize * 3 + 60;
+  // Collect all categories present in risks (use predefined order, then extras)
+  const presentCategories = RISK_CATEGORIES.filter(
+    (cat) => groupedRisks[cat]?.length
+  );
+  const extraCategories = Object.keys(groupedRisks).filter(
+    (cat) => !RISK_CATEGORIES.includes(cat)
+  );
+  const allCategories = [...presentCategories, ...extraCategories];
+
+  // If no phases available, create a single default phase
+  const displayPhases: Phase[] =
+    phases.length > 0
+      ? phases
+      : [{ name: "Implementation", duration: "", description: "", milestones: [], status: "" }];
+
+  // Build heat map data: for each (category, phase) compute severity
+  const heatMapData: Record<string, { severity: string; risks: Risk[] }[]> = {};
+  for (const cat of allCategories) {
+    const catRisks = groupedRisks[cat] || [];
+    // Base severity for this category: worst severity among its risks
+    const worstSeverity = catRisks.reduce((worst, r) => {
+      const sev = riskSeverity(r);
+      const order: Record<string, number> = { high: 3, moderate: 2, low: 1 };
+      return (order[sev] ?? 0) > (order[worst] ?? 0) ? sev : worst;
+    }, "low");
+
+    heatMapData[cat] = displayPhases.map((_, pi) => ({
+      severity: computeCellSeverity(worstSeverity, pi, displayPhases.length),
+      risks: catRisks,
+    }));
+  }
+
+  // Truncate phase name for header display
+  const truncateName = (name: string, maxLen: number) =>
+    name.length > maxLen ? name.slice(0, maxLen - 1) + "\u2026" : name;
 
   return (
     <>
@@ -223,211 +281,205 @@ function RiskSection({
         </div>
       </div>
 
-      {/* Risk Matrix */}
-      <div className="border-2 border-black p-4 mb-6">
-        <h3 className="text-sm font-semibold uppercase tracking-wider mb-3">Risk Matrix</h3>
-        <div ref={matrixRef} className="w-full" style={{ minHeight: svgH }}>
-          {matrixSize.w > 0 && (
-            <svg width={svgW} height={svgH}>
-              {/* Axis labels */}
-              <text
-                x={svgW / 2}
-                y={svgH - 4}
-                textAnchor="middle"
-                fontSize={10}
-                fontFamily="'Inter', sans-serif"
-                fontWeight={600}
-                fill="#555555"
-              >
-                IMPACT
-              </text>
-              <text
-                x={10}
-                y={svgH / 2 - 20}
-                textAnchor="middle"
-                fontSize={10}
-                fontFamily="'Inter', sans-serif"
-                fontWeight={600}
-                fill="#555555"
-                transform={`rotate(-90, 10, ${svgH / 2 - 20})`}
-              >
-                LIKELIHOOD
-              </text>
-
-              {/* Grid cells */}
-              {likelihoodLabels.map((lbl, li) => {
-                const y = (2 - li) * matrixCellSize + 10;
-                return impactLabels.map((ilbl, ii) => {
-                  const x = ii * matrixCellSize + 60;
-                  // Background color intensity
-                  const severity = li + ii; // 0=low-low, 4=high-high
-                  const alpha = severity <= 1 ? 0.05 : severity <= 2 ? 0.1 : severity <= 3 ? 0.2 : 0.3;
-                  const bgColor =
-                    severity <= 1 ? "#1A6B3C" : severity <= 3 ? "#6B5A1A" : "#8B1A1A";
-
-                  // Find risks in this cell
-                  const cellRisks = risks.filter(
-                    (r) =>
-                      (LIKELIHOOD_ORDER[r.likelihood.toLowerCase()] ?? 1) === li &&
-                      (IMPACT_ORDER[r.impact.toLowerCase()] ?? 1) === ii
-                  );
-
-                  return (
-                    <g key={`${li}-${ii}`}>
-                      <rect
-                        x={x}
-                        y={y}
-                        width={matrixCellSize}
-                        height={matrixCellSize}
-                        fill={bgColor}
-                        fillOpacity={alpha}
-                        stroke="#E0E0E0"
-                        strokeWidth={1}
-                      />
-                      {/* Column label (bottom row) */}
-                      {li === 0 && (
-                        <text
-                          x={x + matrixCellSize / 2}
-                          y={y + matrixCellSize + 14}
-                          textAnchor="middle"
-                          fontSize={9}
-                          fontFamily="'JetBrains Mono', monospace"
-                          fill="#888888"
-                        >
-                          {ilbl}
-                        </text>
-                      )}
-                      {/* Row label (left) */}
-                      {ii === 0 && (
-                        <text
-                          x={56}
-                          y={y + matrixCellSize / 2 + 3}
-                          textAnchor="end"
-                          fontSize={9}
-                          fontFamily="'JetBrains Mono', monospace"
-                          fill="#888888"
-                        >
-                          {lbl}
-                        </text>
-                      )}
-                      {/* Risk dots */}
-                      {cellRisks.map((r, ri) => {
-                        const dotX = x + 16 + (ri % 4) * 22;
-                        const dotY = y + 20 + Math.floor(ri / 4) * 22;
-                        const sev = riskSeverity(r);
-                        return (
-                          <circle
-                            key={ri}
-                            cx={dotX}
-                            cy={dotY}
-                            r={7}
-                            fill={RISK_COLORS[sev] || "#888888"}
-                            stroke="#000000"
-                            strokeWidth={1}
-                          >
-                            <title>
-                              {r.category}: {r.description}
-                            </title>
-                          </circle>
-                        );
-                      })}
-                    </g>
-                  );
-                });
-              })}
-            </svg>
-          )}
+      {/* Phase-Based Risk Heat Map */}
+      <div className="border-2 border-black mb-6 relative">
+        <div className="p-4 border-b border-black bg-[var(--color-surface)]">
+          <h3 className="text-sm font-semibold uppercase tracking-wider">
+            Risk Heat Map by Implementation Phase
+          </h3>
         </div>
-      </div>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b-2 border-black">
+                <th className="text-left p-3 text-xs font-semibold uppercase tracking-wider border-r border-black min-w-[140px] bg-white">
+                  Category
+                </th>
+                {displayPhases.map((phase, pi) => (
+                  <th
+                    key={pi}
+                    className="p-2 text-[10px] font-semibold uppercase tracking-wider text-center border-r border-black last:border-r-0 bg-white min-w-[80px]"
+                    title={phase.name}
+                  >
+                    <span className="font-sans">{truncateName(phase.name, 18)}</span>
+                    {phase.duration && (
+                      <span className="block font-mono text-[9px] font-normal text-[var(--color-text-secondary)] mt-0.5">
+                        {phase.duration}
+                      </span>
+                    )}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {allCategories.map((cat) => (
+                <tr key={cat} className="border-b border-black last:border-b-0">
+                  <td className="p-3 text-xs font-semibold uppercase tracking-wider border-r border-black bg-white">
+                    <span className="font-sans">{cat}</span>
+                    <span className="font-mono text-[var(--color-text-secondary)] ml-1.5">
+                      ({groupedRisks[cat]?.length ?? 0})
+                    </span>
+                  </td>
+                  {heatMapData[cat]?.map((cell, pi) => {
+                    const bgColor = SEVERITY_COLORS[cell.severity] || "#E0E0E0";
+                    const label = SEVERITY_LABELS[cell.severity] || "";
+                    const textColor =
+                      cell.severity === "none" || cell.severity === "low"
+                        ? "#000000"
+                        : "#FFFFFF";
 
-      {/* Risk Cards by Category */}
-      <div className="space-y-4">
-        {RISK_CATEGORIES.filter((cat) => groupedRisks[cat]?.length).map((cat) => (
-          <div key={cat} className="border-2 border-black">
-            <div className="p-3 bg-[var(--color-surface)] border-b border-black">
-              <h4 className="text-sm font-semibold uppercase tracking-wider">
-                {cat} ({groupedRisks[cat].length})
-              </h4>
-            </div>
-            <div className="divide-y divide-[var(--color-border)]">
-              {groupedRisks[cat].map((r, i) => (
-                <div key={i} className="p-3">
-                  <p className="text-sm mb-2">{r.description}</p>
-                  <div className="flex gap-3 mb-2">
-                    <span
-                      className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border"
-                      style={{
-                        color: RISK_COLORS[r.likelihood.toLowerCase()] || "#888",
-                        borderColor: RISK_COLORS[r.likelihood.toLowerCase()] || "#888",
-                      }}
-                    >
-                      Likelihood: {r.likelihood}
-                    </span>
-                    <span
-                      className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border"
-                      style={{
-                        color: RISK_COLORS[r.impact.toLowerCase()] || "#888",
-                        borderColor: RISK_COLORS[r.impact.toLowerCase()] || "#888",
-                      }}
-                    >
-                      Impact: {r.impact}
-                    </span>
-                  </div>
+                    return (
+                      <td
+                        key={pi}
+                        className="p-0 border-r border-black last:border-r-0 relative"
+                        onMouseEnter={(e) => {
+                          const rect = (e.target as HTMLElement).getBoundingClientRect();
+                          setTooltipCell({
+                            category: cat,
+                            phaseIndex: pi,
+                            x: rect.left + rect.width / 2,
+                            y: rect.bottom + 4,
+                          });
+                        }}
+                        onMouseLeave={() => setTooltipCell(null)}
+                      >
+                        <div
+                          className="w-full h-full min-h-[40px] flex items-center justify-center cursor-default"
+                          style={{ backgroundColor: bgColor }}
+                        >
+                          <span
+                            className="font-mono text-sm font-bold"
+                            style={{ color: textColor }}
+                          >
+                            {label}
+                          </span>
+                        </div>
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Tooltip */}
+        {tooltipCell && (() => {
+          const cell = heatMapData[tooltipCell.category]?.[tooltipCell.phaseIndex];
+          if (!cell) return null;
+          const phase = displayPhases[tooltipCell.phaseIndex];
+          const severityLabel =
+            cell.severity === "high"
+              ? "HIGH"
+              : cell.severity === "moderate"
+              ? "MODERATE"
+              : cell.severity === "low"
+              ? "LOW"
+              : "N/A";
+
+          return (
+            <div
+              className="fixed z-50 border-2 border-black bg-white p-3 max-w-sm"
+              style={{
+                left: tooltipCell.x,
+                top: tooltipCell.y,
+                transform: "translateX(-50%)",
+              }}
+            >
+              <div className="text-xs font-semibold uppercase tracking-wider mb-1">
+                {tooltipCell.category} &mdash; {phase.name}
+              </div>
+              <div className="flex items-center gap-2 mb-2">
+                <span
+                  className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 border"
+                  style={{
+                    color: SEVERITY_COLORS[cell.severity],
+                    borderColor: SEVERITY_COLORS[cell.severity],
+                  }}
+                >
+                  {severityLabel}
+                </span>
+              </div>
+              {cell.risks.map((r, ri) => (
+                <div key={ri} className="mb-1.5 last:mb-0">
+                  <p className="text-xs text-black">{r.description}</p>
                   {r.mitigation && (
-                    <div className="text-xs text-[var(--color-text-secondary)] bg-[var(--color-surface)] p-2 border border-[var(--color-border)]">
+                    <p className="text-[10px] text-[var(--color-text-secondary)] mt-0.5">
                       <span className="font-semibold text-black">Mitigation:</span> {r.mitigation}
-                    </div>
+                    </p>
                   )}
                 </div>
               ))}
             </div>
-          </div>
-        ))}
+          );
+        })()}
+      </div>
 
-        {/* Also show any categories not in our predefined list */}
-        {Object.keys(groupedRisks)
-          .filter((cat) => !RISK_CATEGORIES.includes(cat))
-          .map((cat) => (
-            <div key={cat} className="border-2 border-black">
-              <div className="p-3 bg-[var(--color-surface)] border-b border-black">
-                <h4 className="text-sm font-semibold uppercase tracking-wider">
-                  {cat} ({groupedRisks[cat].length})
-                </h4>
-              </div>
-              <div className="divide-y divide-[var(--color-border)]">
-                {groupedRisks[cat].map((r, i) => (
-                  <div key={i} className="p-3">
-                    <p className="text-sm mb-2">{r.description}</p>
-                    <div className="flex gap-3 mb-2">
-                      <span
-                        className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border"
-                        style={{
-                          color: RISK_COLORS[r.likelihood.toLowerCase()] || "#888",
-                          borderColor: RISK_COLORS[r.likelihood.toLowerCase()] || "#888",
-                        }}
-                      >
-                        Likelihood: {r.likelihood}
-                      </span>
-                      <span
-                        className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border"
-                        style={{
-                          color: RISK_COLORS[r.impact.toLowerCase()] || "#888",
-                          borderColor: RISK_COLORS[r.impact.toLowerCase()] || "#888",
-                        }}
-                      >
-                        Impact: {r.impact}
-                      </span>
-                    </div>
-                    {r.mitigation && (
-                      <div className="text-xs text-[var(--color-text-secondary)] bg-[var(--color-surface)] p-2 border border-[var(--color-border)]">
-                        <span className="font-semibold text-black">Mitigation:</span> {r.mitigation}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+      {/* Color Legend */}
+      <div className="border-2 border-black p-3 mb-6">
+        <h4 className="text-xs font-semibold uppercase tracking-wider mb-2">Severity Legend</h4>
+        <div className="flex gap-6 flex-wrap">
+          {[
+            { key: "high", label: "HIGH" },
+            { key: "moderate", label: "MODERATE" },
+            { key: "low", label: "LOW" },
+            { key: "none", label: "N/A" },
+          ].map((item) => (
+            <div key={item.key} className="flex items-center gap-2">
+              <div
+                className="w-5 h-5 border border-black"
+                style={{ backgroundColor: SEVERITY_COLORS[item.key] }}
+              />
+              <span className="text-xs font-mono uppercase">{item.label}</span>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Risk Detail Cards */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-semibold uppercase tracking-wider">Risk Details</h3>
+        {risks.map((r, i) => (
+          <div key={i} className="border-2 border-black p-3">
+            <div className="flex items-start gap-3 mb-2">
+              <span
+                className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border shrink-0"
+                style={{
+                  color: RISK_COLORS[riskSeverity(r)] || "#888",
+                  borderColor: RISK_COLORS[riskSeverity(r)] || "#888",
+                }}
+              >
+                {r.category}
+              </span>
+              <p className="text-sm">{r.description}</p>
+            </div>
+            <div className="flex gap-3 mb-2">
+              <span
+                className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border"
+                style={{
+                  color: RISK_COLORS[r.likelihood.toLowerCase()] || "#888",
+                  borderColor: RISK_COLORS[r.likelihood.toLowerCase()] || "#888",
+                }}
+              >
+                Likelihood: {r.likelihood}
+              </span>
+              <span
+                className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border"
+                style={{
+                  color: RISK_COLORS[r.impact.toLowerCase()] || "#888",
+                  borderColor: RISK_COLORS[r.impact.toLowerCase()] || "#888",
+                }}
+              >
+                Impact: {r.impact}
+              </span>
+            </div>
+            {r.mitigation && (
+              <div className="text-xs text-[var(--color-text-secondary)] bg-[var(--color-surface)] p-2 border border-[var(--color-border)]">
+                <span className="font-semibold text-black">Mitigation:</span> {r.mitigation}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </>
   );
@@ -436,6 +488,23 @@ function RiskSection({
 /* ============ STAKEHOLDER SECTION ============ */
 
 function StakeholderSection({ stakeholders }: { stakeholders: Stakeholder[] }) {
+  const graphRef = useRef<HTMLDivElement>(null);
+  const [graphSize, setGraphSize] = useState({ w: 0, h: 0 });
+
+  const handleGraphResize = useCallback(() => {
+    if (graphRef.current) {
+      const rect = graphRef.current.getBoundingClientRect();
+      setGraphSize({ w: rect.width, h: rect.height });
+    }
+  }, []);
+
+  useEffect(() => {
+    handleGraphResize();
+    const observer = new ResizeObserver(handleGraphResize);
+    if (graphRef.current) observer.observe(graphRef.current);
+    return () => observer.disconnect();
+  }, [handleGraphResize]);
+
   if (stakeholders.length === 0) {
     return (
       <div className="text-sm text-[var(--color-text-secondary)] font-mono">
@@ -444,70 +513,276 @@ function StakeholderSection({ stakeholders }: { stakeholders: Stakeholder[] }) {
     );
   }
 
+  const hasSize = graphSize.w > 0 && graphSize.h > 0;
+  const cx = graphSize.w / 2;
+  const cy = graphSize.h / 2;
+
+  // Influence-based radii (proportional to container)
+  const scale = Math.min(graphSize.w, graphSize.h) / 600;
+  const radiusMap: Record<string, number> = {
+    high: 120 * scale,
+    moderate: 200 * scale,
+    low: 270 * scale,
+  };
+
+  // Node sizing by influence
+  const nodeSizeMap: Record<string, { w: number; h: number }> = {
+    high: { w: 140 * scale, h: 48 * scale },
+    moderate: { w: 120 * scale, h: 42 * scale },
+    low: { w: 100 * scale, h: 38 * scale },
+  };
+
+  // Group stakeholders by influence for ring placement
+  const byInfluence: Record<string, Stakeholder[]> = { high: [], moderate: [], low: [] };
+  for (const s of stakeholders) {
+    const key = s.influence.toLowerCase();
+    if (byInfluence[key]) byInfluence[key].push(s);
+    else byInfluence["moderate"].push(s);
+  }
+
+  // Compute node positions
+  interface NodePos {
+    x: number;
+    y: number;
+    w: number;
+    h: number;
+    stakeholder: Stakeholder;
+  }
+
+  const nodes: NodePos[] = [];
+  for (const level of ["high", "moderate", "low"] as const) {
+    const group = byInfluence[level];
+    const radius = radiusMap[level];
+    const size = nodeSizeMap[level];
+    const count = group.length;
+    // Offset start angle per ring to avoid overlap
+    const angleOffset = level === "high" ? 0 : level === "moderate" ? Math.PI / 8 : Math.PI / 6;
+    for (let i = 0; i < count; i++) {
+      const angle = angleOffset + (2 * Math.PI * i) / count - Math.PI / 2;
+      nodes.push({
+        x: cx + radius * Math.cos(angle),
+        y: cy + radius * Math.sin(angle),
+        w: size.w,
+        h: size.h,
+        stakeholder: group[i],
+      });
+    }
+  }
+
+  // Hub node dimensions
+  const hubW = 130 * scale;
+  const hubH = 36 * scale;
+
+  // Find same-interest connections
+  const interestGroups: Record<string, number[]> = {};
+  nodes.forEach((n, idx) => {
+    const key = n.stakeholder.interest.toLowerCase();
+    if (!interestGroups[key]) interestGroups[key] = [];
+    interestGroups[key].push(idx);
+  });
+
+  const lineThickness: Record<string, number> = {
+    high: 2,
+    moderate: 1.5,
+    low: 1,
+  };
+
+  const fontSize = Math.max(9, 11 * scale);
+  const roleFontSize = Math.max(7, 9 * scale);
+
   return (
     <div>
-      <h3 className="text-lg font-bold mb-4">Stakeholder Map</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {stakeholders.map((s, i) => (
-          <div key={i} className="border-2 border-black p-3">
-            <h4 className="text-sm font-bold mb-1">{s.name}</h4>
-            <span className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border border-black inline-block mb-2">
-              {s.role}
-            </span>
-            {s.description && (
-              <p className="text-xs text-[var(--color-text-secondary)] mb-2">{s.description}</p>
-            )}
+      <h3 className="text-lg font-bold mb-4">Stakeholder Network</h3>
 
-            {/* Influence bar */}
-            <div className="mb-1">
-              <span className="text-[10px] font-mono text-[var(--color-text-secondary)]">
-                Influence: {s.influence}
-              </span>
-              <div className="w-full h-2 border border-black bg-white mt-0.5">
-                <div
-                  className="h-full"
-                  style={{
-                    width:
-                      s.influence.toLowerCase() === "high"
-                        ? "100%"
-                        : s.influence.toLowerCase() === "moderate"
-                        ? "60%"
-                        : "30%",
-                    backgroundColor: INFLUENCE_COLORS[s.influence.toLowerCase()] || "#888",
-                  }}
-                />
-              </div>
+      {/* Network Graph */}
+      <div className="border-2 border-black mb-6">
+        <div ref={graphRef} className="w-full" style={{ minHeight: 560 }}>
+          {hasSize && (
+            <svg width={graphSize.w} height={graphSize.h}>
+              {/* Relationship lines (same interest level) - drawn first so they appear behind */}
+              {Object.values(interestGroups).map((indices) =>
+                indices.length > 1
+                  ? indices.map((a, ai) =>
+                      indices.slice(ai + 1).map((b) => (
+                        <line
+                          key={`rel-${a}-${b}`}
+                          x1={nodes[a].x}
+                          y1={nodes[a].y}
+                          x2={nodes[b].x}
+                          y2={nodes[b].y}
+                          stroke="#CCCCCC"
+                          strokeWidth={1}
+                          strokeDasharray="4,3"
+                        />
+                      ))
+                    )
+                  : null
+              )}
+
+              {/* Connection lines from each node to hub */}
+              {nodes.map((n, i) => {
+                const inf = n.stakeholder.influence.toLowerCase();
+                return (
+                  <line
+                    key={`conn-${i}`}
+                    x1={n.x}
+                    y1={n.y}
+                    x2={cx}
+                    y2={cy}
+                    stroke={INFLUENCE_COLORS[inf] || "#888888"}
+                    strokeWidth={lineThickness[inf] || 1}
+                  />
+                );
+              })}
+
+              {/* Central hub node */}
+              <rect
+                x={cx - hubW / 2}
+                y={cy - hubH / 2}
+                width={hubW}
+                height={hubH}
+                fill="black"
+                stroke="black"
+                strokeWidth={2}
+              />
+              <text
+                x={cx}
+                y={cy + 1}
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fontSize={Math.max(8, 10 * scale)}
+                fontFamily="'Inter', sans-serif"
+                fontWeight={700}
+                fill="white"
+                letterSpacing="0.05em"
+              >
+                COORDINATION HUB
+              </text>
+
+              {/* Stakeholder nodes */}
+              {nodes.map((n, i) => {
+                const inf = n.stakeholder.influence.toLowerCase();
+                const borderColor = INFLUENCE_COLORS[inf] || "#888888";
+                return (
+                  <g key={`node-${i}`}>
+                    <rect
+                      x={n.x - n.w / 2}
+                      y={n.y - n.h / 2}
+                      width={n.w}
+                      height={n.h}
+                      fill="white"
+                      stroke={borderColor}
+                      strokeWidth={2}
+                    />
+                    {/* Name */}
+                    <text
+                      x={n.x}
+                      y={n.y - n.h * 0.1}
+                      textAnchor="middle"
+                      dominantBaseline="middle"
+                      fontSize={fontSize}
+                      fontFamily="'Inter', sans-serif"
+                      fontWeight={600}
+                      fill="black"
+                    >
+                      {n.stakeholder.name.length > 16
+                        ? n.stakeholder.name.slice(0, 15) + "\u2026"
+                        : n.stakeholder.name}
+                    </text>
+                    {/* Role */}
+                    <text
+                      x={n.x}
+                      y={n.y + n.h * 0.25}
+                      textAnchor="middle"
+                      dominantBaseline="middle"
+                      fontSize={roleFontSize}
+                      fontFamily="'JetBrains Mono', monospace"
+                      fill="#666666"
+                    >
+                      {n.stakeholder.role.length > 20
+                        ? n.stakeholder.role.slice(0, 19) + "\u2026"
+                        : n.stakeholder.role}
+                    </text>
+                    <title>
+                      {n.stakeholder.name} ({n.stakeholder.role}) — Influence: {n.stakeholder.influence}, Interest: {n.stakeholder.interest}
+                    </title>
+                  </g>
+                );
+              })}
+            </svg>
+          )}
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div className="border-2 border-black p-3 mb-6">
+        <h4 className="text-xs font-semibold uppercase tracking-wider mb-2">Influence Level</h4>
+        <div className="flex gap-6 flex-wrap">
+          {(["high", "moderate", "low"] as const).map((level) => (
+            <div key={level} className="flex items-center gap-2">
+              <div
+                className="border-2"
+                style={{
+                  width: level === "high" ? 28 : level === "moderate" ? 22 : 16,
+                  height: 12,
+                  borderColor: INFLUENCE_COLORS[level],
+                  backgroundColor: "white",
+                }}
+              />
+              <span className="text-xs font-mono uppercase">{level}</span>
             </div>
-
-            {/* Interest bar */}
-            <div className="mb-2">
-              <span className="text-[10px] font-mono text-[var(--color-text-secondary)]">
-                Interest: {s.interest}
-              </span>
-              <div className="w-full h-2 border border-black bg-white mt-0.5">
-                <div
-                  className="h-full"
-                  style={{
-                    width:
-                      s.interest.toLowerCase() === "high"
-                        ? "100%"
-                        : s.interest.toLowerCase() === "moderate"
-                        ? "60%"
-                        : "30%",
-                    backgroundColor: INFLUENCE_COLORS[s.interest.toLowerCase()] || "#888",
-                  }}
-                />
-              </div>
-            </div>
-
-            {/* Engagement strategy */}
-            {s.engagement_strategy && (
-              <div className="text-xs text-[var(--color-text-secondary)] bg-[var(--color-surface)] p-2 border border-[var(--color-border)]">
-                <span className="font-semibold text-black">Strategy:</span> {s.engagement_strategy}
-              </div>
-            )}
+          ))}
+          <div className="flex items-center gap-2">
+            <svg width={28} height={12}>
+              <line x1={0} y1={6} x2={28} y2={6} stroke="#CCCCCC" strokeWidth={1} strokeDasharray="4,3" />
+            </svg>
+            <span className="text-xs font-mono uppercase">Same Interest</span>
           </div>
-        ))}
+        </div>
+      </div>
+
+      {/* Stakeholder Detail Table */}
+      <div className="border-2 border-black">
+        <table className="w-full border-collapse">
+          <thead>
+            <tr className="border-b-2 border-black bg-[var(--color-surface)]">
+              <th className="text-left p-3 text-xs font-semibold uppercase tracking-wider">Name</th>
+              <th className="text-left p-3 text-xs font-semibold uppercase tracking-wider">Role</th>
+              <th className="text-left p-3 text-xs font-semibold uppercase tracking-wider w-24">Influence</th>
+              <th className="text-left p-3 text-xs font-semibold uppercase tracking-wider w-24">Interest</th>
+              <th className="text-left p-3 text-xs font-semibold uppercase tracking-wider">Engagement Strategy</th>
+            </tr>
+          </thead>
+          <tbody>
+            {stakeholders.map((s, i) => {
+              const infColor = INFLUENCE_COLORS[s.influence.toLowerCase()] || "#888";
+              const intColor = INFLUENCE_COLORS[s.interest.toLowerCase()] || "#888";
+              return (
+                <tr key={i} className="border-b border-[var(--color-border)]">
+                  <td className="p-3 text-sm font-semibold">{s.name}</td>
+                  <td className="p-3 text-sm font-mono text-[var(--color-text-secondary)]">{s.role}</td>
+                  <td className="p-3">
+                    <span
+                      className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border"
+                      style={{ color: infColor, borderColor: infColor }}
+                    >
+                      {s.influence}
+                    </span>
+                  </td>
+                  <td className="p-3">
+                    <span
+                      className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 border"
+                      style={{ color: intColor, borderColor: intColor }}
+                    >
+                      {s.interest}
+                    </span>
+                  </td>
+                  <td className="p-3 text-xs text-[var(--color-text-secondary)]">{s.engagement_strategy}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );
