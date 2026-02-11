@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Crimson Text", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-bg: #FFFFFF;
+  --color-surface: #F5F5F5;
+  --color-border: #E0E0E0;
+  --color-text: #000000;
+  --color-text-secondary: #555555;
+  --color-text-tertiary: #888888;
+  --color-health: #1A6B3C;
+  --color-justice: #8B1A1A;
+  --color-housing: #1A3D8B;
+  --color-income: #6B5A1A;
+  --color-education: #5A1A6B;
+  --color-child-welfare: #1A6B6B;
+  --color-managed-care: #1A3D8B;
+  --color-community-based: #1A6B3C;
+  --color-hybrid: #6B5A1A;
+  --color-specialized: #5A1A6B;
+  --color-draft: #888888;
+  --color-analysis: #6B5A1A;
+  --color-approved: #1A3D8B;
+  --color-implementing: #1A6B3C;
+  --color-high-risk: #8B1A1A;
+  --color-moderate-risk: #6B5A1A;
+  --color-low-risk: #1A6B3C;
+}
+
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body, #root { height: 100%; width: 100%; }
+  body { font-family: var(--font-sans); color: var(--color-text); background: var(--color-bg); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; letter-spacing: -0.01em; }
+  *, *::before, *::after { border-radius: 0 !important; }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.5rem 1rem; background: var(--color-text); color: var(--color-bg);
+    font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    border: 2px solid var(--color-text); cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .btn-primary:hover { background: var(--color-bg); color: var(--color-text); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.5rem 1rem; background: var(--color-bg); color: var(--color-text);
+    font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    border: 2px solid var(--color-text); cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .btn-secondary:hover { background: var(--color-text); color: var(--color-bg); }
+  .card { border: 2px solid var(--color-text); background: var(--color-bg); padding: 1rem; }
+  .card-surface { border: 1px solid var(--color-border); background: var(--color-surface); padding: 1rem; }
+}
