@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Crimson Text", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-dark: #0D0D0D;
+  --color-light: #FFFFFF;
+  --color-accent: #C4A265;
+  --color-muted: #666666;
+  --color-border: #222222;
+  --color-health: #1A6B3C;
+  --color-justice: #8B1A1A;
+  --color-housing: #1A3D8B;
+  --color-income: #6B5A1A;
+  --color-education: #5A1A6B;
+  --color-childwelfare: #1A6B6B;
+
+  --animate-fade-in: fade-in 1.5s ease-out 0.3s forwards;
+  --animate-fade-in-delayed: fade-in 1.5s ease-out 1.2s forwards;
+  --animate-fade-in-slow: fade-in 2s ease-out 2.5s forwards;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-dark);
+    color: var(--color-light);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Global reset: no rounded corners anywhere */
+  *,
+  *::before,
+  *::after {
+    border-radius: 0 !important;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-dark);
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   KEYFRAME ANIMATIONS
+   ────────────────────────────────────────────────────────────── */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   COMPONENT STYLES
+   ────────────────────────────────────────────────────────────── */
+
+@layer components {
+  /* Vision section gradient — transitions from dark to mid-tone */
+  .vision-gradient {
+    background: linear-gradient(
+      to bottom,
+      var(--color-dark) 0%,
+      #1a1a1a 30%,
+      #2a2a2a 60%,
+      #3a3a3a 100%
+    );
+  }
+
+  /* CTA card base — ensures no rounded corners and sharp brutalist feel */
+  .cta-card {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Stat counter — placeholder class for future animation hookup */
+  .stat-counter {
+    /* Counter animation agent can target [data-target] and .stat-value */
+  }
+}
