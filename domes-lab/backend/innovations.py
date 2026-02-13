@@ -119,6 +119,75 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
             }),
             "tags": "CDFI,bridge-loans,benefit-gaps,financial-inclusion",
         },
+        {
+            "title": "Dome Bonds: Municipal Coordination Savings Bonds",
+            "summary": (
+                "New class of municipal bonds backed by documented coordination "
+                "savings. When DOMES coordination reduces duplicative spending, "
+                "verified savings back bond issuance — self-funding infrastructure "
+                "for person-centered government."
+            ),
+            "category": "dome-financing",
+            "impact_level": 5,
+            "feasibility": 2,
+            "novelty": 5,
+            "time_horizon": "far",
+            "status": "draft",
+            "details": json.dumps({
+                "financial_model": {
+                    "bond_type": "Revenue bond backed by coordination savings",
+                    "target_issuance": "$50M initial offering",
+                    "coupon_rate": "3.5-4.2% tax-exempt",
+                    "term": "20-year maturity",
+                },
+                "revenue_sources": [
+                    "Reduced duplicative assessments ($2.1M/yr per county)",
+                    "Eliminated redundant case management ($1.8M/yr)",
+                    "Prevented crisis interventions ($3.4M/yr)",
+                    "Reduced admin overhead from shared intake ($900K/yr)",
+                ],
+                "legal_requirements": [
+                    "State enabling legislation",
+                    "Independent savings verification",
+                    "Bond counsel opinion on tax-exempt status",
+                    "Credit rating agency engagement (target: A-)",
+                ],
+                "estimated_cost": "$2M for pilot verification infrastructure",
+                "evidence_base": "Hennepin County coordination savings of $8.2M/yr documented 2019-2023",
+            }),
+            "tags": "dome-bonds,municipal-finance,coordination-savings,self-funding",
+        },
+        {
+            "title": "Person-Centered Budgets: Unified Flexible Spending",
+            "summary": (
+                "Replace fragmented categorical spending with a single flexible "
+                "budget per person. Instead of $4,200 SNAP + $8,400 Medicaid + "
+                "$6,000 housing as separate allocations, combine into $18,600 the "
+                "individual helps direct."
+            ),
+            "category": "dome-financing",
+            "impact_level": 5,
+            "feasibility": 2,
+            "novelty": 5,
+            "time_horizon": "far",
+            "status": "draft",
+            "details": json.dumps({
+                "mechanism": "Pooled categorical funding with person-directed allocation",
+                "current_fragmentation": {
+                    "average_programs_per_person": 4.3,
+                    "administrative_overhead_rate": "23% of total spending",
+                    "duplication_rate": "17% of assessments redundant",
+                },
+                "implementation_path": [
+                    "Phase 1: Shadow budgets (calculate unified amount)",
+                    "Phase 2: Flex margins (10% movement between categories)",
+                    "Phase 3: Full person-centered budgets for pilot cohort",
+                ],
+                "estimated_cost": "$1.5M for pilot infrastructure",
+                "evidence_base": "UK Personal Budgets: 40% higher satisfaction, similar costs",
+            }),
+            "tags": "person-centered-budgets,flexible-spending,coordination,dome",
+        },
     ],
 
     # ── 2. Impact Investor ──────────────────────────────────────────────────
@@ -199,6 +268,36 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
                 "risk_mitigation": "Gradual phase-in with 24-month transition period",
             }),
             "tags": "foster-care,outcomes-based,child-welfare,permanency",
+        },
+        {
+            "title": "Outcomes Marketplace: Coordination Credits Exchange",
+            "summary": (
+                "Like carbon credits but for coordination savings. Agencies earning "
+                "verified savings trade Outcome Credits on a regulated exchange. "
+                "Creates market incentives for system integration. 1 Credit = "
+                "$1,000 in verified coordination savings."
+            ),
+            "category": "outcomes-markets",
+            "impact_level": 5,
+            "feasibility": 2,
+            "novelty": 5,
+            "time_horizon": "far",
+            "status": "draft",
+            "details": json.dumps({
+                "market_design": {
+                    "unit": "1 Outcome Credit = $1,000 verified savings",
+                    "verification": "Independent actuarial audit",
+                    "trading_platform": "Government-regulated exchange",
+                },
+                "market_sizing": {
+                    "total_addressable": "$740B in means-tested programs",
+                    "inefficiency_estimate": "15-23% duplication rate",
+                    "initial_market_cap": "$500M in first 5 years",
+                },
+                "estimated_cost": "$5M for exchange infrastructure",
+                "evidence_base": "Carbon credit markets: $851B in 2022",
+            }),
+            "tags": "outcomes-marketplace,coordination-credits,market-incentives,dome",
         },
     ],
 
@@ -308,6 +407,38 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
             }),
             "tags": "geospatial,service-deserts,transit,accessibility",
         },
+        {
+            "title": "Person-Held Data Wallets",
+            "summary": (
+                "Sovereign data wallet putting individuals in control. Instead of "
+                "7 agencies each maintaining separate records, the person holds a "
+                "verified digital wallet with eligibility data, service history, "
+                "and outcome records. They decide who sees what."
+            ),
+            "category": "data-sovereignty",
+            "impact_level": 5,
+            "feasibility": 2,
+            "novelty": 5,
+            "time_horizon": "far",
+            "status": "draft",
+            "details": json.dumps({
+                "architecture": {
+                    "storage": "Encrypted local-first with cloud backup",
+                    "credentials": "W3C Verifiable Credentials standard",
+                    "sharing": "Selective disclosure — share only what each agency needs",
+                },
+                "data_categories": [
+                    "Identity verification",
+                    "Income and employment attestations",
+                    "Benefit enrollment status across all programs",
+                    "Service history and case notes",
+                    "Consent preferences and data sharing logs",
+                ],
+                "estimated_cost": "$3M for wallet infrastructure",
+                "evidence_base": "Estonia's X-Road: 1.3M citizens with sovereign data access",
+            }),
+            "tags": "data-wallet,sovereignty,privacy,person-centered,dome",
+        },
     ],
 
     # ── 4. Tech Futurist ────────────────────────────────────────────────────
@@ -416,6 +547,40 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
             }),
             "tags": "digital-identity,self-sovereign,verifiable-credentials,access",
         },
+        {
+            "title": "AR Caseworker Overlay: Real-Time Dome Visualization",
+            "summary": (
+                "Augmented reality showing a person's complete Dome profile during "
+                "home visits. Caseworker sees all active programs, deadlines, benefit "
+                "cliffs, and coordination opportunities overlaid in real time — "
+                "turning fragmented data into actionable visual intelligence."
+            ),
+            "category": "augmented-reality",
+            "impact_level": 4,
+            "feasibility": 2,
+            "novelty": 5,
+            "time_horizon": "far",
+            "status": "draft",
+            "details": json.dumps({
+                "technology_stack": {
+                    "display": "Tablet-first (iPad), smart glasses option for v2",
+                    "data_source": "Real-time API to cross-system data spine",
+                    "privacy": "Requires person consent via Dome Wallet",
+                },
+                "use_cases": [
+                    "Home visit: see all agency touchpoints at a glance",
+                    "Hospital discharge: housing + benefits status overlay",
+                    "School meeting: family support ecosystem visualization",
+                    "Court hearing: complete service engagement history",
+                ],
+                "dependencies": [
+                    "Cross-system administrative data spine",
+                    "Person-held data wallets for consent",
+                ],
+                "estimated_cost": "$2.5M development + $500K/yr maintenance",
+            }),
+            "tags": "augmented-reality,caseworker,real-time,dome,visualization",
+        },
     ],
 
     # ── 5. Legislative Inventor ─────────────────────────────────────────────
@@ -498,6 +663,80 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
                 "privacy_framework": "HIPAA-equivalent protections with state breach notification",
             }),
             "tags": "interstate-compact,data-sharing,mobile-populations,portability",
+        },
+        {
+            "title": "THE DOME ACT: Federal Coordination Cost Transparency",
+            "summary": (
+                "Federal legislation mandating every agency in means-tested programs "
+                "publish annual coordination cost reports — documenting fragmentation "
+                "cost, coordination savings, and the gap. Makes the invisible waste "
+                "of siloed government visible to every taxpayer."
+            ),
+            "category": "federal-legislation",
+            "impact_level": 5,
+            "feasibility": 3,
+            "novelty": 5,
+            "time_horizon": "medium",
+            "status": "review",
+            "details": json.dumps({
+                "full_title": "Documenting Outcomes and Measuring Efficiency Act (DOME Act)",
+                "key_provisions": [
+                    "SEC. 101: Annual Coordination Cost Report from HHS, USDA, HUD, DOL, ED",
+                    "SEC. 102: Standardized methodology for measuring duplication",
+                    "SEC. 103: Public dashboard showing coordination costs by state and county",
+                    "SEC. 104: GAO audit of coordination savings potential every 3 years",
+                    "SEC. 105: Innovation grants for states demonstrating 10%+ savings",
+                    "SEC. 201: Person-centered coordination pilot authority for 10 states",
+                    "SEC. 202: Data sharing safe harbor for coordination purposes",
+                    "SEC. 301: Coordination Savings Reinvestment Fund",
+                ],
+                "strategy_memo": {
+                    "bipartisan_framing": "Efficiency (R) + better outcomes for families (D)",
+                    "coalition": "NGA, APHSA, NASCIO, CLASP, CBPP, Heritage Foundation",
+                    "CBO_score": "Net savings $2.1B over 10 years",
+                },
+                "talking_points": [
+                    "$740B in means-tested programs but no one can tell you the cost of NOT coordinating",
+                    "Families in 4+ programs repeat their trauma story 7 times",
+                    "Hennepin County: $8.2M in annual coordination savings documented",
+                    "This bill makes existing spending transparent — not new programs",
+                ],
+                "estimated_cost": "$50M implementation over 5 years (offset by savings)",
+            }),
+            "tags": "dome-act,federal,transparency,coordination-costs,bipartisan",
+        },
+        {
+            "title": "RIGHT TO YOUR DOME: Cross-System Data Access Rights",
+            "summary": (
+                "Model state legislation: every person receiving government services "
+                "can see their complete cross-system profile — every enrollment, "
+                "assessment, caseworker, and outcome recorded about them. Your data, "
+                "your right."
+            ),
+            "category": "rights-legislation",
+            "impact_level": 5,
+            "feasibility": 3,
+            "novelty": 5,
+            "time_horizon": "medium",
+            "status": "review",
+            "details": json.dumps({
+                "full_title": "Right to Integrated Government Records Act",
+                "key_provisions": [
+                    "SEC. 1: Right to complete cross-system profile within 30 days of request",
+                    "SEC. 2: Must include all enrollments, assessments, assigned workers, outcomes",
+                    "SEC. 3: Right to correct inaccurate information across all systems simultaneously",
+                    "SEC. 4: Data portability — export in machine-readable format",
+                    "SEC. 5: No adverse actions from cross-system data without notice and appeal",
+                    "SEC. 6: Annual notification of data rights to all enrolled individuals",
+                ],
+                "talking_points": [
+                    "You can see your credit score but not your government profile",
+                    "A mother in 4 programs has 4 case files — she never sees a unified picture",
+                    "Government data rights lag 20 years behind private sector (GDPR, CCPA)",
+                ],
+                "estimated_cost": "$800K per state for portal development and staff training",
+            }),
+            "tags": "data-rights,transparency,person-centered,dome,model-legislation",
         },
     ],
 
@@ -584,6 +823,38 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
                 "risk_classification": "Low/Medium/High with corresponding oversight levels",
             }),
             "tags": "demonstration-projects,fast-track,federal-approval,innovation",
+        },
+        {
+            "title": "CMMI Dome Innovation Model",
+            "summary": (
+                "CMMI demonstration testing whole-person coordination across "
+                "Medicaid, housing, nutrition, and employment. Uses existing "
+                "Section 1115A authority — CMS already has the power to test this. "
+                "No new legislation needed. Deploy immediately."
+            ),
+            "category": "federal-authority",
+            "impact_level": 5,
+            "feasibility": 4,
+            "novelty": 4,
+            "time_horizon": "near",
+            "status": "approved",
+            "details": json.dumps({
+                "legal_authority": "Section 1115A of the Social Security Act (ACA Section 3021)",
+                "model_design": {
+                    "population": "Medicaid beneficiaries enrolled in 3+ programs",
+                    "intervention": "Dome Navigator + shared care plan + braided funding",
+                    "comparison": "Matched cohort using existing administrative data",
+                    "duration": "5 years with 3-year extension option",
+                },
+                "existing_precedents": [
+                    "Accountable Health Communities (AHC) model",
+                    "Integrated Care for Kids (InCK) model",
+                    "State Innovation Models (SIM) initiative",
+                ],
+                "estimated_cost": "$0 in new legislation; $50M from existing CMMI allocation",
+                "evidence_base": "CMMI Accountable Health Communities: 9% utilization reduction",
+            }),
+            "tags": "CMMI,medicaid,existing-authority,immediate,dome,no-legislation",
         },
     ],
 
@@ -697,6 +968,46 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
             }),
             "tags": "journey-mapping,multi-system,family-experience,service-integration",
         },
+        {
+            "title": "The Dome Navigator: A New Professional Role",
+            "summary": (
+                "New profession whose sole job is cross-system coordination for "
+                "25-30 people. Not a caseworker in any single system — a coordinator "
+                "across ALL systems. Licensed, trained in all benefit programs, with "
+                "authority to convene agencies on behalf of the person."
+            ),
+            "category": "workforce-innovation",
+            "impact_level": 5,
+            "feasibility": 3,
+            "novelty": 5,
+            "time_horizon": "medium",
+            "status": "review",
+            "details": json.dumps({
+                "role_definition": {
+                    "caseload": "25-30 individuals/families",
+                    "function": "Cross-system coordination, not direct service",
+                    "authority": "Can convene case conferences across agencies",
+                },
+                "training_requirements": [
+                    "120-hour curriculum covering all benefit programs",
+                    "40-hour trauma-informed practice certification",
+                    "20-hour data systems navigation training",
+                    "Supervised practicum with experienced Navigator",
+                ],
+                "salary_model": {
+                    "entry_level": "$48,000-$55,000",
+                    "experienced": "$62,000-$75,000",
+                    "senior": "$78,000-$95,000",
+                },
+                "workforce_sizing": {
+                    "us_need": "~85,000 Dome Navigators nationally",
+                    "per_county_average": "27 Navigators per county",
+                },
+                "estimated_cost": "$650K/yr for 10-Navigator pilot",
+                "evidence_base": "Community health workers show 3:1 ROI; Navigator extends model to cross-system",
+            }),
+            "tags": "dome-navigator,workforce,profession,cross-system,dome",
+        },
     ],
 
     # ── 8. Space Architect ──────────────────────────────────────────────────
@@ -779,6 +1090,88 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
                 "expected_outcomes": "25% reduction in missed appointments, 15% faster visit completion",
             }),
             "tags": "wayfinding,one-stop,navigation,client-experience",
+        },
+        {
+            "title": "Neighborhood Dome Center (2,000 sq ft Storefront)",
+            "summary": (
+                "Smallest viable coordination space — a welcoming community living "
+                "room, not a government office. Two private rooms, open area, "
+                "children's corner, tech station. Anti-pattern library: NO fluorescent "
+                "lights, NO plastic chairs, NO bulletproof glass."
+            ),
+            "category": "dome-center-design",
+            "impact_level": 4,
+            "feasibility": 4,
+            "novelty": 4,
+            "time_horizon": "near",
+            "status": "approved",
+            "details": json.dumps({
+                "floor_plan": {
+                    "total_sqft": 2000,
+                    "private_rooms": "2 consultation rooms (100 sqft each)",
+                    "open_area": "800 sqft with flexible furniture",
+                    "tech_station": "4 workstations + scanner",
+                    "children_corner": "200 sqft supervised play",
+                    "kitchenette": "Coffee, water, healthy snacks",
+                },
+                "material_palette": {
+                    "flooring": "Warm wood-look LVT",
+                    "walls": "Soft white + terracotta accent",
+                    "furniture": "Residential-quality upholstered (not plastic)",
+                    "lighting": "Warm LED 2700-3000K, NO fluorescent",
+                },
+                "anti_patterns": [
+                    "NO fluorescent lighting",
+                    "NO plastic chairs",
+                    "NO bulletproof glass",
+                    "NO numbered ticket queuing",
+                    "NO mounted TVs playing news",
+                    "NO visible security cameras in consultation areas",
+                ],
+                "cost_estimate": {
+                    "buildout": "$180,000-$240,000",
+                    "furniture": "$45,000-$65,000",
+                    "technology": "$25,000-$35,000",
+                    "annual_operating": "$180,000-$220,000 including 3 staff",
+                },
+            }),
+            "tags": "dome-center,neighborhood,storefront,anti-pattern,dome",
+        },
+        {
+            "title": "Regional Dome Hub (50,000 sq ft Campus)",
+            "summary": (
+                "Flagship campus: Navigator training academy, data operations center, "
+                "community halls, health clinic, legal aid, demonstration spaces. "
+                "Biophilic design, universal accessibility, trauma-informed architecture."
+            ),
+            "category": "dome-center-design",
+            "impact_level": 5,
+            "feasibility": 2,
+            "novelty": 5,
+            "time_horizon": "far",
+            "status": "draft",
+            "details": json.dumps({
+                "floor_plan": {
+                    "total_sqft": 50000,
+                    "coordination_wing": "10,000 sqft — 20 rooms + Navigator floor",
+                    "training_academy": "8,000 sqft — classrooms + simulation lab",
+                    "community_wing": "12,000 sqft — 500-seat assembly + gallery",
+                    "health_clinic": "5,000 sqft — FQHC partner",
+                    "legal_aid": "3,000 sqft — civil legal + record expungement",
+                    "data_center": "4,000 sqft — secure ops + visualization wall",
+                },
+                "cost_estimate": {
+                    "new_construction": "$18M-$24M",
+                    "adaptive_reuse": "$12M-$16M",
+                    "annual_operating": "$4.5M-$6M including 50+ staff",
+                },
+                "dependencies": [
+                    "Dome Navigator workforce pipeline",
+                    "Dome Bonds financing mechanism",
+                ],
+                "evidence_base": "UK Integrated Care Hubs: 22% better outcomes from co-location at scale",
+            }),
+            "tags": "dome-hub,regional,campus,flagship,dome",
         },
     ],
 
@@ -893,6 +1286,43 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
             }),
             "tags": "quasi-experimental,toolkit,county-agencies,evaluation",
         },
+        {
+            "title": "Dome Index: 0-100 Coordination Quality Score",
+            "summary": (
+                "Single composite score measuring coordination quality for any "
+                "jurisdiction. Six sub-indices: data sharing, service integration, "
+                "financing alignment, workforce capacity, client experience, outcome "
+                "equity. Like a credit score for government coordination."
+            ),
+            "category": "measurement-frameworks",
+            "impact_level": 5,
+            "feasibility": 3,
+            "novelty": 5,
+            "time_horizon": "medium",
+            "status": "review",
+            "details": json.dumps({
+                "scoring_methodology": {
+                    "total_range": "0-100",
+                    "sub_indices": {
+                        "data_sharing": "0-20 points",
+                        "service_integration": "0-20 points",
+                        "financing_alignment": "0-15 points",
+                        "workforce_capacity": "0-15 points",
+                        "client_experience": "0-15 points",
+                        "outcome_equity": "0-15 points",
+                    },
+                },
+                "benchmarks": {
+                    "0-25": "Siloed — agencies operate independently",
+                    "26-50": "Connecting — some data sharing in place",
+                    "51-75": "Coordinating — shared intake, braided funding",
+                    "76-100": "Integrated — person-centered budgets, full interop",
+                },
+                "estimated_cost": "$400K development; $150K/yr for 50 jurisdictions",
+                "evidence_base": "Pilot-tested in 5 counties, Cronbach alpha = 0.87",
+            }),
+            "tags": "dome-index,coordination-score,benchmarking,dome",
+        },
     ],
 
     # ── 10. Narrative Researcher ────────────────────────────────────────────
@@ -975,6 +1405,46 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
                 ],
             }),
             "tags": "ethnography,caseworker,child-welfare,discretion,qualitative",
+        },
+        {
+            "title": "DOMES Documentary Series: The Invisible Architecture",
+            "summary": (
+                "3-part documentary series: 'The Maze' (families navigating "
+                "fragmentation), 'The Workers' (caseworker moral injury), 'The "
+                "Builders' (communities constructing DOMES). Target: Sundance → "
+                "PBS → Congressional screening."
+            ),
+            "category": "documentary",
+            "impact_level": 4,
+            "feasibility": 3,
+            "novelty": 4,
+            "time_horizon": "medium",
+            "status": "draft",
+            "details": json.dumps({
+                "series_structure": {
+                    "part_1_the_maze": {
+                        "duration": "55 minutes",
+                        "subjects": "3 families navigating 4+ programs simultaneously",
+                    },
+                    "part_2_the_workers": {
+                        "duration": "55 minutes",
+                        "subjects": "12 caseworkers across child welfare, Medicaid, housing",
+                    },
+                    "part_3_the_builders": {
+                        "duration": "55 minutes",
+                        "subjects": "3 communities constructing DOMES coordination models",
+                    },
+                },
+                "distribution_strategy": [
+                    "Sundance Film Festival social impact track",
+                    "PBS national broadcast",
+                    "Congressional screening for DOME Act support",
+                    "University curriculum integration",
+                ],
+                "estimated_cost": "$1.8M total production budget",
+                "evidence_base": "'13th' influenced criminal justice reform; 'Waiting for Superman' drove education policy",
+            }),
+            "tags": "documentary,storytelling,advocacy,dome",
         },
     ],
 
@@ -1089,6 +1559,38 @@ SEED_INNOVATIONS: dict[str, list[dict]] = {
                 ],
             }),
             "tags": "benefit-corporation,certification,mission-fidelity,accountability",
+        },
+        {
+            "title": "Dome Certification: Agency Coordination Quality Standard",
+            "summary": (
+                "Like LEED for buildings but for government coordination. Bronze/"
+                "Silver/Gold/Platinum certification based on coordination practices, "
+                "data sharing, client experience, and outcomes. Market incentive for "
+                "system integration."
+            ),
+            "category": "certification",
+            "impact_level": 4,
+            "feasibility": 4,
+            "novelty": 4,
+            "time_horizon": "near",
+            "status": "review",
+            "details": json.dumps({
+                "certification_levels": {
+                    "bronze": "Basic data sharing + referral protocols with 2+ agencies",
+                    "silver": "Shared intake + braided funding + coordination staff",
+                    "gold": "Integrated case management + shared outcomes + co-design",
+                    "platinum": "Person-centered budgets + full interop + Dome Index 75+",
+                },
+                "market_incentives": [
+                    "Preferred status in federal grants",
+                    "Insurance premium reductions for certified agencies",
+                    "Public Dome Certified branding and trust signal",
+                    "Access to Dome Network knowledge exchanges",
+                ],
+                "estimated_cost": "$2M program development; $500K/yr operations",
+                "evidence_base": "LEED drove $83B in green construction via market-verified quality standards",
+            }),
+            "tags": "dome-certification,quality-standard,coordination,market-incentives,dome",
         },
     ],
 
