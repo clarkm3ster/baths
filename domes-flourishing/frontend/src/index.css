@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #B8860B;
+  --color-gold-light: #DAA520;
+  --color-gold-pale: #F5DEB3;
+  --color-midnight: #191970;
+  --color-midnight-deep: #0a0a2e;
+  --color-warm-white: #FEFDFB;
+  --color-parchment: #FAF8F5;
+  --font-serif: 'Crimson Text', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-warm-white);
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-serif); }
+  * { border-radius: 0 !important; }
+}
+
+@layer components {
+  .btn-gold {
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .btn-gold:hover {
+    background: var(--color-gold);
+    color: white;
+  }
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+  }
+}
