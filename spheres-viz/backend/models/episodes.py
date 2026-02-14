@@ -270,14 +270,14 @@ EPISODES: list[Episode] = [
     # ======================================================================
     Episode(
         id=2,
-        slug="vacant-lot",
-        title="Cinema Garden",
+        slug="cinema-garden",
+        title="The Cinema Garden",
         subtitle="Where stories grow from the ground up",
         location="2300 N Front Street, Kensington",
         neighborhood="Kensington",
         coordinates=Coordinates(lat=39.9873, lng=-75.1253),
         genre="Documentary",
-        genre_color="#22C55E",
+        genre_color="#00C853",
 
         logline=(
             "An overgrown vacant lot in Kensington becomes an outdoor cinema ringed by "
@@ -447,13 +447,13 @@ EPISODES: list[Episode] = [
     Episode(
         id=3,
         slug="rooftop",
-        title="Sky Park",
+        title="The Sky Park",
         subtitle="The city is the canvas and the sky is the ceiling",
         location="929 Arch Street Parking Garage, Chinatown",
         neighborhood="Chinatown",
         coordinates=Coordinates(lat=39.9544, lng=-75.1560),
         genre="Action",
-        genre_color="#EF4444",
+        genre_color="#FF6B6B",
 
         logline=(
             "The top floor of a parking garage on the edge of Chinatown becomes a temporary "
@@ -620,13 +620,13 @@ EPISODES: list[Episode] = [
     Episode(
         id=4,
         slug="alley",
-        title="The Corridor",
+        title="The Light Alley",
         subtitle="Walk through someone else's dreams",
         location="Quarry Street, Old City",
         neighborhood="Old City",
         coordinates=Coordinates(lat=39.9519, lng=-75.1426),
-        genre="Noir Thriller",
-        genre_color="#A855F7",
+        genre="Mystery",
+        genre_color="#E040FB",
 
         logline=(
             "A narrow service alley in Old City becomes an immersive art walk where projection "
@@ -793,14 +793,14 @@ EPISODES: list[Episode] = [
     # ======================================================================
     Episode(
         id=5,
-        slug="park",
+        slug="sound-garden",
         title="The Sound Garden",
         subtitle="Where the wind learns to play",
         location="FDR Park, Northwest Corner",
         neighborhood="South Philadelphia",
         coordinates=Coordinates(lat=39.9063, lng=-75.1768),
-        genre="Romance",
-        genre_color="#EC4899",
+        genre="Fantasy",
+        genre_color="#00E5FF",
 
         logline=(
             "A forgotten corner of FDR Park becomes a garden of playable sound sculptures — "
@@ -982,7 +982,7 @@ EPISODES: list[Episode] = [
         neighborhood="Northern Liberties",
         coordinates=Coordinates(lat=39.9652, lng=-75.1349),
         genre="Adventure",
-        genre_color="#F59E0B",
+        genre_color="#76FF03",
 
         logline=(
             "A dark concrete underpass beneath I-95 becomes a lit bouldering gym and youth "
@@ -1160,14 +1160,14 @@ EPISODES: list[Episode] = [
     # ======================================================================
     Episode(
         id=7,
-        slug="market",
+        slug="night-market",
         title="The Night Market",
         subtitle="Three blocks of the world on one street",
         location="Broad Street, Cecil B. Moore to Susquehanna",
         neighborhood="North Philadelphia",
         coordinates=Coordinates(lat=39.9793, lng=-75.1555),
         genre="Ensemble Comedy",
-        genre_color="#F97316",
+        genre_color="#FFD740",
 
         logline=(
             "Three blocks of North Broad Street shut down every Saturday night and become "
@@ -1344,14 +1344,14 @@ EPISODES: list[Episode] = [
     # ======================================================================
     Episode(
         id=8,
-        slug="plaza",
+        slug="winter-village",
         title="The Winter Village",
         subtitle="The city gathers where the city governs",
         location="Dilworth Park, City Hall Courtyard",
         neighborhood="Center City",
         coordinates=Coordinates(lat=39.9524, lng=-75.1636),
-        genre="Family Holiday",
-        genre_color="#06B6D4",
+        genre="Romance",
+        genre_color="#448AFF",
 
         logline=(
             "The plaza surrounding City Hall becomes a Nordic-inspired winter village with "
@@ -1525,14 +1525,14 @@ EPISODES: list[Episode] = [
     # ======================================================================
     Episode(
         id=9,
-        slug="corridor",
-        title="The Glow",
+        slug="glow-corridor",
+        title="The Glow Corridor",
         subtitle="The river shows the way",
         location="Schuylkill Banks Trail, Center City to Grays Ferry",
         neighborhood="Center City / Grays Ferry",
         coordinates=Coordinates(lat=39.9417, lng=-75.1830),
-        genre="Sports Drama",
-        genre_color="#3B82F6",
+        genre="Thriller",
+        genre_color="#FF6E40",
 
         logline=(
             "A two-mile stretch of the Schuylkill River trail becomes an illuminated fitness "
@@ -1716,14 +1716,14 @@ EPISODES: list[Episode] = [
     # ======================================================================
     Episode(
         id=10,
-        slug="garden",
-        title="The Quiet Place",
+        slug="quiet-garden",
+        title="The Recovery Garden",
         subtitle="The space between the noise",
         location="52nd and Larchwood, West Philadelphia",
         neighborhood="West Philadelphia",
         coordinates=Coordinates(lat=39.9540, lng=-75.2277),
         genre="Quiet Drama",
-        genre_color="#10B981",
+        genre_color="#FFAB40",
 
         logline=(
             "An entire vacant block in West Philadelphia becomes a contemplative garden with "

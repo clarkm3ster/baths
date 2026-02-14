@@ -90,15 +90,17 @@ export default function PermanenceOverlay({
         {/* Main heading */}
         <h2
           style={{
-            fontSize: 22,
-            fontWeight: 300,
+            fontSize: permanencePercent === 100 ? 26 : 22,
+            fontWeight: permanencePercent === 100 ? 400 : 300,
             letterSpacing: '0.04em',
             margin: 0,
             lineHeight: 1.4,
             opacity: 0.85,
           }}
         >
-          When the show ends, this stays:
+          {permanencePercent === 100
+            ? '100% permanence.'
+            : 'When the show ends, this stays:'}
         </h2>
 
         {/* Permanence percentage */}
@@ -191,15 +193,17 @@ export default function PermanenceOverlay({
         {/* Closing line */}
         <p
           style={{
-            fontSize: 14,
-            fontWeight: 300,
+            fontSize: permanencePercent === 100 ? 18 : 14,
+            fontWeight: permanencePercent === 100 ? 400 : 300,
             letterSpacing: '0.06em',
-            opacity: 0.45,
+            opacity: permanencePercent === 100 ? 0.7 : 0.45,
             margin: '8px 0 0 0',
             fontStyle: 'italic',
           }}
         >
-          This is what SPHERES leaves behind.
+          {permanencePercent === 100
+            ? 'The entire garden stays. Forever.'
+            : 'This is what SPHERES leaves behind.'}
         </p>
       </div>
     </div>

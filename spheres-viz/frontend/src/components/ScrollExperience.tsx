@@ -322,23 +322,26 @@ export default function ScrollExperience({
           </div>
         </div>
 
-        {/* Phase 2: The Question */}
+        {/* Phase 2: Multiplying parcels + The Question */}
         <div
           style={{
-            minHeight: '50vh',
+            minHeight: '60vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             position: 'relative',
             zIndex: 2,
-            padding: '0 24px',
+            padding: '40px 24px',
           }}
         >
+          {/* Multiplying counter: 10 → 100 → 1,000 → 10,000 → 40,000 */}
+          <MultiplyingParcels progress={finalePhase2} />
+
           <p
             style={{
-              opacity: finalePhase2,
-              transform: `scale(${lerp(0.9, 1, finalePhase2)})`,
+              opacity: clamp((finalePhase2 - 0.75) * 4, 0, 1),
+              transform: `scale(${lerp(0.9, 1, clamp((finalePhase2 - 0.75) * 4, 0, 1))})`,
               willChange: 'transform, opacity',
               fontFamily: 'Inter, sans-serif',
               fontSize: 'clamp(26px, 5vw, 54px)',
@@ -346,28 +349,13 @@ export default function ScrollExperience({
               textAlign: 'center',
               color: '#ffffff',
               lineHeight: 1.3,
-              margin: '0 0 24px 0',
+              margin: '48px 0 0 0',
               maxWidth: 900,
             }}
           >
             What would your city look like
             <br />
-            with <span style={{ color: '#7B68EE' }}>1,000</span> spheres?
-          </p>
-
-          <p
-            style={{
-              opacity: clamp((finalePhase2 - 0.5) * 2, 0, 1),
-              willChange: 'opacity',
-              fontFamily: 'Inter, sans-serif',
-              fontSize: 'clamp(28px, 6vw, 64px)',
-              fontWeight: 800,
-              textAlign: 'center',
-              color: '#ffffff',
-              margin: 0,
-            }}
-          >
-            What about{' '}
+            with{' '}
             <span
               style={{
                 background:
@@ -377,7 +365,7 @@ export default function ScrollExperience({
                 backgroundClip: 'text',
               }}
             >
-              40,000
+              1,000 spheres
             </span>
             ?
           </p>
@@ -643,6 +631,125 @@ function CTACard({
         </svg>
       </div>
     </a>
+  );
+}
+
+/**
+ * Multiplying parcels animation for the finale.
+ * Shows a counter accelerating from 10 → 100 → 1,000 → 10,000 → 40,000
+ * with dots randomly filling the Philly map outline.
+ */
+function MultiplyingParcels({ progress }: { progress: number }) {
+  // Map progress 0-0.7 to the counter stages
+  const counterProgress = clamp(progress / 0.7, 0, 1);
+
+  // Exponential count: 10 → 40,000
+  const count = Math.round(
+    10 * Math.pow(4000, counterProgress),
+  );
+  const displayCount = count >= 40000 ? 40000 : count;
+  const formattedCount = displayCount.toLocaleString();
+
+  // Generate "glow dots" that fill the city outline
+  const dotCount = Math.min(Math.round(counterProgress * 200), 200);
+
+  // Seeded random positions within a rough bounding box of the Philly outline
+  const dots = useMemo(() => {
+    const result: Array<{ x: number; y: number; color: string }> = [];
+    const colors = [
+      '#7B68EE', '#00C853', '#FF6B6B', '#E040FB', '#00E5FF',
+      '#76FF03', '#FFD740', '#448AFF', '#FF6E40', '#FFAB40',
+    ];
+    // Simple seeded pseudo-random
+    let seed = 42;
+    const rand = () => {
+      seed = (seed * 16807 + 0) % 2147483647;
+      return seed / 2147483647;
+    };
+    for (let i = 0; i < 200; i++) {
+      // Random points roughly within Philadelphia outline (viewBox 420x440)
+      const x = 40 + rand() * 365;
+      const y = 10 + rand() * 420;
+      result.push({ x, y, color: colors[i % colors.length] });
+    }
+    return result;
+  }, []);
+
+  const containerOpacity = clamp(progress * 5, 0, 1);
+
+  return (
+    <div
+      style={{
+        opacity: containerOpacity,
+        willChange: 'opacity',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 24,
+      }}
+    >
+      {/* Mini map filling with dots */}
+      <svg
+        viewBox="0 0 420 440"
+        width={280}
+        height={293}
+        style={{ overflow: 'visible' }}
+      >
+        <defs>
+          <filter id="multiply-glow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feFlood floodColor="#ffffff" floodOpacity="0.6" result="color" />
+            <feComposite in="color" in2="blur" operator="in" result="glow" />
+            <feMerge>
+              <feMergeNode in="glow" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        {/* City outline */}
+        <path
+          d={`M 60,10 L 180,5 L 280,8 L 340,15 L 370,30 L 390,60
+              L 400,110 L 405,160 L 400,210 L 395,260 L 385,300
+              L 375,330 L 365,355 L 355,375 L 340,395 L 315,410
+              L 280,425 L 240,432 L 200,430 L 160,420 L 120,400
+              L 90,375 L 70,345 L 55,310 L 45,270 L 40,230
+              L 38,190 L 40,150 L 45,110 L 50,70 L 55,40 Z`}
+          fill="none"
+          stroke="rgba(255,255,255,0.15)"
+          strokeWidth="1.5"
+        />
+        {/* Multiplying dots */}
+        {dots.slice(0, dotCount).map((dot, i) => (
+          <circle
+            key={i}
+            cx={dot.x}
+            cy={dot.y}
+            r={dotCount > 150 ? 3 : 2.5}
+            fill={counterProgress > 0.85 ? '#ffffff' : dot.color}
+            opacity={counterProgress > 0.85 ? 0.9 : 0.7}
+            filter={counterProgress > 0.85 ? 'url(#multiply-glow)' : undefined}
+          />
+        ))}
+      </svg>
+
+      {/* Counter */}
+      <p
+        style={{
+          fontFamily: 'Inter, sans-serif',
+          fontSize: 'clamp(20px, 3vw, 32px)',
+          fontWeight: 600,
+          color: counterProgress > 0.85
+            ? '#ffffff'
+            : 'rgba(255,255,255,0.7)',
+          textAlign: 'center',
+          margin: 0,
+          letterSpacing: '0.05em',
+          transition: 'color 0.3s ease',
+        }}
+      >
+        {formattedCount} spheres activated.
+      </p>
+    </div>
   );
 }
 
