@@ -1,5 +1,5 @@
 {
-  "forwardPorts": [3000, 5180, 8006, 8007],
+  "forwardPorts": [3000, 5180, 5200, 8006, 8007, 8008],
   "portsAttributes": {
     "3000": {
       "label": "spheres-studio frontend",
@@ -9,12 +9,20 @@
       "label": "spheres-legal frontend",
       "onAutoForward": "openBrowser"
     },
+    "5200": {
+      "label": "spheres-viz frontend",
+      "onAutoForward": "openBrowser"
+    },
     "8006": {
       "label": "spheres-legal backend",
       "onAutoForward": "silent"
     },
     "8007": {
       "label": "spheres-studio backend",
+      "onAutoForward": "silent"
+    },
+    "8008": {
+      "label": "spheres-viz backend",
       "onAutoForward": "silent"
     }
   }
