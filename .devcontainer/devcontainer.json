@@ -1,0 +1,13 @@
+{
+  "forwardPorts": [5180, 8006],
+  "portsAttributes": {
+    "5180": {
+      "label": "spheres-legal frontend",
+      "onAutoForward": "openBrowser"
+    },
+    "8006": {
+      "label": "spheres-legal backend",
+      "onAutoForward": "silent"
+    }
+  }
+}

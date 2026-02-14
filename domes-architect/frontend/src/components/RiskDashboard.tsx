@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1import { useState, useRef, useEffect, useCallback } from "react";
 import type { Architecture, Risk, Stakeholder, WorkforcePlan, AuthorityMap, Phase } from "../types";
 
 interface Props {
