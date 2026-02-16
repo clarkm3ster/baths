@@ -5,7 +5,7 @@
  * "The government spends $79,000 a year on Marcus."
  * "Nothing gets better."
  *
- * Typography: Crimson Text serif, 72px desktop / 40px mobile.
+ * Typography: Georgia serif, 72px desktop / 40px mobile.
  * Uses CSS animation on mount (no scroll hook dependency).
  */
 export function OpeningSection() {

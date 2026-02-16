@@ -22,7 +22,7 @@
 
 body {
   font-family: var(--font-sans);
-  color: #000000;
+  color: #0D0D0D;
   background-color: #FFFFFF;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   z-index: 100;
   padding: 0.5rem 1rem;
-  background: #000;
+  background: #0D0D0D;
   color: #fff;
   font-size: 0.875rem;
 }
@@ -51,6 +51,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Visible focus indicators for keyboard navigation */
 *:focus-visible {
-  outline: 2px solid #000;
+  outline: 2px solid #0D0D0D;
   outline-offset: 2px;
 }

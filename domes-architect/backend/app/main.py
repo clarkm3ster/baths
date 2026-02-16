@@ -6,7 +6,7 @@ from app.seed import seed_all
 from app.routes.models import router as models_router
 from app.routes.architectures import router as architectures_router
 
-app = FastAPI(title="DOMES Architect", version="1.0.0")
+app = FastAPI(title="DOMES Architect", description="Enterprise architecture modeling", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,

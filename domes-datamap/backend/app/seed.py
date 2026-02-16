@@ -3,7 +3,7 @@ from app.models import System, Connection, Gap, Bridge
 
 
 def seed_systems(db: Session):
-    """Seed all 31 government data systems."""
+    """Seed all 31 government data systems (21 original + 10 new)."""
     systems = [
         # ── HEALTH DOMAIN (8 systems) ──────────────────────────────────────
         {
@@ -371,6 +371,169 @@ def seed_systems(db: Session):
             "state_operated": False,
             "applies_when": (["special_education", "disability_student"]),
         },
+
+        # ── ADDITIONAL HEALTH SYSTEMS ─────────────────────────────────────
+        {
+            "id": "ltss",
+            "name": "Long-Term Services and Supports System",
+            "acronym": "LTSS",
+            "agency": "State Department of Aging / DHS",
+            "domain": "health",
+            "description": "State system managing home and community-based services (HCBS) waivers, nursing facility level of care determinations, personal attendant services, and participant-directed budgets. Central to Olmstead compliance and the national shift from institutional to community-based care. Tracks waiver slots, service authorizations, and provider enrollments.",
+            "data_standard": "X12_837P",
+            "fields_held": (["waiver_enrollment", "service_authorizations", "level_of_care", "provider_network", "participant_budgets", "functional_assessments"]),
+            "api_availability": "limited",
+            "update_frequency": "daily",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "42 CFR Part 441", "State HCBS Waiver Regulations", "Olmstead Compliance Requirements"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["disabled", "elderly", "hcbs_waiver", "nursing_facility_eligible"]),
+        },
+        {
+            "id": "immunization_registry",
+            "name": "Immunization Information System",
+            "acronym": "IIS",
+            "agency": "State Department of Health",
+            "domain": "health",
+            "description": "Statewide registry of administered immunizations (childhood and adult) reported by healthcare providers, pharmacies, and public health clinics. Supports school entry requirements, outbreak response, and vaccine coverage monitoring. Governed by CDC immunization standards and state reporting mandates.",
+            "data_standard": "HL7_251",
+            "fields_held": (["immunization_history", "vaccine_inventory", "contraindications", "school_compliance", "provider_reports"]),
+            "api_availability": "public",
+            "update_frequency": "realtime",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "State Immunization Reporting Law", "CDC IIS Functional Standards"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["any_healthcare", "school_age", "child"]),
+        },
+        {
+            "id": "adt_notifications",
+            "name": "ADT Event Notification System",
+            "acronym": "ADT",
+            "agency": "Hospitals / CMS",
+            "domain": "health",
+            "description": "Hospital admit-discharge-transfer notification system mandated by the CMS Interoperability and Patient Access final rule (CMS-9115-F). Hospitals must send electronic ADT notifications to primary care providers and post-acute facilities. Uses HL7v2 ADT messages or FHIR Subscription framework. Critical for care transitions and readmission prevention.",
+            "data_standard": "HL7_ADT",
+            "fields_held": (["admission_events", "discharge_events", "transfer_events", "facility_info", "attending_provider"]),
+            "api_availability": "public",
+            "update_frequency": "realtime",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "CMS Interoperability Rule", "Condition of Participation"]),
+            "is_federal": True,
+            "state_operated": False,
+            "applies_when": (["any_healthcare", "hospital_event"]),
+        },
+        {
+            "id": "ncpdp_pharmacy",
+            "name": "Pharmacy Benefits System (NCPDP)",
+            "acronym": "PBM/NCPDP",
+            "agency": "State Medicaid / PBMs",
+            "domain": "health",
+            "description": "Pharmacy claims processing system using NCPDP SCRIPT and Telecommunication standards for point-of-sale drug claims, prior authorizations, formulary management, and drug utilization review. Processes real-time pharmacy transactions for Medicaid and commercial payers. Includes Medicaid Drug Rebate Program data.",
+            "data_standard": "NCPDP",
+            "fields_held": (["pharmacy_claims", "prior_authorizations", "formulary", "drug_utilization_review", "rebate_data"]),
+            "api_availability": "limited",
+            "update_frequency": "realtime",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "Medicaid Drug Rebate Act", "State Pharmacy Practice Act"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["medicaid", "prescription_drugs"]),
+        },
+
+        # ── ADDITIONAL JUSTICE SYSTEM ──────────────────────────────────────
+        {
+            "id": "jms",
+            "name": "County Jail Management System",
+            "acronym": "JMS",
+            "agency": "County Sheriff / Corrections",
+            "domain": "justice",
+            "description": "County-level jail management system tracking bookings, housing assignments, medical screenings, court dates, bail status, and release dates. Unlike state DOC systems, county jails hold pre-trial detainees (presumed innocent) and short-sentence inmates. Most county JMS operate independently with minimal interoperability.",
+            "data_standard": "custom",
+            "fields_held": (["bookings", "housing", "medical_screening", "court_dates", "bail_status", "release_dates"]),
+            "api_availability": "none",
+            "update_frequency": "realtime",
+            "privacy_law": "State Corrections Law",
+            "privacy_laws": (["State Corrections Law", "State Public Records Act", "PREA Standards"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["pretrial", "county_jail", "short_sentence"]),
+        },
+
+        # ── ADDITIONAL HOUSING SYSTEM ──────────────────────────────────────
+        {
+            "id": "cdbg_home",
+            "name": "Community Development Block Grant / HOME System",
+            "acronym": "CDBG/HOME",
+            "agency": "City/County Community Development",
+            "domain": "housing",
+            "description": "HUD IDIS (Integrated Disbursement and Information System) and local tracking of CDBG and HOME Investment Partnership funds. Covers housing rehabilitation, homebuyer assistance, rental assistance, and community facility projects. Tracks projects, beneficiaries, and national objective compliance.",
+            "data_standard": "HUD_IDIS",
+            "fields_held": (["projects", "beneficiaries", "fund_disbursements", "income_certifications", "national_objective"]),
+            "api_availability": "limited",
+            "update_frequency": "monthly",
+            "privacy_law": "HUD Regulations",
+            "privacy_laws": (["HUD Regulations", "Privacy Act", "State Grant Management"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["low_income", "housing_rehabilitation", "homebuyer"]),
+        },
+
+        # ── ADDITIONAL INCOME SYSTEM ───────────────────────────────────────
+        {
+            "id": "wic",
+            "name": "WIC Management Information System",
+            "acronym": "WIC MIS",
+            "agency": "State Department of Health",
+            "domain": "income",
+            "description": "Women, Infants, and Children supplemental nutrition program system tracking participant enrollment, nutrition risk assessments, food package prescriptions, breastfeeding support, and vendor management. WIC participants are categorically eligible for Medicaid and SNAP but enrollment is rarely coordinated.",
+            "data_standard": "flat_file",
+            "fields_held": (["participant_enrollment", "nutrition_assessments", "food_packages", "breastfeeding_support", "vendor_data"]),
+            "api_availability": "none",
+            "update_frequency": "daily",
+            "privacy_law": "WIC Privacy Regulations",
+            "privacy_laws": (["7 CFR Part 246", "State WIC Privacy Policy", "HIPAA (health assessments)"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["pregnant", "infant", "child_under_5", "low_income"]),
+        },
+        {
+            "id": "child_support",
+            "name": "Child Support Enforcement System",
+            "acronym": "CSE",
+            "agency": "State Child Support Agency",
+            "domain": "income",
+            "description": "State system managing child support orders, payment tracking, income withholding, paternity establishment, and interstate case management. Connected to Federal Parent Locator Service (FPLS) for interstate enforcement. Critical intersection between justice, income, and child welfare systems.",
+            "data_standard": "flat_file",
+            "fields_held": (["support_orders", "payment_history", "income_withholding", "paternity", "interstate_cases", "arrears"]),
+            "api_availability": "limited",
+            "update_frequency": "daily",
+            "privacy_law": "45 CFR Part 303",
+            "privacy_laws": (["45 CFR Part 303", "State CSE Law", "Federal Parent Locator Service"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["child_support", "non_custodial_parent", "custodial_parent"]),
+        },
+
+        # ── ADDITIONAL EDUCATION SYSTEM ────────────────────────────────────
+        {
+            "id": "early_intervention",
+            "name": "Early Intervention System (Part C IDEA)",
+            "acronym": "EI",
+            "agency": "State Department of Health / Education",
+            "domain": "education",
+            "description": "IDEA Part C early intervention tracking system for infants and toddlers (birth to age 3) with developmental delays. Manages Individualized Family Service Plans (IFSPs), service coordination, provider networks, and transition to Part B (preschool). Critical handoff point between health and education systems.",
+            "data_standard": "custom",
+            "fields_held": (["ifsp_plans", "developmental_assessments", "service_coordination", "provider_network", "transition_plans"]),
+            "api_availability": "none",
+            "update_frequency": "manual",
+            "privacy_law": "FERPA + IDEA Part C",
+            "privacy_laws": (["FERPA", "IDEA Part C", "34 CFR Part 303", "State Early Intervention Act"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["infant", "toddler", "developmental_delay"]),
+        },
     ]
 
     for sys_data in systems:
@@ -380,7 +543,7 @@ def seed_systems(db: Session):
 
 
 def seed_connections(db: Session):
-    """Seed all 13 known system connections."""
+    """Seed all 21 system connections (13 original + 8 new)."""
     connections = [
         # 1. mmis <-> mco
         {
@@ -551,6 +714,110 @@ def seed_connections(db: Session):
             "reliability": "moderate",
             "description": "Community mental health centers exchange clinical summaries, medication lists, and lab results through the HIE. Enables primary care providers to see behavioral health context and vice versa.",
         },
+        # 14. mmis <-> ltss
+        {
+            "source_id": "mmis",
+            "target_id": "ltss",
+            "direction": "bidirectional",
+            "format": "X12_837P",
+            "frequency": "daily",
+            "data_shared": (["waiver_eligibility", "service_authorizations", "claims", "level_of_care"]),
+            "governing_agreement": "HCBS Waiver State Plan",
+            "privacy_law": "HIPAA",
+            "reliability": "moderate",
+            "description": "Medicaid and LTSS exchange waiver eligibility, service authorizations, and claims data. MMIS authorizes HCBS waiver services; LTSS submits claims back to MMIS. Critical for Olmstead compliance tracking.",
+        },
+        # 15. hie <-> adt_notifications
+        {
+            "source_id": "adt_notifications",
+            "target_id": "hie",
+            "direction": "unidirectional",
+            "format": "HL7_ADT",
+            "frequency": "realtime",
+            "data_shared": (["admission_events", "discharge_events", "transfer_events"]),
+            "governing_agreement": "CMS Condition of Participation",
+            "privacy_law": "HIPAA",
+            "reliability": "high",
+            "description": "Hospitals send real-time ADT notifications to the HIE per CMS Interoperability Rule (CMS-9115-F). ADT messages trigger care coordination workflows for managed care plans and primary care providers.",
+        },
+        # 16. mmis <-> ncpdp_pharmacy
+        {
+            "source_id": "mmis",
+            "target_id": "ncpdp_pharmacy",
+            "direction": "bidirectional",
+            "format": "NCPDP",
+            "frequency": "realtime",
+            "data_shared": (["pharmacy_claims", "formulary", "prior_authorizations", "drug_rebate_data"]),
+            "governing_agreement": "Medicaid PBM Contract",
+            "privacy_law": "HIPAA",
+            "reliability": "high",
+            "description": "Real-time point-of-sale pharmacy claims processing using NCPDP Telecommunication Standard. MMIS adjudicates drug claims, manages formulary, and processes Medicaid Drug Rebate Program data.",
+        },
+        # 17. hie <-> immunization_registry
+        {
+            "source_id": "hie",
+            "target_id": "immunization_registry",
+            "direction": "bidirectional",
+            "format": "HL7_251",
+            "frequency": "daily",
+            "data_shared": (["immunization_history", "forecast", "contraindications"]),
+            "governing_agreement": "State Health Department DUA",
+            "privacy_law": "HIPAA",
+            "reliability": "high",
+            "description": "HIE integrates with the state immunization registry to provide immunization history at point of care and report newly administered vaccines. Supports school compliance verification and outbreak response.",
+        },
+        # 18. jms <-> court_cms
+        {
+            "source_id": "jms",
+            "target_id": "court_cms",
+            "direction": "bidirectional",
+            "format": "custom",
+            "frequency": "daily",
+            "data_shared": (["booking_data", "court_dates", "bail_status", "release_orders"]),
+            "governing_agreement": "County Justice Integration Agreement",
+            "privacy_law": "State Criminal Records Act",
+            "reliability": "moderate",
+            "description": "County jail and court systems exchange booking data, court scheduling, bail status, and release orders. Often the most functional justice data exchange because both operate at the county level under the same government.",
+        },
+        # 19. mmis <-> wic
+        {
+            "source_id": "mmis",
+            "target_id": "wic",
+            "direction": "bidirectional",
+            "format": "flat_file",
+            "frequency": "batch",
+            "data_shared": (["eligibility", "demographics", "pregnancy_status"]),
+            "governing_agreement": "State Health-DHS Interagency Agreement",
+            "privacy_law": "HIPAA",
+            "reliability": "moderate",
+            "description": "Medicaid and WIC share eligibility data for adjunctive eligibility (Medicaid recipients are automatically WIC income-eligible). Reduces redundant income verification and increases WIC participation rates among eligible families.",
+        },
+        # 20. child_support <-> tanf
+        {
+            "source_id": "child_support",
+            "target_id": "tanf",
+            "direction": "bidirectional",
+            "format": "flat_file",
+            "frequency": "daily",
+            "data_shared": (["support_orders", "payment_status", "paternity", "income_data"]),
+            "governing_agreement": "Federal TANF-CSE Coordination Requirement",
+            "privacy_law": "45 CFR Part 303",
+            "reliability": "high",
+            "description": "TANF and Child Support Enforcement share data as required by federal law. TANF recipients must cooperate with CSE as condition of benefits. CSE provides payment data that affects TANF benefit calculations.",
+        },
+        # 21. early_intervention <-> iep
+        {
+            "source_id": "early_intervention",
+            "target_id": "iep",
+            "direction": "unidirectional",
+            "format": "custom",
+            "frequency": "manual",
+            "data_shared": (["ifsp_plans", "developmental_assessments", "transition_plans"]),
+            "governing_agreement": "IDEA Part C to Part B Transition Agreement",
+            "privacy_law": "FERPA + IDEA",
+            "reliability": "low",
+            "description": "Early intervention transfers child records to school district IEP systems at age 3 transition. Federal law requires smooth transition but implementation is often manual with significant data loss during handoff.",
+        },
     ]
 
     for conn_data in connections:
@@ -560,7 +827,7 @@ def seed_connections(db: Session):
 
 
 def seed_gaps_and_bridges(db: Session):
-    """Seed all 18 gaps and their bridge solutions."""
+    """Seed all 22 gaps and their bridge solutions (18 original + 4 new)."""
 
     # ── Gap 1: DOC <-> MMIS ────────────────────────────────────────────
     gap1 = Gap(
@@ -1339,6 +1606,146 @@ def seed_gaps_and_bridges(db: Session):
         priority_score=6.0,
         impact_score=6.0,
         effort_score=5.0,
+        status="proposed",
+    ))
+
+    # ── Gap 19: LTSS <-> DOC ──────────────────────────────────────────
+    gap19 = Gap(
+        system_a_id="ltss",
+        system_b_id="doc",
+        barrier_type="legal",
+        barrier_law="Medicaid Inmate Exclusion + HCBS Waiver Rules",
+        barrier_description="Incarcerated individuals with disabilities who were receiving HCBS waiver services have their waiver slots terminated (not suspended) upon incarceration. Upon release, they must re-apply and often face multi-year waitlists, losing community-based supports that kept them out of institutional care.",
+        impact="People with disabilities cycle between community and incarceration, losing HCBS waiver services each time. Upon release, without waiver services, they are more likely to be institutionalized in nursing facilities (at 3x the cost) or become homeless. Violates Olmstead principles for returning citizens with disabilities.",
+        severity="critical",
+        cost_to_bridge="$1-3M",
+        timeline_to_bridge="12-24 months",
+        consent_closable=True,
+        consent_mechanism="HIPAA Authorization + Waiver Reservation Agreement",
+        what_it_would_take="State policy to reserve HCBS waiver slots during incarceration, pre-release LTSS assessment and service plan development, and automated reinstatement upon release notification from DOC.",
+        applies_when=(["incarcerated", "disabled", "hcbs_waiver", "recently_released"]),
+    )
+    db.add(gap19)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap19.id,
+        bridge_type="legal",
+        title="HCBS Waiver Slot Reservation Policy",
+        description="State policy change to reserve HCBS waiver slots for up to 24 months during incarceration, with automatic reinstatement upon release. Prevents costly institutional placement and supports community reintegration.",
+        technical_requirements="LTSS system modification for 'reserved' status, DOC release notification integration, automated reinstatement workflow",
+        legal_requirements="HCBS Waiver Amendment, CMS approval, State Medicaid Plan Amendment, DOC-DHS Interagency Agreement",
+        estimated_cost="$500K-1M",
+        timeline="12-18 months",
+        who_pays="State Medicaid Agency (cost-neutral — community savings offset)",
+        priority_score=8.5,
+        impact_score=9.0,
+        effort_score=5.0,
+        status="proposed",
+    ))
+
+    # ── Gap 20: JMS <-> MMIS ──────────────────────────────────────────
+    gap20 = Gap(
+        system_a_id="jms",
+        system_b_id="mmis",
+        barrier_type="technical",
+        barrier_law="Medicaid Inmate Exclusion Policy",
+        barrier_description="County jails have no automated connection to Medicaid. Pre-trial detainees (who have not been convicted) lose Medicaid coverage within days of booking despite being legally presumed innocent. Average county jail stay is 26 days — short enough that re-enrollment is impractical but long enough for medication interruptions.",
+        impact="Pre-trial detainees lose medications for chronic conditions including diabetes, hypertension, HIV, and mental illness. County jails must pay for healthcare out of county budgets instead of Medicaid. People released from jail face weeks without coverage while re-applying.",
+        severity="high",
+        cost_to_bridge="$500K-2M",
+        timeline_to_bridge="12-18 months",
+        consent_closable=False,
+        consent_mechanism=None,
+        what_it_would_take="CMS guidance clarifying Medicaid suspension (vs termination) for pre-trial detainees, county JMS integration with state Medicaid eligibility system, automated suspension/reinstatement triggers.",
+        applies_when=(["pretrial", "county_jail", "medicaid"]),
+    )
+    db.add(gap20)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap20.id,
+        bridge_type="technical",
+        title="County Jail-Medicaid Suspension Bridge",
+        description="Automated system connecting county JMS booking/release events to Medicaid eligibility system, enabling real-time suspension at booking and reinstatement at release for pre-trial detainees.",
+        technical_requirements="JMS booking API, Medicaid eligibility service, person matching, event-driven architecture, multi-county deployment",
+        legal_requirements="CMS State Plan Amendment for suspension policy, County-State DUA, HIPAA BAA",
+        estimated_cost="$500K-2M",
+        timeline="12-18 months",
+        who_pays="State Medicaid (90/10 federal match) + County match",
+        priority_score=8.0,
+        impact_score=8.0,
+        effort_score=6.0,
+        status="proposed",
+    ))
+
+    # ── Gap 21: Early Intervention <-> SACWIS ─────────────────────────
+    gap21 = Gap(
+        system_a_id="early_intervention",
+        system_b_id="sacwis",
+        barrier_type="legal",
+        barrier_law="FERPA + CAPTA",
+        barrier_description="FERPA protects early intervention records, while CAPTA governs child welfare records. Children in foster care who need early intervention services face a fragmented referral process — child welfare caseworkers cannot automatically access EI developmental screenings, and EI providers cannot see child welfare placement history.",
+        impact="Foster children with developmental delays are identified late or not at all because the EI referral pathway is not connected to child welfare intake. IDEA Part C requires referral within 2 days of a substantiated abuse/neglect report, but without system integration this timeline is rarely met.",
+        severity="high",
+        cost_to_bridge="$300K-800K",
+        timeline_to_bridge="6-12 months",
+        consent_closable=True,
+        consent_mechanism="Interagency Consent (foster parent / agency consent)",
+        what_it_would_take="Automated referral from SACWIS to EI upon substantiated abuse/neglect report for children under 3, bidirectional status updates, and shared developmental screening results with appropriate consent.",
+        applies_when=(["foster_care", "infant", "toddler", "developmental_delay", "abuse_neglect"]),
+    )
+    db.add(gap21)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap21.id,
+        bridge_type="technical",
+        title="CAPTA-IDEA Automated Referral Bridge",
+        description="Automated system generating EI referrals from substantiated abuse/neglect reports in SACWIS for children under 3, with bidirectional status tracking and developmental screening result sharing.",
+        technical_requirements="SACWIS event trigger for substantiated reports, EI referral API, child matching, consent management, status notification system",
+        legal_requirements="CAPTA referral compliance documentation, FERPA exception for child welfare, interagency MOU, consent from foster parent or agency",
+        estimated_cost="$300K-800K",
+        timeline="6-12 months",
+        who_pays="ACF (CAPTA funds) + State EI Agency (IDEA Part C funds)",
+        priority_score=7.5,
+        impact_score=8.0,
+        effort_score=4.0,
+        status="proposed",
+    ))
+
+    # ── Gap 22: WIC <-> Immunization Registry ─────────────────────────
+    gap22 = Gap(
+        system_a_id="wic",
+        system_b_id="immunization_registry",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="WIC clinics serve the same population (pregnant women, infants, children under 5) that needs immunizations, but WIC MIS and the immunization registry are not connected. WIC nutritionists cannot check immunization status during visits, missing a critical public health touchpoint for vaccine outreach.",
+        impact="WIC visits are a missed opportunity for immunization screening and referral. Under-immunized children continue to be seen at WIC clinics without vaccination reminders. States with WIC-IIS integration show 5-10% higher childhood immunization rates.",
+        severity="moderate",
+        cost_to_bridge="$200K-500K",
+        timeline_to_bridge="6-12 months",
+        consent_closable=False,
+        consent_mechanism=None,
+        what_it_would_take="HL7 interface between WIC MIS and state IIS, immunization status query at WIC check-in, automated referral for under-immunized children, and WIC nutritionist training on immunization counseling.",
+        applies_when=(["infant", "child_under_5", "pregnant", "immunization"]),
+    )
+    db.add(gap22)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap22.id,
+        bridge_type="technical",
+        title="WIC-Immunization Integration",
+        description="HL7 interface enabling WIC clinics to query immunization status during WIC appointments and generate referrals for under-immunized children, leveraging WIC's high-touch relationship with families.",
+        technical_requirements="HL7 2.5.1 VXQ/VXR query-response interface, WIC MIS integration, IIS web services, immunization forecast engine",
+        legal_requirements="State Health Department authorization, WIC-IIS data sharing agreement, WIC policy update for immunization screening",
+        estimated_cost="$200K-500K",
+        timeline="6-12 months",
+        who_pays="CDC Immunization Grant + USDA WIC Technology funds",
+        priority_score=6.0,
+        impact_score=6.0,
+        effort_score=3.0,
         status="proposed",
     ))
 

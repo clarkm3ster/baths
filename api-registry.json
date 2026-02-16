@@ -1,0 +1,24 @@
+{
+  "domes": {
+    "domes-legal-research": {"port": 8000, "health": "/api/health", "endpoints": ["/api/match", "/api/provisions", "/api/domains", "/api/explain"]},
+    "domes-data-research": {"port": 8001, "health": "/api/health", "endpoints": ["/api/systems", "/api/connections", "/api/gaps", "/api/consent-pathways"]},
+    "domes-profile-research": {"port": 8002, "health": "/api/health", "endpoints": ["/api/cases", "/api/profiles", "/api/cost", "/api/systems"]},
+    "domes-legal": {"port": 8003, "health": "/api/health", "endpoints": ["/api/provisions", "/api/search", "/api/match", "/api/graph"]},
+    "domes-datamap": {"port": 8003, "health": "/api/health", "endpoints": ["/api/systems", "/api/connections", "/api/gaps", "/api/person-map", "/api/bridges", "/api/stats"]},
+    "domes-contracts": {"port": 8003, "health": "/api/health", "endpoints": ["/api/agreements", "/api/compliance", "/api/consent"]},
+    "domes-architect": {"port": 8004, "health": "/api/health", "endpoints": ["/api/models", "/api/architectures"]},
+    "domes-profiles": {"port": 8004, "health": "/api/health", "endpoints": ["/api/profiles", "/api/cost"]},
+    "domes-flourishing": {"port": 8005, "health": "/api/health", "endpoints": ["/api/domains", "/api/philosophy", "/api/finance", "/api/culture", "/api/vitality", "/api/flourishing-index"]},
+    "domes-viz": {"port": 8005, "health": "/api/health", "endpoints": ["/api/narrative/sections"]},
+    "domes-brain": {"port": 8006, "health": "/api/health", "endpoints": ["/api/query", "/api/services", "/api/activity", "/api/stats", "/api/discoveries"]},
+    "domes-lab": {"port": 8007, "health": "/api/health", "endpoints": ["/api/teammates", "/api/innovations", "/api/collaborations", "/api/sessions", "/api/stats", "/api/generate"]}
+  },
+  "spheres": {
+    "spheres-assets": {"port": 8000, "health": "/api/health", "endpoints": ["/api/parcels", "/api/stats", "/api/value"]},
+    "spheres-legal": {"port": 8006, "health": "/api/health", "endpoints": ["/api/permits", "/api/contracts", "/api/policy"]},
+    "spheres-studio": {"port": 8007, "health": "/api/health", "endpoints": ["/api/designs", "/api/cost", "/api/timeline", "/api/world", "/api/gallery"]},
+    "spheres-viz": {"port": 8008, "health": "/api/health", "endpoints": ["/api/episodes"]},
+    "spheres-brain": {"port": 8009, "health": "/api/health", "endpoints": ["/api/query", "/api/services", "/api/activity", "/api/metrics", "/api/discoveries"]},
+    "spheres-lab": {"port": 8010, "health": "/api/health", "endpoints": ["/api/teammates", "/api/innovations", "/api/collaborations", "/api/sessions", "/api/stats", "/api/generate"]}
+  }
+}

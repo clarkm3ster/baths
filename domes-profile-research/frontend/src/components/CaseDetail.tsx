@@ -21,13 +21,15 @@ export default function CaseDetail({ caseData, onClose }: Props) {
               float: "right",
               background: "none",
               border: "1px solid #000000",
-              padding: "5px 14px",
+              padding: "8px 16px",
               cursor: "pointer",
               fontSize: "12px",
               fontFamily: "var(--font-mono)",
               fontWeight: 500,
               letterSpacing: "0.04em",
               textTransform: "uppercase",
+              minHeight: "44px",
+              minWidth: "44px",
             }}
           >
             Close

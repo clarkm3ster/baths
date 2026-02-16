@@ -12,8 +12,8 @@ const NAV_ITEMS = [
 export function TopNav() {
   return (
     <nav className="border-b-2 border-black bg-white sticky top-0 z-50">
-      <div className="flex items-center justify-between px-4 py-2">
-        <div className="flex items-center gap-4">
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 16px" }}>
           <div>
             <h1 className="font-serif text-lg font-bold tracking-wider uppercase leading-tight">
               DOMES DATAMAP
@@ -23,19 +23,19 @@ export function TopNav() {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-0">
+        <div style={{ display: "flex", overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
           {NAV_ITEMS.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               className={({ isActive }) =>
-                `px-3 py-2 font-mono text-xs uppercase tracking-wider border border-black transition-colors ${
+                `font-mono text-xs uppercase tracking-wider border border-black transition-colors ${
                   isActive
                     ? "bg-black text-white"
                     : "bg-white text-black hover:bg-gray-100"
                 }`
               }
-              style={{ marginLeft: "-1px" }}
+              style={{ marginLeft: "-1px", padding: "10px 12px", whiteSpace: "nowrap", minHeight: "44px", display: "inline-flex", alignItems: "center" }}
             >
               {item.label}
             </NavLink>

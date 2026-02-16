@@ -15,10 +15,11 @@ export default function ParcelDetail({ parcel, loading, onClose }: ParcelDetailP
       position: "absolute",
       top: 0,
       right: 0,
-      width: 380,
+      width: window.innerWidth <= 640 ? "100%" : 380,
+      maxWidth: "100%",
       height: "100%",
       background: "#0A0A0A",
-      borderLeft: "1px solid #1F1F1F",
+      borderLeft: window.innerWidth <= 640 ? "none" : "1px solid #1F1F1F",
       zIndex: 10,
       overflowY: "auto",
       display: "flex",
@@ -57,7 +58,12 @@ export default function ParcelDetail({ parcel, loading, onClose }: ParcelDetailP
             cursor: "pointer",
             fontSize: 20,
             lineHeight: 1,
-            padding: 4,
+            padding: 10,
+            minHeight: 44,
+            minWidth: 44,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           &times;

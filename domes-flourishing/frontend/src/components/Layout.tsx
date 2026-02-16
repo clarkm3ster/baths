@@ -18,27 +18,39 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b border-gold/30 bg-warm-white sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-baseline gap-3 group">
-            <span className="font-serif text-2xl font-bold text-gold tracking-wide">
-              DOMES
-            </span>
-            <span className="font-mono text-[9px] tracking-[0.3em] uppercase text-midnight/40 hidden sm:inline">
-              Flourishing
-            </span>
-          </Link>
-          <nav className="flex items-center gap-1 overflow-x-auto">
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "12px 24px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
+            <Link to="/" style={{ display: "flex", alignItems: "baseline", gap: "12px", textDecoration: "none", color: "inherit" }}>
+              <span className="font-serif" style={{ fontSize: "24px", fontWeight: 700, color: "var(--color-gold)", letterSpacing: "0.04em" }}>
+                DOMES
+              </span>
+              <span className="font-mono" style={{ fontSize: "9px", letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(25,25,112,0.4)" }}>
+                Flourishing
+              </span>
+            </Link>
+          </div>
+          <nav style={{ display: "flex", gap: "4px", overflowX: "auto", WebkitOverflowScrolling: "touch", paddingBottom: "4px" }}>
             {NAV_LINKS.map(({ to, label }) => {
               const active = location.pathname === to || location.pathname.startsWith(to + '/');
               return (
                 <Link
                   key={to}
                   to={to}
-                  className={`px-3 py-1.5 font-mono text-[10px] tracking-widest uppercase transition-colors whitespace-nowrap ${
-                    active
-                      ? 'text-gold border-b-2 border-gold'
-                      : 'text-midnight/50 hover:text-gold'
-                  }`}
+                  className="font-mono"
+                  style={{
+                    padding: "8px 12px",
+                    fontSize: "10px",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    whiteSpace: "nowrap",
+                    textDecoration: "none",
+                    color: active ? "var(--color-gold)" : "rgba(25,25,112,0.5)",
+                    borderBottom: active ? "2px solid var(--color-gold)" : "2px solid transparent",
+                    minHeight: "44px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    transition: "color 0.15s",
+                  }}
                 >
                   {label}
                 </Link>
@@ -50,8 +62,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <main className="flex-1">{children}</main>
 
-      <footer className="border-t border-midnight/10 py-8 text-center">
-        <p className="font-mono text-[10px] tracking-[0.4em] uppercase text-midnight/30">
+      <footer style={{ borderTop: "1px solid rgba(25,25,112,0.1)", padding: "32px 24px", textAlign: "center" }}>
+        <p className="font-mono" style={{ fontSize: "10px", letterSpacing: "0.4em", textTransform: "uppercase", color: "rgba(25,25,112,0.3)" }}>
           The Architecture of Human Flourishing
         </p>
       </footer>

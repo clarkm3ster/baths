@@ -110,3 +110,45 @@ export async function fetchStats(): Promise<Stats> {
   if (!res.ok) throw new Error('Failed to fetch stats');
   return res.json();
 }
+
+// ---------------------------------------------------------------------------
+// Marble Worlds — World Labs 3D Gaussian Splat Worlds
+// ---------------------------------------------------------------------------
+
+/** A cached Marble world entry from the backend. */
+export interface MarbleWorld {
+  episode_num: number;
+  slug: string;
+  title: string;
+  world_id: string | null;
+  splat_url: string | null;
+  status: 'ready' | 'pending' | 'error' | 'generating';
+  error?: string;
+  generated_at?: number;
+}
+
+/** Fetch all 10 marble worlds from cache. */
+export async function fetchMarbleWorlds(): Promise<MarbleWorld[]> {
+  const res = await fetch(`${API_BASE}/marble/worlds`);
+  if (!res.ok) throw new Error('Failed to fetch marble worlds');
+  return res.json();
+}
+
+/** Fetch a single marble world by episode number (1-10). */
+export async function fetchMarbleWorld(
+  episodeNum: number,
+): Promise<MarbleWorld> {
+  const res = await fetch(`${API_BASE}/marble/worlds/${episodeNum}`);
+  if (!res.ok) throw new Error(`Failed to fetch marble world ${episodeNum}`);
+  return res.json();
+}
+
+/** Trigger generation of all 10 marble worlds. */
+export async function triggerMarbleGenerate(): Promise<{
+  status: string;
+  message: string;
+}> {
+  const res = await fetch(`${API_BASE}/marble/generate`, { method: 'POST' });
+  if (!res.ok) throw new Error('Failed to trigger marble generation');
+  return res.json();
+}

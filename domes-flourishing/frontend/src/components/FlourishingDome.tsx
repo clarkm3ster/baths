@@ -228,7 +228,7 @@ export default function FlourishingDome({ domains, score, potentialScore, name }
                 strokeWidth={isHov ? 2.5 : 1} opacity={outlineOpacity} />
               <text x={lp.x} y={lp.y} textAnchor="middle" dominantBaseline="middle"
                 transform={`rotate(${rot},${lp.x},${lp.y})`}
-                fontFamily="'Crimson Text',serif" fontSize={Math.max(9, Math.min(12, W / 85))}
+                fontFamily="Georgia,serif" fontSize={Math.max(9, Math.min(12, W / 85))}
                 fontWeight="600" fill={MIDNIGHT} opacity={0.8 * layerOpacities[layerIdx]}
                 style={{ pointerEvents: 'none' }}
               >
@@ -262,7 +262,7 @@ export default function FlourishingDome({ domains, score, potentialScore, name }
 
         {/* Score — fades in after foundation builds */}
         <text x={cx} y={by - 60} textAnchor="middle"
-          fontFamily="'Crimson Text',serif" fontSize={Math.max(32, Math.min(48, W / 18))}
+          fontFamily="Georgia,serif" fontSize={Math.max(32, Math.min(48, W / 18))}
           fontWeight="700" fill={MIDNIGHT}
           opacity={Math.min(1, animScore / (score * 0.3 || 1))}>
           {Math.round(animScore)}
@@ -276,7 +276,7 @@ export default function FlourishingDome({ domains, score, potentialScore, name }
 
         {/* Title */}
         <text x={cx} y={28} textAnchor="middle"
-          fontFamily="'Crimson Text',serif" fontSize={Math.max(16, Math.min(24, W / 40))}
+          fontFamily="Georgia,serif" fontSize={Math.max(16, Math.min(24, W / 40))}
           fontWeight="700" fill={MIDNIGHT}>
           {name ? `${name}'s Flourishing Dome` : 'Flourishing Dome'}
         </text>

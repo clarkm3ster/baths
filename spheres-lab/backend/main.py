@@ -77,6 +77,7 @@ def seed_innovations(db):
 
 app = FastAPI(
     title="SPHERES Innovation Laboratory",
+    description="Innovation laboratory for public space activation",
     version="1.0.0",
     lifespan=lifespan,
 )
@@ -88,6 +89,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/api/health")
+async def health():
+    return {"status": "ok", "app": "spheres-lab", "port": 8010}
+
 
 app.include_router(router)
 

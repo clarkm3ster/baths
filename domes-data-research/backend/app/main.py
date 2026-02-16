@@ -5,7 +5,7 @@ from app.database import init_db, SessionLocal
 from app.seed import seed_all
 from app.routes import systems, gaps
 
-app = FastAPI(title="DOMES Data Constellation API", version="1.0.0")
+app = FastAPI(title="DOMES Data Constellation API", description="Government data systems constellation mapping", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,

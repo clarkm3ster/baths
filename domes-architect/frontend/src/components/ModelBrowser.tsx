@@ -73,7 +73,7 @@ export default function ModelBrowser({ models, loading }: Props) {
       {/* Model Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {filtered.map((model) => {
-          const catColor = CATEGORY_COLORS[model.category] || "#000000";
+          const catColor = CATEGORY_COLORS[model.category] || "#0D0D0D";
           const isExpanded = expanded === model.id;
           return (
             <div

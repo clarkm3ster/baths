@@ -93,4 +93,10 @@ body {
   .cta-grid {
     grid-template-columns: 1fr;
   }
+  body {
+    font-size: 14px;
+  }
+  button {
+    min-height: 44px;
+  }
 }

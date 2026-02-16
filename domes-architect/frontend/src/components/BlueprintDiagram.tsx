@@ -207,7 +207,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
               refY="3"
               orient="auto"
             >
-              <polygon points="0,0 8,3 0,6" fill="#000000" />
+              <polygon points="0,0 8,3 0,6" fill="#0D0D0D" />
             </marker>
             <marker
               id="arrowDashed"
@@ -217,7 +217,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
               refY="2.5"
               orient="auto"
             >
-              <polygon points="0,0 6,2.5 0,5" fill="#000000" opacity="0.5" />
+              <polygon points="0,0 6,2.5 0,5" fill="#0D0D0D" opacity="0.5" />
             </marker>
           </defs>
 
@@ -227,10 +227,10 @@ export default function BlueprintDiagram({ architecture }: Props) {
               x={cx}
               y={30}
               textAnchor="middle"
-              fontFamily="'Crimson Text', serif"
+              fontFamily="Georgia, serif"
               fontSize="20"
               fontWeight="700"
-              fill="#000000"
+              fill="#0D0D0D"
               letterSpacing="3"
             >
               ARCHITECTURE BLUEPRINT
@@ -262,7 +262,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                   y1={fromY}
                   x2={edgePt.x}
                   y2={edgePt.y}
-                  stroke="#000000"
+                  stroke="#0D0D0D"
                   strokeWidth="1"
                   markerEnd="url(#arrowSolid)"
                 />
@@ -285,7 +285,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                   y1={fromPt.y}
                   x2={toPt.x}
                   y2={toPt.y}
-                  stroke="#000000"
+                  stroke="#0D0D0D"
                   strokeWidth="1"
                   strokeDasharray="4,3"
                   opacity="0.4"
@@ -302,7 +302,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                 cy={cy}
                 r={PERSON_RADIUS}
                 fill="#ffffff"
-                stroke="#000000"
+                stroke="#0D0D0D"
                 strokeWidth="2"
               />
               {/* Crosshair lines */}
@@ -311,7 +311,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                 y1={cy}
                 x2={cx + PERSON_RADIUS + 6}
                 y2={cy}
-                stroke="#000000"
+                stroke="#0D0D0D"
                 strokeWidth="1"
               />
               <line
@@ -319,7 +319,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                 y1={cy - PERSON_RADIUS - 6}
                 x2={cx}
                 y2={cy + PERSON_RADIUS + 6}
-                stroke="#000000"
+                stroke="#0D0D0D"
                 strokeWidth="1"
               />
               {/* Inner circle for person head */}
@@ -327,12 +327,12 @@ export default function BlueprintDiagram({ architecture }: Props) {
                 cx={cx}
                 cy={cy - 4}
                 r={6}
-                fill="#000000"
+                fill="#0D0D0D"
               />
               {/* Person body arc */}
               <path
                 d={`M ${cx - 8} ${cy + 10} Q ${cx - 8} ${cy + 2} ${cx} ${cy + 2} Q ${cx + 8} ${cy + 2} ${cx + 8} ${cy + 10}`}
-                fill="#000000"
+                fill="#0D0D0D"
               />
               {/* Label */}
               <text
@@ -342,7 +342,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                 fontFamily="'Inter', sans-serif"
                 fontSize="9"
                 fontWeight="600"
-                fill="#000000"
+                fill="#0D0D0D"
                 letterSpacing="2"
               >
                 INDIVIDUAL
@@ -365,7 +365,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                     width={boxSize.w}
                     height={boxSize.h}
                     fill="#ffffff"
-                    stroke="#000000"
+                    stroke="#0D0D0D"
                     strokeWidth="1.5"
                   />
                   <text
@@ -375,7 +375,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                     fontFamily="'Inter', sans-serif"
                     fontSize="9"
                     fontWeight="600"
-                    fill="#000000"
+                    fill="#0D0D0D"
                   >
                     {truncateText(s.name, 12)}
                   </text>
@@ -409,7 +409,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                     width={DOMAIN_BOX.w}
                     height={DOMAIN_BOX.h}
                     fill={color}
-                    stroke="#000000"
+                    stroke="#0D0D0D"
                     strokeWidth="1.5"
                   />
                   <text
@@ -473,7 +473,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
               cy={cy}
               r={INNER_RADIUS}
               fill="none"
-              stroke="#000000"
+              stroke="#0D0D0D"
               strokeWidth="0.5"
               strokeDasharray="2,6"
               opacity="0.15"
@@ -483,7 +483,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
               cy={cy}
               r={OUTER_RADIUS}
               fill="none"
-              stroke="#000000"
+              stroke="#0D0D0D"
               strokeWidth="0.5"
               strokeDasharray="2,6"
               opacity="0.15"
@@ -498,7 +498,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                 fontFamily="'Inter', sans-serif"
                 fontSize="9"
                 fontWeight="600"
-                fill="#000000"
+                fill="#0D0D0D"
                 letterSpacing="2"
               >
                 DOMAINS
@@ -521,7 +521,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                         width={10}
                         height={10}
                         fill={color}
-                        stroke="#000000"
+                        stroke="#0D0D0D"
                         strokeWidth="0.5"
                       />
                       <text
@@ -531,7 +531,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                         dominantBaseline="middle"
                         fontFamily="'JetBrains Mono', monospace"
                         fontSize="8"
-                        fill="#000000"
+                        fill="#0D0D0D"
                       >
                         {truncateText(label, 12)}
                       </text>
@@ -550,7 +550,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                         y1={lineY}
                         x2={cx - 70}
                         y2={lineY}
-                        stroke="#000000"
+                        stroke="#0D0D0D"
                         strokeWidth="1"
                       />
                       <text
@@ -568,7 +568,7 @@ export default function BlueprintDiagram({ architecture }: Props) {
                         y1={lineY}
                         x2={cx + 50}
                         y2={lineY}
-                        stroke="#000000"
+                        stroke="#0D0D0D"
                         strokeWidth="1"
                         strokeDasharray="4,3"
                       />

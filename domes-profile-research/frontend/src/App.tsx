@@ -168,9 +168,11 @@ export default function App() {
           display: "flex",
           gap: "0",
           borderBottom: "1px solid var(--color-border)",
-          padding: "0 40px",
+          padding: "0 16px",
           background: "#FFFFFF",
           flexShrink: 0,
+          overflowX: "auto",
+          WebkitOverflowScrolling: "touch",
         }}
       >
         {(
@@ -202,6 +204,8 @@ export default function App() {
                   : "var(--color-text-tertiary)",
               letterSpacing: "0.02em",
               transition: "color 0.1s",
+              whiteSpace: "nowrap",
+              minHeight: "44px",
             }}
           >
             {label}

@@ -178,4 +178,21 @@
     border-color: var(--color-legal-blue);
     color: var(--color-legal-blue);
   }
+
+  /* ── Mobile responsiveness ─────────────────────────────────── */
+  @media (max-width: 640px) {
+    .btn-primary, .btn-secondary {
+      min-height: 44px;
+      padding: 0.625rem 1.25rem;
+    }
+    .nav-link {
+      padding: 0.625rem 0.75rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .card {
+      padding: 1rem;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Crimson Text", Georgia, serif;
+  --font-serif: Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
@@ -10,7 +10,7 @@
   --color-surface-alt: #F5F5F5;
   --color-border: #E0E0E0;
   --color-border-light: #F0F0F0;
-  --color-text-primary: #000000;
+  --color-text-primary: #0D0D0D;
   --color-text-secondary: #444444;
   --color-text-tertiary: #888888;
 
@@ -50,7 +50,7 @@
   }
 
   ::selection {
-    background: #000000;
+    background: #0D0D0D;
     color: #FFFFFF;
   }
 
@@ -83,7 +83,7 @@
     width: 520px;
     max-width: 90vw;
     background: #FFFFFF;
-    border-left: 2px solid #000000;
+    border-left: 2px solid #0D0D0D;
     z-index: 100;
     overflow-y: auto;
     animation: slideIn 0.2s ease-out;
@@ -146,8 +146,8 @@
   }
 
   .citation-tag:hover {
-    border-color: #000000;
-    color: #000000;
+    border-color: #0D0D0D;
+    color: #0D0D0D;
   }
 
   /* Timeline markers */
@@ -165,7 +165,7 @@
     left: 16px;
     width: 16px;
     height: 16px;
-    border: 2px solid #000000;
+    border: 2px solid #0D0D0D;
     background: #FFFFFF;
   }
 
@@ -180,8 +180,8 @@
   }
 
   .timeline-dot--entry {
-    background: #000000;
-    border-color: #000000;
+    background: #0D0D0D;
+    border-color: #0D0D0D;
   }
 
   .timeline-dot--coordination {
@@ -200,20 +200,20 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    border: 2px solid #000000;
+    border: 2px solid #0D0D0D;
     background: #FFFFFF;
-    color: #000000;
+    color: #0D0D0D;
     cursor: pointer;
     transition: background 0.15s, color 0.15s;
   }
 
   .btn:hover {
-    background: #000000;
+    background: #0D0D0D;
     color: #FFFFFF;
   }
 
   .btn--primary {
-    background: #000000;
+    background: #0D0D0D;
     color: #FFFFFF;
   }
 
@@ -233,7 +233,7 @@
 
   .btn--disabled:hover {
     background: #FFFFFF;
-    color: #000000;
+    color: #0D0D0D;
   }
 
   /* Domain badges */
@@ -270,18 +270,18 @@
   }
 
   .circumstance-check:hover {
-    border-color: #000000;
+    border-color: #0D0D0D;
   }
 
   .circumstance-check--active {
-    border-color: #000000;
+    border-color: #0D0D0D;
     background: var(--color-surface);
   }
 
   .circumstance-check input[type="checkbox"] {
     width: 16px;
     height: 16px;
-    accent-color: #000000;
+    accent-color: #0D0D0D;
     cursor: pointer;
   }
 
@@ -289,7 +289,7 @@
   .mode-toggle {
     display: flex;
     align-items: center;
-    border: 2px solid #000000;
+    border: 2px solid #0D0D0D;
   }
 
   .mode-toggle__option {
@@ -307,7 +307,7 @@
   }
 
   .mode-toggle__option--active {
-    background: #000000;
+    background: #0D0D0D;
     color: #FFFFFF;
   }
 
@@ -326,7 +326,7 @@
   .loading-pulse {
     width: 48px;
     height: 48px;
-    border: 2px solid #000000;
+    border: 2px solid #0D0D0D;
     animation: pulse 1.2s ease-in-out infinite;
   }
 
@@ -356,6 +356,32 @@
     }
     * {
       border-color: #000 !important;
+    }
+    .stat-number {
+      font-size: 28px;
+    }
+    .stat-number--large {
+      font-size: 36px;
+    }
+  }
+
+  /* ── Mobile responsiveness ─────────────────────────────────── */
+  @media (max-width: 640px) {
+    .detail-panel {
+      width: 100vw;
+      max-width: 100vw;
+    }
+    .btn, .btn--small {
+      min-height: 44px;
+      padding: 10px 20px;
+    }
+    .mode-toggle__option {
+      min-height: 44px;
+      padding: 10px 16px;
+    }
+    .circumstance-check {
+      min-height: 44px;
+      padding: 10px 12px;
     }
     .stat-number {
       font-size: 28px;

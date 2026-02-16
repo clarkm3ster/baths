@@ -33,48 +33,62 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* ---- Header ---- */}
-      <header className="border-b-2 border-black px-6 py-4">
-        <div className="flex items-baseline gap-4">
-          <h1 className="text-3xl tracking-tight">DOMES CONTRACTS</h1>
-          <span className="text-sm text-[var(--color-text-secondary)] font-mono uppercase tracking-widest">
+      <header style={{ borderBottom: "2px solid black", padding: "16px 24px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "8px" }}>
+          <h1 style={{ fontSize: "28px", fontFamily: "var(--font-serif)", fontWeight: 700, letterSpacing: "-0.01em" }}>DOMES CONTRACTS</h1>
+          <span style={{ fontSize: "14px", color: "var(--color-text-secondary)", fontFamily: "var(--font-mono, monospace)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
             Agreement Generation Engine
           </span>
         </div>
 
         {/* Stats bar */}
         {stats && (
-          <div className="mt-3 flex gap-6 text-xs font-mono uppercase tracking-wider">
+          <div style={{ marginTop: "12px", display: "flex", flexWrap: "wrap", gap: "16px", fontSize: "12px", fontFamily: "var(--font-mono, monospace)", textTransform: "uppercase", letterSpacing: "0.04em" }}>
             <span>
               Total:{" "}
-              <strong className="text-sm">{stats.total}</strong>
+              <strong style={{ fontSize: "14px" }}>{stats.total}</strong>
             </span>
-            <span className="text-[var(--color-draft)]">
+            <span style={{ color: "var(--color-draft)" }}>
               Draft:{" "}
-              <strong className="text-sm">{stats.by_status.draft ?? 0}</strong>
+              <strong style={{ fontSize: "14px" }}>{stats.by_status.draft ?? 0}</strong>
             </span>
-            <span className="text-[var(--color-in-review)]">
+            <span style={{ color: "var(--color-in-review)" }}>
               In Review:{" "}
-              <strong className="text-sm">{stats.by_status.in_review ?? 0}</strong>
+              <strong style={{ fontSize: "14px" }}>{stats.by_status.in_review ?? 0}</strong>
             </span>
-            <span className="text-[var(--color-executed)]">
+            <span style={{ color: "var(--color-executed)" }}>
               Executed:{" "}
-              <strong className="text-sm">{stats.by_status.executed ?? 0}</strong>
+              <strong style={{ fontSize: "14px" }}>{stats.by_status.executed ?? 0}</strong>
             </span>
           </div>
         )}
       </header>
 
       {/* ---- Tabs ---- */}
-      <nav className="border-b border-[var(--color-border)] px-6 flex gap-0">
+      <nav style={{ borderBottom: "1px solid var(--color-border)", display: "flex", gap: 0, overflowX: "auto", WebkitOverflowScrolling: "touch", paddingLeft: "24px", paddingRight: "24px" }}>
         {TABS.map((t) => (
           <button
             key={t.key}
             onClick={() => setActiveTab(t.key)}
-            className={`px-5 py-3 text-xs font-mono uppercase tracking-widest border-b-2 transition-colors cursor-pointer ${
-              activeTab === t.key
-                ? "border-black text-black font-bold"
-                : "border-transparent text-[var(--color-text-secondary)] hover:text-black"
-            }`}
+            style={{
+              padding: "12px 20px",
+              fontSize: "12px",
+              fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+              borderBottom: activeTab === t.key ? "2px solid black" : "2px solid transparent",
+              color: activeTab === t.key ? "black" : "var(--color-text-secondary)",
+              fontWeight: activeTab === t.key ? 700 : 400,
+              background: "none",
+              border: "none",
+              borderBottomWidth: "2px",
+              borderBottomStyle: "solid",
+              borderBottomColor: activeTab === t.key ? "black" : "transparent",
+              cursor: "pointer",
+              whiteSpace: "nowrap",
+              minHeight: "44px",
+              transition: "color 0.15s",
+            }}
           >
             {t.label}
           </button>

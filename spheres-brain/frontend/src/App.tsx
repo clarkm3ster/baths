@@ -69,8 +69,19 @@ function formatDate(date: Date): string {
 
 // -- Main App ---------------------------------------------------------------
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+  return isMobile;
+}
+
 export default function App() {
   const time = useCurrentTime();
+  const isMobile = useIsMobile();
 
   // Data state
   const [services, setServices] = useState<ServiceInfo[]>([]);
@@ -135,17 +146,19 @@ export default function App() {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '0 20px',
-          height: 48,
+          minHeight: 48,
           borderBottom: '1px solid var(--border)',
           background: 'var(--bg-card)',
           flexShrink: 0,
           position: 'sticky',
           top: 0,
           zIndex: 100,
+          flexWrap: 'wrap',
+          gap: '8px',
         }}
       >
         {/* Left: Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 0' }}>
           <Brain size={18} style={{ color: '#0066FF' }} />
           <span
             style={{
@@ -158,24 +171,25 @@ export default function App() {
           >
             SPHERES BRAIN
           </span>
-          <span
-            style={{
-              fontSize: 9,
-              color: 'var(--text-tertiary)',
-              background: 'var(--accent-dim)',
-              padding: '2px 6px',
-              borderRadius: 3,
-              fontWeight: 500,
-              letterSpacing: '0.06em',
-              marginLeft: 4,
-            }}
-          >
-            COMMAND CENTER
-          </span>
+          {!isMobile && (
+            <span
+              style={{
+                fontSize: 9,
+                color: 'var(--text-tertiary)',
+                background: 'var(--accent-dim)',
+                padding: '2px 6px',
+                fontWeight: 500,
+                letterSpacing: '0.06em',
+                marginLeft: 4,
+              }}
+            >
+              COMMAND CENTER
+            </span>
+          )}
         </div>
 
         {/* Center: System status */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '8px 0' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             {connected ? (
               <Wifi size={12} style={{ color: 'var(--green)' }} />
@@ -195,32 +209,20 @@ export default function App() {
             </span>
           </div>
 
-          {lastRefresh && (
-            <span
-              style={{
-                fontSize: 9,
-                color: 'var(--text-tertiary)',
-                fontFamily: 'var(--mono)',
-              }}
-            >
-              Last sync {formatTime(lastRefresh)}
-            </span>
-          )}
-
           <button
             onClick={loadData}
             disabled={loading}
             style={{
               background: 'transparent',
               border: '1px solid var(--border)',
-              borderRadius: 4,
-              padding: '4px 8px',
+              padding: '6px 10px',
               color: 'var(--text-tertiary)',
               cursor: loading ? 'wait' : 'pointer',
               display: 'flex',
               alignItems: 'center',
               gap: 4,
               fontSize: 10,
+              minHeight: 44,
               transition: 'all 0.15s ease',
             }}
             onMouseEnter={(e) => {
@@ -242,41 +244,44 @@ export default function App() {
           </button>
         </div>
 
-        {/* Right: Time */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-          }}
-        >
-          <Clock size={12} style={{ color: 'var(--text-tertiary)' }} />
-          <div style={{ textAlign: 'right' }}>
-            <div
-              style={{
-                fontFamily: 'var(--mono)',
-                fontSize: 14,
-                fontWeight: 600,
-                color: '#FFFFFF',
-                letterSpacing: '0.04em',
-                lineHeight: 1,
-              }}
-            >
-              {formatTime(time)}
-            </div>
-            <div
-              style={{
-                fontSize: 9,
-                color: 'var(--text-tertiary)',
-                letterSpacing: '0.02em',
-                lineHeight: 1,
-                marginTop: 2,
-              }}
-            >
-              {formatDate(time)}
+        {/* Right: Time (hidden on very small screens) */}
+        {!isMobile && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 10,
+              padding: '8px 0',
+            }}
+          >
+            <Clock size={12} style={{ color: 'var(--text-tertiary)' }} />
+            <div style={{ textAlign: 'right' }}>
+              <div
+                style={{
+                  fontFamily: 'var(--mono)',
+                  fontSize: 14,
+                  fontWeight: 600,
+                  color: '#FFFFFF',
+                  letterSpacing: '0.04em',
+                  lineHeight: 1,
+                }}
+              >
+                {formatTime(time)}
+              </div>
+              <div
+                style={{
+                  fontSize: 9,
+                  color: 'var(--text-tertiary)',
+                  letterSpacing: '0.02em',
+                  lineHeight: 1,
+                  marginTop: 2,
+                }}
+              >
+                {formatDate(time)}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </header>
 
       {/* ── Dashboard Body ──────────────────────────────────────── */}
@@ -305,7 +310,7 @@ export default function App() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
+            gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
             gap: 16,
           }}
         >
@@ -320,9 +325,9 @@ export default function App() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '2fr 1fr 1fr',
+            gridTemplateColumns: isMobile ? '1fr' : '2fr 1fr 1fr',
             gap: 16,
-            minHeight: 360,
+            minHeight: isMobile ? undefined : 360,
           }}
         >
           {/* Activity Log */}

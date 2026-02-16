@@ -6,7 +6,7 @@
  * cost ticker.  Keyboard shortcuts are registered at mount time.
  */
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, lazy, Suspense } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
   // Top bar icons
@@ -53,6 +53,21 @@ import {
 } from 'lucide-react';
 import type { LucideProps } from 'lucide-react';
 import { useStudioStore, type DesignElement } from '../context/StudioStore';
+
+const MarbleViewer = lazy(() => import('../components/MarbleViewer'));
+
+// ---------------------------------------------------------------------------
+// Marble API types
+// ---------------------------------------------------------------------------
+
+interface MarbleWorldData {
+  world_id: string;
+  prompt: string;
+  splat_url: string;
+  status: string;
+  created_at: number;
+  is_mock: boolean;
+}
 
 // ---------------------------------------------------------------------------
 // Element library data (mirrors the backend catalog for the sidebar)
@@ -968,6 +983,75 @@ export default function StudioPage() {
   const [nameValue, setNameValue] = useState(design.name);
   const [showExportMenu, setShowExportMenu] = useState(false);
 
+  // ── Marble 3D generation state ─────────────────────────────────────────
+  const [marbleLoading, setMarbleLoading] = useState(false);
+  const [marbleProgress, setMarbleProgress] = useState('');
+  const [marbleWorld, setMarbleWorld] = useState<MarbleWorldData | null>(null);
+  const [showMarbleViewer, setShowMarbleViewer] = useState(false);
+  const [marbleError, setMarbleError] = useState<string | null>(null);
+
+  const handleExploreIn3D = useCallback(async () => {
+    // Build a prompt from the design name, description, and elements
+    const elementNames = design.elements
+      .map((el) => {
+        const def = ELEMENTS.find((e) => e.id === el.elementId);
+        return def?.name || el.elementId;
+      })
+      .filter((v, i, arr) => arr.indexOf(v) === i); // deduplicate
+
+    const promptParts: string[] = [];
+    if (design.name && design.name !== 'Untitled Design') {
+      promptParts.push(design.name);
+    }
+    if (design.description) {
+      promptParts.push(design.description);
+    }
+    if (elementNames.length > 0) {
+      promptParts.push(`Features: ${elementNames.join(', ')}`);
+    }
+    if (promptParts.length === 0) {
+      promptParts.push('An immersive community activation space with creative installations');
+    }
+
+    const prompt = promptParts.join('. ');
+
+    setMarbleLoading(true);
+    setMarbleProgress('Sending design to Marble...');
+    setMarbleError(null);
+
+    try {
+      setMarbleProgress('Generating 3D world...');
+      const resp = await fetch('/api/marble/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt }),
+      });
+
+      if (!resp.ok) {
+        const errData = await resp.json().catch(() => ({}));
+        throw new Error(errData.detail || `Server error ${resp.status}`);
+      }
+
+      const data: MarbleWorldData = await resp.json();
+      setMarbleWorld(data);
+      setMarbleProgress('World ready!');
+
+      // Small delay so user sees "ready" before the viewer opens
+      await new Promise((r) => setTimeout(r, 400));
+      setShowMarbleViewer(true);
+    } catch (err: any) {
+      console.error('Marble generation failed:', err);
+      setMarbleError(err?.message || 'Failed to generate 3D world');
+    } finally {
+      setMarbleLoading(false);
+      setMarbleProgress('');
+    }
+  }, [design]);
+
+  const handleCloseMarbleViewer = useCallback(() => {
+    setShowMarbleViewer(false);
+  }, []);
+
   // Sync name input when design changes
   useEffect(() => {
     setNameValue(design.name);
@@ -1007,8 +1091,12 @@ export default function StudioPage() {
         undo();
       } else if (e.key === 'Escape') {
         e.preventDefault();
-        cancelPlacing();
-        deselectAll();
+        if (showMarbleViewer) {
+          setShowMarbleViewer(false);
+        } else {
+          cancelPlacing();
+          deselectAll();
+        }
       } else if (e.key === 'Tab') {
         e.preventDefault();
         toggleSidebar();
@@ -1028,6 +1116,7 @@ export default function StudioPage() {
     deselectAll,
     toggleSidebar,
     pushHistory,
+    showMarbleViewer,
   ]);
 
   const handleNameSave = () => {
@@ -1171,14 +1260,37 @@ export default function StudioPage() {
             Share
           </button>
 
-          {/* Explore 3D — prominent */}
+          {/* Explore in 3D — Marble generation */}
           <button
-            onClick={() => navigate(`/explore/${design.id}`)}
-            className="flex cursor-pointer items-center gap-1.5 rounded-lg px-4 py-1.5 text-xs font-semibold text-white transition-all duration-200 hover:brightness-110"
-            style={{ background: 'var(--accent)' }}
+            onClick={handleExploreIn3D}
+            disabled={marbleLoading}
+            className="flex cursor-pointer items-center gap-1.5 rounded-lg px-4 py-1.5 text-xs font-semibold text-white transition-all duration-200 hover:brightness-110 disabled:cursor-wait disabled:opacity-70"
+            style={{
+              background: marbleLoading
+                ? 'linear-gradient(135deg, #3B82F6, #A855F7)'
+                : 'var(--accent)',
+            }}
           >
-            <Box size={13} />
-            Explore 3D
+            {marbleLoading ? (
+              <>
+                <div
+                  style={{
+                    width: '13px',
+                    height: '13px',
+                    border: '2px solid rgba(255,255,255,0.3)',
+                    borderTopColor: '#fff',
+                    borderRadius: '50%',
+                    animation: 'spin 0.8s linear infinite',
+                  }}
+                />
+                {marbleProgress || 'Generating...'}
+              </>
+            ) : (
+              <>
+                <Box size={13} />
+                Explore in 3D
+              </>
+            )}
           </button>
 
           <button
@@ -1344,6 +1456,82 @@ export default function StudioPage() {
         <span><kbd className="font-mono">Esc</kbd> Deselect</span>
         <span><kbd className="font-mono">Tab</kbd> Toggle Sidebar</span>
       </div>
+
+      {/* ── Marble error toast ────────────────────────────────────────────── */}
+      {marbleError && (
+        <div
+          className="animate-fade-in-up"
+          style={{
+            position: 'fixed',
+            bottom: '24px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 9000,
+            background: 'rgba(239,68,68,0.1)',
+            border: '1px solid rgba(239,68,68,0.25)',
+            borderRadius: '10px',
+            padding: '10px 20px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            maxWidth: '500px',
+          }}
+        >
+          <AlertTriangle size={14} style={{ color: '#EF4444', flexShrink: 0 }} />
+          <span style={{ fontSize: '12px', color: '#EF4444' }}>{marbleError}</span>
+          <button
+            onClick={() => setMarbleError(null)}
+            style={{
+              background: 'none',
+              border: 'none',
+              color: '#EF4444',
+              cursor: 'pointer',
+              padding: '2px',
+              flexShrink: 0,
+            }}
+          >
+            <X size={12} />
+          </button>
+        </div>
+      )}
+
+      {/* ── Marble 3D Viewer overlay ──────────────────────────────────────── */}
+      {showMarbleViewer && marbleWorld && (
+        <Suspense
+          fallback={
+            <div
+              style={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9999,
+                background: '#0A0A0A',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#fff',
+                fontSize: '13px',
+              }}
+            >
+              Loading viewer...
+            </div>
+          }
+        >
+          <MarbleViewer
+            splatUrl={marbleWorld.splat_url}
+            prompt={marbleWorld.prompt}
+            worldId={marbleWorld.world_id}
+            isMock={marbleWorld.is_mock}
+            onClose={handleCloseMarbleViewer}
+          />
+        </Suspense>
+      )}
+
+      {/* Spin keyframe for marble loading button */}
+      <style>{`
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
     </div>
   );
 }

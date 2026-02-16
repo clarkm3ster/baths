@@ -27,10 +27,22 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'brief', label: 'Brief Gen', symbol: '[>]', description: 'Generate Briefs', view: { page: 'brief' } },
 ];
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+  return isMobile;
+}
+
 function App() {
   const [currentView, setCurrentView] = useState<View>({ page: 'home' });
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [systemTime, setSystemTime] = useState(new Date());
+  const isMobile = useIsMobile();
+  const effectiveSidebarCollapsed = isMobile ? true : sidebarCollapsed;
 
   useEffect(() => {
     const timer = setInterval(() => setSystemTime(new Date()), 1000);
@@ -62,20 +74,22 @@ function App() {
       {/* Sidebar */}
       <aside
         className={`flex flex-col border-r border-border bg-surface transition-all duration-200 ${
-          sidebarCollapsed ? 'w-14' : 'w-56'
+          effectiveSidebarCollapsed ? 'w-14' : 'w-56'
         }`}
+        style={isMobile ? { position: 'absolute', left: 0, top: 0, bottom: 0, zIndex: 40 } : undefined}
       >
         <div className="flex items-center justify-between border-b border-border px-3 py-3">
-          {!sidebarCollapsed && (
+          {!effectiveSidebarCollapsed && (
             <div className="font-mono text-xs tracking-widest text-text-muted">
               DOMES LAB
             </div>
           )}
           <button
             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-            className="flex h-7 w-7 items-center justify-center border border-border font-mono text-xs text-text-muted hover:border-text-muted hover:text-text transition-colors"
+            className="flex items-center justify-center border border-border font-mono text-xs text-text-muted hover:border-text-muted hover:text-text transition-colors"
+            style={{ minHeight: "44px", minWidth: "44px" }}
           >
-            {sidebarCollapsed ? '>' : '<'}
+            {effectiveSidebarCollapsed ? '>' : '<'}
           </button>
         </div>
 
@@ -93,7 +107,7 @@ function App() {
                 }`}
               >
                 <span className="font-mono text-xs shrink-0">{item.symbol}</span>
-                {!sidebarCollapsed && (
+                {!effectiveSidebarCollapsed && (
                   <div className="min-w-0">
                     <div className="text-sm font-medium truncate">{item.label}</div>
                     <div className="text-[10px] font-mono text-text-muted tracking-wide truncate">
@@ -118,25 +132,24 @@ function App() {
 
       {/* Main */}
       <div className="flex flex-1 flex-col overflow-hidden">
-        <header className="flex items-center justify-between border-b border-border bg-surface px-6 py-3">
-          <div className="flex items-center gap-4">
-            <h1 className="font-serif text-xl tracking-wide">DOMES LAB</h1>
-            <div className="h-4 w-px bg-border" />
-            <span className="font-mono text-xs text-text-muted tracking-widest uppercase">
-              Innovation Laboratory
-            </span>
+        <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid var(--color-border)", background: "var(--color-surface)", padding: "12px 24px", flexWrap: "wrap", gap: "8px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+            <h1 className="font-serif" style={{ fontSize: "20px", letterSpacing: "0.04em" }}>DOMES LAB</h1>
+            {!isMobile && (
+              <>
+                <div style={{ height: "16px", width: "1px", background: "var(--color-border)" }} />
+                <span className="font-mono" style={{ fontSize: "12px", color: "var(--color-text-muted)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                  Innovation Laboratory
+                </span>
+              </>
+            )}
           </div>
-          <div className="flex items-center gap-5">
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 bg-status-approved animate-pulse" />
-              <span className="font-mono text-[10px] text-text-muted tracking-wider">SYSTEM ONLINE</span>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+              <div className="animate-pulse" style={{ height: "8px", width: "8px", background: "var(--color-status-approved)" }} />
+              <span className="font-mono" style={{ fontSize: "10px", color: "var(--color-text-muted)", letterSpacing: "0.06em" }}>ONLINE</span>
             </div>
-            <div className="h-4 w-px bg-border" />
-            <span className="font-mono text-[10px] text-accent-glow tracking-wider uppercase">
-              {currentView.page === 'domain' ? 'DOMAIN DETAIL' : currentView.page.toUpperCase()}
-            </span>
-            <div className="h-4 w-px bg-border" />
-            <span className="font-mono text-[10px] text-text-muted tabular-nums">
+            <span className="font-mono" style={{ fontSize: "10px", color: "var(--color-text-muted)", fontVariantNumeric: "tabular-nums" }}>
               {systemTime.toLocaleTimeString('en-US', { hour12: false })}
             </span>
           </div>

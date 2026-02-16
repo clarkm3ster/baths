@@ -77,10 +77,22 @@ function SystemStatus({ health }: { health: HealthResponse | null }) {
 
 // ── App ──────────────────────────────────────────────────────────────────────
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+  return isMobile;
+}
+
 export default function App() {
   const [view, setView] = useState<View>('dashboard');
   const [health, setHealth] = useState<HealthResponse | null>(null);
+  const isMobile = useIsMobile();
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const effectiveSidebarCollapsed = isMobile ? true : sidebarCollapsed;
 
   const loadHealth = useCallback(async () => {
     const h = await getHealth();
@@ -98,8 +110,9 @@ export default function App() {
       {/* Sidebar */}
       <aside
         className={`bg-surface border-r border-border flex flex-col shrink-0 transition-all ${
-          sidebarCollapsed ? 'w-14' : 'w-48'
+          effectiveSidebarCollapsed ? 'w-14' : 'w-48'
         }`}
+        style={isMobile ? { position: 'absolute', left: 0, top: 0, bottom: 0, zIndex: 40 } : undefined}
       >
         {/* Brand */}
         <div className="px-3 py-4 border-b border-border">
@@ -107,7 +120,7 @@ export default function App() {
             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
             className="w-full text-left"
           >
-            {sidebarCollapsed ? (
+            {effectiveSidebarCollapsed ? (
               <span className="font-mono text-xs text-blue font-bold block text-center">DB</span>
             ) : (
               <div>
@@ -137,7 +150,7 @@ export default function App() {
                 }`}
               >
                 <span className="font-mono text-xs shrink-0">{item.symbol}</span>
-                {!sidebarCollapsed && (
+                {!effectiveSidebarCollapsed && (
                   <span className="text-sm">{item.label}</span>
                 )}
               </button>

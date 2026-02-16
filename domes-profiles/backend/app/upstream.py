@@ -1,7 +1,7 @@
 """
 Upstream API clients for DOMES services.
 
-Calls domes-legal (port 8000), domes-datamap (port 8003),
+Calls domes-legal (port 8003), domes-datamap (port 8003),
 and domes-profile-research (port 8002) with graceful fallbacks.
 """
 
@@ -12,7 +12,7 @@ import httpx
 
 logger = logging.getLogger(__name__)
 
-LEGAL_BASE = "http://localhost:8000"
+LEGAL_BASE = "http://localhost:8003"
 DATAMAP_BASE = "http://localhost:8003"
 PROFILE_RESEARCH_BASE = "http://localhost:8002"
 
@@ -85,7 +85,7 @@ def circumstances_to_domains(circumstances: dict) -> list[str]:
 
 
 # ===========================================================================
-# domes-legal (port 8000)
+# domes-legal (port 8003)
 # ===========================================================================
 
 async def fetch_provisions(

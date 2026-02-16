@@ -67,6 +67,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/api/health")
+async def health():
+    return {"status": "ok", "app": "domes-lab", "port": 8007}
+
+
 # ── Routes ──────────────────────────────────────────────────────────────────
 app.include_router(router)
 

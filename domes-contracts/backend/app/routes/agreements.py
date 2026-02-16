@@ -103,7 +103,7 @@ def _template_dict(t: Template) -> dict:
 # Helper: fetch gap from domes-datamap
 # ---------------------------------------------------------------------------
 
-DATAMAP_BASE = "http://localhost:8001"
+DATAMAP_BASE = "http://localhost:8003"
 
 
 def _fetch_gap(gap_id: int) -> dict:

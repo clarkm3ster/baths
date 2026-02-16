@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .database import engine, Base
 from .seed import seed
 
-app = FastAPI(title="DOMES Legal Engine", version="1.0.0")
+app = FastAPI(title="DOMES Legal Engine", description="Legal provisions database and search", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -18,6 +18,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/api/health")
+async def health():
+    return {"status": "ok", "app": "domes-legal", "port": 8003}
 
 
 @app.on_event("startup")

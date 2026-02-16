@@ -18,7 +18,8 @@ export default function FilterPanel({ filters, onChange, wards }: FilterPanelPro
       position: "absolute",
       top: 0,
       left: 0,
-      width: open ? 260 : 40,
+      width: open ? (window.innerWidth <= 640 ? "100%" : 260) : 40,
+      maxWidth: "100%",
       height: "100%",
       background: open ? "#0A0A0A" : "transparent",
       borderRight: open ? "1px solid #1F1F1F" : "none",
@@ -30,8 +31,8 @@ export default function FilterPanel({ filters, onChange, wards }: FilterPanelPro
       <button
         onClick={() => setOpen(!open)}
         style={{
-          width: 32,
-          height: 32,
+          width: 44,
+          height: 44,
           margin: 4,
           background: "#141414",
           border: "1px solid #2A2A2A",
@@ -39,6 +40,9 @@ export default function FilterPanel({ filters, onChange, wards }: FilterPanelPro
           cursor: "pointer",
           fontSize: 14,
           flexShrink: 0,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         {open ? "\u2039" : "\u203A"}

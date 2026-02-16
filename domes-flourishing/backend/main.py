@@ -44,6 +44,11 @@ app.add_middleware(
 )
 
 
+@app.get("/api/health")
+async def health():
+    return {"status": "ok", "app": "domes-flourishing", "port": 8005}
+
+
 # ──────────────────────────────────────────────
 # Request Models
 # ──────────────────────────────────────────────

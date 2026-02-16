@@ -180,8 +180,8 @@ export const useStudioStore = create<StudioState>((set, get) => ({
   zoom: 1,
   panOffset: { x: 0, y: 0 },
 
-  sidebarOpen: true,
-  detailPanelOpen: true,
+  sidebarOpen: window.innerWidth > 768,
+  detailPanelOpen: window.innerWidth > 768,
   viewMode: 'canvas',
 
   history: [],

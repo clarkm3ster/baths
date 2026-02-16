@@ -39,6 +39,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/api/health")
+async def health():
+    return {"status": "ok", "app": "domes-datamap", "port": 8003}
+
+
 # Mount all routers
 app.include_router(systems.router)
 app.include_router(connections.router)

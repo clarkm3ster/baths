@@ -13,8 +13,8 @@ from models.services import ServiceEndpoint, ServiceInfo
 
 ASSETS_SERVICE = ServiceInfo(
     name="spheres-assets",
-    url="http://localhost:8006",
-    port=8006,
+    url="http://localhost:8000",
+    port=8000,
     status="up",
     description=(
         "Philadelphia parcel & vacancy data engine. Provides real-time "
@@ -158,6 +158,53 @@ VIZ_SERVICE = ServiceInfo(
 )
 
 
+# ── spheres-lab ───────────────────────────────────────────────────────────
+
+LAB_SERVICE = ServiceInfo(
+    name="spheres-lab",
+    url="http://localhost:8010",
+    port=8010,
+    description=(
+        "Innovation and collaboration lab. Manages teammate profiles, "
+        "innovation projects, collaborative sessions, and AI-assisted "
+        "generation for community activation ideas."
+    ),
+    health_endpoint="/health",
+    endpoints=[
+        ServiceEndpoint(
+            path="/api/teammates",
+            method="GET",
+            description="List all teammates and collaborators",
+        ),
+        ServiceEndpoint(
+            path="/api/innovations",
+            method="GET",
+            description="Browse innovation projects and proposals",
+        ),
+        ServiceEndpoint(
+            path="/api/stats",
+            method="GET",
+            description="Lab-wide statistics and metrics",
+        ),
+        ServiceEndpoint(
+            path="/api/collaborations",
+            method="GET",
+            description="Active and past collaboration records",
+        ),
+        ServiceEndpoint(
+            path="/api/sessions",
+            method="GET",
+            description="Lab working sessions and events",
+        ),
+        ServiceEndpoint(
+            path="/api/generate",
+            method="POST",
+            description="AI-assisted generation for activation ideas and designs",
+        ),
+    ],
+)
+
+
 # ── Canonical list ─────────────────────────────────────────────────────────
 
 SPHERES_SERVICES: list[ServiceInfo] = [
@@ -165,6 +212,7 @@ SPHERES_SERVICES: list[ServiceInfo] = [
     LEGAL_SERVICE,
     STUDIO_SERVICE,
     VIZ_SERVICE,
+    LAB_SERVICE,
 ]
 
 # Quick lookup by name

@@ -11,6 +11,7 @@ Run:
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes.episodes import router as episodes_router
+from routes.marble import router as marble_router
 
 app = FastAPI(
     title="SPHERES Viz API",
@@ -30,6 +31,7 @@ app.add_middleware(
 )
 
 app.include_router(episodes_router)
+app.include_router(marble_router)
 
 
 @app.get("/api/health")

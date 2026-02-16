@@ -7,7 +7,7 @@ from app.routes.agreements import router as agreements_router
 from app.routes.compliance import router as compliance_router
 from app.routes.consent import router as consent_router
 
-app = FastAPI(title="DOMES Contracts", version="1.0.0")
+app = FastAPI(title="DOMES Contracts", description="Data sharing agreement generator", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,

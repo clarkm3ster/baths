@@ -4,7 +4,7 @@ from .database import engine, Base
 from .seed import seed
 from .routes import cases, profiles, costs, systems
 
-app = FastAPI(title="DOMES Profile Research", version="1.0.0")
+app = FastAPI(title="DOMES Profile Research", description="Composite profile and cost research", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,

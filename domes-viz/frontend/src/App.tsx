@@ -6,6 +6,7 @@ import { VisionSection } from "./sections/VisionSection";
 import { MathSection } from "./sections/MathSection";
 import { CallSection } from "./sections/CallSection";
 import { Footer } from "./sections/Footer";
+import { MarbleGallery } from "./marble";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <PromiseSection />
         <RealitySection />
         <VisionSection />
+        <MarbleGallery />
         <MathSection />
         <CallSection />
       </main>

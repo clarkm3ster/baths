@@ -515,7 +515,7 @@ export default function BudgetView({ architectures }: Props) {
                       <path
                         d={investmentPath}
                         fill="none"
-                        stroke="#000000"
+                        stroke="#0D0D0D"
                         strokeWidth={2.5}
                       />
                       {/* Investment dots */}
@@ -525,7 +525,7 @@ export default function BudgetView({ architectures }: Props) {
                           cx={xScale(i)}
                           cy={yScale(v)}
                           r={4}
-                          fill="#000000"
+                          fill="#0D0D0D"
                           stroke="white"
                           strokeWidth={1.5}
                         />

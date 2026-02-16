@@ -103,7 +103,7 @@ export default function App() {
   return (
     <>
       {/* Nav + Stats */}
-      <div style={{ display: "flex", alignItems: "center", borderBottom: "1px solid #1F1F1F", flexShrink: 0 }}>
+      <div style={{ display: "flex", alignItems: "center", borderBottom: "1px solid #1F1F1F", flexShrink: 0, flexWrap: "wrap" }}>
         {/* Nav */}
         <div style={{ display: "flex", gap: 0, padding: "0 8px" }}>
           {(["map", "list", "portfolio"] as View[]).map((v) => (
@@ -111,7 +111,7 @@ export default function App() {
               key={v}
               onClick={() => setView(v)}
               style={{
-                padding: "8px 14px",
+                padding: "10px 14px",
                 background: view === v ? "#141414" : "transparent",
                 border: "none",
                 color: view === v ? "#fff" : "#666",
@@ -121,13 +121,14 @@ export default function App() {
                 letterSpacing: "0.05em",
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: view === v ? 600 : 400,
+                minHeight: 44,
               }}
             >
               {v}
             </button>
           ))}
         </div>
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
           <StatsBar stats={stats} loading={statsLoading} />
         </div>
       </div>

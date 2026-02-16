@@ -65,12 +65,14 @@ from routes.costs import router as costs_router           # noqa: E402
 from routes.timeline import router as timeline_router     # noqa: E402
 from routes.collaboration import router as collab_router  # noqa: E402
 from routes.world import router as world_router           # noqa: E402
+from routes.marble import router as marble_router         # noqa: E402
 
 app.include_router(designs_router)
 app.include_router(costs_router)
 app.include_router(timeline_router)
 app.include_router(collab_router)
 app.include_router(world_router)
+app.include_router(marble_router)
 
 
 # ---------------------------------------------------------------------------

@@ -12,19 +12,19 @@ export default function TopNav() {
 
   return (
     <nav className="border-b-2 border-black bg-white">
-      <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-end justify-between">
+      <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "16px 24px" }}>
         {/* Branding */}
-        <Link to="/" className="flex flex-col">
-          <span className="font-serif text-3xl font-bold tracking-tight uppercase leading-none">
+        <Link to="/" style={{ display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", marginBottom: "8px" }}>
+          <span className="font-serif" style={{ fontSize: "28px", fontWeight: 700, letterSpacing: "-0.01em", textTransform: "uppercase", lineHeight: 1 }}>
             DOMES
           </span>
-          <span className="font-mono text-[10px] text-[var(--color-text-tertiary)] tracking-[0.06em] uppercase mt-1">
+          <span className="font-mono" style={{ fontSize: "10px", color: "var(--color-text-tertiary)", letterSpacing: "0.06em", textTransform: "uppercase", marginTop: "4px" }}>
             Digital Overview of Managed Entitlements &amp; Services
           </span>
         </Link>
 
         {/* Navigation links */}
-        <div className="flex items-center gap-1">
+        <div style={{ display: "flex", gap: "4px", overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
           {NAV_LINKS.map((link) => {
             const isActive =
               link.to === '/'
@@ -35,15 +35,22 @@ export default function TopNav() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`
-                  px-4 py-2 font-mono text-[12px] font-medium uppercase tracking-[0.04em]
-                  border-b-2 transition-colors
-                  ${
-                    isActive
-                      ? 'border-black text-black'
-                      : 'border-transparent text-[var(--color-text-tertiary)] hover:text-black hover:border-[var(--color-border)]'
-                  }
-                `}
+                className="font-mono"
+                style={{
+                  padding: "10px 16px",
+                  fontSize: "12px",
+                  fontWeight: 500,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.04em",
+                  borderBottom: isActive ? "2px solid black" : "2px solid transparent",
+                  color: isActive ? "black" : "var(--color-text-tertiary)",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                  minHeight: "44px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  transition: "color 0.15s",
+                }}
               >
                 {link.label}
               </Link>

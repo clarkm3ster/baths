@@ -139,7 +139,7 @@ export default function TimelineView({ architectures }: Props) {
                         fontSize={11}
                         fontFamily="'Inter', sans-serif"
                         fontWeight={600}
-                        fill="#000000"
+                        fill="#0D0D0D"
                       >
                         {phase.name.length > 24 ? phase.name.slice(0, 24) + "..." : phase.name}
                       </text>
@@ -151,7 +151,7 @@ export default function TimelineView({ architectures }: Props) {
                         width={Math.max(w, 2)}
                         height={barHeight}
                         fill={color}
-                        stroke="#000000"
+                        stroke="#0D0D0D"
                         strokeWidth={1}
                       />
 
@@ -178,7 +178,7 @@ export default function TimelineView({ architectures }: Props) {
                             cy={y + barHeight + 6}
                             r={3}
                             fill={color}
-                            stroke="#000000"
+                            stroke="#0D0D0D"
                             strokeWidth={1}
                           />
                         );

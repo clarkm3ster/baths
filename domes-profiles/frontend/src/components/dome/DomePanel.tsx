@@ -172,7 +172,7 @@ export default function DomePanel({
       <text
         fill={color}
         fontSize={12}
-        fontFamily="'Crimson Text', serif"
+        fontFamily="Georgia, serif"
         fontWeight={700}
         letterSpacing="0.5px"
       >

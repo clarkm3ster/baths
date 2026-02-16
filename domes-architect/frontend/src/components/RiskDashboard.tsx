@@ -1,4 +1,4 @@
-export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import type { Architecture, Risk, Stakeholder, WorkforcePlan, AuthorityMap, Phase } from "../types";
 
 interface Props {
@@ -325,7 +325,7 @@ function RiskSection({
                     const label = SEVERITY_LABELS[cell.severity] || "";
                     const textColor =
                       cell.severity === "none" || cell.severity === "low"
-                        ? "#000000"
+                        ? "#0D0D0D"
                         : "#FFFFFF";
 
                     return (

@@ -13,7 +13,7 @@ from app.matching import match_provisions
 from app.cross_reference import build_cross_references, find_gaps
 from app.explain import router as explain_router
 
-app = FastAPI(title="DOMES Legal Provisions API", version="1.0.0")
+app = FastAPI(title="DOMES Legal Provisions API", description="Legal rights research and provision matching", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -24,6 +24,11 @@ app.add_middleware(
 )
 
 app.include_router(explain_router)
+
+
+@app.get("/api/health")
+async def health():
+    return {"status": "ok", "app": "domes-legal-research", "port": 8000}
 
 
 @app.on_event("startup")

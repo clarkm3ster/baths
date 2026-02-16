@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Crimson Text", Georgia, serif;
+  --font-serif: Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --color-bg: #FFFFFF;
   --color-surface: #F5F5F5;
   --color-border: #E0E0E0;
-  --color-text: #000000;
+  --color-text: #0D0D0D;
   --color-text-secondary: #555555;
   --color-text-tertiary: #888888;
   --color-health: #1A6B3C;
@@ -89,5 +89,16 @@
     .print-only { display: block !important; }
     body { font-size: 11pt; }
     .card, .card-surface { border: 1px solid #ccc; page-break-inside: avoid; }
+  }
+
+  /* ── Mobile responsiveness ─────────────────────────────────── */
+  @media (max-width: 640px) {
+    .btn-primary, .btn-secondary {
+      min-height: 44px;
+      padding: 0.625rem 1rem;
+    }
+    .card, .card-surface {
+      padding: 0.75rem;
+    }
   }
 }

@@ -50,37 +50,47 @@ export default function App() {
   return (
     <div className="min-h-full flex flex-col">
       {/* Header */}
-      <header className="border-b-2 border-black px-6 py-4">
-        <div className="flex items-baseline gap-4">
-          <h1 className="text-3xl font-bold tracking-tight">DOMES ARCHITECT</h1>
-          <span className="text-sm text-[var(--color-text-secondary)] font-sans tracking-wide uppercase">
+      <header style={{ borderBottom: "2px solid black", padding: "16px 24px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "8px" }}>
+          <h1 style={{ fontSize: "28px", fontFamily: "var(--font-serif)", fontWeight: 700, letterSpacing: "-0.01em" }}>DOMES ARCHITECT</h1>
+          <span style={{ fontSize: "14px", color: "var(--color-text-secondary)", textTransform: "uppercase", letterSpacing: "0.04em" }}>
             Coordination Architecture Designer
           </span>
         </div>
         {/* Stats bar */}
-        <div className="flex gap-6 mt-2 text-xs font-mono text-[var(--color-text-secondary)]">
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginTop: "8px", fontSize: "12px", fontFamily: "var(--font-mono, monospace)", color: "var(--color-text-secondary)" }}>
           <span>
             MODELS:{" "}
-            <span className="text-black font-semibold">{loading ? "..." : models.length}</span>
+            <span style={{ color: "black", fontWeight: 600 }}>{loading ? "..." : models.length}</span>
           </span>
           <span>
             ARCHITECTURES:{" "}
-            <span className="text-black font-semibold">{loading ? "..." : architectures.length}</span>
+            <span style={{ color: "black", fontWeight: 600 }}>{loading ? "..." : architectures.length}</span>
           </span>
         </div>
       </header>
 
       {/* Tab Navigation */}
-      <nav className="flex border-b-2 border-black">
+      <nav style={{ display: "flex", borderBottom: "2px solid black", overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
         {TABS.map((tab) => (
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`px-5 py-2.5 text-xs font-semibold uppercase tracking-widest border-r border-black transition-colors cursor-pointer ${
-              activeTab === tab.key
-                ? "bg-black text-white"
-                : "bg-white text-black hover:bg-[var(--color-surface)]"
-            }`}
+            style={{
+              padding: "10px 20px",
+              fontSize: "12px",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+              background: activeTab === tab.key ? "black" : "white",
+              color: activeTab === tab.key ? "white" : "black",
+              border: "none",
+              borderRight: "1px solid black",
+              cursor: "pointer",
+              whiteSpace: "nowrap",
+              minHeight: "44px",
+              transition: "background 0.15s, color 0.15s",
+            }}
           >
             {tab.label}
           </button>

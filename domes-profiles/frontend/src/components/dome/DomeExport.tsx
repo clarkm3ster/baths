@@ -55,8 +55,8 @@ export default function DomeExport({ svgRef, profileName = 'Profile' }: DomeExpo
         ctx.fillRect(0, 0, canvas.width / scale, canvas.height / scale);
 
         // Title
-        ctx.fillStyle = '#000000';
-        ctx.font = "bold 18px 'Crimson Text', Georgia, serif";
+        ctx.fillStyle = '#0D0D0D';
+        ctx.font = "bold 18px Georgia, serif";
         ctx.textAlign = 'center';
         ctx.fillText(
           `DOMES: ${profileName}`,

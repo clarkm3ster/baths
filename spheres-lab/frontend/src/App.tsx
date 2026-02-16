@@ -33,9 +33,20 @@ const NAV_ITEMS: NavItem[] = [
 
 // ── App Component ────────────────────────────────────────────
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+  return isMobile;
+}
+
 export default function App() {
   const [view, setView] = useState<View>({ type: 'home' });
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const isMobile = useIsMobile();
+  const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
   const [clock, setClock] = useState(new Date());
   const [backendUp, setBackendUp] = useState<boolean | null>(null);
 
@@ -123,8 +134,8 @@ export default function App() {
       {/* ── Sidebar ─────────────────────────────────────── */}
       <aside
         style={{
-          width: sidebarOpen ? 240 : 56,
-          minWidth: sidebarOpen ? 240 : 56,
+          width: sidebarOpen ? (isMobile ? 240 : 240) : 56,
+          minWidth: sidebarOpen ? (isMobile ? 240 : 240) : 56,
           height: '100vh',
           background: '#0A0A0A',
           borderRight: '1px solid #1A1A1A',
@@ -132,8 +143,10 @@ export default function App() {
           flexDirection: 'column',
           transition: 'width 0.2s ease, min-width 0.2s ease',
           overflow: 'hidden',
-          position: 'relative',
-          zIndex: 10,
+          position: isMobile ? 'absolute' : 'relative',
+          zIndex: isMobile ? 40 : 10,
+          left: 0,
+          top: 0,
         }}
       >
         {/* Sidebar Header */}
@@ -345,14 +358,15 @@ export default function App() {
         {/* ── Top Header ─────────────────────────────────── */}
         <header
           style={{
-            height: 56,
             minHeight: 56,
             background: '#0A0A0A',
             borderBottom: '1px solid #1A1A1A',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '0 24px',
+            padding: '8px 24px',
+            flexWrap: 'wrap',
+            gap: '8px',
           }}
         >
           {/* Left: Title */}
@@ -368,29 +382,33 @@ export default function App() {
             >
               SPHERES LAB
             </span>
-            <span
-              style={{
-                fontSize: 11,
-                color: 'rgba(255,255,255,0.3)',
-                fontFamily: "'JetBrains Mono', monospace",
-                marginLeft: 4,
-              }}
-            >
-              Innovation Laboratory
-            </span>
+            {!isMobile && (
+              <span
+                style={{
+                  fontSize: 11,
+                  color: 'rgba(255,255,255,0.3)',
+                  fontFamily: "'JetBrains Mono', monospace",
+                  marginLeft: 4,
+                }}
+              >
+                Innovation Laboratory
+              </span>
+            )}
           </div>
 
           {/* Right: Clock + Status */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            <span
-              style={{
-                fontSize: 11,
-                color: 'rgba(255,255,255,0.4)',
-                fontFamily: "'JetBrains Mono', monospace",
-              }}
-            >
-              {formatDate(clock)}
-            </span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            {!isMobile && (
+              <span
+                style={{
+                  fontSize: 11,
+                  color: 'rgba(255,255,255,0.4)',
+                  fontFamily: "'JetBrains Mono', monospace",
+                }}
+              >
+                {formatDate(clock)}
+              </span>
+            )}
             <span
               style={{
                 fontSize: 13,

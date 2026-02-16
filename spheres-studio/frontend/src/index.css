@@ -68,6 +68,17 @@ body {
   color: var(--text-primary);
 }
 
+/* ── Mobile responsiveness ─────────────────────────────────── */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+    overflow: auto;
+  }
+  button {
+    min-height: 44px;
+  }
+}
+
 /* ── Focus outlines ────────────────────────────────────────────────────── */
 :focus-visible {
   outline: 2px solid var(--accent);
