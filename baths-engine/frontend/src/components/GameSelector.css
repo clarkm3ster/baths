@@ -1,0 +1,149 @@
+.game-selector {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game-selector h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #00d4ff;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.game-card {
+  background: #1a1a2e;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.game-card:hover {
+  border-color: #00d4ff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 212, 255, 0.2);
+}
+
+.game-card.selected {
+  border-color: #7b2cbf;
+  box-shadow: 0 8px 16px rgba(123, 44, 191, 0.3);
+}
+
+.game-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #00d4ff;
+}
+
+.game-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #b0b0b0;
+}
+
+.game-currency {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.game-currency strong {
+  color: #00d4ff;
+}
+
+.game-dimensions strong {
+  color: #00d4ff;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.game-dimensions ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.game-dimensions li {
+  background: #0f3460;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.start-production {
+  background: #1a1a2e;
+  border: 2px solid #7b2cbf;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.start-production h3 {
+  color: #7b2cbf;
+  margin-bottom: 1.5rem;
+}
+
+.start-production label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.start-production input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  background: #0a0a0a;
+  border: 2px solid #0f3460;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.start-production input:focus {
+  outline: none;
+  border-color: #00d4ff;
+}
+
+.start-production button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #7b2cbf 0%, #00d4ff 100%);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.start-production button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.start-production button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.equation {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00d4ff;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #1a1a2e;
+  border-radius: 12px;
+  border: 2px solid #0f3460;
+}
