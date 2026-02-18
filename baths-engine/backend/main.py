@@ -5,11 +5,14 @@ Unified game engine for DOMES + SPHERES
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from contextlib import asynccontextmanager
 from typing import Optional, Dict, Any
 import json
 import uuid
 from datetime import datetime
+import os
 
 from models import (
     Player, ProductionState, StageAction, StageResult,
@@ -262,6 +265,22 @@ def health():
         "players": len(players),
         "active_productions": len([p for p in players.values() if p.active_production])
     }
+
+
+# ========== SERVE FRONTEND ==========
+
+# Mount static files if they exist
+if os.path.exists("static"):
+    app.mount("/assets", StaticFiles(directory="static/assets"), name="assets")
+    
+    @app.get("/{full_path:path}")
+    async def serve_frontend(full_path: str):
+        """Serve frontend for all non-API routes"""
+        if full_path.startswith("api/"):
+            raise HTTPException(status_code=404, detail="API endpoint not found")
+        
+        # Serve index.html for all routes (SPA)
+        return FileResponse("static/index.html")
 
 
 if __name__ == "__main__":
