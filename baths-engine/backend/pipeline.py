@@ -357,32 +357,99 @@ class PipelineDirector:
     
     def _calculate_cosm(self, production: ProductionState) -> CosmDimensions:
         """Calculate COSM dimensions from production data"""
-        # TODO: Extract real scores from stage_data
-        # For now, mock scores
+        # Extract scores from accumulated stage data
+        dev_data = production.stage_data.get("development", {})
+        pre_data = production.stage_data.get("pre_production", {})
+        prod_data = production.stage_data.get("production", {})
+        post_data = production.stage_data.get("post_production", {})
+        dist_data = production.stage_data.get("distribution", {})
+        
+        # Legal Cosm: count of legal provisions matched
+        legal_provisions = dev_data.get("legal_provisions", {})
+        legal_score = len(legal_provisions.get("provisions", [])) * 10.0
+        
+        # Data Cosm: count of data systems connected
+        data_systems = dev_data.get("data_systems", {})
+        data_score = len(data_systems.get("systems", [])) * 12.0
+        
+        # Fiscal Cosm: cost model completeness
+        fiscal_data = prod_data.get("profile", {})
+        fiscal_score = 80.0 if fiscal_data else 50.0
+        
+        # Coordination Cosm: contracts executed
+        contracts = prod_data.get("contracts", {})
+        coord_score = len(contracts.get("agreements", [])) * 15.0
+        
+        # Flourishing Cosm: flourishing index
+        flourishing_data = pre_data.get("flourishing", {})
+        flour_score = flourishing_data.get("index", 75.0)
+        
+        # Narrative Cosm: narrative sections generated
+        narrative = dist_data.get("narrative", {})
+        narrative_score = len(narrative.get("sections", [])) * 18.0
+        
         return CosmDimensions(
-            legal=85.0,
-            data=90.0,
-            fiscal=78.0,
-            coordination=82.0,
-            flourishing=88.0,
-            narrative=92.0
+            legal=min(legal_score, 100.0),
+            data=min(data_score, 100.0),
+            fiscal=min(fiscal_score, 100.0),
+            coordination=min(coord_score, 100.0),
+            flourishing=min(flour_score, 100.0),
+            narrative=min(narrative_score, 100.0)
         )
     
     def _calculate_chron(self, production: ProductionState) -> ChronDimensions:
         """Calculate CHRON dimensions from production data"""
-        # TODO: Extract real scores from stage_data
+        dev_data = production.stage_data.get("development", {})
+        pre_data = production.stage_data.get("pre_production", {})
+        prod_data = production.stage_data.get("production", {})
+        post_data = production.stage_data.get("post_production", {})
+        
+        # Unlock Chron: square meters from parcel data
+        parcel = dev_data.get("parcel", {})
+        unlock_m2 = parcel.get("area_sqm", 500.0)
+        
+        # Access Chron: estimated public access hours
+        design = pre_data.get("design", {})
+        access_hrs = design.get("access_hours", 360.0)
+        
+        # Permanence: duration multiplier from timeline
+        timeline = pre_data.get("timeline", {})
+        permanence = timeline.get("duration_years", 1.0) / 10.0  # normalized to 0-1
+        
+        # Catalyst: ripple effects (count of connected projects)
+        metrics = post_data.get("metrics", {})
+        catalyst = min(metrics.get("connected_projects", 0) / 10.0, 1.0)
+        
+        # Policy: policy changes unlocked
+        permits = prod_data.get("permits", {})
+        policy = len(permits.get("policy_changes", [])) / 5.0
+        
         return ChronDimensions(
-            unlock=1000.0,  # m²
-            access=720.0,   # hours
-            permanence=0.8,
-            catalyst=0.6,
-            policy=0.4
+            unlock=unlock_m2,
+            access=access_hrs,
+            permanence=min(permanence, 1.0),
+            catalyst=catalyst,
+            policy=min(policy, 1.0)
         )
     
     def _extract_ip(self, production: ProductionState) -> List[str]:
         """Extract IP created during production"""
-        # TODO: Parse from innovations/narrative
-        return ["Dome Architecture Patent", "Data Bridge Protocol"]
+        ip_list = []
+        
+        # Extract from innovations
+        post_data = production.stage_data.get("post_production", {})
+        innovations = post_data.get("innovations", {})
+        ip_list.extend(innovations.get("patents", []))
+        ip_list.extend(innovations.get("protocols", []))
+        
+        # Extract from narrative
+        dist_data = production.stage_data.get("distribution", {})
+        narrative = dist_data.get("narrative", {})
+        for section in narrative.get("sections", []):
+            if "patent" in section.get("content", "").lower():
+                ip_list.append(section.get("title", "Unnamed IP"))
+        
+        return ip_list if ip_list else ["Generated IP (placeholder)"]
     
     def _extract_innovations(self, production: ProductionState) -> List[str]:
         """Extract innovations from lab outputs"""
@@ -392,5 +459,26 @@ class PipelineDirector:
     
     def _assess_industries_changed(self, production: ProductionState) -> List[str]:
         """Assess which industries were fundamentally changed"""
-        # TODO: Logic based on dome scope
-        return ["Insurance", "Healthcare Data"]
+        industries = set()
+        
+        # Analyze legal provisions for industry impact
+        dev_data = production.stage_data.get("development", {})
+        legal_provisions = dev_data.get("legal_provisions", {})
+        for prov in legal_provisions.get("provisions", []):
+            if "insurance" in prov.get("domain", "").lower():
+                industries.add("Insurance")
+            if "health" in prov.get("domain", "").lower():
+                industries.add("Healthcare")
+            if "finance" in prov.get("domain", "").lower():
+                industries.add("Finance")
+            if "data" in prov.get("domain", "").lower():
+                industries.add("Data Privacy")
+        
+        # Analyze contracts for industry scope
+        prod_data = production.stage_data.get("production", {})
+        contracts = prod_data.get("contracts", {})
+        for contract in contracts.get("agreements", []):
+            if "government" in contract.get("type", "").lower():
+                industries.add("Government Contracting")
+        
+        return list(industries) if industries else ["Unspecified Industry Impact"]
