@@ -25,4 +25,5 @@ COPY --from=frontend-build /app/frontend/dist /app/static
 EXPOSE 9000
 
 # Start backend (serves frontend via static files)
-CMD ["python3", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "9000"]
+# Use PORT env var if set (Railway requirement), otherwise default to 9000
+CMD python3 -m uvicorn main:app --host 0.0.0.0 --port ${PORT:-9000}
