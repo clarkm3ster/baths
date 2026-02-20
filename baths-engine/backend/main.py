@@ -26,8 +26,12 @@ players: Dict[str, Player] = {}
 productions: Dict[str, ProductionState] = {}
 
 # Load API registry
-with open("../../api-registry.json", "r") as f:
-    API_REGISTRY = json.load(f)
+registry_path = os.path.join(os.path.dirname(__file__), "../../api-registry.json")
+if os.path.exists(registry_path):
+    with open(registry_path, "r") as f:
+        API_REGISTRY = json.load(f)
+else:
+    API_REGISTRY = {"domes": {}, "spheres": {}}
 
 pipeline_director: Optional[PipelineDirector] = None
 
