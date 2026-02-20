@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "cd baths-engine/frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt && mkdir -p static && cp -r ../frontend/dist/* static/"
+buildCommand = "cd baths-engine/backend && pip install -r requirements.txt"
 
 [deploy]
 startCommand = "cd baths-engine/backend && python -m uvicorn main:app --host 0.0.0.0 --port $PORT"
