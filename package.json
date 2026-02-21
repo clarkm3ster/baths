@@ -1,0 +1,15 @@
+{
+  "name": "baths",
+  "version": "0.3.0",
+  "type": "module",
+  "description": "BATHS — Cosm x Chron = Flourishing. Fragment and Cosm data agents.",
+  "scripts": {
+    "fragment": "node src/fragment/scrape.mjs",
+    "cosm": "node src/cosm/assemble.mjs",
+    "run": "node src/fragment/scrape.mjs && node src/cosm/assemble.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "private": true
+}

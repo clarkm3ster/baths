@@ -1,0 +1,54 @@
+name: Fragment & Cosm
+
+on:
+  schedule:
+    # 5x daily: 7am, 12pm, 5pm, 10pm, 3am UTC
+    - cron: '0 7 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 17 * * *'
+    - cron: '0 22 * * *'
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Fragment (scrape public data)
+        run: node src/fragment/scrape.mjs
+
+      - name: Run Cosm (assemble domes)
+        run: node src/cosm/assemble.mjs
+
+      - name: Count results
+        id: counts
+        run: |
+          FRAGMENTS=$(find data/fragments -name '*.json' 2>/dev/null | wc -l)
+          DOMES=$(find data/domes -name '*.json' 2>/dev/null | wc -l)
+          echo "fragments=$FRAGMENTS" >> "$GITHUB_OUTPUT"
+          echo "domes=$DOMES" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push data
+        run: |
+          git config user.name "fragment-bot"
+          git config user.email "fragment@baths.dev"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "fragment: ${{ steps.counts.outputs.fragments }} fragments, ${{ steps.counts.outputs.domes }} domes [skip ci]"
+            git push
+          fi
