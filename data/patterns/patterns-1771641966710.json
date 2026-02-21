@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-02-21T02:46:06.709Z",
+  "dome_count": 0,
+  "geographic_deltas": [],
+  "common_gaps": {},
+  "program_clusters": {},
+  "archetype_patterns": {},
+  "cosm_distribution": {
+    "min": 100,
+    "max": 0,
+    "median": 0,
+    "by_geography": {}
+  },
+  "savings_total": 0
+}
