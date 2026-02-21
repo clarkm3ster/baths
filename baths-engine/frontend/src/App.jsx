@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import GameSelector from './components/GameSelector'
-import ProductionPipeline from './components/ProductionPipeline'
 import Portfolio from './components/Portfolio'
+import DomesGame from './games/domes/DomesGame'
+import SpheresGame from './games/spheres/SpheresGame'
 
 function App() {
   const [player, setPlayer] = useState(null)
@@ -52,6 +53,9 @@ function App() {
     )
   }
 
+  const activeProduction = player.active_production
+  const gameType = activeProduction?.game_type
+
   return (
     <div className="app">
       <header>
@@ -65,8 +69,8 @@ function App() {
           <button onClick={() => setView('selector')} className={view === 'selector' ? 'active' : ''}>
             Games
           </button>
-          <button onClick={() => setView('production')} className={view === 'production' ? 'active' : ''} disabled={!player.active_production}>
-            Production
+          <button onClick={() => setView('production')} className={view === 'production' ? 'active' : ''} disabled={!activeProduction}>
+            {activeProduction ? (gameType === 'domes' ? 'Dome' : 'Sphere') : 'Production'}
           </button>
           <button onClick={() => setView('portfolio')} className={view === 'portfolio' ? 'active' : ''}>
             Portfolio
@@ -83,11 +87,21 @@ function App() {
           />
         )}
 
-        {view === 'production' && player.active_production && (
-          <ProductionPipeline
+        {view === 'production' && activeProduction && gameType === 'domes' && (
+          <DomesGame
             player={player}
-            production={player.active_production}
+            production={activeProduction}
             onUpdate={refreshPlayer}
+            onBack={() => setView('selector')}
+          />
+        )}
+
+        {view === 'production' && activeProduction && gameType === 'spheres' && (
+          <SpheresGame
+            player={player}
+            production={activeProduction}
+            onUpdate={refreshPlayer}
+            onBack={() => setView('selector')}
           />
         )}
 
