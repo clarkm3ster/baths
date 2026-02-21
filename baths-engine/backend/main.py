@@ -23,9 +23,20 @@ from models import (
 )
 from pipeline import PipelineDirector
 from data import initialize, scrape_all, scrape_engine, get_stats, start_scheduler, stop_scheduler
+from pathlib import Path as _Path
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("baths.main")
+
+# Fragment/Cosm data directory (repo root /data/)
+FRAG_DATA = _Path(__file__).resolve().parent.parent.parent / "data"
+
+def _read_json(path):
+    """Read a JSON file, return None on failure."""
+    try:
+        return json.loads(path.read_text())
+    except Exception:
+        return None
 
 # In-memory storage
 players: Dict[str, Player] = {}
@@ -307,6 +318,78 @@ def scrape_history(engine: Optional[str] = None, limit: int = 20):
     return {"history": store.get_scrape_history(engine=engine, limit=limit)}
 
 
+# ========== FRAGMENT / COSM AGENT DATA ==========
+
+@app.get("/api/fragment/stats")
+def fragment_stats():
+    """Coverage and fragment counts from the Fragment scraper agent."""
+    coverage = _read_json(FRAG_DATA / "meta" / "coverage.json")
+    gaps = _read_json(FRAG_DATA / "meta" / "gaps.json")
+    sources = _read_json(FRAG_DATA / "meta" / "sources.json")
+    return {
+        "coverage": coverage,
+        "gaps": gaps,
+        "sources": sources,
+    }
+
+
+@app.get("/api/fragment/county/{fips}")
+def fragment_county(fips: str):
+    """All scraped fragments for a given county FIPS code."""
+    fragments_dir = FRAG_DATA / "fragments"
+    result = {}
+    if fragments_dir.exists():
+        for source_dir in sorted(fragments_dir.iterdir()):
+            if source_dir.is_dir():
+                frag_file = source_dir / f"{fips}.json"
+                data = _read_json(frag_file)
+                if data:
+                    result[source_dir.name] = data
+    return {"fips": fips, "fragment_count": len(result), "fragments": result}
+
+
+@app.get("/api/cosm/state")
+def cosm_state():
+    """The evolving Cosm currency state — total domes, savings, maturity."""
+    state = _read_json(FRAG_DATA / "cosm.json")
+    return state or {"total_domes": 0, "maturity": {"level": "seed"}}
+
+
+@app.get("/api/cosm/domes/{fips}")
+def cosm_domes(fips: str):
+    """All assembled domes for a county."""
+    domes_dir = FRAG_DATA / "domes" / fips
+    result = {}
+    if domes_dir.exists():
+        for f in sorted(domes_dir.iterdir()):
+            if f.suffix == ".json":
+                data = _read_json(f)
+                if data:
+                    result[f.stem] = data
+    return {"fips": fips, "dome_count": len(result), "domes": result}
+
+
+@app.get("/api/cosm/dome/{fips}/{archetype}")
+def cosm_dome(fips: str, archetype: str):
+    """A specific dome for a county + archetype."""
+    dome = _read_json(FRAG_DATA / "domes" / fips / f"{archetype}.json")
+    if not dome:
+        raise HTTPException(status_code=404, detail=f"No dome for {fips}/{archetype}")
+    return dome
+
+
+@app.get("/api/cosm/patterns")
+def cosm_patterns():
+    """Latest cross-dome patterns."""
+    patterns_dir = FRAG_DATA / "patterns"
+    if not patterns_dir.exists():
+        return {"patterns": None}
+    files = sorted(patterns_dir.glob("patterns-*.json"), reverse=True)
+    if not files:
+        return {"patterns": None}
+    return {"patterns": _read_json(files[0])}
+
+
 # ========== GAME INFO ==========
 
 @app.get("/api/games")
@@ -331,6 +414,8 @@ def list_games():
         ],
         "equation": "Cosm × Chron = Flourishing",
         "data_engines": get_stats(),
+        "cosm_state": _read_json(FRAG_DATA / "cosm.json") or {"total_domes": 0},
+        "fragment_coverage": _read_json(FRAG_DATA / "meta" / "coverage.json"),
     }
 
 

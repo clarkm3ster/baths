@@ -433,4 +433,26 @@ h2.spheres { font-family: 'Orbitron'; font-size: 22px; font-weight: 700; color: 
   .pstat-val { font-size: 16px; }
   .parcel-header { flex-direction: column; gap: 8px; }
   .parcel-address { max-width: 100%; }
+  .neighborhood-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── Neighborhood Context ─────────────────────────────────────── */
+
+.neighborhood-context {
+  background: linear-gradient(135deg, rgba(255, 109, 0, 0.03), rgba(255, 171, 0, 0.02));
+  border: 1px solid rgba(255, 109, 0, 0.08);
+}
+
+.neighborhood-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2px; margin-top: 12px;
+}
+
+.nb-cell {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 14px 8px; background: rgba(255,255,255,0.015); border-radius: 4px;
+  animation: fadeUp 0.3s ease both; text-align: center;
+}
+
+.nb-value { font-family: 'Orbitron'; font-size: 14px; font-weight: 700; color: var(--text-primary); }
+.nb-label { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './SpheresGame.css'
 
 const STAGES = [
@@ -240,6 +240,44 @@ function PermitCard({ permit, index }) {
   )
 }
 
+// ── Neighborhood Context from Fragments ──────────────────────────────
+function NeighborhoodContext({ fragments }) {
+  if (!fragments || Object.keys(fragments).length === 0) return null
+
+  const get = (source, key) => fragments[source]?.data?.[key]
+  const pct = v => v != null ? `${v.toFixed(1)}%` : '—'
+  const money = v => v != null ? `$${v.toLocaleString()}` : '—'
+  const num = v => v != null ? v.toLocaleString() : '—'
+
+  const countyName = Object.values(fragments)[0]?.county_name || 'Unknown'
+
+  const stats = [
+    { label: 'Population', value: num(get('census-demographics', 'total_pop')) },
+    { label: 'Median Income', value: money(get('census-income', 'median_household_income')) },
+    { label: 'Poverty Rate', value: pct(get('census-income', 'poverty_total') > 0 ? (get('census-income', 'poverty_below') / get('census-income', 'poverty_total')) * 100 : null) },
+    { label: 'Median Rent', value: money(get('census-housing', 'median_gross_rent')) },
+    { label: 'Vacancy Rate', value: pct(get('census-housing', 'total_units') > 0 ? (get('census-housing', 'vacant_units') / get('census-housing', 'total_units')) * 100 : null) },
+    { label: 'Unemployment', value: pct(get('census-employment', 'in_labor_force') > 0 ? (get('census-employment', 'civilian_unemployed') / get('census-employment', 'in_labor_force')) * 100 : null) },
+    { label: 'No Vehicle', value: pct(get('census-commute', 'workers_total') > 0 ? (get('census-commute', 'no_vehicle') / get('census-commute', 'workers_total')) * 100 : null) },
+    { label: 'Broadband', value: pct(get('census-internet', 'total_households_internet') > 0 ? (get('census-internet', 'broadband') / get('census-internet', 'total_households_internet')) * 100 : null) },
+  ]
+
+  return (
+    <div className="section-block neighborhood-context">
+      <h3 className="section-title">NEIGHBORHOOD DATA</h3>
+      <p className="section-subtitle">Real Census data for {countyName} — {Object.keys(fragments).length} fragment sources</p>
+      <div className="neighborhood-grid">
+        {stats.map((s, i) => (
+          <div key={i} className="nb-cell" style={{ animationDelay: `${i * 0.04}s` }}>
+            <span className="nb-value">{s.value}</span>
+            <span className="nb-label">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 // ── Stage Renderers ───────────────────────────────────────────────────
 
 function DiscoverStage({ data }) {
@@ -467,7 +505,16 @@ function CompletionStage({ data }) {
 export default function SpheresGame({ player, production, onUpdate, onBack }) {
   const [working, setWorking] = useState(false)
   const [lastMessage, setLastMessage] = useState(null)
+  const [fragmentData, setFragmentData] = useState(null)
   const contentRef = useRef(null)
+
+  // Fetch Fragment data for Philadelphia (parcel geography)
+  useEffect(() => {
+    fetch('/api/fragment/county/42101')
+      .then(r => r.json())
+      .then(d => { if (d.fragment_count > 0) setFragmentData(d) })
+      .catch(() => {})
+  }, [])
 
   const currentStageIndex = STAGES.findIndex(s => s.key === production.stage)
   const isComplete = production.progress >= 100
@@ -567,6 +614,7 @@ export default function SpheresGame({ player, production, onUpdate, onBack }) {
         )}
 
         {devData && <DiscoverStage data={devData} />}
+        {devData && fragmentData && <NeighborhoodContext fragments={fragmentData.fragments} />}
         {preData && <DesignStage data={preData} />}
         {prodData && <BuildStage data={prodData} />}
         {postData && <MeasureStage data={postData} />}

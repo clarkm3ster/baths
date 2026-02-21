@@ -608,6 +608,86 @@
   background: rgba(212, 168, 83, 0.08); color: var(--gold);
 }
 
+/* ── Conditions of Existence Panel ─────────────────────────────── */
+
+.conditions-panel { background: linear-gradient(135deg, rgba(0, 229, 255, 0.03), rgba(124, 77, 255, 0.03)); border: 1px solid rgba(0, 229, 255, 0.08); }
+
+.conditions-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2px; margin-top: 12px;
+}
+.condition-cell {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 14px 8px; background: rgba(255,255,255,0.015); border-radius: 4px;
+  animation: fadeUp 0.3s ease both; text-align: center;
+}
+.condition-icon { font-size: 10px; color: var(--domes-primary); opacity: 0.5; }
+.condition-value { font-family: 'Orbitron'; font-size: 14px; font-weight: 700; color: var(--text-primary); }
+.condition-label { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ── Dome Financial Instrument Panel ──────────────────────────── */
+
+.instrument-panel { background: linear-gradient(135deg, rgba(212, 168, 83, 0.03), rgba(0, 229, 255, 0.02)); border: 1px solid rgba(212, 168, 83, 0.1); }
+
+.instrument-summary {
+  display: flex; gap: 24px; align-items: center; margin: 16px 0;
+  padding: 16px; background: rgba(0,0,0,0.2); border-radius: 8px;
+}
+.instrument-stat { display: flex; flex-direction: column; align-items: center; }
+.instrument-stat.big { flex: 1; }
+.is-val { font-family: 'Orbitron'; font-size: 18px; font-weight: 700; color: var(--gold); }
+.instrument-stat.big .is-val { font-size: 28px; color: #00e676; }
+.is-label { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+
+.archetypes-grid { display: flex; flex-direction: column; gap: 8px; }
+
+.archetype-card {
+  background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle);
+  border-radius: 8px; padding: 14px 16px; cursor: pointer;
+  transition: all 0.2s; animation: fadeUp 0.4s ease both;
+}
+.archetype-card:hover { border-color: rgba(212, 168, 83, 0.2); background: rgba(255,255,255,0.03); }
+.archetype-card.expanded { border-color: rgba(0, 229, 255, 0.2); }
+
+.arch-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.arch-identity { display: flex; flex-direction: column; }
+.arch-name { font-family: 'Orbitron'; font-size: 13px; font-weight: 700; color: var(--text-primary); }
+.arch-desc { font-family: 'Exo 2'; font-size: 11px; color: var(--text-dim); }
+.arch-delta { text-align: right; }
+.arch-delta-val { font-family: 'Orbitron'; font-size: 18px; font-weight: 700; color: #00e676; }
+.arch-delta-label { display: block; font-family: 'Exo 2'; font-size: 9px; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase; }
+
+.arch-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.arch-detail { font-family: 'Exo 2'; font-size: 11px; color: var(--text-secondary); padding: 2px 8px; background: rgba(255,255,255,0.03); border-radius: 3px; }
+
+.arch-costs { display: flex; align-items: center; gap: 8px; }
+.arch-cost { display: flex; flex-direction: column; align-items: center; flex: 1; padding: 8px; border-radius: 4px; }
+.arch-cost.fragmented { background: rgba(255, 64, 129, 0.06); }
+.arch-cost.coordinated { background: rgba(0, 230, 118, 0.06); }
+.arch-cost.delta { background: rgba(212, 168, 83, 0.08); }
+.ac-label { font-family: 'Exo 2'; font-size: 9px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }
+.ac-val { font-family: 'Orbitron'; font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.arch-cost.fragmented .ac-val { color: #ff4081; }
+.arch-cost.coordinated .ac-val { color: #00e676; }
+.arch-cost.delta .ac-val { color: var(--gold); }
+.arch-cost-arrow { font-size: 14px; color: var(--text-dim); }
+
+.arch-programs { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border-subtle); }
+.arch-programs-label { font-family: 'Exo 2'; font-size: 10px; letter-spacing: 0.15em; color: var(--domes-primary); margin-bottom: 8px; }
+.arch-programs-list { display: flex; flex-direction: column; gap: 4px; }
+.arch-program { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: rgba(255,255,255,0.015); border-radius: 4px; }
+.ap-name { font-family: 'Exo 2'; font-size: 12px; font-weight: 600; color: var(--text-primary); }
+.ap-val { font-family: 'Orbitron'; font-size: 11px; color: #00e676; }
+.ap-cat { font-size: 10px; color: var(--text-dim); }
+
+.arch-domains { margin-top: 14px; }
+.arch-domain-bars { display: flex; flex-direction: column; gap: 4px; }
+.domain-bar-row { display: flex; align-items: center; gap: 8px; }
+.db-name { font-family: 'Exo 2'; font-size: 10px; color: var(--text-secondary); width: 90px; text-transform: capitalize; }
+.db-track { flex: 1; height: 6px; background: rgba(255,255,255,0.04); border-radius: 3px; overflow: hidden; }
+.db-fill { height: 100%; background: var(--domes-primary); border-radius: 3px; transition: width 0.5s; }
+.db-val { font-family: 'Orbitron'; font-size: 10px; color: var(--text-dim); width: 28px; text-align: right; }
+
 /* ── Fixed Action Bar ──────────────────────────────────────────── */
 
 .game-action-bar {

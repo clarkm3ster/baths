@@ -51,6 +51,34 @@ function ParticleField({ color, count = 30 }) {
   return <canvas ref={canvasRef} className="particle-canvas" />
 }
 
+function DataPulse({ gameInfo }) {
+  const cosm = gameInfo?.cosm_state
+  const cov = gameInfo?.fragment_coverage
+
+  if (!cosm && !cov) return null
+
+  const fragments = cov?.total_fragments || 0
+  const sources = cov?.active_sources || 0
+  const counties = cov?.total_counties || 0
+  const domes = cosm?.total_domes || 0
+  const savings = cosm?.total_coordination_savings || 0
+  const maturity = cosm?.maturity?.level || 'seed'
+
+  return (
+    <div className="data-pulse">
+      <div className="data-pulse-label">FRAGMENT + COSM INTELLIGENCE</div>
+      <div className="data-pulse-stats">
+        {fragments > 0 && <span className="dp-stat"><strong>{fragments}</strong> fragments</span>}
+        {sources > 0 && <span className="dp-stat"><strong>{sources}</strong> sources</span>}
+        {counties > 0 && <span className="dp-stat"><strong>{counties}</strong> counties</span>}
+        {domes > 0 && <span className="dp-stat"><strong>{domes}</strong> domes</span>}
+        {savings > 0 && <span className="dp-stat savings"><strong>${savings.toLocaleString()}</strong> savings identified</span>}
+        <span className={`dp-maturity ${maturity}`}>{maturity}</span>
+      </div>
+    </div>
+  )
+}
+
 export default function GameSelector({ gameInfo, player, onStartProduction }) {
   const [selectedGame, setSelectedGame] = useState(null)
   const [subject, setSubject] = useState('')
@@ -196,6 +224,8 @@ export default function GameSelector({ gameInfo, player, onStartProduction }) {
         <span className="eq-text">{gameInfo.equation}</span>
         <div className="eq-line"></div>
       </div>
+
+      <DataPulse gameInfo={gameInfo} />
     </div>
   )
 }

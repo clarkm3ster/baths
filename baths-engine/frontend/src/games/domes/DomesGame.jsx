@@ -88,14 +88,170 @@ function CosmRadar({ dimensions, size = 200, animated = true }) {
 }
 
 // ── Data Engine Badge ─────────────────────────────────────────────────
-function DataBadge({ stats }) {
-  if (!stats) return null
-  const total = (stats.provisions || 0) + (stats.cost_points || 0) + (stats.gov_systems || 0) + (stats.enrichments || 0)
+function DataBadge({ stats, fragmentCount }) {
+  const engineTotal = stats ? (stats.provisions || 0) + (stats.cost_points || 0) + (stats.gov_systems || 0) + (stats.enrichments || 0) : 0
+  const total = engineTotal + (fragmentCount || 0)
+  if (total === 0) return null
   return (
     <div className="data-badge">
       <div className="data-badge-pulse" />
       <span className="data-badge-count">{total.toLocaleString()}</span>
       <span className="data-badge-label">data points</span>
+    </div>
+  )
+}
+
+// ── Conditions of Existence Panel ────────────────────────────────────
+function ConditionsPanel({ fragments }) {
+  if (!fragments || Object.keys(fragments).length === 0) return null
+
+  const get = (source, key) => fragments[source]?.data?.[key]
+  const pct = v => v != null ? `${v.toFixed(1)}%` : '—'
+  const money = v => v != null ? `$${v.toLocaleString()}` : '—'
+  const num = v => v != null ? v.toLocaleString() : '—'
+
+  const conditions = [
+    { label: 'Population', value: num(get('census-demographics', 'total_pop')), icon: '▪' },
+    { label: 'Median Age', value: get('census-demographics', 'median_age') ?? '—', icon: '▪' },
+    { label: 'Median Income', value: money(get('census-income', 'median_household_income')), icon: '$' },
+    { label: 'Poverty Rate', value: pct(get('census-income', 'poverty_total') > 0 ? (get('census-income', 'poverty_below') / get('census-income', 'poverty_total')) * 100 : null), icon: '!' },
+    { label: 'Median Rent', value: money(get('census-housing', 'median_gross_rent')), icon: '⌂' },
+    { label: 'Home Value', value: money(get('census-housing', 'median_home_value')), icon: '⌂' },
+    { label: 'Vacancy Rate', value: pct(get('census-housing', 'total_units') > 0 ? (get('census-housing', 'vacant_units') / get('census-housing', 'total_units')) * 100 : null), icon: '□' },
+    { label: 'Broadband', value: pct(get('census-internet', 'total_households_internet') > 0 ? (get('census-internet', 'broadband') / get('census-internet', 'total_households_internet')) * 100 : null), icon: '◈' },
+    { label: 'Public Transit', value: pct(get('census-commute', 'workers_total') > 0 ? (get('census-commute', 'public_transit') / get('census-commute', 'workers_total')) * 100 : null), icon: '→' },
+    { label: 'No Vehicle', value: pct(get('census-commute', 'workers_total') > 0 ? (get('census-commute', 'no_vehicle') / get('census-commute', 'workers_total')) * 100 : null), icon: '×' },
+    { label: 'SNAP Households', value: num(get('census-income', 'snap_households')), icon: '◆' },
+    { label: 'Gini Index', value: get('census-income', 'gini_index')?.toFixed(4) ?? '—', icon: '△' },
+  ]
+
+  const sourceCount = Object.keys(fragments).length
+  const countyName = Object.values(fragments)[0]?.county_name || 'Unknown'
+
+  return (
+    <div className="section-block conditions-panel">
+      <h3 className="section-title">CONDITIONS OF EXISTENCE</h3>
+      <p className="section-subtitle">{sourceCount} fragment sources for {countyName} — real Census ACS data</p>
+      <div className="conditions-grid">
+        {conditions.map((c, i) => (
+          <div key={i} className="condition-cell" style={{ animationDelay: `${i * 0.04}s` }}>
+            <span className="condition-icon">{c.icon}</span>
+            <span className="condition-value">{c.value}</span>
+            <span className="condition-label">{c.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// ── Dome Financial Instrument Panel ──────────────────────────────────
+function DomeInstrumentPanel({ domes }) {
+  if (!domes || Object.keys(domes).length === 0) return null
+
+  const archetypes = Object.values(domes)
+  const totalDelta = archetypes.reduce((s, d) => s + (d.delta || 0), 0)
+
+  return (
+    <div className="section-block instrument-panel">
+      <h3 className="section-title">DOME FINANCIAL INSTRUMENTS</h3>
+      <p className="section-subtitle">Cosm assembler — fragmented cost vs coordinated cost per archetype</p>
+
+      <div className="instrument-summary">
+        <div className="instrument-stat big">
+          <span className="is-val">${totalDelta.toLocaleString()}</span>
+          <span className="is-label">Total coordination savings identified</span>
+        </div>
+        <div className="instrument-stat">
+          <span className="is-val">{archetypes.length}</span>
+          <span className="is-label">Domes assembled</span>
+        </div>
+        <div className="instrument-stat">
+          <span className="is-val">{Math.round(archetypes.reduce((s, d) => s + d.cosm, 0) / archetypes.length)}</span>
+          <span className="is-label">Avg Cosm score</span>
+        </div>
+      </div>
+
+      <div className="archetypes-grid">
+        {archetypes.map((dome, i) => (
+          <DomeArchetypeCard key={dome.profile.id} dome={dome} index={i} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function DomeArchetypeCard({ dome, index }) {
+  const [expanded, setExpanded] = useState(false)
+  const p = dome.profile
+
+  return (
+    <div className={`archetype-card ${expanded ? 'expanded' : ''}`}
+      onClick={() => setExpanded(!expanded)}
+      style={{ animationDelay: `${index * 0.08}s` }}>
+      <div className="arch-header">
+        <div className="arch-identity">
+          <span className="arch-name">{p.name}</span>
+          <span className="arch-desc">{p.description}</span>
+        </div>
+        <div className="arch-delta">
+          <span className="arch-delta-val">${dome.delta.toLocaleString()}</span>
+          <span className="arch-delta-label">dome value</span>
+        </div>
+      </div>
+      <div className="arch-row">
+        <span className="arch-detail">Age {p.age}</span>
+        <span className="arch-detail">${p.income.toLocaleString()}/yr</span>
+        <span className="arch-detail">HH {p.household}</span>
+        <span className="arch-detail">{dome.program_count} programs</span>
+        <span className="arch-detail">Cosm {dome.cosm}</span>
+      </div>
+      <div className="arch-costs">
+        <div className="arch-cost fragmented">
+          <span className="ac-label">Fragmented</span>
+          <span className="ac-val">${dome.fragmented_cost.toLocaleString()}</span>
+        </div>
+        <div className="arch-cost-arrow">→</div>
+        <div className="arch-cost coordinated">
+          <span className="ac-label">Coordinated</span>
+          <span className="ac-val">${dome.coordinated_cost.toLocaleString()}</span>
+        </div>
+        <div className="arch-cost-arrow">=</div>
+        <div className="arch-cost delta">
+          <span className="ac-label">Delta</span>
+          <span className="ac-val">${dome.delta.toLocaleString()}</span>
+        </div>
+      </div>
+      {expanded && (
+        <div className="arch-programs">
+          <div className="arch-programs-label">ELIGIBLE PROGRAMS</div>
+          <div className="arch-programs-list">
+            {dome.eligible_programs.map((prog, j) => (
+              <div key={j} className="arch-program">
+                <span className="ap-name">{prog.program}</span>
+                <span className="ap-val">${prog.annual_value.toLocaleString()}/yr</span>
+                <span className="ap-cat">{prog.category}</span>
+              </div>
+            ))}
+          </div>
+          {dome.domain_coverage && (
+            <div className="arch-domains">
+              <div className="arch-programs-label">12-DOMAIN COVERAGE</div>
+              <div className="arch-domain-bars">
+                {Object.entries(dome.domain_coverage).map(([domain, cov]) => (
+                  <div key={domain} className="domain-bar-row">
+                    <span className="db-name">{domain}</span>
+                    <div className="db-track">
+                      <div className="db-fill" style={{ width: `${cov.score}%` }} />
+                    </div>
+                    <span className="db-val">{cov.score}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }
@@ -573,7 +729,22 @@ function DistributionStage({ data }) {
 export default function DomesGame({ player, production, onUpdate, onBack }) {
   const [working, setWorking] = useState(false)
   const [lastMessage, setLastMessage] = useState(null)
+  const [fragmentData, setFragmentData] = useState(null)
+  const [domeData, setDomeData] = useState(null)
   const contentRef = useRef(null)
+
+  // Fetch Fragment/Cosm data for Philadelphia (default county)
+  useEffect(() => {
+    const fips = '42101' // Philadelphia — primary geography
+    fetch(`/api/fragment/county/${fips}`)
+      .then(r => r.json())
+      .then(d => { if (d.fragment_count > 0) setFragmentData(d) })
+      .catch(() => {})
+    fetch(`/api/cosm/domes/${fips}`)
+      .then(r => r.json())
+      .then(d => { if (d.dome_count > 0) setDomeData(d) })
+      .catch(() => {})
+  }, [])
 
   const currentStageIndex = STAGES.findIndex(s => s.key === production.stage)
   const isComplete = production.progress >= 100
@@ -637,7 +808,7 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
           </div>
         </div>
         <div className="game-header-right">
-          <DataBadge stats={devData?.data_engine_stats || distData?.data_engine_stats} />
+          <DataBadge stats={devData?.data_engine_stats || distData?.data_engine_stats} fragmentCount={fragmentData?.fragment_count} />
           {runningCosm && (
             <div className="header-cosm">
               <span className="header-cosm-val">{(runningCosm.total || 0).toFixed(0)}</span>
@@ -678,8 +849,10 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
           </div>
         )}
 
-        {/* Render completed stages */}
+        {/* Render completed stages + Fragment/Cosm intelligence */}
         {devData && <DevelopmentStage data={devData} />}
+        {devData && fragmentData && <ConditionsPanel fragments={fragmentData.fragments} />}
+        {devData && domeData && <DomeInstrumentPanel domes={domeData.domes} />}
         {preData && <PreProductionStage data={preData} />}
         {prodData && <ProductionStage data={prodData} />}
         {postData && <PostProductionStage data={postData} />}
