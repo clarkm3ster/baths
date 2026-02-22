@@ -1,0 +1,17 @@
+{
+  "source": "census-health-insurance",
+  "api": "Census ACS 5-year",
+  "fips": "36061",
+  "county": "New York County (Manhattan), NY",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_pop_insurance": 1630975,
+    "with_insurance": 1516207,
+    "male_under6_uninsured": 2447,
+    "male_6_18_uninsured": 3260,
+    "female_under6_uninsured": 1630,
+    "female_6_18_uninsured": 2446,
+    "medicaid_means_tested": 391434,
+    "employer_insurance": 570841
+  }
+}

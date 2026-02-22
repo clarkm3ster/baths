@@ -1,0 +1,12 @@
+{
+  "source": "bls-unemployment",
+  "api": "BLS Public Data API",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "rate": 4.6,
+    "year": 2023,
+    "period": "M12"
+  }
+}

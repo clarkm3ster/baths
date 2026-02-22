@@ -1,0 +1,17 @@
+{
+  "source": "census-health-insurance",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_pop_insurance": 9556558,
+    "with_insurance": 8696468,
+    "male_under6_uninsured": 19113,
+    "male_6_18_uninsured": 28670,
+    "female_under6_uninsured": 14335,
+    "female_6_18_uninsured": 19113,
+    "medicaid_means_tested": 3344795,
+    "employer_insurance": 3345795
+  }
+}

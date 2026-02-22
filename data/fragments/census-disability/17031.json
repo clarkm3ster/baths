@@ -1,0 +1,17 @@
+{
+  "source": "census-disability",
+  "api": "Census ACS 5-year",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_disability_pop": 5096148,
+    "male_with_disability": 275192,
+    "female_with_disability": 300673,
+    "disability_under5": 5096,
+    "disability_5_17": 66249,
+    "disability_18_34": 91731,
+    "disability_65_74": 142692,
+    "disability_75_plus": 178365
+  }
+}

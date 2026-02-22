@@ -1,0 +1,256 @@
+{
+  "fips": "36061",
+  "county_name": "New York County (Manhattan), NY",
+  "profile": {
+    "id": "median",
+    "name": "Median",
+    "age": 38,
+    "income": 59540,
+    "household": 2,
+    "children": 1,
+    "description": "Benchmark"
+  },
+  "assembled_at": "2026-02-22T03:49:58.833Z",
+  "fragments_used": 13,
+  "fragment_sources": [
+    "bls-unemployment",
+    "census-commute",
+    "census-demographics",
+    "census-disability",
+    "census-education",
+    "census-employment",
+    "census-health-insurance",
+    "census-housing",
+    "census-income",
+    "census-internet",
+    "census-rent-burden",
+    "fema-disasters",
+    "hud-fmr"
+  ],
+  "eligible_programs": [],
+  "program_count": 0,
+  "fragmented_cost": 0,
+  "coordinated_cost": 0,
+  "delta": 0,
+  "cost_detail": {
+    "fragmented": 0,
+    "coordinated": 0,
+    "delta": 0,
+    "admin_overhead": 0
+  },
+  "cosm": 10,
+  "cosm_average": 66,
+  "domain_coverage": {
+    "health": {
+      "score": 80,
+      "raw_score": 80,
+      "max_score": 100,
+      "note": null
+    },
+    "housing": {
+      "score": 80,
+      "raw_score": 80,
+      "max_score": 100,
+      "note": null
+    },
+    "economics": {
+      "score": 80,
+      "raw_score": 80,
+      "max_score": 100,
+      "note": null
+    },
+    "education": {
+      "score": 80,
+      "raw_score": 80,
+      "max_score": 100,
+      "note": null
+    },
+    "nutrition": {
+      "score": 60,
+      "raw_score": 60,
+      "max_score": 100,
+      "note": null
+    },
+    "safety": {
+      "score": 30,
+      "raw_score": 30,
+      "max_score": 100,
+      "note": null
+    },
+    "transportation": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "infrastructure": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "environment": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": null
+    },
+    "legal": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": "Legal framework data not yet scraped — future fragment source"
+    },
+    "community": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "purpose": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    }
+  },
+  "gaps": [
+    {
+      "domain": "nutrition",
+      "type": "fragment",
+      "missing": [
+        "usda-food-access"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "fragment",
+      "missing": [
+        "fbi-crime"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "fragment",
+      "missing": [
+        "epa-air-quality"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "fragment",
+      "missing": [
+        "no sources defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    }
+  ],
+  "gap_count": 7,
+  "conditions": {
+    "median_rent": 1899,
+    "median_home_value": 999999,
+    "vacancy_rate": 9.5,
+    "ownership_rate": 24,
+    "rent_burdened_pct": 51,
+    "severely_burdened_pct": 24,
+    "median_household_income": 93651,
+    "per_capita_income": 79781,
+    "poverty_rate": 15,
+    "gini_index": 0.5976,
+    "snap_households": 98687,
+    "total_population": 1694251,
+    "median_age": 37.2,
+    "uninsured_estimate": 7,
+    "medicaid_enrolled": 391434,
+    "disability_rate": 11.5,
+    "bachelors_plus_pct": 54,
+    "public_transit_pct": 65,
+    "work_from_home_pct": 15,
+    "no_vehicle_pct": 65,
+    "broadband_pct": 92.1,
+    "no_internet_pct": 5,
+    "unemployment_rate": 5
+  },
+  "panels": {
+    "health": {
+      "score": 80,
+      "programs": [],
+      "program_value": 0
+    },
+    "housing": {
+      "score": 80,
+      "programs": [],
+      "program_value": 0
+    },
+    "economics": {
+      "score": 80,
+      "programs": [],
+      "program_value": 0
+    },
+    "education": {
+      "score": 80,
+      "programs": [],
+      "program_value": 0
+    },
+    "nutrition": {
+      "score": 60,
+      "programs": [],
+      "program_value": 0
+    },
+    "safety": {
+      "score": 30,
+      "programs": [],
+      "program_value": 0
+    },
+    "transportation": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "infrastructure": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "environment": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "legal": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "community": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "purpose": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    }
+  }
+}

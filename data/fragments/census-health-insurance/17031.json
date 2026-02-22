@@ -1,0 +1,17 @@
+{
+  "source": "census-health-insurance",
+  "api": "Census ACS 5-year",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_pop_insurance": 5096148,
+    "with_insurance": 4688455,
+    "male_under6_uninsured": 10192,
+    "male_6_18_uninsured": 15288,
+    "female_under6_uninsured": 7644,
+    "female_6_18_uninsured": 10192,
+    "medicaid_means_tested": 1172114,
+    "employer_insurance": 1834584
+  }
+}

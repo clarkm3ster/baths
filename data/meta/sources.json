@@ -1,1 +1,87 @@
-{}
+{
+  "census-demographics": {
+    "label": "Census demographics",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "census-income": {
+    "label": "Census income",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "census-housing": {
+    "label": "Census housing",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "census-rent-burden": {
+    "label": "Census rent burden",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "census-health-insurance": {
+    "label": "Census health insurance",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "census-disability": {
+    "label": "Census disability",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "census-education": {
+    "label": "Census education",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "census-commute": {
+    "label": "Census commute",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "census-internet": {
+    "label": "Census internet",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "census-employment": {
+    "label": "Census employment",
+    "api": "Census ACS 5-year",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "bls-unemployment": {
+    "label": "BLS State Unemployment",
+    "api": "BLS Public Data API",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "hud-fmr": {
+    "label": "HUD Fair Market Rents",
+    "api": "HUD User API",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "epa-air-quality": {
+    "label": "EPA Air Quality",
+    "api": "EPA AQS API",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "usda-food-access": {
+    "label": "USDA Food Access",
+    "api": "USDA Food Access Atlas",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "fema-disasters": {
+    "label": "FEMA Disaster Declarations",
+    "api": "OpenFEMA API",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "cdc-mortality": {
+    "label": "CDC Mortality",
+    "api": "CDC WONDER",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  },
+  "fbi-crime": {
+    "label": "FBI Crime Statistics",
+    "api": "FBI UCR API",
+    "last_scraped": "2026-02-22T03:49:49.784Z"
+  }
+}

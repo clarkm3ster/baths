@@ -90,6 +90,11 @@ class BaseScraper(ABC):
                     else:
                         return resp.json()
 
+            except httpx.ProxyError as e:
+                # Proxy blocks outbound — no point retrying
+                logger.warning(f"[{self.engine_name}] Proxy blocked {url}: {e}")
+                return None
+
             except (httpx.HTTPStatusError, httpx.ConnectError, httpx.ReadTimeout) as e:
                 if attempt < MAX_RETRIES:
                     wait = BACKOFF_BASE ** (attempt + 1)

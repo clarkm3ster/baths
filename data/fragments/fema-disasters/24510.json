@@ -1,0 +1,18 @@
+{
+  "source": "fema-disasters",
+  "api": "OpenFEMA API",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "declarations": [
+      {
+        "id": "EM-3506",
+        "title": "COVID-19",
+        "type": "EM",
+        "year": 2020
+      }
+    ],
+    "count": 1
+  }
+}

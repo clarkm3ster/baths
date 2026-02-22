@@ -1,81 +1,81 @@
 {
-  "generated_at": "2026-02-21T02:46:06.569Z",
+  "generated_at": "2026-02-22T03:49:49.784Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 0,
+  "total_fragments": 65,
   "by_source": {
     "census-demographics": {
-      "label": "Census Demographics",
+      "label": "Census demographics",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "census-income": {
-      "label": "Census Income & Poverty",
+      "label": "Census income",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "census-housing": {
-      "label": "Census Housing",
+      "label": "Census housing",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "census-rent-burden": {
-      "label": "Census Rent Burden",
+      "label": "Census rent burden",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "census-health-insurance": {
-      "label": "Census Health Insurance",
+      "label": "Census health insurance",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "census-disability": {
-      "label": "Census Disability",
+      "label": "Census disability",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "census-education": {
-      "label": "Census Education",
+      "label": "Census education",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "census-commute": {
-      "label": "Census Commute & Transportation",
+      "label": "Census commute",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "census-internet": {
-      "label": "Census Internet & Technology",
+      "label": "Census internet",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "census-employment": {
-      "label": "Census Employment",
+      "label": "Census employment",
       "api": "Census ACS 5-year",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "bls-unemployment": {
       "label": "BLS State Unemployment",
       "api": "BLS Public Data API",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "hud-fmr": {
       "label": "HUD Fair Market Rents",
       "api": "HUD User API",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "epa-air-quality": {
@@ -93,7 +93,7 @@
     "fema-disasters": {
       "label": "FEMA Disaster Declarations",
       "api": "OpenFEMA API",
-      "fragments": 0,
+      "fragments": 5,
       "gap": false
     },
     "cdc-mortality": {
@@ -127,8 +127,8 @@
     },
     "17031": {
       "name": "Cook County (Chicago), IL",
-      "fragments": 0,
-      "coverage_pct": 0
+      "fragments": 13,
+      "coverage_pct": 87
     },
     "21013": {
       "name": "Bell County, KY",
@@ -137,8 +137,8 @@
     },
     "24510": {
       "name": "Baltimore City, MD",
-      "fragments": 0,
-      "coverage_pct": 0
+      "fragments": 13,
+      "coverage_pct": 87
     },
     "26163": {
       "name": "Wayne County (Detroit), MI",
@@ -177,8 +177,8 @@
     },
     "36061": {
       "name": "New York County (Manhattan), NY",
-      "fragments": 0,
-      "coverage_pct": 0
+      "fragments": 13,
+      "coverage_pct": 87
     },
     "36081": {
       "name": "Queens County, NY",
@@ -212,8 +212,8 @@
     },
     "42101": {
       "name": "Philadelphia, PA",
-      "fragments": 0,
-      "coverage_pct": 0
+      "fragments": 13,
+      "coverage_pct": 87
     },
     "48113": {
       "name": "Dallas County, TX",
@@ -237,8 +237,8 @@
     },
     "06037": {
       "name": "Los Angeles County, CA",
-      "fragments": 0,
-      "coverage_pct": 0
+      "fragments": 13,
+      "coverage_pct": 87
     },
     "04013": {
       "name": "Maricopa County (Phoenix), AZ",

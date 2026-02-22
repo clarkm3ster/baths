@@ -1,0 +1,15 @@
+{
+  "source": "census-rent-burden",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "rent_total": 1700684,
+    "rent_30_35_pct": 153062,
+    "rent_35_40_pct": 136055,
+    "rent_40_50_pct": 187075,
+    "rent_50_plus_pct": 459185,
+    "rent_not_computed": 85034
+  }
+}

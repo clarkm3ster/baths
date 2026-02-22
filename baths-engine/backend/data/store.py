@@ -164,6 +164,7 @@ class DataStore:
 
     def upsert_provision(self, **kwargs) -> int:
         kwargs.setdefault("scraped_at", _now())
+        kwargs.setdefault("effective_date", None)
         if isinstance(kwargs.get("tags"), list):
             kwargs["tags"] = json.dumps(kwargs["tags"])
         try:

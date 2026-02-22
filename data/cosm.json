@@ -1,23 +1,23 @@
 {
   "created_at": "2026-02-21T02:46:06.711Z",
-  "version": 1,
-  "updated_at": "2026-02-21T02:46:06.711Z",
-  "total_domes": 0,
-  "geographies": 0,
-  "archetypes": 0,
-  "average_cosm": 0,
-  "min_cosm": 0,
-  "max_cosm": 0,
-  "median_cosm": 0,
-  "total_fragmented_cost": 0,
-  "total_coordinated_cost": 0,
-  "total_coordination_savings": 0,
-  "average_delta_per_dome": 0,
+  "version": 2,
+  "updated_at": "2026-02-22T03:49:58.939Z",
+  "total_domes": 30,
+  "geographies": 5,
+  "archetypes": 6,
+  "average_cosm": 10,
+  "min_cosm": 10,
+  "max_cosm": 10,
+  "median_cosm": 10,
+  "total_fragmented_cost": 964605,
+  "total_coordinated_cost": 578763,
+  "total_coordination_savings": 385842,
+  "average_delta_per_dome": 12861,
   "maturity": {
-    "level": "seed",
-    "score": 0,
-    "label": "No domes assembled"
+    "level": "seedling",
+    "score": 1,
+    "label": "Initial domes assembled"
   },
-  "programs_mapped": 0,
-  "total_gap_count": 0
+  "programs_mapped": 10,
+  "total_gap_count": 210
 }

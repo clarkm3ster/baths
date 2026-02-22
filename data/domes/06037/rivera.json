@@ -1,0 +1,311 @@
+{
+  "fips": "06037",
+  "county_name": "Los Angeles County, CA",
+  "profile": {
+    "id": "rivera",
+    "name": "Rivera Family",
+    "age": 38,
+    "income": 52000,
+    "household": 5,
+    "children": 3,
+    "description": "Benefits cliff"
+  },
+  "assembled_at": "2026-02-22T03:49:58.853Z",
+  "fragments_used": 13,
+  "fragment_sources": [
+    "bls-unemployment",
+    "census-commute",
+    "census-demographics",
+    "census-disability",
+    "census-education",
+    "census-employment",
+    "census-health-insurance",
+    "census-housing",
+    "census-income",
+    "census-internet",
+    "census-rent-burden",
+    "fema-disasters",
+    "hud-fmr"
+  ],
+  "eligible_programs": [
+    {
+      "program": "CHIP",
+      "eligible": true,
+      "threshold": "250% FPL (varies by state)",
+      "fpl_pct": 142,
+      "annual_value": 8400,
+      "category": "health"
+    },
+    {
+      "program": "EITC",
+      "eligible": true,
+      "threshold": "Income <= $56,838 (3 children)",
+      "annual_value": 4458,
+      "category": "economics"
+    },
+    {
+      "program": "WIC",
+      "eligible": true,
+      "threshold": "185% FPL",
+      "fpl_pct": 142,
+      "annual_value": 1800,
+      "category": "nutrition",
+      "note": "For pregnant/postpartum women and children under 5"
+    },
+    {
+      "program": "LIHEAP",
+      "eligible": true,
+      "threshold": "150% FPL",
+      "fpl_pct": 142,
+      "annual_value": 500,
+      "category": "housing",
+      "note": "One-time annual benefit, varies widely by state"
+    },
+    {
+      "program": "Reduced School Lunch",
+      "eligible": true,
+      "threshold": "185% FPL",
+      "fpl_pct": 142,
+      "annual_value": 2400,
+      "category": "nutrition"
+    }
+  ],
+  "program_count": 5,
+  "fragmented_cost": 22825,
+  "coordinated_cost": 13695,
+  "delta": 9130,
+  "cost_detail": {
+    "fragmented": 22825,
+    "coordinated": 13695,
+    "delta": 9130,
+    "direct_benefit_value": 17558,
+    "admin_overhead": 5267,
+    "admin_overhead_rate": 0.3,
+    "coordination_savings_rate": 0.4,
+    "program_count": 5
+  },
+  "cosm": 10,
+  "cosm_average": 69,
+  "domain_coverage": {
+    "health": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "housing": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "economics": {
+      "score": 87,
+      "raw_score": 87,
+      "max_score": 100,
+      "note": null
+    },
+    "education": {
+      "score": 80,
+      "raw_score": 80,
+      "max_score": 100,
+      "note": null
+    },
+    "nutrition": {
+      "score": 70,
+      "raw_score": 70,
+      "max_score": 100,
+      "note": null
+    },
+    "safety": {
+      "score": 30,
+      "raw_score": 30,
+      "max_score": 100,
+      "note": null
+    },
+    "transportation": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "infrastructure": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "environment": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": null
+    },
+    "legal": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": "Legal framework data not yet scraped — future fragment source"
+    },
+    "community": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "purpose": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    }
+  },
+  "gaps": [
+    {
+      "domain": "nutrition",
+      "type": "fragment",
+      "missing": [
+        "usda-food-access"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "fragment",
+      "missing": [
+        "fbi-crime"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "fragment",
+      "missing": [
+        "epa-air-quality"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "fragment",
+      "missing": [
+        "no sources defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    }
+  ],
+  "gap_count": 7,
+  "conditions": {
+    "median_rent": 1697,
+    "median_home_value": 740200,
+    "vacancy_rate": 6.6,
+    "ownership_rate": 46,
+    "rent_burdened_pct": 55,
+    "severely_burdened_pct": 27,
+    "median_household_income": 76367,
+    "per_capita_income": 37924,
+    "poverty_rate": 14,
+    "gini_index": 0.4998,
+    "snap_households": 412040,
+    "total_population": 9829544,
+    "median_age": 36.7,
+    "uninsured_estimate": 9,
+    "medicaid_enrolled": 3344795,
+    "disability_rate": 11,
+    "bachelors_plus_pct": 35.4,
+    "public_transit_pct": 6,
+    "work_from_home_pct": 15,
+    "no_vehicle_pct": 7,
+    "broadband_pct": 91,
+    "no_internet_pct": 6,
+    "unemployment_rate": 5.9
+  },
+  "panels": {
+    "health": {
+      "score": 90,
+      "programs": [
+        "CHIP"
+      ],
+      "program_value": 8400
+    },
+    "housing": {
+      "score": 90,
+      "programs": [
+        "LIHEAP"
+      ],
+      "program_value": 500
+    },
+    "economics": {
+      "score": 87,
+      "programs": [
+        "EITC"
+      ],
+      "program_value": 4458
+    },
+    "education": {
+      "score": 80,
+      "programs": [],
+      "program_value": 0
+    },
+    "nutrition": {
+      "score": 70,
+      "programs": [
+        "WIC",
+        "Reduced School Lunch"
+      ],
+      "program_value": 4200
+    },
+    "safety": {
+      "score": 30,
+      "programs": [],
+      "program_value": 0
+    },
+    "transportation": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "infrastructure": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "environment": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "legal": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "community": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "purpose": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source": "census-internet",
+  "api": "Census ACS 5-year",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_households_internet": 243265,
+    "with_internet": 219425,
+    "broadband": 209610,
+    "no_internet": 23840,
+    "has_computer": 216505,
+    "has_smartphone_only": 29192,
+    "no_computer": 26759
+  }
+}
