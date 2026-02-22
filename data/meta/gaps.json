@@ -1,10 +1,7 @@
 {
   "gaps": [
-    "cdc-mortality",
-    "fbi-crime",
-    "epa-air-quality",
     "usda-food-access"
   ],
-  "last_updated": "2026-02-22T03:49:49.784Z",
-  "total": 4
+  "last_updated": "2026-02-22T04:17:42.371Z",
+  "total": 1
 }

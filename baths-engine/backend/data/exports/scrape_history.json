@@ -1,0 +1,156 @@
+[
+  {
+    "id": 14,
+    "engine": "parcels",
+    "source": "opendataphilly",
+    "started_at": "2026-02-22T04:18:19.326007+00:00",
+    "completed_at": "2026-02-22T04:18:19.656610+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 13,
+    "engine": "systems",
+    "source": "usaspending",
+    "started_at": "2026-02-22T04:17:52.470121+00:00",
+    "completed_at": "2026-02-22T04:17:53.189165+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 12,
+    "engine": "costs",
+    "source": "usaspending",
+    "started_at": "2026-02-22T04:17:19.894183+00:00",
+    "completed_at": "2026-02-22T04:17:20.770710+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 11,
+    "engine": "costs",
+    "source": "hud",
+    "started_at": "2026-02-22T04:17:19.161776+00:00",
+    "completed_at": "2026-02-22T04:17:19.890149+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 10,
+    "engine": "costs",
+    "source": "cms",
+    "started_at": "2026-02-22T04:17:19.001749+00:00",
+    "completed_at": "2026-02-22T04:17:19.158097+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 9,
+    "engine": "legal",
+    "source": "federal_register",
+    "started_at": "2026-02-22T04:17:10.199860+00:00",
+    "completed_at": "2026-02-22T04:17:10.933777+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 8,
+    "engine": "legal",
+    "source": "ecfr",
+    "started_at": "2026-02-22T04:17:09.596893+00:00",
+    "completed_at": "2026-02-22T04:17:10.196923+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 7,
+    "engine": "parcels",
+    "source": "opendataphilly",
+    "started_at": "2026-02-22T03:50:37.429929+00:00",
+    "completed_at": "2026-02-22T03:50:37.769044+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 6,
+    "engine": "systems",
+    "source": "usaspending",
+    "started_at": "2026-02-22T03:50:36.698428+00:00",
+    "completed_at": "2026-02-22T03:50:37.425712+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 5,
+    "engine": "costs",
+    "source": "usaspending",
+    "started_at": "2026-02-22T03:50:35.732552+00:00",
+    "completed_at": "2026-02-22T03:50:36.694521+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 4,
+    "engine": "costs",
+    "source": "hud",
+    "started_at": "2026-02-22T03:50:34.899178+00:00",
+    "completed_at": "2026-02-22T03:50:35.728166+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 3,
+    "engine": "costs",
+    "source": "cms",
+    "started_at": "2026-02-22T03:50:34.728107+00:00",
+    "completed_at": "2026-02-22T03:50:34.894290+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 2,
+    "engine": "legal",
+    "source": "federal_register",
+    "started_at": "2026-02-22T03:50:33.897084+00:00",
+    "completed_at": "2026-02-22T03:50:34.724435+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  },
+  {
+    "id": 1,
+    "engine": "legal",
+    "source": "ecfr",
+    "started_at": "2026-02-22T03:50:33.258784+00:00",
+    "completed_at": "2026-02-22T03:50:33.892774+00:00",
+    "records_added": 0,
+    "records_updated": 0,
+    "status": "completed",
+    "error": null
+  }
+]

@@ -1,0 +1,159 @@
+{
+  "generated_at": "2026-02-22T04:18:06.837Z",
+  "dome_count": 30,
+  "geographic_deltas": [
+    {
+      "archetype": "marcus",
+      "highest_delta": {
+        "fips": "36061",
+        "county": "New York County (Manhattan), NY",
+        "delta": 22351
+      },
+      "lowest_delta": {
+        "fips": "24510",
+        "county": "Baltimore City, MD",
+        "delta": 14869
+      },
+      "spread": 7482
+    },
+    {
+      "archetype": "elena",
+      "highest_delta": {
+        "fips": "36061",
+        "county": "New York County (Manhattan), NY",
+        "delta": 22922
+      },
+      "lowest_delta": {
+        "fips": "24510",
+        "county": "Baltimore City, MD",
+        "delta": 17742
+      },
+      "spread": 5180
+    },
+    {
+      "archetype": "james",
+      "highest_delta": {
+        "fips": "36061",
+        "county": "New York County (Manhattan), NY",
+        "delta": 17636
+      },
+      "lowest_delta": {
+        "fips": "24510",
+        "county": "Baltimore City, MD",
+        "delta": 12457
+      },
+      "spread": 5179
+    },
+    {
+      "archetype": "aisha",
+      "highest_delta": {
+        "fips": "36061",
+        "county": "New York County (Manhattan), NY",
+        "delta": 18933
+      },
+      "lowest_delta": {
+        "fips": "24510",
+        "county": "Baltimore City, MD",
+        "delta": 13754
+      },
+      "spread": 5179
+    }
+  ],
+  "common_gaps": {
+    "nutrition:fragment": 30,
+    "safety:fragment": 30,
+    "safety:condition": 30,
+    "environment:fragment": 30,
+    "environment:condition": 30,
+    "legal:fragment": 30,
+    "legal:condition": 30
+  },
+  "program_clusters": {
+    "Medicaid": 20,
+    "CHIP": 15,
+    "SNAP": 20,
+    "EITC": 25,
+    "WIC": 15,
+    "LIHEAP": 25,
+    "Free School Lunch": 10,
+    "Section 8 HCV": 18,
+    "Pell Grant": 10,
+    "Reduced School Lunch": 5
+  },
+  "archetype_patterns": {
+    "marcus": {
+      "domes": 5,
+      "avg_cosm": 10,
+      "avg_delta": 18174,
+      "avg_programs": 7.6
+    },
+    "elena": {
+      "domes": 5,
+      "avg_cosm": 10,
+      "avg_delta": 19713,
+      "avg_programs": 9
+    },
+    "james": {
+      "domes": 5,
+      "avg_cosm": 10,
+      "avg_delta": 14427,
+      "avg_programs": 5
+    },
+    "rivera": {
+      "domes": 5,
+      "avg_cosm": 10,
+      "avg_delta": 9130,
+      "avg_programs": 5
+    },
+    "aisha": {
+      "domes": 5,
+      "avg_cosm": 10,
+      "avg_delta": 15725,
+      "avg_programs": 6
+    },
+    "median": {
+      "domes": 5,
+      "avg_cosm": 10,
+      "avg_delta": 0,
+      "avg_programs": 0
+    }
+  },
+  "cosm_distribution": {
+    "min": 10,
+    "max": 10,
+    "median": 10,
+    "by_geography": {
+      "17031": {
+        "name": "Cook County (Chicago), IL",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 72325
+      },
+      "24510": {
+        "name": "Baltimore City, MD",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 67952
+      },
+      "36061": {
+        "name": "New York County (Manhattan), NY",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 90972
+      },
+      "42101": {
+        "name": "Philadelphia, PA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 68664
+      },
+      "06037": {
+        "name": "Los Angeles County, CA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 85929
+      }
+    }
+  },
+  "savings_total": 385842
+}

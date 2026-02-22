@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-22T03:49:49.784Z",
+  "generated_at": "2026-02-22T04:17:42.311Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
@@ -7,61 +7,61 @@
   "total_fragments": 65,
   "by_source": {
     "census-demographics": {
-      "label": "Census demographics",
+      "label": "Census Demographics",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
     },
     "census-income": {
-      "label": "Census income",
+      "label": "Census Income & Poverty",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
     },
     "census-housing": {
-      "label": "Census housing",
+      "label": "Census Housing",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
     },
     "census-rent-burden": {
-      "label": "Census rent burden",
+      "label": "Census Rent Burden",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
     },
     "census-health-insurance": {
-      "label": "Census health insurance",
+      "label": "Census Health Insurance",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
     },
     "census-disability": {
-      "label": "Census disability",
+      "label": "Census Disability",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
     },
     "census-education": {
-      "label": "Census education",
+      "label": "Census Education",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
     },
     "census-commute": {
-      "label": "Census commute",
+      "label": "Census Commute & Transportation",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
     },
     "census-internet": {
-      "label": "Census internet",
+      "label": "Census Internet & Technology",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
     },
     "census-employment": {
-      "label": "Census employment",
+      "label": "Census Employment",
       "api": "Census ACS 5-year",
       "fragments": 5,
       "gap": false
@@ -128,7 +128,7 @@
     "17031": {
       "name": "Cook County (Chicago), IL",
       "fragments": 13,
-      "coverage_pct": 87
+      "coverage_pct": 76
     },
     "21013": {
       "name": "Bell County, KY",
@@ -138,7 +138,7 @@
     "24510": {
       "name": "Baltimore City, MD",
       "fragments": 13,
-      "coverage_pct": 87
+      "coverage_pct": 76
     },
     "26163": {
       "name": "Wayne County (Detroit), MI",
@@ -178,7 +178,7 @@
     "36061": {
       "name": "New York County (Manhattan), NY",
       "fragments": 13,
-      "coverage_pct": 87
+      "coverage_pct": 76
     },
     "36081": {
       "name": "Queens County, NY",
@@ -213,7 +213,7 @@
     "42101": {
       "name": "Philadelphia, PA",
       "fragments": 13,
-      "coverage_pct": 87
+      "coverage_pct": 76
     },
     "48113": {
       "name": "Dallas County, TX",
@@ -238,7 +238,7 @@
     "06037": {
       "name": "Los Angeles County, CA",
       "fragments": 13,
-      "coverage_pct": 87
+      "coverage_pct": 76
     },
     "04013": {
       "name": "Maricopa County (Phoenix), AZ",
