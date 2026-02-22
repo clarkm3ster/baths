@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "42029",
+  "county_name": "Chester County, PA",
+  "scraped_at": "2026-02-22T20:23:39.895Z",
+  "data": {
+    "total_disability_pop": 531888,
+    "male_with_disability": 51,
+    "female_with_disability": 23,
+    "disability_under5": 14558,
+    "disability_5_17": 46267,
+    "disability_18_34": 55262,
+    "disability_65_74": 25357,
+    "disability_75_plus": 14880
+  }
+}

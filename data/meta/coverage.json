@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-22T16:26:10.943Z",
+  "generated_at": "2026-02-22T20:23:41.183Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 155,
+  "total_fragments": 162,
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
@@ -27,7 +27,7 @@
     "census-rent-burden": {
       "label": "Census Rent Burden",
       "api": "Census ACS 5-year",
-      "fragments": 26,
+      "fragments": 28,
       "gap": false
     },
     "census-health-insurance": {
@@ -39,7 +39,7 @@
     "census-disability": {
       "label": "Census Disability",
       "api": "Census ACS 5-year",
-      "fragments": 5,
+      "fragments": 10,
       "gap": false
     },
     "census-education": {
@@ -157,13 +157,13 @@
     },
     "34017": {
       "name": "Hudson County, NJ",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "34023": {
       "name": "Middlesex County, NJ",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "36005": {
       "name": "Bronx County, NY",
@@ -172,8 +172,8 @@
     },
     "36047": {
       "name": "Kings County (Brooklyn), NY",
-      "fragments": 4,
-      "coverage_pct": 24
+      "fragments": 5,
+      "coverage_pct": 29
     },
     "36061": {
       "name": "New York County (Manhattan), NY",
@@ -192,23 +192,23 @@
     },
     "42017": {
       "name": "Bucks County, PA",
-      "fragments": 4,
-      "coverage_pct": 24
+      "fragments": 5,
+      "coverage_pct": 29
     },
     "42029": {
       "name": "Chester County, PA",
-      "fragments": 4,
-      "coverage_pct": 24
+      "fragments": 5,
+      "coverage_pct": 29
     },
     "42045": {
       "name": "Delaware County, PA",
-      "fragments": 4,
-      "coverage_pct": 24
+      "fragments": 5,
+      "coverage_pct": 29
     },
     "42091": {
       "name": "Montgomery County, PA",
-      "fragments": 4,
-      "coverage_pct": 24
+      "fragments": 5,
+      "coverage_pct": 29
     },
     "42101": {
       "name": "Philadelphia, PA",

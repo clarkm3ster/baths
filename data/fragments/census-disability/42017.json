@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "42017",
+  "county_name": "Bucks County, PA",
+  "scraped_at": "2026-02-22T20:23:38.936Z",
+  "data": {
+    "total_disability_pop": 639266,
+    "male_with_disability": 47,
+    "female_with_disability": 14,
+    "disability_under5": 15544,
+    "disability_5_17": 50456,
+    "disability_18_34": 62078,
+    "disability_65_74": 34876,
+    "disability_75_plus": 20636
+  }
+}

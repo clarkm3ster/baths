@@ -23,9 +23,9 @@
   "census-rent-burden": {
     "label": "Census rent burden",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T16:26:10.943Z",
-    "total_scrapes": null,
-    "counties_covered": 26
+    "last_scraped": "2026-02-22T20:23:41.182Z",
+    "total_scrapes": 2,
+    "counties_covered": 28
   },
   "census-health-insurance": {
     "label": "Census health insurance",
@@ -35,7 +35,9 @@
   "census-disability": {
     "label": "Census disability",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-22T20:23:41.183Z",
+    "total_scrapes": null,
+    "counties_covered": 10
   },
   "census-education": {
     "label": "Census education",

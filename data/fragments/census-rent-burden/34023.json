@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "34023",
+  "county_name": "Middlesex County, NJ",
+  "scraped_at": "2026-02-22T20:23:22.874Z",
+  "data": {
+    "rent_total": 109162,
+    "rent_30_35_pct": 9043,
+    "rent_35_40_pct": 6355,
+    "rent_40_50_pct": 9254,
+    "rent_50_plus_pct": 23180,
+    "rent_not_computed": 5488
+  }
+}
