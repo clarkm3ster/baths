@@ -1,0 +1,90 @@
+name: Engine Scrapers
+
+on:
+  schedule:
+    # Daily at 6am UTC — all 7 backend scrapers run
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      engine:
+        description: 'Engine to run (blank = all)'
+        required: false
+        type: choice
+        options:
+          - all
+          - legal
+          - costs
+          - systems
+          - parcels
+
+permissions:
+  contents: write
+
+jobs:
+  # -----------------------------------------------------------
+  #  Run scrapers → export JSON → commit
+  #
+  #  All 7 scrapers share one SQLite instance so enrichment can
+  #  cross-reference everything. Data is exported to JSON for
+  #  git persistence (the SQLite db itself is gitignored).
+  #
+  #  Scrapers & external sources:
+  #    legal   → eCFR API, Federal Register API
+  #    costs   → CMS (data.cms.gov), HUD FMR API, USASpending API
+  #    systems → USASpending agency enrichment
+  #    parcels → OpenDataPhilly Carto SQL API
+  # -----------------------------------------------------------
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r baths-engine/backend/requirements.txt
+
+      - name: Run scrapers
+        working-directory: baths-engine/backend
+        env:
+          BATHS_DATA_DIR: ${{ github.workspace }}/baths-engine/backend/data/db
+        run: |
+          ENGINE="${{ github.event.inputs.engine || 'all' }}"
+          if [ "$ENGINE" = "all" ] || [ -z "$ENGINE" ]; then
+            python run_scrapers.py
+          else
+            python run_scrapers.py "$ENGINE"
+          fi
+
+      - name: Count exported records
+        id: counts
+        run: |
+          if [ -f baths-engine/backend/data/exports/stats.json ]; then
+            cat baths-engine/backend/data/exports/stats.json
+            PROVISIONS=$(python3 -c "import json; print(json.load(open('baths-engine/backend/data/exports/stats.json'))['provisions'])")
+            COSTS=$(python3 -c "import json; print(json.load(open('baths-engine/backend/data/exports/stats.json'))['cost_points'])")
+            PARCELS=$(python3 -c "import json; print(json.load(open('baths-engine/backend/data/exports/stats.json'))['parcels'])")
+            ENRICHMENTS=$(python3 -c "import json; print(json.load(open('baths-engine/backend/data/exports/stats.json'))['enrichments'])")
+            echo "summary=${PROVISIONS} provisions, ${COSTS} costs, ${PARCELS} parcels, ${ENRICHMENTS} enrichments" >> "$GITHUB_OUTPUT"
+          else
+            echo "summary=no exports produced" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push data
+        run: |
+          git config user.name "engine-bot"
+          git config user.email "engine@baths.dev"
+          git add baths-engine/backend/data/exports/
+          if git diff --staged --quiet; then
+            echo "No data changes to commit"
+          else
+            ENGINE="${{ github.event.inputs.engine || 'all' }}"
+            git commit -m "engine/${ENGINE}: ${{ steps.counts.outputs.summary }} [skip ci]"
+            git push
+          fi
