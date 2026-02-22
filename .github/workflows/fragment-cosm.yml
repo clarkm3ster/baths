@@ -2,12 +2,8 @@ name: Fragment & Cosm
 
 on:
   schedule:
-    # 5x daily: 7am, 12pm, 5pm, 10pm, 3am UTC
-    - cron: '0 7 * * *'
-    - cron: '0 12 * * *'
-    - cron: '0 17 * * *'
-    - cron: '0 22 * * *'
-    - cron: '0 3 * * *'
+    # Every 4 hours (offset by 1h from engine scrapers to avoid commit conflicts)
+    - cron: '0 0,4,8,12,16,20 * * *'
   workflow_dispatch:
 
 permissions:

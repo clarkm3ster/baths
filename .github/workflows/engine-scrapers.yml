@@ -2,8 +2,8 @@ name: Engine Scrapers
 
 on:
   schedule:
-    # Daily at 6am UTC — all 7 backend scrapers run
-    - cron: '0 6 * * *'
+    # Every 4 hours — all 7 backend scrapers run
+    - cron: '0 2,6,10,14,18,22 * * *'
   workflow_dispatch:
     inputs:
       engine:
