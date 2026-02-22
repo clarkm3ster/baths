@@ -1,0 +1,18 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "54055",
+  "county_name": "Mercer County, WV",
+  "scraped_at": "2026-02-22T12:42:17.991Z",
+  "data": {
+    "median_household_income": 46409,
+    "per_capita_income": 27245,
+    "poverty_total": 57898,
+    "poverty_below": 10869,
+    "gini_index": 0.4563,
+    "snap_households": 5737,
+    "public_assistance_income": 467,
+    "ssi_income": 2224
+  }
+}

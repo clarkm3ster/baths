@@ -1,0 +1,18 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "34013",
+  "county_name": "Essex County, NJ",
+  "scraped_at": "2026-02-22T12:42:21.970Z",
+  "data": {
+    "median_household_income": 73785,
+    "per_capita_income": 45946,
+    "poverty_total": 832973,
+    "poverty_below": 125228,
+    "gini_index": 0.5486,
+    "snap_households": 44084,
+    "public_assistance_income": 9710,
+    "ssi_income": 19952
+  }
+}

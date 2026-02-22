@@ -10,10 +10,11 @@
     "children": 1,
     "description": "Working poor"
   },
-  "assembled_at": "2026-02-22T08:28:20.858Z",
-  "fragments_used": 1,
+  "assembled_at": "2026-02-22T12:42:36.021Z",
+  "fragments_used": 2,
   "fragment_sources": [
-    "census-demographics"
+    "census-demographics",
+    "census-income"
   ],
   "eligible_programs": [
     {
@@ -41,16 +42,6 @@
       "annual_value": 4500,
       "monthly_value": 375,
       "category": "nutrition"
-    },
-    {
-      "program": "Section 8 HCV",
-      "eligible": true,
-      "threshold": "50% Area Median Income",
-      "income_limit": 37500,
-      "annual_value": 7800,
-      "monthly_value": 650,
-      "category": "housing",
-      "note": "Extreme waitlist — average 2-5 year wait nationwide"
     },
     {
       "program": "EITC",
@@ -94,22 +85,22 @@
       "note": "For enrolled students only; assumes enrollment"
     }
   ],
-  "program_count": 9,
-  "fragmented_cost": 46400,
-  "coordinated_cost": 27840,
-  "delta": 18560,
+  "program_count": 8,
+  "fragmented_cost": 36260,
+  "coordinated_cost": 21756,
+  "delta": 14504,
   "cost_detail": {
-    "fragmented": 46400,
-    "coordinated": 27840,
-    "delta": 18560,
-    "direct_benefit_value": 35692,
-    "admin_overhead": 10708,
+    "fragmented": 36260,
+    "coordinated": 21756,
+    "delta": 14504,
+    "direct_benefit_value": 27892,
+    "admin_overhead": 8368,
     "admin_overhead_rate": 0.3,
     "coordination_savings_rate": 0.4,
-    "program_count": 9
+    "program_count": 8
   },
-  "cosm": 7,
-  "cosm_average": 19,
+  "cosm": 10,
+  "cosm_average": 26,
   "domain_coverage": {
     "health": {
       "score": 20,
@@ -118,14 +109,14 @@
       "note": null
     },
     "housing": {
-      "score": 20,
-      "raw_score": 20,
+      "score": 10,
+      "raw_score": 10,
       "max_score": 100,
       "note": null
     },
     "economics": {
-      "score": 7,
-      "raw_score": 7,
+      "score": 50,
+      "raw_score": 50,
       "max_score": 100,
       "note": null
     },
@@ -136,8 +127,8 @@
       "note": null
     },
     "nutrition": {
-      "score": 15,
-      "raw_score": 15,
+      "score": 75,
+      "raw_score": 75,
       "max_score": 100,
       "note": null
     },
@@ -225,7 +216,6 @@
       "domain": "economics",
       "type": "fragment",
       "missing": [
-        "census-income",
         "census-employment",
         "bls-unemployment"
       ]
@@ -234,10 +224,7 @@
       "domain": "economics",
       "type": "condition",
       "missing": [
-        "median_household_income",
-        "poverty_rate",
-        "unemployment_rate",
-        "gini_index"
+        "unemployment_rate"
       ]
     },
     {
@@ -258,15 +245,7 @@
       "domain": "nutrition",
       "type": "fragment",
       "missing": [
-        "census-income",
         "usda-food-access"
-      ]
-    },
-    {
-      "domain": "nutrition",
-      "type": "condition",
-      "missing": [
-        "snap_households"
       ]
     },
     {
@@ -360,8 +339,13 @@
       ]
     }
   ],
-  "gap_count": 22,
+  "gap_count": 21,
   "conditions": {
+    "median_household_income": 33658,
+    "per_capita_income": 19262,
+    "poverty_rate": 26.3,
+    "gini_index": 0.4755,
+    "snap_households": 2344,
     "total_population": 24248,
     "median_age": 41.5
   },
@@ -375,15 +359,14 @@
       "program_value": 11300
     },
     "housing": {
-      "score": 20,
+      "score": 10,
       "programs": [
-        "Section 8 HCV",
         "LIHEAP"
       ],
-      "program_value": 8300
+      "program_value": 500
     },
     "economics": {
-      "score": 7,
+      "score": 50,
       "programs": [
         "EITC"
       ],
@@ -397,7 +380,7 @@
       "program_value": 7395
     },
     "nutrition": {
-      "score": 15,
+      "score": 75,
       "programs": [
         "SNAP",
         "WIC",

@@ -1,0 +1,18 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "36081",
+  "county_name": "Queens County, NY",
+  "scraped_at": "2026-02-22T12:42:28.966Z",
+  "data": {
+    "total_units": 896825,
+    "occupied_units": 816859,
+    "vacant_units": 79966,
+    "owner_occupied": 369150,
+    "renter_occupied": 447709,
+    "median_home_value": 677700,
+    "median_gross_rent": 1847,
+    "median_monthly_housing_cost": 1841
+  }
+}

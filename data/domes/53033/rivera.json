@@ -10,10 +10,12 @@
     "children": 3,
     "description": "Benefits cliff"
   },
-  "assembled_at": "2026-02-22T08:28:20.845Z",
-  "fragments_used": 1,
+  "assembled_at": "2026-02-22T12:42:36.007Z",
+  "fragments_used": 3,
   "fragment_sources": [
-    "census-demographics"
+    "census-demographics",
+    "census-housing",
+    "census-income"
   ],
   "eligible_programs": [
     {
@@ -23,6 +25,16 @@
       "fpl_pct": 142,
       "annual_value": 8400,
       "category": "health"
+    },
+    {
+      "program": "Section 8 HCV",
+      "eligible": true,
+      "threshold": "50% Area Median Income",
+      "income_limit": 58170,
+      "annual_value": 7800,
+      "monthly_value": 650,
+      "category": "housing",
+      "note": "Extreme waitlist — average 2-5 year wait nationwide"
     },
     {
       "program": "EITC",
@@ -58,22 +70,22 @@
       "category": "nutrition"
     }
   ],
-  "program_count": 5,
-  "fragmented_cost": 22825,
-  "coordinated_cost": 13695,
-  "delta": 9130,
+  "program_count": 6,
+  "fragmented_cost": 32965,
+  "coordinated_cost": 19779,
+  "delta": 13186,
   "cost_detail": {
-    "fragmented": 22825,
-    "coordinated": 13695,
-    "delta": 9130,
-    "direct_benefit_value": 17558,
-    "admin_overhead": 5267,
+    "fragmented": 32965,
+    "coordinated": 19779,
+    "delta": 13186,
+    "direct_benefit_value": 25358,
+    "admin_overhead": 7607,
     "admin_overhead_rate": 0.3,
     "coordination_savings_rate": 0.4,
-    "program_count": 5
+    "program_count": 6
   },
   "cosm": 0,
-  "cosm_average": 16,
+  "cosm_average": 29,
   "domain_coverage": {
     "health": {
       "score": 10,
@@ -82,14 +94,14 @@
       "note": null
     },
     "housing": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 63,
+      "raw_score": 63,
       "max_score": 100,
       "note": null
     },
     "economics": {
-      "score": 7,
-      "raw_score": 7,
+      "score": 50,
+      "raw_score": 50,
       "max_score": 100,
       "note": null
     },
@@ -100,8 +112,8 @@
       "note": null
     },
     "nutrition": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 70,
+      "raw_score": 70,
       "max_score": 100,
       "note": null
     },
@@ -170,7 +182,6 @@
       "domain": "housing",
       "type": "fragment",
       "missing": [
-        "census-housing",
         "census-rent-burden",
         "hud-fmr"
       ]
@@ -179,9 +190,6 @@
       "domain": "housing",
       "type": "condition",
       "missing": [
-        "median_rent",
-        "vacancy_rate",
-        "ownership_rate",
         "rent_burdened_pct"
       ]
     },
@@ -189,7 +197,6 @@
       "domain": "economics",
       "type": "fragment",
       "missing": [
-        "census-income",
         "census-employment",
         "bls-unemployment"
       ]
@@ -198,10 +205,7 @@
       "domain": "economics",
       "type": "condition",
       "missing": [
-        "median_household_income",
-        "poverty_rate",
-        "unemployment_rate",
-        "gini_index"
+        "unemployment_rate"
       ]
     },
     {
@@ -222,15 +226,7 @@
       "domain": "nutrition",
       "type": "fragment",
       "missing": [
-        "census-income",
         "usda-food-access"
-      ]
-    },
-    {
-      "domain": "nutrition",
-      "type": "condition",
-      "missing": [
-        "snap_households"
       ]
     },
     {
@@ -324,8 +320,17 @@
       ]
     }
   ],
-  "gap_count": 22,
+  "gap_count": 21,
   "conditions": {
+    "median_rent": 1950,
+    "median_home_value": 761500,
+    "vacancy_rate": 5.8,
+    "ownership_rate": 56.2,
+    "median_household_income": 116340,
+    "per_capita_income": 66811,
+    "poverty_rate": 8.4,
+    "gini_index": 0.4766,
+    "snap_households": 73021,
     "total_population": 2254371,
     "median_age": 37.2
   },
@@ -338,14 +343,15 @@
       "program_value": 8400
     },
     "housing": {
-      "score": 10,
+      "score": 63,
       "programs": [
+        "Section 8 HCV",
         "LIHEAP"
       ],
-      "program_value": 500
+      "program_value": 8300
     },
     "economics": {
-      "score": 7,
+      "score": 50,
       "programs": [
         "EITC"
       ],
@@ -357,7 +363,7 @@
       "program_value": 0
     },
     "nutrition": {
-      "score": 10,
+      "score": 70,
       "programs": [
         "WIC",
         "Reduced School Lunch"

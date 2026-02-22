@@ -10,10 +10,12 @@
     "children": 0,
     "description": "Aged out of foster care"
   },
-  "assembled_at": "2026-02-22T08:28:20.837Z",
-  "fragments_used": 1,
+  "assembled_at": "2026-02-22T12:42:35.997Z",
+  "fragments_used": 3,
   "fragment_sources": [
-    "census-demographics"
+    "census-demographics",
+    "census-housing",
+    "census-income"
   ],
   "eligible_programs": [
     {
@@ -38,9 +40,9 @@
       "program": "Section 8 HCV",
       "eligible": true,
       "threshold": "50% Area Median Income",
-      "income_limit": 37500,
-      "annual_value": 10800,
-      "monthly_value": 900,
+      "income_limit": 32108,
+      "annual_value": 15876,
+      "monthly_value": 1323,
       "category": "housing",
       "note": "Extreme waitlist — average 2-5 year wait nationwide"
     },
@@ -70,21 +72,21 @@
     }
   ],
   "program_count": 6,
-  "fragmented_cost": 36429,
-  "coordinated_cost": 21857,
-  "delta": 14572,
+  "fragmented_cost": 43027,
+  "coordinated_cost": 25816,
+  "delta": 17211,
   "cost_detail": {
-    "fragmented": 36429,
-    "coordinated": 21857,
-    "delta": 14572,
-    "direct_benefit_value": 28022,
-    "admin_overhead": 8407,
+    "fragmented": 43027,
+    "coordinated": 25816,
+    "delta": 17211,
+    "direct_benefit_value": 33098,
+    "admin_overhead": 9929,
     "admin_overhead_rate": 0.3,
     "coordination_savings_rate": 0.4,
     "program_count": 6
   },
-  "cosm": 5,
-  "cosm_average": 17,
+  "cosm": 10,
+  "cosm_average": 29,
   "domain_coverage": {
     "health": {
       "score": 10,
@@ -93,14 +95,14 @@
       "note": null
     },
     "housing": {
-      "score": 20,
-      "raw_score": 20,
+      "score": 63,
+      "raw_score": 63,
       "max_score": 100,
       "note": null
     },
     "economics": {
-      "score": 7,
-      "raw_score": 7,
+      "score": 50,
+      "raw_score": 50,
       "max_score": 100,
       "note": null
     },
@@ -111,8 +113,8 @@
       "note": null
     },
     "nutrition": {
-      "score": 5,
-      "raw_score": 5,
+      "score": 65,
+      "raw_score": 65,
       "max_score": 100,
       "note": null
     },
@@ -181,7 +183,6 @@
       "domain": "housing",
       "type": "fragment",
       "missing": [
-        "census-housing",
         "census-rent-burden",
         "hud-fmr"
       ]
@@ -190,9 +191,6 @@
       "domain": "housing",
       "type": "condition",
       "missing": [
-        "median_rent",
-        "vacancy_rate",
-        "ownership_rate",
         "rent_burdened_pct"
       ]
     },
@@ -200,7 +198,6 @@
       "domain": "economics",
       "type": "fragment",
       "missing": [
-        "census-income",
         "census-employment",
         "bls-unemployment"
       ]
@@ -209,10 +206,7 @@
       "domain": "economics",
       "type": "condition",
       "missing": [
-        "median_household_income",
-        "poverty_rate",
-        "unemployment_rate",
-        "gini_index"
+        "unemployment_rate"
       ]
     },
     {
@@ -233,15 +227,7 @@
       "domain": "nutrition",
       "type": "fragment",
       "missing": [
-        "census-income",
         "usda-food-access"
-      ]
-    },
-    {
-      "domain": "nutrition",
-      "type": "condition",
-      "missing": [
-        "snap_households"
       ]
     },
     {
@@ -335,8 +321,17 @@
       ]
     }
   ],
-  "gap_count": 22,
+  "gap_count": 21,
   "conditions": {
+    "median_rent": 1623,
+    "median_home_value": 387000,
+    "vacancy_rate": 11.4,
+    "ownership_rate": 51.9,
+    "median_household_income": 64215,
+    "per_capita_income": 35563,
+    "poverty_rate": 15.3,
+    "gini_index": 0.516,
+    "snap_households": 223523,
     "total_population": 2688237,
     "median_age": 40.6
   },
@@ -349,15 +344,15 @@
       "program_value": 6500
     },
     "housing": {
-      "score": 20,
+      "score": 63,
       "programs": [
         "Section 8 HCV",
         "LIHEAP"
       ],
-      "program_value": 11300
+      "program_value": 16376
     },
     "economics": {
-      "score": 7,
+      "score": 50,
       "programs": [
         "EITC"
       ],
@@ -371,7 +366,7 @@
       "program_value": 7395
     },
     "nutrition": {
-      "score": 5,
+      "score": 65,
       "programs": [
         "SNAP"
       ],

@@ -1,23 +1,23 @@
 {
   "created_at": "2026-02-21T02:46:06.711Z",
-  "version": 4,
-  "updated_at": "2026-02-22T08:28:20.911Z",
+  "version": 5,
+  "updated_at": "2026-02-22T12:42:36.072Z",
   "total_domes": 168,
   "geographies": 28,
   "archetypes": 6,
-  "average_cosm": 4,
+  "average_cosm": 5,
   "min_cosm": 0,
   "max_cosm": 10,
   "median_cosm": 0,
-  "total_fragmented_cost": 5184458,
-  "total_coordinated_cost": 3110661,
-  "total_coordination_savings": 2073797,
-  "average_delta_per_dome": 12344,
+  "total_fragmented_cost": 5480153,
+  "total_coordinated_cost": 3288084,
+  "total_coordination_savings": 2192069,
+  "average_delta_per_dome": 13048,
   "maturity": {
     "level": "seedling",
     "score": 1,
     "label": "Initial domes assembled"
   },
   "programs_mapped": 10,
-  "total_gap_count": 3204
+  "total_gap_count": 3108
 }
