@@ -1,0 +1,16 @@
+{
+  "source": "census-internet",
+  "api": "Census ACS 5-year",
+  "fips": "42101",
+  "county": "Philadelphia, PA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_households_internet": 617869,
+    "with_internet": 555456,
+    "broadband": 530549,
+    "no_internet": 62413,
+    "has_computer": 542524,
+    "has_smartphone_only": 74144,
+    "no_computer": 75345
+  }
+}

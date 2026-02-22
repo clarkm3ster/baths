@@ -1,0 +1,314 @@
+{
+  "fips": "36061",
+  "county_name": "New York County (Manhattan), NY",
+  "profile": {
+    "id": "james",
+    "name": "James",
+    "age": 72,
+    "income": 14000,
+    "household": 1,
+    "children": 0,
+    "description": "Elderly disabled"
+  },
+  "assembled_at": "2026-02-22T04:18:06.733Z",
+  "fragments_used": 13,
+  "fragment_sources": [
+    "bls-unemployment",
+    "census-commute",
+    "census-demographics",
+    "census-disability",
+    "census-education",
+    "census-employment",
+    "census-health-insurance",
+    "census-housing",
+    "census-income",
+    "census-internet",
+    "census-rent-burden",
+    "fema-disasters",
+    "hud-fmr"
+  ],
+  "eligible_programs": [
+    {
+      "program": "Medicaid",
+      "eligible": true,
+      "threshold": "138% FPL",
+      "fpl_pct": 93,
+      "annual_value": 12000,
+      "category": "health",
+      "note": "ACA expansion states; non-expansion states use lower thresholds"
+    },
+    {
+      "program": "SNAP",
+      "eligible": true,
+      "threshold": "130% FPL gross income",
+      "fpl_pct": 93,
+      "annual_value": 2448,
+      "monthly_value": 204,
+      "category": "nutrition"
+    },
+    {
+      "program": "Section 8 HCV",
+      "eligible": true,
+      "threshold": "50% Area Median Income",
+      "income_limit": 46826,
+      "annual_value": 18588,
+      "monthly_value": 1549,
+      "category": "housing",
+      "note": "Extreme waitlist — average 2-5 year wait nationwide"
+    },
+    {
+      "program": "EITC",
+      "eligible": true,
+      "threshold": "Income <= $17,640 (0 children)",
+      "annual_value": 379,
+      "category": "economics"
+    },
+    {
+      "program": "LIHEAP",
+      "eligible": true,
+      "threshold": "150% FPL",
+      "fpl_pct": 93,
+      "annual_value": 500,
+      "category": "housing",
+      "note": "One-time annual benefit, varies widely by state"
+    }
+  ],
+  "program_count": 5,
+  "fragmented_cost": 44090,
+  "coordinated_cost": 26454,
+  "delta": 17636,
+  "cost_detail": {
+    "fragmented": 44090,
+    "coordinated": 26454,
+    "delta": 17636,
+    "direct_benefit_value": 33915,
+    "admin_overhead": 10175,
+    "admin_overhead_rate": 0.3,
+    "coordination_savings_rate": 0.4,
+    "program_count": 5
+  },
+  "cosm": 10,
+  "cosm_average": 69,
+  "domain_coverage": {
+    "health": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "housing": {
+      "score": 100,
+      "raw_score": 100,
+      "max_score": 100,
+      "note": null
+    },
+    "economics": {
+      "score": 87,
+      "raw_score": 87,
+      "max_score": 100,
+      "note": null
+    },
+    "education": {
+      "score": 80,
+      "raw_score": 80,
+      "max_score": 100,
+      "note": null
+    },
+    "nutrition": {
+      "score": 65,
+      "raw_score": 65,
+      "max_score": 100,
+      "note": null
+    },
+    "safety": {
+      "score": 30,
+      "raw_score": 30,
+      "max_score": 100,
+      "note": null
+    },
+    "transportation": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "infrastructure": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "environment": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": null
+    },
+    "legal": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": "Legal framework data not yet scraped — future fragment source"
+    },
+    "community": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "purpose": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    }
+  },
+  "gaps": [
+    {
+      "domain": "nutrition",
+      "type": "fragment",
+      "missing": [
+        "usda-food-access"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "fragment",
+      "missing": [
+        "fbi-crime"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "fragment",
+      "missing": [
+        "epa-air-quality"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "fragment",
+      "missing": [
+        "no sources defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    }
+  ],
+  "gap_count": 7,
+  "conditions": {
+    "median_rent": 1899,
+    "median_home_value": 999999,
+    "vacancy_rate": 9.5,
+    "ownership_rate": 24,
+    "rent_burdened_pct": 51,
+    "severely_burdened_pct": 24,
+    "median_household_income": 93651,
+    "per_capita_income": 79781,
+    "poverty_rate": 15,
+    "gini_index": 0.5976,
+    "snap_households": 98687,
+    "total_population": 1694251,
+    "median_age": 37.2,
+    "uninsured_estimate": 7,
+    "medicaid_enrolled": 391434,
+    "disability_rate": 11.5,
+    "bachelors_plus_pct": 54,
+    "public_transit_pct": 65,
+    "work_from_home_pct": 15,
+    "no_vehicle_pct": 65,
+    "broadband_pct": 92.1,
+    "no_internet_pct": 5,
+    "unemployment_rate": 5
+  },
+  "panels": {
+    "health": {
+      "score": 90,
+      "programs": [
+        "Medicaid"
+      ],
+      "program_value": 12000
+    },
+    "housing": {
+      "score": 100,
+      "programs": [
+        "Section 8 HCV",
+        "LIHEAP"
+      ],
+      "program_value": 19088
+    },
+    "economics": {
+      "score": 87,
+      "programs": [
+        "EITC"
+      ],
+      "program_value": 379
+    },
+    "education": {
+      "score": 80,
+      "programs": [],
+      "program_value": 0
+    },
+    "nutrition": {
+      "score": 65,
+      "programs": [
+        "SNAP"
+      ],
+      "program_value": 2448
+    },
+    "safety": {
+      "score": 30,
+      "programs": [],
+      "program_value": 0
+    },
+    "transportation": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "infrastructure": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "environment": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "legal": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "community": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "purpose": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    }
+  }
+}

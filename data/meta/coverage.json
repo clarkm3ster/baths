@@ -1,0 +1,254 @@
+{
+  "generated_at": "2026-02-22T04:17:42.311Z",
+  "total_sources": 17,
+  "active_sources": 15,
+  "gap_sources": 2,
+  "total_counties": 28,
+  "total_fragments": 65,
+  "by_source": {
+    "census-demographics": {
+      "label": "Census Demographics",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "census-income": {
+      "label": "Census Income & Poverty",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "census-housing": {
+      "label": "Census Housing",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "census-rent-burden": {
+      "label": "Census Rent Burden",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "census-health-insurance": {
+      "label": "Census Health Insurance",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "census-disability": {
+      "label": "Census Disability",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "census-education": {
+      "label": "Census Education",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "census-commute": {
+      "label": "Census Commute & Transportation",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "census-internet": {
+      "label": "Census Internet & Technology",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "census-employment": {
+      "label": "Census Employment",
+      "api": "Census ACS 5-year",
+      "fragments": 5,
+      "gap": false
+    },
+    "bls-unemployment": {
+      "label": "BLS State Unemployment",
+      "api": "BLS Public Data API",
+      "fragments": 5,
+      "gap": false
+    },
+    "hud-fmr": {
+      "label": "HUD Fair Market Rents",
+      "api": "HUD User API",
+      "fragments": 5,
+      "gap": false
+    },
+    "epa-air-quality": {
+      "label": "EPA Air Quality",
+      "api": "EPA AQS API",
+      "fragments": 0,
+      "gap": false
+    },
+    "usda-food-access": {
+      "label": "USDA Food Access",
+      "api": "USDA Food Access Atlas",
+      "fragments": 0,
+      "gap": false
+    },
+    "fema-disasters": {
+      "label": "FEMA Disaster Declarations",
+      "api": "OpenFEMA API",
+      "fragments": 5,
+      "gap": false
+    },
+    "cdc-mortality": {
+      "label": "CDC Mortality",
+      "api": "CDC WONDER",
+      "fragments": 0,
+      "gap": true
+    },
+    "fbi-crime": {
+      "label": "FBI Crime Statistics",
+      "api": "FBI UCR API",
+      "fragments": 0,
+      "gap": true
+    }
+  },
+  "by_county": {
+    "11001": {
+      "name": "District of Columbia",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "12086": {
+      "name": "Miami-Dade County, FL",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "13121": {
+      "name": "Fulton County (Atlanta), GA",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "17031": {
+      "name": "Cook County (Chicago), IL",
+      "fragments": 13,
+      "coverage_pct": 76
+    },
+    "21013": {
+      "name": "Bell County, KY",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "24510": {
+      "name": "Baltimore City, MD",
+      "fragments": 13,
+      "coverage_pct": 76
+    },
+    "26163": {
+      "name": "Wayne County (Detroit), MI",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "28049": {
+      "name": "Hinds County (Jackson), MS",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "34013": {
+      "name": "Essex County, NJ",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "34017": {
+      "name": "Hudson County, NJ",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "34023": {
+      "name": "Middlesex County, NJ",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "36005": {
+      "name": "Bronx County, NY",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "36047": {
+      "name": "Kings County (Brooklyn), NY",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "36061": {
+      "name": "New York County (Manhattan), NY",
+      "fragments": 13,
+      "coverage_pct": 76
+    },
+    "36081": {
+      "name": "Queens County, NY",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "39035": {
+      "name": "Cuyahoga County (Cleveland), OH",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "42017": {
+      "name": "Bucks County, PA",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "42029": {
+      "name": "Chester County, PA",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "42045": {
+      "name": "Delaware County, PA",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "42091": {
+      "name": "Montgomery County, PA",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "42101": {
+      "name": "Philadelphia, PA",
+      "fragments": 13,
+      "coverage_pct": 76
+    },
+    "48113": {
+      "name": "Dallas County, TX",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "48201": {
+      "name": "Harris County (Houston), TX",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "53033": {
+      "name": "King County (Seattle), WA",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "54055": {
+      "name": "Mercer County, WV",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "06037": {
+      "name": "Los Angeles County, CA",
+      "fragments": 13,
+      "coverage_pct": 76
+    },
+    "04013": {
+      "name": "Maricopa County (Phoenix), AZ",
+      "fragments": 0,
+      "coverage_pct": 0
+    },
+    "01073": {
+      "name": "Jefferson County (Birmingham), AL",
+      "fragments": 0,
+      "coverage_pct": 0
+    }
+  }
+}

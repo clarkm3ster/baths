@@ -1,0 +1,14 @@
+{
+  "source": "hud-fmr",
+  "api": "HUD User API",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "fmr_0": 1042,
+    "fmr_1": 1098,
+    "fmr_2": 1356,
+    "fmr_3": 1760,
+    "fmr_4": 2113
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "source": "census-disability",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_disability_pop": 9556558,
+    "male_with_disability": 507998,
+    "female_with_disability": 545724,
+    "disability_under5": 9557,
+    "disability_5_17": 114679,
+    "disability_18_34": 181574,
+    "disability_65_74": 267584,
+    "disability_75_plus": 334479
+  }
+}

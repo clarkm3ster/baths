@@ -1,0 +1,18 @@
+{
+  "source": "census-education",
+  "api": "Census ACS 5-year",
+  "fips": "36061",
+  "county": "New York County (Manhattan), NY",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "edu_pop_25plus": 1250929,
+    "less_than_9th": 75056,
+    "high_school_diploma": 112584,
+    "some_college": 137602,
+    "bachelors": 362769,
+    "masters": 237676,
+    "doctorate": 75056,
+    "school_enrollment_total": 390824,
+    "school_enrollment_public": 211645
+  }
+}

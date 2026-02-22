@@ -1,0 +1,17 @@
+{
+  "source": "census-income",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "median_household_income": 76367,
+    "per_capita_income": 37924,
+    "poverty_total": 9556558,
+    "poverty_below": 1338918,
+    "gini_index": 0.4998,
+    "snap_households": 412040,
+    "public_assistance_income": 85937,
+    "ssi_income": 207122
+  }
+}

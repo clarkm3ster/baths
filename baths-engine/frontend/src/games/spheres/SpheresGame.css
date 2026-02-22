@@ -1,0 +1,499 @@
+/* ═══════════════════════════════════════════════════════════════════
+   SPHERES GAME — Warm earth tones, grounded in place
+   Orange/amber activation energy, parcel-focused, community-driven
+   ═══════════════════════════════════════════════════════════════════ */
+
+.spheres-game {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* ── Spheres Header overrides ──────────────────────────────────── */
+
+.game-header.spheres { border-bottom-color: rgba(255, 109, 0, 0.08); }
+.game-badge.spheres {
+  color: var(--spheres-primary);
+  background: rgba(255, 109, 0, 0.08);
+  border-color: rgba(255, 109, 0, 0.2);
+}
+
+.stage-track-mini.spheres .mini-node.done .mini-dot { background: var(--spheres-primary); border-color: var(--spheres-primary); }
+.stage-track-mini.spheres .mini-node.active .mini-dot {
+  background: var(--spheres-primary); border-color: var(--spheres-primary);
+  box-shadow: 0 0 8px var(--spheres-glow);
+}
+.stage-track-mini.spheres .mini-node.done .mini-label,
+.stage-track-mini.spheres .mini-node.active .mini-label { color: var(--spheres-primary); }
+.stage-track-mini.spheres .mini-fill { background: var(--spheres-primary); }
+
+.header-chron {
+  display: flex; align-items: baseline; gap: 4px;
+  font-family: 'Orbitron'; color: var(--spheres-primary);
+}
+.header-chron-val { font-size: 18px; font-weight: 700; }
+.header-chron-label { font-size: 9px; opacity: 0.7; }
+
+/* ── Stage Hero (spheres) ──────────────────────────────────────── */
+
+.stage-hero.spheres { position: relative; padding: 32px 32px 24px; flex-shrink: 0; overflow: hidden; }
+.stage-hero-bg.spheres {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255, 109, 0, 0.04) 0%, rgba(255, 109, 0, 0.01) 50%, transparent 100%);
+  border-bottom: 1px solid rgba(255, 109, 0, 0.08);
+}
+.stage-hero-content { position: relative; display: flex; align-items: center; gap: 20px; }
+
+.stage-num.spheres { font-family: 'Orbitron'; font-size: 40px; font-weight: 900; color: rgba(255, 109, 0, 0.12); line-height: 1; }
+h2.spheres { font-family: 'Orbitron'; font-size: 22px; font-weight: 700; color: var(--spheres-primary); letter-spacing: 0.1em; }
+
+.stage-progress-ring.spheres { margin-left: auto; width: 56px; height: 56px; position: relative; }
+.stage-progress-ring.spheres svg { width: 100%; height: 100%; }
+.progress-pct.spheres {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Orbitron'; font-size: 12px; font-weight: 700;
+  color: var(--spheres-primary);
+}
+
+/* ── Content ───────────────────────────────────────────────────── */
+
+.spheres-game .game-content {
+  flex: 1; overflow-y: auto; padding: 24px 32px 100px;
+}
+
+.game-message.spheres {
+  padding: 14px 16px;
+  background: rgba(255, 109, 0, 0.04);
+  border-left: 3px solid var(--spheres-primary);
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 24px;
+  animation: fadeUp 0.3s ease;
+}
+.game-message.spheres p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+.empty-stage.spheres {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 80px 40px; text-align: center;
+}
+.empty-stage.spheres .empty-icon { font-size: 48px; color: rgba(255, 109, 0, 0.15); margin-bottom: 16px; }
+.empty-stage.spheres p { font-size: 15px; color: var(--text-secondary); max-width: 400px; }
+
+.spheres-game .section-block { margin-bottom: 28px; animation: fadeUp 0.4s ease; }
+.spheres-game .section-title {
+  font-family: 'Orbitron'; font-size: 12px; font-weight: 600;
+  color: var(--spheres-primary); letter-spacing: 0.15em; margin-bottom: 12px;
+}
+
+/* ── Parcel Card ───────────────────────────────────────────────── */
+
+.parcel-card {
+  background: rgba(255, 109, 0, 0.03);
+  border: 1px solid rgba(255, 109, 0, 0.1);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.4s ease;
+}
+
+.parcel-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 16px;
+}
+.parcel-address {
+  font-family: 'Orbitron'; font-size: 18px; font-weight: 700;
+  color: var(--text-primary); max-width: 70%;
+}
+.parcel-status {
+  font-family: 'Exo 2'; font-size: 11px; font-weight: 600;
+  padding: 3px 10px; border-radius: 4px; letter-spacing: 0.1em;
+}
+.parcel-status.vacant { background: rgba(255, 109, 0, 0.12); color: var(--spheres-primary); }
+.parcel-status.improved { background: rgba(0, 230, 118, 0.08); color: #00e676; }
+
+.parcel-stats {
+  display: flex; gap: 24px; flex-wrap: wrap;
+  padding-bottom: 16px; margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.parcel-stat { display: flex; flex-direction: column; }
+.pstat-val { font-family: 'Orbitron'; font-size: 18px; font-weight: 700; color: var(--spheres-primary); }
+.pstat-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.parcel-details { display: flex; flex-direction: column; gap: 6px; }
+.parcel-detail-row { display: flex; gap: 12px; font-size: 13px; }
+.pd-key { color: var(--text-dim); min-width: 110px; }
+.pd-val { color: var(--text-secondary); flex: 1; }
+
+.parcel-flag {
+  display: inline-block; margin-top: 8px; margin-right: 6px;
+  font-family: 'Exo 2'; font-size: 10px; font-weight: 600;
+  padding: 2px 8px; border-radius: 3px;
+  background: rgba(255, 109, 0, 0.08); color: var(--spheres-primary);
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+
+/* ── Nearby Parcels ────────────────────────────────────────────── */
+
+.nearby-parcels { margin-bottom: 28px; }
+.nearby-parcels h4 {
+  font-family: 'Exo 2'; font-size: 12px; color: var(--text-dim);
+  letter-spacing: 0.08em; margin-bottom: 10px;
+}
+.nearby-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+.nearby-item {
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: 6px; padding: 10px 12px;
+}
+.nearby-item.vacant { border-left: 3px solid rgba(255, 109, 0, 0.3); }
+.nearby-addr { font-size: 12px; color: var(--text-primary); margin-bottom: 4px; }
+.nearby-meta { display: flex; gap: 8px; font-size: 11px; color: var(--text-dim); }
+.vacant-tag { color: var(--spheres-primary); font-weight: 600; }
+
+/* ── Permits ───────────────────────────────────────────────────── */
+
+.permits-list { display: flex; flex-direction: column; gap: 6px; }
+.permit-card {
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: 6px; padding: 10px 14px;
+  animation: fadeUp 0.3s ease both;
+}
+.permit-status {
+  font-family: 'Exo 2'; font-size: 10px; font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.permit-type { font-size: 13px; color: var(--text-primary); margin-top: 2px; }
+.permit-desc { font-size: 11px; color: var(--text-dim); margin-top: 4px; }
+
+/* ── Activation Types ──────────────────────────────────────────── */
+
+.act-tag {
+  font-family: 'Exo 2'; font-size: 11px; font-weight: 500;
+  padding: 3px 10px; border-radius: 4px;
+  background: rgba(255, 109, 0, 0.06); color: var(--spheres-primary);
+  display: inline-block; text-transform: capitalize;
+}
+.act-tag.large { font-size: 13px; padding: 5px 14px; }
+
+.feature-tag {
+  font-size: 11px; padding: 2px 8px; border-radius: 3px;
+  background: rgba(255,255,255,0.03); color: var(--text-secondary);
+  display: inline-block; margin: 2px;
+}
+.feature-tag.installed {
+  background: rgba(0, 230, 118, 0.06); color: #00e676;
+}
+
+/* ── Design Banner ─────────────────────────────────────────────── */
+
+.design-banner {
+  background: rgba(255, 109, 0, 0.03);
+  border: 1px solid rgba(255, 109, 0, 0.1);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.4s ease;
+}
+.design-banner h3 {
+  font-family: 'Orbitron'; font-size: 16px; color: var(--text-primary);
+  margin-bottom: 10px;
+}
+.design-types { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.design-features { display: flex; flex-wrap: wrap; gap: 4px; }
+
+/* ── Cost Tiers ────────────────────────────────────────────────── */
+
+.cost-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+.cost-tier {
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: 8px; padding: 16px; text-align: center;
+  position: relative; transition: all 0.2s;
+}
+.cost-tier:hover { border-color: rgba(255, 109, 0, 0.2); }
+.cost-tier.recommended {
+  border-color: var(--spheres-primary);
+  background: rgba(255, 109, 0, 0.03);
+}
+.rec-badge {
+  position: absolute; top: -8px; left: 50%; transform: translateX(-50%);
+  font-family: 'Exo 2'; font-size: 9px; font-weight: 700;
+  padding: 2px 8px; border-radius: 3px;
+  background: var(--spheres-primary); color: #000;
+  letter-spacing: 0.08em;
+}
+.tier-icon { font-size: 24px; color: var(--spheres-primary); margin-bottom: 6px; }
+.tier-label { font-family: 'Orbitron'; font-size: 12px; color: var(--text-secondary); letter-spacing: 0.1em; }
+.tier-total { font-family: 'Orbitron'; font-size: 22px; font-weight: 700; color: var(--spheres-primary); margin-top: 8px; }
+.tier-persqft { font-size: 12px; color: var(--text-dim); }
+.tier-includes { font-size: 11px; color: var(--text-dim); margin-top: 8px; line-height: 1.4; }
+
+/* ── Timeline ──────────────────────────────────────────────────── */
+
+.timeline { margin-bottom: 12px; }
+.timeline-header {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Exo 2'; font-size: 12px; color: var(--text-dim);
+  margin-bottom: 10px; letter-spacing: 0.05em;
+}
+.timeline-total { color: var(--spheres-primary); font-weight: 600; }
+
+.timeline-bar {
+  display: flex; height: 48px; border-radius: 6px; overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+.timeline-segment {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border-right: 1px solid rgba(255,255,255,0.04);
+  padding: 4px 2px; min-width: 0; overflow: hidden;
+}
+.timeline-segment:last-child { border-right: none; }
+.seg-label { font-size: 8px; color: var(--text-secondary); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; }
+.seg-weeks { font-family: 'Orbitron'; font-size: 10px; color: var(--text-primary); font-weight: 600; }
+
+/* ── Activation Banner ─────────────────────────────────────────── */
+
+.activation-banner {
+  text-align: center; padding: 32px 24px;
+  background: rgba(255, 109, 0, 0.04);
+  border: 1px solid rgba(255, 109, 0, 0.12);
+  border-radius: 12px; margin-bottom: 24px;
+  animation: fadeUp 0.5s ease;
+}
+.act-icon { font-size: 36px; color: var(--spheres-primary); margin-bottom: 8px; }
+.activation-banner h3 { font-family: 'Orbitron'; font-size: 18px; color: var(--spheres-primary); letter-spacing: 0.1em; }
+.act-stats { display: flex; justify-content: center; gap: 24px; margin-top: 12px; }
+.act-stats span { font-size: 13px; color: var(--text-secondary); }
+.act-stats strong { color: var(--spheres-primary); }
+
+.policy-list { display: flex; flex-direction: column; gap: 6px; }
+.policy-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text-secondary); }
+.policy-arrow { color: var(--spheres-primary); font-weight: 600; }
+
+.installed-features { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* ── Metrics Banner ────────────────────────────────────────────── */
+
+.metrics-banner {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+  margin-bottom: 24px;
+}
+.metric-big {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 16px 8px;
+  background: rgba(255, 109, 0, 0.03);
+  border: 1px solid rgba(255, 109, 0, 0.08);
+  border-radius: 8px;
+}
+.mb-val { font-family: 'Orbitron'; font-size: 18px; font-weight: 700; color: var(--spheres-primary); }
+.mb-label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+
+/* ── Episodes ──────────────────────────────────────────────────── */
+
+.episodes-list { display: flex; flex-direction: column; gap: 0; }
+.episode-card {
+  display: flex; gap: 16px; padding: 16px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  animation: fadeUp 0.3s ease both;
+}
+.episode-date {
+  font-family: 'Orbitron'; font-size: 11px; color: var(--spheres-primary);
+  min-width: 60px; font-weight: 600;
+}
+.episode-content h4 { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.episode-content p { font-size: 13px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
+.episode-metrics { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.ep-metric {
+  display: flex; flex-direction: column;
+  font-size: 10px; color: var(--text-dim); text-transform: uppercase;
+}
+.ep-metric strong { font-family: 'Orbitron'; font-size: 14px; color: var(--spheres-primary); }
+
+/* ── Innovations ───────────────────────────────────────────────── */
+
+.innovations-list { display: flex; flex-direction: column; gap: 6px; }
+.inn-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--text-secondary);
+  padding: 8px 12px; background: rgba(255,255,255,0.02); border-radius: 4px;
+}
+.inn-dot { color: var(--spheres-primary); font-size: 10px; }
+
+/* ── Insight Items ─────────────────────────────────────────────── */
+
+.insight-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 12px 14px; background: var(--bg-card);
+  border: 1px solid var(--border-subtle); border-radius: 6px;
+  margin-bottom: 8px;
+}
+.insight-score {
+  font-family: 'Orbitron'; font-size: 16px; font-weight: 700;
+  color: var(--spheres-primary); min-width: 44px;
+}
+.insight-item p { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+.insight-types { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+
+/* ── CHRON Reveal ──────────────────────────────────────────────── */
+
+.chron-reveal {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 32px 0; margin-bottom: 16px;
+  animation: fadeUp 0.6s ease;
+}
+.chron-rings { width: 240px; height: 240px; }
+.ring-animate { animation: ringGrow 1s cubic-bezier(0.4, 0, 0.2, 1) both; }
+
+.chron-total { display: flex; flex-direction: column; align-items: center; margin-top: 12px; }
+.chron-total-val { font-family: 'Orbitron'; font-size: 36px; font-weight: 900; color: var(--spheres-primary); }
+.chron-total-label { font-family: 'Exo 2'; font-size: 12px; color: var(--text-dim); letter-spacing: 0.15em; }
+
+.chron-breakdown {
+  max-width: 400px; margin: 0 auto 24px;
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: 8px; padding: 16px;
+}
+.chron-dim-row {
+  display: flex; justify-content: space-between; padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.chron-dim-row:last-child { border-bottom: none; }
+.cdr-label { font-size: 13px; color: var(--text-secondary); }
+.cdr-val { font-family: 'Orbitron'; font-size: 13px; color: var(--spheres-primary); font-weight: 600; }
+
+/* ── Action Bar (spheres overrides) ────────────────────────────── */
+
+.game-action-bar.spheres {
+  flex-shrink: 0; padding: 12px 32px;
+  background: rgba(10, 14, 23, 0.95);
+  border-top: 1px solid rgba(255, 109, 0, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+.advance-btn.spheres {
+  width: 100%; padding: 14px 24px;
+  background: linear-gradient(135deg, rgba(255, 109, 0, 0.15), rgba(255, 109, 0, 0.08));
+  border: 1px solid rgba(255, 109, 0, 0.3);
+  color: var(--spheres-primary);
+  font-family: 'Orbitron'; font-size: 13px; font-weight: 600;
+  letter-spacing: 0.1em; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  transition: all 0.2s;
+}
+.advance-btn.spheres:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(255, 109, 0, 0.25), rgba(255, 109, 0, 0.15));
+  border-color: rgba(255, 109, 0, 0.5);
+  box-shadow: 0 0 24px rgba(255, 109, 0, 0.1);
+}
+.advance-btn.spheres:disabled { opacity: 0.5; cursor: wait; }
+
+.spinner.spheres {
+  width: 16px; height: 16px; border: 2px solid rgba(255, 109, 0, 0.2);
+  border-top-color: var(--spheres-primary); border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.complete-bar.spheres {
+  width: 100%; padding: 14px 24px;
+  background: linear-gradient(135deg, rgba(0, 230, 118, 0.1), rgba(0, 230, 118, 0.05));
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: 'Orbitron'; font-size: 13px; font-weight: 600;
+  color: #00e676; letter-spacing: 0.1em;
+}
+
+/* ── Animations ────────────────────────────────────────────────── */
+
+@keyframes ringGrow {
+  from { stroke-dasharray: 0 1000; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Responsive ────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .spheres-game .game-content { padding: 16px 16px 100px; }
+  .game-action-bar.spheres { padding: 12px 16px; }
+  .stage-hero.spheres { padding: 20px 16px; }
+  .cost-tiers { grid-template-columns: 1fr; }
+  .metrics-banner { grid-template-columns: repeat(2, 1fr); }
+  .nearby-grid { grid-template-columns: 1fr; }
+  .pstat-val { font-size: 16px; }
+  .parcel-header { flex-direction: column; gap: 8px; }
+  .parcel-address { max-width: 100%; }
+  .neighborhood-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Neighborhood Context ─────────────────────────────────────── */
+
+.neighborhood-context {
+  background: linear-gradient(135deg, rgba(255, 109, 0, 0.03), rgba(255, 171, 0, 0.02));
+  border: 1px solid rgba(255, 109, 0, 0.08);
+}
+
+.neighborhood-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2px; margin-top: 12px;
+}
+
+.nb-cell {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 14px 8px; background: rgba(255,255,255,0.015); border-radius: 4px;
+  animation: fadeUp 0.3s ease both; text-align: center;
+}
+
+.nb-value { font-family: 'Orbitron'; font-size: 14px; font-weight: 700; color: var(--text-primary); }
+.nb-label { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ── IP Catalog (spheres) ─────────────────────────────────────── */
+
+.spheres-game .ip-catalog { background: linear-gradient(135deg, rgba(255, 109, 0, 0.03), rgba(255, 171, 0, 0.02)); border: 1px solid rgba(255, 109, 0, 0.1); padding: 20px; border-radius: 12px; }
+.spheres-game .ip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.spheres-game .ip-domain-group { background: rgba(255,255,255,0.015); border-radius: 8px; overflow: hidden; }
+.spheres-game .ip-domain-header { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-left: 3px solid; }
+.spheres-game .ip-domain-dot { width: 8px; height: 8px; border-radius: 50%; }
+.spheres-game .ip-domain-name { font-family: 'Exo 2'; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); }
+.spheres-game .ip-item { padding: 10px 14px; border-top: 1px solid rgba(255,255,255,0.03); }
+.spheres-game .ip-title { font-family: 'Rajdhani'; font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.spheres-game .ip-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; margin-top: 4px; }
+.spheres-game .ip-meta { display: flex; gap: 8px; margin-top: 6px; }
+.spheres-game .ip-format { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); background: rgba(255,255,255,0.04); padding: 2px 6px; border-radius: 3px; text-transform: capitalize; }
+.spheres-game .ip-driver { font-size: 10px; color: var(--text-dim); font-style: italic; }
+
+/* ── Bond Term Sheet (spheres) ────────────────────────────────── */
+
+.spheres-game .bond-term-sheet { background: linear-gradient(135deg, rgba(255, 109, 0, 0.03), rgba(0, 230, 118, 0.02)); border: 1px solid rgba(255, 109, 0, 0.12); padding: 20px; border-radius: 12px; margin-bottom: 24px; }
+.spheres-game .bond-header-row { display: flex; justify-content: space-between; align-items: center; margin: 12px 0; }
+.spheres-game .bond-id { font-family: 'Orbitron'; font-size: 14px; font-weight: 700; color: var(--text-primary); letter-spacing: 0.05em; }
+.spheres-game .bond-rating { font-family: 'Orbitron'; font-size: 28px; font-weight: 900; }
+.spheres-game .bond-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.spheres-game .bond-stat { display: flex; flex-direction: column; align-items: center; padding: 14px 8px; background: rgba(255,255,255,0.015); border-radius: 4px; text-align: center; }
+.spheres-game .bond-stat.primary { grid-column: span 3; padding: 20px; }
+.spheres-game .bs-val { font-family: 'Orbitron'; font-size: 16px; font-weight: 700; color: var(--text-primary); }
+.spheres-game .bond-stat.primary .bs-val { font-size: 28px; color: var(--spheres-primary); }
+.spheres-game .bs-label { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+
+/* ── Replication Kit (spheres) ────────────────────────────────── */
+
+.spheres-game .replication-details { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.spheres-game .rep-stat { display: flex; flex-direction: column; padding: 12px 14px; background: rgba(255,255,255,0.015); border-radius: 4px; }
+.spheres-game .rs-label { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }
+.spheres-game .rs-val { font-family: 'Orbitron'; font-size: 14px; font-weight: 600; color: var(--text-primary); margin-top: 4px; }
+
+/* ── Protocols ────────────────────────────────────────────────── */
+
+.protocols-list { margin-top: 12px; }
+.protocols-list h4 { font-family: 'Exo 2'; font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+.spheres-game .protocol-item { font-size: 12px; color: var(--text-secondary); line-height: 1.5; padding: 8px 12px; margin-bottom: 6px; background: rgba(255,255,255,0.02); border-radius: 4px; }

@@ -1,6 +1,7 @@
 """
 BATHS Game Engine - Main API
 Unified game engine for DOMES + SPHERES
+Now with elite data engines that get smarter over time.
 """
 
 from fastapi import FastAPI, HTTPException
@@ -13,6 +14,7 @@ import json
 import uuid
 from datetime import datetime
 import os
+import logging
 
 from models import (
     Player, ProductionState, StageAction, StageResult,
@@ -20,8 +22,23 @@ from models import (
     CosmDimensions, ChronDimensions
 )
 from pipeline import PipelineDirector
+from data import initialize, scrape_all, scrape_engine, get_stats, start_scheduler, stop_scheduler
+from pathlib import Path as _Path
 
-# In-memory storage (TODO: replace with SQLite)
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("baths.main")
+
+# Fragment/Cosm data directory (repo root /data/)
+FRAG_DATA = _Path(__file__).resolve().parent.parent.parent / "data"
+
+def _read_json(path):
+    """Read a JSON file, return None on failure."""
+    try:
+        return json.loads(path.read_text())
+    except Exception:
+        return None
+
+# In-memory storage
 players: Dict[str, Player] = {}
 productions: Dict[str, ProductionState] = {}
 
@@ -38,18 +55,31 @@ pipeline_director: Optional[PipelineDirector] = None
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Initialize pipeline director on startup"""
+    """Initialize data engines and pipeline director on startup."""
     global pipeline_director
+
+    # Initialize data engines — seed all engines with real data
+    logger.info("Initializing BATHS data engines...")
+    stats = initialize()
+    logger.info(f"Data engines ready: {stats}")
+
+    # Start background scrape scheduler
+    start_scheduler()
+
+    # Initialize pipeline director
     pipeline_director = PipelineDirector(API_REGISTRY)
+
     yield
+
     # Cleanup
+    stop_scheduler()
     await pipeline_director.client.aclose()
 
 
 app = FastAPI(
     title="BATHS Game Engine",
-    description="Unified game engine for DOMES + SPHERES production games",
-    version="0.1.0",
+    description="Unified game engine for DOMES + SPHERES with elite data engines",
+    version="0.2.0",
     lifespan=lifespan
 )
 
@@ -94,14 +124,12 @@ def start_production(player_id: str, game_type: GameType, subject: str):
     """Start a new production"""
     if player_id not in players:
         raise HTTPException(status_code=404, detail="Player not found")
-    
+
     player = players[player_id]
-    
-    # Check if player already has active production
+
     if player.active_production:
         raise HTTPException(status_code=400, detail="Player already has active production")
-    
-    # Create production
+
     production_id = str(uuid.uuid4())
     production = ProductionState(
         production_id=production_id,
@@ -110,11 +138,11 @@ def start_production(player_id: str, game_type: GameType, subject: str):
         stage=ProductionStage.DEVELOPMENT,
         progress=0.0
     )
-    
+
     productions[production_id] = production
     player.active_production = production
     player.current_game = game_type
-    
+
     return production
 
 
@@ -131,74 +159,63 @@ async def advance_production(production_id: str, action: StageAction):
     """Advance production to next stage"""
     if production_id not in productions:
         raise HTTPException(status_code=404, detail="Production not found")
-    
+
     production = productions[production_id]
-    
-    # Call pipeline director
+
     result = await pipeline_director.advance_stage(production, action.data)
-    
-    # Update production state
+
     if result.success:
         production.progress = result.progress
         production.updated_at = datetime.utcnow()
-        
-        # Merge result data into stage_data
+
         stage_key = production.stage.value
         production.stage_data[stage_key] = result.data
-        
-        # Advance to next stage if specified
+
         if result.new_stage:
             production.stage = result.new_stage
         elif result.progress >= 100.0:
-            # Production complete — move to portfolio
             await _complete_production(production)
-    
+
     return result
 
 
 async def _complete_production(production: ProductionState):
     """Move completed production to player portfolio"""
-    # Find player
     player = None
     for p in players.values():
         if p.active_production and p.active_production.production_id == production.production_id:
             player = p
             break
-    
+
     if not player:
         return
-    
-    # Create completed production record
+
     completed = CompletedProduction(
         production_id=production.production_id,
         game_type=production.game_type,
         subject=production.subject
     )
-    
-    # Extract final scores from distribution stage
+
     dist_data = production.stage_data.get("distribution", {})
-    
+
     if production.game_type == GameType.DOMES:
         cosm_data = dist_data.get("cosm", {})
         completed.cosm = CosmDimensions(**cosm_data) if cosm_data else None
-        completed.ip_created = dist_data.get("ip", [])
         completed.industries_changed = dist_data.get("industries_changed", [])
-        
-        # Add to portfolio
+
         player.portfolio.domes_completed.append(completed)
         if completed.cosm:
-            player.portfolio.total_cosm.legal += completed.cosm.legal
-            player.portfolio.total_cosm.data += completed.cosm.data
-            player.portfolio.total_cosm.fiscal += completed.cosm.fiscal
-            player.portfolio.total_cosm.coordination += completed.cosm.coordination
-            player.portfolio.total_cosm.flourishing += completed.cosm.flourishing
-            player.portfolio.total_cosm.narrative += completed.cosm.narrative
-    
+            player.portfolio.total_cosm.rights += completed.cosm.rights
+            player.portfolio.total_cosm.research += completed.cosm.research
+            player.portfolio.total_cosm.budget += completed.cosm.budget
+            player.portfolio.total_cosm.package += completed.cosm.package
+            player.portfolio.total_cosm.deliverables += completed.cosm.deliverables
+            player.portfolio.total_cosm.pitch += completed.cosm.pitch
+
     elif production.game_type == GameType.SPHERES:
         chron_data = dist_data.get("chron", {})
         completed.chron = ChronDimensions(**chron_data) if chron_data else None
-        
-        # Add to portfolio
+
         player.portfolio.spheres_completed.append(completed)
         if completed.chron:
             player.portfolio.total_chron.unlock += completed.chron.unlock
@@ -206,13 +223,11 @@ async def _complete_production(production: ProductionState):
             player.portfolio.total_chron.permanence += completed.chron.permanence
             player.portfolio.total_chron.catalyst += completed.chron.catalyst
             player.portfolio.total_chron.policy += completed.chron.policy
-    
-    # Merge innovations
+
     innovations = dist_data.get("innovations", [])
     completed.innovations = innovations
     player.portfolio.innovations.extend(innovations)
-    
-    # Clear active production
+
     player.active_production = None
     player.updated_at = datetime.utcnow()
 
@@ -224,13 +239,154 @@ def get_portfolio(player_id: str):
     """Get player portfolio"""
     if player_id not in players:
         raise HTTPException(status_code=404, detail="Player not found")
-    
+
     player = players[player_id]
     return {
         "player": player.name,
         "portfolio": player.portfolio,
         "flourishing": player.portfolio.total_cosm.total * player.portfolio.total_chron.total
     }
+
+
+# ========== DATA ENGINE ENDPOINTS ==========
+
+@app.get("/api/data/stats")
+def data_stats():
+    """Get current data engine statistics — how much intelligence has accumulated."""
+    return get_stats()
+
+
+@app.post("/api/data/scrape")
+async def trigger_scrape(engine: Optional[str] = None):
+    """Trigger a scrape cycle. Optionally specify engine: legal, costs, systems, parcels."""
+    if engine:
+        results = await scrape_engine(engine)
+    else:
+        results = await scrape_all()
+    return {"status": "completed", "results": results}
+
+
+@app.get("/api/data/provisions")
+def get_provisions(dimension: Optional[str] = None, limit: int = 50):
+    """Get legal provisions from the data engine."""
+    from data.store import get_store
+    store = get_store()
+    return {"provisions": store.get_provisions(dome_dimension=dimension, limit=limit)}
+
+
+@app.get("/api/data/costs")
+def get_costs(category: Optional[str] = None, limit: int = 50):
+    """Get cost data points from the data engine."""
+    from data.store import get_store
+    store = get_store()
+    return {"costs": store.get_costs(category=category, limit=limit)}
+
+
+@app.get("/api/data/systems")
+def get_systems(domain: Optional[str] = None):
+    """Get government systems from the data engine."""
+    from data.store import get_store
+    store = get_store()
+    return {
+        "systems": store.get_systems(domain=domain),
+        "links": store.get_system_links(),
+    }
+
+
+@app.get("/api/data/parcels")
+def get_parcels(neighborhood: Optional[str] = None, vacant: Optional[bool] = None, limit: int = 50):
+    """Get Philadelphia parcels from the data engine."""
+    from data.store import get_store
+    store = get_store()
+    return {"parcels": store.get_parcels(neighborhood=neighborhood, vacant=vacant, limit=limit)}
+
+
+@app.get("/api/data/enrichments")
+def get_enrichments(enrichment_type: Optional[str] = None, limit: int = 50):
+    """Get enrichment insights — cross-references, conflicts, opportunities."""
+    from data.store import get_store
+    store = get_store()
+    return {"enrichments": store.get_enrichments(enrichment_type=enrichment_type, limit=limit)}
+
+
+@app.get("/api/data/scrape-history")
+def scrape_history(engine: Optional[str] = None, limit: int = 20):
+    """View scrape run history."""
+    from data.store import get_store
+    store = get_store()
+    return {"history": store.get_scrape_history(engine=engine, limit=limit)}
+
+
+# ========== FRAGMENT / COSM AGENT DATA ==========
+
+@app.get("/api/fragment/stats")
+def fragment_stats():
+    """Coverage and fragment counts from the Fragment scraper agent."""
+    coverage = _read_json(FRAG_DATA / "meta" / "coverage.json")
+    gaps = _read_json(FRAG_DATA / "meta" / "gaps.json")
+    sources = _read_json(FRAG_DATA / "meta" / "sources.json")
+    return {
+        "coverage": coverage,
+        "gaps": gaps,
+        "sources": sources,
+    }
+
+
+@app.get("/api/fragment/county/{fips}")
+def fragment_county(fips: str):
+    """All scraped fragments for a given county FIPS code."""
+    fragments_dir = FRAG_DATA / "fragments"
+    result = {}
+    if fragments_dir.exists():
+        for source_dir in sorted(fragments_dir.iterdir()):
+            if source_dir.is_dir():
+                frag_file = source_dir / f"{fips}.json"
+                data = _read_json(frag_file)
+                if data:
+                    result[source_dir.name] = data
+    return {"fips": fips, "fragment_count": len(result), "fragments": result}
+
+
+@app.get("/api/cosm/state")
+def cosm_state():
+    """The evolving Cosm currency state — total domes, savings, maturity."""
+    state = _read_json(FRAG_DATA / "cosm.json")
+    return state or {"total_domes": 0, "maturity": {"level": "seed"}}
+
+
+@app.get("/api/cosm/domes/{fips}")
+def cosm_domes(fips: str):
+    """All assembled domes for a county."""
+    domes_dir = FRAG_DATA / "domes" / fips
+    result = {}
+    if domes_dir.exists():
+        for f in sorted(domes_dir.iterdir()):
+            if f.suffix == ".json":
+                data = _read_json(f)
+                if data:
+                    result[f.stem] = data
+    return {"fips": fips, "dome_count": len(result), "domes": result}
+
+
+@app.get("/api/cosm/dome/{fips}/{archetype}")
+def cosm_dome(fips: str, archetype: str):
+    """A specific dome for a county + archetype."""
+    dome = _read_json(FRAG_DATA / "domes" / fips / f"{archetype}.json")
+    if not dome:
+        raise HTTPException(status_code=404, detail=f"No dome for {fips}/{archetype}")
+    return dome
+
+
+@app.get("/api/cosm/patterns")
+def cosm_patterns():
+    """Latest cross-dome patterns."""
+    patterns_dir = FRAG_DATA / "patterns"
+    if not patterns_dir.exists():
+        return {"patterns": None}
+    files = sorted(patterns_dir.glob("patterns-*.json"), reverse=True)
+    if not files:
+        return {"patterns": None}
+    return {"patterns": _read_json(files[0])}
 
 
 # ========== GAME INFO ==========
@@ -245,7 +401,7 @@ def list_games():
                 "name": "DOMES",
                 "description": "Build a dome around one person using the entire US government",
                 "currency": "Cosm",
-                "dimensions": ["legal", "data", "fiscal", "coordination", "flourishing", "narrative"]
+                "dimensions": ["rights", "research", "budget", "package", "deliverables", "pitch"]
             },
             {
                 "type": "spheres",
@@ -255,35 +411,37 @@ def list_games():
                 "dimensions": ["unlock", "access", "permanence", "catalyst", "policy"]
             }
         ],
-        "equation": "Cosm × Chron = Flourishing"
+        "equation": "Cosm × Chron = Flourishing",
+        "data_engines": get_stats(),
+        "cosm_state": _read_json(FRAG_DATA / "cosm.json") or {"total_domes": 0},
+        "fragment_coverage": _read_json(FRAG_DATA / "meta" / "coverage.json"),
     }
 
 
 @app.get("/api/health")
 def health():
-    """Health check"""
+    """Health check with data engine status"""
+    stats = get_stats()
     return {
         "status": "ok",
         "engine": "BATHS Game Engine",
-        "version": "0.1.0",
+        "version": "0.2.0",
         "players": len(players),
-        "active_productions": len([p for p in players.values() if p.active_production])
+        "active_productions": len([p for p in players.values() if p.active_production]),
+        "data_engines": stats,
     }
 
 
 # ========== SERVE FRONTEND ==========
 
-# Mount static files if they exist
 if os.path.exists("static"):
     app.mount("/assets", StaticFiles(directory="static/assets"), name="assets")
-    
+
     @app.get("/{full_path:path}")
     async def serve_frontend(full_path: str):
         """Serve frontend for all non-API routes"""
         if full_path.startswith("api/"):
             raise HTTPException(status_code=404, detail="API endpoint not found")
-        
-        # Serve index.html for all routes (SPA)
         return FileResponse("static/index.html")
 
 

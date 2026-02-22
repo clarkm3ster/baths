@@ -1,0 +1,15 @@
+{
+  "source": "census-rent-burden",
+  "api": "Census ACS 5-year",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "rent_total": 127307,
+    "rent_30_35_pct": 12731,
+    "rent_35_40_pct": 11457,
+    "rent_40_50_pct": 14004,
+    "rent_50_plus_pct": 36518,
+    "rent_not_computed": 6365
+  }
+}

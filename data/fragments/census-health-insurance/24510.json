@@ -1,0 +1,17 @@
+{
+  "source": "census-health-insurance",
+  "api": "Census ACS 5-year",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_pop_insurance": 557568,
+    "with_insurance": 512961,
+    "male_under6_uninsured": 1115,
+    "male_6_18_uninsured": 1673,
+    "female_under6_uninsured": 836,
+    "female_6_18_uninsured": 1115,
+    "medicaid_means_tested": 200724,
+    "employer_insurance": 178421
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "source": "census-demographics",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_pop": 9829544,
+    "median_age": 36.7,
+    "male_pop": 4875144,
+    "female_pop": 4954400,
+    "white_alone": 4325412,
+    "black_alone": 824882,
+    "asian_alone": 1489107,
+    "hispanic_latino": 4816877,
+    "foreign_born": 3342845
+  }
+}

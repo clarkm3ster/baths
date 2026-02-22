@@ -9,3 +9,4 @@ dist/
 .venv/
 *.egg-info/
 .pytest_cache/
+baths-engine/backend/data/db/

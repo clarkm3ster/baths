@@ -1,0 +1,17 @@
+{
+  "source": "census-housing",
+  "api": "Census ACS 5-year",
+  "fips": "36061",
+  "county": "New York County (Manhattan), NY",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_units": 897750,
+    "occupied_units": 812118,
+    "vacant_units": 85632,
+    "owner_occupied": 194908,
+    "renter_occupied": 617210,
+    "median_home_value": 999999,
+    "median_gross_rent": 1899,
+    "median_monthly_housing_cost": 2001
+  }
+}

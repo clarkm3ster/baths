@@ -1,0 +1,17 @@
+{
+  "source": "census-employment",
+  "api": "Census ACS 5-year",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "pop_16_plus": 4329283,
+    "in_labor_force": 2850925,
+    "civilian_employed": 2658925,
+    "civilian_unemployed": 178408,
+    "not_in_labor_force": 1478358,
+    "occupation_mgmt": 956214,
+    "occupation_service": 452821,
+    "occupation_production": 265893
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source": "hud-fmr",
+  "api": "HUD User API",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "fmr_0": 1089,
+    "fmr_1": 1197,
+    "fmr_2": 1398,
+    "fmr_3": 1771,
+    "fmr_4": 2037
+  }
+}

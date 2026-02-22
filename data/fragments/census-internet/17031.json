@@ -1,0 +1,16 @@
+{
+  "source": "census-internet",
+  "api": "Census ACS 5-year",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_households_internet": 2037342,
+    "with_internet": 1913498,
+    "broadband": 1873544,
+    "no_internet": 123844,
+    "has_computer": 1892925,
+    "has_smartphone_only": 183361,
+    "no_computer": 144411
+  }
+}

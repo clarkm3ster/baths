@@ -1,0 +1,17 @@
+{
+  "source": "census-housing",
+  "api": "Census ACS 5-year",
+  "fips": "42101",
+  "county": "Philadelphia, PA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_units": 700392,
+    "occupied_units": 617869,
+    "vacant_units": 82523,
+    "owner_occupied": 310946,
+    "renter_occupied": 306923,
+    "median_home_value": 200300,
+    "median_gross_rent": 1107,
+    "median_monthly_housing_cost": 1224
+  }
+}

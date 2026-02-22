@@ -384,6 +384,109 @@
   padding: 1.5rem;
 }
 
+/* ── Cosm Currency State ─────────────────────────────────────── */
+
+.cosm-state-section {
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.03), rgba(212, 168, 83, 0.03));
+  border: 1px solid rgba(0, 229, 255, 0.1);
+}
+
+.cosm-state-subtitle {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+  padding: 0 1.5rem;
+  margin-top: -0.5rem;
+}
+
+.cosm-state-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  padding: 1rem 1.5rem;
+}
+
+.cs-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 8px;
+  background: rgba(255,255,255,0.015);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.cs-stat.big {
+  grid-column: span 2;
+}
+
+.cs-val {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cs-val.savings {
+  font-size: 1.5rem;
+  color: #00e676;
+}
+
+.cs-label {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.cosm-costs-bar {
+  display: flex;
+  height: 28px;
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  gap: 2px;
+}
+
+.costs-bar-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.costs-bar-segment.fragmented {
+  background: rgba(255, 64, 129, 0.12);
+}
+
+.costs-bar-segment.coordinated {
+  background: rgba(0, 230, 118, 0.12);
+}
+
+.cb-label {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.cb-val {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .cosm-state-grid { grid-template-columns: repeat(2, 1fr); }
+  .cs-stat.big { grid-column: span 2; }
+}
+
 @media (max-width: 768px) {
   .portfolio-hero { padding: 2rem 1.5rem; }
   .portfolio-name { font-size: 2rem; }

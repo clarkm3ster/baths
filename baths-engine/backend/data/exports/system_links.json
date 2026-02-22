@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "source_system": "SSA_NUMIDENT",
+    "target_system": "IRS_IMF",
+    "link_type": "active",
+    "mechanism": "batch",
+    "latency": "daily",
+    "consent_barrier": "none",
+    "legal_authority": "IRC \u00a7 6103(l)(1) \u2014 SSA access to tax data",
+    "scraped_at": "2026-02-22T04:18:18.642972+00:00"
+  },
+  {
+    "id": 2,
+    "source_system": "SSA_MBR",
+    "target_system": "CMS_MEDICARE_EDB",
+    "link_type": "active",
+    "mechanism": "batch",
+    "latency": "daily",
+    "consent_barrier": "none",
+    "legal_authority": "SSA \u00a7 1818/1836 \u2014 Medicare enrollment via SSA",
+    "scraped_at": "2026-02-22T04:18:18.644987+00:00"
+  },
+  {
+    "id": 3,
+    "source_system": "DOL_UI",
+    "target_system": "SSA_NUMIDENT",
+    "link_type": "active",
+    "mechanism": "batch",
+    "latency": "quarterly",
+    "consent_barrier": "none",
+    "legal_authority": "SSA \u00a7 1137 \u2014 wage/UI cross-match for benefit verification",
+    "scraped_at": "2026-02-22T04:18:18.646705+00:00"
+  },
+  {
+    "id": 4,
+    "source_system": "USDA_SNAP",
+    "target_system": "SSA_SSR",
+    "link_type": "active",
+    "mechanism": "batch",
+    "latency": "monthly",
+    "consent_barrier": "none",
+    "legal_authority": "Food & Nutrition Act \u00a7 11(e)(19) \u2014 SSI categorical eligibility",
+    "scraped_at": "2026-02-22T04:18:18.648345+00:00"
+  },
+  {
+    "id": 5,
+    "source_system": "IRS_IMF",
+    "target_system": "CMS_MMIS",
+    "link_type": "active",
+    "mechanism": "batch",
+    "latency": "daily",
+    "consent_barrier": "none",
+    "legal_authority": "ACA \u00a7 1413 \u2014 IRS income data for Medicaid MAGI determination",
+    "scraped_at": "2026-02-22T04:18:18.650120+00:00"
+  },
+  {
+    "id": 6,
+    "source_system": "VA_VISTA",
+    "target_system": "CMS_MEDICARE_EDB",
+    "link_type": "active",
+    "mechanism": "API",
+    "latency": "realtime",
+    "consent_barrier": "none",
+    "legal_authority": "MISSION Act \u2014 VA community care coordination with Medicare",
+    "scraped_at": "2026-02-22T04:18:18.651649+00:00"
+  },
+  {
+    "id": 7,
+    "source_system": "DOJ_NCIC",
+    "target_system": "HUD_IMS_PIC",
+    "link_type": "one-way",
+    "mechanism": "manual",
+    "latency": "monthly",
+    "consent_barrier": "individual",
+    "legal_authority": "PIH Notice 2015-19 \u2014 PHA access to criminal records for screening",
+    "scraped_at": "2026-02-22T04:18:18.653354+00:00"
+  },
+  {
+    "id": 8,
+    "source_system": "CMS_MMIS",
+    "target_system": "HUD_HMIS",
+    "link_type": "possible",
+    "mechanism": "API",
+    "latency": "none",
+    "consent_barrier": "individual",
+    "legal_authority": "42 CFR \u00a7 431.300 limits; no statutory authority for routine sharing",
+    "scraped_at": "2026-02-22T04:18:18.655615+00:00"
+  },
+  {
+    "id": 9,
+    "source_system": "CMS_MMIS",
+    "target_system": "USDA_SNAP",
+    "link_type": "possible",
+    "mechanism": "batch",
+    "latency": "none",
+    "consent_barrier": "agency",
+    "legal_authority": "Express lane eligibility (42 U.S.C. \u00a7 1396a(e)(13)) \u2014 CHIP/Medicaid can use SNAP data",
+    "scraped_at": "2026-02-22T04:18:18.657452+00:00"
+  },
+  {
+    "id": 10,
+    "source_system": "HUD_HMIS",
+    "target_system": "VA_VISTA",
+    "link_type": "possible",
+    "mechanism": "API",
+    "latency": "none",
+    "consent_barrier": "individual",
+    "legal_authority": "SSVF program allows data sharing with consent; no universal authority",
+    "scraped_at": "2026-02-22T04:18:18.659057+00:00"
+  },
+  {
+    "id": 11,
+    "source_system": "ED_NSLDS",
+    "target_system": "SSA_SSR",
+    "link_type": "possible",
+    "mechanism": "batch",
+    "latency": "none",
+    "consent_barrier": "statutory",
+    "legal_authority": "FERPA restricts; would require statutory change or individual consent",
+    "scraped_at": "2026-02-22T04:18:18.660885+00:00"
+  },
+  {
+    "id": 12,
+    "source_system": "CMS_MMIS",
+    "target_system": "DOJ_NCIC",
+    "link_type": "blocked",
+    "mechanism": "none",
+    "latency": "none",
+    "consent_barrier": "statutory",
+    "legal_authority": "42 CFR Part 2 (SUD records); HIPAA minimum necessary; 28 CFR Part 20",
+    "scraped_at": "2026-02-22T04:18:18.662723+00:00"
+  },
+  {
+    "id": 13,
+    "source_system": "IRS_IMF",
+    "target_system": "HUD_IMS_PIC",
+    "link_type": "blocked",
+    "mechanism": "none",
+    "latency": "none",
+    "consent_barrier": "statutory",
+    "legal_authority": "IRC \u00a7 6103 \u2014 strict limits on IRS data disclosure; HUD not listed",
+    "scraped_at": "2026-02-22T04:18:18.664385+00:00"
+  },
+  {
+    "id": 14,
+    "source_system": "ED_NSLDS",
+    "target_system": "CMS_MMIS",
+    "link_type": "blocked",
+    "mechanism": "none",
+    "latency": "none",
+    "consent_barrier": "statutory",
+    "legal_authority": "FERPA \u00a7 99.31 \u2014 no exception for health/social services routine sharing",
+    "scraped_at": "2026-02-22T04:18:18.665920+00:00"
+  },
+  {
+    "id": 15,
+    "source_system": "ACF_TANF",
+    "target_system": "DOJ_NCIC",
+    "link_type": "blocked",
+    "mechanism": "none",
+    "latency": "none",
+    "consent_barrier": "statutory",
+    "legal_authority": "TANF confidentiality rules (45 CFR \u00a7 265.6); no authorization for justice sharing",
+    "scraped_at": "2026-02-22T04:18:18.667490+00:00"
+  },
+  {
+    "id": 16,
+    "source_system": "PHL_CARES",
+    "target_system": "HUD_HMIS",
+    "link_type": "active",
+    "mechanism": "API",
+    "latency": "realtime",
+    "consent_barrier": "individual",
+    "legal_authority": "HUD CoC requirements; HMIS Data Standards",
+    "scraped_at": "2026-02-22T04:18:18.669263+00:00"
+  },
+  {
+    "id": 17,
+    "source_system": "PHL_BRT",
+    "target_system": "HUD_IMS_PIC",
+    "link_type": "possible",
+    "mechanism": "batch",
+    "latency": "none",
+    "consent_barrier": "none",
+    "legal_authority": "Property data is public; no legal barrier, just no integration built",
+    "scraped_at": "2026-02-22T04:18:18.671188+00:00"
+  },
+  {
+    "id": 18,
+    "source_system": "PA_COMPASS",
+    "target_system": "CMS_MMIS",
+    "link_type": "active",
+    "mechanism": "batch",
+    "latency": "daily",
+    "consent_barrier": "none",
+    "legal_authority": "PA DHS integrated eligibility \u2014 COMPASS feeds PA MMIS",
+    "scraped_at": "2026-02-22T04:18:18.673054+00:00"
+  },
+  {
+    "id": 19,
+    "source_system": "PA_COMPASS",
+    "target_system": "USDA_SNAP",
+    "link_type": "active",
+    "mechanism": "batch",
+    "latency": "daily",
+    "consent_barrier": "none",
+    "legal_authority": "PA DHS administers SNAP through COMPASS; same agency",
+    "scraped_at": "2026-02-22T04:18:18.674505+00:00"
+  }
+]

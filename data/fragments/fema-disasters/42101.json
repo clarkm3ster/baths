@@ -1,0 +1,24 @@
+{
+  "source": "fema-disasters",
+  "api": "OpenFEMA API",
+  "fips": "42101",
+  "county": "Philadelphia, PA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "declarations": [
+      {
+        "id": "DR-4618",
+        "title": "Remnants of Hurricane Ida",
+        "type": "DR",
+        "year": 2021
+      },
+      {
+        "id": "EM-3506",
+        "title": "COVID-19",
+        "type": "EM",
+        "year": 2020
+      }
+    ],
+    "count": 2
+  }
+}

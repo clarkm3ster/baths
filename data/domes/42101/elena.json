@@ -1,0 +1,352 @@
+{
+  "fips": "42101",
+  "county_name": "Philadelphia, PA",
+  "profile": {
+    "id": "elena",
+    "name": "Elena",
+    "age": 29,
+    "income": 22000,
+    "household": 2,
+    "children": 1,
+    "description": "Working poor"
+  },
+  "assembled_at": "2026-02-22T04:18:06.695Z",
+  "fragments_used": 13,
+  "fragment_sources": [
+    "bls-unemployment",
+    "census-commute",
+    "census-demographics",
+    "census-disability",
+    "census-education",
+    "census-employment",
+    "census-health-insurance",
+    "census-housing",
+    "census-income",
+    "census-internet",
+    "census-rent-burden",
+    "fema-disasters",
+    "hud-fmr"
+  ],
+  "eligible_programs": [
+    {
+      "program": "Medicaid",
+      "eligible": true,
+      "threshold": "138% FPL",
+      "fpl_pct": 108,
+      "annual_value": 8500,
+      "category": "health",
+      "note": "ACA expansion states; non-expansion states use lower thresholds"
+    },
+    {
+      "program": "CHIP",
+      "eligible": true,
+      "threshold": "250% FPL (varies by state)",
+      "fpl_pct": 108,
+      "annual_value": 2800,
+      "category": "health"
+    },
+    {
+      "program": "SNAP",
+      "eligible": true,
+      "threshold": "130% FPL gross income",
+      "fpl_pct": 108,
+      "annual_value": 4500,
+      "monthly_value": 375,
+      "category": "nutrition"
+    },
+    {
+      "program": "Section 8 HCV",
+      "eligible": true,
+      "threshold": "50% Area Median Income",
+      "income_limit": 26325,
+      "annual_value": 6684,
+      "monthly_value": 557,
+      "category": "housing",
+      "note": "Extreme waitlist — average 2-5 year wait nationwide"
+    },
+    {
+      "program": "EITC",
+      "eligible": true,
+      "threshold": "Income <= $46,560 (1 children)",
+      "annual_value": 2397,
+      "category": "economics"
+    },
+    {
+      "program": "WIC",
+      "eligible": true,
+      "threshold": "185% FPL",
+      "fpl_pct": 108,
+      "annual_value": 600,
+      "category": "nutrition",
+      "note": "For pregnant/postpartum women and children under 5"
+    },
+    {
+      "program": "LIHEAP",
+      "eligible": true,
+      "threshold": "150% FPL",
+      "fpl_pct": 108,
+      "annual_value": 500,
+      "category": "housing",
+      "note": "One-time annual benefit, varies widely by state"
+    },
+    {
+      "program": "Free School Lunch",
+      "eligible": true,
+      "threshold": "130% FPL",
+      "fpl_pct": 108,
+      "annual_value": 1200,
+      "category": "nutrition"
+    },
+    {
+      "program": "Pell Grant",
+      "eligible": true,
+      "threshold": "EFC-based (effectively < ~$60k family income)",
+      "annual_value": 7395,
+      "category": "education",
+      "note": "For enrolled students only; assumes enrollment"
+    }
+  ],
+  "program_count": 9,
+  "fragmented_cost": 44949,
+  "coordinated_cost": 26969,
+  "delta": 17980,
+  "cost_detail": {
+    "fragmented": 44949,
+    "coordinated": 26969,
+    "delta": 17980,
+    "direct_benefit_value": 34576,
+    "admin_overhead": 10373,
+    "admin_overhead_rate": 0.3,
+    "coordination_savings_rate": 0.4,
+    "program_count": 9
+  },
+  "cosm": 10,
+  "cosm_average": 72,
+  "domain_coverage": {
+    "health": {
+      "score": 100,
+      "raw_score": 100,
+      "max_score": 100,
+      "note": null
+    },
+    "housing": {
+      "score": 100,
+      "raw_score": 100,
+      "max_score": 100,
+      "note": null
+    },
+    "economics": {
+      "score": 87,
+      "raw_score": 87,
+      "max_score": 100,
+      "note": null
+    },
+    "education": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "nutrition": {
+      "score": 75,
+      "raw_score": 75,
+      "max_score": 100,
+      "note": null
+    },
+    "safety": {
+      "score": 30,
+      "raw_score": 30,
+      "max_score": 100,
+      "note": null
+    },
+    "transportation": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "infrastructure": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "environment": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": null
+    },
+    "legal": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": "Legal framework data not yet scraped — future fragment source"
+    },
+    "community": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "purpose": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    }
+  },
+  "gaps": [
+    {
+      "domain": "nutrition",
+      "type": "fragment",
+      "missing": [
+        "usda-food-access"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "fragment",
+      "missing": [
+        "fbi-crime"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "fragment",
+      "missing": [
+        "epa-air-quality"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "fragment",
+      "missing": [
+        "no sources defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    }
+  ],
+  "gap_count": 7,
+  "conditions": {
+    "median_rent": 1107,
+    "median_home_value": 200300,
+    "vacancy_rate": 11.8,
+    "ownership_rate": 50.3,
+    "rent_burdened_pct": 54.9,
+    "severely_burdened_pct": 25,
+    "median_household_income": 52649,
+    "per_capita_income": 30422,
+    "poverty_rate": 22.6,
+    "gini_index": 0.5058,
+    "snap_households": 171847,
+    "total_population": 1603797,
+    "median_age": 34.8,
+    "uninsured_estimate": 9.3,
+    "medicaid_enrolled": 462596,
+    "disability_rate": 17,
+    "bachelors_plus_pct": 31,
+    "public_transit_pct": 24.1,
+    "work_from_home_pct": 15,
+    "no_vehicle_pct": 22.2,
+    "broadband_pct": 85.9,
+    "no_internet_pct": 10.1,
+    "unemployment_rate": 8.3
+  },
+  "panels": {
+    "health": {
+      "score": 100,
+      "programs": [
+        "Medicaid",
+        "CHIP"
+      ],
+      "program_value": 11300
+    },
+    "housing": {
+      "score": 100,
+      "programs": [
+        "Section 8 HCV",
+        "LIHEAP"
+      ],
+      "program_value": 7184
+    },
+    "economics": {
+      "score": 87,
+      "programs": [
+        "EITC"
+      ],
+      "program_value": 2397
+    },
+    "education": {
+      "score": 90,
+      "programs": [
+        "Pell Grant"
+      ],
+      "program_value": 7395
+    },
+    "nutrition": {
+      "score": 75,
+      "programs": [
+        "SNAP",
+        "WIC",
+        "Free School Lunch"
+      ],
+      "program_value": 6300
+    },
+    "safety": {
+      "score": 30,
+      "programs": [],
+      "program_value": 0
+    },
+    "transportation": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "infrastructure": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "environment": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "legal": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "community": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "purpose": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    }
+  }
+}
