@@ -2,22 +2,44 @@ import { useState, useEffect, useRef } from 'react'
 import './DomesGame.css'
 
 const STAGES = [
-  { key: 'development', label: 'RESEARCH', num: '01', desc: 'Map the legal landscape, costs, and systems', verb: 'Researching' },
-  { key: 'pre_production', label: 'DESIGN', num: '02', desc: 'Architect the dome — coordination, flourishing', verb: 'Designing' },
-  { key: 'production', label: 'BUILD', num: '03', desc: 'Execute contracts, connect systems', verb: 'Building' },
-  { key: 'post_production', label: 'VERIFY', num: '04', desc: 'Test completeness, generate innovations', verb: 'Verifying' },
-  { key: 'distribution', label: 'COMPLETE', num: '05', desc: 'Final COSM score and narrative', verb: 'Completing' },
+  { key: 'development', label: 'DEVELOPMENT', num: '01', desc: 'Rights acquisition, market research, development deal', verb: 'Developing' },
+  { key: 'pre_production', label: 'PRE-PRODUCTION', num: '02', desc: 'Script, budget top sheet, cast & crew', verb: 'Pre-Producing' },
+  { key: 'production', label: 'PRODUCTION', num: '03', desc: 'Execute agreements, connect systems, build the dome', verb: 'Producing' },
+  { key: 'post_production', label: 'POST-PRODUCTION', num: '04', desc: 'Assembly cut, color grade, sound mix, VFX finals', verb: 'Post-Producing' },
+  { key: 'distribution', label: 'DISTRIBUTION', num: '05', desc: 'COSM reveal, IP catalog, Dome Bond, replication kit', verb: 'Distributing' },
 ]
+
+const IP_DOMAIN_LABELS = {
+  entertainment: 'Entertainment IP',
+  technology: 'Technology IP',
+  financial_product: 'Financial Product IP',
+  policy: 'Policy IP',
+  product: 'Product IP',
+  research: 'Research IP',
+  housing: 'Housing IP',
+  healthcare: 'Healthcare IP',
+}
+
+const IP_DOMAIN_COLORS = {
+  entertainment: '#ff4081',
+  technology: '#7c4dff',
+  financial_product: '#00e676',
+  policy: '#ffab00',
+  product: '#00e5ff',
+  research: '#448aff',
+  housing: '#ff6d00',
+  healthcare: '#e040fb',
+}
 
 // ── Hex Radar Chart for COSM ──────────────────────────────────────────
 function CosmRadar({ dimensions, size = 200, animated = true }) {
   const dims = [
-    { key: 'legal', label: 'LEGAL', color: '#00e5ff' },
-    { key: 'data', label: 'DATA', color: '#7c4dff' },
-    { key: 'fiscal', label: 'FISCAL', color: '#00e676' },
-    { key: 'coordination', label: 'COORD', color: '#ffab00' },
-    { key: 'flourishing', label: 'FLOUR', color: '#ff4081' },
-    { key: 'narrative', label: 'NARR', color: '#448aff' },
+    { key: 'rights', label: 'RIGHTS', color: '#00e5ff' },
+    { key: 'research', label: 'RESEARCH', color: '#7c4dff' },
+    { key: 'budget', label: 'BUDGET', color: '#00e676' },
+    { key: 'package', label: 'PACKAGE', color: '#ffab00' },
+    { key: 'deliverables', label: 'DELIVER', color: '#ff4081' },
+    { key: 'pitch', label: 'PITCH', color: '#448aff' },
   ]
 
   const cx = size / 2, cy = size / 2, r = size * 0.38
@@ -30,11 +52,13 @@ function CosmRadar({ dimensions, size = 200, animated = true }) {
   }
 
   const gridLevels = [0.25, 0.5, 0.75, 1.0]
-  const total = dimensions ? Object.values(dimensions).reduce((a, b) => a + b, 0) / 6 : 0
+  const total = dimensions ? Math.min(
+    dimensions.rights || 0, dimensions.research || 0, dimensions.budget || 0,
+    dimensions.package || 0, dimensions.deliverables || 0, dimensions.pitch || 0
+  ) : 0
 
   return (
     <svg viewBox={`0 0 ${size} ${size}`} className="cosm-radar">
-      {/* Grid */}
       {gridLevels.map(level => (
         <polygon key={level}
           points={dims.map((_, i) => {
@@ -44,12 +68,10 @@ function CosmRadar({ dimensions, size = 200, animated = true }) {
           fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="0.5"
         />
       ))}
-      {/* Axes */}
       {dims.map((_, i) => {
         const p = getPoint(i, 100)
         return <line key={i} x1={cx} y1={cy} x2={p.x} y2={p.y} stroke="rgba(255,255,255,0.04)" strokeWidth="0.5" />
       })}
-      {/* Value polygon */}
       {dimensions && (
         <polygon
           points={dims.map((d, i) => {
@@ -60,7 +82,6 @@ function CosmRadar({ dimensions, size = 200, animated = true }) {
           className={animated ? 'radar-fill-animate' : ''}
         />
       )}
-      {/* Dots + Labels */}
       {dims.map((d, i) => {
         const val = dimensions ? (dimensions[d.key] || 0) : 0
         const p = getPoint(i, val)
@@ -78,7 +99,6 @@ function CosmRadar({ dimensions, size = 200, animated = true }) {
           </g>
         )
       })}
-      {/* Center score */}
       <text x={cx} y={cy - 6} textAnchor="middle" fill="var(--domes-primary)" fontSize="18" fontFamily="Orbitron" fontWeight="700">
         {total.toFixed(0)}
       </text>
@@ -295,7 +315,7 @@ function CostStat({ metric, value, unit, source }) {
   )
 }
 
-// ── System Node (for network graph) ───────────────────────────────────
+// ── System Map ────────────────────────────────────────────────────────
 function SystemMap({ systems, links }) {
   if (!systems || systems.length === 0) return null
   const activeCount = links ? links.filter(l => l.type === 'active').length : 0
@@ -329,8 +349,8 @@ function SystemMap({ systems, links }) {
   )
 }
 
-// ── Coordination Model Card ───────────────────────────────────────────
-function CoordModelCard({ model, index, selected, onSelect }) {
+// ── Coordination Crew Card ────────────────────────────────────────────
+function CrewCard({ model, index, selected, onSelect }) {
   return (
     <div className={`coord-card ${selected ? 'selected' : ''}`} onClick={onSelect}
       style={{ animationDelay: `${index * 0.1}s` }}>
@@ -373,7 +393,7 @@ function CoordModelCard({ model, index, selected, onSelect }) {
   )
 }
 
-// ── Architecture Layer ────────────────────────────────────────────────
+// ── Dome Layer ────────────────────────────────────────────────────────
 function DomeLayer({ layer, index }) {
   const strengthPct = ((layer.strength || 0) * 100).toFixed(0)
   return (
@@ -402,18 +422,102 @@ function NarrativeSection({ section, index }) {
   )
 }
 
+// ── IP Catalog ────────────────────────────────────────────────────────
+function IPCatalog({ ipOutputs }) {
+  if (!ipOutputs || ipOutputs.length === 0) return null
+
+  const byDomain = {}
+  ipOutputs.forEach(ip => {
+    const d = ip.domain
+    if (!byDomain[d]) byDomain[d] = []
+    byDomain[d].push(ip)
+  })
+
+  return (
+    <div className="section-block ip-catalog">
+      <h3 className="section-title">IP CATALOG</h3>
+      <p className="section-subtitle">{ipOutputs.length} outputs across {Object.keys(byDomain).length} domains</p>
+      <div className="ip-grid">
+        {Object.entries(byDomain).map(([domain, items]) => (
+          <div key={domain} className="ip-domain-group">
+            <div className="ip-domain-header" style={{ borderColor: IP_DOMAIN_COLORS[domain] || '#8090a8' }}>
+              <span className="ip-domain-dot" style={{ background: IP_DOMAIN_COLORS[domain] || '#8090a8' }} />
+              <span className="ip-domain-name">{IP_DOMAIN_LABELS[domain] || domain}</span>
+            </div>
+            {items.map((ip, j) => (
+              <div key={j} className="ip-item">
+                <div className="ip-title">{ip.title}</div>
+                <div className="ip-desc">{ip.description}</div>
+                <div className="ip-meta">
+                  <span className="ip-format">{ip.format?.replace(/_/g, ' ')}</span>
+                  <span className="ip-driver">{ip.value_driver}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// ── Bond Term Sheet ───────────────────────────────────────────────────
+function BondTermSheet({ bond, type = 'dome' }) {
+  if (!bond) return null
+
+  const ratingColors = { AAA: '#00e676', AA: '#69f0ae', A: '#b2ff59', BBB: '#ffab00', BB: '#ff9100', B: '#ff6d00' }
+
+  return (
+    <div className={`section-block bond-term-sheet ${type}`}>
+      <h3 className="section-title">{type === 'dome' ? 'DOME' : 'CHRON'} BOND TERM SHEET</h3>
+      <div className="bond-header-row">
+        <div className="bond-id">{bond.bond_id}</div>
+        <div className="bond-rating" style={{ color: ratingColors[bond.rating] || '#8090a8' }}>
+          {bond.rating}
+        </div>
+      </div>
+      <div className="bond-grid">
+        <div className="bond-stat primary">
+          <span className="bs-val">${bond.face_value?.toLocaleString()}</span>
+          <span className="bs-label">Face Value</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.coupon_rate}%</span>
+          <span className="bs-label">Coupon Rate</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.maturity_years}yr</span>
+          <span className="bs-label">Maturity</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.yield_to_maturity}%</span>
+          <span className="bs-label">YTM</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.cosm_score || bond.chron_score}</span>
+          <span className="bs-label">{type === 'dome' ? 'COSM' : 'CHRON'} Score</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.programs_backing || bond.sqft_backing?.toLocaleString()}</span>
+          <span className="bs-label">{type === 'dome' ? 'Programs Backing' : 'Sqft Backing'}</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // ── Stage Content Renderers ───────────────────────────────────────────
 
 function DevelopmentStage({ data }) {
   if (!data) return null
-  const provisions = data.legal_provisions || {}
-  const costs = data.cost_landscape || {}
-  const systems = data.government_systems || []
-  const links = data.system_links || []
+  const rights = data.rights_package || {}
+  const market = data.market_analysis || {}
+  const cast = data.cast_list || []
+  const deal = data.deal_structure || []
   const profile = data.profile || {}
 
-  const allProvisions = Object.values(provisions).flat()
-  const topCosts = Object.values(costs).flat().slice(0, 12)
+  const allRights = Object.values(rights).flat()
+  const topCosts = Object.values(market).flat().slice(0, 12)
 
   return (
     <div className="stage-content development">
@@ -422,20 +526,20 @@ function DevelopmentStage({ data }) {
         <div className="profile-name">{profile.name || 'Subject'}</div>
         <div className="profile-stats">
           <div className="profile-stat">
-            <span className="ps-val">{data.provision_count || 0}</span>
-            <span className="ps-label">provisions</span>
+            <span className="ps-val">{data.rights_count || 0}</span>
+            <span className="ps-label">rights acquired</span>
           </div>
           <div className="profile-stat">
             <span className="ps-val">{data.cost_point_count || 0}</span>
-            <span className="ps-label">cost points</span>
+            <span className="ps-label">market data points</span>
           </div>
           <div className="profile-stat">
             <span className="ps-val">{data.system_count || 0}</span>
-            <span className="ps-label">systems</span>
+            <span className="ps-label">systems cast</span>
           </div>
           <div className="profile-stat">
             <span className="ps-val">{data.active_links || 0}</span>
-            <span className="ps-label">active links</span>
+            <span className="ps-label">active deals</span>
           </div>
           <div className="profile-stat warn">
             <span className="ps-val">{data.blocked_links || 0}</span>
@@ -443,16 +547,16 @@ function DevelopmentStage({ data }) {
           </div>
         </div>
         <div className="profile-fragcost">
-          Estimated annual fragmentation cost: <strong>${(profile.estimated_annual_fragmentation_cost || 78168).toLocaleString()}</strong>/person
+          Annual fragmentation cost: <strong>${(profile.estimated_annual_fragmentation_cost || 78168).toLocaleString()}</strong>/person
         </div>
       </div>
 
-      {/* Legal Provisions by Dimension */}
+      {/* Rights Package */}
       <div className="section-block">
-        <h3 className="section-title">LEGAL LANDSCAPE</h3>
-        <p className="section-subtitle">{allProvisions.length} real CFR provisions across {Object.keys(provisions).length} regulatory dimensions</p>
+        <h3 className="section-title">RIGHTS PACKAGE</h3>
+        <p className="section-subtitle">{allRights.length} real CFR provisions across {Object.keys(rights).length} regulatory dimensions</p>
         <div className="dimension-tabs">
-          {Object.entries(provisions).map(([dim, provs]) => (
+          {Object.entries(rights).map(([dim, provs]) => (
             <details key={dim} className="dim-group">
               <summary className="dim-tab">
                 <span className="dim-name">{dim.replace(/_/g, ' ')}</span>
@@ -466,19 +570,19 @@ function DevelopmentStage({ data }) {
         </div>
       </div>
 
-      {/* Cost Landscape */}
+      {/* Market Analysis */}
       <div className="section-block">
-        <h3 className="section-title">COST LANDSCAPE</h3>
+        <h3 className="section-title">MARKET ANALYSIS</h3>
         <p className="section-subtitle">Real costs sourced from CMS, HUD, Vera Institute, HCUP, SAMHSA</p>
         <div className="cost-grid">
           {topCosts.map((c, i) => <CostStat key={i} {...c} />)}
         </div>
       </div>
 
-      {/* System Map */}
+      {/* Cast — System Map */}
       <div className="section-block">
-        <h3 className="section-title">GOVERNMENT DATA SYSTEMS</h3>
-        <SystemMap systems={systems} links={links} />
+        <h3 className="section-title">CAST — GOVERNMENT DATA SYSTEMS</h3>
+        <SystemMap systems={cast} links={deal} />
       </div>
     </div>
   )
@@ -486,43 +590,83 @@ function DevelopmentStage({ data }) {
 
 function PreProductionStage({ data }) {
   if (!data) return null
-  const arch = data.architecture || {}
-  const models = data.coordination_models || []
+  const script = data.shooting_script || {}
+  const crew = data.coordination_crew || []
   const flour = data.flourishing || {}
-  const insights = data.enrichment_insights || []
-  const [selectedModel, setSelectedModel] = useState(0)
+  const intelligence = data.intelligence || []
+  const budget = data.budget_top_sheet || {}
+  const [selectedCrew, setSelectedCrew] = useState(0)
 
   return (
     <div className="stage-content pre-production">
-      {/* Dome Architecture */}
+      {/* Shooting Script — Dome Architecture */}
       <div className="section-block">
-        <h3 className="section-title">DOME ARCHITECTURE</h3>
+        <h3 className="section-title">SHOOTING SCRIPT — DOME BLUEPRINT</h3>
         <div className="arch-header">
           <div className="arch-coverage">
-            <span className="arch-pct">{((arch.overall_coverage || 0) * 100).toFixed(0)}%</span>
+            <span className="arch-pct">{((script.overall_coverage || 0) * 100).toFixed(0)}%</span>
             <span className="arch-label">coverage</span>
           </div>
         </div>
         <div className="dome-layers">
-          {(arch.layers || []).map((layer, i) => <DomeLayer key={i} layer={layer} index={i} />)}
+          {(script.layers || []).map((layer, i) => <DomeLayer key={i} layer={layer} index={i} />)}
         </div>
       </div>
 
-      {/* Coordination Models */}
+      {/* Budget Top Sheet */}
       <div className="section-block">
-        <h3 className="section-title">COORDINATION MODELS</h3>
+        <h3 className="section-title">BUDGET TOP SHEET</h3>
+        <div className="budget-sheet">
+          <div className="budget-section">
+            <div className="budget-section-label">ABOVE THE LINE</div>
+            {Object.entries(budget.above_the_line || {}).map(([key, val]) => (
+              <div key={key} className="budget-line">
+                <span className="bl-name">{key.replace(/_/g, ' ')}</span>
+                <span className="bl-val">${(val || 0).toLocaleString()}</span>
+              </div>
+            ))}
+          </div>
+          <div className="budget-section">
+            <div className="budget-section-label">BELOW THE LINE</div>
+            {Object.entries(budget.below_the_line || {}).map(([key, val]) => (
+              <div key={key} className="budget-line">
+                <span className="bl-name">{key.replace(/_/g, ' ')}</span>
+                <span className="bl-val">{typeof val === 'number' ? `$${val.toLocaleString()}` : val}</span>
+              </div>
+            ))}
+          </div>
+          <div className="budget-totals">
+            <div className="budget-total-row fragmented">
+              <span>Annual Fragmentation Cost</span>
+              <span>${(budget.annual_fragmentation_cost || 0).toLocaleString()}</span>
+            </div>
+            <div className="budget-total-row coordinated">
+              <span>Annual Coordination Savings</span>
+              <span>${(budget.annual_coordination_savings || 0).toLocaleString()}</span>
+            </div>
+            <div className="budget-total-row delta">
+              <span>Annual Dome Value</span>
+              <span>${(budget.annual_dome_value || 0).toLocaleString()}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Coordination Crew */}
+      <div className="section-block">
+        <h3 className="section-title">COORDINATION CREW</h3>
         <p className="section-subtitle">Select the architecture for cross-system coordination</p>
         <div className="coord-grid">
-          {models.map((m, i) => (
-            <CoordModelCard key={m.id || i} model={m} index={i}
-              selected={selectedModel === i} onSelect={() => setSelectedModel(i)} />
+          {crew.map((m, i) => (
+            <CrewCard key={m.id || i} model={m} index={i}
+              selected={selectedCrew === i} onSelect={() => setSelectedCrew(i)} />
           ))}
         </div>
       </div>
 
-      {/* Flourishing Scores */}
+      {/* Deliverables Index — Flourishing */}
       <div className="section-block">
-        <h3 className="section-title">FLOURISHING INDEX</h3>
+        <h3 className="section-title">DELIVERABLES INDEX</h3>
         <div className="flour-header">
           <div className="flour-score">
             <span className="flour-val">{((flour.overall_score || 0) * 100).toFixed(0)}%</span>
@@ -547,12 +691,12 @@ function PreProductionStage({ data }) {
         </div>
       </div>
 
-      {/* Enrichment Insights */}
-      {insights.length > 0 && (
+      {/* Intelligence */}
+      {intelligence.length > 0 && (
         <div className="section-block">
-          <h3 className="section-title">INTELLIGENCE INSIGHTS</h3>
+          <h3 className="section-title">INTELLIGENCE BRIEF</h3>
           <div className="insights-list">
-            {insights.slice(0, 6).map((ins, i) => (
+            {intelligence.slice(0, 6).map((ins, i) => (
               <div key={i} className={`insight-card type-${ins.type}`}>
                 <span className="insight-type">{ins.type?.replace(/_/g, ' ')}</span>
                 <p>{ins.description}</p>
@@ -567,21 +711,24 @@ function PreProductionStage({ data }) {
 
 function ProductionStage({ data }) {
   if (!data) return null
-  const contracts = data.contracts?.agreements || []
-  const profile = data.profile || {}
+  const agreements = data.executed_agreements || []
+  const callSheet = data.call_sheet || {}
+  const vfx = data.vfx_report || []
 
   return (
     <div className="stage-content production">
+      {/* Call Sheet */}
       <div className="build-banner">
         <div className="build-icon">&#9670;</div>
-        <h3>DOME CONSTRUCTED</h3>
-        <p>{profile.provisions_applied || 0} provisions applied across {profile.systems_connected || 0} systems</p>
+        <h3>DOME UNDER CONSTRUCTION</h3>
+        <p>{callSheet.rights_applied || 0} rights applied across {callSheet.systems_connected || 0} systems</p>
       </div>
 
+      {/* Executed Agreements */}
       <div className="section-block">
         <h3 className="section-title">EXECUTED AGREEMENTS</h3>
         <div className="contracts-list">
-          {contracts.map((c, i) => (
+          {agreements.map((c, i) => (
             <div key={i} className="contract-card" style={{ animationDelay: `${i * 0.1}s` }}>
               <div className="contract-header">
                 <span className="contract-status">{c.status}</span>
@@ -599,47 +746,65 @@ function ProductionStage({ data }) {
         </div>
       </div>
 
+      {/* Call Sheet Details */}
       <div className="section-block">
-        <h3 className="section-title">DOME PROFILE</h3>
+        <h3 className="section-title">CALL SHEET</h3>
         <div className="dome-profile-grid">
-          {profile.coverage_dimensions?.map((dim, i) => (
+          {callSheet.coverage_dimensions?.map((dim, i) => (
             <span key={i} className="dim-tag">{dim}</span>
           ))}
         </div>
         <div className="dome-profile-stat">
-          Coordination Model: <strong>{profile.coordination_model}</strong>
+          Coordination Model: <strong>{callSheet.coordination_model}</strong>
         </div>
       </div>
+
+      {/* VFX Report */}
+      {vfx.length > 0 && (
+        <div className="section-block">
+          <h3 className="section-title">VFX — ENRICHMENT CROSS-REFERENCES</h3>
+          <div className="insights-list">
+            {vfx.slice(0, 6).map((v, i) => (
+              <div key={i} className={`insight-card type-${v.type}`}>
+                <span className="insight-type">{v.type?.replace(/_/g, ' ')}</span>
+                <p>{v.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
 
 function PostProductionStage({ data }) {
   if (!data) return null
-  const ver = data.verification || {}
-  const innovations = data.innovations || {}
+  const assembly = data.assembly_cut || {}
+  const grade = data.color_grade || {}
+  const vfx = data.vfx_finals || {}
+  const ipOutputs = data.ip_outputs || []
 
   return (
     <div className="stage-content post-production">
-      {/* Verification */}
+      {/* Assembly Cut — Verification */}
       <div className="section-block">
-        <h3 className="section-title">DOME VERIFICATION</h3>
-        <div className={`verify-badge ${ver.complete ? 'complete' : 'incomplete'}`}>
-          <span className="verify-icon">{ver.complete ? '✓' : '!'}</span>
-          <span className="verify-pct">{((ver.coverage || 0) * 100).toFixed(0)}%</span>
-          <span className="verify-label">coverage across {ver.dimensions_covered?.length || 0} dimensions</span>
+        <h3 className="section-title">ASSEMBLY CUT — DOME VERIFICATION</h3>
+        <div className={`verify-badge ${assembly.complete ? 'complete' : 'incomplete'}`}>
+          <span className="verify-icon">{assembly.complete ? '✓' : '!'}</span>
+          <span className="verify-pct">{((assembly.coverage || 0) * 100).toFixed(0)}%</span>
+          <span className="verify-label">coverage across {assembly.dimensions_covered?.length || 0} dimensions</span>
         </div>
 
-        {ver.dimensions_covered && (
+        {assembly.dimensions_covered && (
           <div className="covered-dims">
-            {ver.dimensions_covered.map(d => <span key={d} className="dim-tag covered">{d}</span>)}
-            {(ver.gaps || []).map(g => <span key={g} className="dim-tag gap">{g}</span>)}
+            {assembly.dimensions_covered.map(d => <span key={d} className="dim-tag covered">{d}</span>)}
+            {(assembly.gaps || []).map(g => <span key={g} className="dim-tag gap">{g}</span>)}
           </div>
         )}
 
-        {ver.recommendations?.length > 0 && (
+        {assembly.notes?.length > 0 && (
           <div className="recommendations">
-            {ver.recommendations.map((r, i) => (
+            {assembly.notes.map((r, i) => (
               <div key={i} className="rec-item">
                 <span className="rec-arrow">→</span>
                 <span>{r}</span>
@@ -649,30 +814,42 @@ function PostProductionStage({ data }) {
         )}
       </div>
 
-      {/* Innovations */}
+      {/* Color Grade — Flourishing */}
       <div className="section-block">
-        <h3 className="section-title">INNOVATIONS GENERATED</h3>
+        <h3 className="section-title">COLOR GRADE — DELIVERABLES</h3>
+        <div className="grade-badge">
+          <span className="grade-letter">{grade.grade || 'C'}</span>
+          <span className="grade-desc">Flourishing Index: {((grade.overall_score || 0) * 100).toFixed(0)}%</span>
+        </div>
+      </div>
+
+      {/* VFX Finals — Innovations */}
+      <div className="section-block">
+        <h3 className="section-title">VFX FINALS — INNOVATIONS</h3>
         <div className="innovations-grid">
-          {(innovations.innovations || []).map((inn, i) => (
+          {(vfx.innovations || []).map((inn, i) => (
             <div key={i} className="innovation-card" style={{ animationDelay: `${i * 0.08}s` }}>
               <span className="inn-icon">◆</span>
               <span>{inn}</span>
             </div>
           ))}
         </div>
-        {(innovations.patents || []).length > 0 && (
+        {(vfx.patents || []).length > 0 && (
           <div className="patents-section">
             <h4>PATENTS</h4>
-            {innovations.patents.map((p, i) => <div key={i} className="patent-item">{p}</div>)}
+            {vfx.patents.map((p, i) => <div key={i} className="patent-item">{p}</div>)}
           </div>
         )}
-        {(innovations.protocols || []).length > 0 && (
+        {(vfx.protocols || []).length > 0 && (
           <div className="protocols-section">
             <h4>PROTOCOLS</h4>
-            {innovations.protocols.map((p, i) => <div key={i} className="protocol-item">{p}</div>)}
+            {vfx.protocols.map((p, i) => <div key={i} className="protocol-item">{p}</div>)}
           </div>
         )}
       </div>
+
+      {/* IP Catalog */}
+      <IPCatalog ipOutputs={ipOutputs} />
     </div>
   )
 }
@@ -681,8 +858,10 @@ function DistributionStage({ data }) {
   if (!data) return null
   const narrative = data.narrative?.sections || []
   const cosm = data.cosm || {}
-  const ip = data.ip || []
+  const ipCatalog = data.ip_catalog || []
+  const domeBond = data.dome_bond || null
   const industries = data.industries_changed || []
+  const replication = data.replication_kit || {}
 
   return (
     <div className="stage-content distribution">
@@ -690,25 +869,46 @@ function DistributionStage({ data }) {
       <div className="cosm-reveal">
         <CosmRadar dimensions={cosm} size={260} />
         <div className="cosm-total">
-          <span className="cosm-total-val">{(cosm.total || 0).toFixed(1)}</span>
+          <span className="cosm-total-val">{(cosm.total || Math.min(cosm.rights || 0, cosm.research || 0, cosm.budget || 0, cosm.package || 0, cosm.deliverables || 0, cosm.pitch || 0)).toFixed(1)}</span>
           <span className="cosm-total-label">TOTAL COSM</span>
         </div>
       </div>
 
-      {/* Narrative */}
+      {/* Narrative — The Pitch */}
       <div className="section-block">
-        <h3 className="section-title">THE NARRATIVE</h3>
+        <h3 className="section-title">THE PITCH</h3>
         <div className="narrative-flow">
           {narrative.map((s, i) => <NarrativeSection key={i} section={s} index={i} />)}
         </div>
       </div>
 
-      {/* IP + Industries */}
+      {/* Dome Bond */}
+      <BondTermSheet bond={domeBond} type="dome" />
+
+      {/* IP Catalog */}
+      <IPCatalog ipOutputs={ipCatalog} />
+
+      {/* Replication Kit + Industries */}
       <div className="final-grid">
         <div className="section-block">
-          <h3 className="section-title">INTELLECTUAL PROPERTY</h3>
-          <div className="ip-list">
-            {ip.map((item, i) => <div key={i} className="ip-item">{item}</div>)}
+          <h3 className="section-title">REPLICATION KIT</h3>
+          <div className="replication-details">
+            <div className="rep-stat">
+              <span className="rs-label">Coverage</span>
+              <span className="rs-val">{((replication.coverage || 0) * 100).toFixed(0)}%</span>
+            </div>
+            <div className="rep-stat">
+              <span className="rs-label">Coordination</span>
+              <span className="rs-val">{replication.coordination_model || '—'}</span>
+            </div>
+            <div className="rep-stat">
+              <span className="rs-label">Est. Savings</span>
+              <span className="rs-val">${(replication.estimated_savings || 0).toLocaleString()}/yr</span>
+            </div>
+            <div className="rep-stat">
+              <span className="rs-label">Transferable</span>
+              <span className="rs-val">{replication.transferable ? 'YES' : 'NO'}</span>
+            </div>
           </div>
         </div>
         <div className="section-block">
@@ -733,9 +933,8 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
   const [domeData, setDomeData] = useState(null)
   const contentRef = useRef(null)
 
-  // Fetch Fragment/Cosm data for Philadelphia (default county)
   useEffect(() => {
-    const fips = '42101' // Philadelphia — primary geography
+    const fips = '42101'
     fetch(`/api/fragment/county/${fips}`)
       .then(r => r.json())
       .then(d => { if (d.fragment_count > 0) setFragmentData(d) })
@@ -774,7 +973,6 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
     }
   }
 
-  // Get stage data for current display
   const stageData = production.stage_data || {}
   const devData = stageData.development
   const preData = stageData.pre_production
@@ -782,12 +980,11 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
   const postData = stageData.post_production
   const distData = stageData.distribution
 
-  // Build running COSM from available data
   const runningCosm = distData?.cosm || null
 
   return (
     <div className="domes-game">
-      {/* ── Fixed Header ────────────────────────────────────── */}
+      {/* Fixed Header */}
       <div className="game-header">
         <div className="game-header-left">
           <button className="back-btn" onClick={onBack}>← GAMES</button>
@@ -811,14 +1008,14 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
           <DataBadge stats={devData?.data_engine_stats || distData?.data_engine_stats} fragmentCount={fragmentData?.fragment_count} />
           {runningCosm && (
             <div className="header-cosm">
-              <span className="header-cosm-val">{(runningCosm.total || 0).toFixed(0)}</span>
+              <span className="header-cosm-val">{Math.min(runningCosm.rights || 0, runningCosm.research || 0, runningCosm.budget || 0, runningCosm.package || 0, runningCosm.deliverables || 0, runningCosm.pitch || 0).toFixed(0)}</span>
               <span className="header-cosm-label">COSM</span>
             </div>
           )}
         </div>
       </div>
 
-      {/* ── Stage Hero ──────────────────────────────────────── */}
+      {/* Stage Hero */}
       <div className="stage-hero">
         <div className="stage-hero-bg" />
         <div className="stage-hero-content">
@@ -839,9 +1036,8 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
         </div>
       </div>
 
-      {/* ── Content Area ────────────────────────────────────── */}
+      {/* Content Area */}
       <div className="game-content" ref={contentRef}>
-        {/* Status Message */}
         {lastMessage && (
           <div className="game-message">
             <div className="message-line" />
@@ -849,7 +1045,6 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
           </div>
         )}
 
-        {/* Render completed stages + Fragment/Cosm intelligence */}
         {devData && <DevelopmentStage data={devData} />}
         {devData && fragmentData && <ConditionsPanel fragments={fragmentData.fragments} />}
         {devData && domeData && <DomeInstrumentPanel domes={domeData.domes} />}
@@ -858,16 +1053,15 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
         {postData && <PostProductionStage data={postData} />}
         {distData && <DistributionStage data={distData} />}
 
-        {/* No data yet prompt */}
         {!devData && !isComplete && (
           <div className="empty-stage">
             <div className="empty-icon">◇</div>
-            <p>Begin research to map the legal landscape, cost data, and government systems for <strong>{production.subject}</strong>.</p>
+            <p>Begin development to acquire rights, research the market, and structure the deal for <strong>{production.subject}</strong>.</p>
           </div>
         )}
       </div>
 
-      {/* ── Fixed Action Bar ────────────────────────────────── */}
+      {/* Fixed Action Bar */}
       <div className="game-action-bar">
         {!isComplete ? (
           <button className="advance-btn" onClick={handleAdvance} disabled={working}>
@@ -877,15 +1071,13 @@ export default function DomesGame({ player, production, onUpdate, onBack }) {
                 <span>{currentStage.verb}...</span>
               </>
             ) : (
-              <>
-                <span>{currentStageIndex === 0 && !devData ? 'BEGIN RESEARCH' : `ADVANCE → ${STAGES[Math.min(currentStageIndex + 1, 4)]?.label || 'COMPLETE'}`}</span>
-              </>
+              <span>{currentStageIndex === 0 && !devData ? 'BEGIN DEVELOPMENT' : `ADVANCE → ${STAGES[Math.min(currentStageIndex + 1, 4)]?.label || 'COMPLETE'}`}</span>
             )}
           </button>
         ) : (
           <div className="complete-bar">
             <span className="complete-icon">◆</span>
-            <span>DOME COMPLETE — COSM: {(runningCosm?.total || 0).toFixed(1)}</span>
+            <span>DOME COMPLETE — COSM: {runningCosm ? Math.min(runningCosm.rights || 0, runningCosm.research || 0, runningCosm.budget || 0, runningCosm.package || 0, runningCosm.deliverables || 0, runningCosm.pitch || 0).toFixed(1) : '0'}</span>
           </div>
         )}
       </div>

@@ -201,17 +201,16 @@ async def _complete_production(production: ProductionState):
     if production.game_type == GameType.DOMES:
         cosm_data = dist_data.get("cosm", {})
         completed.cosm = CosmDimensions(**cosm_data) if cosm_data else None
-        completed.ip_created = dist_data.get("ip", [])
         completed.industries_changed = dist_data.get("industries_changed", [])
 
         player.portfolio.domes_completed.append(completed)
         if completed.cosm:
-            player.portfolio.total_cosm.legal += completed.cosm.legal
-            player.portfolio.total_cosm.data += completed.cosm.data
-            player.portfolio.total_cosm.fiscal += completed.cosm.fiscal
-            player.portfolio.total_cosm.coordination += completed.cosm.coordination
-            player.portfolio.total_cosm.flourishing += completed.cosm.flourishing
-            player.portfolio.total_cosm.narrative += completed.cosm.narrative
+            player.portfolio.total_cosm.rights += completed.cosm.rights
+            player.portfolio.total_cosm.research += completed.cosm.research
+            player.portfolio.total_cosm.budget += completed.cosm.budget
+            player.portfolio.total_cosm.package += completed.cosm.package
+            player.portfolio.total_cosm.deliverables += completed.cosm.deliverables
+            player.portfolio.total_cosm.pitch += completed.cosm.pitch
 
     elif production.game_type == GameType.SPHERES:
         chron_data = dist_data.get("chron", {})
@@ -402,7 +401,7 @@ def list_games():
                 "name": "DOMES",
                 "description": "Build a dome around one person using the entire US government",
                 "currency": "Cosm",
-                "dimensions": ["legal", "data", "fiscal", "coordination", "flourishing", "narrative"]
+                "dimensions": ["rights", "research", "budget", "package", "deliverables", "pitch"]
             },
             {
                 "type": "spheres",

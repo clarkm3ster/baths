@@ -2,12 +2,34 @@ import { useState, useEffect, useRef } from 'react'
 import './SpheresGame.css'
 
 const STAGES = [
-  { key: 'development', label: 'DISCOVER', num: '01', desc: 'Research the parcel — real property data, zoning, context', verb: 'Discovering' },
-  { key: 'pre_production', label: 'DESIGN', num: '02', desc: 'Plan the activation — type, cost, timeline', verb: 'Designing' },
-  { key: 'production', label: 'BUILD', num: '03', desc: 'Execute permits, construct, activate', verb: 'Building' },
-  { key: 'post_production', label: 'MEASURE', num: '04', desc: 'Document impact, generate innovations', verb: 'Measuring' },
-  { key: 'distribution', label: 'COMPLETE', num: '05', desc: 'Final CHRON score and portfolio', verb: 'Completing' },
+  { key: 'development', label: 'DEVELOPMENT', num: '01', desc: 'Location scouting, rights & permits, development deal', verb: 'Developing' },
+  { key: 'pre_production', label: 'PRE-PRODUCTION', num: '02', desc: 'Design board, budget model, timeline', verb: 'Pre-Producing' },
+  { key: 'production', label: 'PRODUCTION', num: '03', desc: 'Build, activate, capture', verb: 'Producing' },
+  { key: 'post_production', label: 'POST-PRODUCTION', num: '04', desc: 'Measure impact, document episodes, extract IP', verb: 'Post-Producing' },
+  { key: 'distribution', label: 'DISTRIBUTION', num: '05', desc: 'CHRON reveal, Chron Bond, replication kit', verb: 'Distributing' },
 ]
+
+const IP_DOMAIN_LABELS = {
+  entertainment: 'Entertainment IP',
+  technology: 'Technology IP',
+  financial_product: 'Financial Product IP',
+  policy: 'Policy IP',
+  product: 'Product IP',
+  research: 'Research IP',
+  housing: 'Housing IP',
+  healthcare: 'Healthcare IP',
+}
+
+const IP_DOMAIN_COLORS = {
+  entertainment: '#ff4081',
+  technology: '#7c4dff',
+  financial_product: '#00e676',
+  policy: '#ffab00',
+  product: '#00e5ff',
+  research: '#448aff',
+  housing: '#ff6d00',
+  healthcare: '#e040fb',
+}
 
 // ── CHRON Rings Visualization ─────────────────────────────────────────
 function ChronRings({ dimensions, size = 220 }) {
@@ -278,13 +300,97 @@ function NeighborhoodContext({ fragments }) {
   )
 }
 
+// ── IP Catalog ────────────────────────────────────────────────────────
+function IPCatalog({ ipOutputs }) {
+  if (!ipOutputs || ipOutputs.length === 0) return null
+
+  const byDomain = {}
+  ipOutputs.forEach(ip => {
+    const d = ip.domain
+    if (!byDomain[d]) byDomain[d] = []
+    byDomain[d].push(ip)
+  })
+
+  return (
+    <div className="section-block ip-catalog">
+      <h3 className="section-title">IP CATALOG</h3>
+      <p className="section-subtitle">{ipOutputs.length} outputs across {Object.keys(byDomain).length} domains</p>
+      <div className="ip-grid">
+        {Object.entries(byDomain).map(([domain, items]) => (
+          <div key={domain} className="ip-domain-group">
+            <div className="ip-domain-header" style={{ borderColor: IP_DOMAIN_COLORS[domain] || '#8090a8' }}>
+              <span className="ip-domain-dot" style={{ background: IP_DOMAIN_COLORS[domain] || '#8090a8' }} />
+              <span className="ip-domain-name">{IP_DOMAIN_LABELS[domain] || domain}</span>
+            </div>
+            {items.map((ip, j) => (
+              <div key={j} className="ip-item">
+                <div className="ip-title">{ip.title}</div>
+                <div className="ip-desc">{ip.description}</div>
+                <div className="ip-meta">
+                  <span className="ip-format">{ip.format?.replace(/_/g, ' ')}</span>
+                  <span className="ip-driver">{ip.value_driver}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// ── Bond Term Sheet ───────────────────────────────────────────────────
+function BondTermSheet({ bond, type = 'chron' }) {
+  if (!bond) return null
+
+  const ratingColors = { AAA: '#00e676', AA: '#69f0ae', A: '#b2ff59', BBB: '#ffab00', BB: '#ff9100', B: '#ff6d00' }
+
+  return (
+    <div className={`section-block bond-term-sheet ${type}`}>
+      <h3 className="section-title">{type === 'dome' ? 'DOME' : 'CHRON'} BOND TERM SHEET</h3>
+      <div className="bond-header-row">
+        <div className="bond-id">{bond.bond_id}</div>
+        <div className="bond-rating" style={{ color: ratingColors[bond.rating] || '#8090a8' }}>
+          {bond.rating}
+        </div>
+      </div>
+      <div className="bond-grid">
+        <div className="bond-stat primary">
+          <span className="bs-val">${bond.face_value?.toLocaleString()}</span>
+          <span className="bs-label">Face Value</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.coupon_rate}%</span>
+          <span className="bs-label">Coupon Rate</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.maturity_years}yr</span>
+          <span className="bs-label">Maturity</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.yield_to_maturity}%</span>
+          <span className="bs-label">YTM</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.chron_score || bond.cosm_score}</span>
+          <span className="bs-label">{type === 'chron' ? 'CHRON' : 'COSM'} Score</span>
+        </div>
+        <div className="bond-stat">
+          <span className="bs-val">{bond.sqft_backing?.toLocaleString() || bond.programs_backing}</span>
+          <span className="bs-label">{type === 'chron' ? 'Sqft Backing' : 'Programs Backing'}</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // ── Stage Renderers ───────────────────────────────────────────────────
 
-function DiscoverStage({ data }) {
+function DevelopmentStage({ data }) {
   if (!data) return null
-  const parcel = data.parcel || {}
-  const permits = data.permits?.standard_permits || []
-  const insights = data.insights || []
+  const parcel = data.location_report || {}
+  const permits = data.rights_assessment?.permits || []
+  const insights = data.location_insights || []
   const nearby = data.nearby_parcels || []
 
   return (
@@ -293,7 +399,7 @@ function DiscoverStage({ data }) {
 
       {insights.length > 0 && (
         <div className="section-block">
-          <h3 className="section-title">ACTIVATION INSIGHTS</h3>
+          <h3 className="section-title">LOCATION INSIGHTS</h3>
           {insights.map((ins, i) => (
             <div key={i} className="insight-item">
               <div className="insight-score">{((ins.activation_score || 0) * 100).toFixed(0)}%</div>
@@ -311,7 +417,7 @@ function DiscoverStage({ data }) {
       )}
 
       <div className="section-block">
-        <h3 className="section-title">PERMITS REQUIRED</h3>
+        <h3 className="section-title">RIGHTS ASSESSMENT — PERMITS</h3>
         <div className="permits-list">
           {permits.map((p, i) => <PermitCard key={i} permit={p} index={i} />)}
         </div>
@@ -322,10 +428,10 @@ function DiscoverStage({ data }) {
   )
 }
 
-function DesignStage({ data }) {
+function PreProductionStage({ data }) {
   if (!data) return null
-  const design = data.design || {}
-  const cost = data.cost || {}
+  const design = data.design_board || {}
+  const cost = data.budget_model || {}
   const timeline = data.timeline || {}
   const zoning = data.zoning_info || {}
 
@@ -346,7 +452,7 @@ function DesignStage({ data }) {
       </div>
 
       <div className="section-block">
-        <h3 className="section-title">INVESTMENT TIERS</h3>
+        <h3 className="section-title">BUDGET MODEL — INVESTMENT TIERS</h3>
         <CostTiers cost={cost} />
       </div>
 
@@ -357,22 +463,22 @@ function DesignStage({ data }) {
   )
 }
 
-function BuildStage({ data }) {
+function ProductionStage({ data }) {
   if (!data) return null
-  const permits = data.permits || {}
-  const world = data.world || {}
-  const executedPermits = permits.permits || []
-  const policyChanges = permits.policy_changes || []
+  const buildReport = data.build_report || {}
+  const activation = data.activation_log || {}
+  const executedPermits = buildReport.permits || []
+  const policyChanges = buildReport.policy_changes || []
 
   return (
     <div className="stage-content build">
       <div className="activation-banner">
-        <div className="act-icon">◉</div>
+        <div className="act-icon">&#9673;</div>
         <h3>SPHERE ACTIVATED</h3>
         <div className="act-stats">
-          <span><strong>{(world.sqft_activated || 0).toLocaleString()}</strong> sqft</span>
-          <span><strong>{world.events_capacity || 0}</strong> capacity</span>
-          <span><strong>${(world.investment || 0).toLocaleString()}</strong> invested</span>
+          <span><strong>{(activation.sqft_activated || 0).toLocaleString()}</strong> sqft</span>
+          <span><strong>{activation.events_capacity || 0}</strong> capacity</span>
+          <span><strong>${(activation.investment || 0).toLocaleString()}</strong> invested</span>
         </div>
       </div>
 
@@ -395,11 +501,11 @@ function BuildStage({ data }) {
         </div>
       </div>
 
-      {world.features_installed?.length > 0 && (
+      {activation.features_installed?.length > 0 && (
         <div className="section-block">
           <h3 className="section-title">FEATURES INSTALLED</h3>
           <div className="installed-features">
-            {world.features_installed.map((f, i) => <span key={i} className="feature-tag installed">{f}</span>)}
+            {activation.features_installed.map((f, i) => <span key={i} className="feature-tag installed">{f}</span>)}
           </div>
         </div>
       )}
@@ -407,11 +513,12 @@ function BuildStage({ data }) {
   )
 }
 
-function MeasureStage({ data }) {
+function PostProductionStage({ data }) {
   if (!data) return null
-  const episodes = data.episodes?.episodes || []
-  const metrics = data.metrics || {}
-  const innovations = data.innovations || {}
+  const episodes = data.episode_timeline || []
+  const metrics = data.impact_dashboard || {}
+  const innovations = data.innovation_portfolio || {}
+  const ipOutputs = data.ip_outputs || []
 
   return (
     <div className="stage-content measure">
@@ -432,6 +539,10 @@ function MeasureStage({ data }) {
           <span className="mb-val">{metrics.community_rating || 0}</span>
           <span className="mb-label">community rating</span>
         </div>
+        <div className="metric-big">
+          <span className="mb-val">{metrics.property_value_impact_pct || 0}%</span>
+          <span className="mb-label">property value impact</span>
+        </div>
       </div>
 
       <div className="section-block">
@@ -445,22 +556,37 @@ function MeasureStage({ data }) {
         <h3 className="section-title">INNOVATIONS</h3>
         <div className="innovations-list">
           {(innovations.innovations || []).map((inn, i) => (
-            <div key={i} className="inn-item"><span className="inn-dot">◆</span>{inn}</div>
+            <div key={i} className="inn-item"><span className="inn-dot">&#9670;</span>{inn}</div>
           ))}
         </div>
+        {(innovations.protocols || []).length > 0 && (
+          <div className="protocols-list">
+            <h4>PROTOCOLS</h4>
+            {innovations.protocols.map((p, i) => (
+              <div key={i} className="protocol-item">{p}</div>
+            ))}
+          </div>
+        )}
       </div>
+
+      {/* IP Catalog */}
+      <IPCatalog ipOutputs={ipOutputs} />
     </div>
   )
 }
 
-function CompletionStage({ data }) {
+function DistributionStage({ data }) {
   if (!data) return null
   const chron = data.chron || {}
-  const metrics = data.metrics || {}
+  const metrics = data.impact_dashboard || {}
+  const chronBond = data.chron_bond || null
+  const ipCatalog = data.ip_catalog || []
+  const replication = data.replication_kit || {}
   const innovations = data.innovations || []
 
   return (
     <div className="stage-content completion">
+      {/* CHRON Reveal */}
       <div className="chron-reveal">
         <ChronRings dimensions={chron} size={240} />
         <div className="chron-total">
@@ -484,12 +610,41 @@ function CompletionStage({ data }) {
         ))}
       </div>
 
+      {/* Chron Bond */}
+      <BondTermSheet bond={chronBond} type="chron" />
+
+      {/* IP Catalog */}
+      <IPCatalog ipOutputs={ipCatalog} />
+
+      {/* Replication Kit */}
+      <div className="section-block">
+        <h3 className="section-title">REPLICATION KIT</h3>
+        <div className="replication-details">
+          <div className="rep-stat">
+            <span className="rs-label">Parcel Type</span>
+            <span className="rs-val">{replication.parcel_type || '—'}</span>
+          </div>
+          <div className="rep-stat">
+            <span className="rs-label">Zoning</span>
+            <span className="rs-val">{replication.zoning || '—'}</span>
+          </div>
+          <div className="rep-stat">
+            <span className="rs-label">Budget Tier</span>
+            <span className="rs-val">{replication.budget_tier?.replace(/_/g, ' ') || '—'}</span>
+          </div>
+          <div className="rep-stat">
+            <span className="rs-label">Transferable</span>
+            <span className="rs-val">{replication.transferable ? 'YES' : 'NO'}</span>
+          </div>
+        </div>
+      </div>
+
       {innovations.length > 0 && (
         <div className="section-block">
           <h3 className="section-title">INNOVATIONS PORTFOLIO</h3>
           <div className="innovations-list">
             {innovations.map((inn, i) => (
-              <div key={i} className="inn-item"><span className="inn-dot">◆</span>{inn}</div>
+              <div key={i} className="inn-item"><span className="inn-dot">&#9670;</span>{inn}</div>
             ))}
           </div>
         </div>
@@ -508,7 +663,6 @@ export default function SpheresGame({ player, production, onUpdate, onBack }) {
   const [fragmentData, setFragmentData] = useState(null)
   const contentRef = useRef(null)
 
-  // Fetch Fragment data for Philadelphia (parcel geography)
   useEffect(() => {
     fetch('/api/fragment/county/42101')
       .then(r => r.json())
@@ -554,7 +708,7 @@ export default function SpheresGame({ player, production, onUpdate, onBack }) {
 
   return (
     <div className="spheres-game">
-      {/* ── Fixed Header ────────────────────────────────────── */}
+      {/* Fixed Header */}
       <div className="game-header spheres">
         <div className="game-header-left">
           <button className="back-btn" onClick={onBack}>← GAMES</button>
@@ -584,7 +738,7 @@ export default function SpheresGame({ player, production, onUpdate, onBack }) {
         </div>
       </div>
 
-      {/* ── Stage Hero ──────────────────────────────────────── */}
+      {/* Stage Hero */}
       <div className="stage-hero spheres">
         <div className="stage-hero-bg spheres" />
         <div className="stage-hero-content">
@@ -605,7 +759,7 @@ export default function SpheresGame({ player, production, onUpdate, onBack }) {
         </div>
       </div>
 
-      {/* ── Content ─────────────────────────────────────────── */}
+      {/* Content */}
       <div className="game-content" ref={contentRef}>
         {lastMessage && (
           <div className="game-message spheres">
@@ -613,34 +767,34 @@ export default function SpheresGame({ player, production, onUpdate, onBack }) {
           </div>
         )}
 
-        {devData && <DiscoverStage data={devData} />}
+        {devData && <DevelopmentStage data={devData} />}
         {devData && fragmentData && <NeighborhoodContext fragments={fragmentData.fragments} />}
-        {preData && <DesignStage data={preData} />}
-        {prodData && <BuildStage data={prodData} />}
-        {postData && <MeasureStage data={postData} />}
-        {distData && <CompletionStage data={distData} />}
+        {preData && <PreProductionStage data={preData} />}
+        {prodData && <ProductionStage data={prodData} />}
+        {postData && <PostProductionStage data={postData} />}
+        {distData && <DistributionStage data={distData} />}
 
         {!devData && !isComplete && (
           <div className="empty-stage spheres">
-            <div className="empty-icon">◎</div>
-            <p>Begin discovery to research the parcel, zoning data, and neighborhood context for <strong>{production.subject}</strong>.</p>
+            <div className="empty-icon">&#9673;</div>
+            <p>Begin development to scout the location, assess rights, and structure the deal for <strong>{production.subject}</strong>.</p>
           </div>
         )}
       </div>
 
-      {/* ── Action Bar ──────────────────────────────────────── */}
+      {/* Action Bar */}
       <div className="game-action-bar spheres">
         {!isComplete ? (
           <button className="advance-btn spheres" onClick={handleAdvance} disabled={working}>
             {working ? (
               <><span className="spinner spheres" /><span>{currentStage.verb}...</span></>
             ) : (
-              <span>{currentStageIndex === 0 && !devData ? 'BEGIN DISCOVERY' : `ADVANCE → ${STAGES[Math.min(currentStageIndex + 1, 4)]?.label || 'COMPLETE'}`}</span>
+              <span>{currentStageIndex === 0 && !devData ? 'BEGIN DEVELOPMENT' : `ADVANCE → ${STAGES[Math.min(currentStageIndex + 1, 4)]?.label || 'COMPLETE'}`}</span>
             )}
           </button>
         ) : (
           <div className="complete-bar spheres">
-            <span className="complete-icon">◉</span>
+            <span className="complete-icon">&#9673;</span>
             <span>SPHERE COMPLETE — CHRON: {(runningChron?.total || 0).toFixed(1)}</span>
           </div>
         )}

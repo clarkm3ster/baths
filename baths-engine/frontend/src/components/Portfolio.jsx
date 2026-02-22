@@ -83,9 +83,9 @@ export default function Portfolio({ player }) {
   }, [])
 
   const cosmMin = portfolio.total_cosm ? Math.min(
-    portfolio.total_cosm.legal, portfolio.total_cosm.data,
-    portfolio.total_cosm.fiscal, portfolio.total_cosm.coordination,
-    portfolio.total_cosm.flourishing, portfolio.total_cosm.narrative
+    portfolio.total_cosm.rights, portfolio.total_cosm.research,
+    portfolio.total_cosm.budget, portfolio.total_cosm.package,
+    portfolio.total_cosm.deliverables, portfolio.total_cosm.pitch
   ) : 0
 
   const chronTotal = portfolio.total_chron
@@ -124,12 +124,12 @@ export default function Portfolio({ player }) {
             <div className="card-value cosm-value">{cosmMin.toFixed(1)}</div>
             {portfolio.total_cosm && (
               <div className="dimensions-list">
-                <DimensionBar label="Legal" value={portfolio.total_cosm.legal} color="var(--domes-primary)" />
-                <DimensionBar label="Data" value={portfolio.total_cosm.data} color="var(--domes-primary)" />
-                <DimensionBar label="Fiscal" value={portfolio.total_cosm.fiscal} color="var(--domes-primary)" />
-                <DimensionBar label="Coordination" value={portfolio.total_cosm.coordination} color="var(--domes-primary)" />
-                <DimensionBar label="Flourishing" value={portfolio.total_cosm.flourishing} color="var(--domes-primary)" />
-                <DimensionBar label="Narrative" value={portfolio.total_cosm.narrative} color="var(--domes-primary)" />
+                <DimensionBar label="Rights" value={portfolio.total_cosm.rights} color="var(--domes-primary)" />
+                <DimensionBar label="Research" value={portfolio.total_cosm.research} color="var(--domes-primary)" />
+                <DimensionBar label="Budget" value={portfolio.total_cosm.budget} color="var(--domes-primary)" />
+                <DimensionBar label="Package" value={portfolio.total_cosm.package} color="var(--domes-primary)" />
+                <DimensionBar label="Deliverables" value={portfolio.total_cosm.deliverables} color="var(--domes-primary)" />
+                <DimensionBar label="Pitch" value={portfolio.total_cosm.pitch} color="var(--domes-primary)" />
               </div>
             )}
           </div>
@@ -196,7 +196,7 @@ export default function Portfolio({ player }) {
                     {portfolio.domes_completed.map(prod => (
                       <div key={prod.production_id} className="production-item domes-item">
                         <div className="item-name">{prod.subject}</div>
-                        {prod.cosm && <div className="item-score">Cosm: {Math.min(prod.cosm.legal, prod.cosm.data, prod.cosm.fiscal, prod.cosm.coordination, prod.cosm.flourishing, prod.cosm.narrative).toFixed(1)}</div>}
+                        {prod.cosm && <div className="item-score">Cosm: {Math.min(prod.cosm.rights, prod.cosm.research, prod.cosm.budget, prod.cosm.package, prod.cosm.deliverables, prod.cosm.pitch).toFixed(1)}</div>}
                       </div>
                     ))}
                   </div>

@@ -456,3 +456,44 @@ h2.spheres { font-family: 'Orbitron'; font-size: 22px; font-weight: 700; color: 
 
 .nb-value { font-family: 'Orbitron'; font-size: 14px; font-weight: 700; color: var(--text-primary); }
 .nb-label { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ── IP Catalog (spheres) ─────────────────────────────────────── */
+
+.spheres-game .ip-catalog { background: linear-gradient(135deg, rgba(255, 109, 0, 0.03), rgba(255, 171, 0, 0.02)); border: 1px solid rgba(255, 109, 0, 0.1); padding: 20px; border-radius: 12px; }
+.spheres-game .ip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.spheres-game .ip-domain-group { background: rgba(255,255,255,0.015); border-radius: 8px; overflow: hidden; }
+.spheres-game .ip-domain-header { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-left: 3px solid; }
+.spheres-game .ip-domain-dot { width: 8px; height: 8px; border-radius: 50%; }
+.spheres-game .ip-domain-name { font-family: 'Exo 2'; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); }
+.spheres-game .ip-item { padding: 10px 14px; border-top: 1px solid rgba(255,255,255,0.03); }
+.spheres-game .ip-title { font-family: 'Rajdhani'; font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.spheres-game .ip-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; margin-top: 4px; }
+.spheres-game .ip-meta { display: flex; gap: 8px; margin-top: 6px; }
+.spheres-game .ip-format { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); background: rgba(255,255,255,0.04); padding: 2px 6px; border-radius: 3px; text-transform: capitalize; }
+.spheres-game .ip-driver { font-size: 10px; color: var(--text-dim); font-style: italic; }
+
+/* ── Bond Term Sheet (spheres) ────────────────────────────────── */
+
+.spheres-game .bond-term-sheet { background: linear-gradient(135deg, rgba(255, 109, 0, 0.03), rgba(0, 230, 118, 0.02)); border: 1px solid rgba(255, 109, 0, 0.12); padding: 20px; border-radius: 12px; margin-bottom: 24px; }
+.spheres-game .bond-header-row { display: flex; justify-content: space-between; align-items: center; margin: 12px 0; }
+.spheres-game .bond-id { font-family: 'Orbitron'; font-size: 14px; font-weight: 700; color: var(--text-primary); letter-spacing: 0.05em; }
+.spheres-game .bond-rating { font-family: 'Orbitron'; font-size: 28px; font-weight: 900; }
+.spheres-game .bond-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.spheres-game .bond-stat { display: flex; flex-direction: column; align-items: center; padding: 14px 8px; background: rgba(255,255,255,0.015); border-radius: 4px; text-align: center; }
+.spheres-game .bond-stat.primary { grid-column: span 3; padding: 20px; }
+.spheres-game .bs-val { font-family: 'Orbitron'; font-size: 16px; font-weight: 700; color: var(--text-primary); }
+.spheres-game .bond-stat.primary .bs-val { font-size: 28px; color: var(--spheres-primary); }
+.spheres-game .bs-label { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+
+/* ── Replication Kit (spheres) ────────────────────────────────── */
+
+.spheres-game .replication-details { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.spheres-game .rep-stat { display: flex; flex-direction: column; padding: 12px 14px; background: rgba(255,255,255,0.015); border-radius: 4px; }
+.spheres-game .rs-label { font-family: 'Exo 2'; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }
+.spheres-game .rs-val { font-family: 'Orbitron'; font-size: 14px; font-weight: 600; color: var(--text-primary); margin-top: 4px; }
+
+/* ── Protocols ────────────────────────────────────────────────── */
+
+.protocols-list { margin-top: 12px; }
+.protocols-list h4 { font-family: 'Exo 2'; font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+.spheres-game .protocol-item { font-size: 12px; color: var(--text-secondary); line-height: 1.5; padding: 8px 12px; margin-bottom: 6px; background: rgba(255,255,255,0.02); border-radius: 4px; }
