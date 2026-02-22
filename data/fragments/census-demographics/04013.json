@@ -1,0 +1,19 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "04013",
+  "county_name": "Maricopa County (Phoenix), AZ",
+  "scraped_at": "2026-02-22T08:28:02.018Z",
+  "data": {
+    "total_pop": 4430871,
+    "median_age": 37.1,
+    "male_pop": 2208150,
+    "female_pop": 2222721,
+    "white_alone": 2954182,
+    "black_alone": 252690,
+    "asian_alone": 189627,
+    "hispanic_latino": 1402753,
+    "foreign_born": 643020
+  }
+}

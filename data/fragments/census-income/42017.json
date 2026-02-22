@@ -1,0 +1,18 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "42017",
+  "county_name": "Bucks County, PA",
+  "scraped_at": "2026-02-22T08:28:16.587Z",
+  "data": {
+    "median_household_income": 107826,
+    "per_capita_income": 54930,
+    "poverty_total": 636367,
+    "poverty_below": 35830,
+    "gini_index": 0.4446,
+    "snap_households": 16649,
+    "public_assistance_income": 4564,
+    "ssi_income": 9381
+  }
+}

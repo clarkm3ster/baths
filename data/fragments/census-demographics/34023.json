@@ -1,0 +1,19 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "34023",
+  "county_name": "Middlesex County, NJ",
+  "scraped_at": "2026-02-22T08:28:13.608Z",
+  "data": {
+    "total_pop": 860147,
+    "median_age": 39.1,
+    "male_pop": 427707,
+    "female_pop": 432440,
+    "white_alone": 411593,
+    "black_alone": 87996,
+    "asian_alone": 214701,
+    "hispanic_latino": 191469,
+    "foreign_born": 293352
+  }
+}

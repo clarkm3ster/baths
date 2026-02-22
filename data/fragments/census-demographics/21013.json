@@ -1,0 +1,19 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "21013",
+  "county_name": "Bell County, KY",
+  "scraped_at": "2026-02-22T08:28:06.832Z",
+  "data": {
+    "total_pop": 24248,
+    "median_age": 41.5,
+    "male_pop": 12167,
+    "female_pop": 12081,
+    "white_alone": 22897,
+    "black_alone": 469,
+    "asian_alone": 28,
+    "hispanic_latino": 329,
+    "foreign_born": 50
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "01073",
+  "county_name": "Jefferson County (Birmingham), AL",
+  "scraped_at": "2026-02-22T08:28:09.324Z",
+  "data": {
+    "total_pop": 672265,
+    "median_age": 37.9,
+    "male_pop": 319713,
+    "female_pop": 352552,
+    "white_alone": 338374,
+    "black_alone": 287203,
+    "asian_alone": 11712,
+    "hispanic_latino": 27950,
+    "foreign_born": 26358
+  }
+}

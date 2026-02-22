@@ -1,0 +1,19 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "42029",
+  "county_name": "Chester County, PA",
+  "scraped_at": "2026-02-22T08:27:57.600Z",
+  "data": {
+    "total_pop": 536474,
+    "median_age": 40.7,
+    "male_pop": 266330,
+    "female_pop": 270144,
+    "white_alone": 431632,
+    "black_alone": 29302,
+    "asian_alone": 33658,
+    "hispanic_latino": 40883,
+    "foreign_born": 51838
+  }
+}

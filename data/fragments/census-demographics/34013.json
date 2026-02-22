@@ -1,0 +1,19 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "34013",
+  "county_name": "Essex County, NJ",
+  "scraped_at": "2026-02-22T08:28:11.745Z",
+  "data": {
+    "total_pop": 853374,
+    "median_age": 37.6,
+    "male_pop": 414982,
+    "female_pop": 438392,
+    "white_alone": 302714,
+    "black_alone": 322188,
+    "asian_alone": 48695,
+    "hispanic_latino": 204966,
+    "foreign_born": 247376
+  }
+}

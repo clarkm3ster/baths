@@ -1,0 +1,348 @@
+{
+  "fips": "34013",
+  "county_name": "Essex County, NJ",
+  "profile": {
+    "id": "median",
+    "name": "Median",
+    "age": 38,
+    "income": 59540,
+    "household": 2,
+    "children": 1,
+    "description": "Benchmark"
+  },
+  "assembled_at": "2026-02-22T08:28:20.896Z",
+  "fragments_used": 1,
+  "fragment_sources": [
+    "census-demographics"
+  ],
+  "eligible_programs": [],
+  "program_count": 0,
+  "fragmented_cost": 0,
+  "coordinated_cost": 0,
+  "delta": 0,
+  "cost_detail": {
+    "fragmented": 0,
+    "coordinated": 0,
+    "delta": 0,
+    "admin_overhead": 0
+  },
+  "cosm": 0,
+  "cosm_average": 13,
+  "domain_coverage": {
+    "health": {
+      "score": 0,
+      "raw_score": 0,
+      "max_score": 100,
+      "note": null
+    },
+    "housing": {
+      "score": 0,
+      "raw_score": 0,
+      "max_score": 100,
+      "note": null
+    },
+    "economics": {
+      "score": 0,
+      "raw_score": 0,
+      "max_score": 100,
+      "note": null
+    },
+    "education": {
+      "score": 0,
+      "raw_score": 0,
+      "max_score": 100,
+      "note": null
+    },
+    "nutrition": {
+      "score": 0,
+      "raw_score": 0,
+      "max_score": 100,
+      "note": null
+    },
+    "safety": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": null
+    },
+    "transportation": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": null
+    },
+    "infrastructure": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": null
+    },
+    "environment": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": null
+    },
+    "legal": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": "Legal framework data not yet scraped — future fragment source"
+    },
+    "community": {
+      "score": 90,
+      "raw_score": 90,
+      "max_score": 100,
+      "note": null
+    },
+    "purpose": {
+      "score": 10,
+      "raw_score": 10,
+      "max_score": 100,
+      "note": null
+    }
+  },
+  "gaps": [
+    {
+      "domain": "health",
+      "type": "fragment",
+      "missing": [
+        "census-health-insurance",
+        "census-disability"
+      ]
+    },
+    {
+      "domain": "health",
+      "type": "condition",
+      "missing": [
+        "uninsured_estimate",
+        "disability_rate",
+        "medicaid_enrolled"
+      ]
+    },
+    {
+      "domain": "housing",
+      "type": "fragment",
+      "missing": [
+        "census-housing",
+        "census-rent-burden",
+        "hud-fmr"
+      ]
+    },
+    {
+      "domain": "housing",
+      "type": "condition",
+      "missing": [
+        "median_rent",
+        "vacancy_rate",
+        "ownership_rate",
+        "rent_burdened_pct"
+      ]
+    },
+    {
+      "domain": "economics",
+      "type": "fragment",
+      "missing": [
+        "census-income",
+        "census-employment",
+        "bls-unemployment"
+      ]
+    },
+    {
+      "domain": "economics",
+      "type": "condition",
+      "missing": [
+        "median_household_income",
+        "poverty_rate",
+        "unemployment_rate",
+        "gini_index"
+      ]
+    },
+    {
+      "domain": "education",
+      "type": "fragment",
+      "missing": [
+        "census-education"
+      ]
+    },
+    {
+      "domain": "education",
+      "type": "condition",
+      "missing": [
+        "bachelors_plus_pct"
+      ]
+    },
+    {
+      "domain": "nutrition",
+      "type": "fragment",
+      "missing": [
+        "census-income",
+        "usda-food-access"
+      ]
+    },
+    {
+      "domain": "nutrition",
+      "type": "condition",
+      "missing": [
+        "snap_households"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "fragment",
+      "missing": [
+        "fbi-crime",
+        "fema-disasters"
+      ]
+    },
+    {
+      "domain": "safety",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "transportation",
+      "type": "fragment",
+      "missing": [
+        "census-commute"
+      ]
+    },
+    {
+      "domain": "transportation",
+      "type": "condition",
+      "missing": [
+        "public_transit_pct",
+        "no_vehicle_pct",
+        "work_from_home_pct"
+      ]
+    },
+    {
+      "domain": "infrastructure",
+      "type": "fragment",
+      "missing": [
+        "census-internet"
+      ]
+    },
+    {
+      "domain": "infrastructure",
+      "type": "condition",
+      "missing": [
+        "broadband_pct",
+        "no_internet_pct"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "fragment",
+      "missing": [
+        "epa-air-quality"
+      ]
+    },
+    {
+      "domain": "environment",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "fragment",
+      "missing": [
+        "no sources defined"
+      ]
+    },
+    {
+      "domain": "legal",
+      "type": "condition",
+      "missing": [
+        "no conditions defined"
+      ]
+    },
+    {
+      "domain": "purpose",
+      "type": "fragment",
+      "missing": [
+        "census-education",
+        "census-employment"
+      ]
+    },
+    {
+      "domain": "purpose",
+      "type": "condition",
+      "missing": [
+        "bachelors_plus_pct",
+        "unemployment_rate"
+      ]
+    }
+  ],
+  "gap_count": 22,
+  "conditions": {
+    "total_population": 853374,
+    "median_age": 37.6
+  },
+  "panels": {
+    "health": {
+      "score": 0,
+      "programs": [],
+      "program_value": 0
+    },
+    "housing": {
+      "score": 0,
+      "programs": [],
+      "program_value": 0
+    },
+    "economics": {
+      "score": 0,
+      "programs": [],
+      "program_value": 0
+    },
+    "education": {
+      "score": 0,
+      "programs": [],
+      "program_value": 0
+    },
+    "nutrition": {
+      "score": 0,
+      "programs": [],
+      "program_value": 0
+    },
+    "safety": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "transportation": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "infrastructure": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "environment": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "legal": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    },
+    "community": {
+      "score": 90,
+      "programs": [],
+      "program_value": 0
+    },
+    "purpose": {
+      "score": 10,
+      "programs": [],
+      "program_value": 0
+    }
+  }
+}

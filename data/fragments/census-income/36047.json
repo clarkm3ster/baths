@@ -1,0 +1,18 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "36047",
+  "county_name": "Kings County (Brooklyn), NY",
+  "scraped_at": "2026-02-22T08:28:18.591Z",
+  "data": {
+    "median_household_income": 74692,
+    "per_capita_income": 43165,
+    "poverty_total": 2653797,
+    "poverty_below": 503524,
+    "gini_index": 0.5301,
+    "snap_households": 216957,
+    "public_assistance_income": 55946,
+    "ssi_income": 79465
+  }
+}

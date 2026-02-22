@@ -2,12 +2,16 @@
   "census-demographics": {
     "label": "Census demographics",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-22T08:28:20.682Z",
+    "total_scrapes": null,
+    "counties_covered": 28
   },
   "census-income": {
     "label": "Census income",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-22T08:28:20.682Z",
+    "total_scrapes": null,
+    "counties_covered": 12
   },
   "census-housing": {
     "label": "Census housing",
