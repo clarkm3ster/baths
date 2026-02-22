@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "12086",
+  "county_name": "Miami-Dade County, FL",
+  "scraped_at": "2026-02-22T16:26:02.027Z",
+  "data": {
+    "rent_total": 458539,
+    "rent_30_35_pct": 41892,
+    "rent_35_40_pct": 32154,
+    "rent_40_50_pct": 49632,
+    "rent_50_plus_pct": 150086,
+    "rent_not_computed": 24491
+  }
+}

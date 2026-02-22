@@ -1,0 +1,18 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "26163",
+  "county_name": "Wayne County (Detroit), MI",
+  "scraped_at": "2026-02-22T16:25:49.288Z",
+  "data": {
+    "total_units": 792169,
+    "occupied_units": 688461,
+    "vacant_units": 103708,
+    "owner_occupied": 440701,
+    "renter_occupied": 247760,
+    "median_home_value": 158600,
+    "median_gross_rent": 1043,
+    "median_monthly_housing_cost": 999
+  }
+}

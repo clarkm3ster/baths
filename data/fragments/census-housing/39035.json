@@ -1,0 +1,18 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "39035",
+  "county_name": "Cuyahoga County (Cleveland), OH",
+  "scraped_at": "2026-02-22T16:25:50.113Z",
+  "data": {
+    "total_units": 615881,
+    "occupied_units": 552421,
+    "vacant_units": 63460,
+    "owner_occupied": 322866,
+    "renter_occupied": 229555,
+    "median_home_value": 168700,
+    "median_gross_rent": 952,
+    "median_monthly_housing_cost": 1021
+  }
+}

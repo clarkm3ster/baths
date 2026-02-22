@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "21013",
+  "county_name": "Bell County, KY",
+  "scraped_at": "2026-02-22T16:26:05.414Z",
+  "data": {
+    "rent_total": 3490,
+    "rent_30_35_pct": 264,
+    "rent_35_40_pct": 323,
+    "rent_40_50_pct": 256,
+    "rent_50_plus_pct": 684,
+    "rent_not_computed": 685
+  }
+}

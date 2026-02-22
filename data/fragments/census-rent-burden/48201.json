@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "48201",
+  "county_name": "Harris County (Houston), TX",
+  "scraped_at": "2026-02-22T16:25:59.547Z",
+  "data": {
+    "rent_total": 768193,
+    "rent_30_35_pct": 67169,
+    "rent_35_40_pct": 55128,
+    "rent_40_50_pct": 71826,
+    "rent_50_plus_pct": 184454,
+    "rent_not_computed": 38617
+  }
+}

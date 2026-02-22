@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "36047",
+  "county_name": "Kings County (Brooklyn), NY",
+  "scraped_at": "2026-02-22T16:25:57.083Z",
+  "data": {
+    "rent_total": 695452,
+    "rent_30_35_pct": 59734,
+    "rent_35_40_pct": 43044,
+    "rent_40_50_pct": 54936,
+    "rent_50_plus_pct": 185901,
+    "rent_not_computed": 32771
+  }
+}

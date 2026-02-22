@@ -10,11 +10,13 @@
     "children": 1,
     "description": "Benchmark"
   },
-  "assembled_at": "2026-02-22T12:42:36.045Z",
-  "fragments_used": 2,
+  "assembled_at": "2026-02-22T16:26:11.348Z",
+  "fragments_used": 4,
   "fragment_sources": [
     "census-demographics",
-    "census-income"
+    "census-housing",
+    "census-income",
+    "census-rent-burden"
   ],
   "eligible_programs": [],
   "program_count": 0,
@@ -28,7 +30,7 @@
     "admin_overhead": 0
   },
   "cosm": 0,
-  "cosm_average": 21,
+  "cosm_average": 27,
   "domain_coverage": {
     "health": {
       "score": 0,
@@ -37,8 +39,8 @@
       "note": null
     },
     "housing": {
-      "score": 0,
-      "raw_score": 0,
+      "score": 67,
+      "raw_score": 67,
       "max_score": 100,
       "note": null
     },
@@ -125,19 +127,7 @@
       "domain": "housing",
       "type": "fragment",
       "missing": [
-        "census-housing",
-        "census-rent-burden",
         "hud-fmr"
-      ]
-    },
-    {
-      "domain": "housing",
-      "type": "condition",
-      "missing": [
-        "median_rent",
-        "vacancy_rate",
-        "ownership_rate",
-        "rent_burdened_pct"
       ]
     },
     {
@@ -267,8 +257,14 @@
       ]
     }
   ],
-  "gap_count": 21,
+  "gap_count": 20,
   "conditions": {
+    "median_rent": 1043,
+    "median_home_value": 158600,
+    "vacancy_rate": 13.1,
+    "ownership_rate": 64,
+    "rent_burdened_pct": 48.5,
+    "severely_burdened_pct": 26.9,
     "median_household_income": 57223,
     "per_capita_income": 32643,
     "poverty_rate": 20.2,
@@ -284,7 +280,7 @@
       "program_value": 0
     },
     "housing": {
-      "score": 0,
+      "score": 67,
       "programs": [],
       "program_value": 0
     },

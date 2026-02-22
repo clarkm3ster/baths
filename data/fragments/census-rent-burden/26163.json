@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "26163",
+  "county_name": "Wayne County (Detroit), MI",
+  "scraped_at": "2026-02-22T16:26:08.785Z",
+  "data": {
+    "rent_total": 247760,
+    "rent_30_35_pct": 20787,
+    "rent_35_40_pct": 13935,
+    "rent_40_50_pct": 18756,
+    "rent_50_plus_pct": 66563,
+    "rent_not_computed": 22532
+  }
+}

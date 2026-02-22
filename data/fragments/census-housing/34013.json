@@ -1,0 +1,18 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "34013",
+  "county_name": "Essex County, NJ",
+  "scraped_at": "2026-02-22T16:25:50.974Z",
+  "data": {
+    "total_units": 334136,
+    "occupied_units": 312942,
+    "vacant_units": 21194,
+    "owner_occupied": 139811,
+    "renter_occupied": 173131,
+    "median_home_value": 466500,
+    "median_gross_rent": 1404,
+    "median_monthly_housing_cost": 1719
+  }
+}

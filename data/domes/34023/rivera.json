@@ -10,10 +10,11 @@
     "children": 3,
     "description": "Benefits cliff"
   },
-  "assembled_at": "2026-02-22T12:42:36.065Z",
-  "fragments_used": 2,
+  "assembled_at": "2026-02-22T16:26:11.382Z",
+  "fragments_used": 3,
   "fragment_sources": [
     "census-demographics",
+    "census-housing",
     "census-income"
   ],
   "eligible_programs": [
@@ -30,8 +31,8 @@
       "eligible": true,
       "threshold": "50% Area Median Income",
       "income_limit": 52603,
-      "annual_value": 0,
-      "monthly_value": 0,
+      "annual_value": 5268,
+      "monthly_value": 439,
       "category": "housing",
       "note": "Extreme waitlist — average 2-5 year wait nationwide"
     },
@@ -70,21 +71,21 @@
     }
   ],
   "program_count": 6,
-  "fragmented_cost": 22825,
-  "coordinated_cost": 13695,
-  "delta": 9130,
+  "fragmented_cost": 29674,
+  "coordinated_cost": 17804,
+  "delta": 11870,
   "cost_detail": {
-    "fragmented": 22825,
-    "coordinated": 13695,
-    "delta": 9130,
-    "direct_benefit_value": 17558,
-    "admin_overhead": 5267,
+    "fragmented": 29674,
+    "coordinated": 17804,
+    "delta": 11870,
+    "direct_benefit_value": 22826,
+    "admin_overhead": 6848,
     "admin_overhead_rate": 0.3,
     "coordination_savings_rate": 0.4,
     "program_count": 6
   },
   "cosm": 0,
-  "cosm_average": 25,
+  "cosm_average": 29,
   "domain_coverage": {
     "health": {
       "score": 10,
@@ -93,8 +94,8 @@
       "note": null
     },
     "housing": {
-      "score": 20,
-      "raw_score": 20,
+      "score": 63,
+      "raw_score": 63,
       "max_score": 100,
       "note": null
     },
@@ -181,7 +182,6 @@
       "domain": "housing",
       "type": "fragment",
       "missing": [
-        "census-housing",
         "census-rent-burden",
         "hud-fmr"
       ]
@@ -190,9 +190,6 @@
       "domain": "housing",
       "type": "condition",
       "missing": [
-        "median_rent",
-        "vacancy_rate",
-        "ownership_rate",
         "rent_burdened_pct"
       ]
     },
@@ -325,6 +322,10 @@
   ],
   "gap_count": 21,
   "conditions": {
+    "median_rent": 1739,
+    "median_home_value": 411900,
+    "vacancy_rate": 4.1,
+    "ownership_rate": 63.8,
     "median_household_income": 105206,
     "per_capita_income": 47196,
     "poverty_rate": 8.4,
@@ -342,12 +343,12 @@
       "program_value": 8400
     },
     "housing": {
-      "score": 20,
+      "score": 63,
       "programs": [
         "Section 8 HCV",
         "LIHEAP"
       ],
-      "program_value": 500
+      "program_value": 5768
     },
     "economics": {
       "score": 50,

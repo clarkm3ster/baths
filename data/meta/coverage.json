@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-22T12:42:35.833Z",
+  "generated_at": "2026-02-22T16:26:10.943Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 125,
+  "total_fragments": 155,
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
@@ -21,13 +21,13 @@
     "census-housing": {
       "label": "Census Housing",
       "api": "Census ACS 5-year",
-      "fragments": 19,
+      "fragments": 28,
       "gap": false
     },
     "census-rent-burden": {
       "label": "Census Rent Burden",
       "api": "Census ACS 5-year",
-      "fragments": 5,
+      "fragments": 26,
       "gap": false
     },
     "census-health-insurance": {
@@ -112,18 +112,18 @@
   "by_county": {
     "11001": {
       "name": "District of Columbia",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "12086": {
       "name": "Miami-Dade County, FL",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "13121": {
       "name": "Fulton County (Atlanta), GA",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "17031": {
       "name": "Cook County (Chicago), IL",
@@ -132,8 +132,8 @@
     },
     "21013": {
       "name": "Bell County, KY",
-      "fragments": 2,
-      "coverage_pct": 12
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "24510": {
       "name": "Baltimore City, MD",
@@ -142,38 +142,38 @@
     },
     "26163": {
       "name": "Wayne County (Detroit), MI",
-      "fragments": 2,
-      "coverage_pct": 12
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "28049": {
       "name": "Hinds County (Jackson), MS",
-      "fragments": 2,
-      "coverage_pct": 12
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "34013": {
       "name": "Essex County, NJ",
-      "fragments": 2,
-      "coverage_pct": 12
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "34017": {
       "name": "Hudson County, NJ",
-      "fragments": 2,
-      "coverage_pct": 12
+      "fragments": 3,
+      "coverage_pct": 18
     },
     "34023": {
       "name": "Middlesex County, NJ",
-      "fragments": 2,
-      "coverage_pct": 12
+      "fragments": 3,
+      "coverage_pct": 18
     },
     "36005": {
       "name": "Bronx County, NY",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "36047": {
       "name": "Kings County (Brooklyn), NY",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "36061": {
       "name": "New York County (Manhattan), NY",
@@ -182,33 +182,33 @@
     },
     "36081": {
       "name": "Queens County, NY",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "39035": {
       "name": "Cuyahoga County (Cleveland), OH",
-      "fragments": 2,
-      "coverage_pct": 12
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "42017": {
       "name": "Bucks County, PA",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "42029": {
       "name": "Chester County, PA",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "42045": {
       "name": "Delaware County, PA",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "42091": {
       "name": "Montgomery County, PA",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "42101": {
       "name": "Philadelphia, PA",
@@ -217,23 +217,23 @@
     },
     "48113": {
       "name": "Dallas County, TX",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "48201": {
       "name": "Harris County (Houston), TX",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "53033": {
       "name": "King County (Seattle), WA",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "54055": {
       "name": "Mercer County, WV",
-      "fragments": 2,
-      "coverage_pct": 12
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "06037": {
       "name": "Los Angeles County, CA",
@@ -242,13 +242,13 @@
     },
     "04013": {
       "name": "Maricopa County (Phoenix), AZ",
-      "fragments": 3,
-      "coverage_pct": 18
+      "fragments": 4,
+      "coverage_pct": 24
     },
     "01073": {
       "name": "Jefferson County (Birmingham), AL",
-      "fragments": 2,
-      "coverage_pct": 12
+      "fragments": 4,
+      "coverage_pct": 24
     }
   }
 }

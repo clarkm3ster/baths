@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "54055",
+  "county_name": "Mercer County, WV",
+  "scraped_at": "2026-02-22T16:26:06.240Z",
+  "data": {
+    "rent_total": 7353,
+    "rent_30_35_pct": 780,
+    "rent_35_40_pct": 455,
+    "rent_40_50_pct": 660,
+    "rent_50_plus_pct": 1101,
+    "rent_not_computed": 1505
+  }
+}

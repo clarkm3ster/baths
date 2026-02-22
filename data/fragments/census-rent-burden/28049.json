@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "28049",
+  "county_name": "Hinds County (Jackson), MS",
+  "scraped_at": "2026-02-22T16:26:07.122Z",
+  "data": {
+    "rent_total": 37820,
+    "rent_30_35_pct": 3052,
+    "rent_35_40_pct": 2827,
+    "rent_40_50_pct": 3535,
+    "rent_50_plus_pct": 9495,
+    "rent_not_computed": 3585
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "13121",
+  "county_name": "Fulton County (Atlanta), GA",
+  "scraped_at": "2026-02-22T16:26:02.905Z",
+  "data": {
+    "rent_total": 208807,
+    "rent_30_35_pct": 16659,
+    "rent_35_40_pct": 12637,
+    "rent_40_50_pct": 18649,
+    "rent_50_plus_pct": 50097,
+    "rent_not_computed": 8466
+  }
+}

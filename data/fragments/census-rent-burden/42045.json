@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "42045",
+  "county_name": "Delaware County, PA",
+  "scraped_at": "2026-02-22T16:25:53.607Z",
+  "data": {
+    "rent_total": 67184,
+    "rent_30_35_pct": 6055,
+    "rent_35_40_pct": 4833,
+    "rent_40_50_pct": 5258,
+    "rent_50_plus_pct": 18043,
+    "rent_not_computed": 2812
+  }
+}

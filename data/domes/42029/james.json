@@ -10,12 +10,13 @@
     "children": 0,
     "description": "Elderly disabled"
   },
-  "assembled_at": "2026-02-22T12:42:35.949Z",
-  "fragments_used": 3,
+  "assembled_at": "2026-02-22T16:26:11.254Z",
+  "fragments_used": 4,
   "fragment_sources": [
     "census-demographics",
     "census-housing",
-    "census-income"
+    "census-income",
+    "census-rent-burden"
   ],
   "eligible_programs": [
     {
@@ -78,7 +79,7 @@
     "program_count": 5
   },
   "cosm": 0,
-  "cosm_average": 28,
+  "cosm_average": 30,
   "domain_coverage": {
     "health": {
       "score": 10,
@@ -87,8 +88,8 @@
       "note": null
     },
     "housing": {
-      "score": 63,
-      "raw_score": 63,
+      "score": 87,
+      "raw_score": 87,
       "max_score": 100,
       "note": null
     },
@@ -175,15 +176,7 @@
       "domain": "housing",
       "type": "fragment",
       "missing": [
-        "census-rent-burden",
         "hud-fmr"
-      ]
-    },
-    {
-      "domain": "housing",
-      "type": "condition",
-      "missing": [
-        "rent_burdened_pct"
       ]
     },
     {
@@ -313,12 +306,14 @@
       ]
     }
   ],
-  "gap_count": 21,
+  "gap_count": 20,
   "conditions": {
     "median_rent": 1601,
     "median_home_value": 435000,
     "vacancy_rate": 3.9,
     "ownership_rate": 74.6,
+    "rent_burdened_pct": 42.8,
+    "severely_burdened_pct": 20.6,
     "median_household_income": 118574,
     "per_capita_income": 60599,
     "poverty_rate": 6,
@@ -336,7 +331,7 @@
       "program_value": 12000
     },
     "housing": {
-      "score": 63,
+      "score": 87,
       "programs": [
         "Section 8 HCV",
         "LIHEAP"

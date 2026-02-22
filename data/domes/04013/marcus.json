@@ -10,12 +10,13 @@
     "children": 2,
     "description": "Single dad, systems-heavy"
   },
-  "assembled_at": "2026-02-22T12:42:35.985Z",
-  "fragments_used": 3,
+  "assembled_at": "2026-02-22T16:26:11.290Z",
+  "fragments_used": 4,
   "fragment_sources": [
     "census-demographics",
     "census-housing",
-    "census-income"
+    "census-income",
+    "census-rent-burden"
   ],
   "eligible_programs": [
     {
@@ -103,7 +104,7 @@
     "program_count": 8
   },
   "cosm": 0,
-  "cosm_average": 30,
+  "cosm_average": 32,
   "domain_coverage": {
     "health": {
       "score": 20,
@@ -112,8 +113,8 @@
       "note": null
     },
     "housing": {
-      "score": 63,
-      "raw_score": 63,
+      "score": 87,
+      "raw_score": 87,
       "max_score": 100,
       "note": null
     },
@@ -200,15 +201,7 @@
       "domain": "housing",
       "type": "fragment",
       "missing": [
-        "census-rent-burden",
         "hud-fmr"
-      ]
-    },
-    {
-      "domain": "housing",
-      "type": "condition",
-      "missing": [
-        "rent_burdened_pct"
       ]
     },
     {
@@ -338,12 +331,14 @@
       ]
     }
   ],
-  "gap_count": 21,
+  "gap_count": 20,
   "conditions": {
     "median_rent": 1437,
     "median_home_value": 371400,
     "vacancy_rate": 8.6,
     "ownership_rate": 64.3,
+    "rent_burdened_pct": 47,
+    "severely_burdened_pct": 22.4,
     "median_household_income": 80675,
     "per_capita_income": 41533,
     "poverty_rate": 11.5,
@@ -362,7 +357,7 @@
       "program_value": 14100
     },
     "housing": {
-      "score": 63,
+      "score": 87,
       "programs": [
         "Section 8 HCV",
         "LIHEAP"

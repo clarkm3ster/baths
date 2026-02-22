@@ -10,11 +10,13 @@
     "children": 3,
     "description": "Benefits cliff"
   },
-  "assembled_at": "2026-02-22T12:42:36.038Z",
-  "fragments_used": 2,
+  "assembled_at": "2026-02-22T16:26:11.340Z",
+  "fragments_used": 4,
   "fragment_sources": [
     "census-demographics",
-    "census-income"
+    "census-housing",
+    "census-income",
+    "census-rent-burden"
   ],
   "eligible_programs": [
     {
@@ -74,7 +76,7 @@
     "program_count": 5
   },
   "cosm": 0,
-  "cosm_average": 24,
+  "cosm_average": 30,
   "domain_coverage": {
     "health": {
       "score": 10,
@@ -83,8 +85,8 @@
       "note": null
     },
     "housing": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 77,
+      "raw_score": 77,
       "max_score": 100,
       "note": null
     },
@@ -171,19 +173,7 @@
       "domain": "housing",
       "type": "fragment",
       "missing": [
-        "census-housing",
-        "census-rent-burden",
         "hud-fmr"
-      ]
-    },
-    {
-      "domain": "housing",
-      "type": "condition",
-      "missing": [
-        "median_rent",
-        "vacancy_rate",
-        "ownership_rate",
-        "rent_burdened_pct"
       ]
     },
     {
@@ -313,8 +303,14 @@
       ]
     }
   ],
-  "gap_count": 21,
+  "gap_count": 20,
   "conditions": {
+    "median_rent": 1086,
+    "median_home_value": 208900,
+    "vacancy_rate": 13.8,
+    "ownership_rate": 64.1,
+    "rent_burdened_pct": 48,
+    "severely_burdened_pct": 24.9,
     "median_household_income": 63595,
     "per_capita_income": 38224,
     "poverty_rate": 15.9,
@@ -332,7 +328,7 @@
       "program_value": 8400
     },
     "housing": {
-      "score": 10,
+      "score": 77,
       "programs": [
         "LIHEAP"
       ],
