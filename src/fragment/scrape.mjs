@@ -614,7 +614,7 @@ function getAllSources() {
 
 // ── Scheduling — breadth first, oldest first ─────────────────────────────────
 
-function pickWork(sources, counties, limit = 30) {
+function pickWork(sources, counties, limit = 100) {
   const pairs = []
 
   for (const source of sources) {
