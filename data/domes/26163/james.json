@@ -10,10 +10,11 @@
     "children": 0,
     "description": "Elderly disabled"
   },
-  "assembled_at": "2026-02-23T01:56:05.077Z",
-  "fragments_used": 4,
+  "assembled_at": "2026-02-23T05:24:11.389Z",
+  "fragments_used": 5,
   "fragment_sources": [
     "census-demographics",
+    "census-disability",
     "census-housing",
     "census-income",
     "census-rent-burden"
@@ -79,11 +80,11 @@
     "program_count": 5
   },
   "cosm": 0,
-  "cosm_average": 30,
+  "cosm_average": 33,
   "domain_coverage": {
     "health": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 43,
+      "raw_score": 43,
       "max_score": 100,
       "note": null
     },
@@ -159,8 +160,7 @@
       "domain": "health",
       "type": "fragment",
       "missing": [
-        "census-health-insurance",
-        "census-disability"
+        "census-health-insurance"
       ]
     },
     {
@@ -168,7 +168,6 @@
       "type": "condition",
       "missing": [
         "uninsured_estimate",
-        "disability_rate",
         "medicaid_enrolled"
       ]
     },
@@ -320,11 +319,12 @@
     "gini_index": 0.4903,
     "snap_households": 151138,
     "total_population": 1781641,
-    "median_age": 37.7
+    "median_age": 37.7,
+    "disability_rate": 0
   },
   "panels": {
     "health": {
-      "score": 10,
+      "score": 43,
       "programs": [
         "Medicaid"
       ],

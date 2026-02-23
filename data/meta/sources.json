@@ -35,9 +35,9 @@
   "census-disability": {
     "label": "Census disability",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-23T01:56:04.872Z",
-    "total_scrapes": 7,
-    "counties_covered": 17
+    "last_scraped": "2026-02-23T05:24:11.174Z",
+    "total_scrapes": 14,
+    "counties_covered": 24
   },
   "census-education": {
     "label": "Census education",

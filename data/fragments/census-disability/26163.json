@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "26163",
+  "county_name": "Wayne County (Detroit), MI",
+  "scraped_at": "2026-02-23T05:24:10.674Z",
+  "data": {
+    "total_disability_pop": 1770251,
+    "male_with_disability": 510,
+    "female_with_disability": 366,
+    "disability_under5": 58306,
+    "disability_5_17": 156505,
+    "disability_18_34": 202878,
+    "disability_65_74": 75851,
+    "disability_75_plus": 42661
+  }
+}

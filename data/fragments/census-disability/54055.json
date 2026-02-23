@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "54055",
+  "county_name": "Mercer County, WV",
+  "scraped_at": "2026-02-23T05:24:08.294Z",
+  "data": {
+    "total_disability_pop": 59036,
+    "male_with_disability": 0,
+    "female_with_disability": 8,
+    "disability_under5": 1627,
+    "disability_5_17": 4659,
+    "disability_18_34": 6095,
+    "disability_65_74": 3580,
+    "disability_75_plus": 2210
+  }
+}

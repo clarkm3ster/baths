@@ -10,10 +10,11 @@
     "children": 0,
     "description": "Aged out of foster care"
   },
-  "assembled_at": "2026-02-23T01:56:05.073Z",
-  "fragments_used": 4,
+  "assembled_at": "2026-02-23T05:24:11.385Z",
+  "fragments_used": 5,
   "fragment_sources": [
     "census-demographics",
+    "census-disability",
     "census-housing",
     "census-income",
     "census-rent-burden"
@@ -87,11 +88,11 @@
     "program_count": 6
   },
   "cosm": 10,
-  "cosm_average": 31,
+  "cosm_average": 34,
   "domain_coverage": {
     "health": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 43,
+      "raw_score": 43,
       "max_score": 100,
       "note": null
     },
@@ -167,8 +168,7 @@
       "domain": "health",
       "type": "fragment",
       "missing": [
-        "census-health-insurance",
-        "census-disability"
+        "census-health-insurance"
       ]
     },
     {
@@ -176,7 +176,6 @@
       "type": "condition",
       "missing": [
         "uninsured_estimate",
-        "disability_rate",
         "medicaid_enrolled"
       ]
     },
@@ -328,11 +327,12 @@
     "gini_index": 0.5049,
     "snap_households": 35857,
     "total_population": 672265,
-    "median_age": 37.9
+    "median_age": 37.9,
+    "disability_rate": 0
   },
   "panels": {
     "health": {
-      "score": 10,
+      "score": 43,
       "programs": [
         "Medicaid"
       ],
