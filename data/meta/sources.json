@@ -42,14 +42,16 @@
   "census-education": {
     "label": "Census education",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-23T16:54:02.769Z",
-    "total_scrapes": 14,
-    "counties_covered": 22
+    "last_scraped": "2026-02-23T20:41:33.962Z",
+    "total_scrapes": 20,
+    "counties_covered": 28
   },
   "census-commute": {
     "label": "Census commute",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-23T20:41:33.962Z",
+    "total_scrapes": null,
+    "counties_covered": 6
   },
   "census-internet": {
     "label": "Census internet",

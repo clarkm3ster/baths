@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "01073",
+  "county_name": "Jefferson County (Birmingham), AL",
+  "scraped_at": "2026-02-23T20:41:27.631Z",
+  "data": {
+    "edu_pop_25plus": 457310,
+    "less_than_9th": 4819,
+    "high_school_diploma": 103400,
+    "some_college": 27733,
+    "bachelors": 96805,
+    "masters": 41229,
+    "doctorate": 8545,
+    "school_enrollment_total": 648255,
+    "school_enrollment_public": 79344
+  }
+}

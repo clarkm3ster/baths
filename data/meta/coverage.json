@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-23T16:54:02.770Z",
+  "generated_at": "2026-02-23T20:41:33.963Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 197,
+  "total_fragments": 204,
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
@@ -45,13 +45,13 @@
     "census-education": {
       "label": "Census Education",
       "api": "Census ACS 5-year",
-      "fragments": 22,
+      "fragments": 28,
       "gap": false
     },
     "census-commute": {
       "label": "Census Commute & Transportation",
       "api": "Census ACS 5-year",
-      "fragments": 5,
+      "fragments": 6,
       "gap": false
     },
     "census-internet": {
@@ -142,8 +142,8 @@
     },
     "26163": {
       "name": "Wayne County (Detroit), MI",
-      "fragments": 5,
-      "coverage_pct": 29
+      "fragments": 6,
+      "coverage_pct": 35
     },
     "28049": {
       "name": "Hinds County (Jackson), MS",
@@ -152,18 +152,18 @@
     },
     "34013": {
       "name": "Essex County, NJ",
-      "fragments": 5,
-      "coverage_pct": 29
+      "fragments": 6,
+      "coverage_pct": 35
     },
     "34017": {
       "name": "Hudson County, NJ",
-      "fragments": 5,
-      "coverage_pct": 29
+      "fragments": 6,
+      "coverage_pct": 35
     },
     "34023": {
       "name": "Middlesex County, NJ",
-      "fragments": 5,
-      "coverage_pct": 29
+      "fragments": 6,
+      "coverage_pct": 35
     },
     "36005": {
       "name": "Bronx County, NY",
@@ -187,8 +187,8 @@
     },
     "39035": {
       "name": "Cuyahoga County (Cleveland), OH",
-      "fragments": 5,
-      "coverage_pct": 29
+      "fragments": 6,
+      "coverage_pct": 35
     },
     "42017": {
       "name": "Bucks County, PA",
@@ -202,8 +202,8 @@
     },
     "42045": {
       "name": "Delaware County, PA",
-      "fragments": 6,
-      "coverage_pct": 35
+      "fragments": 7,
+      "coverage_pct": 41
     },
     "42091": {
       "name": "Montgomery County, PA",
@@ -247,8 +247,8 @@
     },
     "01073": {
       "name": "Jefferson County (Birmingham), AL",
-      "fragments": 5,
-      "coverage_pct": 29
+      "fragments": 6,
+      "coverage_pct": 35
     }
   }
 }

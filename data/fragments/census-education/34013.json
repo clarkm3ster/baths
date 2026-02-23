@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "34013",
+  "county_name": "Essex County, NJ",
+  "scraped_at": "2026-02-23T20:41:30.587Z",
+  "data": {
+    "edu_pop_25plus": 573215,
+    "less_than_9th": 13913,
+    "high_school_diploma": 142725,
+    "some_college": 26899,
+    "bachelors": 124500,
+    "masters": 62058,
+    "doctorate": 10116,
+    "school_enrollment_total": 822159,
+    "school_enrollment_public": 109544
+  }
+}

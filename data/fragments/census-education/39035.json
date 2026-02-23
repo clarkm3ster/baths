@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "39035",
+  "county_name": "Cuyahoga County (Cleveland), OH",
+  "scraped_at": "2026-02-23T20:41:29.522Z",
+  "data": {
+    "edu_pop_25plus": 889511,
+    "less_than_9th": 11389,
+    "high_school_diploma": 208418,
+    "some_college": 60146,
+    "bachelors": 180290,
+    "masters": 88888,
+    "doctorate": 14785,
+    "school_enrollment_total": 1217031,
+    "school_enrollment_public": 137944
+  }
+}

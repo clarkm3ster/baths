@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "34017",
+  "county_name": "Hudson County, NJ",
+  "scraped_at": "2026-02-23T20:41:31.390Z",
+  "data": {
+    "edu_pop_25plus": 512195,
+    "less_than_9th": 12846,
+    "high_school_diploma": 107200,
+    "some_college": 17290,
+    "bachelors": 140539,
+    "masters": 73996,
+    "doctorate": 10054,
+    "school_enrollment_total": 683141,
+    "school_enrollment_public": 77955
+  }
+}
