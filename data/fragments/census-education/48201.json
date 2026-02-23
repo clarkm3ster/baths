@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "48201",
+  "county_name": "Harris County (Houston), TX",
+  "scraped_at": "2026-02-23T12:58:04.978Z",
+  "data": {
+    "edu_pop_25plus": 3032681,
+    "less_than_9th": 107355,
+    "high_school_diploma": 579563,
+    "some_college": 166245,
+    "bachelors": 629798,
+    "masters": 258583,
+    "doctorate": 45086,
+    "school_enrollment_total": 4530655,
+    "school_enrollment_public": 632694
+  }
+}

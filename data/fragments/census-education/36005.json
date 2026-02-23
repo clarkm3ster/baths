@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "36005",
+  "county_name": "Bronx County, NY",
+  "scraped_at": "2026-02-23T12:58:04.170Z",
+  "data": {
+    "edu_pop_25plus": 943981,
+    "less_than_9th": 45704,
+    "high_school_diploma": 212223,
+    "some_college": 45940,
+    "bachelors": 127270,
+    "masters": 56700,
+    "doctorate": 5654,
+    "school_enrollment_total": 1385820,
+    "school_enrollment_public": 191944
+  }
+}

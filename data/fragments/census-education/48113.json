@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "48113",
+  "county_name": "Dallas County, TX",
+  "scraped_at": "2026-02-23T12:58:06.552Z",
+  "data": {
+    "edu_pop_25plus": 1681632,
+    "less_than_9th": 52596,
+    "high_school_diploma": 324679,
+    "some_college": 93055,
+    "bachelors": 353037,
+    "masters": 154247,
+    "doctorate": 21416,
+    "school_enrollment_total": 2496414,
+    "school_enrollment_public": 333209
+  }
+}

@@ -10,11 +10,12 @@
     "children": 2,
     "description": "Single dad, systems-heavy"
   },
-  "assembled_at": "2026-02-23T08:45:27.052Z",
-  "fragments_used": 5,
+  "assembled_at": "2026-02-23T12:58:07.404Z",
+  "fragments_used": 6,
   "fragment_sources": [
     "census-demographics",
     "census-disability",
+    "census-education",
     "census-housing",
     "census-income",
     "census-rent-burden"
@@ -94,8 +95,8 @@
     "coordination_savings_rate": 0.4,
     "program_count": 7
   },
-  "cosm": 0,
-  "cosm_average": 34,
+  "cosm": 10,
+  "cosm_average": 44,
   "domain_coverage": {
     "health": {
       "score": 53,
@@ -116,8 +117,8 @@
       "note": null
     },
     "education": {
-      "score": 0,
-      "raw_score": 0,
+      "score": 80,
+      "raw_score": 80,
       "max_score": 100,
       "note": null
     },
@@ -164,8 +165,8 @@
       "note": null
     },
     "purpose": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 50,
+      "raw_score": 50,
       "max_score": 100,
       "note": null
     }
@@ -206,20 +207,6 @@
       "type": "condition",
       "missing": [
         "unemployment_rate"
-      ]
-    },
-    {
-      "domain": "education",
-      "type": "fragment",
-      "missing": [
-        "census-education"
-      ]
-    },
-    {
-      "domain": "education",
-      "type": "condition",
-      "missing": [
-        "bachelors_plus_pct"
       ]
     },
     {
@@ -307,7 +294,6 @@
       "domain": "purpose",
       "type": "fragment",
       "missing": [
-        "census-education",
         "census-employment"
       ]
     },
@@ -315,12 +301,11 @@
       "domain": "purpose",
       "type": "condition",
       "missing": [
-        "bachelors_plus_pct",
         "unemployment_rate"
       ]
     }
   ],
-  "gap_count": 20,
+  "gap_count": 18,
   "conditions": {
     "median_rent": 1401,
     "median_home_value": 501400,
@@ -335,7 +320,8 @@
     "snap_households": 189961,
     "total_population": 1443229,
     "median_age": 35,
-    "disability_rate": 0.1
+    "disability_rate": 0.1,
+    "bachelors_plus_pct": 20.1
   },
   "panels": {
     "health": {
@@ -361,7 +347,7 @@
       "program_value": 3962
     },
     "education": {
-      "score": 0,
+      "score": 80,
       "programs": [],
       "program_value": 0
     },
@@ -405,7 +391,7 @@
       "program_value": 0
     },
     "purpose": {
-      "score": 10,
+      "score": 50,
       "programs": [],
       "program_value": 0
     }
