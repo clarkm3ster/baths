@@ -42,9 +42,9 @@
   "census-education": {
     "label": "Census education",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-23T12:58:07.051Z",
-    "total_scrapes": 7,
-    "counties_covered": 15
+    "last_scraped": "2026-02-23T16:54:02.769Z",
+    "total_scrapes": 14,
+    "counties_covered": 22
   },
   "census-commute": {
     "label": "Census commute",

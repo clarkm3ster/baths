@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "54055",
+  "county_name": "Mercer County, WV",
+  "scraped_at": "2026-02-23T16:53:58.958Z",
+  "data": {
+    "edu_pop_25plus": 42048,
+    "less_than_9th": 394,
+    "high_school_diploma": 12507,
+    "some_college": 2661,
+    "bachelors": 5675,
+    "masters": 2400,
+    "doctorate": 281,
+    "school_enrollment_total": 57925,
+    "school_enrollment_public": 6304
+  }
+}
