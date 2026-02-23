@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "39035",
+  "county_name": "Cuyahoga County (Cleveland), OH",
+  "scraped_at": "2026-02-23T08:45:21.351Z",
+  "data": {
+    "total_disability_pop": 1241944,
+    "male_with_disability": 360,
+    "female_with_disability": 214,
+    "disability_under5": 35296,
+    "disability_5_17": 96218,
+    "disability_18_34": 140852,
+    "disability_65_74": 61108,
+    "disability_75_plus": 35904
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "34023",
+  "county_name": "Middlesex County, NJ",
+  "scraped_at": "2026-02-23T08:45:23.853Z",
+  "data": {
+    "total_disability_pop": 852894,
+    "male_with_disability": 216,
+    "female_with_disability": 59,
+    "disability_under5": 24383,
+    "disability_5_17": 70562,
+    "disability_18_34": 98014,
+    "disability_65_74": 36078,
+    "disability_75_plus": 21439
+  }
+}

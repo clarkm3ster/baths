@@ -10,11 +10,12 @@
     "children": 1,
     "description": "Working poor"
   },
-  "assembled_at": "2026-02-23T05:24:11.281Z",
-  "fragments_used": 5,
+  "assembled_at": "2026-02-23T08:45:27.028Z",
+  "fragments_used": 6,
   "fragment_sources": [
     "census-demographics",
     "census-disability",
+    "census-education",
     "census-housing",
     "census-income",
     "census-rent-burden"
@@ -113,7 +114,7 @@
     "program_count": 9
   },
   "cosm": 10,
-  "cosm_average": 35,
+  "cosm_average": 45,
   "domain_coverage": {
     "health": {
       "score": 53,
@@ -134,8 +135,8 @@
       "note": null
     },
     "education": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 90,
+      "raw_score": 90,
       "max_score": 100,
       "note": null
     },
@@ -182,8 +183,8 @@
       "note": null
     },
     "purpose": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 50,
+      "raw_score": 50,
       "max_score": 100,
       "note": null
     }
@@ -224,20 +225,6 @@
       "type": "condition",
       "missing": [
         "unemployment_rate"
-      ]
-    },
-    {
-      "domain": "education",
-      "type": "fragment",
-      "missing": [
-        "census-education"
-      ]
-    },
-    {
-      "domain": "education",
-      "type": "condition",
-      "missing": [
-        "bachelors_plus_pct"
       ]
     },
     {
@@ -325,7 +312,6 @@
       "domain": "purpose",
       "type": "fragment",
       "missing": [
-        "census-education",
         "census-employment"
       ]
     },
@@ -333,12 +319,11 @@
       "domain": "purpose",
       "type": "condition",
       "missing": [
-        "bachelors_plus_pct",
         "unemployment_rate"
       ]
     }
   ],
-  "gap_count": 20,
+  "gap_count": 18,
   "conditions": {
     "median_rent": 1461,
     "median_home_value": 395800,
@@ -353,7 +338,8 @@
     "snap_households": 16649,
     "total_population": 645163,
     "median_age": 44,
-    "disability_rate": 0
+    "disability_rate": 0,
+    "bachelors_plus_pct": 40.6
   },
   "panels": {
     "health": {
@@ -380,7 +366,7 @@
       "program_value": 2397
     },
     "education": {
-      "score": 10,
+      "score": 90,
       "programs": [
         "Pell Grant"
       ],
@@ -426,7 +412,7 @@
       "program_value": 0
     },
     "purpose": {
-      "score": 10,
+      "score": 50,
       "programs": [],
       "program_value": 0
     }

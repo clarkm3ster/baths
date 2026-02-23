@@ -35,14 +35,16 @@
   "census-disability": {
     "label": "Census disability",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-23T05:24:11.174Z",
-    "total_scrapes": 14,
-    "counties_covered": 24
+    "last_scraped": "2026-02-23T08:45:26.909Z",
+    "total_scrapes": 18,
+    "counties_covered": 28
   },
   "census-education": {
     "label": "Census education",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-23T08:45:26.909Z",
+    "total_scrapes": null,
+    "counties_covered": 8
   },
   "census-commute": {
     "label": "Census commute",

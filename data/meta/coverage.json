@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-23T05:24:11.174Z",
+  "generated_at": "2026-02-23T08:45:26.909Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 176,
+  "total_fragments": 183,
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
@@ -39,13 +39,13 @@
     "census-disability": {
       "label": "Census Disability",
       "api": "Census ACS 5-year",
-      "fragments": 24,
+      "fragments": 28,
       "gap": false
     },
     "census-education": {
       "label": "Census Education",
       "api": "Census ACS 5-year",
-      "fragments": 5,
+      "fragments": 8,
       "gap": false
     },
     "census-commute": {
@@ -152,18 +152,18 @@
     },
     "34013": {
       "name": "Essex County, NJ",
-      "fragments": 4,
-      "coverage_pct": 24
+      "fragments": 5,
+      "coverage_pct": 29
     },
     "34017": {
       "name": "Hudson County, NJ",
-      "fragments": 4,
-      "coverage_pct": 24
+      "fragments": 5,
+      "coverage_pct": 29
     },
     "34023": {
       "name": "Middlesex County, NJ",
-      "fragments": 4,
-      "coverage_pct": 24
+      "fragments": 5,
+      "coverage_pct": 29
     },
     "36005": {
       "name": "Bronx County, NY",
@@ -187,13 +187,13 @@
     },
     "39035": {
       "name": "Cuyahoga County (Cleveland), OH",
-      "fragments": 4,
-      "coverage_pct": 24
+      "fragments": 5,
+      "coverage_pct": 29
     },
     "42017": {
       "name": "Bucks County, PA",
-      "fragments": 5,
-      "coverage_pct": 29
+      "fragments": 6,
+      "coverage_pct": 35
     },
     "42029": {
       "name": "Chester County, PA",
@@ -202,13 +202,13 @@
     },
     "42045": {
       "name": "Delaware County, PA",
-      "fragments": 5,
-      "coverage_pct": 29
+      "fragments": 6,
+      "coverage_pct": 35
     },
     "42091": {
       "name": "Montgomery County, PA",
-      "fragments": 5,
-      "coverage_pct": 29
+      "fragments": 6,
+      "coverage_pct": 35
     },
     "42101": {
       "name": "Philadelphia, PA",
