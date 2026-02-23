@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import './App.css'
 import GameSelector from './components/GameSelector'
 import Portfolio from './components/Portfolio'
 import DomesGame from './games/domes/DomesGame'
 import SpheresGame from './games/spheres/SpheresGame'
+import DomesIndex from './portfolio/DomesIndex'
+import DomeProductionPage from './portfolio/DomeProductionPage'
+import SpheresIndex from './portfolio/SpheresIndex'
+import SphereProductionPage from './portfolio/SphereProductionPage'
 
-function App() {
+// ── Game Engine (original app at /) ──────────────────────────────
+function GameEngine() {
   const [player, setPlayer] = useState(null)
   const [gameInfo, setGameInfo] = useState(null)
   const [view, setView] = useState('selector')
@@ -110,6 +116,24 @@ function App() {
         )}
       </main>
     </div>
+  )
+}
+
+// ── Root App with Routing ────────────────────────────────────────
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Portfolio Sites — public pages */}
+        <Route path="/domes" element={<DomesIndex />} />
+        <Route path="/domes/:id" element={<DomeProductionPage />} />
+        <Route path="/spheres" element={<SpheresIndex />} />
+        <Route path="/spheres/:id" element={<SphereProductionPage />} />
+
+        {/* Game Engine — production interface */}
+        <Route path="/*" element={<GameEngine />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,0 +1,969 @@
+/* ══════════════════════════════════════════════════════════════════
+   SPHERES.LAND PORTFOLIO — Near-black, cinematic, spatial.
+   Color only from content. Each page = walking into the space.
+   ══════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.sp-page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #e0e0e0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Loading ──────────────────────────────────────────────── */
+
+.sp-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.sp-loading-mark {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: #fff;
+}
+
+.sp-loading-line {
+  width: 120px;
+  height: 1px;
+  background: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-loading-line::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 40%;
+  background: #ff6d00;
+  animation: sp-slide 1.2s ease-in-out infinite;
+}
+
+@keyframes sp-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(350%); }
+}
+
+/* ── Header (Index Page) ─────────────────────────────────── */
+
+.sp-header {
+  border-bottom: 1px solid #1a1a1a;
+  padding: 4rem 0 3rem;
+}
+
+.sp-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.sp-wordmark {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: #fff;
+  line-height: 1;
+}
+
+.sp-tagline {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.75rem;
+  font-weight: 300;
+}
+
+.sp-count {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #555;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Toolbar ──────────────────────────────────────────────── */
+
+.sp-toolbar {
+  border-bottom: 1px solid #151515;
+  background: #0d0d0d;
+}
+
+.sp-toolbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sp-toolbar-label {
+  font-size: 0.75rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-right: 0.5rem;
+}
+
+.sp-toolbar button {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sp-toolbar button:hover { color: #ccc; }
+.sp-toolbar button.active {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+/* ── Grid (Index) ─────────────────────────────────────────── */
+
+.sp-grid-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  min-height: 50vh;
+}
+
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.sp-card {
+  display: block;
+  background: #111;
+  border: 1px solid #1a1a1a;
+  border-radius: 2px;
+  padding: 2rem;
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sp-card:hover {
+  border-color: #333;
+  box-shadow: 0 2px 20px rgba(255,109,0,0.06);
+}
+
+.sp-card-top {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.sp-chron-mini {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.sp-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 0.15rem;
+}
+
+.sp-card-neighborhood {
+  font-size: 0.8rem;
+  color: #ff9100;
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+}
+
+.sp-card-producer {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.sp-card-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.sp-card-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  background: #111;
+}
+
+.sp-cs-val {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.sp-cs-label {
+  font-size: 0.6rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sp-card-bond {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.sp-cb-rating {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #00e676;
+}
+
+.sp-cb-val {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.sp-cb-label {
+  font-size: 0.7rem;
+  color: #555;
+  margin-left: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sp-card-date {
+  font-size: 0.75rem;
+  color: #333;
+}
+
+/* ── Empty State ──────────────────────────────────────────── */
+
+.sp-empty {
+  text-align: center;
+  padding: 6rem 2rem;
+  color: #555;
+}
+
+.sp-empty p {
+  font-size: 1.1rem;
+}
+
+.sp-empty-sub {
+  font-size: 0.85rem !important;
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+/* ── Nav (Production Page) ────────────────────────────────── */
+
+.sp-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #151515;
+  position: sticky;
+  top: 0;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.sp-nav-back {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sp-nav-back:hover { color: #fff; }
+
+.sp-nav-brand {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #444;
+}
+
+.sp-back-link {
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* ── Production Header ────────────────────────────────────── */
+
+.sp-prod-header {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.sp-prod-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.sp-prod-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  max-width: 500px;
+}
+
+.sp-prod-neighborhood {
+  font-size: 1rem;
+  color: #ff9100;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.sp-prod-meta {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.sp-prod-producer {
+  font-weight: 500;
+  color: #888;
+}
+
+.sp-prod-parcel-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.sp-prod-parcel-stats span {
+  padding: 0.3rem 0.75rem;
+  background: #151515;
+  border: 1px solid #222;
+  border-radius: 2px;
+}
+
+.sp-prod-score-block {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sp-chron-radar {
+  width: 260px;
+  height: 260px;
+}
+
+.sp-chron-breakdown {
+  margin-top: 1rem;
+}
+
+.sp-cb-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #151515;
+}
+
+.sp-cb-row .sp-cb-label { color: #666; }
+.sp-cb-row .sp-cb-val { color: #fff; font-weight: 500; }
+
+/* ── Content Area ─────────────────────────────────────────── */
+
+.sp-prod-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* ── Sections ─────────────────────────────────────────────── */
+
+.sp-section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #151515;
+}
+
+.sp-section:last-child { border-bottom: none; }
+
+.sp-section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.sp-section-sub {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* ── Impact Grid ──────────────────────────────────────────── */
+
+.sp-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.sp-impact-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background: #111;
+  text-align: center;
+}
+
+.sp-is-val {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sp-is-label {
+  font-size: 0.65rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+}
+
+/* ── Timeline ─────────────────────────────────────────────── */
+
+.sp-timeline {
+  padding-left: 1rem;
+}
+
+.sp-tl-stage {
+  position: relative;
+}
+
+.sp-tl-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  color: #e0e0e0;
+}
+
+.sp-tl-header:disabled { cursor: default; }
+
+.sp-tl-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.sp-tl-num {
+  font-size: 0.8rem;
+  color: #444;
+  width: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.sp-tl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #333;
+  background: #0a0a0a;
+}
+
+.sp-tl-dot.filled {
+  background: #ff6d00;
+  border-color: #ff6d00;
+}
+
+.sp-tl-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  flex: 1;
+}
+
+.sp-tl-stage.pending .sp-tl-label { color: #333; }
+
+.sp-tl-toggle {
+  font-size: 1.2rem;
+  color: #555;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.sp-tl-line {
+  position: absolute;
+  left: calc(1rem + 1.5rem + 0.75rem + 4px);
+  top: 3rem;
+  bottom: 0;
+  width: 1.5px;
+  background: #1a1a1a;
+}
+
+.sp-tl-line.filled { background: #ff6d00; }
+
+.sp-tl-detail {
+  margin-left: calc(1rem + 1.5rem + 0.75rem + 0.75rem);
+  padding: 0.5rem 0 2rem;
+  border-left: 1.5px solid #1a1a1a;
+  padding-left: 1.5rem;
+}
+
+/* ── Stage Detail ─────────────────────────────────────────── */
+
+.sp-stage-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sp-sd-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.sp-sd-metric {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  min-width: 6rem;
+  text-align: right;
+}
+
+.sp-sd-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.sp-sd-sources {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #1a1a1a;
+}
+
+.sp-sd-sources h5 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.sp-sd-sources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sp-sd-sources li {
+  font-size: 0.8rem;
+  color: #555;
+  padding: 0.15rem 0;
+}
+
+/* ── Timeline Files ───────────────────────────────────────── */
+
+.sp-tl-files {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #1a1a1a;
+}
+
+.sp-tl-files h4 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.sp-file-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  font-size: 0.8rem;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sp-file-link:hover { color: #ff9100; }
+
+.sp-file-icon {
+  font-size: 0.6rem;
+  color: #444;
+}
+
+/* ── Deliverables Grid ────────────────────────────────────── */
+
+.sp-deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.sp-deliv-stage-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #555;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.sp-deliv-file {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  color: #ccc;
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+  transition: color 0.2s;
+}
+
+.sp-deliv-file:hover { color: #ff9100; }
+
+.sp-df-icon { font-size: 0.6rem; color: #444; }
+.sp-df-name { flex: 1; }
+.sp-df-dl { color: #444; font-size: 0.8rem; }
+
+/* ── Bond ─────────────────────────────────────────────────── */
+
+.sp-bond {
+  background: #111;
+  border: 1px solid #1a1a1a;
+  padding: 2rem;
+}
+
+.sp-bond-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.sp-bond-type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+
+.sp-bond-rating {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.sp-bond-id {
+  font-size: 0.7rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.sp-bond-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #1a1a1a;
+}
+
+.sp-bond-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+  background: #0d0d0d;
+}
+
+.sp-bond-stat.primary { background: #151515; }
+
+.sp-bs-val {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.sp-bs-label {
+  font-size: 0.65rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* ── IP Portfolio ─────────────────────────────────────────── */
+
+.sp-ip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.sp-ip-domain {
+  border-left: 2px solid #333;
+  padding-left: 1.25rem;
+}
+
+.sp-ip-domain-name {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.sp-ip-item {
+  margin-bottom: 1.25rem;
+}
+
+.sp-ip-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.sp-ip-desc {
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.sp-ip-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  color: #444;
+}
+
+.sp-ip-stage { font-style: italic; }
+
+.sp-ip-driver {
+  font-size: 0.75rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* ── Innovations ──────────────────────────────────────────── */
+
+.sp-innovations-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sp-innovations-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #151515;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ── Replication ──────────────────────────────────────────── */
+
+.sp-replication {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.sp-rep-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: #111;
+  text-align: center;
+}
+
+.sp-rep-val {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.sp-rep-label {
+  font-size: 0.65rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* ── Data Transparency ────────────────────────────────────── */
+
+.sp-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1px;
+  background: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.sp-data-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background: #111;
+  text-align: center;
+}
+
+.sp-dc-val {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sp-dc-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.sp-dc-source {
+  font-size: 0.65rem;
+  color: #444;
+  margin-top: 0.25rem;
+}
+
+.sp-sources-list h3 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.sp-sources-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sp-sources-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #151515;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.sp-sources-list li strong {
+  font-weight: 600;
+  color: #ccc;
+}
+
+.sp-src-url {
+  font-size: 0.75rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+
+.sp-footer {
+  border-top: 1px solid #1a1a1a;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.sp-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.sp-footer-sep { color: #222; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .sp-header-inner { flex-direction: column; align-items: flex-start; }
+  .sp-wordmark { font-size: 2rem; }
+  .sp-prod-header-inner { flex-direction: column; }
+  .sp-prod-title { font-size: 1.8rem; }
+  .sp-chron-radar { width: 200px; height: 200px; }
+  .sp-grid { grid-template-columns: 1fr; }
+  .sp-card-stats { grid-template-columns: repeat(2, 1fr); }
+  .sp-impact-grid { grid-template-columns: repeat(2, 1fr); }
+  .sp-bond-grid { grid-template-columns: repeat(2, 1fr); }
+  .sp-replication { grid-template-columns: repeat(2, 1fr); }
+  .sp-ip-grid { grid-template-columns: 1fr; }
+  .sp-data-grid { grid-template-columns: repeat(2, 1fr); }
+  .sp-deliverables-grid { grid-template-columns: 1fr; }
+  .sp-prod-content { padding: 0 1rem 3rem; }
+  .sp-prod-parcel-stats { flex-wrap: wrap; }
+}

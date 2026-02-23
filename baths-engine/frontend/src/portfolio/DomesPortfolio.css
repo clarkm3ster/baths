@@ -1,0 +1,1003 @@
+/* ══════════════════════════════════════════════════════════════════
+   DOMES.CC PORTFOLIO — White, serif, institutional.
+   Government document meets Jony Ive.
+   ══════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+.dp-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Loading ──────────────────────────────────────────────── */
+
+.dp-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.dp-loading-mark {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #1a1a1a;
+}
+
+.dp-loading-line {
+  width: 120px;
+  height: 1px;
+  background: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+}
+
+.dp-loading-line::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 40%;
+  background: #1a1a1a;
+  animation: dp-slide 1.2s ease-in-out infinite;
+}
+
+@keyframes dp-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(350%); }
+}
+
+/* ── Header (Index Page) ─────────────────────────────────── */
+
+.dp-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 4rem 0 3rem;
+}
+
+.dp-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.dp-wordmark {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.dp-tagline {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+.dp-count {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #999;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Toolbar ──────────────────────────────────────────────── */
+
+.dp-toolbar {
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.dp-toolbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dp-toolbar-label {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-right: 0.5rem;
+}
+
+.dp-toolbar button {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dp-toolbar button:hover { color: #1a1a1a; }
+.dp-toolbar button.active {
+  background: #fff;
+  border-color: #d0d0d0;
+  color: #1a1a1a;
+}
+
+/* ── Grid (Index) ─────────────────────────────────────────── */
+
+.dp-grid-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  min-height: 50vh;
+}
+
+.dp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.dp-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  padding: 2rem;
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dp-card:hover {
+  border-color: #ccc;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.dp-card-top {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.dp-cosm-mini {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.dp-card-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.dp-card-producer {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.dp-card-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.dp-card-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  background: #fff;
+}
+
+.dp-cs-val {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.dp-cs-label {
+  font-size: 0.65rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dp-card-bond {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #f8f8f8;
+  border: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.dp-cb-rating {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #2e7d32;
+}
+
+.dp-cb-val {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.dp-cb-label {
+  font-size: 0.7rem;
+  color: #999;
+  margin-left: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dp-card-date {
+  font-size: 0.75rem;
+  color: #bbb;
+}
+
+/* ── Empty State ──────────────────────────────────────────── */
+
+.dp-empty {
+  text-align: center;
+  padding: 6rem 2rem;
+  color: #999;
+}
+
+.dp-empty p {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.2rem;
+}
+
+.dp-empty-sub {
+  font-size: 0.9rem !important;
+  margin-top: 0.5rem;
+}
+
+/* ── Nav (Production Page) ────────────────────────────────── */
+
+.dp-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.dp-nav-back {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dp-nav-back:hover { color: #1a1a1a; }
+
+.dp-nav-brand {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #999;
+}
+
+.dp-back-link {
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* ── Production Header ────────────────────────────────────── */
+
+.dp-prod-header {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.dp-prod-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.dp-prod-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #1a1a1a;
+  max-width: 500px;
+}
+
+.dp-prod-meta {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.dp-prod-producer {
+  font-weight: 500;
+  color: #666;
+}
+
+.dp-prod-score-block {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.dp-cosm-radar {
+  width: 260px;
+  height: 260px;
+}
+
+.dp-prod-limiting {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.85rem;
+  color: #c62828;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ── Content Area ─────────────────────────────────────────── */
+
+.dp-prod-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* ── Sections ─────────────────────────────────────────────── */
+
+.dp-section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dp-section:last-child { border-bottom: none; }
+
+.dp-section-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.dp-section-sub {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+/* ── Timeline ─────────────────────────────────────────────── */
+
+.dp-timeline {
+  padding-left: 1rem;
+}
+
+.dp-tl-stage {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.dp-tl-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+}
+
+.dp-tl-header:disabled { cursor: default; }
+
+.dp-tl-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.dp-tl-num {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.8rem;
+  color: #bbb;
+  width: 1.5rem;
+}
+
+.dp-tl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #ccc;
+  background: #fff;
+}
+
+.dp-tl-dot.filled {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.dp-tl-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.dp-tl-stage.pending .dp-tl-label { color: #ccc; }
+
+.dp-tl-toggle {
+  font-size: 1.2rem;
+  color: #999;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.dp-tl-line {
+  position: absolute;
+  left: calc(1rem + 1.5rem + 0.75rem + 4px);
+  top: 3rem;
+  bottom: 0;
+  width: 1.5px;
+  background: #e5e5e5;
+}
+
+.dp-tl-line.filled { background: #1a1a1a; }
+
+.dp-tl-detail {
+  margin-left: calc(1rem + 1.5rem + 0.75rem + 0.75rem);
+  padding: 0.5rem 0 2rem;
+  border-left: 1.5px solid #e5e5e5;
+  padding-left: 1.5rem;
+}
+
+/* ── Stage Detail ─────────────────────────────────────────── */
+
+.dp-stage-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dp-sd-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.dp-sd-metric {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  min-width: 5rem;
+  text-align: right;
+}
+
+.dp-sd-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.dp-sd-sources {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.dp-sd-sources h5 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+
+.dp-sd-sources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dp-sd-sources li {
+  font-size: 0.8rem;
+  color: #999;
+  padding: 0.15rem 0;
+}
+
+/* ── Timeline Files ───────────────────────────────────────── */
+
+.dp-tl-files {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.dp-tl-files h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+
+.dp-file-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  font-size: 0.8rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dp-file-link:hover { color: #666; }
+
+.dp-file-icon {
+  font-size: 0.6rem;
+  color: #ccc;
+}
+
+/* ── Deliverables Grid ────────────────────────────────────── */
+
+.dp-deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.dp-deliv-stage {
+  padding: 0;
+}
+
+.dp-deliv-stage-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.75rem;
+}
+
+.dp-deliv-file {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #f8f8f8;
+  transition: background 0.2s;
+}
+
+.dp-deliv-file:hover { background: #fafafa; }
+
+.dp-df-icon { font-size: 0.6rem; color: #ccc; }
+.dp-df-name { flex: 1; }
+.dp-df-dl { color: #ccc; font-size: 0.8rem; }
+
+/* ── Narrative ────────────────────────────────────────────── */
+
+.dp-narrative {
+  max-width: 700px;
+}
+
+.dp-narrative-section {
+  margin-bottom: 2rem;
+}
+
+.dp-narrative-section h3 {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.dp-narrative-section p {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ── Bond ─────────────────────────────────────────────────── */
+
+.dp-bond {
+  background: #f8f8f8;
+  border: 1px solid #e5e5e5;
+  padding: 2rem;
+}
+
+.dp-bond-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.dp-bond-type {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #999;
+}
+
+.dp-bond-rating {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.dp-bond-id {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  color: #bbb;
+  margin-bottom: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dp-bond-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #e5e5e5;
+}
+
+.dp-bond-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+  background: #fff;
+}
+
+.dp-bond-stat.primary { background: #f0f0f0; }
+
+.dp-bs-val {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.dp-bs-label {
+  font-size: 0.65rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* ── IP Portfolio ─────────────────────────────────────────── */
+
+.dp-ip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.dp-ip-domain {
+  border-left: 2px solid #1a1a1a;
+  padding-left: 1.25rem;
+}
+
+.dp-ip-domain-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.dp-ip-item {
+  margin-bottom: 1.25rem;
+}
+
+.dp-ip-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.dp-ip-desc {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.dp-ip-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  color: #bbb;
+}
+
+.dp-ip-stage {
+  font-style: italic;
+}
+
+.dp-ip-driver {
+  font-size: 0.75rem;
+  color: #999;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* ── Innovations ──────────────────────────────────────────── */
+
+.dp-innovations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.dp-innovations-list {
+  list-style: none;
+  padding: 0;
+}
+
+.dp-innovations-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* ── Replication ──────────────────────────────────────────── */
+
+.dp-replication {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+}
+
+.dp-rep-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.dp-rep-val {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.dp-rep-label {
+  font-size: 0.65rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* ── Data Transparency ────────────────────────────────────── */
+
+.dp-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 2rem;
+}
+
+.dp-data-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.dp-dc-val {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.dp-dc-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.dp-dc-source {
+  font-size: 0.65rem;
+  color: #bbb;
+  margin-top: 0.25rem;
+}
+
+.dp-cost-delta {
+  margin-bottom: 2rem;
+}
+
+.dp-cost-delta h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.dp-cd-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dp-cd-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+.dp-cd-bar.fragmented { background: #fce4ec; }
+.dp-cd-bar.coordinated { background: #e8f5e9; }
+
+.dp-cd-savings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+}
+
+.dp-cd-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.dp-cd-val {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dp-sources-list h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.dp-sources-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dp-sources-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.dp-sources-list li strong {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.dp-src-url {
+  font-size: 0.75rem;
+  color: #bbb;
+  font-style: italic;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+
+.dp-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.dp-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.dp-footer-sep { color: #e0e0e0; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .dp-header-inner { flex-direction: column; align-items: flex-start; }
+  .dp-wordmark { font-size: 2.5rem; }
+  .dp-prod-header-inner { flex-direction: column; }
+  .dp-prod-title { font-size: 2rem; }
+  .dp-cosm-radar { width: 200px; height: 200px; }
+  .dp-grid { grid-template-columns: 1fr; }
+  .dp-card-stats { grid-template-columns: repeat(2, 1fr); }
+  .dp-bond-grid { grid-template-columns: repeat(2, 1fr); }
+  .dp-innovations-grid { grid-template-columns: 1fr; }
+  .dp-replication { grid-template-columns: repeat(2, 1fr); }
+  .dp-ip-grid { grid-template-columns: 1fr; }
+  .dp-data-grid { grid-template-columns: repeat(2, 1fr); }
+  .dp-deliverables-grid { grid-template-columns: 1fr; }
+  .dp-prod-content { padding: 0 1rem 3rem; }
+}

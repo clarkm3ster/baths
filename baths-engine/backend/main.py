@@ -23,6 +23,7 @@ from models import (
 )
 from pipeline import PipelineDirector
 from deliverables import generate_stage_deliverables, list_deliverables, get_deliverable_path, DELIVERABLES_DIR
+from portfolio_api import router as portfolio_router, publish_production
 from data import initialize, scrape_all, scrape_engine, get_stats, start_scheduler, stop_scheduler
 from pathlib import Path as _Path
 
@@ -91,6 +92,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Register portfolio router
+app.include_router(portfolio_router)
 
 
 # ========== PLAYER MANAGEMENT ==========
@@ -256,6 +260,13 @@ async def _complete_production(production: ProductionState):
     innovations = dist_data.get("innovations", [])
     completed.innovations = innovations
     player.portfolio.innovations.extend(innovations)
+
+    # Publish to portfolio site
+    try:
+        publish_production(production, player_name=player.name)
+        logger.info(f"Published production {production.production_id} to portfolio")
+    except Exception as e:
+        logger.error(f"Failed to publish production: {e}")
 
     player.active_production = None
     player.updated_at = datetime.utcnow()
