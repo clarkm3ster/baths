@@ -22,6 +22,7 @@ from models import (
     CosmDimensions, ChronDimensions
 )
 from pipeline import PipelineDirector
+from deliverables import generate_stage_deliverables, list_deliverables, get_deliverable_path, DELIVERABLES_DIR
 from data import initialize, scrape_all, scrape_engine, get_stats, start_scheduler, stop_scheduler
 from pathlib import Path as _Path
 
@@ -154,13 +155,14 @@ def get_production(production_id: str):
     return productions[production_id]
 
 
-@app.post("/api/productions/{production_id}/advance", response_model=StageResult)
+@app.post("/api/productions/{production_id}/advance")
 async def advance_production(production_id: str, action: StageAction):
-    """Advance production to next stage"""
+    """Advance production to next stage, generating deliverables on completion"""
     if production_id not in productions:
         raise HTTPException(status_code=404, detail="Production not found")
 
     production = productions[production_id]
+    completed_stage = production.stage  # stage that just completed
 
     result = await pipeline_director.advance_stage(production, action.data)
 
@@ -168,13 +170,40 @@ async def advance_production(production_id: str, action: StageAction):
         production.progress = result.progress
         production.updated_at = datetime.utcnow()
 
-        stage_key = production.stage.value
+        stage_key = completed_stage.value
         production.stage_data[stage_key] = result.data
+
+        # Generate deliverables for the completed stage
+        try:
+            deliverable_files = generate_stage_deliverables(
+                production, completed_stage, result.data
+            )
+            if deliverable_files:
+                logger.info(
+                    f"Generated {len(deliverable_files)} deliverables for "
+                    f"{production_id}/{stage_key}"
+                )
+        except Exception as e:
+            logger.error(f"Deliverable generation failed: {e}")
+            deliverable_files = {}
 
         if result.new_stage:
             production.stage = result.new_stage
         elif result.progress >= 100.0:
             await _complete_production(production)
+
+        # Include deliverable download links in response
+        return {
+            "success": result.success,
+            "message": result.message,
+            "new_stage": result.new_stage,
+            "progress": result.progress,
+            "data": result.data,
+            "deliverables": {
+                name: f"/api/deliverables/{production_id}/{stage_key}/{name}"
+                for name, path in deliverable_files.items()
+            },
+        }
 
     return result
 
@@ -230,6 +259,41 @@ async def _complete_production(production: ProductionState):
 
     player.active_production = None
     player.updated_at = datetime.utcnow()
+
+
+# ========== DELIVERABLES ==========
+
+@app.get("/api/deliverables/{production_id}")
+def get_production_deliverables(production_id: str):
+    """List all deliverables for a production, grouped by stage"""
+    deliverables = list_deliverables(production_id)
+    if not deliverables:
+        raise HTTPException(status_code=404, detail="No deliverables found")
+
+    # Build download URLs
+    result = {}
+    for stage, files in deliverables.items():
+        result[stage] = {
+            f: f"/api/deliverables/{production_id}/{stage}/{f}"
+            for f in files
+        }
+
+    return {"production_id": production_id, "deliverables": result}
+
+
+@app.get("/api/deliverables/{production_id}/{stage}/{filename}")
+def download_deliverable(production_id: str, stage: str, filename: str):
+    """Download a specific deliverable file"""
+    path = get_deliverable_path(production_id, stage, filename)
+    if not path:
+        raise HTTPException(status_code=404, detail="Deliverable not found")
+
+    media_type = "application/json" if filename.endswith(".json") else "text/markdown"
+    return FileResponse(
+        path=str(path),
+        filename=filename,
+        media_type=media_type,
+    )
 
 
 # ========== PORTFOLIO ==========

@@ -33,10 +33,12 @@ class IPDomain(str, Enum):
     RESEARCH = "research"
     HOUSING = "housing"
     HEALTHCARE = "healthcare"
+    URBAN_DESIGN = "urban_design"
+    REAL_ESTATE = "real_estate"
 
 
 class IPOutput(BaseModel):
-    """Intellectual property generated across 8 domains"""
+    """Intellectual property generated across 10 domains"""
     domain: IPDomain
     title: str
     description: str
