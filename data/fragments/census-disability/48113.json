@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "48113",
+  "county_name": "Dallas County, TX",
+  "scraped_at": "2026-02-23T01:56:02.700Z",
+  "data": {
+    "total_disability_pop": 2585512,
+    "male_with_disability": 870,
+    "female_with_disability": 386,
+    "disability_under5": 93316,
+    "disability_5_17": 246377,
+    "disability_18_34": 341032,
+    "disability_65_74": 81726,
+    "disability_75_plus": 42432
+  }
+}

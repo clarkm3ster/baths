@@ -10,10 +10,11 @@
     "children": 2,
     "description": "Single dad, systems-heavy"
   },
-  "assembled_at": "2026-02-22T20:23:41.499Z",
-  "fragments_used": 4,
+  "assembled_at": "2026-02-23T01:56:05.017Z",
+  "fragments_used": 5,
   "fragment_sources": [
     "census-demographics",
+    "census-disability",
     "census-housing",
     "census-income",
     "census-rent-burden"
@@ -104,11 +105,11 @@
     "program_count": 8
   },
   "cosm": 0,
-  "cosm_average": 32,
+  "cosm_average": 35,
   "domain_coverage": {
     "health": {
-      "score": 20,
-      "raw_score": 20,
+      "score": 53,
+      "raw_score": 53,
       "max_score": 100,
       "note": null
     },
@@ -184,8 +185,7 @@
       "domain": "health",
       "type": "fragment",
       "missing": [
-        "census-health-insurance",
-        "census-disability"
+        "census-health-insurance"
       ]
     },
     {
@@ -193,7 +193,6 @@
       "type": "condition",
       "missing": [
         "uninsured_estimate",
-        "disability_rate",
         "medicaid_enrolled"
       ]
     },
@@ -345,11 +344,12 @@
     "gini_index": 0.4973,
     "snap_households": 224361,
     "total_population": 4726177,
-    "median_age": 34.1
+    "median_age": 34.1,
+    "disability_rate": 0
   },
   "panels": {
     "health": {
-      "score": 20,
+      "score": 53,
       "programs": [
         "Medicaid",
         "CHIP"
