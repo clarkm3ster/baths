@@ -56,9 +56,9 @@
   "census-internet": {
     "label": "Census internet",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-24T12:59:46.168Z",
-    "total_scrapes": null,
-    "counties_covered": 11
+    "last_scraped": "2026-02-24T17:03:48.328Z",
+    "total_scrapes": 7,
+    "counties_covered": 18
   },
   "census-employment": {
     "label": "Census employment",

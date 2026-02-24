@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "12086",
+  "county_name": "Miami-Dade County, FL",
+  "scraped_at": "2026-02-24T17:03:46.180Z",
+  "data": {
+    "total_households_internet": 952680,
+    "with_internet": 806457,
+    "broadband": 805465,
+    "no_internet": 111060,
+    "has_computer": 906701,
+    "has_smartphone_only": 873495,
+    "no_computer": 45979
+  }
+}

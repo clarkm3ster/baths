@@ -10,8 +10,8 @@
     "children": 0,
     "description": "Elderly disabled"
   },
-  "assembled_at": "2026-02-24T12:59:46.332Z",
-  "fragments_used": 7,
+  "assembled_at": "2026-02-24T17:03:48.779Z",
+  "fragments_used": 8,
   "fragment_sources": [
     "census-commute",
     "census-demographics",
@@ -19,6 +19,7 @@
     "census-education",
     "census-housing",
     "census-income",
+    "census-internet",
     "census-rent-burden"
   ],
   "eligible_programs": [
@@ -82,7 +83,7 @@
     "program_count": 5
   },
   "cosm": 10,
-  "cosm_average": 50,
+  "cosm_average": 56,
   "domain_coverage": {
     "health": {
       "score": 43,
@@ -127,8 +128,8 @@
       "note": null
     },
     "infrastructure": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 90,
+      "raw_score": 90,
       "max_score": 100,
       "note": null
     },
@@ -218,21 +219,6 @@
       ]
     },
     {
-      "domain": "infrastructure",
-      "type": "fragment",
-      "missing": [
-        "census-internet"
-      ]
-    },
-    {
-      "domain": "infrastructure",
-      "type": "condition",
-      "missing": [
-        "broadband_pct",
-        "no_internet_pct"
-      ]
-    },
-    {
       "domain": "environment",
       "type": "fragment",
       "missing": [
@@ -275,7 +261,7 @@
       ]
     }
   ],
-  "gap_count": 16,
+  "gap_count": 14,
   "conditions": {
     "median_rent": 1374,
     "median_home_value": 252200,
@@ -294,7 +280,9 @@
     "bachelors_plus_pct": 31.4,
     "public_transit_pct": 1.9,
     "work_from_home_pct": 11.6,
-    "no_vehicle_pct": 3.2
+    "no_vehicle_pct": 3.2,
+    "broadband_pct": 88.2,
+    "no_internet_pct": 9.1
   },
   "panels": {
     "health": {
@@ -342,7 +330,7 @@
       "program_value": 0
     },
     "infrastructure": {
-      "score": 10,
+      "score": 90,
       "programs": [],
       "program_value": 0
     },

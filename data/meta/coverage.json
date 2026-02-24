@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-24T12:59:46.169Z",
+  "generated_at": "2026-02-24T17:03:48.329Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 232,
+  "total_fragments": 239,
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
@@ -57,7 +57,7 @@
     "census-internet": {
       "label": "Census Internet & Technology",
       "api": "Census ACS 5-year",
-      "fragments": 11,
+      "fragments": 18,
       "gap": false
     },
     "census-employment": {
@@ -117,13 +117,13 @@
     },
     "12086": {
       "name": "Miami-Dade County, FL",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "13121": {
       "name": "Fulton County (Atlanta), GA",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "17031": {
       "name": "Cook County (Chicago), IL",
@@ -167,8 +167,8 @@
     },
     "36005": {
       "name": "Bronx County, NY",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "36047": {
       "name": "Kings County (Brooklyn), NY",
@@ -217,18 +217,18 @@
     },
     "48113": {
       "name": "Dallas County, TX",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "48201": {
       "name": "Harris County (Houston), TX",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "53033": {
       "name": "King County (Seattle), WA",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "54055": {
       "name": "Mercer County, WV",
@@ -242,8 +242,8 @@
     },
     "04013": {
       "name": "Maricopa County (Phoenix), AZ",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "01073": {
       "name": "Jefferson County (Birmingham), AL",

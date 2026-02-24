@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "48113",
+  "county_name": "Dallas County, TX",
+  "scraped_at": "2026-02-24T17:03:45.349Z",
+  "data": {
+    "total_households_internet": 959184,
+    "with_internet": 846759,
+    "broadband": 845798,
+    "no_internet": 87038,
+    "has_computer": 907941,
+    "has_smartphone_only": 871940,
+    "no_computer": 51243
+  }
+}

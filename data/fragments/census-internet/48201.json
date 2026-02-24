@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "48201",
+  "county_name": "Harris County (Houston), TX",
+  "scraped_at": "2026-02-24T17:03:43.596Z",
+  "data": {
+    "total_households_internet": 1692896,
+    "with_internet": 1521453,
+    "broadband": 1519653,
+    "no_internet": 139852,
+    "has_computer": 1614764,
+    "has_smartphone_only": 1552976,
+    "no_computer": 78132
+  }
+}
