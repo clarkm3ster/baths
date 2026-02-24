@@ -262,6 +262,13 @@ export default function ProjectDetail({ projectId, onBack, onOpenTalent, onOpenP
                     {d.is_unlikely && <span className="del-unlikely-badge">Unlikely Collision</span>}
                   </div>
                   <div className="del-title">{d.title}</div>
+                  {d.work_referenced?.length > 0 && (
+                    <div className="del-work-refs">
+                      Drawing on: {d.work_referenced.map((w, j) => (
+                        <span key={j} className="del-work-ref">"{w.title}" ({w.medium}{w.year ? `, ${w.year}` : ''})</span>
+                      ))}
+                    </div>
+                  )}
                   <div className="del-desc">{d.description}</div>
                   <div className="del-meta">
                     <span className={`tag ${d.ip_domain === 'policy' ? '' : d.ip_domain === 'entertainment' ? 'domes' : 'spheres'}`}>
@@ -649,10 +656,25 @@ export default function ProjectDetail({ projectId, onBack, onOpenTalent, onOpenP
           margin-bottom: 0.35rem;
           color: var(--ink);
         }
+        .del-work-refs {
+          font-size: 0.8rem;
+          color: var(--accent-dark);
+          font-style: italic;
+          margin-bottom: 0.5rem;
+          line-height: 1.4;
+        }
+        .del-work-ref {
+          display: inline;
+        }
+        .del-work-ref + .del-work-ref::before {
+          content: ' and ';
+          font-style: normal;
+          color: var(--ink-lighter);
+        }
         .del-desc {
           font-size: 0.85rem;
           color: var(--ink-light);
-          line-height: 1.5;
+          line-height: 1.6;
           margin-bottom: 0.5rem;
         }
         .del-meta {
