@@ -442,78 +442,239 @@ def _simulate_dome_finding(
 ) -> str:
     """
     Simulate what this practitioner would actually find/produce
-    when applying their body of work to this specific character's situation.
+    at THIS stage when applying their body of work to this character.
+    The dome gets more concrete at each stage — from discovery through
+    publication. The practitioner's work evolves through the pipeline.
     """
     char = project.character
     seed = f"{talent.talent_id}:{project.project_id}:{cap}:{stage.value}"
+    name = talent.name
+    work_anchor = relevant_work[0].title if relevant_work else "their practice"
+    work_second = relevant_work[1].title if len(relevant_work) > 1 else None
 
-    # Pick specific systems and dimensions to focus on
     focus_systems = _pick(char.key_systems, seed, 3)
     focus_dims = _pick(char.flourishing_dimensions, seed, 2)
+    sys0 = focus_systems[0] if focus_systems else "the primary system"
+    sys1 = focus_systems[1] if len(focus_systems) > 1 else "adjacent systems"
+    sys_list = ", ".join(focus_systems)
+    dim0 = focus_dims[0] if focus_dims else "flourishing"
+    dim1 = focus_dims[1] if len(focus_dims) > 1 else "stability"
+    dim_list = " and ".join(focus_dims)
+    all_dims = ", ".join(char.flourishing_dimensions)
+    n_sys = len(char.key_systems)
+    approach = talent.approach.split('.')[0].strip() if talent.approach else ""
 
-    approach_first = talent.approach.split('.')[0].strip() if talent.approach else ""
+    S = stage
+    D = ProductionStage.DEVELOPMENT
+    PP = ProductionStage.PRE_PRODUCTION
+    P = ProductionStage.PRODUCTION
+    PO = ProductionStage.POST_PRODUCTION
+    DI = ProductionStage.DISTRIBUTION
 
+    # ── legal_navigation ────────────────────────────────────
     if cap == "legal_navigation":
-        sys_list = ", ".join(focus_systems)
-        dim_list = " and ".join(focus_dims)
-        finding = (
-            f"Applying {relevant_work[0].title if relevant_work else 'their legal practice'} "
-            f"to {char.name}'s case, {talent.name} identifies that {char.name} intersects "
-            f"with {len(char.key_systems)} systems simultaneously — focusing first on "
-            f"{sys_list}. The gap analysis reveals that eligibility exists on paper "
-            f"across all systems, but application timelines conflict and documentation "
-            f"requirements between {focus_systems[0] if focus_systems else 'programs'} and "
-            f"{focus_systems[1] if len(focus_systems) > 1 else 'adjacent systems'} duplicate "
-            f"effort without sharing data. {approach_first}. "
-            f"The map exposes {len(char.key_systems)} specific coordination failures "
-            f"that, if resolved, would unlock {dim_list} simultaneously."
+        if S == D:
+            return (
+                f"Applying \"{work_anchor}\" to {char.name}'s case, {name} identifies "
+                f"that {char.name} intersects with {n_sys} systems simultaneously — "
+                f"focusing first on {sys_list}. The gap analysis reveals that eligibility "
+                f"exists on paper across all systems, but application timelines conflict "
+                f"and documentation requirements between {sys0} and {sys1} duplicate effort "
+                f"without sharing data. {approach}. The map exposes {n_sys} specific "
+                f"coordination failures that, if resolved, would unlock {dim_list} simultaneously."
+            )
+        if S == PP:
+            return (
+                f"From the landscape map, {name} now blueprints the coordination: a "
+                f"step-by-step pathway linking {sys0}, {sys1}, and {n_sys - 2} other systems "
+                f"into a single application sequence for {char.name}. Extending \"{work_anchor}\", "
+                f"the blueprint identifies which applications must file first, which deadlines "
+                f"gate others, and where a single navigator could collapse {n_sys} separate "
+                f"timelines into one. {approach}. The blueprint converts legal entitlements into "
+                f"an operational choreography — {char.name} should never have to explain their "
+                f"situation twice."
+            )
+        if S == P:
+            return (
+                f"The blueprint becomes policy. {name} produces an actionable brief showing "
+                f"how {char.name}'s dome coordination model — {n_sys} systems linked through "
+                f"a single navigator pathway — can replicate at municipal scale. Drawing on "
+                f"\"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, "
+                f"the brief demonstrates that the coordination savings from {sys0} and {sys1} "
+                f"alone would fund navigator positions for the next 50 cases. {approach}. "
+                f"This is policy produced from inside a production, not a think tank."
+            )
+        if S == PO:
+            return (
+                f"{name} stress-tests every legal pathway in {char.name}'s dome against real "
+                f"bureaucratic conditions. The {sys0} pathway holds under normal timelines but "
+                f"breaks when recertification windows shift. The {sys1} pathway requires physical "
+                f"presence at offices with conflicting hours. Using \"{work_anchor}\", {name} "
+                f"identifies which pathways are structurally sound and which depend on individual "
+                f"caseworker discretion — the difference between a right and a favor. {approach}."
+            )
+        # Distribution
+        return (
+            f"All policy deliverables from {char.name}'s dome — the landscape map, the "
+            f"coordination blueprint, the municipal policy brief, the stress test results — "
+            f"are published and indexed on domes.cc. {name}'s methodology from \"{work_anchor}\" "
+            f"is now a replicable template: any navigator facing a {n_sys}-system coordination "
+            f"challenge can start from this dome's legal architecture rather than zero. {approach}."
         )
 
-    elif cap == "data_systems":
-        sys_list = ", ".join(focus_systems[:2])
-        finding = (
-            f"Extending {relevant_work[0].title if relevant_work else 'their systems methodology'} "
-            f"to {char.name}'s situation, {talent.name} models the cascade: "
-            f"a single failure in {focus_systems[0] if focus_systems else 'one system'} "
-            f"propagates through {sys_list}, compounding costs at each handoff. "
-            f"The model quantifies the fragmentation tax — the hours, the duplicate "
-            f"applications, the missed deadlines that aren't bugs but features of "
-            f"systems designed to operate in isolation. {approach_first}. "
-            f"The simulation shows that coordinating just {len(focus_systems)} of "
-            f"{len(char.key_systems)} systems would reduce the total administrative "
-            f"burden on {char.name} by the equivalent of a part-time job."
+    # ── data_systems ────────────────────────────────────────
+    if cap == "data_systems":
+        if S == D:
+            return (
+                f"Extending \"{work_anchor}\" to {char.name}'s situation, {name} models "
+                f"the cascade: a single failure in {sys0} propagates through {sys_list}, "
+                f"compounding costs at each handoff. The model quantifies the fragmentation "
+                f"tax — the hours, the duplicate applications, the missed deadlines that "
+                f"aren't bugs but features of systems designed to operate in isolation. "
+                f"{approach}. The simulation shows that coordinating just {len(focus_systems)} "
+                f"of {n_sys} systems would reduce the administrative burden on {char.name} "
+                f"by the equivalent of a part-time job."
+            )
+        if S == PP:
+            return (
+                f"From the fragmentation model, {name} builds the cost comparison: what "
+                f"{char.name}'s case costs under current fragmentation vs. what it would "
+                f"cost under coordination. Extending \"{work_anchor}\", the model shows "
+                f"that {sys0} and {sys1} alone generate duplicate administrative costs — "
+                f"the same information collected twice, stored in incompatible formats, "
+                f"verified by different standards. {approach}. The cost-of-fragmentation "
+                f"model makes the invisible tax visible: {char.name} is paying for government's "
+                f"failure to coordinate, in hours that could go toward {dim0}."
+            )
+        if S == P:
+            return (
+                f"The cost model becomes a financial instrument. {name} structures a "
+                f"coordination bond: the savings from linking {n_sys} systems — reduced "
+                f"duplicate processing, fewer missed appointments, lower emergency costs — "
+                f"are quantified and converted into investable returns. Using "
+                f"\"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, "
+                f"the bond structure shows that coordination pays for itself within 18 months "
+                f"for cases like {char.name}'s. {approach}. This is a financial product "
+                f"produced from inside a dome, not a spreadsheet."
+            )
+        if S == PO:
+            return (
+                f"{name} builds the digital twin: an interactive simulation of {char.name}'s "
+                f"dome under different coordination scenarios over 10 years. What happens if "
+                f"{sys0} coordination holds but {sys1} lapses? What if a policy change disrupts "
+                f"the navigator pathway? Using \"{work_anchor}\", the simulation models "
+                f"{n_sys} systems across 4 policy scenarios, showing which configurations "
+                f"produce sustained {dim0} and which create new fragmentation. {approach}."
+            )
+        return (
+            f"The dome's coordination model — {n_sys} systems, the fragmentation index, "
+            f"the cost comparison, the bond structure, the 10-year simulation — is released "
+            f"as open-source infrastructure on domes.cc. {name}'s methodology from "
+            f"\"{work_anchor}\" is now a public tool: any city can model their own "
+            f"fragmentation tax and build a coordination bond from the savings. {approach}."
         )
 
-    elif cap == "narrative":
-        finding = (
-            f"Drawing on {relevant_work[0].title if relevant_work else 'their narrative practice'}, "
-            f"{talent.name} builds the documentary treatment around {char.name}'s full landscape: "
-            f"{char.full_landscape[:120]}. "
-            f"The treatment refuses to flatten {char.name} into a case study. {approach_first}. "
-            f"The narrative structure mirrors the fragmentation — the audience experiences "
-            f"the same disorientation of navigating {len(char.key_systems)} disconnected "
-            f"systems, then the relief when coordination begins to work."
+    # ── narrative ───────────────────────────────────────────
+    if cap == "narrative":
+        if S == D:
+            return (
+                f"Drawing on \"{work_anchor}\", {name} builds the documentary treatment "
+                f"around {char.name}'s full landscape: {char.full_landscape[:120]}. "
+                f"The treatment refuses to flatten {char.name} into a case study. {approach}. "
+                f"The narrative structure mirrors the fragmentation — the audience experiences "
+                f"the same disorientation of navigating {n_sys} disconnected systems, then "
+                f"the relief when coordination begins to work."
+            )
+        if S == PP:
+            return (
+                f"From the treatment, {name} architects the production narrative: how "
+                f"{char.name}'s story moves through the dome pipeline. Drawing on "
+                f"\"{work_anchor}\", the framework structures the dome not as a rescue story "
+                f"but as an engineering problem — {n_sys} systems that should work together "
+                f"and don't, and what it takes to make them. {approach}. The narrative "
+                f"architecture gives equal weight to {char.name}'s intelligence, humor, and "
+                f"agency as it does to the systems that constrain them."
+            )
+        if S == P:
+            return (
+                f"The first cut. {name} produces the documentary capturing {char.name}'s "
+                f"journey through the dome production. Using \"{work_anchor}\""
+                f"{f' and \"{work_second}\"' if work_second else ''}, the film positions "
+                f"the camera where {char.name} stands — inside the systems, not above them. "
+                f"The audience watches {sys0} and {sys1} from the applicant's chair. {approach}. "
+                f"The first cut runs 47 minutes. The coordination sequence — when {n_sys} "
+                f"systems finally link — is the structural climax."
+            )
+        if S == PO:
+            return (
+                f"Final cut. {name} refines the documentary from first cut through three "
+                f"rounds of editing, using \"{work_anchor}\" as the aesthetic standard. The "
+                f"final version runs 38 minutes. Every frame earns its place. {char.name}'s "
+                f"dome production — from mapping through coordination through the systems "
+                f"finally working — is documented with the rigor of evidence and the care "
+                f"of portraiture. {approach}."
+            )
+        return (
+            f"The complete documentary, narrative assets, and media kit for {char.name}'s "
+            f"dome premiere are packaged for distribution. {name}'s film — produced through "
+            f"\"{work_anchor}\" — becomes the portfolio's primary narrative vehicle. The "
+            f"dome is not explained. It is shown. Audiences see what {n_sys} systems look "
+            f"like when they work, and what {dim0} looks like when it's real. {approach}."
         )
 
-    elif cap == "flourishing_design":
-        dim_list = ", ".join(focus_dims)
-        finding = (
-            f"Using {relevant_work[0].title if relevant_work else 'their design methodology'} "
-            f"as foundation, {talent.name} designs the dome around {char.name}'s "
-            f"specific flourishing dimensions: {', '.join(char.flourishing_dimensions)}. "
-            f"Starting with {dim_list}, the design asks: what does {focus_dims[0] if focus_dims else 'flourishing'} "
-            f"actually look like for {char.name} — not in the abstract, but on a Tuesday morning? "
-            f"{approach_first}. "
-            f"Every threshold in the dome — every door, every transition between "
-            f"systems — is designed for dignity, not processing."
-        )
-    else:
-        finding = (
-            f"{talent.name} applies {relevant_work[0].title if relevant_work else 'their practice'} "
-            f"to {char.name}'s situation. {approach_first}."
+    # ── flourishing_design ──────────────────────────────────
+    if cap == "flourishing_design":
+        if S == D:
+            return (
+                f"Using \"{work_anchor}\" as foundation, {name} maps {char.name}'s "
+                f"specific flourishing dimensions: {all_dims}. Starting with {dim_list}, "
+                f"the analysis asks: what does {dim0} actually look like for {char.name} — "
+                f"not in the abstract, but on a Tuesday morning? {approach}. The framework "
+                f"maps each dimension against current system coverage and finds that {sys0} "
+                f"addresses {dim0} partially but ignores {dim1} entirely."
+            )
+        if S == PP:
+            return (
+                f"From the dimensions analysis, {name} designs the dome's architecture: "
+                f"a spatial and conceptual environment where {char.name}'s {len(char.flourishing_dimensions)} "
+                f"flourishing dimensions are structurally supported. Drawing on \"{work_anchor}\", "
+                f"the concept treats every transition between {sys0} and {sys1} as a design "
+                f"problem — not a bureaucratic one. {approach}. The dome's architecture ensures "
+                f"that pursuing {dim0} never requires sacrificing {dim1}. The systems serve "
+                f"the person, not the other way around."
+            )
+        if S == P:
+            return (
+                f"The concept becomes a complete design package. {name} delivers {char.name}'s "
+                f"dome — every system, every transition, every threshold designed for dignity. "
+                f"Using \"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, "
+                f"the package specifies how {sys0} connects to {sys1} without requiring "
+                f"{char.name} to re-prove eligibility. How the physical environment supports "
+                f"{dim0}. How the schedule respects {dim1}. {approach}. This is the dome. "
+                f"Not a concept — a deliverable."
+            )
+        if S == PO:
+            return (
+                f"{name} quantifies the dome's impact across all {len(char.flourishing_dimensions)} "
+                f"flourishing dimensions. Using \"{work_anchor}\", the assessment scores "
+                f"{char.name}'s dome on each dimension — {all_dims} — comparing baseline "
+                f"(fragmented systems) to coordinated (the dome). {dim0} improves when {sys0} "
+                f"and {sys1} share data. {dim1} improves when navigation burden drops. {approach}. "
+                f"The assessment is evidence, not aspiration."
+            )
+        return (
+            f"The full portfolio entry on domes.cc: {char.name}'s dome as a replicable "
+            f"model for human flourishing. {name}'s methodology from \"{work_anchor}\" is "
+            f"published alongside the dome's dimensions ({all_dims}), the coordination "
+            f"architecture, and the impact scores. {approach}. Any practitioner designing "
+            f"a dome for a similar case can start from this model — the flourishing "
+            f"dimensions, the system linkages, the threshold designs — rather than zero."
         )
 
-    return finding
+    # Fallback for any unmapped capability
+    return (
+        f"{name} applies \"{work_anchor}\" to {char.name}'s situation. {approach}."
+    )
 
 
 def _simulate_sphere_finding(
@@ -525,69 +686,225 @@ def _simulate_sphere_finding(
 ) -> str:
     """
     Simulate what this practitioner would actually find/produce
-    when applying their body of work to this specific parcel.
+    at THIS stage when applying their body of work to this parcel.
+    The sphere gets more concrete at each stage — from reading the site
+    through activation through publication.
     """
     parcel = project.parcel
     seed = f"{talent.talent_id}:{project.project_id}:{cap}:{stage.value}"
+    name = talent.name
+    work_anchor = relevant_work[0].title if relevant_work else "their practice"
+    work_second = relevant_work[1].title if len(relevant_work) > 1 else None
+    addr = parcel.address
+    hood = parcel.neighborhood
+    sqft = f"{parcel.lot_size_sqft:,.0f}"
 
     focus_constraints = _pick(parcel.constraints, seed, 2)
-    approach_first = talent.approach.split('.')[0].strip() if talent.approach else ""
+    con0 = focus_constraints[0] if focus_constraints else "regulatory constraints"
+    con1 = focus_constraints[1] if len(focus_constraints) > 1 else "site conditions"
+    approach = talent.approach.split('.')[0].strip() if talent.approach else ""
 
+    S = stage
+    D = ProductionStage.DEVELOPMENT
+    PP = ProductionStage.PRE_PRODUCTION
+    P = ProductionStage.PRODUCTION
+    PO = ProductionStage.POST_PRODUCTION
+    DI = ProductionStage.DISTRIBUTION
+
+    # ── spatial_legal ───────────────────────────────────────
     if cap == "spatial_legal":
-        constraint_note = f"Key findings: {focus_constraints[0]}" if focus_constraints else ""
-        finding = (
-            f"Applying {relevant_work[0].title if relevant_work else 'their legal practice'} "
-            f"to {parcel.address}, {talent.name} reads the {parcel.zoning} zoning code "
-            f"as a design document — what it permits, what it prohibits, and the variance "
-            f"pathways between. The {parcel.lot_size_sqft:,.0f} sqft lot at "
-            f"{parcel.neighborhood} has a regulatory landscape shaped by its history: "
-            f"{parcel.history[:80]}. {constraint_note}. {approach_first}. "
-            f"The analysis maps every permit pathway and identifies 3 activation "
-            f"scenarios within the current code."
+        if S == D:
+            return (
+                f"Applying \"{work_anchor}\" to {addr}, {name} reads the {parcel.zoning} "
+                f"zoning code as a design document — what it permits, what it prohibits, "
+                f"and the variance pathways between. The {sqft} sqft lot in {hood} has a "
+                f"regulatory landscape shaped by its history: {parcel.history[:80]}. "
+                f"Key constraint: {con0}. {approach}. The analysis maps every permit pathway "
+                f"and identifies 3 activation scenarios within the current code."
+            )
+        if S == PP:
+            return (
+                f"From the legal analysis, {name} now maps the permit pathway: every "
+                f"approval, timeline, and fee required to activate {addr}. Drawing on "
+                f"\"{work_anchor}\", the map shows that {con0} can be addressed through "
+                f"a variance process, while {con1} requires a phased approach. {approach}. "
+                f"The pathway identifies the critical-path approvals — which permits gate "
+                f"others, and where parallel applications can save months."
+            )
+        if S == P:
+            return (
+                f"The permit pathway becomes an implementation plan. {name} produces the "
+                f"construction and compliance blueprint for the sphere at {addr} — phasing, "
+                f"logistics, inspection schedules. Using \"{work_anchor}\""
+                f"{f' and \"{work_second}\"' if work_second else ''}, the plan navigates "
+                f"{con0} through the variance obtained in pre-production and stages "
+                f"construction to maintain community access throughout. {approach}. "
+                f"The implementation plan is a legal instrument, not just a construction schedule."
+            )
+        if S == PO:
+            return (
+                f"{name} documents what the permit process actually revealed about activating "
+                f"space at {addr}. Using \"{work_anchor}\", the lessons learned identify "
+                f"which approvals took longer than projected, which variance arguments "
+                f"succeeded, and where {con0} created unexpected opportunities. {approach}. "
+                f"This is the template for the next sphere — every delay explained, every "
+                f"shortcut mapped, every fee itemized."
+            )
+        return (
+            f"The replicable activation template from {addr} is published on spheres.land. "
+            f"{name}'s methodology from \"{work_anchor}\" — the legal analysis, the permit "
+            f"pathway, the implementation plan, the lessons learned — becomes a public "
+            f"resource. Any neighborhood facing {parcel.zoning} zoning and similar constraints "
+            f"can start from this template. {approach}."
         )
 
-    elif cap == "activation_design":
-        finding = (
-            f"Drawing on {relevant_work[0].title if relevant_work else 'their design practice'}, "
-            f"{talent.name} reads {parcel.address} as a site with memory: "
-            f"{parcel.history[:80]}. The assessment maps what the community is already "
-            f"doing with the space — {parcel.opportunity[:80]}. "
-            f"{approach_first}. "
-            f"The design assessment identifies the site's natural gathering patterns, "
-            f"acoustic properties, sight lines from the street, and the threshold "
-            f"moments where public space becomes activated space."
+    # ── activation_design ───────────────────────────────────
+    if cap == "activation_design":
+        if S == D:
+            return (
+                f"Drawing on \"{work_anchor}\", {name} reads {addr} as a site with memory: "
+                f"{parcel.history[:80]}. The assessment maps what the community is already "
+                f"doing with the space — {parcel.opportunity[:80]}. {approach}. The assessment "
+                f"identifies the site's natural gathering patterns, acoustic properties, sight "
+                f"lines from the street, and the threshold moments where public space becomes "
+                f"activated space."
+            )
+        if S == PP:
+            return (
+                f"From the site assessment, {name} designs the activation concept: spatial "
+                f"layout, experience flow, material palette for the sphere at {addr}. Using "
+                f"\"{work_anchor}\", the concept responds to the community's existing use "
+                f"patterns — what people already do here — and amplifies them. The design "
+                f"works within {con0} rather than against it. {approach}. The material palette "
+                f"pulls from {hood}'s built environment: this sphere looks like it belongs here "
+                f"because it's made of here."
+            )
+        if S == P:
+            return (
+                f"The concept becomes a program. {name} delivers the full activation: every "
+                f"experience, every performance, every interaction at {addr} designed and "
+                f"scheduled. Using \"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, "
+                f"the program creates a rhythm — morning to night, weekday to weekend — that "
+                f"serves {hood}'s actual community. {approach}. The {sqft} sqft becomes a "
+                f"living room for the neighborhood. Not an event space. A place."
+            )
+        if S == PO:
+            return (
+                f"{name} measures the activation's impact at {addr}: foot traffic, community "
+                f"usage patterns, spatial transformation metrics. Using \"{work_anchor}\", the "
+                f"assessment compares what the site was (vacant, {parcel.history[:40]}) to what "
+                f"it became. {approach}. The data shows which program elements drew the most "
+                f"community engagement, which times of day activated the space most effectively, "
+                f"and which design choices made the difference between a visited space and a "
+                f"lived-in one."
+            )
+        return (
+            f"The full portfolio entry on spheres.land: the sphere at {addr} as a model for "
+            f"urban activation. {name}'s methodology from \"{work_anchor}\" — site reading, "
+            f"concept design, programming, impact data — is published as a complete case study. "
+            f"{approach}. Any neighborhood with a similar site can start from this sphere's "
+            f"design principles rather than a blank lot."
         )
 
-    elif cap == "economics":
-        finding = (
-            f"Extending {relevant_work[0].title if relevant_work else 'their financial methodology'} "
-            f"to {parcel.address}, {talent.name} models the economic gap: "
-            f"a {parcel.lot_size_sqft:,.0f} sqft vacant lot in {parcel.neighborhood} "
-            f"currently costs the city in maintenance, lost tax revenue, and neighborhood "
-            f"depression effects. Under activation: {parcel.opportunity[:60]}. "
-            f"{approach_first}. "
-            f"The model quantifies the community benefit — not just property values "
-            f"but foot traffic, social cohesion, and the economic multiplier when "
-            f"a dead corner becomes a living one."
+    # ── economics ───────────────────────────────────────────
+    if cap == "economics":
+        if S == D:
+            return (
+                f"Extending \"{work_anchor}\" to {addr}, {name} models the economic gap: "
+                f"a {sqft} sqft vacant lot in {hood} currently costs the city in maintenance, "
+                f"lost tax revenue, and neighborhood depression effects. Under activation: "
+                f"{parcel.opportunity[:60]}. {approach}. The model quantifies the community "
+                f"benefit — not just property values but foot traffic, social cohesion, and "
+                f"the economic multiplier when a dead corner becomes a living one."
+            )
+        if S == PP:
+            return (
+                f"From the baseline, {name} builds the community benefit model: every "
+                f"projected return from activating {addr} — jobs, foot traffic, property "
+                f"effects, social value. Using \"{work_anchor}\", the model shows that "
+                f"activation produces returns in categories that traditional real estate "
+                f"economics doesn't measure: the value of a gathering place, the economic "
+                f"ripple of foot traffic, the property effects on adjacent blocks. {approach}. "
+                f"The benefit model makes the invisible value of {hood}'s activated space legible "
+                f"to investors."
+            )
+        if S == P:
+            return (
+                f"The benefit model becomes a financial instrument. {name} structures the "
+                f"community investment vehicle for the sphere at {addr}: returns quantified "
+                f"and structured so that neighborhood value becomes investable. Using "
+                f"\"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, the "
+                f"instrument converts foot traffic data, community usage, and property effects "
+                f"into a return profile. {approach}. This is a financial product that rewards "
+                f"community activation, not displacement."
+            )
+        if S == PO:
+            return (
+                f"{name} produces the full economic impact report: actual vs. projected returns "
+                f"from the sphere at {addr}. Using \"{work_anchor}\", the report shows which "
+                f"projections held, which exceeded expectations, and where the model needs "
+                f"recalibration. {approach}. The report is honest — it shows both the economic "
+                f"wins and the costs that weren't in the original model. This is data for the "
+                f"next sphere, not a success narrative."
+            )
+        return (
+            f"The sphere's financial model is published as an open template for community "
+            f"investment on spheres.land. {name}'s methodology from \"{work_anchor}\" — the "
+            f"baseline model, the benefit projections, the investment instrument, the actual "
+            f"impact data — becomes a public resource. {approach}. Any neighborhood building "
+            f"a sphere can use this model as a starting point for their own investment case."
         )
 
-    elif cap == "narrative":
-        finding = (
-            f"Using {relevant_work[0].title if relevant_work else 'their narrative approach'}, "
-            f"{talent.name} documents the stories that live at {parcel.address}: "
-            f"{parcel.community_context[:100]}. "
-            f"{approach_first}. "
-            f"The archive captures what the neighborhood remembers about this space, "
-            f"what it needs now, and what it imagines. The story of {parcel.neighborhood} "
-            f"is told by the people who walk past this lot every day."
-        )
-    else:
-        finding = (
-            f"{talent.name} applies {relevant_work[0].title if relevant_work else 'their practice'} "
-            f"to {parcel.address}. {approach_first}."
+    # ── narrative ───────────────────────────────────────────
+    if cap == "narrative":
+        if S == D:
+            return (
+                f"Using \"{work_anchor}\", {name} documents the stories that live at "
+                f"{addr}: {parcel.community_context[:100]}. {approach}. The archive captures "
+                f"what {hood} remembers about this space, what it needs now, and what it "
+                f"imagines. The story of {hood} is told by the people who walk past this "
+                f"lot every day."
+            )
+        if S == PP:
+            return (
+                f"From the story archive, {name} plans the activation narrative: how the "
+                f"sphere at {addr} tells {hood}'s story. Drawing on \"{work_anchor}\", the "
+                f"plan structures the experience architecture from arrival to departure — "
+                f"what you see first, what you hear, what the space tells you about where "
+                f"you are. {approach}. The narrative isn't about the sphere. It's about "
+                f"{hood}. The sphere is just the container."
+            )
+        if S == P:
+            return (
+                f"The documentary captures the activation of {addr} — from vacant lot to "
+                f"living sphere. {name} produces the film using \"{work_anchor}\""
+                f"{f' and \"{work_second}\"' if work_second else ''}, positioning the "
+                f"camera at street level in {hood}. The community isn't the subject — "
+                f"they're the directors. {approach}. The documentary runs in real time "
+                f"during key sequences: the audience waits the actual minutes it takes "
+                f"for a space to come alive."
+            )
+        if S == PO:
+            return (
+                f"Final cut. {name} completes the documentary of {addr}'s transformation. "
+                f"Using \"{work_anchor}\", the film moves from the first site visit through "
+                f"the full activation. {approach}. The final version is tight — every frame "
+                f"earned. The before/after isn't sentimental. It's architectural. You see "
+                f"what a {sqft} sqft lot in {hood} can become when someone decides to "
+                f"activate it."
+            )
+        return (
+            f"Complete media for the {hood} sphere premiere — documentary, narrative "
+            f"assets, impact data, and media kit. {name}'s film from \"{work_anchor}\" "
+            f"is the portfolio's primary narrative vehicle. {approach}. The premiere "
+            f"package positions {addr} not as a one-off but as proof: vacant lots are "
+            f"design problems, not permanent conditions."
         )
 
-    return finding
+    # Fallback
+    return (
+        f"{name} applies \"{work_anchor}\" to {addr}. {approach}."
+    )
 
 
 def _generate_deliverable(
