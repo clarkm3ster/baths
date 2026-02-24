@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "39035",
+  "county_name": "Cuyahoga County (Cleveland), OH",
+  "scraped_at": "2026-02-24T20:31:50.530Z",
+  "data": {
+    "total_households_internet": 552421,
+    "with_internet": 474548,
+    "broadband": 473326,
+    "no_internet": 64930,
+    "has_computer": 508077,
+    "has_smartphone_only": 469901,
+    "no_computer": 44344
+  }
+}

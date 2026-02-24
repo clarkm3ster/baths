@@ -10,7 +10,7 @@
     "children": 1,
     "description": "Benchmark"
   },
-  "assembled_at": "2026-02-24T17:03:48.712Z",
+  "assembled_at": "2026-02-24T20:31:51.147Z",
   "fragments_used": 8,
   "fragment_sources": [
     "census-commute",

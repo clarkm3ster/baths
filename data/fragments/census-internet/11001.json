@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "11001",
+  "county_name": "District of Columbia",
+  "scraped_at": "2026-02-24T20:31:45.178Z",
+  "data": {
+    "total_households_internet": 315785,
+    "with_internet": 281424,
+    "broadband": 281132,
+    "no_internet": 26018,
+    "has_computer": 301109,
+    "has_smartphone_only": 290171,
+    "no_computer": 14676
+  }
+}

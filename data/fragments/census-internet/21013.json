@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "21013",
+  "county_name": "Bell County, KY",
+  "scraped_at": "2026-02-24T20:31:45.979Z",
+  "data": {
+    "total_households_internet": 9456,
+    "with_internet": 7013,
+    "broadband": 6989,
+    "no_internet": 2209,
+    "has_computer": 7979,
+    "has_smartphone_only": 7065,
+    "no_computer": 1477
+  }
+}

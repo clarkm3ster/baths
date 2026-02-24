@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-24T17:03:48.329Z",
+  "generated_at": "2026-02-24T20:31:51.031Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 239,
+  "total_fragments": 246,
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
@@ -57,7 +57,7 @@
     "census-internet": {
       "label": "Census Internet & Technology",
       "api": "Census ACS 5-year",
-      "fragments": 18,
+      "fragments": 25,
       "gap": false
     },
     "census-employment": {
@@ -112,8 +112,8 @@
   "by_county": {
     "11001": {
       "name": "District of Columbia",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "12086": {
       "name": "Miami-Dade County, FL",
@@ -132,8 +132,8 @@
     },
     "21013": {
       "name": "Bell County, KY",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "24510": {
       "name": "Baltimore City, MD",
@@ -142,13 +142,13 @@
     },
     "26163": {
       "name": "Wayne County (Detroit), MI",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "28049": {
       "name": "Hinds County (Jackson), MS",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "34013": {
       "name": "Essex County, NJ",
@@ -187,8 +187,8 @@
     },
     "39035": {
       "name": "Cuyahoga County (Cleveland), OH",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "42017": {
       "name": "Bucks County, PA",
@@ -232,8 +232,8 @@
     },
     "54055": {
       "name": "Mercer County, WV",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     },
     "06037": {
       "name": "Los Angeles County, CA",
@@ -247,8 +247,8 @@
     },
     "01073": {
       "name": "Jefferson County (Birmingham), AL",
-      "fragments": 7,
-      "coverage_pct": 41
+      "fragments": 8,
+      "coverage_pct": 47
     }
   }
 }

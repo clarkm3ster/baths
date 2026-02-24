@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "28049",
+  "county_name": "Hinds County (Jackson), MS",
+  "scraped_at": "2026-02-24T20:31:47.722Z",
+  "data": {
+    "total_households_internet": 89585,
+    "with_internet": 77763,
+    "broadband": 77670,
+    "no_internet": 10048,
+    "has_computer": 81635,
+    "has_smartphone_only": 77693,
+    "no_computer": 7950
+  }
+}
