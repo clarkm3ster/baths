@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "42045",
+  "county_name": "Delaware County, PA",
+  "scraped_at": "2026-02-24T12:59:24.074Z",
+  "data": {
+    "total_households_internet": 215833,
+    "with_internet": 196508,
+    "broadband": 196290,
+    "no_internet": 15457,
+    "has_computer": 204467,
+    "has_smartphone_only": 189660,
+    "no_computer": 11366
+  }
+}

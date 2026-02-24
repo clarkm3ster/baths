@@ -10,8 +10,8 @@
     "children": 2,
     "description": "Single dad, systems-heavy"
   },
-  "assembled_at": "2026-02-24T08:42:59.682Z",
-  "fragments_used": 7,
+  "assembled_at": "2026-02-24T12:59:46.278Z",
+  "fragments_used": 8,
   "fragment_sources": [
     "census-commute",
     "census-demographics",
@@ -19,6 +19,7 @@
     "census-education",
     "census-housing",
     "census-income",
+    "census-internet",
     "census-rent-burden"
   ],
   "eligible_programs": [
@@ -107,7 +108,7 @@
     "program_count": 8
   },
   "cosm": 10,
-  "cosm_average": 51,
+  "cosm_average": 58,
   "domain_coverage": {
     "health": {
       "score": 53,
@@ -152,8 +153,8 @@
       "note": null
     },
     "infrastructure": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 90,
+      "raw_score": 90,
       "max_score": 100,
       "note": null
     },
@@ -243,21 +244,6 @@
       ]
     },
     {
-      "domain": "infrastructure",
-      "type": "fragment",
-      "missing": [
-        "census-internet"
-      ]
-    },
-    {
-      "domain": "infrastructure",
-      "type": "condition",
-      "missing": [
-        "broadband_pct",
-        "no_internet_pct"
-      ]
-    },
-    {
       "domain": "environment",
       "type": "fragment",
       "missing": [
@@ -300,7 +286,7 @@
       ]
     }
   ],
-  "gap_count": 16,
+  "gap_count": 14,
   "conditions": {
     "median_rent": 1514,
     "median_home_value": 382300,
@@ -319,7 +305,9 @@
     "bachelors_plus_pct": 47.2,
     "public_transit_pct": 3.4,
     "work_from_home_pct": 18,
-    "no_vehicle_pct": 2
+    "no_vehicle_pct": 2,
+    "broadband_pct": 93,
+    "no_internet_pct": 5.3
   },
   "panels": {
     "health": {
@@ -370,7 +358,7 @@
       "program_value": 0
     },
     "infrastructure": {
-      "score": 10,
+      "score": 90,
       "programs": [],
       "program_value": 0
     },

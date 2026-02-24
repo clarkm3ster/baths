@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "42091",
+  "county_name": "Montgomery County, PA",
+  "scraped_at": "2026-02-24T12:59:25.023Z",
+  "data": {
+    "total_households_internet": 329680,
+    "with_internet": 306760,
+    "broadband": 306445,
+    "no_internet": 17467,
+    "has_computer": 316104,
+    "has_smartphone_only": 296536,
+    "no_computer": 13576
+  }
+}

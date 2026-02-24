@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "34023",
+  "county_name": "Middlesex County, NJ",
+  "scraped_at": "2026-02-24T12:59:23.102Z",
+  "data": {
+    "workers_total": 420626,
+    "drove_alone": 272992,
+    "public_transit": 30742,
+    "walked": 11244,
+    "worked_from_home": 58657,
+    "mean_travel_time": 11943760,
+    "no_vehicle": 16930,
+    "one_vehicle": 90692
+  }
+}

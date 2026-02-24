@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "42029",
+  "county_name": "Chester County, PA",
+  "scraped_at": "2026-02-24T12:59:44.077Z",
+  "data": {
+    "total_households_internet": 200622,
+    "with_internet": 187045,
+    "broadband": 186787,
+    "no_internet": 10599,
+    "has_computer": 192535,
+    "has_smartphone_only": 181145,
+    "no_computer": 8087
+  }
+}

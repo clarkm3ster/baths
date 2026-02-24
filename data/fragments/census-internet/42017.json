@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "42017",
+  "county_name": "Bucks County, PA",
+  "scraped_at": "2026-02-24T12:59:25.815Z",
+  "data": {
+    "total_households_internet": 246834,
+    "with_internet": 229905,
+    "broadband": 229590,
+    "no_internet": 13755,
+    "has_computer": 236437,
+    "has_smartphone_only": 220721,
+    "no_computer": 10397
+  }
+}

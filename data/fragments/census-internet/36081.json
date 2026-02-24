@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "36081",
+  "county_name": "Queens County, NY",
+  "scraped_at": "2026-02-24T12:59:45.668Z",
+  "data": {
+    "total_households_internet": 816859,
+    "with_internet": 729389,
+    "broadband": 728338,
+    "no_internet": 73246,
+    "has_computer": 769849,
+    "has_smartphone_only": 727780,
+    "no_computer": 47010
+  }
+}
