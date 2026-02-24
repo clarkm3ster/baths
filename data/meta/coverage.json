@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-24T01:53:08.800Z",
+  "generated_at": "2026-02-24T05:20:27.224Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 211,
+  "total_fragments": 218,
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
@@ -51,7 +51,7 @@
     "census-commute": {
       "label": "Census Commute & Transportation",
       "api": "Census ACS 5-year",
-      "fragments": 13,
+      "fragments": 20,
       "gap": false
     },
     "census-internet": {
@@ -112,18 +112,18 @@
   "by_county": {
     "11001": {
       "name": "District of Columbia",
-      "fragments": 6,
-      "coverage_pct": 35
+      "fragments": 7,
+      "coverage_pct": 41
     },
     "12086": {
       "name": "Miami-Dade County, FL",
-      "fragments": 6,
-      "coverage_pct": 35
+      "fragments": 7,
+      "coverage_pct": 41
     },
     "13121": {
       "name": "Fulton County (Atlanta), GA",
-      "fragments": 6,
-      "coverage_pct": 35
+      "fragments": 7,
+      "coverage_pct": 41
     },
     "17031": {
       "name": "Cook County (Chicago), IL",
@@ -132,8 +132,8 @@
     },
     "21013": {
       "name": "Bell County, KY",
-      "fragments": 6,
-      "coverage_pct": 35
+      "fragments": 7,
+      "coverage_pct": 41
     },
     "24510": {
       "name": "Baltimore City, MD",
@@ -217,8 +217,8 @@
     },
     "48113": {
       "name": "Dallas County, TX",
-      "fragments": 6,
-      "coverage_pct": 35
+      "fragments": 7,
+      "coverage_pct": 41
     },
     "48201": {
       "name": "Harris County (Houston), TX",
@@ -227,8 +227,8 @@
     },
     "53033": {
       "name": "King County (Seattle), WA",
-      "fragments": 6,
-      "coverage_pct": 35
+      "fragments": 7,
+      "coverage_pct": 41
     },
     "54055": {
       "name": "Mercer County, WV",
@@ -242,8 +242,8 @@
     },
     "04013": {
       "name": "Maricopa County (Phoenix), AZ",
-      "fragments": 6,
-      "coverage_pct": 35
+      "fragments": 7,
+      "coverage_pct": 41
     },
     "01073": {
       "name": "Jefferson County (Birmingham), AL",

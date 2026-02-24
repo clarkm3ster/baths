@@ -10,9 +10,10 @@
     "children": 1,
     "description": "Working poor"
   },
-  "assembled_at": "2026-02-24T01:53:08.959Z",
-  "fragments_used": 6,
+  "assembled_at": "2026-02-24T05:20:27.387Z",
+  "fragments_used": 7,
   "fragment_sources": [
+    "census-commute",
     "census-demographics",
     "census-disability",
     "census-education",
@@ -114,7 +115,7 @@
     "program_count": 9
   },
   "cosm": 10,
-  "cosm_average": 45,
+  "cosm_average": 52,
   "domain_coverage": {
     "health": {
       "score": 53,
@@ -153,8 +154,8 @@
       "note": null
     },
     "transportation": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 90,
+      "raw_score": 90,
       "max_score": 100,
       "note": null
     },
@@ -250,22 +251,6 @@
       ]
     },
     {
-      "domain": "transportation",
-      "type": "fragment",
-      "missing": [
-        "census-commute"
-      ]
-    },
-    {
-      "domain": "transportation",
-      "type": "condition",
-      "missing": [
-        "public_transit_pct",
-        "no_vehicle_pct",
-        "work_from_home_pct"
-      ]
-    },
-    {
       "domain": "infrastructure",
       "type": "fragment",
       "missing": [
@@ -323,7 +308,7 @@
       ]
     }
   ],
-  "gap_count": 18,
+  "gap_count": 16,
   "conditions": {
     "median_rent": 1623,
     "median_home_value": 387000,
@@ -339,7 +324,10 @@
     "total_population": 2688237,
     "median_age": 40.6,
     "disability_rate": 0,
-    "bachelors_plus_pct": 29.2
+    "bachelors_plus_pct": 29.2,
+    "public_transit_pct": 3.4,
+    "work_from_home_pct": 10.4,
+    "no_vehicle_pct": 4.1
   },
   "panels": {
     "health": {
@@ -387,7 +375,7 @@
       "program_value": 0
     },
     "transportation": {
-      "score": 10,
+      "score": 90,
       "programs": [],
       "program_value": 0
     },

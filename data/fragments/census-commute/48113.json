@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "48113",
+  "county_name": "Dallas County, TX",
+  "scraped_at": "2026-02-24T05:20:22.380Z",
+  "data": {
+    "workers_total": 1292835,
+    "drove_alone": 936835,
+    "public_transit": 24686,
+    "walked": 20510,
+    "worked_from_home": 150564,
+    "mean_travel_time": 31147205,
+    "no_vehicle": 40976,
+    "one_vehicle": 312249
+  }
+}

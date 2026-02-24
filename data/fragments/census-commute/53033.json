@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "53033",
+  "county_name": "King County (Seattle), WA",
+  "scraped_at": "2026-02-24T05:20:25.111Z",
+  "data": {
+    "workers_total": 1212908,
+    "drove_alone": 645935,
+    "public_transit": 112694,
+    "walked": 55967,
+    "worked_from_home": 274322,
+    "mean_travel_time": 27082420,
+    "no_vehicle": 78353,
+    "one_vehicle": 319633
+  }
+}
