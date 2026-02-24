@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "34013",
+  "county_name": "Essex County, NJ",
+  "scraped_at": "2026-02-24T08:42:57.989Z",
+  "data": {
+    "workers_total": 396088,
+    "drove_alone": 220610,
+    "public_transit": 67408,
+    "walked": 12467,
+    "worked_from_home": 49774,
+    "mean_travel_time": 11698175,
+    "no_vehicle": 46472,
+    "one_vehicle": 127678
+  }
+}

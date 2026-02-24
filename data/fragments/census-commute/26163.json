@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "26163",
+  "county_name": "Wayne County (Detroit), MI",
+  "scraped_at": "2026-02-24T08:42:56.121Z",
+  "data": {
+    "workers_total": 742431,
+    "drove_alone": 553436,
+    "public_transit": 17334,
+    "walked": 12827,
+    "worked_from_home": 78197,
+    "mean_travel_time": 16713750,
+    "no_vehicle": 36451,
+    "one_vehicle": 194781
+  }
+}

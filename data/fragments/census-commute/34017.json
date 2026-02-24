@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "34017",
+  "county_name": "Hudson County, NJ",
+  "scraped_at": "2026-02-24T08:42:59.060Z",
+  "data": {
+    "workers_total": 375393,
+    "drove_alone": 131710,
+    "public_transit": 125695,
+    "walked": 25777,
+    "worked_from_home": 58175,
+    "mean_travel_time": 11335790,
+    "no_vehicle": 93747,
+    "one_vehicle": 164378
+  }
+}

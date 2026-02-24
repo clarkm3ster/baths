@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "54055",
+  "county_name": "Mercer County, WV",
+  "scraped_at": "2026-02-24T08:42:53.245Z",
+  "data": {
+    "workers_total": 22693,
+    "drove_alone": 19272,
+    "public_transit": 58,
+    "walked": 645,
+    "worked_from_home": 1080,
+    "mean_travel_time": 506060,
+    "no_vehicle": 495,
+    "one_vehicle": 5467
+  }
+}
