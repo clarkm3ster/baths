@@ -463,6 +463,7 @@ def _simulate_dome_finding(
     all_dims = ", ".join(char.flourishing_dimensions)
     n_sys = len(char.key_systems)
     approach = talent.approach.split('.')[0].strip() if talent.approach else ""
+    work_and_second = f' and "{work_second}"' if work_second else ""
 
     S = stage
     D = ProductionStage.DEVELOPMENT
@@ -499,7 +500,7 @@ def _simulate_dome_finding(
                 f"The blueprint becomes policy. {name} produces an actionable brief showing "
                 f"how {char.name}'s dome coordination model — {n_sys} systems linked through "
                 f"a single navigator pathway — can replicate at municipal scale. Drawing on "
-                f"\"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, "
+                f"\"{work_anchor}\"{work_and_second}, "
                 f"the brief demonstrates that the coordination savings from {sys0} and {sys1} "
                 f"alone would fund navigator positions for the next 50 cases. {approach}. "
                 f"This is policy produced from inside a production, not a think tank."
@@ -552,7 +553,7 @@ def _simulate_dome_finding(
                 f"coordination bond: the savings from linking {n_sys} systems — reduced "
                 f"duplicate processing, fewer missed appointments, lower emergency costs — "
                 f"are quantified and converted into investable returns. Using "
-                f"\"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, "
+                f"\"{work_anchor}\"{work_and_second}, "
                 f"the bond structure shows that coordination pays for itself within 18 months "
                 f"for cases like {char.name}'s. {approach}. This is a financial product "
                 f"produced from inside a dome, not a spreadsheet."
@@ -599,7 +600,7 @@ def _simulate_dome_finding(
             return (
                 f"The first cut. {name} produces the documentary capturing {char.name}'s "
                 f"journey through the dome production. Using \"{work_anchor}\""
-                f"{f' and \"{work_second}\"' if work_second else ''}, the film positions "
+                f"{work_and_second}, the film positions "
                 f"the camera where {char.name} stands — inside the systems, not above them. "
                 f"The audience watches {sys0} and {sys1} from the applicant's chair. {approach}. "
                 f"The first cut runs 47 minutes. The coordination sequence — when {n_sys} "
@@ -647,7 +648,7 @@ def _simulate_dome_finding(
             return (
                 f"The concept becomes a complete design package. {name} delivers {char.name}'s "
                 f"dome — every system, every transition, every threshold designed for dignity. "
-                f"Using \"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, "
+                f"Using \"{work_anchor}\"{work_and_second}, "
                 f"the package specifies how {sys0} connects to {sys1} without requiring "
                 f"{char.name} to re-prove eligibility. How the physical environment supports "
                 f"{dim0}. How the schedule respects {dim1}. {approach}. This is the dome. "
@@ -703,6 +704,7 @@ def _simulate_sphere_finding(
     con0 = focus_constraints[0] if focus_constraints else "regulatory constraints"
     con1 = focus_constraints[1] if len(focus_constraints) > 1 else "site conditions"
     approach = talent.approach.split('.')[0].strip() if talent.approach else ""
+    work_and_second = f' and "{work_second}"' if work_second else ""
 
     S = stage
     D = ProductionStage.DEVELOPMENT
@@ -736,7 +738,7 @@ def _simulate_sphere_finding(
                 f"The permit pathway becomes an implementation plan. {name} produces the "
                 f"construction and compliance blueprint for the sphere at {addr} — phasing, "
                 f"logistics, inspection schedules. Using \"{work_anchor}\""
-                f"{f' and \"{work_second}\"' if work_second else ''}, the plan navigates "
+                f"{work_and_second}, the plan navigates "
                 f"{con0} through the variance obtained in pre-production and stages "
                 f"construction to maintain community access throughout. {approach}. "
                 f"The implementation plan is a legal instrument, not just a construction schedule."
@@ -783,7 +785,7 @@ def _simulate_sphere_finding(
             return (
                 f"The concept becomes a program. {name} delivers the full activation: every "
                 f"experience, every performance, every interaction at {addr} designed and "
-                f"scheduled. Using \"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, "
+                f"scheduled. Using \"{work_anchor}\"{work_and_second}, "
                 f"the program creates a rhythm — morning to night, weekday to weekend — that "
                 f"serves {hood}'s actual community. {approach}. The {sqft} sqft becomes a "
                 f"living room for the neighborhood. Not an event space. A place."
@@ -833,7 +835,7 @@ def _simulate_sphere_finding(
                 f"The benefit model becomes a financial instrument. {name} structures the "
                 f"community investment vehicle for the sphere at {addr}: returns quantified "
                 f"and structured so that neighborhood value becomes investable. Using "
-                f"\"{work_anchor}\"{f' and \"{work_second}\"' if work_second else ''}, the "
+                f"\"{work_anchor}\"{work_and_second}, the "
                 f"instrument converts foot traffic data, community usage, and property effects "
                 f"into a return profile. {approach}. This is a financial product that rewards "
                 f"community activation, not displacement."
@@ -878,7 +880,7 @@ def _simulate_sphere_finding(
             return (
                 f"The documentary captures the activation of {addr} — from vacant lot to "
                 f"living sphere. {name} produces the film using \"{work_anchor}\""
-                f"{f' and \"{work_second}\"' if work_second else ''}, positioning the "
+                f"{work_and_second}, positioning the "
                 f"camera at street level in {hood}. The community isn't the subject — "
                 f"they're the directors. {approach}. The documentary runs in real time "
                 f"during key sequences: the audience waits the actual minutes it takes "

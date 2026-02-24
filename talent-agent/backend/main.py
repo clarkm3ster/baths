@@ -22,6 +22,9 @@ from models import (
 )
 from assembly import assemble_team, recommend_principal, _compute_resonance
 from production import execute_stage, get_prior_art
+from scoring import score_stage_live, COSM_DIMENSIONS, CHRON_DIMENSIONS
+from games import play_full_game
+from files import generate_production_files
 from seed import SEED_TALENT, SEED_PRINCIPALS, SEED_PROJECTS
 
 logging.basicConfig(level=logging.INFO)
@@ -539,16 +542,186 @@ def get_stats():
     }
 
 
+# ═══════════════════════════════════════════════════════════════════
+# GAMES — play a complete production end-to-end
+# ═══════════════════════════════════════════════════════════════════
+
+@app.post("/api/projects/{project_id}/play")
+def play_game(
+    project_id: str,
+    principal_id: Optional[str] = None,
+    team_size: int = 6,
+):
+    """Play a complete game — all 5 stages — in one call.
+    Returns the full production: all deliverables, IP, dimension scores, sources."""
+    if project_id not in projects:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    project = projects[project_id]
+    if project.status not in (ProjectStatus.SOURCED, ProjectStatus.ASSEMBLING):
+        raise HTTPException(
+            status_code=400,
+            detail=f"Project status is '{project.status.value}'. Must be 'sourced' or 'assembling' to play. Use /replay to reset."
+        )
+
+    result = play_full_game(
+        project=project,
+        talent_roster=talent_roster,
+        principals=principals,
+        ip_store=ip_items,
+        teams_store=teams,
+        principal_id=principal_id,
+        team_size=team_size,
+    )
+
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+
+    return result
+
+
+@app.get("/api/projects/{project_id}/scores")
+def get_project_scores(project_id: str):
+    """Get live dimension scores for a project."""
+    if project_id not in projects:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    project = projects[project_id]
+    if not project.stage_log:
+        return {"error": "No stages completed yet", "dimensions": {}}
+
+    scores = score_stage_live(project.game_type, project.stage_log)
+    return scores
+
+
+@app.get("/api/projects/{project_id}/files")
+def get_project_files(project_id: str):
+    """Generate and list downloadable files for a completed production."""
+    if project_id not in projects:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    project = projects[project_id]
+    if project.status not in (ProjectStatus.COMPLETED, ProjectStatus.PUBLISHED):
+        raise HTTPException(status_code=400, detail="Production must be completed before files can be generated")
+
+    # Build the game output from stored data
+    principal = principals.get(project.principal_id)
+    team = teams.get(project_id)
+    project_ip = [ip for ip in ip_items.values() if ip.project_id == project_id]
+    final_scores = score_stage_live(project.game_type, project.stage_log)
+
+    game_output = {
+        "project": project.model_dump(),
+        "principal": {
+            "id": principal.principal_id if principal else "",
+            "name": principal.name if principal else "",
+            "vision": principal.vision if principal else "",
+            "signature_style": principal.signature_style if principal else "",
+        },
+        "team": {
+            "members": [
+                {
+                    "talent_id": m.talent_id,
+                    "talent_name": m.talent_name,
+                    "resonance_score": m.resonance_score,
+                    "reasoning": m.reasoning,
+                    "capabilities_matched": m.capabilities_matched,
+                    "unlikely_value": m.unlikely_value,
+                }
+                for m in (team.members if team else [])
+            ],
+            "team_strength": team.team_strength if team else "",
+            "unlikely_collisions": team.unlikely_collisions if team else [],
+            "capabilities_coverage": team.capabilities_coverage if team else {},
+            "ip_surface_area": team.ip_surface_area if team else [],
+        },
+        "stages": project.stage_log,
+        "dimension_progression": [],
+        "final_scores": final_scores,
+        "ip_log": [
+            {
+                "ip_id": ip.ip_id,
+                "domain": ip.domain.value,
+                "title": ip.title,
+                "description": ip.description[:200],
+                "format": ip.format,
+                "practitioner_name": ip.practitioner_name,
+                "practice": ip.practice,
+                "stage": ip.stage_originated.value,
+            }
+            for ip in project_ip
+        ],
+        "sources_cited": [],
+    }
+
+    # Rebuild dimension progression
+    for i in range(1, len(project.stage_log) + 1):
+        snap = score_stage_live(project.game_type, project.stage_log[:i])
+        game_output["dimension_progression"].append(snap)
+
+    # Collect sources
+    from games import _collect_sources
+    game_output["sources_cited"] = _collect_sources(project, project.stage_log)
+
+    file_map = generate_production_files(game_output)
+
+    # Return file info with download URLs
+    files_list = []
+    for key, filepath in file_map.items():
+        filename = os.path.basename(filepath)
+        files_list.append({
+            "key": key,
+            "filename": filename,
+            "url": f"/api/projects/{project_id}/files/{filename}",
+        })
+
+    return {"files": files_list, "project_id": project_id}
+
+
+@app.get("/api/projects/{project_id}/files/{filename}")
+def download_project_file(project_id: str, filename: str):
+    """Download a specific production file."""
+    from files import OUTPUT_DIR
+    filepath = os.path.join(OUTPUT_DIR, project_id, filename)
+    if not os.path.exists(filepath):
+        raise HTTPException(status_code=404, detail="File not found")
+
+    media = "application/json" if filename.endswith(".json") else "text/markdown"
+    return FileResponse(filepath, media_type=media, filename=filename)
+
+
+@app.get("/api/scoring/dimensions")
+def get_scoring_dimensions(game_type: str = "domes"):
+    """Get the scoring dimension definitions for a game type."""
+    if game_type == "domes":
+        return {
+            "score_name": "Cosm",
+            "dimensions": {
+                k: {"label": v["label"], "description": v["description"]}
+                for k, v in COSM_DIMENSIONS.items()
+            },
+        }
+    else:
+        return {
+            "score_name": "Chron",
+            "dimensions": {
+                k: {"label": v["label"], "description": v["description"]}
+                for k, v in CHRON_DIMENSIONS.items()
+            },
+        }
+
+
 @app.get("/api/health")
 def health():
     """Health check."""
     return {
         "status": "ok",
         "service": "Chron Talent Agent",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "roster_size": len(talent_roster),
         "principals": len(principals),
         "projects": len(projects),
+        "ip_items": len(ip_items),
     }
 
 

@@ -19,6 +19,10 @@ export default function ProjectDetail({ projectId, onBack, onOpenTalent, onOpenP
   const [lastStageOutput, setLastStageOutput] = useState(null)
   const [advancing, setAdvancing] = useState(false)
   const [replaying, setReplaying] = useState(false)
+  const [playingFullGame, setPlayingFullGame] = useState(false)
+  const [gameResult, setGameResult] = useState(null)
+  const [dimScores, setDimScores] = useState(null)
+  const [files, setFiles] = useState(null)
 
   const fetchProject = () => {
     fetch(`/api/projects/${projectId}`)
@@ -77,12 +81,68 @@ export default function ProjectDetail({ projectId, onBack, onOpenTalent, onOpenP
     try {
       await fetch(`/api/projects/${projectId}/replay`, { method: 'POST' })
       setLastStageOutput(null)
+      setGameResult(null)
+      setDimScores(null)
+      setFiles(null)
       fetchProject()
     } catch (e) {
       console.error('Replay failed:', e)
     }
     setReplaying(false)
   }
+
+  const handlePlayFullGame = async () => {
+    setPlayingFullGame(true)
+    setGameResult(null)
+    setDimScores(null)
+    setFiles(null)
+    try {
+      const params = new URLSearchParams({ team_size: '6' })
+      if (selectedPrincipal) params.set('principal_id', selectedPrincipal)
+      const res = await fetch(`/api/projects/${projectId}/play?${params}`, { method: 'POST' })
+      const data = await res.json()
+      if (data.error) {
+        console.error('Play failed:', data.error)
+      } else {
+        setGameResult(data)
+        setDimScores(data.final_scores)
+        // Show the last stage
+        if (data.stages?.length > 0) {
+          setLastStageOutput(data.stages[data.stages.length - 1])
+        }
+      }
+      fetchProject()
+      // Fetch files
+      fetchFiles()
+    } catch (e) {
+      console.error('Play failed:', e)
+    }
+    setPlayingFullGame(false)
+  }
+
+  const fetchDimScores = () => {
+    fetch(`/api/projects/${projectId}/scores`)
+      .then(r => r.json())
+      .then(data => { if (data.dimensions) setDimScores(data) })
+      .catch(() => {})
+  }
+
+  const fetchFiles = () => {
+    fetch(`/api/projects/${projectId}/files`)
+      .then(r => r.json())
+      .then(data => { if (data.files) setFiles(data.files) })
+      .catch(() => {})
+  }
+
+  // Fetch dimension scores when project has stages
+  useEffect(() => {
+    if (project?.stage_log?.length > 0) {
+      fetchDimScores()
+    }
+    if (project?.status === 'completed' || project?.status === 'published') {
+      fetchFiles()
+    }
+  }, [project?.stage_log?.length, project?.status])
 
   if (loading) return <div className="loading">Loading project...</div>
   if (!project) return <div className="empty-state"><h3>Project not found</h3></div>
@@ -125,6 +185,76 @@ export default function ProjectDetail({ projectId, onBack, onOpenTalent, onOpenP
           )}
         </div>
       </div>
+
+      {/* Dimension Scores */}
+      {dimScores && dimScores.dimensions && (
+        <div className="detail-section">
+          <h3>{dimScores.score_type === 'cosm' ? 'Cosm' : 'Chron'} Dimensions</h3>
+          <div className="dim-grid">
+            {Object.entries(dimScores.dimension_details || {}).map(([key, dim]) => (
+              <div key={key} className={`dim-card ${key === dimScores.weakest ? 'weakest' : ''} ${key === dimScores.strongest ? 'strongest' : ''}`}>
+                <div className="dim-label">{dim.label}</div>
+                <div className="dim-score">{dim.score}</div>
+                <div className="dim-bar-bg">
+                  <div className="dim-bar-fill" style={{ width: `${dim.score}%` }} />
+                </div>
+                {dimScores.stage_deltas?.[key] > 0 && (
+                  <div className="dim-delta">+{dimScores.stage_deltas[key]}</div>
+                )}
+                {key === dimScores.weakest && <div className="dim-tag dim-tag-weak">weakest</div>}
+                {key === dimScores.strongest && <div className="dim-tag dim-tag-strong">strongest</div>}
+              </div>
+            ))}
+          </div>
+          <div className="dim-total">
+            <span className="dim-total-label">Total {dimScores.score_type === 'cosm' ? 'Cosm' : 'Chron'}</span>
+            <span className="dim-total-value">{dimScores.total}</span>
+            <span className="dim-total-note">= minimum across all dimensions</span>
+          </div>
+        </div>
+      )}
+
+      {/* Downloadable Files */}
+      {files && files.length > 0 && (
+        <div className="detail-section">
+          <h3>Production Files</h3>
+          <div className="files-grid">
+            {files.map(f => (
+              <a key={f.key} href={f.url} download className="file-card">
+                <div className="file-icon">{f.filename.endsWith('.json') ? '{}' : '#'}</div>
+                <div className="file-info">
+                  <div className="file-name">{f.filename}</div>
+                  <div className="file-type">{f.key.replace(/_/g, ' ')}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Game Result Summary */}
+      {gameResult && (
+        <div className="detail-section">
+          <h3>Production Complete</h3>
+          <div className="game-result-card">
+            <div className="gr-summary">{gameResult.summary}</div>
+            {gameResult.sources_cited?.length > 0 && (
+              <div className="gr-sources">
+                <div className="gr-sources-label">Sources Cited ({gameResult.sources_cited.length})</div>
+                {gameResult.sources_cited.slice(0, 8).map((s, i) => (
+                  <div key={i} className="gr-source">
+                    <span className="gr-source-type">{s.type.replace(/_/g, ' ')}</span>
+                    <span className="gr-source-title">{s.title}</span>
+                  </div>
+                ))}
+                {gameResult.sources_cited.length > 8 && (
+                  <div className="gr-source-more">+ {gameResult.sources_cited.length - 8} more sources in the full report</div>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Character or Parcel Brief */}
       {isDomes && project.character && (
@@ -371,11 +501,11 @@ export default function ProjectDetail({ projectId, onBack, onOpenTalent, onOpenP
       {/* Assembly controls */}
       {project.status === 'sourced' && (
         <div className="detail-section">
-          <h3>Assemble Team</h3>
+          <h3>Play Game</h3>
           <p style={{ color: 'var(--ink-lighter)', marginBottom: '1rem', fontSize: '0.9rem' }}>
             {project.production_number > 1
               ? `Production #${project.production_number} — a new team gets the same brief. Prior art from previous productions is available.`
-              : 'Select a principal or let the agent recommend one, then assemble a team based on resonance with this production.'
+              : 'Select a principal or let the agent recommend one. Play runs all 5 stages and generates real deliverable files.'
             }
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
@@ -399,9 +529,14 @@ export default function ProjectDetail({ projectId, onBack, onOpenTalent, onOpenP
                 </div>
               ))}
           </div>
-          <button className="btn btn-primary" onClick={handleAssemble} disabled={assembling}>
-            {assembling ? 'Assembling...' : 'Assemble Team'}
-          </button>
+          <div style={{ display: 'flex', gap: '0.75rem' }}>
+            <button className="btn btn-primary play-btn" onClick={handlePlayFullGame} disabled={playingFullGame}>
+              {playingFullGame ? 'Playing all 5 stages...' : `Play Full ${project.game_type === 'domes' ? 'DOMES' : 'SPHERES'} Game`}
+            </button>
+            <button className="btn btn-secondary" onClick={handleAssemble} disabled={assembling}>
+              {assembling ? 'Assembling...' : 'Assemble Only'}
+            </button>
+          </div>
         </div>
       )}
 
@@ -848,6 +983,213 @@ export default function ProjectDetail({ projectId, onBack, onOpenTalent, onOpenP
           background: var(--paper-warm);
           border: 1px dashed var(--border);
           border-radius: var(--radius-md);
+        }
+
+        /* Play button */
+        .play-btn {
+          background: var(--ink) !important;
+          font-size: 1rem !important;
+          padding: 0.75rem 2rem !important;
+        }
+
+        /* Dimension Scores */
+        .dim-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          gap: 0.75rem;
+          margin-bottom: 1rem;
+        }
+        .dim-card {
+          background: white;
+          border: 1px solid var(--border);
+          border-radius: var(--radius-sm);
+          padding: 0.75rem;
+          text-align: center;
+          position: relative;
+        }
+        .dim-card.weakest { border-color: #e74c3c; border-width: 2px; }
+        .dim-card.strongest { border-color: #27ae60; border-width: 2px; }
+        .dim-label {
+          font-size: 0.7rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: var(--ink-lighter);
+          margin-bottom: 0.25rem;
+        }
+        .dim-score {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--ink);
+        }
+        .dim-bar-bg {
+          height: 4px;
+          background: var(--border-light);
+          border-radius: 2px;
+          margin-top: 0.35rem;
+          overflow: hidden;
+        }
+        .dim-bar-fill {
+          height: 100%;
+          background: var(--accent);
+          border-radius: 2px;
+          transition: width 0.5s ease;
+        }
+        .dim-card.weakest .dim-bar-fill { background: #e74c3c; }
+        .dim-card.strongest .dim-bar-fill { background: #27ae60; }
+        .dim-delta {
+          position: absolute;
+          top: 4px;
+          right: 6px;
+          font-size: 0.7rem;
+          font-family: 'JetBrains Mono', monospace;
+          color: var(--accent-dark);
+        }
+        .dim-tag {
+          font-size: 0.6rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          margin-top: 0.35rem;
+          padding: 0.1rem 0.3rem;
+          border-radius: 3px;
+          display: inline-block;
+        }
+        .dim-tag-weak { background: #fde8e8; color: #e74c3c; }
+        .dim-tag-strong { background: #e8f5e9; color: #27ae60; }
+        .dim-total {
+          display: flex;
+          align-items: baseline;
+          gap: 0.75rem;
+          padding: 1rem;
+          background: var(--ink);
+          color: white;
+          border-radius: var(--radius-sm);
+        }
+        .dim-total-label {
+          font-size: 0.7rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          opacity: 0.7;
+        }
+        .dim-total-value {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+        .dim-total-note {
+          font-size: 0.75rem;
+          opacity: 0.5;
+          font-style: italic;
+        }
+
+        /* Files */
+        .files-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 0.5rem;
+        }
+        .file-card {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.75rem 1rem;
+          background: white;
+          border: 1px solid var(--border);
+          border-radius: var(--radius-sm);
+          text-decoration: none;
+          color: var(--ink);
+          transition: all 0.15s;
+        }
+        .file-card:hover {
+          border-color: var(--accent);
+          box-shadow: var(--shadow-sm);
+        }
+        .file-icon {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--paper-warm);
+          border-radius: 4px;
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: var(--accent-dark);
+          flex-shrink: 0;
+        }
+        .file-info {
+          display: flex;
+          flex-direction: column;
+          min-width: 0;
+        }
+        .file-name {
+          font-size: 0.8rem;
+          font-weight: 500;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .file-type {
+          font-size: 0.7rem;
+          color: var(--ink-lighter);
+          text-transform: capitalize;
+        }
+
+        /* Game Result */
+        .game-result-card {
+          background: white;
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md);
+          padding: 1.5rem;
+        }
+        .gr-summary {
+          white-space: pre-wrap;
+          font-size: 0.85rem;
+          line-height: 1.7;
+          color: var(--ink-light);
+          margin-bottom: 1rem;
+        }
+        .gr-sources {
+          padding-top: 1rem;
+          border-top: 1px solid var(--border-light);
+        }
+        .gr-sources-label {
+          font-size: 0.7rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: var(--accent-dark);
+          margin-bottom: 0.5rem;
+        }
+        .gr-source {
+          display: flex;
+          gap: 0.5rem;
+          align-items: baseline;
+          padding: 0.2rem 0;
+          font-size: 0.8rem;
+        }
+        .gr-source-type {
+          font-size: 0.65rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: var(--ink-lighter);
+          padding: 0.1rem 0.3rem;
+          background: var(--paper-warm);
+          border-radius: 3px;
+          white-space: nowrap;
+        }
+        .gr-source-title {
+          color: var(--ink-light);
+        }
+        .gr-source-more {
+          font-size: 0.75rem;
+          font-style: italic;
+          color: var(--ink-lighter);
+          margin-top: 0.5rem;
         }
       `}</style>
     </div>
