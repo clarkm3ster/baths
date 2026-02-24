@@ -150,6 +150,9 @@ class ProjectBrief(BaseModel):
     # Production tracking
     current_stage: Optional[ProductionStage] = None
     production_id: Optional[str] = None  # links to baths-engine production
+    production_number: int = 1  # Which production run (different teams can run the same project)
+    # Stage log — the record of what happened at each stage
+    stage_log: List[Dict[str, Any]] = Field(default_factory=list)
     # Scores
     cosm_score: float = 0.0
     chron_score: float = 0.0

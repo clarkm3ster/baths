@@ -21,6 +21,7 @@ from models import (
     WorkItem, CharacterBrief, ParcelBrief,
 )
 from assembly import assemble_team, recommend_principal, _compute_resonance
+from production import execute_stage, get_prior_art
 from seed import SEED_TALENT, SEED_PRINCIPALS, SEED_PROJECTS
 
 logging.basicConfig(level=logging.INFO)
@@ -241,7 +242,8 @@ def get_project_team(project_id: str):
 
 @app.post("/api/projects/{project_id}/start")
 def start_project_production(project_id: str):
-    """Start a project's production — move from assembling to in_production."""
+    """Start a project's production — move from assembling to in_production.
+    Executes the Development stage immediately — the game begins."""
     if project_id not in projects:
         raise HTTPException(status_code=404, detail="Project not found")
 
@@ -251,20 +253,35 @@ def start_project_production(project_id: str):
 
     project.status = ProjectStatus.IN_PRODUCTION
     project.current_stage = ProductionStage.DEVELOPMENT
-    from datetime import datetime
-    project.started_at = datetime.utcnow()
+    from datetime import datetime as dt
+    project.started_at = dt.utcnow()
 
     # Mark team members as on_production
     for tid in project.team_ids:
         if tid in talent_roster:
             talent_roster[tid].availability = Availability.ON_PRODUCTION
 
+    # Execute the first stage — Development
+    principal = principals.get(project.principal_id)
+    team = teams.get(project_id)
+    if principal and team:
+        stage_output = execute_stage(
+            project, principal, team, talent_roster,
+            ProductionStage.DEVELOPMENT, ip_items,
+            production_number=project.production_number,
+        )
+        project.stage_log.append(stage_output)
+        project.cosm_score += stage_output.get("cosm_delta", 0)
+        project.chron_score += stage_output.get("chron_delta", 0)
+        return {"status": "started", "project": project, "stage_output": stage_output}
+
     return {"status": "started", "project": project}
 
 
 @app.post("/api/projects/{project_id}/advance")
 def advance_project_stage(project_id: str):
-    """Advance a project to the next production stage."""
+    """Advance a project to the next production stage.
+    Executes the stage — the team produces deliverables, IP, and scores."""
     if project_id not in projects:
         raise HTTPException(status_code=404, detail="Project not found")
 
@@ -281,11 +298,12 @@ def advance_project_stage(project_id: str):
     ]
 
     current_idx = stage_order.index(project.current_stage)
+
     if current_idx >= len(stage_order) - 1:
         # Complete the production
         project.status = ProjectStatus.COMPLETED
-        from datetime import datetime
-        project.completed_at = datetime.utcnow()
+        from datetime import datetime as dt
+        project.completed_at = dt.utcnow()
 
         # Release team members
         for tid in project.team_ids:
@@ -297,10 +315,87 @@ def advance_project_stage(project_id: str):
         if project.principal_id in principals:
             principals[project.principal_id].productions_led.append(project_id)
 
+        # Update talent scores
+        for tid in project.team_ids:
+            if tid in talent_roster:
+                talent_roster[tid].total_cosm += project.cosm_score / max(len(project.team_ids), 1)
+                talent_roster[tid].total_chron += project.chron_score / max(len(project.team_ids), 1)
+
+        # Update principal scores
+        if project.principal_id in principals:
+            principals[project.principal_id].total_cosm += project.cosm_score
+            principals[project.principal_id].total_chron += project.chron_score
+
         return {"status": "completed", "project": project}
 
-    project.current_stage = stage_order[current_idx + 1]
-    return {"status": "advanced", "stage": project.current_stage, "project": project}
+    # Advance to next stage and execute it
+    next_stage = stage_order[current_idx + 1]
+    project.current_stage = next_stage
+
+    principal = principals.get(project.principal_id)
+    team = teams.get(project_id)
+    if principal and team:
+        stage_output = execute_stage(
+            project, principal, team, talent_roster,
+            next_stage, ip_items,
+            production_number=project.production_number,
+        )
+        project.stage_log.append(stage_output)
+        project.cosm_score += stage_output.get("cosm_delta", 0)
+        project.chron_score += stage_output.get("chron_delta", 0)
+        return {"status": "advanced", "stage": next_stage, "project": project, "stage_output": stage_output}
+
+    return {"status": "advanced", "stage": next_stage, "project": project}
+
+
+@app.post("/api/projects/{project_id}/replay")
+def replay_project(project_id: str):
+    """Reset a completed project for a new production run with a different team.
+    The prior art from the first run stays in the IP store.
+    The new team will see it and decide whether to build on it or diverge."""
+    if project_id not in projects:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    project = projects[project_id]
+    if project.status not in (ProjectStatus.COMPLETED, ProjectStatus.PUBLISHED):
+        raise HTTPException(status_code=400, detail="Project must be completed before replay")
+
+    # Increment production number
+    project.production_number += 1
+
+    # Reset production state but keep the project brief
+    project.status = ProjectStatus.SOURCED
+    project.principal_id = None
+    project.team_ids = []
+    project.current_stage = None
+    project.stage_log = []
+    project.cosm_score = 0.0
+    project.chron_score = 0.0
+    project.started_at = None
+    project.completed_at = None
+
+    # Remove team assignment
+    if project_id in teams:
+        del teams[project_id]
+
+    return {
+        "status": "reset_for_replay",
+        "production_number": project.production_number,
+        "project": project,
+        "prior_art_available": len(get_prior_art(project, ip_items, ProductionStage.DEVELOPMENT)),
+    }
+
+
+@app.get("/api/projects/{project_id}/prior-art")
+def get_project_prior_art(project_id: str, stage: Optional[str] = None):
+    """Get all prior art for a project — IP from previous production runs."""
+    if project_id not in projects:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    project = projects[project_id]
+    target_stage = ProductionStage(stage) if stage else ProductionStage.DISTRIBUTION
+    prior = get_prior_art(project, ip_items, target_stage)
+    return {"prior_art": prior, "total": len(prior)}
 
 
 # ═══════════════════════════════════════════════════════════════════
