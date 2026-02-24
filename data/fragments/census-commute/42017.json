@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "42017",
+  "county_name": "Bucks County, PA",
+  "scraped_at": "2026-02-24T01:53:04.192Z",
+  "data": {
+    "workers_total": 334130,
+    "drove_alone": 250262,
+    "public_transit": 7665,
+    "walked": 4011,
+    "worked_from_home": 49751,
+    "mean_travel_time": 8489705,
+    "no_vehicle": 5881,
+    "one_vehicle": 47407
+  }
+}

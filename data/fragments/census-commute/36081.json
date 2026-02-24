@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "36081",
+  "county_name": "Queens County, NY",
+  "scraped_at": "2026-02-24T01:53:06.610Z",
+  "data": {
+    "workers_total": 1112766,
+    "drove_alone": 362668,
+    "public_transit": 486661,
+    "walked": 61728,
+    "worked_from_home": 106632,
+    "mean_travel_time": 43823485,
+    "no_vehicle": 317929,
+    "one_vehicle": 428518
+  }
+}

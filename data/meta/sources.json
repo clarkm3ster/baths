@@ -49,9 +49,9 @@
   "census-commute": {
     "label": "Census commute",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-23T20:41:33.962Z",
-    "total_scrapes": null,
-    "counties_covered": 6
+    "last_scraped": "2026-02-24T01:53:08.800Z",
+    "total_scrapes": 7,
+    "counties_covered": 13
   },
   "census-internet": {
     "label": "Census internet",
