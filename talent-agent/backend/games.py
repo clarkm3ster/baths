@@ -3,18 +3,24 @@ Chron Talent Agent — Game Orchestrator
 
 Runs a complete DOMES or SPHERES production end-to-end:
   1. Take a project brief (character or parcel)
-  2. Assign a principal
-  3. Assemble a team via resonance matching
-  4. Execute all 5 stages: Development → Distribution
-  5. Score across all dimensions (Cosm 6 / Chron 5)
-  6. Return complete production output with all deliverables,
-     IP log, dimension scores, and citation sources.
+  2. Query the intelligence system for cross-project learnings
+  3. Assign a principal
+  4. Assemble a team via resonance matching (informed by world model)
+  5. Execute all 5 stages: Development → Distribution
+     (each stage enriched with prior project intelligence)
+  6. Extract learnings from every stage
+  7. Score across all dimensions (Cosm 6 / Chron 5)
+  8. Deposit all learnings into the memory system
+  9. Return complete production output with intelligence annotations.
 
-The output is everything needed to declare the production complete.
+Every game makes the system smarter. Domes learn from domes.
+Spheres learn from spheres. And cross-pollination happens.
 """
 
 from typing import Dict, List, Optional
 from datetime import datetime
+import sys
+import os
 
 from models import (
     TalentProfile, Principal, ProjectBrief, IPItem,
@@ -24,6 +30,12 @@ from models import (
 from assembly import assemble_team, recommend_principal
 from production import execute_stage, get_prior_art
 from scoring import score_stage_live, COSM_DIMENSIONS, CHRON_DIMENSIONS
+
+# Intelligence system integration
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+from intelligence.memory import ProjectMemoryStore
+from intelligence.world_model import PersonWorldModel, PlaceWorldModel
+from intelligence.models import ProjectMemory, LearningType
 
 
 STAGE_ORDER = [
@@ -43,11 +55,26 @@ def play_full_game(
     teams_store: Dict[str, TeamRecommendation],
     principal_id: Optional[str] = None,
     team_size: int = 6,
+    memory_store: Optional[ProjectMemoryStore] = None,
 ) -> Dict:
     """
     Play a complete game — all 5 stages — and return the full production output.
-    This is the one-call version of the game pipeline.
+
+    If a memory_store is provided, the game:
+    - Queries prior project learnings before starting
+    - Extracts learnings from every stage
+    - Deposits all learnings after completion
+    - Enriches deliverables with cross-project intelligence
+    - Makes the system measurably smarter for the next game
     """
+
+    # ── Phase 0: Intelligence Briefing ──────────────────────────
+    # Before anything else, ask the intelligence system what it knows.
+    intelligence_briefing = None
+    if memory_store:
+        intelligence_briefing = _build_intelligence_briefing(
+            project, memory_store,
+        )
 
     # 1. Assign principal
     if principal_id and principal_id in principals:
@@ -80,13 +107,23 @@ def play_full_game(
     # 4. Execute all 5 stages
     stage_outputs = []
     dimension_snapshots = []
+    all_stage_learnings = []
 
     for stage in STAGE_ORDER:
         project.current_stage = stage
+
+        # Query intelligence for stage-specific learnings
+        stage_intelligence = None
+        if memory_store:
+            stage_intelligence = _query_stage_intelligence(
+                project, stage, memory_store,
+            )
+
         stage_output = execute_stage(
             project, principal, team, talent_roster,
             stage, ip_store,
             production_number=project.production_number,
+            intelligence_context=stage_intelligence,
         )
         project.stage_log.append(stage_output)
         project.cosm_score += stage_output.get("cosm_delta", 0)
@@ -96,6 +133,19 @@ def play_full_game(
         # Live dimension scoring after each stage
         dim_snapshot = score_stage_live(project.game_type, project.stage_log)
         dimension_snapshots.append(dim_snapshot)
+
+        # ── Extract learnings from this stage ───────────────────
+        if memory_store:
+            stage_learnings = memory_store.extract_learnings_from_stage(
+                project_id=project.project_id,
+                project_title=project.title,
+                game_type=project.game_type.value,
+                stage=stage.value,
+                deliverables=stage_output.get("deliverables", []),
+                cosm_delta=stage_output.get("cosm_delta", 0),
+                chron_delta=stage_output.get("chron_delta", 0),
+            )
+            all_stage_learnings.extend(stage_learnings)
 
     # 5. Complete the production
     project.status = ProjectStatus.COMPLETED
@@ -135,8 +185,40 @@ def play_full_game(
     # 8. Collect all sources cited
     sources = _collect_sources(project, stage_outputs)
 
-    # 9. Build complete output
-    return {
+    # ── Phase 9: Deposit learnings into the memory system ───────
+    # This is where the system gets smarter.
+    intelligence_deposit = None
+    if memory_store and all_stage_learnings:
+        project_memory = ProjectMemory(
+            project_id=project.project_id,
+            project_title=project.title,
+            game_type=project.game_type.value,
+            principal_name=principal.name,
+            team_size=len(team.members),
+            learnings=all_stage_learnings,
+            cosm_score=project.cosm_score,
+            chron_score=project.chron_score,
+            weakest_dimension=final_scores.get("weakest", ""),
+            strongest_dimension=final_scores.get("strongest", ""),
+            key_innovations=[
+                uc for uc in team.unlikely_collisions
+            ],
+            unexpected_connections=[
+                d["description"][:150]
+                for so in stage_outputs
+                for d in so.get("deliverables", [])
+                if d.get("is_unlikely")
+            ],
+        )
+        memory_store.deposit(project_memory)
+        intelligence_deposit = {
+            "learnings_extracted": len(all_stage_learnings),
+            "learning_types": _count_learning_types(all_stage_learnings),
+            "system_metrics": memory_store.compute_metrics().model_dump(),
+        }
+
+    # 10. Build complete output
+    output = {
         "status": "completed",
         "project": project.model_dump(),
         "principal": {
@@ -181,6 +263,152 @@ def play_full_game(
         "sources_cited": sources,
         "summary": _build_summary(project, principal, team, final_scores, project_ip),
     }
+
+    # Add intelligence annotations
+    if intelligence_briefing:
+        output["intelligence_briefing"] = intelligence_briefing
+    if intelligence_deposit:
+        output["intelligence_deposit"] = intelligence_deposit
+
+    return output
+
+
+# ── Intelligence Integration ────────────────────────────────────
+
+def _build_intelligence_briefing(
+    project: ProjectBrief,
+    memory_store: ProjectMemoryStore,
+) -> Dict:
+    """
+    Query the intelligence system for everything it knows that's
+    relevant to this project. Called before the game starts.
+    """
+    briefing = {
+        "system_state": {
+            "total_projects_in_memory": len(memory_store.memories),
+            "total_learnings_available": len(memory_store.all_learnings),
+        },
+        "relevant_learnings": [],
+        "world_model_briefing": None,
+    }
+
+    if project.game_type == GameType.DOMES and project.character:
+        # Query person world model
+        person_model = PersonWorldModel(memory_store)
+        briefing["world_model_briefing"] = person_model.assess_situation(
+            key_systems=project.character.key_systems,
+            flourishing_dimensions=project.character.flourishing_dimensions,
+            situation_description=project.character.situation,
+        )
+
+        # Query relevant learnings
+        keywords = []
+        for sys in project.character.key_systems:
+            keywords.extend(sys.lower().split())
+        for dim in project.character.flourishing_dimensions:
+            keywords.append(dim.lower())
+
+        relevant = memory_store.query_relevant_learnings(
+            game_type="domes",
+            keywords=keywords,
+            limit=10,
+        )
+        briefing["relevant_learnings"] = [
+            {
+                "insight": l.insight[:200],
+                "type": l.learning_type.value,
+                "source_project": l.source_project_title,
+                "reliability": round(l.reliability, 2),
+            }
+            for l in relevant
+        ]
+
+    elif project.game_type == GameType.SPHERES and project.parcel:
+        # Query place world model
+        place_model = PlaceWorldModel(memory_store)
+        briefing["world_model_briefing"] = place_model.assess_site(
+            address=project.parcel.address,
+            neighborhood=project.parcel.neighborhood,
+            zoning=project.parcel.zoning,
+            lot_size_sqft=project.parcel.lot_size_sqft,
+            constraints=project.parcel.constraints,
+            community_context=project.parcel.community_context,
+        )
+
+        keywords = [project.parcel.zoning.lower(), project.parcel.neighborhood.lower()]
+        for c in project.parcel.constraints:
+            keywords.extend(c.lower().split())
+
+        relevant = memory_store.query_relevant_learnings(
+            game_type="spheres",
+            keywords=keywords,
+            limit=10,
+        )
+        briefing["relevant_learnings"] = [
+            {
+                "insight": l.insight[:200],
+                "type": l.learning_type.value,
+                "source_project": l.source_project_title,
+                "reliability": round(l.reliability, 2),
+            }
+            for l in relevant
+        ]
+
+    return briefing
+
+
+def _query_stage_intelligence(
+    project: ProjectBrief,
+    stage: ProductionStage,
+    memory_store: ProjectMemoryStore,
+) -> Optional[Dict]:
+    """
+    Query for stage-specific intelligence from prior projects.
+    Returns insights relevant to this particular stage.
+    """
+    keywords = [stage.value]
+
+    if project.game_type == GameType.DOMES and project.character:
+        for sys in project.character.key_systems:
+            keywords.extend(sys.lower().split())
+    elif project.game_type == GameType.SPHERES and project.parcel:
+        keywords.append(project.parcel.zoning.lower())
+        keywords.append(project.parcel.neighborhood.lower())
+
+    relevant = memory_store.query_relevant_learnings(
+        game_type=project.game_type.value,
+        keywords=keywords,
+        stage=stage.value,
+        limit=5,
+        min_reliability=0.3,
+    )
+
+    if not relevant:
+        return None
+
+    return {
+        "stage": stage.value,
+        "prior_insights": [
+            {
+                "insight": l.insight[:300],
+                "type": l.learning_type.value,
+                "source": l.source_project_title,
+                "capability": l.source_capability,
+                "reliability": round(l.reliability, 2),
+            }
+            for l in relevant
+        ],
+        "cross_project_count": len(relevant),
+    }
+
+
+def _count_learning_types(learnings) -> Dict[str, int]:
+    """Count learnings by type for reporting."""
+    counts = {}
+    for l in learnings:
+        lt = l.learning_type.value
+        counts[lt] = counts.get(lt, 0) + 1
+    return counts
 
 
 def _collect_sources(project: ProjectBrief, stage_outputs: List[Dict]) -> List[Dict]:

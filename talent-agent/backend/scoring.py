@@ -281,6 +281,16 @@ def score_dimensions(
                     "weighted": round(weighted, 1),
                 })
 
+        # Intelligence evolution bonus: deliverables that reference
+        # cross-project intelligence score higher because the system
+        # is demonstrably learning from prior projects.
+        intel_bonus = 0.0
+        for entry in stage_log:
+            for d in entry.get("deliverables", []):
+                if d.get("cross_project_source"):
+                    intel_bonus += 2.0
+        raw += intel_bonus
+
         # Normalize: a perfect single-stage contribution is ~24 points raw,
         # across 5 stages with full coverage = ~120 raw → map to 0-100
         normalized = min(round(raw * 0.85, 1), 100.0)
@@ -291,10 +301,18 @@ def score_dimensions(
             "description": dim_def["description"],
             "score": normalized,
             "breakdown": detail_parts,
+            "intelligence_bonus": round(intel_bonus * 0.85, 1),
         }
 
     # Total = minimum across all dimensions
     total = min(dim_scores.values()) if dim_scores else 0.0
+
+    # Count cross-project intelligence usage
+    total_intel_refs = sum(
+        1 for entry in stage_log
+        for d in entry.get("deliverables", [])
+        if d.get("cross_project_source")
+    )
 
     return {
         "score_type": score_name,
@@ -303,6 +321,7 @@ def score_dimensions(
         "dimension_details": dim_details,
         "weakest": min(dim_scores, key=dim_scores.get) if dim_scores else None,
         "strongest": max(dim_scores, key=dim_scores.get) if dim_scores else None,
+        "intelligence_references": total_intel_refs,
     }
 
 

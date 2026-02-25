@@ -1282,6 +1282,7 @@ def execute_stage(
     stage: ProductionStage,
     ip_store: Dict[str, IPItem],
     production_number: int = 1,
+    intelligence_context: Optional[Dict] = None,
 ) -> Dict:
     """
     Execute a production stage. This is the gameplay.
@@ -1290,6 +1291,9 @@ def execute_stage(
     The principal's vision shapes the direction.
     Different teams produce different outputs because they
     bring different prior work to the same production challenge.
+
+    If intelligence_context is provided (from the memory system),
+    deliverables are enriched with cross-project insights.
     """
     stage_defs = (DOMES_STAGES if project.game_type == GameType.DOMES
                   else SPHERES_STAGES)
@@ -1446,11 +1450,46 @@ def execute_stage(
         ip_generated.append(ip_item)
         ip_store[ip_item.ip_id] = ip_item
 
+    # Phase 2.5: Intelligence enrichment
+    # If cross-project intelligence is available, annotate deliverables
+    # with insights from prior projects. This is where the system
+    # demonstrates that it's learning.
+    intelligence_annotations = []
+    if intelligence_context and intelligence_context.get("prior_insights"):
+        for deliverable in deliverables:
+            cap = deliverable.get("capability", "")
+            relevant_insights = [
+                ins for ins in intelligence_context["prior_insights"]
+                if ins.get("capability") == cap or ins.get("type") in ("pattern", "method")
+            ]
+            if relevant_insights:
+                # Add cross-project intelligence to the deliverable
+                best_insight = relevant_insights[0]
+                cross_ref = (
+                    f" [Cross-project intelligence: {best_insight['source']} "
+                    f"({best_insight['type']}, reliability {best_insight['reliability']}) — "
+                    f"{best_insight['insight'][:150]}]"
+                )
+                deliverable["description"] += cross_ref
+                deliverable["cross_project_source"] = best_insight["source"]
+                intelligence_annotations.append({
+                    "deliverable": deliverable["title"],
+                    "insight_source": best_insight["source"],
+                    "insight_type": best_insight["type"],
+                    "reliability": best_insight["reliability"],
+                })
+
     # Phase 3: Scores
     cosm_delta, chron_delta = _compute_scores(
         stage, len(deliverables), len(unlikely_outputs),
         len(prior_art_referenced), total_work_refs
     )
+
+    # Intelligence bonus: cross-project learning adds score
+    if intelligence_annotations:
+        intel_bonus = min(len(intelligence_annotations) * 1.5, 6.0)
+        cosm_delta = round(cosm_delta + intel_bonus, 1)
+        chron_delta = round(chron_delta + intel_bonus * 0.5, 1)
 
     # Phase 4: Narrative
     narrative = _build_narrative(
@@ -1459,7 +1498,7 @@ def execute_stage(
         cosm_delta, chron_delta, production_number
     )
 
-    return {
+    result = {
         "stage": stage.value,
         "stage_name": stage_def["name"],
         "focus": stage_def["focus"],
@@ -1487,6 +1526,13 @@ def execute_stage(
         "prior_art_used": len(prior_art_referenced),
         "work_refs_count": total_work_refs,
     }
+
+    # Add intelligence annotations if present
+    if intelligence_annotations:
+        result["intelligence_annotations"] = intelligence_annotations
+        result["cross_project_insights_used"] = len(intelligence_annotations)
+
+    return result
 
 
 def _build_narrative(
