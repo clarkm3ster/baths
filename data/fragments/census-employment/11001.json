@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "11001",
+  "county_name": "District of Columbia",
+  "scraped_at": "2026-02-25T08:43:45.179Z",
+  "data": {
+    "pop_16_plus": 556781,
+    "in_labor_force": 400930,
+    "civilian_employed": 369398,
+    "civilian_unemployed": 28264,
+    "not_in_labor_force": 155851,
+    "occupation_mgmt": 120938,
+    "occupation_service": 19219,
+    "occupation_production": 7878
+  }
+}

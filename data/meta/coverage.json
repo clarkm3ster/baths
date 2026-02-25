@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-25T05:21:56.219Z",
+  "generated_at": "2026-02-25T08:43:48.984Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 260,
+  "total_fragments": 267,
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
@@ -63,7 +63,7 @@
     "census-employment": {
       "label": "Census Employment",
       "api": "Census ACS 5-year",
-      "fragments": 16,
+      "fragments": 23,
       "gap": false
     },
     "bls-unemployment": {
@@ -112,8 +112,8 @@
   "by_county": {
     "11001": {
       "name": "District of Columbia",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "12086": {
       "name": "Miami-Dade County, FL",
@@ -122,8 +122,8 @@
     },
     "13121": {
       "name": "Fulton County (Atlanta), GA",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "17031": {
       "name": "Cook County (Chicago), IL",
@@ -132,8 +132,8 @@
     },
     "21013": {
       "name": "Bell County, KY",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "24510": {
       "name": "Baltimore City, MD",
@@ -147,8 +147,8 @@
     },
     "28049": {
       "name": "Hinds County (Jackson), MS",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "34013": {
       "name": "Essex County, NJ",
@@ -227,13 +227,13 @@
     },
     "53033": {
       "name": "King County (Seattle), WA",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "54055": {
       "name": "Mercer County, WV",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "06037": {
       "name": "Los Angeles County, CA",
@@ -247,8 +247,8 @@
     },
     "01073": {
       "name": "Jefferson County (Birmingham), AL",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     }
   }
 }

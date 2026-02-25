@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "13121",
+  "county_name": "Fulton County (Atlanta), GA",
+  "scraped_at": "2026-02-25T08:43:43.156Z",
+  "data": {
+    "pop_16_plus": 863381,
+    "in_labor_force": 594682,
+    "civilian_employed": 561697,
+    "civilian_unemployed": 31844,
+    "not_in_labor_force": 268699,
+    "occupation_mgmt": 161918,
+    "occupation_service": 30220,
+    "occupation_production": 16820
+  }
+}

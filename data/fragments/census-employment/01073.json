@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "01073",
+  "county_name": "Jefferson County (Birmingham), AL",
+  "scraped_at": "2026-02-25T08:43:48.483Z",
+  "data": {
+    "pop_16_plus": 537683,
+    "in_labor_force": 329543,
+    "civilian_employed": 311193,
+    "civilian_unemployed": 17733,
+    "not_in_labor_force": 208140,
+    "occupation_mgmt": 58050,
+    "occupation_service": 22111,
+    "occupation_production": 20745
+  }
+}
