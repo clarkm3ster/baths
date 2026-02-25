@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "39035",
+  "county_name": "Cuyahoga County (Cleveland), OH",
+  "scraped_at": "2026-02-25T12:58:40.592Z",
+  "data": {
+    "pop_16_plus": 1028727,
+    "in_labor_force": 652502,
+    "civilian_employed": 605214,
+    "civilian_unemployed": 46793,
+    "not_in_labor_force": 376225,
+    "occupation_mgmt": 120094,
+    "occupation_service": 43209,
+    "occupation_production": 30901
+  }
+}

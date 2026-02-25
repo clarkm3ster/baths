@@ -1,7 +1,7 @@
 {
   "created_at": "2026-02-21T02:46:06.711Z",
-  "version": 22,
-  "updated_at": "2026-02-25T08:43:49.468Z",
+  "version": 23,
+  "updated_at": "2026-02-25T12:58:46.559Z",
   "total_domes": 168,
   "geographies": 28,
   "archetypes": 6,
@@ -19,5 +19,5 @@
     "label": "Initial domes assembled"
   },
   "programs_mapped": 10,
-  "total_gap_count": 1818
+  "total_gap_count": 1716
 }

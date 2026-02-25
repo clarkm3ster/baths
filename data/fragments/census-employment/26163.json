@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "26163",
+  "county_name": "Wayne County (Detroit), MI",
+  "scraped_at": "2026-02-25T12:58:39.752Z",
+  "data": {
+    "pop_16_plus": 1408500,
+    "in_labor_force": 836262,
+    "civilian_employed": 760955,
+    "civilian_unemployed": 75008,
+    "not_in_labor_force": 572238,
+    "occupation_mgmt": 125420,
+    "occupation_service": 58148,
+    "occupation_production": 47307
+  }
+}

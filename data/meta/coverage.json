@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-25T08:43:48.984Z",
+  "generated_at": "2026-02-25T12:58:46.120Z",
   "total_sources": 17,
   "active_sources": 15,
   "gap_sources": 2,
   "total_counties": 28,
-  "total_fragments": 267,
+  "total_fragments": 274,
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
@@ -63,13 +63,13 @@
     "census-employment": {
       "label": "Census Employment",
       "api": "Census ACS 5-year",
-      "fragments": 23,
+      "fragments": 28,
       "gap": false
     },
     "bls-unemployment": {
       "label": "BLS State Unemployment",
       "api": "BLS Public Data API",
-      "fragments": 5,
+      "fragments": 7,
       "gap": false
     },
     "hud-fmr": {
@@ -142,8 +142,8 @@
     },
     "26163": {
       "name": "Wayne County (Detroit), MI",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "28049": {
       "name": "Hinds County (Jackson), MS",
@@ -152,18 +152,18 @@
     },
     "34013": {
       "name": "Essex County, NJ",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "34017": {
       "name": "Hudson County, NJ",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "34023": {
       "name": "Middlesex County, NJ",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "36005": {
       "name": "Bronx County, NY",
@@ -187,8 +187,8 @@
     },
     "39035": {
       "name": "Cuyahoga County (Cleveland), OH",
-      "fragments": 8,
-      "coverage_pct": 47
+      "fragments": 9,
+      "coverage_pct": 53
     },
     "42017": {
       "name": "Bucks County, PA",
@@ -202,13 +202,13 @@
     },
     "42045": {
       "name": "Delaware County, PA",
-      "fragments": 9,
-      "coverage_pct": 53
+      "fragments": 10,
+      "coverage_pct": 59
     },
     "42091": {
       "name": "Montgomery County, PA",
-      "fragments": 9,
-      "coverage_pct": 53
+      "fragments": 10,
+      "coverage_pct": 59
     },
     "42101": {
       "name": "Philadelphia, PA",

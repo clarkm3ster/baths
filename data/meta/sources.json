@@ -63,14 +63,16 @@
   "census-employment": {
     "label": "Census employment",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-25T08:43:48.983Z",
-    "total_scrapes": 14,
-    "counties_covered": 23
+    "last_scraped": "2026-02-25T12:58:46.119Z",
+    "total_scrapes": 19,
+    "counties_covered": 28
   },
   "bls-unemployment": {
     "label": "BLS State Unemployment",
     "api": "BLS Public Data API",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-25T12:58:46.119Z",
+    "total_scrapes": null,
+    "counties_covered": 7
   },
   "hud-fmr": {
     "label": "HUD Fair Market Rents",
