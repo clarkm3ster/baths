@@ -86,5 +86,9 @@ jobs:
           else
             ENGINE="${{ github.event.inputs.engine || 'all' }}"
             git commit -m "engine/${ENGINE}: ${{ steps.counts.outputs.summary }} [skip ci]"
-            git push
+            for i in 1 2 3 4; do
+              git pull --rebase origin main && git push && break
+              echo "Push attempt $i failed, retrying in $((i * 2))s..."
+              sleep $((i * 2))
+            done
           fi

@@ -46,5 +46,9 @@ jobs:
             echo "No data changes to commit"
           else
             git commit -m "fragment: ${{ steps.counts.outputs.fragments }} fragments, ${{ steps.counts.outputs.domes }} domes [skip ci]"
-            git push
+            for i in 1 2 3 4; do
+              git pull --rebase origin main && git push && break
+              echo "Push attempt $i failed, retrying in $((i * 2))s..."
+              sleep $((i * 2))
+            done
           fi

@@ -860,7 +860,7 @@ async function run() {
   // Detect patterns
   console.log('\n── Detecting patterns ──────────────────────')
   const patterns = detectPatterns(allDomes)
-  writeJSON(join(PATTERNS, `patterns-${Date.now()}.json`), patterns)
+  writeJSON(join(PATTERNS, 'latest.json'), patterns)
   console.log(`  Geographic deltas: ${patterns.geographic_deltas.length}`)
   console.log(`  Common gaps: ${Object.keys(patterns.common_gaps).length}`)
   console.log(`  Program clusters: ${Object.keys(patterns.program_clusters).length}`)
