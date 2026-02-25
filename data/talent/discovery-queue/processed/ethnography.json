@@ -1,0 +1,124 @@
+{
+  "discipline": "Ethnography",
+  "description": "The study of people in their own context. Participant observation, thick description, seeing a community as it sees itself. The discipline that insists you can't understand a person without inhabiting their world.",
+  "dome_relevance": {
+    "8": "Community — understanding social fabric from the inside",
+    "10": "Autonomy — seeing self-determination as communities define it",
+    "12": "Flourishing — understanding what flourishing means to THESE people, not to the system"
+  },
+  "sphere_relevance": {
+    "5": "Social — deep understanding of who lives here and how",
+    "6": "Temporal — oral history, community memory, lived time",
+    "7": "Activation — designing for actual needs, not assumed ones"
+  },
+  "adjacent_disciplines": [
+    { "discipline": "Oral History", "description": "Recording lived experience, community memory, counter-narratives" },
+    { "discipline": "Participatory Action Research", "description": "Research done WITH communities, not ON them" },
+    { "discipline": "Medical Anthropology", "description": "How culture shapes illness, healing, and the body" }
+  ],
+  "practitioners": [
+    {
+      "name": "Clifford Geertz",
+      "type": "real",
+      "alive": false,
+      "born": "1926",
+      "died": "2006",
+      "nationality": "American",
+      "era": "20th century",
+      "practice": "Interpretive anthropology, thick description, culture as text",
+      "approach": "A wink is not a twitch. The same physical movement carries entirely different meaning depending on context. Thick description captures not just what happened but what it meant. Culture is not a power — it is a context within which events become intelligible.",
+      "body_of_work": "The Interpretation of Cultures (1973) — especially 'Thick Description' and 'Deep Play: Notes on the Balinese Cockfight'. Local Knowledge (1983). Worked in Java, Bali, Morocco. Invented the concept of thick description that transformed social science.",
+      "why_instructive": "The dome's data layer IS thin description — numbers, rates, scores. But a dome only serves a person when it achieves thick description: what does this data MEAN in this person's life, in this community's context?",
+      "dome_layers": [8, 10, 12],
+      "sphere_layers": [5, 6],
+      "dome_relevance": {
+        "8": "Community — understanding what community means to its members",
+        "10": "Autonomy — seeing self-determination as locally defined",
+        "12": "Flourishing — thick description of what flourishing actually looks like HERE"
+      },
+      "sphere_relevance": {
+        "5": "Social — deep reading of community context, not just demographics",
+        "6": "Temporal — cultural practices carry time"
+      },
+      "tags": ["thick-description", "interpretive-anthropology", "meaning", "context"]
+    },
+    {
+      "name": "Zora Neale Hurston",
+      "type": "real",
+      "alive": false,
+      "born": "1891",
+      "died": "1960",
+      "nationality": "American",
+      "era": "Harlem Renaissance",
+      "practice": "Folklore collection, Black cultural documentation, participant observation as native daughter",
+      "approach": "She studied her own community — not as outsider anthropologist but as native daughter returning with ethnographic tools. Mules and Men documented hoodoo, work songs, folktales — the living culture that academic anthropology couldn't see because it only looked from outside.",
+      "body_of_work": "Mules and Men (1935) — first collection of African American folklore by a Black woman. Their Eyes Were Watching God (1937). Tell My Horse (1938) — Haitian vodou. Barnard-trained anthropologist who brought insider knowledge to the discipline.",
+      "why_instructive": "She proves that the best community data comes from the community itself. The dome's community layer should be informed by people who live inside it, not consultants who visit.",
+      "dome_layers": [8, 11, 12],
+      "sphere_layers": [5, 6, 7],
+      "dome_relevance": {
+        "8": "Community — insider documentation of Black community culture",
+        "11": "Creativity — folklore as living creative practice",
+        "12": "Flourishing — joy, humor, and beauty within oppression"
+      },
+      "sphere_relevance": {
+        "5": "Social — deep understanding of community from inside",
+        "6": "Temporal — oral tradition carrying history across generations",
+        "7": "Activation — cultural performance as community activation"
+      },
+      "tags": ["folklore", "insider-ethnography", "black-culture", "oral-tradition", "harlem-renaissance"]
+    },
+    {
+      "name": "Ishmael",
+      "type": "fictional",
+      "source_work": "Moby-Dick",
+      "source_medium": "novel",
+      "creator": "Herman Melville",
+      "era": "1851",
+      "practice": "Participant observation, cetology, the ethnography of work, classification as meaning-making",
+      "approach": "To understand the whale, Ishmael studies everything — the anatomy, the industry, the mythology, the workers. His cetology chapters are thick description of a workplace. He classifies whales not by species but by folio size — because how you categorize determines what you see.",
+      "body_of_work": "Ships out on the Pequod to understand whaling. Documents every role, every practice, every belief. His classification system (whale as folio, as quarto, as duodecimo) is a commentary on how taxonomy shapes perception. The whiteness of the whale IS the chapter on meaning-making.",
+      "why_instructive": "He shows that the dome's data categories SHAPE what the dome can see. How you classify determines what you find. His obsessive documentation is what the data layer aspires to — but his warning is clear: the thing itself always exceeds the classification.",
+      "dome_layers": [6, 8, 11],
+      "sphere_layers": [3, 5, 6],
+      "dome_relevance": {
+        "6": "Economic — the whaling industry as complete economic system",
+        "8": "Community — the ship as community with its own culture",
+        "11": "Creativity — classification itself as creative act, meaning-making through documentation"
+      },
+      "sphere_relevance": {
+        "3": "Environmental — the ocean as environment, the whale as ecosystem",
+        "5": "Social — the ship's social hierarchy and multi-racial community",
+        "6": "Temporal — whaling's history, mythology, and decline"
+      },
+      "tags": ["participant-observation", "classification", "documentation", "workplace-ethnography"]
+    },
+    {
+      "name": "Philippe Bourgois",
+      "type": "real",
+      "alive": true,
+      "born": "1956",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Urban ethnography, structural violence, drug economies, homelessness",
+      "approach": "Live in the community for years. East Harlem crack dealers are not pathological — they are rational actors in a structurally violent economy. Homeless heroin users in San Francisco are not making bad choices — they are surviving impossible conditions. The ethnographer must not flinch.",
+      "body_of_work": "In Search of Respect: Selling Crack in El Barrio (1995) — 5 years living in East Harlem. Righteous Dopefiend (2009) — 12 years with homeless heroin users under a San Francisco freeway overpass. Both show that what looks like self-destruction is actually structural violence.",
+      "why_instructive": "He documents what the dome sees as numbers — poverty rates, drug overdose rates, homelessness counts — from the inside. Every data point in the dome is a person living under conditions that Bourgois makes visible.",
+      "dome_layers": [1, 3, 4, 5, 6, 8],
+      "sphere_layers": [5, 6],
+      "dome_relevance": {
+        "1": "Legal — the criminalization of poverty, mass incarceration",
+        "3": "Fiscal — underground economies as rational response to exclusion",
+        "4": "Health — addiction as structural product, not personal failure",
+        "5": "Housing — homelessness as structural violence",
+        "6": "Economic — informal economies, survival work",
+        "8": "Community — solidarity and social networks among the excluded"
+      },
+      "sphere_relevance": {
+        "5": "Social — the communities that form under bridges, in camps, in projects",
+        "6": "Temporal — generational patterns of structural exclusion"
+      },
+      "tags": ["urban-ethnography", "structural-violence", "drug-economy", "homelessness", "long-term-fieldwork"]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "urban-planning",
+  "discipline": "Urban Planning",
+  "description": "The design and regulation of land use, transportation, community facilities, and infrastructure. How places are shaped by intention and neglect.",
+  "dome_relevance": {
+    "5": "Housing — zoning, density, affordability as planning outcomes",
+    "8": "Community — neighborhood design shapes social connection",
+    "9": "Environment — land use determines environmental exposure"
+  },
+  "sphere_relevance": {
+    "1": "Parcel — zoning IS the planning framework",
+    "2": "Infrastructure — utilities, transit, connectivity as planned systems",
+    "4": "Economic — land value, TIF districts, development finance",
+    "5": "Social — demographics and foot traffic shaped by planning decisions",
+    "7": "Activation — what a space becomes is a planning question"
+  },
+  "practitioner_count": 5,
+  "discovered_at": "2026-02-25T22:25:20.682Z",
+  "cycle": 1
+}

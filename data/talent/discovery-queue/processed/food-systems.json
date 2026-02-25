@@ -1,0 +1,102 @@
+{
+  "discipline": "Food Systems",
+  "description": "How food is grown, distributed, prepared, and eaten. Food deserts, food sovereignty, community kitchens, nutrition as infrastructure. What people eat is a map of every system that touches their life.",
+  "dome_relevance": {
+    "4": "Health — nutrition, diet-related disease, food as medicine",
+    "6": "Economic — food industry employment, food stamps as economic stimulus",
+    "8": "Community — food as community infrastructure, communal eating, mutual aid"
+  },
+  "sphere_relevance": {
+    "3": "Environmental — soil health, urban agriculture, food waste",
+    "5": "Social — communal eating, food markets as gathering places",
+    "7": "Activation — community kitchens, food festivals, gardens as activation"
+  },
+  "adjacent_disciplines": [
+    { "discipline": "Agricultural Science", "description": "Soil, crops, farming systems, food production" },
+    { "discipline": "Nutrition Science", "description": "Dietary health, food-as-medicine, metabolic science" },
+    { "discipline": "Mutual Aid", "description": "Horizontal support networks, food banks, community fridges" }
+  ],
+  "practitioners": [
+    {
+      "name": "Leah Penniman",
+      "type": "real",
+      "alive": true,
+      "born": "1980",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Afro-indigenous farming, food sovereignty, land reparations",
+      "approach": "Black and Brown people's relationship to land in America was built through enslavement and dispossession. Healing that relationship requires returning to the land — not as laborers but as stewards. Farming is reparative justice. The soil remembers.",
+      "body_of_work": "Co-founded Soul Fire Farm in Grafton, NY. Farming While Black (2018). Trains BIPOC farmers in Afro-indigenous farming techniques. Provides food to communities experiencing food apartheid. Rejects 'food desert' language — the correct term is 'food apartheid' because it names the cause.",
+      "why_instructive": "She reframes food access from a supply problem to a justice problem. The dome's health and community layers must account for food sovereignty — not just calories available, but who controls the food system.",
+      "dome_layers": [1, 4, 6, 8, 9],
+      "sphere_layers": [3, 5, 7, 8],
+      "dome_relevance": {
+        "1": "Legal — land rights, reparative justice, food sovereignty as right",
+        "4": "Health — nutrition as medicine, food as primary health intervention",
+        "6": "Economic — farming as livelihood, food system as local economy",
+        "8": "Community — food as community infrastructure, shared growing",
+        "9": "Environment — soil health, regenerative agriculture"
+      },
+      "sphere_relevance": {
+        "3": "Environmental — regenerative farming heals soil and water",
+        "5": "Social — farming as community building across racial lines",
+        "7": "Activation — farms as activated community spaces",
+        "8": "Permanence — soil health improvement persists for generations"
+      },
+      "tags": ["food-sovereignty", "afro-indigenous-farming", "reparative-justice", "soil"]
+    },
+    {
+      "name": "Babette",
+      "type": "fictional",
+      "source_work": "Babette's Feast",
+      "source_medium": "film/story",
+      "creator": "Isak Dinesen (Karen Blixen)",
+      "era": "1958/1987",
+      "practice": "French cuisine, the transformative meal, food as communion and reconciliation",
+      "approach": "A single perfect meal can heal decades of resentment. Babette spends her entire lottery winnings on one dinner for people who have been denying themselves pleasure for their entire lives. The meal doesn't argue. It doesn't persuade. It simply makes beauty available, and the guests' defenses dissolve.",
+      "body_of_work": "Babette is a former chef at the Café Anglais in Paris, exiled to a remote Norwegian village. She cooks a single transcendent meal that reconciles feuding community members, opens hearts hardened by asceticism, and demonstrates that art — even the art of cooking — is an act of love.",
+      "why_instructive": "She embodies Keltner's 'collective effervescence' through food. A shared meal designed with mastery creates awe, dissolves conflict, builds community. This IS sphere activation through the most ancient medium.",
+      "dome_layers": [8, 11, 12],
+      "sphere_layers": [7, 8, 10],
+      "dome_relevance": {
+        "8": "Community — the shared meal as community healing",
+        "11": "Creativity — cooking as the highest creative practice",
+        "12": "Flourishing — pleasure, beauty, and generosity as what flourishing means"
+      },
+      "sphere_relevance": {
+        "7": "Activation — the meal IS the activation, designed for collective transformation",
+        "8": "Permanence — the memory of the meal transforms all future interactions",
+        "10": "Catalyst — one meal changes the emotional landscape of an entire village"
+      },
+      "tags": ["communal-meal", "transformation", "collective-effervescence", "generosity", "art-of-cooking"]
+    },
+    {
+      "name": "Will Allen",
+      "type": "real",
+      "alive": true,
+      "born": "1949",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Urban farming, aquaponics, Growing Power, food system transformation",
+      "approach": "You can grow food anywhere — greenhouses, basements, rooftops, parking lots. Urban agriculture is not hobby farming — it's infrastructure. A two-acre farm in Milwaukee can feed 10,000 people and train the next generation of urban farmers. The city IS farmland.",
+      "body_of_work": "Founded Growing Power in Milwaukee. Two-acre urban farm producing food year-round using aquaponics, vermiculture, greenhouses. MacArthur Fellow 2008. Trained thousands of urban farmers. Proved that urban agriculture works at scale in northern climates.",
+      "why_instructive": "He proved that sphere layer 3 (environmental) can be productive — not just preserved nature but working ecology within the city. His farm is a sphere that produces food, jobs, education, and community.",
+      "dome_layers": [4, 6, 8, 9],
+      "sphere_layers": [3, 4, 5, 7, 8],
+      "dome_relevance": {
+        "4": "Health — fresh food access in food deserts",
+        "6": "Economic — farming as urban livelihood, job training",
+        "8": "Community — farm as community gathering and learning space",
+        "9": "Environment — urban ecology, soil building in the city"
+      },
+      "sphere_relevance": {
+        "3": "Environmental — productive ecology on urban parcels",
+        "4": "Economic — two-acre farm feeding 10,000 people",
+        "5": "Social — farm as community center",
+        "7": "Activation — the farm IS the activation",
+        "8": "Permanence — soil improvement, institutional knowledge"
+      },
+      "tags": ["urban-farming", "aquaponics", "food-access", "macarthur", "city-as-farmland"]
+    }
+  ]
+}

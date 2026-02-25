@@ -1,0 +1,16 @@
+{
+  "id": "poetry",
+  "discipline": "Poetry",
+  "description": "Language compressed to its highest density. Poetry sees what data can't — the felt experience of being alive in a body in a place. Every dome layer has a poetic dimension that numbers miss.",
+  "dome_relevance": {
+    "11": "Creativity — poetry IS meaning-making",
+    "12": "Flourishing — poetry names what flourishing feels like"
+  },
+  "sphere_relevance": {
+    "6": "Temporal — poetry carries time, memory, prophecy",
+    "7": "Activation — spoken word, site-specific poetry, text as material"
+  },
+  "practitioner_count": 3,
+  "discovered_at": "2026-02-25T22:25:20.649Z",
+  "cycle": 1
+}

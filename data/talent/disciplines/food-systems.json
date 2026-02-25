@@ -1,0 +1,18 @@
+{
+  "id": "food-systems",
+  "discipline": "Food Systems",
+  "description": "How food is grown, distributed, prepared, and eaten. Food deserts, food sovereignty, community kitchens, nutrition as infrastructure. What people eat is a map of every system that touches their life.",
+  "dome_relevance": {
+    "4": "Health — nutrition, diet-related disease, food as medicine",
+    "6": "Economic — food industry employment, food stamps as economic stimulus",
+    "8": "Community — food as community infrastructure, communal eating, mutual aid"
+  },
+  "sphere_relevance": {
+    "3": "Environmental — soil health, urban agriculture, food waste",
+    "5": "Social — communal eating, food markets as gathering places",
+    "7": "Activation — community kitchens, food festivals, gardens as activation"
+  },
+  "practitioner_count": 3,
+  "discovered_at": "2026-02-25T22:25:20.629Z",
+  "cycle": 1
+}

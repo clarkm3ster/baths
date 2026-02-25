@@ -1,0 +1,51 @@
+{
+  "id": "f4800dd2dbf7",
+  "name": "Ed Roberts",
+  "type": "real",
+  "alive": false,
+  "born": "1939",
+  "died": "1995",
+  "nationality": "American",
+  "era": "20th century",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "disability-studies",
+  "disciplines": [
+    "disability-studies"
+  ],
+  "practice": "Independent living movement, disability rights activism, self-determination",
+  "approach": "We are the experts on our own lives. The problem is not the wheelchair — the problem is the stairs. Independent living means disabled people making their own decisions, taking their own risks, living in the community. Not warehoused. Not protected. Free.",
+  "body_of_work": "First severely disabled student at UC Berkeley (1962). Founded the Center for Independent Living (1972) — the first. Became California Director of Rehabilitation. Founded the World Institute on Disability. His insistence on self-determination shaped the ADA.",
+  "why_instructive": "He defined dome layer 10 (Autonomy) for disabled people: the right to take risks, make mistakes, and live freely. The dome must never 'protect' someone out of their own life.",
+  "dome_layers": [
+    1,
+    2,
+    5,
+    10
+  ],
+  "sphere_layers": [
+    2,
+    7,
+    9
+  ],
+  "dome_relevance": {
+    "1": "Legal — disability rights, ADA foundations",
+    "2": "Systems — redesigning service systems around self-determination",
+    "5": "Housing — community living over institutional placement",
+    "10": "Autonomy — the right to risk, the right to fail, the right to choose"
+  },
+  "sphere_relevance": {
+    "2": "Infrastructure — accessibility as design principle, not afterthought",
+    "7": "Activation — accessible by design means more people can participate",
+    "9": "Policy — ADA and independent living policy"
+  },
+  "discovered_at": "2026-02-25T22:25:20.614Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "independent-living",
+    "self-determination",
+    "disability-rights",
+    "accessibility"
+  ]
+}

@@ -1,0 +1,229 @@
+/**
+ * SPHERE FRAGMENT — Space Type Catalog
+ *
+ * Maintains a growing catalog of public space types.
+ * Starts with seeds. Expands as new types are discovered.
+ * Each type includes: what makes it distinct, activation potential,
+ * and which sphere layers it most readily feeds.
+ */
+
+import { join } from 'node:path'
+import { TYPES_DIR, readJSON, writeJSON, listJSON, slugify } from './lib.mjs'
+
+// ── Seed types — the engine starts here and discovers more ──────────────────
+
+const SEED_TYPES = [
+  {
+    id: 'park',
+    name: 'Park',
+    description: 'Public green space — from pocket parks to regional parks. Grass, trees, paths, benches.',
+    distinct_quality: 'Living landscape that changes with seasons. The oldest form of public activation.',
+    activation_potential: 'Gathering, performance, gardening, play, rest, protest, ceremony',
+    sphere_layers: [3, 5, 6, 7, 8],
+  },
+  {
+    id: 'library',
+    name: 'Library',
+    description: 'Public library building and grounds. Indoor conditioned space with information access.',
+    distinct_quality: 'The only public space where you can exist without spending money, with access to knowledge and climate control.',
+    activation_potential: 'Learning, digital access, community meeting, maker space, job search, shelter',
+    sphere_layers: [2, 5, 7, 8],
+  },
+  {
+    id: 'recreation-center',
+    name: 'Recreation Center',
+    description: 'Public indoor facility with gymnasium, pool, meeting rooms.',
+    distinct_quality: 'Climate-controlled public space designed for physical activity and gathering.',
+    activation_potential: 'Sports, fitness, youth programs, senior programs, community events, voting',
+    sphere_layers: [2, 5, 7],
+  },
+  {
+    id: 'swimming-pool',
+    name: 'Public Swimming Pool',
+    description: 'Outdoor or indoor public pool.',
+    distinct_quality: 'Water access as public right. One of few public spaces where bodies of all ages share space.',
+    activation_potential: 'Swimming, water safety, youth programs, therapeutic use, social mixing',
+    sphere_layers: [2, 5, 7],
+  },
+  {
+    id: 'plaza',
+    name: 'Plaza / Town Square',
+    description: 'Hard-surfaced public gathering space, often at civic center.',
+    distinct_quality: 'Designed for assembly. The democratic floor.',
+    activation_potential: 'Markets, performances, protests, ceremonies, daily gathering',
+    sphere_layers: [1, 5, 6, 7, 10],
+  },
+  {
+    id: 'sidewalk',
+    name: 'Sidewalk',
+    description: 'Public pedestrian right-of-way.',
+    distinct_quality: 'The most ubiquitous public space. Everyone walks. The sidewalk is where city life happens.',
+    activation_potential: 'Walking, street vending, café seating, art installation, wayfinding',
+    sphere_layers: [2, 5, 7],
+  },
+  {
+    id: 'parking-lot',
+    name: 'Public Parking Lot',
+    description: 'Municipal surface parking lot.',
+    distinct_quality: 'Vast public land devoted to storing cars. Enormous activation potential if reimagined.',
+    activation_potential: 'Markets, drive-in events, temporary parks, housing, solar farms, festivals',
+    sphere_layers: [1, 4, 7, 10],
+  },
+  {
+    id: 'school-grounds',
+    name: 'School Grounds',
+    description: 'Public school buildings, yards, gymnasiums, fields — available outside school hours.',
+    distinct_quality: 'Temporal space: public for students during day, potentially public for community after hours.',
+    activation_potential: 'After-hours community use, weekend markets, adult education, recreation',
+    sphere_layers: [2, 5, 6, 7],
+  },
+  {
+    id: 'transit-station',
+    name: 'Transit Station / Platform',
+    description: 'Bus stop, train station, subway platform, ferry terminal.',
+    distinct_quality: 'Space of transition — millions pass through daily. Captive attention.',
+    activation_potential: 'Art, music, retail, information, services, community connection',
+    sphere_layers: [2, 5, 6, 7],
+  },
+  {
+    id: 'cemetery',
+    name: 'Cemetery',
+    description: 'Public burial ground and memorial landscape.',
+    distinct_quality: 'Deepest temporal layer — centuries of community memory inscribed in stone.',
+    activation_potential: 'History walks, ecology (old-growth trees), contemplation, memorial events',
+    sphere_layers: [3, 6, 8],
+  },
+  {
+    id: 'waterfront',
+    name: 'Waterfront / Pier / Boardwalk',
+    description: 'Public access to water edge — rivers, lakes, ocean.',
+    distinct_quality: 'Edge space where land meets water. Historically working, now transitioning.',
+    activation_potential: 'Fishing, walking, markets, performances, kayaking, ecological restoration',
+    sphere_layers: [1, 3, 5, 6, 7],
+  },
+  {
+    id: 'underpass',
+    name: 'Underpass / Overpass',
+    description: 'Space beneath highway overpasses or bridges.',
+    distinct_quality: 'Covered outdoor space created by infrastructure. Often neglected. Shelter from rain.',
+    activation_potential: 'Markets, skate parks, murals, lighting installations, gathering',
+    sphere_layers: [2, 7, 10],
+  },
+  {
+    id: 'public-housing-common',
+    name: 'Public Housing Common Area',
+    description: 'Courtyards, lobbies, community rooms, stairwells in public housing developments.',
+    distinct_quality: 'Shared space within residential context. Intimate public — neighbors share it daily.',
+    activation_potential: 'Community organizing, childcare, elder socializing, gardens, art',
+    sphere_layers: [5, 7, 8],
+  },
+  {
+    id: 'vacant-lot',
+    name: 'Municipal Vacant Lot',
+    description: 'City-owned empty parcel — cleared, overgrown, or abandoned.',
+    distinct_quality: 'Blank canvas. No existing use to displace. Maximum activation potential.',
+    activation_potential: 'Gardens, tiny houses, pop-up events, art installations, micro-parks',
+    sphere_layers: [1, 3, 4, 7, 10],
+  },
+  {
+    id: 'government-building-public-area',
+    name: 'Government Building Public Area',
+    description: 'City hall atrium, courthouse lobby, DMV waiting area, post office.',
+    distinct_quality: 'Indoor public space with captive audience — people who MUST be there.',
+    activation_potential: 'Art, information, services, comfort, dignity improvements',
+    sphere_layers: [2, 5, 7],
+  },
+  {
+    id: 'fire-station',
+    name: 'Fire Station',
+    description: 'Fire department building and apparatus bay.',
+    distinct_quality: 'Neighborhood anchor present 24/7. Already trusted by community.',
+    activation_potential: 'Community education, emergency preparedness, neighborhood gathering',
+    sphere_layers: [2, 5, 8],
+  },
+  {
+    id: 'median-traffic-island',
+    name: 'Median / Traffic Island',
+    description: 'Paved or landscaped area between traffic lanes.',
+    distinct_quality: 'Micro-space surrounded by movement. Underestimated as activation site.',
+    activation_potential: 'Micro-gardens, art, wayfinding, calming, tree planting',
+    sphere_layers: [2, 3, 7],
+  },
+  {
+    id: 'rooftop',
+    name: 'Public Building Rooftop',
+    description: 'Rooftop of a publicly owned building.',
+    distinct_quality: 'Elevated perspective. Sky access. Often completely unused.',
+    activation_potential: 'Gardens, solar, observation, events, green infrastructure',
+    sphere_layers: [2, 3, 4, 7],
+  },
+  {
+    id: 'alley-easement',
+    name: 'Alley / Easement',
+    description: 'Service alley, utility easement, right-of-way behind buildings.',
+    distinct_quality: 'Interstitial space. Back-of-house turned public.',
+    activation_potential: 'Green alleys, murals, lighting, pedestrian cut-throughs, gardens',
+    sphere_layers: [1, 2, 7],
+  },
+  {
+    id: 'reservoir-water-facility',
+    name: 'Reservoir / Water Treatment Facility Grounds',
+    description: 'Public water infrastructure with surrounding land.',
+    distinct_quality: 'Large land parcels, often scenic, usually closed to public. Enormous potential.',
+    activation_potential: 'Walking trails, ecology, education about water systems, passive recreation',
+    sphere_layers: [2, 3, 6, 9],
+  },
+]
+
+// ── Load / save type catalog ────────────────────────────────────────────────
+
+export function loadTypes() {
+  const catalog = readJSON(join(TYPES_DIR, 'catalog.json'))
+  if (catalog?.types?.length > 0) return catalog.types
+
+  // First run: seed the catalog
+  seedTypes()
+  return SEED_TYPES
+}
+
+export function seedTypes() {
+  writeJSON(join(TYPES_DIR, 'catalog.json'), {
+    types: SEED_TYPES,
+    total: SEED_TYPES.length,
+    seeded_at: new Date().toISOString(),
+    last_updated: new Date().toISOString(),
+    discovered_count: 0,
+  })
+  return SEED_TYPES
+}
+
+export function addType(type) {
+  const catalog = readJSON(join(TYPES_DIR, 'catalog.json')) || { types: SEED_TYPES, total: SEED_TYPES.length }
+  const existing = catalog.types.find(t => t.id === type.id)
+  if (existing) return existing
+
+  const full = {
+    id: type.id,
+    name: type.name,
+    description: type.description,
+    distinct_quality: type.distinct_quality || '',
+    activation_potential: type.activation_potential || '',
+    sphere_layers: type.sphere_layers || [],
+    discovered_at: new Date().toISOString(),
+    discovered_in: type.discovered_in || null,
+    example_count: 0,
+  }
+
+  catalog.types.push(full)
+  catalog.total = catalog.types.length
+  catalog.last_updated = new Date().toISOString()
+  catalog.discovered_count = (catalog.discovered_count || 0) + 1
+
+  writeJSON(join(TYPES_DIR, 'catalog.json'), catalog)
+  return full
+}
+
+export function getTypeByID(id) {
+  const catalog = readJSON(join(TYPES_DIR, 'catalog.json'))
+  return catalog?.types?.find(t => t.id === id) || null
+}

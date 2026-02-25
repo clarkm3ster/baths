@@ -1,0 +1,39 @@
+{
+  "id": "78fccb97a08c",
+  "name": "Tiny Tim",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1843",
+  "source_work": "A Christmas Carol",
+  "source_medium": "novel",
+  "creator": "Charles Dickens",
+  "discipline": "disability-studies",
+  "disciplines": [
+    "disability-studies"
+  ],
+  "practice": "Being the object of pity that motivates a rich man's reform",
+  "approach": "The disabled child as moral instrument — his suffering exists to teach Scrooge a lesson. His disability is never described medically. His cure is never explained. He exists to make a non-disabled audience feel something.",
+  "body_of_work": "Tiny Tim appears in Stave 3 of A Christmas Carol. His crutch, his fragility, his 'God bless us, everyone' — all designed to soften Scrooge's heart. Without Tim's disability, Scrooge has no motivation to change.",
+  "why_instructive": "He's the anti-pattern — 'inspiration porn.' Using disabled people as motivation for non-disabled people. The dome must never instrumentalize disability. A person's health layer serves THEM, not the system's narrative about redemption.",
+  "dome_layers": [
+    4,
+    10
+  ],
+  "sphere_layers": [],
+  "dome_relevance": {
+    "4": "Health — disability as narrative device rather than lived experience",
+    "10": "Autonomy — zero autonomy, exists entirely for others' moral education"
+  },
+  "sphere_relevance": {},
+  "discovered_at": "2026-02-25T22:25:20.614Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "anti-pattern",
+    "inspiration-porn",
+    "disability-as-prop",
+    "cautionary"
+  ]
+}

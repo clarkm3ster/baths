@@ -1,0 +1,52 @@
+{
+  "id": "abcf2e2b27b2",
+  "name": "Ross Gay",
+  "type": "real",
+  "alive": true,
+  "born": "1974",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "poetry",
+  "disciplines": [
+    "poetry"
+  ],
+  "practice": "Poetry of delight, community orchards, joy as practice",
+  "approach": "Delight is not frivolous — it's the thing that sustains resistance. Joy is not the absence of suffering — it's what grows in the same soil. The Book of Delights: one essay a day on what delights. Inciting Joy: joy as communal practice. He also tends a community orchard.",
+  "body_of_work": "Catalog of Unabashed Gratitude (2015), Be Holding (2020), The Book of Delights (2019), Inciting Joy (2022). Founder of the Bloomington Community Orchard. His work bridges poetry, gardening, community building, and teaching.",
+  "why_instructive": "He embodies dome layer 12 (Flourishing) — joy as practice, not outcome. And he literally builds sphere activations: the community orchard IS a sphere. Poetry and farming from the same person.",
+  "dome_layers": [
+    8,
+    11,
+    12
+  ],
+  "sphere_layers": [
+    3,
+    5,
+    7,
+    8
+  ],
+  "dome_relevance": {
+    "8": "Community — orchard as community gathering, poetry as community practice",
+    "11": "Creativity — poetry as daily practice of attention",
+    "12": "Flourishing — delight and joy as what flourishing actually is"
+  },
+  "sphere_relevance": {
+    "3": "Environmental — community orchard as living ecology",
+    "5": "Social — shared tending as community building",
+    "7": "Activation — the orchard IS the activation",
+    "8": "Permanence — trees that outlive the planter"
+  },
+  "discovered_at": "2026-02-25T22:25:20.648Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "delight",
+    "joy",
+    "community-orchard",
+    "daily-practice",
+    "flourishing"
+  ]
+}

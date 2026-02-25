@@ -1,0 +1,47 @@
+{
+  "id": "420f0b678f75",
+  "name": "Hideo Kojima's portrayal of cities in Policenauts",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1994",
+  "source_work": "Policenauts",
+  "source_medium": "game",
+  "creator": "Hideo Kojima",
+  "discipline": "urban-planning",
+  "disciplines": [
+    "urban-planning"
+  ],
+  "practice": "Space colony urban design as a mirror to Earth's cities",
+  "approach": "A colony in space replicates every urban problem: crime, corruption, pharmaceutical exploitation, surveillance. The physical infrastructure is perfect. The social infrastructure fails in identical ways. Technology changes the container but not the content.",
+  "body_of_work": "Beyond Colony — a space station that reproduces Los Angeles's social pathology in a designed environment. Shows that planning perfect infrastructure doesn't solve human problems.",
+  "why_instructive": "Demonstrates that sphere layers 1-6 (the AI-fillable infrastructure layers) are necessary but not sufficient. Without layers 7-10 (human design), a technically perfect place still fails.",
+  "dome_layers": [
+    2,
+    5
+  ],
+  "sphere_layers": [
+    2,
+    5,
+    7
+  ],
+  "dome_relevance": {
+    "2": "Systems that work technically but fail socially",
+    "5": "Housing that is adequate by metrics but alienating by experience"
+  },
+  "sphere_relevance": {
+    "2": "Perfect infrastructure doesn't equal good place",
+    "5": "Social layer reflects power structures regardless of physical design",
+    "7": "The absence of meaningful activation in a 'perfect' environment"
+  },
+  "discovered_at": "2026-02-25T22:25:20.681Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "space-colony",
+    "urban-replication",
+    "technology-critique",
+    "infrastructure-trap"
+  ]
+}

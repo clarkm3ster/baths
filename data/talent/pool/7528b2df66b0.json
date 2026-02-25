@@ -1,0 +1,55 @@
+{
+  "id": "7528b2df66b0",
+  "name": "Rudolf Virchow",
+  "type": "real",
+  "alive": false,
+  "born": "1821",
+  "died": "1902",
+  "nationality": "German",
+  "era": "19th century",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "public-health",
+  "disciplines": [
+    "public-health"
+  ],
+  "practice": "Cellular pathology, social medicine, politics as medicine writ large",
+  "approach": "Medicine is a social science, and politics is nothing but medicine on a grand scale. Disease is not a natural event — it's a social product of conditions. If conditions produce typhus, fixing conditions fixes typhus. The physician is the natural attorney of the poor.",
+  "body_of_work": "Founded cellular pathology. Investigated typhus epidemic in Upper Silesia (1848) and concluded the cause was poverty, not microbes. Wrote that the prescription was democracy, education, freedom, and prosperity. Built Berlin's sewer system. Served in the Reichstag.",
+  "why_instructive": "He saw that health (dome layer 4) is downstream of every other layer — legal, economic, housing, education. The dome schema embodies his insight: you can't have health without fixing everything else.",
+  "dome_layers": [
+    1,
+    4,
+    5,
+    8,
+    9
+  ],
+  "sphere_layers": [
+    2,
+    3,
+    5,
+    9
+  ],
+  "dome_relevance": {
+    "1": "Legal/political reform as health intervention",
+    "4": "Health as social product, not biological accident",
+    "5": "Housing conditions as primary health determinant",
+    "8": "Community conditions produce community health",
+    "9": "Environmental sanitation — built Berlin's sewers"
+  },
+  "sphere_relevance": {
+    "2": "Infrastructure (sewers, water) as health infrastructure",
+    "3": "Environmental conditions as disease vectors",
+    "5": "Social conditions produce health outcomes",
+    "9": "Health policy as the most powerful policy lever"
+  },
+  "discovered_at": "2026-02-25T22:25:20.654Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "social-medicine",
+    "cellular-pathology",
+    "politics-as-medicine",
+    "sanitation"
+  ]
+}

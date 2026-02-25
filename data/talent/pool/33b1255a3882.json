@@ -1,0 +1,55 @@
+{
+  "id": "33b1255a3882",
+  "name": "Marge Piercy's Connie Ramos",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1976",
+  "source_work": "Woman on the Edge of Time",
+  "source_medium": "novel",
+  "creator": "Marge Piercy",
+  "discipline": "social-work",
+  "disciplines": [
+    "social-work"
+  ],
+  "practice": "Surviving systems, involuntary psychiatric commitment, being seen as incompetent while being fully human",
+  "approach": "The perspective from inside the system — not as practitioner but as person consumed by it. Every bureaucratic decision lands on her body. She sees a future where care and community actually work.",
+  "body_of_work": "Connie is a Mexican American woman institutionalized in a psychiatric facility. She communicates with a utopian future where community, health, education, and environment are integrated around the person. Her present shows what happens when they're not.",
+  "why_instructive": "She IS the person at the center of the dome — the one all these layers exist to serve. Her perspective reveals what every layer looks like from the inside when it fails.",
+  "dome_layers": [
+    1,
+    2,
+    4,
+    5,
+    8,
+    10,
+    11
+  ],
+  "sphere_layers": [
+    5,
+    7
+  ],
+  "dome_relevance": {
+    "1": "Legal rights stripped through involuntary commitment",
+    "2": "System failures compounding — welfare, mental health, courts",
+    "4": "Psychiatric system as control rather than healing",
+    "5": "Housing instability as both cause and effect",
+    "8": "Community severed by institutional isolation",
+    "10": "Autonomy as the thing most thoroughly destroyed by the system",
+    "11": "Creativity as survival — her visions of the future ARE her meaning-making"
+  },
+  "sphere_relevance": {
+    "5": "Reveals what the social layer misses — the people it renders invisible",
+    "7": "The utopian future is an activation design — what a space organized around people actually looks like"
+  },
+  "discovered_at": "2026-02-25T22:25:20.664Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "psychiatric-survivor",
+    "systems-critique",
+    "utopian-fiction",
+    "intersectionality"
+  ]
+}

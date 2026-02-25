@@ -1,0 +1,54 @@
+{
+  "id": "f0ddad852d51",
+  "name": "Bryan Stevenson",
+  "type": "real",
+  "alive": true,
+  "born": "1959",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "criminal-justice",
+  "disciplines": [
+    "criminal-justice"
+  ],
+  "practice": "Death penalty defense, racial justice litigation, narrative memorialization",
+  "approach": "Each of us is more than the worst thing we've ever done. The system works by dehumanizing — turning people into cases, numbers, sentences. Justice requires proximity: you must be close enough to the condemned to see them as human. Mercy is not weakness — it is the measure of our justice.",
+  "body_of_work": "Founded Equal Justice Initiative. Won Supreme Court rulings banning mandatory life-without-parole for children. Just Mercy (book and film). National Memorial for Peace and Justice — the first memorial to lynching victims. Freed over 140 wrongly condemned prisoners.",
+  "why_instructive": "The dome's legal layer must reckon with the criminal justice system's ability to destroy every other layer simultaneously — an arrest collapses housing, employment, health, community, education. Stevenson shows what repair looks like.",
+  "dome_layers": [
+    1,
+    4,
+    5,
+    6,
+    8
+  ],
+  "sphere_layers": [
+    5,
+    6,
+    9
+  ],
+  "dome_relevance": {
+    "1": "Legal — criminal defense, wrongful conviction, death penalty abolition",
+    "4": "Health — mental health in incarceration, trauma of the condemned",
+    "5": "Housing — homelessness after incarceration",
+    "6": "Economic — employment barriers, economic destruction of conviction",
+    "8": "Community — community impact of mass incarceration"
+  },
+  "sphere_relevance": {
+    "5": "Social — the communities mass incarceration devastates",
+    "6": "Temporal — lynching memorial makes invisible history visible in physical space",
+    "9": "Policy — sentencing reform, juvenile justice reform"
+  },
+  "discovered_at": "2026-02-25T22:25:20.604Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "death-penalty",
+    "racial-justice",
+    "mercy",
+    "memorial",
+    "proximity"
+  ]
+}

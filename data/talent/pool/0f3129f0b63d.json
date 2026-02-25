@@ -1,0 +1,54 @@
+{
+  "id": "0f3129f0b63d",
+  "name": "Philippe Bourgois",
+  "type": "real",
+  "alive": true,
+  "born": "1956",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "ethnography",
+  "disciplines": [
+    "ethnography"
+  ],
+  "practice": "Urban ethnography, structural violence, drug economies, homelessness",
+  "approach": "Live in the community for years. East Harlem crack dealers are not pathological — they are rational actors in a structurally violent economy. Homeless heroin users in San Francisco are not making bad choices — they are surviving impossible conditions. The ethnographer must not flinch.",
+  "body_of_work": "In Search of Respect: Selling Crack in El Barrio (1995) — 5 years living in East Harlem. Righteous Dopefiend (2009) — 12 years with homeless heroin users under a San Francisco freeway overpass. Both show that what looks like self-destruction is actually structural violence.",
+  "why_instructive": "He documents what the dome sees as numbers — poverty rates, drug overdose rates, homelessness counts — from the inside. Every data point in the dome is a person living under conditions that Bourgois makes visible.",
+  "dome_layers": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    8
+  ],
+  "sphere_layers": [
+    5,
+    6
+  ],
+  "dome_relevance": {
+    "1": "Legal — the criminalization of poverty, mass incarceration",
+    "3": "Fiscal — underground economies as rational response to exclusion",
+    "4": "Health — addiction as structural product, not personal failure",
+    "5": "Housing — homelessness as structural violence",
+    "6": "Economic — informal economies, survival work",
+    "8": "Community — solidarity and social networks among the excluded"
+  },
+  "sphere_relevance": {
+    "5": "Social — the communities that form under bridges, in camps, in projects",
+    "6": "Temporal — generational patterns of structural exclusion"
+  },
+  "discovered_at": "2026-02-25T22:25:20.623Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "urban-ethnography",
+    "structural-violence",
+    "drug-economy",
+    "homelessness",
+    "long-term-fieldwork"
+  ]
+}

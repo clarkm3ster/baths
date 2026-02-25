@@ -1,0 +1,153 @@
+{
+  "discipline": "Social Work",
+  "description": "The practice of helping individuals, families, and communities enhance or restore capacity for social functioning. The original person-in-environment framework.",
+  "dome_relevance": {
+    "2": "Systems navigation — the caseworker's core competency",
+    "4": "Health social work — behavioral health, hospital discharge, care coordination",
+    "5": "Housing — homelessness intervention, housing first advocacy",
+    "8": "Community — asset-based community development, mutual aid"
+  },
+  "sphere_relevance": {
+    "5": "Social layer — understanding community needs, stakeholder engagement",
+    "7": "Activation — participatory design, trauma-informed space",
+    "9": "Policy — social welfare policy, advocacy for regulatory change"
+  },
+  "adjacent_disciplines": [
+    { "discipline": "Clinical Psychology", "description": "Mental health treatment, behavioral science, therapeutic modalities" },
+    { "discipline": "Community Organizing", "description": "Power building, collective action, neighborhood-scale change" },
+    { "discipline": "Public Administration", "description": "Government systems design, service delivery, bureaucratic navigation" }
+  ],
+  "practitioners": [
+    {
+      "name": "Jane Addams",
+      "type": "real",
+      "alive": false,
+      "born": "1860",
+      "died": "1935",
+      "nationality": "American",
+      "era": "progressive era",
+      "practice": "Settlement house movement, community social work, peace activism",
+      "approach": "Embedded practice — live among the people you serve. Hull House wasn't an office, it was a home. The social worker doesn't visit poverty, they inhabit the same conditions. Understanding comes from shared experience, not observation.",
+      "body_of_work": "Founded Hull House (1889), pioneered settlement movement in America. Nobel Peace Prize 1931. Wrote Twenty Years at Hull-House. Established kindergartens, libraries, employment bureaus, arts programs — all from one building. Proved that a single location can be a dome for an entire neighborhood.",
+      "why_instructive": "She invented the idea that a building could be a whole-person support system — exactly what BATHS domes do. Her model: embed services in daily life, not bureaucratic distance.",
+      "dome_layers": [1, 2, 4, 5, 7, 8],
+      "sphere_layers": [5, 6, 7, 8],
+      "dome_relevance": {
+        "1": "Advocated for labor laws, child protection, immigrant rights",
+        "2": "Built the prototype for multi-service integration",
+        "4": "Established health clinics within the settlement",
+        "5": "Housing reform advocacy",
+        "7": "Created educational programs for immigrants and workers",
+        "8": "Community building as methodology, not afterthought"
+      },
+      "sphere_relevance": {
+        "5": "Deep demographic understanding of neighborhood needs",
+        "6": "Hull House became a temporal anchor — decades of continuous community presence",
+        "7": "The settlement house IS an activation — services wrapped in culture",
+        "8": "Hull House persisted for over 120 years as an institution"
+      },
+      "tags": ["settlement-house", "progressive-era", "nobel-laureate", "systems-integration"]
+    },
+    {
+      "name": "Mary Richmond",
+      "type": "real",
+      "alive": false,
+      "born": "1861",
+      "died": "1928",
+      "nationality": "American",
+      "era": "progressive era",
+      "practice": "Casework methodology, social diagnosis, evidence-based social work",
+      "approach": "Systematic assessment — before you intervene, map every system touching this person's life. Social Diagnosis (1917) was the first attempt to formalize what it means to see a whole person in their full context.",
+      "body_of_work": "Published Social Diagnosis (1917) and What Is Social Case Work? (1922). Founded the first social work training school. Created the methodology of person-in-environment assessment that every social worker still uses.",
+      "why_instructive": "She built the first systematic framework for understanding a whole person — the intellectual ancestor of the dome schema. Her 'social diagnosis' IS a 12-layer assessment.",
+      "dome_layers": [1, 2, 3, 4, 5, 6, 7, 8],
+      "sphere_layers": [5],
+      "dome_relevance": {
+        "1": "Legal dimensions of casework — rights, entitlements, obligations",
+        "2": "Systems mapping as core methodology",
+        "3": "Financial assessment as part of social diagnosis",
+        "4": "Health history and current conditions",
+        "5": "Housing conditions and adequacy",
+        "6": "Employment and economic capacity",
+        "7": "Education and skills assessment",
+        "8": "Social networks and community connections"
+      },
+      "sphere_relevance": {
+        "5": "Her person-in-environment model requires understanding the social context of place"
+      },
+      "tags": ["social-diagnosis", "casework", "person-in-environment", "methodology"]
+    },
+    {
+      "name": "Dorothea Orem",
+      "type": "real",
+      "alive": false,
+      "born": "1914",
+      "died": "2007",
+      "nationality": "American",
+      "era": "20th century",
+      "practice": "Self-care deficit nursing theory, understanding when people can and cannot care for themselves",
+      "approach": "Self-care as the baseline. The system intervenes only when self-care capacity is exceeded. The goal is always to restore capacity, not create dependency.",
+      "body_of_work": "Developed the Self-Care Deficit Theory of Nursing (1971). Three interconnected theories: self-care, self-care deficit, and nursing systems. Framework for understanding when support is needed and when it should withdraw.",
+      "why_instructive": "Her framework maps directly to dome layer 10 (Autonomy). The dome's goal isn't to provide everything — it's to identify where self-care capacity breaks down and bridge only those gaps.",
+      "dome_layers": [4, 10],
+      "sphere_layers": [],
+      "dome_relevance": {
+        "4": "Health theory — nursing science and care planning",
+        "10": "Autonomy — her entire framework is about when to support and when to step back"
+      },
+      "tags": ["nursing-theory", "self-care", "autonomy", "capacity"]
+    },
+    {
+      "name": "Atticus Finch",
+      "type": "fictional",
+      "source_work": "To Kill a Mockingbird",
+      "source_medium": "novel",
+      "creator": "Harper Lee",
+      "era": "1960 (set in 1930s)",
+      "practice": "Legal defense, moral advocacy, community conscience",
+      "approach": "Defend what's right regardless of community pressure. See the person behind the accusation. Teach children to understand others by walking in their shoes. Legal practice as moral practice.",
+      "body_of_work": "Defense of Tom Robinson — an impossible case taken because it was right. Teaching Scout and Jem to see humanity in Boo Radley, in Mrs. Dubose, even in Bob Ewell. The practice of law as the practice of seeing people.",
+      "why_instructive": "He embodies the legal layer as a human practice, not a bureaucratic one. The dome's legal layer isn't about forms — it's about whether a person's rights are actually defended.",
+      "dome_layers": [1, 8, 10],
+      "sphere_layers": [5, 9],
+      "dome_relevance": {
+        "1": "Legal defense as moral obligation, not transaction",
+        "8": "Community conscience — the person who stands when no one else will",
+        "10": "Teaching autonomy through moral reasoning"
+      },
+      "sphere_relevance": {
+        "5": "Understanding the social fabric of a community, including its ugly parts",
+        "9": "Policy as moral position — what the law should be vs. what it is"
+      },
+      "tags": ["legal-defense", "moral-courage", "racial-justice", "american-south"]
+    },
+    {
+      "name": "Marge Piercy's Connie Ramos",
+      "type": "fictional",
+      "source_work": "Woman on the Edge of Time",
+      "source_medium": "novel",
+      "creator": "Marge Piercy",
+      "era": "1976",
+      "practice": "Surviving systems, involuntary psychiatric commitment, being seen as incompetent while being fully human",
+      "approach": "The perspective from inside the system — not as practitioner but as person consumed by it. Every bureaucratic decision lands on her body. She sees a future where care and community actually work.",
+      "body_of_work": "Connie is a Mexican American woman institutionalized in a psychiatric facility. She communicates with a utopian future where community, health, education, and environment are integrated around the person. Her present shows what happens when they're not.",
+      "why_instructive": "She IS the person at the center of the dome — the one all these layers exist to serve. Her perspective reveals what every layer looks like from the inside when it fails.",
+      "dome_layers": [1, 2, 4, 5, 8, 10, 11],
+      "sphere_layers": [5, 7],
+      "dome_relevance": {
+        "1": "Legal rights stripped through involuntary commitment",
+        "2": "System failures compounding — welfare, mental health, courts",
+        "4": "Psychiatric system as control rather than healing",
+        "5": "Housing instability as both cause and effect",
+        "8": "Community severed by institutional isolation",
+        "10": "Autonomy as the thing most thoroughly destroyed by the system",
+        "11": "Creativity as survival — her visions of the future ARE her meaning-making"
+      },
+      "sphere_relevance": {
+        "5": "Reveals what the social layer misses — the people it renders invisible",
+        "7": "The utopian future is an activation design — what a space organized around people actually looks like"
+      },
+      "tags": ["psychiatric-survivor", "systems-critique", "utopian-fiction", "intersectionality"]
+    }
+  ]
+}

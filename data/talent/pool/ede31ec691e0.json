@@ -1,0 +1,49 @@
+{
+  "id": "ede31ec691e0",
+  "name": "Ishmael",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1851",
+  "source_work": "Moby-Dick",
+  "source_medium": "novel",
+  "creator": "Herman Melville",
+  "discipline": "ethnography",
+  "disciplines": [
+    "ethnography"
+  ],
+  "practice": "Participant observation, cetology, the ethnography of work, classification as meaning-making",
+  "approach": "To understand the whale, Ishmael studies everything — the anatomy, the industry, the mythology, the workers. His cetology chapters are thick description of a workplace. He classifies whales not by species but by folio size — because how you categorize determines what you see.",
+  "body_of_work": "Ships out on the Pequod to understand whaling. Documents every role, every practice, every belief. His classification system (whale as folio, as quarto, as duodecimo) is a commentary on how taxonomy shapes perception. The whiteness of the whale IS the chapter on meaning-making.",
+  "why_instructive": "He shows that the dome's data categories SHAPE what the dome can see. How you classify determines what you find. His obsessive documentation is what the data layer aspires to — but his warning is clear: the thing itself always exceeds the classification.",
+  "dome_layers": [
+    6,
+    8,
+    11
+  ],
+  "sphere_layers": [
+    3,
+    5,
+    6
+  ],
+  "dome_relevance": {
+    "6": "Economic — the whaling industry as complete economic system",
+    "8": "Community — the ship as community with its own culture",
+    "11": "Creativity — classification itself as creative act, meaning-making through documentation"
+  },
+  "sphere_relevance": {
+    "3": "Environmental — the ocean as environment, the whale as ecosystem",
+    "5": "Social — the ship's social hierarchy and multi-racial community",
+    "6": "Temporal — whaling's history, mythology, and decline"
+  },
+  "discovered_at": "2026-02-25T22:25:20.622Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "participant-observation",
+    "classification",
+    "documentation",
+    "workplace-ethnography"
+  ]
+}

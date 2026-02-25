@@ -1,0 +1,19 @@
+{
+  "id": "social-work",
+  "discipline": "Social Work",
+  "description": "The practice of helping individuals, families, and communities enhance or restore capacity for social functioning. The original person-in-environment framework.",
+  "dome_relevance": {
+    "2": "Systems navigation — the caseworker's core competency",
+    "4": "Health social work — behavioral health, hospital discharge, care coordination",
+    "5": "Housing — homelessness intervention, housing first advocacy",
+    "8": "Community — asset-based community development, mutual aid"
+  },
+  "sphere_relevance": {
+    "5": "Social layer — understanding community needs, stakeholder engagement",
+    "7": "Activation — participatory design, trauma-informed space",
+    "9": "Policy — social welfare policy, advocacy for regulatory change"
+  },
+  "practitioner_count": 5,
+  "discovered_at": "2026-02-25T22:25:20.664Z",
+  "cycle": 1
+}

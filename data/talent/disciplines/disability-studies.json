@@ -1,0 +1,20 @@
+{
+  "id": "disability-studies",
+  "discipline": "Disability Studies",
+  "description": "Understanding disability as social construction, not medical pathology. The social model: disability is not in the body — it is in the environment that fails to accommodate the body. Universal design, crip theory, disability justice.",
+  "dome_relevance": {
+    "1": "Legal — ADA, disability rights, guardianship reform",
+    "2": "Systems — accessibility of every system, form, portal",
+    "4": "Health — disability as identity, not pathology",
+    "5": "Housing — accessible housing, visitability",
+    "10": "Autonomy — self-determination, supported decision-making vs guardianship"
+  },
+  "sphere_relevance": {
+    "2": "Infrastructure — ADA compliance, universal design",
+    "7": "Activation — accessible by design, not by retrofit",
+    "9": "Policy — disability policy as design policy"
+  },
+  "practitioner_count": 3,
+  "discovered_at": "2026-02-25T22:25:20.615Z",
+  "cycle": 1
+}

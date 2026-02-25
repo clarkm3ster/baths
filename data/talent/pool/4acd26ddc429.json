@@ -1,0 +1,46 @@
+{
+  "id": "4acd26ddc429",
+  "name": "Tiresias",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "ancient/1922",
+  "source_work": "Oedipus Rex / The Odyssey / The Waste Land",
+  "source_medium": "mythology/poetry",
+  "creator": "Sophocles / Homer / T.S. Eliot",
+  "discipline": "poetry",
+  "disciplines": [
+    "poetry"
+  ],
+  "practice": "Prophecy, seeing what others refuse to see, speaking truth that no one wants to hear",
+  "approach": "The blind seer who has lived as both man and woman. Sees past, present, and future simultaneously. Speaks truth but is never believed until it's too late. Knowledge without power — the purest form of witness.",
+  "body_of_work": "Tells Oedipus the truth he can't bear. Guides Odysseus in the underworld. In The Waste Land, 'throbbing between two lives' — the figure who has seen everything and can connect nothing. The ultimate data point: total knowledge, total impotence.",
+  "why_instructive": "The dome accumulates total knowledge about a person's conditions. Tiresias warns: seeing everything doesn't mean being able to change anything. The dome must pair knowledge with action, or it becomes another blind seer.",
+  "dome_layers": [
+    4,
+    11,
+    12
+  ],
+  "sphere_layers": [
+    6
+  ],
+  "dome_relevance": {
+    "4": "Health — lived in multiple bodies, multiple genders",
+    "11": "Creativity — prophecy as the art of pattern recognition",
+    "12": "Flourishing — knows what flourishing looks like but cannot create it alone"
+  },
+  "sphere_relevance": {
+    "6": "Temporal — sees all of time simultaneously, the ultimate temporal layer"
+  },
+  "discovered_at": "2026-02-25T22:25:20.648Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "prophecy",
+    "witness",
+    "knowledge-without-power",
+    "gender-fluidity",
+    "mythology"
+  ]
+}

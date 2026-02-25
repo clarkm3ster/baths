@@ -1,0 +1,51 @@
+{
+  "id": "b5f5aa0e0e86",
+  "name": "Lucille Clifton",
+  "type": "real",
+  "alive": false,
+  "born": "1936",
+  "died": "2010",
+  "nationality": "American",
+  "era": "20th century",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "poetry",
+  "disciplines": [
+    "poetry"
+  ],
+  "practice": "Short-form poetry, the body as territory, celebration within suffering",
+  "approach": "Say it in as few words as possible. The Black female body is not a site of shame — it is a site of power. 'won't you celebrate with me / that every day / something has tried to kill me / and has failed.' Economy of language as ethical practice — don't waste a word.",
+  "body_of_work": "13 poetry collections including Blessing the Boats (Pulitzer finalist), Good Woman, The Book of Light. First Black poet laureate of Maryland. Two-time Pulitzer finalist. Her poems are rarely longer than a page — compression as method.",
+  "why_instructive": "The dome is full of data, all of it verbose. Clifton shows that the most important things about a life can be said in 20 words. The dome needs poets to translate data into truth.",
+  "dome_layers": [
+    4,
+    8,
+    10,
+    11,
+    12
+  ],
+  "sphere_layers": [
+    6,
+    7
+  ],
+  "dome_relevance": {
+    "4": "Health — the body as subject, survival as health",
+    "8": "Community — Black community celebration and witness",
+    "10": "Autonomy — claiming the body as one's own territory",
+    "11": "Creativity — poetry as compressed meaning-making",
+    "12": "Flourishing — celebration despite everything"
+  },
+  "sphere_relevance": {
+    "6": "Temporal — memory, ancestor, survival across time",
+    "7": "Activation — poetry on walls, in air, in bodies"
+  },
+  "discovered_at": "2026-02-25T22:25:20.647Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "compression",
+    "body-as-territory",
+    "celebration",
+    "black-women-poets"
+  ]
+}

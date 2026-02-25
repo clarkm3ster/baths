@@ -1,0 +1,51 @@
+{
+  "id": "c2519a0d2730",
+  "name": "Harriet A. Washington",
+  "type": "real",
+  "alive": true,
+  "born": "1961",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "public-health",
+  "disciplines": [
+    "public-health"
+  ],
+  "practice": "Medical ethics, history of medical racism, environmental racism in health",
+  "approach": "Medical abuse of Black Americans isn't historical — it's structural and ongoing. From Tuskegee to toxic waste siting to algorithmic bias in care allocation. The health system itself is a social determinant of health for Black people.",
+  "body_of_work": "Medical Apartheid (2006) — comprehensive history of medical experimentation on Black Americans. A Terrible Thing to Waste (2019) — environmental racism's neurological damage. Carte Blanche (2021) — vaccine hesitancy's rational roots in medical abuse.",
+  "why_instructive": "The dome must reckon with the fact that its own systems — health, legal, housing — have been instruments of harm. Her work ensures the dome sees its own shadow.",
+  "dome_layers": [
+    1,
+    4,
+    8,
+    9
+  ],
+  "sphere_layers": [
+    3,
+    5,
+    9
+  ],
+  "dome_relevance": {
+    "1": "Legal history of medical experimentation without consent",
+    "4": "Health — medical racism as ongoing structural force",
+    "8": "Community — trust destruction and its consequences",
+    "9": "Environmental racism as health determinant"
+  },
+  "sphere_relevance": {
+    "3": "Environmental racism — toxic facilities sited near Black communities",
+    "5": "Social — racial demographics predict environmental exposure",
+    "9": "Policy — how zoning and siting decisions encode racism"
+  },
+  "discovered_at": "2026-02-25T22:25:20.655Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "medical-racism",
+    "environmental-justice",
+    "ethics",
+    "structural-racism"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "d21784753771",
+  "name": "Lisbeth Salander",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "2005",
+  "source_work": "The Girl with the Dragon Tattoo (Millennium series)",
+  "source_medium": "novel",
+  "creator": "Stieg Larsson",
+  "discipline": "forensic-accounting",
+  "disciplines": [
+    "forensic-accounting"
+  ],
+  "practice": "Forensic hacking, financial investigation, following money through corporate and state systems",
+  "approach": "Every system has a digital trail. Every powerful person's secrets live in databases. The person the system declared incompetent is the one who can read every layer of the system simultaneously. She investigates from below, with total information access.",
+  "body_of_work": "Traces embezzled billions through shell companies across the Millennium trilogy. Exposes corrupt industrialists, sex trafficking networks, and a secret government unit. Her weapon is information access — she sees all the layers at once.",
+  "why_instructive": "She embodies total fiscal transparency — the ability to see every transaction, every shell company, every hidden flow. The dome's fiscal layer aspires to her level of visibility, applied ethically.",
+  "dome_layers": [
+    1,
+    2,
+    3
+  ],
+  "sphere_layers": [
+    1,
+    4
+  ],
+  "dome_relevance": {
+    "1": "Legal — exposing criminal networks through financial evidence",
+    "2": "Systems — navigating and penetrating government systems",
+    "3": "Fiscal — tracing money through infinite complexity"
+  },
+  "sphere_relevance": {
+    "1": "Parcel — tracing property ownership through shell companies",
+    "4": "Economic — following value through hidden channels"
+  },
+  "discovered_at": "2026-02-25T22:25:20.633Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "forensic-hacking",
+    "financial-investigation",
+    "systems-penetration",
+    "from-below"
+  ]
+}

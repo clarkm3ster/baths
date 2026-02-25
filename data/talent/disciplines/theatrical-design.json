@@ -1,0 +1,17 @@
+{
+  "id": "theatrical-design",
+  "discipline": "Theatrical Design",
+  "description": "Scenic design, lighting, sound, rigging, costume. The disciplines that transform empty space into lived experience. Every sphere activation is theater without a script.",
+  "dome_relevance": {
+    "11": "Creativity — theatrical practice IS meaning-making in space",
+    "12": "Flourishing — the transformative experience of witnessing and participating"
+  },
+  "sphere_relevance": {
+    "2": "Infrastructure — rigging, power, structural support for activation",
+    "7": "Activation — theatrical design IS activation design",
+    "8": "Permanence — what remains after the performance"
+  },
+  "practitioner_count": 4,
+  "discovered_at": "2026-02-25T22:25:20.673Z",
+  "cycle": 1
+}

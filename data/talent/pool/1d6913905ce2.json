@@ -1,0 +1,44 @@
+{
+  "id": "1d6913905ce2",
+  "name": "Milo Minderbinder",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1961",
+  "source_work": "Catch-22",
+  "source_medium": "novel",
+  "creator": "Joseph Heller",
+  "discipline": "forensic-accounting",
+  "disciplines": [
+    "forensic-accounting"
+  ],
+  "practice": "War profiteering, supply chain manipulation, the commodification of everything",
+  "approach": "Everything is a commodity, including the war itself. His syndicate 'M&M Enterprises' — in which 'everyone has a share' — buys and sells everything, including bombing his own squadron for profit. The logic of the market applied without constraint becomes indistinguishable from insanity.",
+  "body_of_work": "The mess officer who becomes a war profiteer. Buys Egyptian cotton and contracts to bomb his own base. Everyone has a share in the syndicate, but the shares are worthless. He's the purest expression of fiscal logic divorced from human consequence.",
+  "why_instructive": "He's the anti-pattern for the fiscal layer. When money flows without human accountability, you get Milo. The dome's fiscal layer must always connect spending to human outcomes — the anti-Milo.",
+  "dome_layers": [
+    3,
+    6
+  ],
+  "sphere_layers": [
+    4
+  ],
+  "dome_relevance": {
+    "3": "Fiscal — money divorced from purpose, the anti-pattern",
+    "6": "Economic — commodification of human systems"
+  },
+  "sphere_relevance": {
+    "4": "Economic — market logic without ethical constraint"
+  },
+  "discovered_at": "2026-02-25T22:25:20.634Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "anti-pattern",
+    "war-profiteering",
+    "commodification",
+    "satire",
+    "fiscal-absurdity"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "2efa554e734a",
+  "name": "Robert Moses",
+  "type": "real",
+  "alive": false,
+  "born": "1888",
+  "died": "1981",
+  "nationality": "American",
+  "era": "20th century",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "urban-planning",
+  "disciplines": [
+    "urban-planning"
+  ],
+  "practice": "Mega-scale infrastructure, highway construction, urban renewal, power accumulation",
+  "approach": "The master builder: reshape the city from above. Highways through neighborhoods. Parks as monuments. Public housing as towers. The person is irrelevant — the system is everything. Speed, scale, throughput.",
+  "body_of_work": "Built virtually every major highway, bridge, tunnel, park, and public housing project in New York from 1924-1968. Displaced hundreds of thousands. Created Jones Beach, the Cross-Bronx Expressway, Lincoln Center. Robert Caro's The Power Broker documents the full scope.",
+  "why_instructive": "He's the anti-pattern. He shows what happens when infrastructure serves systems instead of people. Every dome layer he touched, he damaged. His work is instructive as a cautionary tale — the dome must never replicate his logic.",
+  "dome_layers": [
+    1,
+    2,
+    5,
+    8,
+    9
+  ],
+  "sphere_layers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "dome_relevance": {
+    "1": "Used legal mechanisms (eminent domain, authorities) to override community rights",
+    "2": "Built systems that served cars, not people",
+    "5": "Destroyed housing to build highways",
+    "8": "Demolished communities — the Cross-Bronx Expressway as community destruction",
+    "9": "Environmental destruction masked as progress"
+  },
+  "sphere_relevance": {
+    "1": "Parcel seizure through eminent domain at industrial scale",
+    "2": "Infrastructure as violence — highways severing neighborhoods",
+    "3": "Environmental damage from highway construction",
+    "4": "Economic displacement and value destruction",
+    "5": "Social fabric torn by forced relocation",
+    "6": "Temporal erasure — demolishing history"
+  },
+  "discovered_at": "2026-02-25T22:25:20.680Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "cautionary-tale",
+    "anti-pattern",
+    "power",
+    "infrastructure-violence",
+    "displacement"
+  ]
+}

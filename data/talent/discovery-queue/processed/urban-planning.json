@@ -1,0 +1,160 @@
+{
+  "discipline": "Urban Planning",
+  "description": "The design and regulation of land use, transportation, community facilities, and infrastructure. How places are shaped by intention and neglect.",
+  "dome_relevance": {
+    "5": "Housing — zoning, density, affordability as planning outcomes",
+    "8": "Community — neighborhood design shapes social connection",
+    "9": "Environment — land use determines environmental exposure"
+  },
+  "sphere_relevance": {
+    "1": "Parcel — zoning IS the planning framework",
+    "2": "Infrastructure — utilities, transit, connectivity as planned systems",
+    "4": "Economic — land value, TIF districts, development finance",
+    "5": "Social — demographics and foot traffic shaped by planning decisions",
+    "7": "Activation — what a space becomes is a planning question"
+  },
+  "adjacent_disciplines": [
+    { "discipline": "Landscape Architecture", "description": "Design of outdoor spaces, ecological systems, terrain" },
+    { "discipline": "Transportation Engineering", "description": "Movement systems, transit design, accessibility" },
+    { "discipline": "Real Estate Development", "description": "Property finance, construction, market dynamics" }
+  ],
+  "practitioners": [
+    {
+      "name": "Jane Jacobs",
+      "type": "real",
+      "alive": false,
+      "born": "1916",
+      "died": "2006",
+      "nationality": "American-Canadian",
+      "era": "20th century",
+      "practice": "Urban observation, community-scale economics, anti-demolition activism",
+      "approach": "Eyes on the street. The city is not a problem to be solved by experts — it's a living system understood by watching how people actually use it. Diversity of use, short blocks, old buildings, density of people. These are not disorder — they are the immune system of a neighborhood.",
+      "body_of_work": "The Death and Life of Great American Cities (1961), The Economy of Cities (1969), Systems of Survival (1992). Stopped the Lower Manhattan Expressway. Fought Robert Moses. Proved that small-scale, mixed-use, high-density neighborhoods outperform planned superblocks.",
+      "why_instructive": "She saw what the sphere schema sees — a place is a living system with layers. Her fight against Moses is the fight against treating places as problems rather than organisms.",
+      "dome_layers": [5, 6, 8],
+      "sphere_layers": [1, 2, 4, 5, 6, 7, 10],
+      "dome_relevance": {
+        "5": "Housing as community fabric, not units",
+        "6": "Local economies and import replacement",
+        "8": "Community as emergent property of good design"
+      },
+      "sphere_relevance": {
+        "1": "Zoning critique — mixed use over segregated use",
+        "2": "Infrastructure at human scale",
+        "4": "Economic vitality from diversity, not monoculture",
+        "5": "Social fabric emerges from physical design",
+        "6": "Temporal depth — old buildings subsidize new uses",
+        "7": "Activation as natural byproduct of good urban form",
+        "10": "Catalyst — one good block activates the next"
+      },
+      "tags": ["urbanism", "community-economics", "activism", "observation"]
+    },
+    {
+      "name": "Robert Moses",
+      "type": "real",
+      "alive": false,
+      "born": "1888",
+      "died": "1981",
+      "nationality": "American",
+      "era": "20th century",
+      "practice": "Mega-scale infrastructure, highway construction, urban renewal, power accumulation",
+      "approach": "The master builder: reshape the city from above. Highways through neighborhoods. Parks as monuments. Public housing as towers. The person is irrelevant — the system is everything. Speed, scale, throughput.",
+      "body_of_work": "Built virtually every major highway, bridge, tunnel, park, and public housing project in New York from 1924-1968. Displaced hundreds of thousands. Created Jones Beach, the Cross-Bronx Expressway, Lincoln Center. Robert Caro's The Power Broker documents the full scope.",
+      "why_instructive": "He's the anti-pattern. He shows what happens when infrastructure serves systems instead of people. Every dome layer he touched, he damaged. His work is instructive as a cautionary tale — the dome must never replicate his logic.",
+      "dome_layers": [1, 2, 5, 8, 9],
+      "sphere_layers": [1, 2, 3, 4, 5, 6],
+      "dome_relevance": {
+        "1": "Used legal mechanisms (eminent domain, authorities) to override community rights",
+        "2": "Built systems that served cars, not people",
+        "5": "Destroyed housing to build highways",
+        "8": "Demolished communities — the Cross-Bronx Expressway as community destruction",
+        "9": "Environmental destruction masked as progress"
+      },
+      "sphere_relevance": {
+        "1": "Parcel seizure through eminent domain at industrial scale",
+        "2": "Infrastructure as violence — highways severing neighborhoods",
+        "3": "Environmental damage from highway construction",
+        "4": "Economic displacement and value destruction",
+        "5": "Social fabric torn by forced relocation",
+        "6": "Temporal erasure — demolishing history"
+      },
+      "tags": ["cautionary-tale", "anti-pattern", "power", "infrastructure-violence", "displacement"]
+    },
+    {
+      "name": "Howard Roark",
+      "type": "fictional",
+      "source_work": "The Fountainhead",
+      "source_medium": "novel",
+      "creator": "Ayn Rand",
+      "era": "1943",
+      "practice": "Architecture as individual vision, uncompromising design integrity",
+      "approach": "The building is the architect's vision, unmediated by committee, compromise, or community input. Form follows the creator's will. Buildings are not for occupants — they are expressions of genius.",
+      "body_of_work": "Designs buildings that embody his singular vision. Destroys Cortlandt Homes when his design is altered. Refuses commissions that require compromise. The novel presents this as heroic.",
+      "why_instructive": "He's another anti-pattern — the architect who doesn't listen. Sphere activation requires the opposite of Roark: design that emerges from community, not genius imposed upon it. His perspective is instructive by inversion.",
+      "dome_layers": [11],
+      "sphere_layers": [7, 8],
+      "dome_relevance": {
+        "11": "Creativity as individual expression — the question of whose creativity matters"
+      },
+      "sphere_relevance": {
+        "7": "Activation designed without community input — what goes wrong",
+        "8": "Permanence designed for the architect, not the community"
+      },
+      "tags": ["anti-pattern", "architecture", "individualism", "cautionary"]
+    },
+    {
+      "name": "Hideo Kojima's portrayal of cities in Policenauts",
+      "type": "fictional",
+      "source_work": "Policenauts",
+      "source_medium": "game",
+      "creator": "Hideo Kojima",
+      "era": "1994",
+      "practice": "Space colony urban design as a mirror to Earth's cities",
+      "approach": "A colony in space replicates every urban problem: crime, corruption, pharmaceutical exploitation, surveillance. The physical infrastructure is perfect. The social infrastructure fails in identical ways. Technology changes the container but not the content.",
+      "body_of_work": "Beyond Colony — a space station that reproduces Los Angeles's social pathology in a designed environment. Shows that planning perfect infrastructure doesn't solve human problems.",
+      "why_instructive": "Demonstrates that sphere layers 1-6 (the AI-fillable infrastructure layers) are necessary but not sufficient. Without layers 7-10 (human design), a technically perfect place still fails.",
+      "dome_layers": [2, 5],
+      "sphere_layers": [2, 5, 7],
+      "dome_relevance": {
+        "2": "Systems that work technically but fail socially",
+        "5": "Housing that is adequate by metrics but alienating by experience"
+      },
+      "sphere_relevance": {
+        "2": "Perfect infrastructure doesn't equal good place",
+        "5": "Social layer reflects power structures regardless of physical design",
+        "7": "The absence of meaningful activation in a 'perfect' environment"
+      },
+      "tags": ["space-colony", "urban-replication", "technology-critique", "infrastructure-trap"]
+    },
+    {
+      "name": "Octavia Butler's Lauren Olamina",
+      "type": "fictional",
+      "source_work": "Parable of the Sower",
+      "source_medium": "novel",
+      "creator": "Octavia Butler",
+      "era": "1993",
+      "practice": "Community building in collapse, hyperempathy as design constraint, founding Earthseed",
+      "approach": "When existing communities collapse, build new ones from whoever survives. Hyperempathy — literally feeling others' pain — as the foundation for community design. The only lasting truth is Change. Shape it or be destroyed by it.",
+      "body_of_work": "Lauren Olamina navigates a collapsed California (2024-2027), building Acorn community from refugees, ex-slaves, and wanderers. Earthseed's principles: God is Change, shape Change or be shaped. Creates community through radical inclusion under shared purpose.",
+      "why_instructive": "She builds a dome from scratch — not through systems but through shared philosophy. Her hyperempathy is the design constraint: you CANNOT ignore suffering because you literally feel it. This is what person-centered means.",
+      "dome_layers": [4, 5, 8, 10, 11, 12],
+      "sphere_layers": [5, 6, 7, 8, 10],
+      "dome_relevance": {
+        "4": "Hyperempathy as health condition that shapes all interactions",
+        "5": "Building shelter/housing from nothing",
+        "8": "Community created from radical inclusion",
+        "10": "Autonomy — choosing to lead, choosing to build",
+        "11": "Earthseed as meaning-making system",
+        "12": "Flourishing defined as purposeful adaptation to change"
+      },
+      "sphere_relevance": {
+        "5": "Social fabric woven from strangers through shared purpose",
+        "6": "Temporal — building from the ruins of what was",
+        "7": "Activation — Acorn as intentional community activation",
+        "8": "Permanence — what lasts when everything else collapses",
+        "10": "Catalyst — Earthseed spreads beyond Acorn"
+      },
+      "tags": ["community-building", "collapse-response", "hyperempathy", "radical-inclusion", "afrofuturism"]
+    }
+  ]
+}

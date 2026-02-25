@@ -1,0 +1,113 @@
+{
+  "discipline": "Forensic Accounting",
+  "description": "Following money through systems. Tracing fraud, waste, abuse, and the gap between what systems spend and what people receive. The fiscal layer's truth-teller.",
+  "dome_relevance": {
+    "3": "Fiscal — the core competency. Tracing every dollar.",
+    "1": "Legal — forensic evidence for fraud, waste, abuse",
+    "2": "Systems — revealing where systems leak money"
+  },
+  "sphere_relevance": {
+    "4": "Economic — property valuation, tax fraud, development finance audit",
+    "1": "Parcel — ownership tracing, shell company detection",
+    "9": "Policy — regulatory compliance, ordinance enforcement"
+  },
+  "adjacent_disciplines": [
+    { "discipline": "Actuarial Science", "description": "Risk quantification, insurance mathematics, mortality tables" },
+    { "discipline": "Investigative Journalism", "description": "Following money, public records, accountability" },
+    { "discipline": "Benefits Administration", "description": "Eligibility, enrollment, program coordination" }
+  ],
+  "practitioners": [
+    {
+      "name": "Harry Markopolos",
+      "type": "real",
+      "alive": true,
+      "born": "1956",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Securities fraud investigation, whistleblowing, quantitative fraud detection",
+      "approach": "Numbers don't lie but people do. If returns are too consistent, the math is fake. He spent 9 years trying to get the SEC to investigate Madoff. His persistence shows what happens when one person can read the fiscal layer that institutions refuse to see.",
+      "body_of_work": "Identified Bernie Madoff's Ponzi scheme years before its collapse. Submitted evidence to SEC five times over nine years. Published No One Would Listen (2010). Now investigates municipal pension fraud.",
+      "why_instructive": "The dome's fiscal layer must have this capability — seeing fraud that hides in plain sight. Markopolos shows that the numbers always tell the truth if someone reads them honestly.",
+      "dome_layers": [1, 3],
+      "sphere_layers": [4, 9],
+      "dome_relevance": {
+        "1": "Legal evidence gathering and whistleblower protection",
+        "3": "Fiscal — mathematical fraud detection, seeing through false returns"
+      },
+      "sphere_relevance": {
+        "4": "Economic — detecting fraud in property and financial instruments",
+        "9": "Policy — regulatory failure and how to fix it"
+      },
+      "tags": ["fraud-detection", "whistleblower", "persistence", "quantitative-analysis"]
+    },
+    {
+      "name": "Lisbeth Salander",
+      "type": "fictional",
+      "source_work": "The Girl with the Dragon Tattoo (Millennium series)",
+      "source_medium": "novel",
+      "creator": "Stieg Larsson",
+      "era": "2005",
+      "practice": "Forensic hacking, financial investigation, following money through corporate and state systems",
+      "approach": "Every system has a digital trail. Every powerful person's secrets live in databases. The person the system declared incompetent is the one who can read every layer of the system simultaneously. She investigates from below, with total information access.",
+      "body_of_work": "Traces embezzled billions through shell companies across the Millennium trilogy. Exposes corrupt industrialists, sex trafficking networks, and a secret government unit. Her weapon is information access — she sees all the layers at once.",
+      "why_instructive": "She embodies total fiscal transparency — the ability to see every transaction, every shell company, every hidden flow. The dome's fiscal layer aspires to her level of visibility, applied ethically.",
+      "dome_layers": [1, 2, 3],
+      "sphere_layers": [1, 4],
+      "dome_relevance": {
+        "1": "Legal — exposing criminal networks through financial evidence",
+        "2": "Systems — navigating and penetrating government systems",
+        "3": "Fiscal — tracing money through infinite complexity"
+      },
+      "sphere_relevance": {
+        "1": "Parcel — tracing property ownership through shell companies",
+        "4": "Economic — following value through hidden channels"
+      },
+      "tags": ["forensic-hacking", "financial-investigation", "systems-penetration", "from-below"]
+    },
+    {
+      "name": "Sheila Bair",
+      "type": "real",
+      "alive": true,
+      "born": "1954",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Bank regulation, financial crisis response, consumer protection",
+      "approach": "Protect depositors first, not banks. The 2008 crisis happened because regulators served institutions instead of people. Her FDIC stood up for the person with the savings account while Treasury worried about Goldman Sachs.",
+      "body_of_work": "Chaired FDIC during 2008 financial crisis. Pushed for principal reduction on mortgages (denied by Treasury). Protected depositors while advocating foreclosure prevention. Wrote Bull by the Horns. Now advocates for financial literacy and systemic risk reduction.",
+      "why_instructive": "She shows the fiscal layer from the regulatory side — what happens when someone in power actually centers the person instead of the institution. The dome's fiscal layer needs her perspective: protect the person first.",
+      "dome_layers": [3, 5],
+      "sphere_layers": [4, 9],
+      "dome_relevance": {
+        "3": "Fiscal — protecting individual deposits and mortgages",
+        "5": "Housing — foreclosure prevention as housing policy"
+      },
+      "sphere_relevance": {
+        "4": "Economic — financial system regulation that protects communities",
+        "9": "Policy — regulatory design that centers people over institutions"
+      },
+      "tags": ["bank-regulation", "consumer-protection", "financial-crisis", "person-centered"]
+    },
+    {
+      "name": "Milo Minderbinder",
+      "type": "fictional",
+      "source_work": "Catch-22",
+      "source_medium": "novel",
+      "creator": "Joseph Heller",
+      "era": "1961",
+      "practice": "War profiteering, supply chain manipulation, the commodification of everything",
+      "approach": "Everything is a commodity, including the war itself. His syndicate 'M&M Enterprises' — in which 'everyone has a share' — buys and sells everything, including bombing his own squadron for profit. The logic of the market applied without constraint becomes indistinguishable from insanity.",
+      "body_of_work": "The mess officer who becomes a war profiteer. Buys Egyptian cotton and contracts to bomb his own base. Everyone has a share in the syndicate, but the shares are worthless. He's the purest expression of fiscal logic divorced from human consequence.",
+      "why_instructive": "He's the anti-pattern for the fiscal layer. When money flows without human accountability, you get Milo. The dome's fiscal layer must always connect spending to human outcomes — the anti-Milo.",
+      "dome_layers": [3, 6],
+      "sphere_layers": [4],
+      "dome_relevance": {
+        "3": "Fiscal — money divorced from purpose, the anti-pattern",
+        "6": "Economic — commodification of human systems"
+      },
+      "sphere_relevance": {
+        "4": "Economic — market logic without ethical constraint"
+      },
+      "tags": ["anti-pattern", "war-profiteering", "commodification", "satire", "fiscal-absurdity"]
+    }
+  ]
+}

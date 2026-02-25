@@ -1,0 +1,56 @@
+{
+  "id": "b87269645165",
+  "name": "Will Allen",
+  "type": "real",
+  "alive": true,
+  "born": "1949",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "food-systems",
+  "disciplines": [
+    "food-systems"
+  ],
+  "practice": "Urban farming, aquaponics, Growing Power, food system transformation",
+  "approach": "You can grow food anywhere — greenhouses, basements, rooftops, parking lots. Urban agriculture is not hobby farming — it's infrastructure. A two-acre farm in Milwaukee can feed 10,000 people and train the next generation of urban farmers. The city IS farmland.",
+  "body_of_work": "Founded Growing Power in Milwaukee. Two-acre urban farm producing food year-round using aquaponics, vermiculture, greenhouses. MacArthur Fellow 2008. Trained thousands of urban farmers. Proved that urban agriculture works at scale in northern climates.",
+  "why_instructive": "He proved that sphere layer 3 (environmental) can be productive — not just preserved nature but working ecology within the city. His farm is a sphere that produces food, jobs, education, and community.",
+  "dome_layers": [
+    4,
+    6,
+    8,
+    9
+  ],
+  "sphere_layers": [
+    3,
+    4,
+    5,
+    7,
+    8
+  ],
+  "dome_relevance": {
+    "4": "Health — fresh food access in food deserts",
+    "6": "Economic — farming as urban livelihood, job training",
+    "8": "Community — farm as community gathering and learning space",
+    "9": "Environment — urban ecology, soil building in the city"
+  },
+  "sphere_relevance": {
+    "3": "Environmental — productive ecology on urban parcels",
+    "4": "Economic — two-acre farm feeding 10,000 people",
+    "5": "Social — farm as community center",
+    "7": "Activation — the farm IS the activation",
+    "8": "Permanence — soil improvement, institutional knowledge"
+  },
+  "discovered_at": "2026-02-25T22:25:20.628Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "urban-farming",
+    "aquaponics",
+    "food-access",
+    "macarthur",
+    "city-as-farmland"
+  ]
+}

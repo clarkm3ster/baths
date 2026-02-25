@@ -1,0 +1,39 @@
+{
+  "id": "0516b2831425",
+  "name": "Dorothea Orem",
+  "type": "real",
+  "alive": false,
+  "born": "1914",
+  "died": "2007",
+  "nationality": "American",
+  "era": "20th century",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "social-work",
+  "disciplines": [
+    "social-work"
+  ],
+  "practice": "Self-care deficit nursing theory, understanding when people can and cannot care for themselves",
+  "approach": "Self-care as the baseline. The system intervenes only when self-care capacity is exceeded. The goal is always to restore capacity, not create dependency.",
+  "body_of_work": "Developed the Self-Care Deficit Theory of Nursing (1971). Three interconnected theories: self-care, self-care deficit, and nursing systems. Framework for understanding when support is needed and when it should withdraw.",
+  "why_instructive": "Her framework maps directly to dome layer 10 (Autonomy). The dome's goal isn't to provide everything — it's to identify where self-care capacity breaks down and bridge only those gaps.",
+  "dome_layers": [
+    4,
+    10
+  ],
+  "sphere_layers": [],
+  "dome_relevance": {
+    "4": "Health theory — nursing science and care planning",
+    "10": "Autonomy — her entire framework is about when to support and when to step back"
+  },
+  "sphere_relevance": {},
+  "discovered_at": "2026-02-25T22:25:20.663Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "nursing-theory",
+    "self-care",
+    "autonomy",
+    "capacity"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "e71125651258",
+  "name": "Cathy O'Neil",
+  "type": "real",
+  "alive": true,
+  "born": "1972",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "data-science",
+  "disciplines": [
+    "data-science"
+  ],
+  "practice": "Algorithmic auditing, weapons of math destruction, model accountability",
+  "approach": "Algorithms are opinions embedded in code. When a model decides who gets a loan, who gets parole, who gets a job — it encodes the biases of its creators and its training data. Opaque models that affect lives without accountability are weapons of math destruction.",
+  "body_of_work": "Weapons of Math Destruction (2016). Founded ORCAA — O'Neil Risk Consulting & Algorithmic Auditing. Showed how recidivism algorithms, teacher evaluation models, and credit scores systematically disadvantage the poor and non-white.",
+  "why_instructive": "The dome runs on algorithms — eligibility determination, cost calculation, risk scoring. O'Neil's work ensures the dome audits its own models. Every algorithm in the dome must answer: who does this hurt?",
+  "dome_layers": [
+    1,
+    2,
+    3,
+    6
+  ],
+  "sphere_layers": [
+    4,
+    9
+  ],
+  "dome_relevance": {
+    "1": "Legal — algorithmic decisions as legal actions with due process implications",
+    "2": "Systems — automated eligibility systems encode bias",
+    "3": "Fiscal — credit scoring, loan algorithms, financial exclusion",
+    "6": "Economic — hiring algorithms, wage prediction models"
+  },
+  "sphere_relevance": {
+    "4": "Economic — property valuation algorithms and their biases",
+    "9": "Policy — algorithmic accountability regulation"
+  },
+  "discovered_at": "2026-02-25T22:25:20.610Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "algorithmic-bias",
+    "model-accountability",
+    "weapons-of-math-destruction",
+    "auditing"
+  ]
+}

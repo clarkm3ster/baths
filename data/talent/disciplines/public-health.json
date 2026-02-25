@@ -1,0 +1,18 @@
+{
+  "id": "public-health",
+  "discipline": "Public Health",
+  "description": "Population-level health — epidemiology, prevention, health equity, social determinants. The discipline that sees health as a property of systems, not just bodies.",
+  "dome_relevance": {
+    "4": "Health — the core layer, population-level and individual",
+    "8": "Community — health as community property, not individual attribute",
+    "9": "Environment — environmental health, exposure science"
+  },
+  "sphere_relevance": {
+    "3": "Environmental — contamination, air quality, water safety",
+    "5": "Social — demographics as health determinants",
+    "9": "Policy — health policy, building codes, food safety"
+  },
+  "practitioner_count": 5,
+  "discovered_at": "2026-02-25T22:25:20.656Z",
+  "cycle": 1
+}

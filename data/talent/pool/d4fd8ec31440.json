@@ -1,0 +1,52 @@
+{
+  "id": "d4fd8ec31440",
+  "name": "Judith Butler",
+  "type": "real",
+  "alive": true,
+  "born": "1956",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "disability-studies",
+  "disciplines": [
+    "disability-studies"
+  ],
+  "practice": "Performativity theory, vulnerability as political category, precarious life",
+  "approach": "The body is not a given — it is performed, regulated, made legible through repetition. Vulnerability is not weakness — it is the fundamental condition of embodied existence. A politics built on invulnerability is a politics built on denial.",
+  "body_of_work": "Gender Trouble (1990), Bodies That Matter (1993), Precarious Life (2004), Notes Toward a Performative Theory of Assembly (2015). Transformed how we think about bodies, identity, and public space.",
+  "why_instructive": "The dome's layers perform the person into legibility — each layer is a way of reading the body. Butler warns us: the categories we use to help can also constrain. The dome must hold its own categories lightly.",
+  "dome_layers": [
+    1,
+    4,
+    10,
+    11
+  ],
+  "sphere_layers": [
+    5,
+    7,
+    9
+  ],
+  "dome_relevance": {
+    "1": "Legal — how law performs and constrains identity categories",
+    "4": "Health — how medical categories produce the bodies they claim to describe",
+    "10": "Autonomy — self-determination against categorization",
+    "11": "Creativity — identity as creative practice, not fixed attribute"
+  },
+  "sphere_relevance": {
+    "5": "Social — public assembly as political body, vulnerability in shared space",
+    "7": "Activation — gathering as performative act, bodies in space",
+    "9": "Policy — how policy categories produce the populations they govern"
+  },
+  "discovered_at": "2026-02-25T22:25:20.613Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "performativity",
+    "vulnerability",
+    "precarity",
+    "bodies",
+    "assembly"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "forensic-accounting",
+  "discipline": "Forensic Accounting",
+  "description": "Following money through systems. Tracing fraud, waste, abuse, and the gap between what systems spend and what people receive. The fiscal layer's truth-teller.",
+  "dome_relevance": {
+    "1": "Legal — forensic evidence for fraud, waste, abuse",
+    "2": "Systems — revealing where systems leak money",
+    "3": "Fiscal — the core competency. Tracing every dollar."
+  },
+  "sphere_relevance": {
+    "1": "Parcel — ownership tracing, shell company detection",
+    "4": "Economic — property valuation, tax fraud, development finance audit",
+    "9": "Policy — regulatory compliance, ordinance enforcement"
+  },
+  "practitioner_count": 4,
+  "discovered_at": "2026-02-25T22:25:20.635Z",
+  "cycle": 1
+}

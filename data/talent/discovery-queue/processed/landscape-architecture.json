@@ -1,0 +1,100 @@
+{
+  "discipline": "Landscape Architecture",
+  "description": "Design of outdoor spaces, terrain, water systems, plantings, ecological systems. Where earth meets intention.",
+  "dome_relevance": {
+    "5": "Housing — outdoor living environment, yard as extension of home",
+    "9": "Environment — ecological design, stormwater, habitat"
+  },
+  "sphere_relevance": {
+    "1": "Parcel — lot design, boundaries, terrain",
+    "3": "Environmental — soil, water, ecology, microclimate",
+    "7": "Activation — what happens in designed outdoor space",
+    "8": "Permanence — living systems that persist and evolve"
+  },
+  "adjacent_disciplines": [
+    { "discipline": "Ecological Restoration", "description": "Repairing damaged ecosystems, rewilding, native species reintroduction" },
+    { "discipline": "Hydrology", "description": "Water systems, stormwater management, watershed design" }
+  ],
+  "practitioners": [
+    {
+      "name": "Frederick Law Olmsted",
+      "type": "real",
+      "alive": false,
+      "born": "1822",
+      "died": "1903",
+      "nationality": "American",
+      "era": "19th century",
+      "practice": "Public park design, democratic landscape, nature as public health infrastructure",
+      "approach": "Parks are not decoration — they are public health infrastructure. Central Park was designed so that a factory worker could experience the psychological restoration of nature without leaving the city. Democratic access to landscape beauty.",
+      "body_of_work": "Central Park, Prospect Park, Emerald Necklace (Boston), US Capitol grounds, Biltmore Estate. Designed the first public park system in America. Also reported on slavery in the antebellum South as a journalist.",
+      "why_instructive": "He invented the idea that designed landscape is public health infrastructure — exactly what sphere layer 3 requires. His parks are spheres that have been activating for 150 years.",
+      "dome_layers": [4, 8, 9],
+      "sphere_layers": [1, 3, 5, 6, 7, 8, 10],
+      "dome_relevance": {
+        "4": "Parks as public health infrastructure — attention restoration, stress reduction",
+        "8": "Community — parks as democratic gathering space",
+        "9": "Environment — nature brought into the city"
+      },
+      "sphere_relevance": {
+        "1": "Parcel design — topography, circulation, spatial sequence",
+        "3": "Environmental — water management, microclimate, ecology within the city",
+        "5": "Social — democratic access regardless of class",
+        "6": "Temporal — parks that have been activating for 150+ years",
+        "7": "Activation — the park experience IS the activation",
+        "8": "Permanence — living systems that grow stronger over decades",
+        "10": "Catalyst — Central Park activated all of Manhattan's development"
+      },
+      "tags": ["public-parks", "democratic-landscape", "health-infrastructure", "nature-access"]
+    },
+    {
+      "name": "Kate Orff",
+      "type": "real",
+      "alive": true,
+      "born": "1971",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Landscape as infrastructure, oyster-tecture, ecological urbanism",
+      "approach": "Landscape is not decoration applied after the building — it IS the infrastructure. Oyster reefs as wave attenuation. Constructed wetlands as water treatment. Living systems that perform engineering functions while providing habitat and beauty.",
+      "body_of_work": "SCAPE Studio founder. Living Breakwaters (Staten Island) — oyster reefs as coastal defense. Lexington Community Farm. Toward an Urban Ecology. MacArthur Fellow 2017.",
+      "why_instructive": "She merges sphere layers 2 (infrastructure) and 3 (environmental) — living systems that do engineering work. This is what sphere activation looks like when it's both beautiful and functional.",
+      "dome_layers": [9],
+      "sphere_layers": [2, 3, 7, 8, 10],
+      "dome_relevance": {
+        "9": "Environment — ecological systems that clean and protect"
+      },
+      "sphere_relevance": {
+        "2": "Infrastructure — living systems AS infrastructure",
+        "3": "Environmental — ecology performing engineering functions",
+        "7": "Activation — ecological infrastructure as public experience",
+        "8": "Permanence — living systems that strengthen over time",
+        "10": "Catalyst — one living infrastructure project inspires others"
+      },
+      "tags": ["living-infrastructure", "oyster-tecture", "ecological-urbanism", "macarthur"]
+    },
+    {
+      "name": "Gandalf",
+      "type": "fictional",
+      "source_work": "The Lord of the Rings",
+      "source_medium": "novel",
+      "creator": "J.R.R. Tolkien",
+      "era": "1954-55",
+      "practice": "Stewardship, landscape reading, long-term ecological thinking, fireworks",
+      "approach": "The land has memory. Middle-earth's landscapes are not settings — they are characters. The Shire's gardening culture is as important as Gondor's military culture. Gandalf's deepest wisdom is knowing which things must be tended and which must be left alone. He waters no garden that can water itself.",
+      "body_of_work": "Guides the Fellowship through landscapes that are alive with history — Moria, Fangorn, the Dead Marshes, Ithilien. Recognizes that Sauron's fundamental sin is treating land as resource rather than living system. Sam's garden at the end IS the victory.",
+      "why_instructive": "Tolkien's landscapes have temporal depth that sphere layer 6 aspires to. Gandalf's relationship to landscape is stewardship over ownership — he intervenes minimally and lets living systems do their work.",
+      "dome_layers": [9, 12],
+      "sphere_layers": [3, 6, 8, 10],
+      "dome_relevance": {
+        "9": "Environment as living entity requiring stewardship, not management",
+        "12": "Flourishing — the Shire's flourishing IS the goal"
+      },
+      "sphere_relevance": {
+        "3": "Environmental — landscape as living system with memory",
+        "6": "Temporal — land carries history, every place is stratified with time",
+        "8": "Permanence — what endures when everything else passes",
+        "10": "Catalyst — one act of restoration (Sam's mallorn tree) transforms a whole place"
+      },
+      "tags": ["stewardship", "landscape-memory", "minimal-intervention", "temporal-depth", "mythology"]
+    }
+  ]
+}

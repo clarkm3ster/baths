@@ -1,0 +1,47 @@
+{
+  "id": "eb33d4a26cfc",
+  "name": "Prospero",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1611",
+  "source_work": "The Tempest",
+  "source_medium": "play",
+  "creator": "William Shakespeare",
+  "discipline": "theatrical-design",
+  "disciplines": [
+    "theatrical-design"
+  ],
+  "practice": "Space transformation, theatrical magic, using an island as a stage",
+  "approach": "The island IS the theater. Every natural feature — the cave, the shore, the grove — becomes a stage for transformation. Prospero's magic is really theatrical direction: he orchestrates encounters, creates spectacles, designs emotional arcs. Then he breaks his staff — the designer lets the space be itself again.",
+  "body_of_work": "Transforms a wild island into a designed experience through which his enemies journey toward understanding. Creates the masque (layer 7 activation), orchestrates encounters (layer 5 social), and ultimately releases control (layer 10 catalyst — the space activates without him).",
+  "why_instructive": "He's the sphere producer — someone who transforms a place through designed experience. His breaking of the staff at the end is the crucial insight: the activation must eventually sustain itself without the designer.",
+  "dome_layers": [
+    11
+  ],
+  "sphere_layers": [
+    6,
+    7,
+    8,
+    10
+  ],
+  "dome_relevance": {
+    "11": "Creativity — theatrical magic as the ultimate creative practice"
+  },
+  "sphere_relevance": {
+    "6": "Temporal — using a place's history (exile, isolation) as material",
+    "7": "Activation — the island experience IS the activation",
+    "8": "Permanence — what remains when the designer withdraws",
+    "10": "Catalyst — breaking the staff. The space continues without the artist."
+  },
+  "discovered_at": "2026-02-25T22:25:20.671Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "theater-magic",
+    "space-transformation",
+    "letting-go",
+    "island-as-stage"
+  ]
+}

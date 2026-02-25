@@ -1,0 +1,45 @@
+{
+  "id": "e7dd6a03f253",
+  "name": "Sheila Bair",
+  "type": "real",
+  "alive": true,
+  "born": "1954",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "forensic-accounting",
+  "disciplines": [
+    "forensic-accounting"
+  ],
+  "practice": "Bank regulation, financial crisis response, consumer protection",
+  "approach": "Protect depositors first, not banks. The 2008 crisis happened because regulators served institutions instead of people. Her FDIC stood up for the person with the savings account while Treasury worried about Goldman Sachs.",
+  "body_of_work": "Chaired FDIC during 2008 financial crisis. Pushed for principal reduction on mortgages (denied by Treasury). Protected depositors while advocating foreclosure prevention. Wrote Bull by the Horns. Now advocates for financial literacy and systemic risk reduction.",
+  "why_instructive": "She shows the fiscal layer from the regulatory side — what happens when someone in power actually centers the person instead of the institution. The dome's fiscal layer needs her perspective: protect the person first.",
+  "dome_layers": [
+    3,
+    5
+  ],
+  "sphere_layers": [
+    4,
+    9
+  ],
+  "dome_relevance": {
+    "3": "Fiscal — protecting individual deposits and mortgages",
+    "5": "Housing — foreclosure prevention as housing policy"
+  },
+  "sphere_relevance": {
+    "4": "Economic — financial system regulation that protects communities",
+    "9": "Policy — regulatory design that centers people over institutions"
+  },
+  "discovered_at": "2026-02-25T22:25:20.634Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "bank-regulation",
+    "consumer-protection",
+    "financial-crisis",
+    "person-centered"
+  ]
+}

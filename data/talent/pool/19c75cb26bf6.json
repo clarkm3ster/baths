@@ -1,0 +1,47 @@
+{
+  "id": "19c75cb26bf6",
+  "name": "Atticus Finch",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1960 (set in 1930s)",
+  "source_work": "To Kill a Mockingbird",
+  "source_medium": "novel",
+  "creator": "Harper Lee",
+  "discipline": "social-work",
+  "disciplines": [
+    "social-work"
+  ],
+  "practice": "Legal defense, moral advocacy, community conscience",
+  "approach": "Defend what's right regardless of community pressure. See the person behind the accusation. Teach children to understand others by walking in their shoes. Legal practice as moral practice.",
+  "body_of_work": "Defense of Tom Robinson — an impossible case taken because it was right. Teaching Scout and Jem to see humanity in Boo Radley, in Mrs. Dubose, even in Bob Ewell. The practice of law as the practice of seeing people.",
+  "why_instructive": "He embodies the legal layer as a human practice, not a bureaucratic one. The dome's legal layer isn't about forms — it's about whether a person's rights are actually defended.",
+  "dome_layers": [
+    1,
+    8,
+    10
+  ],
+  "sphere_layers": [
+    5,
+    9
+  ],
+  "dome_relevance": {
+    "1": "Legal defense as moral obligation, not transaction",
+    "8": "Community conscience — the person who stands when no one else will",
+    "10": "Teaching autonomy through moral reasoning"
+  },
+  "sphere_relevance": {
+    "5": "Understanding the social fabric of a community, including its ugly parts",
+    "9": "Policy as moral position — what the law should be vs. what it is"
+  },
+  "discovered_at": "2026-02-25T22:25:20.663Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "legal-defense",
+    "moral-courage",
+    "racial-justice",
+    "american-south"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ethnography",
+  "discipline": "Ethnography",
+  "description": "The study of people in their own context. Participant observation, thick description, seeing a community as it sees itself. The discipline that insists you can't understand a person without inhabiting their world.",
+  "dome_relevance": {
+    "8": "Community — understanding social fabric from the inside",
+    "10": "Autonomy — seeing self-determination as communities define it",
+    "12": "Flourishing — understanding what flourishing means to THESE people, not to the system"
+  },
+  "sphere_relevance": {
+    "5": "Social — deep understanding of who lives here and how",
+    "6": "Temporal — oral history, community memory, lived time",
+    "7": "Activation — designing for actual needs, not assumed ones"
+  },
+  "practitioner_count": 4,
+  "discovered_at": "2026-02-25T22:25:20.623Z",
+  "cycle": 1
+}

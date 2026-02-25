@@ -1,0 +1,60 @@
+{
+  "id": "c73acfedc571",
+  "name": "Octavia Butler's Lauren Olamina",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1993",
+  "source_work": "Parable of the Sower",
+  "source_medium": "novel",
+  "creator": "Octavia Butler",
+  "discipline": "urban-planning",
+  "disciplines": [
+    "urban-planning"
+  ],
+  "practice": "Community building in collapse, hyperempathy as design constraint, founding Earthseed",
+  "approach": "When existing communities collapse, build new ones from whoever survives. Hyperempathy — literally feeling others' pain — as the foundation for community design. The only lasting truth is Change. Shape it or be destroyed by it.",
+  "body_of_work": "Lauren Olamina navigates a collapsed California (2024-2027), building Acorn community from refugees, ex-slaves, and wanderers. Earthseed's principles: God is Change, shape Change or be shaped. Creates community through radical inclusion under shared purpose.",
+  "why_instructive": "She builds a dome from scratch — not through systems but through shared philosophy. Her hyperempathy is the design constraint: you CANNOT ignore suffering because you literally feel it. This is what person-centered means.",
+  "dome_layers": [
+    4,
+    5,
+    8,
+    10,
+    11,
+    12
+  ],
+  "sphere_layers": [
+    5,
+    6,
+    7,
+    8,
+    10
+  ],
+  "dome_relevance": {
+    "4": "Hyperempathy as health condition that shapes all interactions",
+    "5": "Building shelter/housing from nothing",
+    "8": "Community created from radical inclusion",
+    "10": "Autonomy — choosing to lead, choosing to build",
+    "11": "Earthseed as meaning-making system",
+    "12": "Flourishing defined as purposeful adaptation to change"
+  },
+  "sphere_relevance": {
+    "5": "Social fabric woven from strangers through shared purpose",
+    "6": "Temporal — building from the ruins of what was",
+    "7": "Activation — Acorn as intentional community activation",
+    "8": "Permanence — what lasts when everything else collapses",
+    "10": "Catalyst — Earthseed spreads beyond Acorn"
+  },
+  "discovered_at": "2026-02-25T22:25:20.682Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "community-building",
+    "collapse-response",
+    "hyperempathy",
+    "radical-inclusion",
+    "afrofuturism"
+  ]
+}

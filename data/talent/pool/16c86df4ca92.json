@@ -1,0 +1,50 @@
+{
+  "id": "16c86df4ca92",
+  "name": "Babette",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1958/1987",
+  "source_work": "Babette's Feast",
+  "source_medium": "film/story",
+  "creator": "Isak Dinesen (Karen Blixen)",
+  "discipline": "food-systems",
+  "disciplines": [
+    "food-systems"
+  ],
+  "practice": "French cuisine, the transformative meal, food as communion and reconciliation",
+  "approach": "A single perfect meal can heal decades of resentment. Babette spends her entire lottery winnings on one dinner for people who have been denying themselves pleasure for their entire lives. The meal doesn't argue. It doesn't persuade. It simply makes beauty available, and the guests' defenses dissolve.",
+  "body_of_work": "Babette is a former chef at the Café Anglais in Paris, exiled to a remote Norwegian village. She cooks a single transcendent meal that reconciles feuding community members, opens hearts hardened by asceticism, and demonstrates that art — even the art of cooking — is an act of love.",
+  "why_instructive": "She embodies Keltner's 'collective effervescence' through food. A shared meal designed with mastery creates awe, dissolves conflict, builds community. This IS sphere activation through the most ancient medium.",
+  "dome_layers": [
+    8,
+    11,
+    12
+  ],
+  "sphere_layers": [
+    7,
+    8,
+    10
+  ],
+  "dome_relevance": {
+    "8": "Community — the shared meal as community healing",
+    "11": "Creativity — cooking as the highest creative practice",
+    "12": "Flourishing — pleasure, beauty, and generosity as what flourishing means"
+  },
+  "sphere_relevance": {
+    "7": "Activation — the meal IS the activation, designed for collective transformation",
+    "8": "Permanence — the memory of the meal transforms all future interactions",
+    "10": "Catalyst — one meal changes the emotional landscape of an entire village"
+  },
+  "discovered_at": "2026-02-25T22:25:20.627Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "communal-meal",
+    "transformation",
+    "collective-effervescence",
+    "generosity",
+    "art-of-cooking"
+  ]
+}

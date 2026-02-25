@@ -1,0 +1,94 @@
+{
+  "discipline": "Poetry",
+  "description": "Language compressed to its highest density. Poetry sees what data can't — the felt experience of being alive in a body in a place. Every dome layer has a poetic dimension that numbers miss.",
+  "dome_relevance": {
+    "11": "Creativity — poetry IS meaning-making",
+    "12": "Flourishing — poetry names what flourishing feels like"
+  },
+  "sphere_relevance": {
+    "6": "Temporal — poetry carries time, memory, prophecy",
+    "7": "Activation — spoken word, site-specific poetry, text as material"
+  },
+  "adjacent_disciplines": [
+    { "discipline": "Spoken Word Performance", "description": "Poetry as live event, slam, community storytelling" },
+    { "discipline": "Literary Criticism", "description": "Close reading, interpretation, understanding how texts work" }
+  ],
+  "practitioners": [
+    {
+      "name": "Lucille Clifton",
+      "type": "real",
+      "alive": false,
+      "born": "1936",
+      "died": "2010",
+      "nationality": "American",
+      "era": "20th century",
+      "practice": "Short-form poetry, the body as territory, celebration within suffering",
+      "approach": "Say it in as few words as possible. The Black female body is not a site of shame — it is a site of power. 'won't you celebrate with me / that every day / something has tried to kill me / and has failed.' Economy of language as ethical practice — don't waste a word.",
+      "body_of_work": "13 poetry collections including Blessing the Boats (Pulitzer finalist), Good Woman, The Book of Light. First Black poet laureate of Maryland. Two-time Pulitzer finalist. Her poems are rarely longer than a page — compression as method.",
+      "why_instructive": "The dome is full of data, all of it verbose. Clifton shows that the most important things about a life can be said in 20 words. The dome needs poets to translate data into truth.",
+      "dome_layers": [4, 8, 10, 11, 12],
+      "sphere_layers": [6, 7],
+      "dome_relevance": {
+        "4": "Health — the body as subject, survival as health",
+        "8": "Community — Black community celebration and witness",
+        "10": "Autonomy — claiming the body as one's own territory",
+        "11": "Creativity — poetry as compressed meaning-making",
+        "12": "Flourishing — celebration despite everything"
+      },
+      "sphere_relevance": {
+        "6": "Temporal — memory, ancestor, survival across time",
+        "7": "Activation — poetry on walls, in air, in bodies"
+      },
+      "tags": ["compression", "body-as-territory", "celebration", "black-women-poets"]
+    },
+    {
+      "name": "Tiresias",
+      "type": "fictional",
+      "source_work": "Oedipus Rex / The Odyssey / The Waste Land",
+      "source_medium": "mythology/poetry",
+      "creator": "Sophocles / Homer / T.S. Eliot",
+      "era": "ancient/1922",
+      "practice": "Prophecy, seeing what others refuse to see, speaking truth that no one wants to hear",
+      "approach": "The blind seer who has lived as both man and woman. Sees past, present, and future simultaneously. Speaks truth but is never believed until it's too late. Knowledge without power — the purest form of witness.",
+      "body_of_work": "Tells Oedipus the truth he can't bear. Guides Odysseus in the underworld. In The Waste Land, 'throbbing between two lives' — the figure who has seen everything and can connect nothing. The ultimate data point: total knowledge, total impotence.",
+      "why_instructive": "The dome accumulates total knowledge about a person's conditions. Tiresias warns: seeing everything doesn't mean being able to change anything. The dome must pair knowledge with action, or it becomes another blind seer.",
+      "dome_layers": [4, 11, 12],
+      "sphere_layers": [6],
+      "dome_relevance": {
+        "4": "Health — lived in multiple bodies, multiple genders",
+        "11": "Creativity — prophecy as the art of pattern recognition",
+        "12": "Flourishing — knows what flourishing looks like but cannot create it alone"
+      },
+      "sphere_relevance": {
+        "6": "Temporal — sees all of time simultaneously, the ultimate temporal layer"
+      },
+      "tags": ["prophecy", "witness", "knowledge-without-power", "gender-fluidity", "mythology"]
+    },
+    {
+      "name": "Ross Gay",
+      "type": "real",
+      "alive": true,
+      "born": "1974",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Poetry of delight, community orchards, joy as practice",
+      "approach": "Delight is not frivolous — it's the thing that sustains resistance. Joy is not the absence of suffering — it's what grows in the same soil. The Book of Delights: one essay a day on what delights. Inciting Joy: joy as communal practice. He also tends a community orchard.",
+      "body_of_work": "Catalog of Unabashed Gratitude (2015), Be Holding (2020), The Book of Delights (2019), Inciting Joy (2022). Founder of the Bloomington Community Orchard. His work bridges poetry, gardening, community building, and teaching.",
+      "why_instructive": "He embodies dome layer 12 (Flourishing) — joy as practice, not outcome. And he literally builds sphere activations: the community orchard IS a sphere. Poetry and farming from the same person.",
+      "dome_layers": [8, 11, 12],
+      "sphere_layers": [3, 5, 7, 8],
+      "dome_relevance": {
+        "8": "Community — orchard as community gathering, poetry as community practice",
+        "11": "Creativity — poetry as daily practice of attention",
+        "12": "Flourishing — delight and joy as what flourishing actually is"
+      },
+      "sphere_relevance": {
+        "3": "Environmental — community orchard as living ecology",
+        "5": "Social — shared tending as community building",
+        "7": "Activation — the orchard IS the activation",
+        "8": "Permanence — trees that outlive the planter"
+      },
+      "tags": ["delight", "joy", "community-orchard", "daily-practice", "flourishing"]
+    }
+  ]
+}

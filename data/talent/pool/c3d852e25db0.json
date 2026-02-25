@@ -1,0 +1,48 @@
+{
+  "id": "c3d852e25db0",
+  "name": "Offred",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1985",
+  "source_work": "The Handmaid's Tale",
+  "source_medium": "novel",
+  "creator": "Margaret Atwood",
+  "discipline": "public-health",
+  "disciplines": [
+    "public-health"
+  ],
+  "practice": "Reproductive coercion, bodily autonomy stripped, memory as resistance",
+  "approach": "The state controls the body. Health is not care — it is surveillance and extraction. The handmaid's body is public infrastructure. She resists through memory, through naming, through refusing to forget who she was.",
+  "body_of_work": "Offred navigates Gilead where women's bodies are state property for reproduction. Health monitoring is total but health care is nonexistent — she is maintained as a vessel. Her resistance is internal: she remembers her name, her daughter, her life before.",
+  "why_instructive": "She shows what happens when health (layer 4) serves the state instead of the person. The dome must always center the person's autonomy over the system's needs. Her body IS a dome that has been inverted.",
+  "dome_layers": [
+    1,
+    4,
+    10,
+    11
+  ],
+  "sphere_layers": [
+    9
+  ],
+  "dome_relevance": {
+    "1": "Legal rights abolished — the person becomes property",
+    "4": "Health as surveillance and reproductive extraction",
+    "10": "Autonomy destroyed and internally preserved through memory",
+    "11": "Creativity — meaning-making through remembrance"
+  },
+  "sphere_relevance": {
+    "9": "Policy as totalitarian control — what happens when the policy layer serves power"
+  },
+  "discovered_at": "2026-02-25T22:25:20.656Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "bodily-autonomy",
+    "reproductive-rights",
+    "surveillance",
+    "memory-as-resistance",
+    "dystopia"
+  ]
+}

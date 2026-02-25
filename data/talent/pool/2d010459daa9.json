@@ -1,0 +1,55 @@
+{
+  "id": "2d010459daa9",
+  "name": "Paul Farmer",
+  "type": "real",
+  "alive": false,
+  "born": "1959",
+  "died": "2022",
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "public-health",
+  "disciplines": [
+    "public-health"
+  ],
+  "practice": "Global health equity, treating the poor with the same standard as the rich, structural violence",
+  "approach": "The idea that poor people can only receive 'appropriate technology' is moral garbage. Give the best care to the poorest people. Structural violence — poverty, racism, political oppression — is the root cause of disease. Treatment without addressing structures is palliative at best.",
+  "body_of_work": "Co-founded Partners In Health. Treated MDR-TB in Haiti and Peru when the world said it was cost-ineffective. Built Butaro Hospital in Rwanda. Proved that world-class care in the poorest settings both works and is affordable. Mountains Beyond Mountains documents his work.",
+  "why_instructive": "He proved the dome's premise: coordinated, person-centered care in the hardest settings is both possible and cheaper than fragmented alternatives. His work IS the delta calculation.",
+  "dome_layers": [
+    1,
+    3,
+    4,
+    5,
+    8,
+    12
+  ],
+  "sphere_layers": [
+    2,
+    5,
+    9
+  ],
+  "dome_relevance": {
+    "1": "Rights-based approach — healthcare as human right",
+    "3": "Fiscal — proved comprehensive care costs less than fragmented",
+    "4": "Health — world-class care regardless of setting",
+    "5": "Housing — you can't treat TB if the patient has no roof",
+    "8": "Community health workers as the backbone",
+    "12": "Flourishing — his patients didn't just survive, they thrived"
+  },
+  "sphere_relevance": {
+    "2": "Built hospitals as infrastructure in places that had none",
+    "5": "Community health model — accompaniment over intervention",
+    "9": "Changed WHO policy on MDR-TB treatment"
+  },
+  "discovered_at": "2026-02-25T22:25:20.654Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "health-equity",
+    "structural-violence",
+    "partners-in-health",
+    "accompaniment"
+  ]
+}

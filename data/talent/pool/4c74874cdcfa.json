@@ -1,0 +1,57 @@
+{
+  "id": "4c74874cdcfa",
+  "name": "Jane Jacobs",
+  "type": "real",
+  "alive": false,
+  "born": "1916",
+  "died": "2006",
+  "nationality": "American-Canadian",
+  "era": "20th century",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "urban-planning",
+  "disciplines": [
+    "urban-planning"
+  ],
+  "practice": "Urban observation, community-scale economics, anti-demolition activism",
+  "approach": "Eyes on the street. The city is not a problem to be solved by experts — it's a living system understood by watching how people actually use it. Diversity of use, short blocks, old buildings, density of people. These are not disorder — they are the immune system of a neighborhood.",
+  "body_of_work": "The Death and Life of Great American Cities (1961), The Economy of Cities (1969), Systems of Survival (1992). Stopped the Lower Manhattan Expressway. Fought Robert Moses. Proved that small-scale, mixed-use, high-density neighborhoods outperform planned superblocks.",
+  "why_instructive": "She saw what the sphere schema sees — a place is a living system with layers. Her fight against Moses is the fight against treating places as problems rather than organisms.",
+  "dome_layers": [
+    5,
+    6,
+    8
+  ],
+  "sphere_layers": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    10
+  ],
+  "dome_relevance": {
+    "5": "Housing as community fabric, not units",
+    "6": "Local economies and import replacement",
+    "8": "Community as emergent property of good design"
+  },
+  "sphere_relevance": {
+    "1": "Zoning critique — mixed use over segregated use",
+    "2": "Infrastructure at human scale",
+    "4": "Economic vitality from diversity, not monoculture",
+    "5": "Social fabric emerges from physical design",
+    "6": "Temporal depth — old buildings subsidize new uses",
+    "7": "Activation as natural byproduct of good urban form",
+    "10": "Catalyst — one good block activates the next"
+  },
+  "discovered_at": "2026-02-25T22:25:20.679Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "urbanism",
+    "community-economics",
+    "activism",
+    "observation"
+  ]
+}

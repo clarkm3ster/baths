@@ -1,0 +1,43 @@
+{
+  "id": "80fc56c95d43739d",
+  "name": "Times Square Pedestrian Plaza",
+  "type": "plaza",
+  "type_category": "plaza",
+  "address": "Broadway & 7th Ave, New York, NY 10036",
+  "lat": 40.758,
+  "lng": -73.9855,
+  "parcel_id": null,
+  "municipality": "New York City",
+  "municipality_slug": "new-york-city",
+  "county": "Multiple (5 boroughs)",
+  "state": "NY",
+  "owning_entity": "city",
+  "current_use": "Pedestrianized boulevard sections with seating, performances, commercial activity",
+  "current_use_hours": "24 hours",
+  "physical": {
+    "indoor_outdoor": "outdoor",
+    "approximate_size_sqft": 110000,
+    "covered_open": "open",
+    "accessible": true,
+    "level": "ground",
+    "has_water": false,
+    "has_power": true,
+    "has_restrooms": false,
+    "surface_type": "concrete, granite"
+  },
+  "zoning": null,
+  "assessed_value": null,
+  "restrictions": [],
+  "adjacent_context": null,
+  "condition": "maintained",
+  "activation_potential": [
+    4,
+    5,
+    7,
+    10
+  ],
+  "data_source_url": "https://data.cityofnewyork.us",
+  "data_source_name": "NYC Open Data",
+  "scraped_at": "2026-02-25T22:30:27.461Z",
+  "discovery_cycle": 1
+}

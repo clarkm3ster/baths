@@ -1,0 +1,44 @@
+{
+  "id": "c6b41e8ca4c4",
+  "name": "Robert Wilson",
+  "type": "real",
+  "alive": true,
+  "born": "1941",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "theatrical-design",
+  "disciplines": [
+    "theatrical-design"
+  ],
+  "practice": "Visual theater, time-based installation, light as primary material",
+  "approach": "Time is material. Light is material. Movement at glacial speed creates a different kind of attention. Einstein on the Beach ran 5 hours with no intermission. His theater doesn't tell stories — it creates states of consciousness through duration, light, and geometry.",
+  "body_of_work": "Einstein on the Beach (with Philip Glass), the CIVIL warS, Monsters of Grace. Watermill Center — his laboratory on Long Island. 50+ years of theater that treats time and light as primary materials.",
+  "why_instructive": "His work demonstrates what Keltner calls 'vastness' and 'accommodation' through duration. Sphere activations that run for hours create different neurological states than hour-long events. He proves that slow activation is powerful activation.",
+  "dome_layers": [
+    11
+  ],
+  "sphere_layers": [
+    6,
+    7
+  ],
+  "dome_relevance": {
+    "11": "Creativity — time itself as creative medium"
+  },
+  "sphere_relevance": {
+    "6": "Temporal — duration as design material, time perception altered by environment",
+    "7": "Activation — slow activation, extended duration, altered consciousness"
+  },
+  "discovered_at": "2026-02-25T22:25:20.672Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "visual-theater",
+    "time-based",
+    "light-design",
+    "duration",
+    "altered-perception"
+  ]
+}

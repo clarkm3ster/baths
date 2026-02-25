@@ -1,0 +1,47 @@
+{
+  "id": "8b7b8a19c3c9",
+  "name": "Danielle Sered",
+  "type": "real",
+  "alive": true,
+  "born": "1979",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "criminal-justice",
+  "disciplines": [
+    "criminal-justice"
+  ],
+  "practice": "Restorative justice, violence intervention, survivor-centered accountability",
+  "approach": "Incarceration does not make survivors safer. Common Justice runs an alternative-to-incarceration program where the person who caused harm meets with the person they harmed. The survivor defines what accountability looks like. Most survivors choose this over prison.",
+  "body_of_work": "Founded Common Justice — the first alternative-to-incarceration program for violent felonies in the US. Until We Reckon (2019). Shows that when you ask survivors of violence what they want, most don't want prison — they want safety, accountability, and answers.",
+  "why_instructive": "She proves that the dome's legal layer doesn't have to mean incarceration. Accountability without cages. Safety without surveillance. The dome must offer this path.",
+  "dome_layers": [
+    1,
+    4,
+    8
+  ],
+  "sphere_layers": [
+    5,
+    9
+  ],
+  "dome_relevance": {
+    "1": "Legal — alternative to incarceration for violent felonies",
+    "4": "Health — trauma healing for both survivors and those who caused harm",
+    "8": "Community — restorative process rebuilds community trust"
+  },
+  "sphere_relevance": {
+    "5": "Social — community-based accountability changes neighborhood dynamics",
+    "9": "Policy — proves viable alternatives to incarceration at scale"
+  },
+  "discovered_at": "2026-02-25T22:25:20.607Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "restorative-justice",
+    "violence-intervention",
+    "survivor-centered",
+    "alternatives-to-incarceration"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "57c40f2321b18362",
+  "name": "Wissahickon Valley Park",
+  "type": "park",
+  "type_category": "park",
+  "address": "Forbidden Drive, Philadelphia, PA 19128",
+  "lat": 40.0538,
+  "lng": -75.2123,
+  "parcel_id": null,
+  "municipality": "Philadelphia",
+  "municipality_slug": "philadelphia",
+  "county": "Philadelphia County",
+  "state": "PA",
+  "owning_entity": "city",
+  "current_use": "1,800-acre urban wilderness park with creek, trails, historic structures",
+  "current_use_hours": "Dawn to dusk",
+  "physical": {
+    "indoor_outdoor": "outdoor",
+    "approximate_size_sqft": 78408000,
+    "covered_open": "open",
+    "accessible": false,
+    "level": "multi",
+    "has_water": true,
+    "has_power": false,
+    "has_restrooms": true,
+    "surface_type": "dirt trails, rock, creek, forest"
+  },
+  "zoning": null,
+  "assessed_value": null,
+  "restrictions": [],
+  "adjacent_context": null,
+  "condition": "maintained",
+  "activation_potential": [
+    3,
+    6,
+    7,
+    8
+  ],
+  "data_source_url": "https://opendataphilly.org",
+  "data_source_name": "OpenDataPhilly",
+  "scraped_at": "2026-02-25T22:30:28.385Z",
+  "discovery_cycle": 1
+}

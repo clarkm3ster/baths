@@ -1,0 +1,19 @@
+{
+  "id": "criminal-justice",
+  "discipline": "Criminal Justice",
+  "description": "Policing, courts, incarceration, probation, re-entry. The system that touches more American lives than any other — and destroys more. Restorative justice as the alternative architecture.",
+  "dome_relevance": {
+    "1": "Legal — criminal law, rights, due process, collateral consequences",
+    "2": "Systems — courts, jails, probation offices, bail systems",
+    "6": "Economic — cost of incarceration, employment barriers with records",
+    "8": "Community — policing, surveillance, community safety"
+  },
+  "sphere_relevance": {
+    "1": "Parcel — property seized through civil forfeiture",
+    "5": "Social — over-policed neighborhoods, surveillance landscapes",
+    "9": "Policy — sentencing reform, bail reform, police oversight"
+  },
+  "practitioner_count": 3,
+  "discovered_at": "2026-02-25T22:25:20.607Z",
+  "cycle": 1
+}

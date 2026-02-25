@@ -1,0 +1,50 @@
+{
+  "id": "a4bd6c955777",
+  "name": "Zora Neale Hurston",
+  "type": "real",
+  "alive": false,
+  "born": "1891",
+  "died": "1960",
+  "nationality": "American",
+  "era": "Harlem Renaissance",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "ethnography",
+  "disciplines": [
+    "ethnography"
+  ],
+  "practice": "Folklore collection, Black cultural documentation, participant observation as native daughter",
+  "approach": "She studied her own community — not as outsider anthropologist but as native daughter returning with ethnographic tools. Mules and Men documented hoodoo, work songs, folktales — the living culture that academic anthropology couldn't see because it only looked from outside.",
+  "body_of_work": "Mules and Men (1935) — first collection of African American folklore by a Black woman. Their Eyes Were Watching God (1937). Tell My Horse (1938) — Haitian vodou. Barnard-trained anthropologist who brought insider knowledge to the discipline.",
+  "why_instructive": "She proves that the best community data comes from the community itself. The dome's community layer should be informed by people who live inside it, not consultants who visit.",
+  "dome_layers": [
+    8,
+    11,
+    12
+  ],
+  "sphere_layers": [
+    5,
+    6,
+    7
+  ],
+  "dome_relevance": {
+    "8": "Community — insider documentation of Black community culture",
+    "11": "Creativity — folklore as living creative practice",
+    "12": "Flourishing — joy, humor, and beauty within oppression"
+  },
+  "sphere_relevance": {
+    "5": "Social — deep understanding of community from inside",
+    "6": "Temporal — oral tradition carrying history across generations",
+    "7": "Activation — cultural performance as community activation"
+  },
+  "discovered_at": "2026-02-25T22:25:20.621Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "folklore",
+    "insider-ethnography",
+    "black-culture",
+    "oral-tradition",
+    "harlem-renaissance"
+  ]
+}

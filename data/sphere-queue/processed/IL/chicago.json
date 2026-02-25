@@ -1,0 +1,99 @@
+{
+  "municipality": "Chicago",
+  "state": "IL",
+  "county": "Cook County",
+  "fips": "1714000",
+  "population": 2746388,
+  "priority": "tier-1",
+  "open_data_portal": "https://data.cityofchicago.org",
+  "data_sources": [
+    {
+      "name": "Chicago Data Portal - Parks",
+      "type": "soda",
+      "probe_url": "https://data.cityofchicago.org/resource/ejsh-fztr.json?$limit=5",
+      "description": "Chicago Park District parks and facilities"
+    },
+    {
+      "name": "Chicago Data Portal - Libraries",
+      "type": "soda",
+      "probe_url": "https://data.cityofchicago.org/resource/x8fc-8rcq.json?$limit=5",
+      "description": "Chicago Public Library locations"
+    }
+  ],
+  "spaces": [
+    {
+      "name": "Millennium Park",
+      "type": "park",
+      "address": "201 E Randolph St, Chicago, IL 60601",
+      "lat": 41.8827,
+      "lng": -87.6227,
+      "owning_entity": "city",
+      "current_use": "Public park with Cloud Gate, Pritzker Pavilion, Crown Fountain, Lurie Garden",
+      "current_use_hours": "6am-11pm daily",
+      "physical": {
+        "indoor_outdoor": "outdoor",
+        "approximate_size_sqft": 1065000,
+        "covered_open": "partial",
+        "accessible": true,
+        "level": "elevated",
+        "has_water": true,
+        "has_power": true,
+        "has_restrooms": true,
+        "surface_type": "concrete, grass, water, steel"
+      },
+      "condition": "maintained",
+      "activation_potential": [2, 3, 5, 6, 7, 8, 10],
+      "data_source_url": "https://data.cityofchicago.org",
+      "data_source_name": "Chicago Data Portal"
+    },
+    {
+      "name": "The 606 / Bloomingdale Trail",
+      "type": "decommissioned-rail-corridor",
+      "address": "1805 N Ridgeway Ave, Chicago, IL 60647",
+      "lat": 41.9143,
+      "lng": -87.7180,
+      "owning_entity": "city",
+      "current_use": "Elevated linear park on former Bloomingdale rail line, 2.7 miles",
+      "current_use_hours": "6am-11pm",
+      "physical": {
+        "indoor_outdoor": "outdoor",
+        "approximate_size_sqft": 600000,
+        "covered_open": "open",
+        "accessible": true,
+        "level": "elevated",
+        "has_water": false,
+        "has_power": true,
+        "has_restrooms": false,
+        "surface_type": "concrete, plantings"
+      },
+      "condition": "maintained",
+      "activation_potential": [2, 3, 5, 6, 7, 10],
+      "data_source_url": "https://data.cityofchicago.org",
+      "data_source_name": "Chicago Data Portal"
+    },
+    {
+      "name": "Dorchester Art + Housing Collaborative (Theaster Gates)",
+      "type": "vacant-lot",
+      "address": "1456 E 70th St, Chicago, IL 60637",
+      "lat": 41.7673,
+      "lng": -87.5862,
+      "owning_entity": "city",
+      "current_use": "Artist-activated former vacant lots — gallery, archive, listening house",
+      "physical": {
+        "indoor_outdoor": "both",
+        "approximate_size_sqft": 25000,
+        "covered_open": "partial",
+        "accessible": true,
+        "level": "ground",
+        "has_water": true,
+        "has_power": true,
+        "has_restrooms": true,
+        "surface_type": "renovated buildings, garden"
+      },
+      "condition": "maintained",
+      "activation_potential": [1, 4, 5, 6, 7, 8, 10],
+      "data_source_url": "https://data.cityofchicago.org",
+      "data_source_name": "Chicago Data Portal"
+    }
+  ]
+}

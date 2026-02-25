@@ -1,0 +1,18 @@
+{
+  "id": "landscape-architecture",
+  "discipline": "Landscape Architecture",
+  "description": "Design of outdoor spaces, terrain, water systems, plantings, ecological systems. Where earth meets intention.",
+  "dome_relevance": {
+    "5": "Housing — outdoor living environment, yard as extension of home",
+    "9": "Environment — ecological design, stormwater, habitat"
+  },
+  "sphere_relevance": {
+    "1": "Parcel — lot design, boundaries, terrain",
+    "3": "Environmental — soil, water, ecology, microclimate",
+    "7": "Activation — what happens in designed outdoor space",
+    "8": "Permanence — living systems that persist and evolve"
+  },
+  "practitioner_count": 3,
+  "discovered_at": "2026-02-25T22:25:20.642Z",
+  "cycle": 1
+}

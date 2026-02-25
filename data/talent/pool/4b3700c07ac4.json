@@ -1,0 +1,50 @@
+{
+  "id": "4b3700c07ac4",
+  "name": "Gandalf",
+  "type": "fictional",
+  "alive": null,
+  "born": null,
+  "died": null,
+  "nationality": null,
+  "era": "1954-55",
+  "source_work": "The Lord of the Rings",
+  "source_medium": "novel",
+  "creator": "J.R.R. Tolkien",
+  "discipline": "landscape-architecture",
+  "disciplines": [
+    "landscape-architecture"
+  ],
+  "practice": "Stewardship, landscape reading, long-term ecological thinking, fireworks",
+  "approach": "The land has memory. Middle-earth's landscapes are not settings — they are characters. The Shire's gardening culture is as important as Gondor's military culture. Gandalf's deepest wisdom is knowing which things must be tended and which must be left alone. He waters no garden that can water itself.",
+  "body_of_work": "Guides the Fellowship through landscapes that are alive with history — Moria, Fangorn, the Dead Marshes, Ithilien. Recognizes that Sauron's fundamental sin is treating land as resource rather than living system. Sam's garden at the end IS the victory.",
+  "why_instructive": "Tolkien's landscapes have temporal depth that sphere layer 6 aspires to. Gandalf's relationship to landscape is stewardship over ownership — he intervenes minimally and lets living systems do their work.",
+  "dome_layers": [
+    9,
+    12
+  ],
+  "sphere_layers": [
+    3,
+    6,
+    8,
+    10
+  ],
+  "dome_relevance": {
+    "9": "Environment as living entity requiring stewardship, not management",
+    "12": "Flourishing — the Shire's flourishing IS the goal"
+  },
+  "sphere_relevance": {
+    "3": "Environmental — landscape as living system with memory",
+    "6": "Temporal — land carries history, every place is stratified with time",
+    "8": "Permanence — what endures when everything else passes",
+    "10": "Catalyst — one act of restoration (Sam's mallorn tree) transforms a whole place"
+  },
+  "discovered_at": "2026-02-25T22:25:20.641Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "stewardship",
+    "landscape-memory",
+    "minimal-intervention",
+    "temporal-depth",
+    "mythology"
+  ]
+}

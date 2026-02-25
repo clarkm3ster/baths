@@ -1,0 +1,47 @@
+{
+  "id": "0c59e7d8c0b8",
+  "name": "Clifford Geertz",
+  "type": "real",
+  "alive": false,
+  "born": "1926",
+  "died": "2006",
+  "nationality": "American",
+  "era": "20th century",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "ethnography",
+  "disciplines": [
+    "ethnography"
+  ],
+  "practice": "Interpretive anthropology, thick description, culture as text",
+  "approach": "A wink is not a twitch. The same physical movement carries entirely different meaning depending on context. Thick description captures not just what happened but what it meant. Culture is not a power — it is a context within which events become intelligible.",
+  "body_of_work": "The Interpretation of Cultures (1973) — especially 'Thick Description' and 'Deep Play: Notes on the Balinese Cockfight'. Local Knowledge (1983). Worked in Java, Bali, Morocco. Invented the concept of thick description that transformed social science.",
+  "why_instructive": "The dome's data layer IS thin description — numbers, rates, scores. But a dome only serves a person when it achieves thick description: what does this data MEAN in this person's life, in this community's context?",
+  "dome_layers": [
+    8,
+    10,
+    12
+  ],
+  "sphere_layers": [
+    5,
+    6
+  ],
+  "dome_relevance": {
+    "8": "Community — understanding what community means to its members",
+    "10": "Autonomy — seeing self-determination as locally defined",
+    "12": "Flourishing — thick description of what flourishing actually looks like HERE"
+  },
+  "sphere_relevance": {
+    "5": "Social — deep reading of community context, not just demographics",
+    "6": "Temporal — cultural practices carry time"
+  },
+  "discovered_at": "2026-02-25T22:25:20.621Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "thick-description",
+    "interpretive-anthropology",
+    "meaning",
+    "context"
+  ]
+}

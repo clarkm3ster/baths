@@ -1,0 +1,156 @@
+{
+  "municipality": "New York City",
+  "state": "NY",
+  "county": "Multiple (5 boroughs)",
+  "fips": "3651000",
+  "population": 8336817,
+  "priority": "tier-1",
+  "open_data_portal": "https://data.cityofnewyork.us",
+  "data_sources": [
+    {
+      "name": "NYC Open Data - Parks Properties",
+      "type": "soda",
+      "probe_url": "https://data.cityofnewyork.us/resource/enfk-uwv5.json?$limit=5",
+      "description": "NYC Parks properties and boundaries"
+    },
+    {
+      "name": "NYC Open Data - City-Owned Properties (DCAS IPIS)",
+      "type": "soda",
+      "probe_url": "https://data.cityofnewyork.us/resource/evjd-dqpz.json?$limit=5",
+      "description": "DCAS Integrated Property Information System — all city-owned and leased properties"
+    },
+    {
+      "name": "NYC Open Data - Libraries",
+      "type": "soda",
+      "probe_url": "https://data.cityofnewyork.us/resource/p4pf-fyc4.json?$limit=5",
+      "description": "NYC Public Library locations (NYPL, Brooklyn, Queens)"
+    }
+  ],
+  "spaces": [
+    {
+      "name": "The High Line",
+      "type": "decommissioned-rail-corridor",
+      "address": "New York, NY 10011 (Gansevoort to 34th Street)",
+      "lat": 40.7480,
+      "lng": -74.0048,
+      "owning_entity": "city",
+      "current_use": "Elevated linear park on former rail line, art installations, garden, events",
+      "current_use_hours": "7am-10pm daily",
+      "physical": {
+        "indoor_outdoor": "outdoor",
+        "approximate_size_sqft": 288000,
+        "covered_open": "open",
+        "accessible": true,
+        "level": "elevated",
+        "has_water": false,
+        "has_power": true,
+        "has_restrooms": true,
+        "surface_type": "concrete, plantings, rail artifacts"
+      },
+      "condition": "maintained",
+      "activation_potential": [2, 3, 5, 6, 7, 8, 10],
+      "data_source_url": "https://data.cityofnewyork.us",
+      "data_source_name": "NYC Open Data"
+    },
+    {
+      "name": "Domino Park",
+      "type": "waterfront",
+      "address": "15 River St, Brooklyn, NY 11249",
+      "lat": 40.7134,
+      "lng": -73.9681,
+      "owning_entity": "city",
+      "current_use": "Waterfront park on former Domino Sugar Factory site",
+      "physical": {
+        "indoor_outdoor": "outdoor",
+        "approximate_size_sqft": 260000,
+        "covered_open": "open",
+        "accessible": true,
+        "level": "ground",
+        "has_water": true,
+        "has_power": true,
+        "has_restrooms": true,
+        "surface_type": "concrete, grass, water edge, industrial artifacts"
+      },
+      "condition": "maintained",
+      "activation_potential": [1, 3, 5, 6, 7, 10],
+      "data_source_url": "https://data.cityofnewyork.us",
+      "data_source_name": "NYC Open Data"
+    },
+    {
+      "name": "Times Square Pedestrian Plaza",
+      "type": "plaza",
+      "address": "Broadway & 7th Ave, New York, NY 10036",
+      "lat": 40.7580,
+      "lng": -73.9855,
+      "owning_entity": "city",
+      "current_use": "Pedestrianized boulevard sections with seating, performances, commercial activity",
+      "current_use_hours": "24 hours",
+      "physical": {
+        "indoor_outdoor": "outdoor",
+        "approximate_size_sqft": 110000,
+        "covered_open": "open",
+        "accessible": true,
+        "level": "ground",
+        "has_water": false,
+        "has_power": true,
+        "has_restrooms": false,
+        "surface_type": "concrete, granite"
+      },
+      "condition": "maintained",
+      "activation_potential": [4, 5, 7, 10],
+      "data_source_url": "https://data.cityofnewyork.us",
+      "data_source_name": "NYC Open Data"
+    },
+    {
+      "name": "Governors Island",
+      "type": "island-park",
+      "type_name": "Island Park / Detached Public Land",
+      "type_description": "Public land accessible only by water. Temporal boundary (ferry schedule) creates distinct activation rhythm. Former military/institutional use gives deep temporal layer.",
+      "address": "Governors Island, New York, NY 10004",
+      "lat": 40.6892,
+      "lng": -74.0167,
+      "owning_entity": "city",
+      "current_use": "Public park, art installations, food vendors, festivals, cycling. Open May-October.",
+      "current_use_hours": "10am-6pm (seasonal, May-Oct ferry only)",
+      "physical": {
+        "indoor_outdoor": "both",
+        "approximate_size_sqft": 7500000,
+        "covered_open": "open",
+        "accessible": true,
+        "level": "ground",
+        "has_water": true,
+        "has_power": true,
+        "has_restrooms": true,
+        "surface_type": "grass, concrete, historic buildings, water edge"
+      },
+      "condition": "maintained",
+      "activation_potential": [1, 2, 3, 5, 6, 7, 8, 10],
+      "data_source_url": "https://data.cityofnewyork.us",
+      "data_source_name": "NYC Open Data"
+    },
+    {
+      "name": "Socrates Sculpture Park",
+      "type": "vacant-lot",
+      "address": "32-01 Vernon Blvd, Queens, NY 11106",
+      "lat": 40.7687,
+      "lng": -73.9364,
+      "owning_entity": "city",
+      "current_use": "Outdoor sculpture park and performance space on former illegal dump site",
+      "physical": {
+        "indoor_outdoor": "outdoor",
+        "approximate_size_sqft": 196000,
+        "covered_open": "open",
+        "accessible": true,
+        "level": "ground",
+        "has_water": true,
+        "has_power": true,
+        "has_restrooms": true,
+        "surface_type": "grass, gravel, concrete"
+      },
+      "condition": "maintained",
+      "activation_potential": [3, 5, 6, 7, 8, 10],
+      "data_source_url": "https://data.cityofnewyork.us",
+      "data_source_name": "NYC Open Data"
+    }
+  ]
+}

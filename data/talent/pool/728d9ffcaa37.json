@@ -1,0 +1,45 @@
+{
+  "id": "728d9ffcaa37",
+  "name": "Florence Nightingale",
+  "type": "real",
+  "alive": false,
+  "born": "1820",
+  "died": "1910",
+  "nationality": "British",
+  "era": "19th century",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "data-science",
+  "disciplines": [
+    "data-science"
+  ],
+  "practice": "Statistical graphics, sanitary reform, data-driven healthcare, the polar area diagram",
+  "approach": "Data must be beautiful to be persuasive. Her rose diagrams showed Parliament that soldiers were dying of disease, not combat. She didn't just collect data — she designed visualizations that made the invisible visible. Data in a table changes nothing. Data in a polar area diagram changes policy.",
+  "body_of_work": "Pioneered the use of statistical graphics to drive policy change. Rose diagrams (coxcomb charts) showing Crimean War deaths by cause. Notes on Hospitals, Notes on Nursing. Founded modern nursing AND modern health data visualization.",
+  "why_instructive": "She invented data-driven advocacy. The dome collects data; Nightingale shows that collection is worthless without visualization that creates understanding and drives action.",
+  "dome_layers": [
+    2,
+    4
+  ],
+  "sphere_layers": [
+    5,
+    9
+  ],
+  "dome_relevance": {
+    "2": "Systems — data systems for healthcare management",
+    "4": "Health — evidence-based nursing, sanitary reform"
+  },
+  "sphere_relevance": {
+    "5": "Social — making population-level patterns visible and comprehensible",
+    "9": "Policy — data visualization as policy advocacy tool"
+  },
+  "discovered_at": "2026-02-25T22:25:20.609Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "data-visualization",
+    "statistical-graphics",
+    "policy-advocacy",
+    "nursing"
+  ]
+}

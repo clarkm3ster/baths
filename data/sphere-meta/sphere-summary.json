@@ -1,0 +1,20 @@
+{
+  "updated_at": "2026-02-25T22:30:28.397Z",
+  "total_spaces": 16,
+  "states_covered": 3,
+  "by_state": {
+    "IL": 3,
+    "NY": 5,
+    "PA": 8
+  },
+  "by_type": {
+    "decommissioned-rail-corridor": 3,
+    "vacant-lot": 2,
+    "park": 5,
+    "plaza": 3,
+    "waterfront": 1,
+    "island-park": 1,
+    "government-building-public-area": 1
+  },
+  "type_count": 7
+}

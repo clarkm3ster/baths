@@ -1,0 +1,59 @@
+{
+  "id": "967ff75a8502",
+  "name": "Theaster Gates",
+  "type": "real",
+  "alive": true,
+  "born": "1973",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "theatrical-design",
+  "disciplines": [
+    "theatrical-design"
+  ],
+  "practice": "Art as urban infrastructure, abandoned building activation, Black material culture",
+  "approach": "Buy abandoned buildings on the South Side of Chicago for $1. Transform them into libraries, galleries, listening rooms, archives. Art practice IS real estate practice IS community development. The building is the medium. The neighborhood is the canvas. Culture is infrastructure.",
+  "body_of_work": "Dorchester Projects — abandoned houses became Archive House, Listening House, Black Cinema House. Stony Island Arts Bank — abandoned bank became cultural center. Rebuild Foundation. His work has increased property values and community engagement across Grand Crossing and Washington Park.",
+  "why_instructive": "He IS a sphere producer in practice. Every project activates a physical space (sphere layer 7), creates permanence (layer 8), changes policy perception (layer 9), and catalyzes adjacent activation (layer 10). He proves the sphere schema works.",
+  "dome_layers": [
+    5,
+    8,
+    11
+  ],
+  "sphere_layers": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "dome_relevance": {
+    "5": "Housing — abandoned buildings as housing for culture",
+    "8": "Community — art practice as community building",
+    "11": "Creativity — the building itself as artistic medium"
+  },
+  "sphere_relevance": {
+    "1": "Parcel — buying abandoned parcels, changing ownership and use",
+    "4": "Economic — $1 purchases becoming multi-million dollar cultural assets",
+    "5": "Social — community engagement through culture",
+    "6": "Temporal — honoring building history while creating new use",
+    "7": "Activation — every building becomes an activated cultural space",
+    "8": "Permanence — institutions that outlast the initial intervention",
+    "9": "Policy — changed how Chicago thinks about vacant property",
+    "10": "Catalyst — each project catalyzes the next block"
+  },
+  "discovered_at": "2026-02-25T22:25:20.672Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "social-practice-art",
+    "south-side-chicago",
+    "building-activation",
+    "culture-as-infrastructure"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "discipline": "Criminal Justice",
+  "description": "Policing, courts, incarceration, probation, re-entry. The system that touches more American lives than any other — and destroys more. Restorative justice as the alternative architecture.",
+  "dome_relevance": {
+    "1": "Legal — criminal law, rights, due process, collateral consequences",
+    "2": "Systems — courts, jails, probation offices, bail systems",
+    "6": "Economic — cost of incarceration, employment barriers with records",
+    "8": "Community — policing, surveillance, community safety"
+  },
+  "sphere_relevance": {
+    "1": "Parcel — property seized through civil forfeiture",
+    "5": "Social — over-policed neighborhoods, surveillance landscapes",
+    "9": "Policy — sentencing reform, bail reform, police oversight"
+  },
+  "adjacent_disciplines": [
+    { "discipline": "Restorative Justice", "description": "Healing harm through dialogue, accountability, community process" },
+    { "discipline": "Re-entry Services", "description": "Supporting people returning from incarceration — housing, jobs, identity documents" }
+  ],
+  "practitioners": [
+    {
+      "name": "Bryan Stevenson",
+      "type": "real",
+      "alive": true,
+      "born": "1959",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Death penalty defense, racial justice litigation, narrative memorialization",
+      "approach": "Each of us is more than the worst thing we've ever done. The system works by dehumanizing — turning people into cases, numbers, sentences. Justice requires proximity: you must be close enough to the condemned to see them as human. Mercy is not weakness — it is the measure of our justice.",
+      "body_of_work": "Founded Equal Justice Initiative. Won Supreme Court rulings banning mandatory life-without-parole for children. Just Mercy (book and film). National Memorial for Peace and Justice — the first memorial to lynching victims. Freed over 140 wrongly condemned prisoners.",
+      "why_instructive": "The dome's legal layer must reckon with the criminal justice system's ability to destroy every other layer simultaneously — an arrest collapses housing, employment, health, community, education. Stevenson shows what repair looks like.",
+      "dome_layers": [1, 4, 5, 6, 8],
+      "sphere_layers": [5, 6, 9],
+      "dome_relevance": {
+        "1": "Legal — criminal defense, wrongful conviction, death penalty abolition",
+        "4": "Health — mental health in incarceration, trauma of the condemned",
+        "5": "Housing — homelessness after incarceration",
+        "6": "Economic — employment barriers, economic destruction of conviction",
+        "8": "Community — community impact of mass incarceration"
+      },
+      "sphere_relevance": {
+        "5": "Social — the communities mass incarceration devastates",
+        "6": "Temporal — lynching memorial makes invisible history visible in physical space",
+        "9": "Policy — sentencing reform, juvenile justice reform"
+      },
+      "tags": ["death-penalty", "racial-justice", "mercy", "memorial", "proximity"]
+    },
+    {
+      "name": "Jean Valjean",
+      "type": "fictional",
+      "source_work": "Les Misérables",
+      "source_medium": "novel",
+      "creator": "Victor Hugo",
+      "era": "1862",
+      "practice": "Re-entry, identity transformation, running from the system while building community",
+      "approach": "A man steals bread for his sister's children. Serves 19 years. Is given a second chance by a bishop's mercy. Spends the rest of his life trying to be worthy of that mercy while the system (Javert) insists he can never change. His question: can a convicted person become a new person?",
+      "body_of_work": "Transforms from prisoner to factory owner to mayor to father figure. Builds a factory that employs an entire town. Saves lives at the barricade. The entire novel is about whether the dome — the full system — can recognize a person's transformation or only their worst moment.",
+      "why_instructive": "He is the re-entry case study. Every dome layer either helps or hunts him. The legal layer (Javert) says he can never change. The community layer (Fantine, Cosette) shows he already has. The dome must be more like the bishop than Javert.",
+      "dome_layers": [1, 2, 3, 5, 6, 8, 10, 12],
+      "sphere_layers": [5, 6],
+      "dome_relevance": {
+        "1": "Legal — parole, identity documents, criminal record as permanent barrier",
+        "2": "Systems — the pursuit that never stops (Javert as system)",
+        "3": "Fiscal — building economic capacity from nothing",
+        "5": "Housing — finding shelter after incarceration",
+        "6": "Economic — from convict to factory owner to mayor",
+        "8": "Community — building community while hiding from the system",
+        "10": "Autonomy — the right to become someone new",
+        "12": "Flourishing — redemption, mercy, love as what flourishing looks like"
+      },
+      "sphere_relevance": {
+        "5": "Social — how a community receives or rejects someone with a record",
+        "6": "Temporal — 19 years of incarceration, decades of running, a lifetime of transformation"
+      },
+      "tags": ["re-entry", "transformation", "mercy", "criminal-record", "identity"]
+    },
+    {
+      "name": "Danielle Sered",
+      "type": "real",
+      "alive": true,
+      "born": "1979",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Restorative justice, violence intervention, survivor-centered accountability",
+      "approach": "Incarceration does not make survivors safer. Common Justice runs an alternative-to-incarceration program where the person who caused harm meets with the person they harmed. The survivor defines what accountability looks like. Most survivors choose this over prison.",
+      "body_of_work": "Founded Common Justice — the first alternative-to-incarceration program for violent felonies in the US. Until We Reckon (2019). Shows that when you ask survivors of violence what they want, most don't want prison — they want safety, accountability, and answers.",
+      "why_instructive": "She proves that the dome's legal layer doesn't have to mean incarceration. Accountability without cages. Safety without surveillance. The dome must offer this path.",
+      "dome_layers": [1, 4, 8],
+      "sphere_layers": [5, 9],
+      "dome_relevance": {
+        "1": "Legal — alternative to incarceration for violent felonies",
+        "4": "Health — trauma healing for both survivors and those who caused harm",
+        "8": "Community — restorative process rebuilds community trust"
+      },
+      "sphere_relevance": {
+        "5": "Social — community-based accountability changes neighborhood dynamics",
+        "9": "Policy — proves viable alternatives to incarceration at scale"
+      },
+      "tags": ["restorative-justice", "violence-intervention", "survivor-centered", "alternatives-to-incarceration"]
+    }
+  ]
+}

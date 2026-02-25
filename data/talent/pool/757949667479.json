@@ -1,0 +1,55 @@
+{
+  "id": "757949667479",
+  "name": "Mary Richmond",
+  "type": "real",
+  "alive": false,
+  "born": "1861",
+  "died": "1928",
+  "nationality": "American",
+  "era": "progressive era",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "social-work",
+  "disciplines": [
+    "social-work"
+  ],
+  "practice": "Casework methodology, social diagnosis, evidence-based social work",
+  "approach": "Systematic assessment — before you intervene, map every system touching this person's life. Social Diagnosis (1917) was the first attempt to formalize what it means to see a whole person in their full context.",
+  "body_of_work": "Published Social Diagnosis (1917) and What Is Social Case Work? (1922). Founded the first social work training school. Created the methodology of person-in-environment assessment that every social worker still uses.",
+  "why_instructive": "She built the first systematic framework for understanding a whole person — the intellectual ancestor of the dome schema. Her 'social diagnosis' IS a 12-layer assessment.",
+  "dome_layers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "sphere_layers": [
+    5
+  ],
+  "dome_relevance": {
+    "1": "Legal dimensions of casework — rights, entitlements, obligations",
+    "2": "Systems mapping as core methodology",
+    "3": "Financial assessment as part of social diagnosis",
+    "4": "Health history and current conditions",
+    "5": "Housing conditions and adequacy",
+    "6": "Employment and economic capacity",
+    "7": "Education and skills assessment",
+    "8": "Social networks and community connections"
+  },
+  "sphere_relevance": {
+    "5": "Her person-in-environment model requires understanding the social context of place"
+  },
+  "discovered_at": "2026-02-25T22:25:20.662Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "social-diagnosis",
+    "casework",
+    "person-in-environment",
+    "methodology"
+  ]
+}

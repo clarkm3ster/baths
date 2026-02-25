@@ -1,0 +1,49 @@
+{
+  "id": "4648893aaeeb",
+  "name": "Kate Orff",
+  "type": "real",
+  "alive": true,
+  "born": "1971",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "landscape-architecture",
+  "disciplines": [
+    "landscape-architecture"
+  ],
+  "practice": "Landscape as infrastructure, oyster-tecture, ecological urbanism",
+  "approach": "Landscape is not decoration applied after the building — it IS the infrastructure. Oyster reefs as wave attenuation. Constructed wetlands as water treatment. Living systems that perform engineering functions while providing habitat and beauty.",
+  "body_of_work": "SCAPE Studio founder. Living Breakwaters (Staten Island) — oyster reefs as coastal defense. Lexington Community Farm. Toward an Urban Ecology. MacArthur Fellow 2017.",
+  "why_instructive": "She merges sphere layers 2 (infrastructure) and 3 (environmental) — living systems that do engineering work. This is what sphere activation looks like when it's both beautiful and functional.",
+  "dome_layers": [
+    9
+  ],
+  "sphere_layers": [
+    2,
+    3,
+    7,
+    8,
+    10
+  ],
+  "dome_relevance": {
+    "9": "Environment — ecological systems that clean and protect"
+  },
+  "sphere_relevance": {
+    "2": "Infrastructure — living systems AS infrastructure",
+    "3": "Environmental — ecology performing engineering functions",
+    "7": "Activation — ecological infrastructure as public experience",
+    "8": "Permanence — living systems that strengthen over time",
+    "10": "Catalyst — one living infrastructure project inspires others"
+  },
+  "discovered_at": "2026-02-25T22:25:20.640Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "living-infrastructure",
+    "oyster-tecture",
+    "ecological-urbanism",
+    "macarthur"
+  ]
+}

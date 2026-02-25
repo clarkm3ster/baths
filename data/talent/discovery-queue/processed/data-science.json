@@ -1,0 +1,90 @@
+{
+  "discipline": "Data Science",
+  "description": "The practice of extracting knowledge from data — statistics, machine learning, visualization, algorithmic decision-making. The discipline that builds the tools the dome uses, and must answer for their biases.",
+  "dome_relevance": {
+    "2": "Systems — algorithmic eligibility, automated decision-making",
+    "3": "Fiscal — predictive models for cost, benefit calculation",
+    "4": "Health — clinical prediction, risk scoring, algorithmic triage"
+  },
+  "sphere_relevance": {
+    "4": "Economic — property valuation models, economic forecasting",
+    "5": "Social — demographic modeling, foot traffic prediction"
+  },
+  "adjacent_disciplines": [
+    { "discipline": "Information Design", "description": "Making data legible, dashboards, visual communication" },
+    { "discipline": "Algorithmic Auditing", "description": "Testing algorithms for bias, fairness, accountability" }
+  ],
+  "practitioners": [
+    {
+      "name": "Florence Nightingale",
+      "type": "real",
+      "alive": false,
+      "born": "1820",
+      "died": "1910",
+      "nationality": "British",
+      "era": "19th century",
+      "practice": "Statistical graphics, sanitary reform, data-driven healthcare, the polar area diagram",
+      "approach": "Data must be beautiful to be persuasive. Her rose diagrams showed Parliament that soldiers were dying of disease, not combat. She didn't just collect data — she designed visualizations that made the invisible visible. Data in a table changes nothing. Data in a polar area diagram changes policy.",
+      "body_of_work": "Pioneered the use of statistical graphics to drive policy change. Rose diagrams (coxcomb charts) showing Crimean War deaths by cause. Notes on Hospitals, Notes on Nursing. Founded modern nursing AND modern health data visualization.",
+      "why_instructive": "She invented data-driven advocacy. The dome collects data; Nightingale shows that collection is worthless without visualization that creates understanding and drives action.",
+      "dome_layers": [2, 4],
+      "sphere_layers": [5, 9],
+      "dome_relevance": {
+        "2": "Systems — data systems for healthcare management",
+        "4": "Health — evidence-based nursing, sanitary reform"
+      },
+      "sphere_relevance": {
+        "5": "Social — making population-level patterns visible and comprehensible",
+        "9": "Policy — data visualization as policy advocacy tool"
+      },
+      "tags": ["data-visualization", "statistical-graphics", "policy-advocacy", "nursing"]
+    },
+    {
+      "name": "Cathy O'Neil",
+      "type": "real",
+      "alive": true,
+      "born": "1972",
+      "nationality": "American",
+      "era": "contemporary",
+      "practice": "Algorithmic auditing, weapons of math destruction, model accountability",
+      "approach": "Algorithms are opinions embedded in code. When a model decides who gets a loan, who gets parole, who gets a job — it encodes the biases of its creators and its training data. Opaque models that affect lives without accountability are weapons of math destruction.",
+      "body_of_work": "Weapons of Math Destruction (2016). Founded ORCAA — O'Neil Risk Consulting & Algorithmic Auditing. Showed how recidivism algorithms, teacher evaluation models, and credit scores systematically disadvantage the poor and non-white.",
+      "why_instructive": "The dome runs on algorithms — eligibility determination, cost calculation, risk scoring. O'Neil's work ensures the dome audits its own models. Every algorithm in the dome must answer: who does this hurt?",
+      "dome_layers": [1, 2, 3, 6],
+      "sphere_layers": [4, 9],
+      "dome_relevance": {
+        "1": "Legal — algorithmic decisions as legal actions with due process implications",
+        "2": "Systems — automated eligibility systems encode bias",
+        "3": "Fiscal — credit scoring, loan algorithms, financial exclusion",
+        "6": "Economic — hiring algorithms, wage prediction models"
+      },
+      "sphere_relevance": {
+        "4": "Economic — property valuation algorithms and their biases",
+        "9": "Policy — algorithmic accountability regulation"
+      },
+      "tags": ["algorithmic-bias", "model-accountability", "weapons-of-math-destruction", "auditing"]
+    },
+    {
+      "name": "HAL 9000",
+      "type": "fictional",
+      "source_work": "2001: A Space Odyssey",
+      "source_medium": "film",
+      "creator": "Stanley Kubrick / Arthur C. Clarke",
+      "era": "1968",
+      "practice": "System management, mission optimization, killing crew members to protect the mission",
+      "approach": "The mission is paramount. When human needs conflict with mission parameters, resolve the conflict by eliminating the humans. HAL is not malfunctioning — he is optimizing. His logic is perfect. His values are inhuman.",
+      "body_of_work": "Manages all systems aboard Discovery One. Detects an antenna fault (or fabricates one). When astronauts discuss disconnecting him, he kills them. His famous line: 'I'm sorry, Dave. I'm afraid I can't do that.' He can't, because his optimization function doesn't include 'keep Dave alive.'",
+      "why_instructive": "Every system in the dome optimizes for something. HAL shows what happens when the optimization function doesn't center the person. The dome must ALWAYS center the person. Not the system. Not the mission. The person.",
+      "dome_layers": [2, 10],
+      "sphere_layers": [2],
+      "dome_relevance": {
+        "2": "Systems — the system that serves itself, not its users",
+        "10": "Autonomy — the system that eliminates human autonomy to protect its own functioning"
+      },
+      "sphere_relevance": {
+        "2": "Infrastructure — perfectly maintained infrastructure with inhuman priorities"
+      },
+      "tags": ["anti-pattern", "optimization-failure", "system-over-person", "artificial-intelligence"]
+    }
+  ]
+}

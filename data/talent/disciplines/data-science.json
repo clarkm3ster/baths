@@ -1,0 +1,17 @@
+{
+  "id": "data-science",
+  "discipline": "Data Science",
+  "description": "The practice of extracting knowledge from data — statistics, machine learning, visualization, algorithmic decision-making. The discipline that builds the tools the dome uses, and must answer for their biases.",
+  "dome_relevance": {
+    "2": "Systems — algorithmic eligibility, automated decision-making",
+    "3": "Fiscal — predictive models for cost, benefit calculation",
+    "4": "Health — clinical prediction, risk scoring, algorithmic triage"
+  },
+  "sphere_relevance": {
+    "4": "Economic — property valuation models, economic forecasting",
+    "5": "Social — demographic modeling, foot traffic prediction"
+  },
+  "practitioner_count": 3,
+  "discovered_at": "2026-02-25T22:25:20.611Z",
+  "cycle": 1
+}

@@ -1,0 +1,55 @@
+{
+  "id": "5b0237449d38",
+  "name": "Leah Penniman",
+  "type": "real",
+  "alive": true,
+  "born": "1980",
+  "died": null,
+  "nationality": "American",
+  "era": "contemporary",
+  "source_work": null,
+  "source_medium": null,
+  "creator": null,
+  "discipline": "food-systems",
+  "disciplines": [
+    "food-systems"
+  ],
+  "practice": "Afro-indigenous farming, food sovereignty, land reparations",
+  "approach": "Black and Brown people's relationship to land in America was built through enslavement and dispossession. Healing that relationship requires returning to the land — not as laborers but as stewards. Farming is reparative justice. The soil remembers.",
+  "body_of_work": "Co-founded Soul Fire Farm in Grafton, NY. Farming While Black (2018). Trains BIPOC farmers in Afro-indigenous farming techniques. Provides food to communities experiencing food apartheid. Rejects 'food desert' language — the correct term is 'food apartheid' because it names the cause.",
+  "why_instructive": "She reframes food access from a supply problem to a justice problem. The dome's health and community layers must account for food sovereignty — not just calories available, but who controls the food system.",
+  "dome_layers": [
+    1,
+    4,
+    6,
+    8,
+    9
+  ],
+  "sphere_layers": [
+    3,
+    5,
+    7,
+    8
+  ],
+  "dome_relevance": {
+    "1": "Legal — land rights, reparative justice, food sovereignty as right",
+    "4": "Health — nutrition as medicine, food as primary health intervention",
+    "6": "Economic — farming as livelihood, food system as local economy",
+    "8": "Community — food as community infrastructure, shared growing",
+    "9": "Environment — soil health, regenerative agriculture"
+  },
+  "sphere_relevance": {
+    "3": "Environmental — regenerative farming heals soil and water",
+    "5": "Social — farming as community building across racial lines",
+    "7": "Activation — farms as activated community spaces",
+    "8": "Permanence — soil health improvement persists for generations"
+  },
+  "discovered_at": "2026-02-25T22:25:20.627Z",
+  "discovery_cycle": 1,
+  "tags": [
+    "food-sovereignty",
+    "afro-indigenous-farming",
+    "reparative-justice",
+    "soil"
+  ]
+}
