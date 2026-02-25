@@ -1,0 +1,18 @@
+{
+  "source": "bls-unemployment",
+  "source_label": "BLS State Unemployment",
+  "api": "BLS Public Data API",
+  "fips": "53033",
+  "county_name": "King County (Seattle), WA",
+  "scraped_at": "2026-02-25T20:32:37.551Z",
+  "data": {
+    "state_fips": "53",
+    "series_id": "LASST530000000000003",
+    "latest_rate": 4.7,
+    "latest_period": "2025-M12",
+    "year_ago_rate": 4.7,
+    "year_ago_period": "2025-M12",
+    "change": 0,
+    "note": "State-level rate (county not available in public BLS tier)"
+  }
+}

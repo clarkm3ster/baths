@@ -10,9 +10,10 @@
     "children": 2,
     "description": "Single dad, systems-heavy"
   },
-  "assembled_at": "2026-02-25T17:05:47.986Z",
-  "fragments_used": 9,
+  "assembled_at": "2026-02-25T20:32:40.176Z",
+  "fragments_used": 10,
   "fragment_sources": [
+    "bls-unemployment",
     "census-commute",
     "census-demographics",
     "census-disability",
@@ -109,7 +110,7 @@
     "program_count": 8
   },
   "cosm": 10,
-  "cosm_average": 63,
+  "cosm_average": 64,
   "domain_coverage": {
     "health": {
       "score": 53,
@@ -124,8 +125,8 @@
       "note": null
     },
     "economics": {
-      "score": 74,
-      "raw_score": 74,
+      "score": 87,
+      "raw_score": 87,
       "max_score": 100,
       "note": null
     },
@@ -208,13 +209,6 @@
       ]
     },
     {
-      "domain": "economics",
-      "type": "fragment",
-      "missing": [
-        "bls-unemployment"
-      ]
-    },
-    {
       "domain": "nutrition",
       "type": "fragment",
       "missing": [
@@ -265,7 +259,7 @@
       ]
     }
   ],
-  "gap_count": 11,
+  "gap_count": 10,
   "conditions": {
     "median_rent": 1817,
     "median_home_value": 705000,
@@ -287,7 +281,9 @@
     "no_vehicle_pct": 25.5,
     "broadband_pct": 89,
     "no_internet_pct": 8.2,
-    "unemployment_rate": 7
+    "unemployment_rate": 7,
+    "state_unemployment_rate": 6.7,
+    "state_unemployment_period": "2025-M12"
   },
   "panels": {
     "health": {
@@ -307,7 +303,7 @@
       "program_value": 13904
     },
     "economics": {
-      "score": 74,
+      "score": 87,
       "programs": [
         "EITC"
       ],
