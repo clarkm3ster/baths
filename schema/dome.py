@@ -385,6 +385,14 @@ class DomeCreativityLayer(DomeLayer):
 
 
 # ── Layer 12: Flourishing (HUMAN DESIGN REQUIRED) ────────────────
+#
+# A person inside a complete dome — where all systems are coordinated,
+# all needs met, all barriers removed — should experience awe at the
+# wholeness of their own life. The dome visualization must be designed
+# to trigger specific awe responses grounded in Keltner's research.
+#
+# A dome that documents everything but moves no one is incomplete.
+
 
 class FlourishingDimension(BaseModel):
     """A dimension of flourishing for this person"""
@@ -397,13 +405,63 @@ class FlourishingDimension(BaseModel):
     trajectory: str = ""                   # improving, stable, declining
 
 
+class DomeAweDesign(BaseModel):
+    """Awe framework for the dome visualization / world model.
+    The person seeing their complete dome should experience awe
+    at the wholeness of their own life."""
+
+    vastness: str = ""
+    """What creates perceived vastness? Seeing the full scope of systems,
+    resources, and support that orbit you. The dome visualization renders
+    all 12 layers simultaneously — the person at the center, surrounded
+    by every entitlement, every system, every connection, every pathway.
+    The scale of what exists for you, made visible for the first time."""
+
+    accommodation: str = ""
+    """What challenges the viewer's mental framework? The realization
+    that this level of coordination IS possible but doesn't currently
+    exist. The mind restructures around what could be. The dome shows
+    the gap between fragmented reality and coordinated potential — and
+    the gap is the accommodation trigger."""
+
+    moral_beauty: str = ""
+    """What showcases human goodness? The recognition that an entire
+    multi-disciplinary team designed this for one person's flourishing.
+    Every deliverable, every IP item, every unlikely collision — all
+    in service of one person's wholeness. The dome is an act of care
+    made architecturally visible."""
+
+    epiphany: str = ""
+    """What creates sudden understanding? The moment you see fragmented
+    cost vs. coordinated cost and understand the system for the first
+    time. The dome makes the invisible visible: what non-coordination
+    costs, what coordination saves, and who pays the difference."""
+
+    collective_effervescence: str = ""
+    """Does viewing the dome create shared experience? When an audience
+    sees a dome rendered — the complexity resolved into wholeness —
+    the collective recognition of what's possible IS effervescence."""
+
+    projected_awe_outcomes: Dict[str, Any] = Field(default_factory=dict)
+    """Projected measurable awe responses from viewing the complete dome.
+    AWE-S scores, prosocial behavior shifts, policy motivation."""
+
+
 class DomeFlourishingLayer(DomeLayer):
     """Layer 12: Flourishing — HUMAN DESIGN REQUIRED
 
     What flourishing looks like HERE, for THIS person.
     The world model renders the complete dome — all 12 layers unified.
-    Informed by science of awe and environmental psychology.
-    Life trajectory simulation. Not a score — a living rendering.
+
+    A person inside a complete dome should experience awe at the
+    wholeness of their own life. The dome visualization must be
+    designed to trigger:
+    - Vastness: seeing the full scope of what orbits you
+    - Accommodation: realizing coordination is possible
+    - Moral beauty: a team designed this for one person
+    - Epiphany: fragmented vs coordinated cost, understood
+
+    A dome that documents everything but moves no one is incomplete.
     """
     layer_number: int = 12
     layer_name: str = "Flourishing"
@@ -412,7 +470,16 @@ class DomeFlourishingLayer(DomeLayer):
     life_trajectory: Dict[str, Any] = Field(default_factory=dict)
     # Human-designed
     flourishing_definition: str = ""       # What flourishing looks like for THIS person
-    awe_research: Dict[str, Any] = Field(default_factory=dict)  # Science of awe inputs
+    # Awe framework — the dome must produce awe, not just completeness
+    awe_design: DomeAweDesign = Field(default_factory=DomeAweDesign)
+    awe_research_sources: List[str] = Field(
+        default_factory=lambda: [
+            "Keltner, D. (2023). Awe: The New Science of Everyday Wonder. Penguin Press.",
+            "Yaden, D.B., et al. (2019). The Awe Experience Scale (AWE-S). JPSP.",
+            "Piff, P.K., et al. (2015). Awe, the small self, and prosocial behavior. JPSP.",
+            "Haidt, J. (2000). The positive emotion of elevation. Prevention & Treatment.",
+        ]
+    )
     environmental_psychology: Dict[str, Any] = Field(default_factory=dict)
     world_model_design: Dict[str, Any] = Field(default_factory=dict)  # 3D environment spec
     design_rationale: str = ""
@@ -948,19 +1015,30 @@ DOME_LAYER_DEFINITIONS: List[LayerDefinition] = [
     LayerDefinition(
         layer_number=12,
         name="Flourishing",
-        description="What flourishing looks like HERE — world model + human design",
+        description="What flourishing looks like HERE — awe-designed world model rendering",
         schema_type=GameType.DOMES,
         human_design_required=True,
-        human_design_description="World model rendering of complete dome, life trajectory simulation. Human design required for what flourishing looks like, informed by science of awe and environmental psychology.",
+        human_design_description=(
+            "World model rendering of complete dome designed to produce awe at the "
+            "wholeness of one person's life. Must trigger: vastness (scope of support), "
+            "accommodation (coordination is possible), moral beauty (team designed this "
+            "for one person), epiphany (fragmented vs coordinated cost understood). "
+            "A dome that documents everything but moves no one is incomplete."
+        ),
         ai_capability_map=AICapabilityMap(
             layer_number=12,
             layer_name="Flourishing",
             human_design_required=True,
-            human_design_description="What flourishing looks like for THIS person",
+            human_design_description=(
+                "Awe-designed flourishing visualization. The dome must produce awe — "
+                "not just completeness but transcendence."
+            ),
             capabilities=[
                 AICapability(
                     name="world_model_rendering",
-                    description="Rendering complete dome as navigable 3D environment",
+                    description="Rendering complete dome as navigable 3D awe environment — "
+                                "all 12 layers visible, person at center, vastness of support "
+                                "made spatially legible",
                     category="world_model",
                     maturity="speculative",
                     providers=["Google Genie", "DeepMind", "Three.js", "Cesium"],
@@ -968,14 +1046,16 @@ DOME_LAYER_DEFINITIONS: List[LayerDefinition] = [
                 ),
                 AICapability(
                     name="life_trajectory_simulation",
-                    description="Simulating life trajectories across all 12 layers",
+                    description="Simulating life trajectories showing fragmented vs coordinated "
+                                "paths — the epiphany trigger: seeing both futures simultaneously",
                     category="analysis",
                     maturity="emerging",
                     feeds_interface="process",
                 ),
                 AICapability(
-                    name="awe_research_integration",
-                    description="Integrating science of awe and environmental psychology research",
+                    name="awe_measurement_integration",
+                    description="AWE-S scale integration for measuring viewer responses to "
+                                "dome visualizations — does seeing the dome produce awe?",
                     category="research",
                     maturity="available",
                     feeds_interface="ingest",

@@ -67,9 +67,11 @@ COSM_DIMENSIONS = {
     },
     "package": {
         "label": "Package",
-        "description": "How complete is the dome design — every system, every transition?",
+        "description": "How complete is the dome design and does it produce awe? "
+                        "A dome that documents everything but moves no one is incomplete.",
         "primary_cap": "flourishing_design",
         "secondary_caps": ["legal_navigation", "data_systems"],
+        "awe_weighted": True,  # Dome awe design boosts this dimension
         "stage_weights": {
             "development": 15,
             "pre_production": 20,
@@ -122,9 +124,12 @@ CHRON_DIMENSIONS = {
     },
     "access": {
         "label": "Access",
-        "description": "How accessible is the activation to the community it serves?",
+        "description": "How accessible is the activation and how much awe does it produce? "
+                        "A space that produces measurable awe scores higher — public space "
+                        "activation without awe is just programming.",
         "primary_cap": "activation_design",
         "secondary_caps": ["narrative"],
+        "awe_weighted": True,  # Awe metrics boost this dimension
         "stage_weights": {
             "development": 15,
             "pre_production": 25,
@@ -194,6 +199,7 @@ def score_dimensions(
     for dim_key, dim_def in dims.items():
         raw = 0.0
         detail_parts = []
+        has_awe_content = False
 
         for entry in stage_log:
             stage_key = entry.get("stage", "")
@@ -244,6 +250,22 @@ def score_dimensions(
                 # Unlikely collision bonus
                 if is_unlikely:
                     del_score += 8.0
+
+                # Awe design bonus: deliverables that include awe trigger
+                # documentation score higher on awe-weighted dimensions
+                if dim_def.get("awe_weighted"):
+                    desc = d.get("description", "").lower()
+                    awe_signals = ["awe_s", "awe-s", "awe trigger", "keltner",
+                                   "vastness", "accommodation", "collective effervescence",
+                                   "moral beauty", "prosocial", "time expansion",
+                                   "piloerection", "vagal tone", "hrv"]
+                    awe_hits = sum(1 for sig in awe_signals if sig in desc)
+                    if awe_hits >= 3:
+                        del_score += 10.0 * contrib  # Significant awe design bonus
+                        has_awe_content = True
+                    elif awe_hits >= 1:
+                        del_score += 4.0 * contrib   # Partial awe awareness
+                        has_awe_content = True
 
                 stage_contribution += del_score
 

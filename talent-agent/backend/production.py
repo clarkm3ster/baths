@@ -182,7 +182,7 @@ DOMES_STAGES = {
 SPHERES_STAGES = {
     ProductionStage.DEVELOPMENT: {
         "name": "Development",
-        "focus": "Read the parcel. Map the community. Understand the constraints.",
+        "focus": "Read the parcel. Map the community. Understand the constraints. Identify awe potential.",
         "capability_prompts": {
             "spatial_legal": {
                 "title": "Parcel Legal Analysis",
@@ -191,10 +191,10 @@ SPHERES_STAGES = {
                 "target": "complete zoning, permit, and regulatory analysis for {address}",
             },
             "activation_design": {
-                "title": "Site Assessment",
+                "title": "Site Awe Assessment",
                 "ip_domain": "urban_design",
                 "verb": "assesses",
-                "target": "the physical and community potential of {address} — what the space is, what's possible",
+                "target": "the awe potential of {address} — which of Keltner's 8 awe elicitors this site can deploy and why",
             },
             "economics": {
                 "title": "Activation Economics Baseline",
@@ -212,7 +212,7 @@ SPHERES_STAGES = {
     },
     ProductionStage.PRE_PRODUCTION: {
         "name": "Pre-Production",
-        "focus": "Design the activation. Model the economics. Plan the experience.",
+        "focus": "Design the activation. Deploy awe triggers. Model the economics. Plan the experience.",
         "capability_prompts": {
             "spatial_legal": {
                 "title": "Permit Pathway Map",
@@ -221,10 +221,10 @@ SPHERES_STAGES = {
                 "target": "the permit and regulatory pathway for activating {address}",
             },
             "activation_design": {
-                "title": "Activation Design Concept",
+                "title": "Awe Design Framework",
                 "ip_domain": "architectural",
                 "verb": "designs",
-                "target": "the full concept for the sphere at {address} — spatial layout, experience flow, material palette",
+                "target": "the full awe-designed concept for the sphere at {address} — every elicitor mapped to specific design elements with site rationale",
             },
             "economics": {
                 "title": "Community Benefit Model",
@@ -242,7 +242,7 @@ SPHERES_STAGES = {
     },
     ProductionStage.PRODUCTION: {
         "name": "Production",
-        "focus": "Activate the space. Every discipline produces. The parcel comes alive.",
+        "focus": "Activate the space. Deploy awe triggers. Every discipline produces. The parcel comes alive.",
         "capability_prompts": {
             "spatial_legal": {
                 "title": "Activation Implementation Plan",
@@ -251,10 +251,10 @@ SPHERES_STAGES = {
                 "target": "the construction and implementation plan for the sphere at {address}",
             },
             "activation_design": {
-                "title": "Activation Program",
+                "title": "Awe Activation Program",
                 "ip_domain": "performance",
                 "verb": "programs",
-                "target": "every experience, performance, and interaction for the sphere at {address}",
+                "target": "every awe-designed experience at {address} — triggers deployed, visitor journey, measurement protocol",
             },
             "economics": {
                 "title": "Sphere Investment Instrument",
@@ -272,7 +272,7 @@ SPHERES_STAGES = {
     },
     ProductionStage.POST_PRODUCTION: {
         "name": "Post-Production",
-        "focus": "Document the impact. Measure the activation. Refine the model.",
+        "focus": "Measure awe outcomes. Document the impact. Validate the design. Refine the model.",
         "capability_prompts": {
             "spatial_legal": {
                 "title": "Regulatory Lessons Learned",
@@ -281,10 +281,10 @@ SPHERES_STAGES = {
                 "target": "what the permit process revealed about activating space at {address}",
             },
             "activation_design": {
-                "title": "Activation Impact Assessment",
+                "title": "Awe Impact Assessment",
                 "ip_domain": "urban_design",
                 "verb": "measures",
-                "target": "foot traffic, community usage, spatial transformation at {address}",
+                "target": "awe outcomes at {address} — AWE-S scores, prosocial behavior, time expansion, belonging, physiological markers",
             },
             "economics": {
                 "title": "Economic Impact Report",
@@ -311,10 +311,10 @@ SPHERES_STAGES = {
                 "target": "the replicable activation template from {address} on spheres.land",
             },
             "activation_design": {
-                "title": "Sphere Portfolio Entry",
+                "title": "Sphere Awe Portfolio Entry",
                 "ip_domain": "architectural",
                 "verb": "publishes",
-                "target": "the full portfolio entry on spheres.land",
+                "target": "the full awe-designed portfolio entry on spheres.land — replicable awe triggers, validated metrics, design guidance",
             },
             "economics": {
                 "title": "Open Investment Model",
@@ -632,17 +632,41 @@ def _simulate_dome_finding(
                 f"the analysis asks: what does {dim0} actually look like for {char.name} — "
                 f"not in the abstract, but on a Tuesday morning? {approach}. The framework "
                 f"maps each dimension against current system coverage and finds that {sys0} "
-                f"addresses {dim0} partially but ignores {dim1} entirely."
+                f"addresses {dim0} partially but ignores {dim1} entirely.\n\n"
+                f"AWE POTENTIAL ASSESSMENT: A person inside a complete dome — where all {n_sys} "
+                f"systems coordinate — should experience awe at the wholeness of their own life. "
+                f"The awe triggers identified for {char.name}'s dome:\n"
+                f"- VASTNESS: seeing all {n_sys} systems, all {len(char.flourishing_dimensions)} "
+                f"dimensions, all resources orbiting one person simultaneously\n"
+                f"- ACCOMMODATION: realizing this coordination IS possible but doesn't currently "
+                f"exist — the mind restructures around what could be\n"
+                f"- MORAL BEAUTY: an entire team designed this for {char.name}'s flourishing\n"
+                f"- EPIPHANY: fragmented cost vs. coordinated cost, understood for the first time"
             )
         if S == PP:
             return (
                 f"From the dimensions analysis, {name} designs the dome's architecture: "
-                f"a spatial and conceptual environment where {char.name}'s {len(char.flourishing_dimensions)} "
-                f"flourishing dimensions are structurally supported. Drawing on \"{work_anchor}\", "
-                f"the concept treats every transition between {sys0} and {sys1} as a design "
-                f"problem — not a bureaucratic one. {approach}. The dome's architecture ensures "
-                f"that pursuing {dim0} never requires sacrificing {dim1}. The systems serve "
-                f"the person, not the other way around."
+                f"a spatial and conceptual environment where {char.name}'s "
+                f"{len(char.flourishing_dimensions)} flourishing dimensions are structurally "
+                f"supported. Drawing on \"{work_anchor}\", the concept treats every transition "
+                f"between {sys0} and {sys1} as a design problem — not a bureaucratic one.\n\n"
+                f"AWE DESIGN FOR {char.name.upper()}'S DOME:\n\n"
+                f"VASTNESS: The dome visualization renders all {n_sys} systems as orbital layers "
+                f"around {char.name} — {sys_list}. Each system visible, each connection mapped, "
+                f"each entitlement glowing. The scale of what exists for one person, made visible "
+                f"for the first time. Not a chart. An environment you can stand inside.\n\n"
+                f"ACCOMMODATION: Two renderings side by side — fragmented (current reality: {n_sys} "
+                f"disconnected systems, {char.name} navigating alone) and coordinated (the dome: "
+                f"same systems, linked, working). The gap between them IS the accommodation trigger. "
+                f"Your mental model of 'how systems work' must expand.\n\n"
+                f"MORAL BEAUTY: The dome credits every contributor — every practitioner who mapped, "
+                f"modeled, designed, and built. The viewer sees that real people applied their life's "
+                f"work to one person's wholeness. The team is visible inside the dome.\n\n"
+                f"EPIPHANY: The cost visualization — what fragmentation costs vs. what coordination "
+                f"saves. The moment when the audience sees the number and understands: we are paying "
+                f"MORE for {char.name}'s suffering than her flourishing would cost.\n\n"
+                f"{approach}. The dome's architecture ensures that pursuing {dim0} never requires "
+                f"sacrificing {dim1}. A dome that documents everything but moves no one is incomplete."
             )
         if S == P:
             return (
@@ -651,25 +675,48 @@ def _simulate_dome_finding(
                 f"Using \"{work_anchor}\"{work_and_second}, "
                 f"the package specifies how {sys0} connects to {sys1} without requiring "
                 f"{char.name} to re-prove eligibility. How the physical environment supports "
-                f"{dim0}. How the schedule respects {dim1}. {approach}. This is the dome. "
-                f"Not a concept — a deliverable."
+                f"{dim0}. How the schedule respects {dim1}.\n\n"
+                f"The dome visualization is designed for awe. When {char.name} — or anyone "
+                f"watching — sees the complete dome for the first time, the vastness of "
+                f"coordinated support, the moral beauty of a team building this, and the "
+                f"epiphany of fragmented vs. coordinated cost should produce a measurable "
+                f"awe response (target AWE-S 4.0+). {approach}. This is the dome. "
+                f"Not a concept — a deliverable that produces transcendence."
             )
         if S == PO:
             return (
-                f"{name} quantifies the dome's impact across all {len(char.flourishing_dimensions)} "
-                f"flourishing dimensions. Using \"{work_anchor}\", the assessment scores "
+                f"{name} quantifies the dome's impact across all "
+                f"{len(char.flourishing_dimensions)} flourishing dimensions and its awe "
+                f"design effectiveness. Using \"{work_anchor}\", the assessment scores "
                 f"{char.name}'s dome on each dimension — {all_dims} — comparing baseline "
-                f"(fragmented systems) to coordinated (the dome). {dim0} improves when {sys0} "
-                f"and {sys1} share data. {dim1} improves when navigation burden drops. {approach}. "
-                f"The assessment is evidence, not aspiration."
+                f"(fragmented systems) to coordinated (the dome). {dim0} improves when "
+                f"{sys0} and {sys1} share data. {dim1} improves when navigation burden drops.\n\n"
+                f"AWE ASSESSMENT: Does the dome produce awe?\n"
+                f"- Vastness: Viewers report feeling 'the scope of what's possible' when seeing "
+                f"all {n_sys} systems coordinated. AWE-S vastness subscale: 4.3/5.0.\n"
+                f"- Accommodation: 82% of viewers report their understanding of government "
+                f"coordination changed after seeing the dome. Mental frameworks expanded.\n"
+                f"- Moral beauty: The team credits produce elevation response (Haidt, 2000) — "
+                f"viewers express desire to contribute after seeing what the team built.\n"
+                f"- Epiphany: The cost comparison is the single most cited moment — viewers "
+                f"understand for the first time what fragmentation actually costs.\n\n"
+                f"{approach}. The assessment is evidence, not aspiration."
             )
         return (
             f"The full portfolio entry on domes.cc: {char.name}'s dome as a replicable "
-            f"model for human flourishing. {name}'s methodology from \"{work_anchor}\" is "
-            f"published alongside the dome's dimensions ({all_dims}), the coordination "
-            f"architecture, and the impact scores. {approach}. Any practitioner designing "
-            f"a dome for a similar case can start from this model — the flourishing "
-            f"dimensions, the system linkages, the threshold designs — rather than zero."
+            f"model for human flourishing that produces awe. {name}'s methodology from "
+            f"\"{work_anchor}\" is published alongside the dome's dimensions ({all_dims}), "
+            f"the coordination architecture, the impact scores, and the awe design framework.\n\n"
+            f"PUBLISHED AWE DESIGN GUIDANCE FOR DOMES:\n"
+            f"The portfolio entry documents how the dome visualization triggers:\n"
+            f"- Vastness through rendering all systems as orbital layers\n"
+            f"- Accommodation through fragmented vs. coordinated comparison\n"
+            f"- Moral beauty through visible team contribution\n"
+            f"- Epiphany through cost comparison revelation\n"
+            f"- Projected AWE-S scores for dome viewers\n\n"
+            f"{approach}. Any practitioner designing a dome can start from this awe "
+            f"framework — not just the flourishing dimensions but the experience design "
+            f"that makes seeing the dome transcendent."
         )
 
     # Fallback for any unmapped capability
@@ -764,48 +811,165 @@ def _simulate_sphere_finding(
     if cap == "activation_design":
         if S == D:
             return (
-                f"Drawing on \"{work_anchor}\", {name} reads {addr} as a site with memory: "
-                f"{parcel.history[:80]}. The assessment maps what the community is already "
-                f"doing with the space — {parcel.opportunity[:80]}. {approach}. The assessment "
-                f"identifies the site's natural gathering patterns, acoustic properties, sight "
-                f"lines from the street, and the threshold moments where public space becomes "
-                f"activated space."
+                f"Drawing on \"{work_anchor}\", {name} reads {addr} as an awe site — assessing "
+                f"which of Keltner's 8 awe elicitors this specific parcel can deploy and why.\n\n"
+                f"AWE TRIGGERS ASSESSED:\n"
+                f"1. VASTNESS — The {sqft} sqft lot at {addr} has open sky access from the "
+                f"cleared site. The scale contrast between the vacant lot and surrounding "
+                f"institutional buildings creates perceived vastness through negative space — "
+                f"the absence IS the vastness. Vertical elements (trees, light structures) can "
+                f"amplify this without institutional monumentalism. DEPLOYABLE: high potential.\n"
+                f"2. ACCOMMODATION — {parcel.history[:60]}. The transformation from dead space "
+                f"to living sphere IS the accommodation trigger. Before/after made physically "
+                f"walkable. Visitors' mental models of 'vacant lot' must expand. DEPLOYABLE: peak.\n"
+                f"3. COLLECTIVE EFFERVESCENCE — The site's position in {hood} near transit and "
+                f"foot traffic creates natural gathering potential. Shared movement paths, "
+                f"communal making, participatory installations can synchronize visitors. "
+                f"DEPLOYABLE: high.\n"
+                f"4. MORAL BEAUTY — {parcel.community_context[:80]}. The community's resilience "
+                f"IS the moral beauty. The design surfaces it, doesn't manufacture it. "
+                f"DEPLOYABLE: high.\n"
+                f"5. NATURE — Currently zero tree canopy, zero permeable surface. Introducing "
+                f"living systems (native plantings, water, soil, canopy) into dead urban space "
+                f"creates the sharpest nature-awe contrast. DEPLOYABLE: peak.\n"
+                f"6. MUSIC/SOUND — Current sonic environment: traffic, urban noise. Designed "
+                f"soundscape replacing institutional noise with intentional sound — aeolian "
+                f"instruments, water, curated silence zones. DEPLOYABLE: high.\n"
+                f"7. VISUAL ART — Site-specific installations responding to the parcel's history "
+                f"and {hood}'s built environment. Material transformation of industrial remnants. "
+                f"DEPLOYABLE: high.\n"
+                f"8. EPIPHANY — The sphere's own data made walkable: the lot's vacancy cost vs. "
+                f"activation value, the neighborhood's invisible assets revealed, the moment when "
+                f"fragmented space becomes legible as connected system. DEPLOYABLE: peak.\n\n"
+                f"{approach}. This is not a park assessment. It's an awe audit — mapping what this "
+                f"specific site can make people feel, grounded in Keltner's research."
             )
         if S == PP:
             return (
-                f"From the site assessment, {name} designs the activation concept: spatial "
-                f"layout, experience flow, material palette for the sphere at {addr}. Using "
-                f"\"{work_anchor}\", the concept responds to the community's existing use "
-                f"patterns — what people already do here — and amplifies them. The design "
-                f"works within {con0} rather than against it. {approach}. The material palette "
-                f"pulls from {hood}'s built environment: this sphere looks like it belongs here "
-                f"because it's made of here."
+                f"From the awe assessment, {name} designs the activation with every trigger mapped "
+                f"to specific design elements. Using \"{work_anchor}\", the framework specifies:\n\n"
+                f"AWE DESIGN FRAMEWORK FOR {addr.upper()}:\n\n"
+                f"VASTNESS: 40-foot native canopy trees at lot corners creating a green ceiling "
+                f"over open ground. The sky becomes visible through the canopy — perceived height "
+                f"exceeds physical height. Sight lines from {hood}'s streets draw the eye through "
+                f"the space to a horizon point. No walls above 4 feet. The space breathes.\n\n"
+                f"ACCOMMODATION: The lot's history ({parcel.history[:50]}) is embedded in the ground "
+                f"plane — old footprints traced in contrasting material. Visitors walk on the before "
+                f"while standing in the after. The juxtaposition forces accommodation: this WAS dead. "
+                f"It IS alive. Your framework for 'vacant lot' no longer holds.\n\n"
+                f"COLLECTIVE EFFERVESCENCE: A central gathering circle with acoustic design — sound "
+                f"carries inward, creating intimacy at scale. Weekly communal meals. Monthly "
+                f"collective making sessions. The rhythm synchronizes the neighborhood. Shared "
+                f"movement paths converge at the circle.\n\n"
+                f"MORAL BEAUTY: Community history wall built BY residents — oral histories, "
+                f"photos, objects. The neighborhood's resilience made physically present. Every "
+                f"visit reveals another story of human goodness that was always here but invisible.\n\n"
+                f"NATURE: Bioswale water management visible as design element — rain becomes a "
+                f"show. Native pollinator garden. Living walls on any retained structure. Soil "
+                f"exposed — the ground itself is alive, not sealed.\n\n"
+                f"MUSIC/SOUND: Aeolian sound sculptures responding to wind. Water features tuned "
+                f"to mask traffic. Acoustic zones: a loud zone for gathering, a quiet zone for "
+                f"reflection. The sphere has a sound signature unique to this site.\n\n"
+                f"VISUAL ART: Site-specific installation using materials from {hood}'s industrial "
+                f"history. Forced perspective piece visible from the street that resolves only when "
+                f"you enter the sphere. Light art activating the space after dark.\n\n"
+                f"EPIPHANY: A data walk — the sphere's own metrics embedded in the ground: vacancy "
+                f"cost per day, activation value per visit, the number of people who walked past "
+                f"when this was nothing. The reveal moment: you realize you're standing on the proof.\n\n"
+                f"{approach}. The material palette pulls from {hood}'s built environment. "
+                f"Every element has a measurable awe target. This sphere looks like it belongs "
+                f"here because it's made of here."
             )
         if S == P:
             return (
-                f"The concept becomes a program. {name} delivers the full activation: every "
-                f"experience, every performance, every interaction at {addr} designed and "
-                f"scheduled. Using \"{work_anchor}\"{work_and_second}, "
-                f"the program creates a rhythm — morning to night, weekday to weekend — that "
-                f"serves {hood}'s actual community. {approach}. The {sqft} sqft becomes a "
-                f"living room for the neighborhood. Not an event space. A place."
+                f"The awe framework becomes a live program. {name} delivers the full activation "
+                f"at {addr} with every trigger deployed and measured. Using "
+                f"\"{work_anchor}\"{work_and_second}:\n\n"
+                f"AWE ACTIVATION PROGRAM:\n\n"
+                f"ARRIVAL SEQUENCE (Vastness + Accommodation): Visitors approach from the street "
+                f"through a threshold — the transition from sidewalk to sphere. The canopy opens "
+                f"overhead. The ground plane shifts from concrete to living material. The "
+                f"accommodation hits: this was a vacant lot. The mental model breaks.\n\n"
+                f"GATHERING RHYTHM (Collective Effervescence): Morning: neighborhood walkers. "
+                f"Midday: workers from adjacent blocks. Afternoon: school-age children. Evening: "
+                f"communal dinner every Thursday. Weekend: maker markets, live music. The rhythm "
+                f"creates synchrony — people who came alone leave as a collective.\n\n"
+                f"LIVING SYSTEMS (Nature): The bioswale activates in rain — water flows visibly "
+                f"through the garden. Pollinator counts tracked and displayed. Seasonal plantings "
+                f"change the sphere's character quarterly. The soil program invites community "
+                f"participation: the ground improves because people tend it.\n\n"
+                f"SONIC ENVIRONMENT (Music/Sound): Aeolian sculptures active whenever wind exceeds "
+                f"5mph — {hood} has a sound. Curated silence in the reflection zone. Live music "
+                f"Fridays — local artists. The acoustic circle amplifies without electronics.\n\n"
+                f"ART PROGRAM (Visual Art + Moral Beauty): Community history wall grows weekly — "
+                f"new stories, new photos, new objects. The forced perspective piece draws people "
+                f"in from 2 blocks away. Evening light installation transforms the sphere at dusk.\n\n"
+                f"REVELATION (Epiphany): The data walk updates live — today's visitor count, this "
+                f"week's community hours, this month's adjacent activation. Visitors walk on "
+                f"real-time proof that their presence creates value.\n\n"
+                f"AWE MEASUREMENT PROTOCOL:\n"
+                f"- AWE-S surveys (Yaden et al.) at exit: target 4.2/5.0\n"
+                f"- Prosocial behavior: community signup rate >15% of visitors\n"
+                f"- Time expansion: 70% of visitors underestimate time spent by >20%\n"
+                f"- HRV monitoring (opt-in wearables): vagal tone increase during gathering events\n"
+                f"- Return visit rate: target 40% within 30 days\n\n"
+                f"{approach}. The {sqft} sqft becomes a room the neighborhood didn't know it had. "
+                f"Not an event space — a place that produces awe as reliably as it produces shade."
             )
         if S == PO:
             return (
-                f"{name} measures the activation's impact at {addr}: foot traffic, community "
-                f"usage patterns, spatial transformation metrics. Using \"{work_anchor}\", the "
-                f"assessment compares what the site was (vacant, {parcel.history[:40]}) to what "
-                f"it became. {approach}. The data shows which program elements drew the most "
-                f"community engagement, which times of day activated the space most effectively, "
-                f"and which design choices made the difference between a visited space and a "
-                f"lived-in one."
+                f"{name} measures awe outcomes at {addr} against every projected target. Using "
+                f"\"{work_anchor}\", the assessment validates which triggers produced measurable awe "
+                f"and which need refinement.\n\n"
+                f"AWE METRICS RESULTS:\n\n"
+                f"Self-reported awe (AWE-S): 4.4/5.0 (target: 4.2) — exceeded. Strongest on "
+                f"'connection to something larger' subscale. Accommodation and collective "
+                f"effervescence scored highest among the 8 triggers.\n\n"
+                f"Prosocial behavior: 18% community signup rate (target: 15%) — exceeded. "
+                f"Volunteers for the community history wall: 34 in first month. Dictator game "
+                f"variant shows 23% increase in generosity post-visit vs. control.\n\n"
+                f"Time expansion: 74% of surveyed visitors underestimated time spent by >20% "
+                f"(target: 70%) — exceeded. Average visit duration: 47 minutes. Average "
+                f"estimated duration: 25 minutes. The sphere bends time.\n\n"
+                f"Sense of belonging (SCI-2): Significant increase in 'community connection' "
+                f"subscale among visitors from {hood}. New residents report 2.3x higher "
+                f"neighborhood identification after repeated visits.\n\n"
+                f"Small self: Reduced self-focus confirmed via implicit measures — visitors "
+                f"use more collective pronouns ('we', 'our neighborhood') in post-visit "
+                f"interviews. The sphere makes people feel part of something.\n\n"
+                f"Physiological (opt-in, N=89): HRV increased 12% during communal dinner "
+                f"events — vagal tone responding to collective effervescence. Cortisol "
+                f"synchronization detected in groups >8. Piloerection reported by 31% during "
+                f"first canopy walk.\n\n"
+                f"Community impact: 3 adjacent parcels activated within 6 months. Foot traffic "
+                f"on {hood} corridor up 45%. Return visit rate: 52% (target: 40%). 6 new "
+                f"community initiatives launched by sphere visitors.\n\n"
+                f"TRIGGER EFFECTIVENESS RANKING:\n"
+                f"1. Collective Effervescence (communal dinners, maker markets) — highest AWE-S\n"
+                f"2. Nature (canopy, bioswale, living walls) — highest physiological response\n"
+                f"3. Accommodation (before/after ground plane) — highest first-visit impact\n"
+                f"4. Epiphany (data walk) — highest return-visit driver\n"
+                f"5. Moral Beauty (community history wall) — highest prosocial behavior trigger\n\n"
+                f"{approach}. This is not a satisfaction survey. It's awe science applied to "
+                f"public space — validated, measured, replicable."
             )
         return (
-            f"The full portfolio entry on spheres.land: the sphere at {addr} as a model for "
-            f"urban activation. {name}'s methodology from \"{work_anchor}\" — site reading, "
-            f"concept design, programming, impact data — is published as a complete case study. "
-            f"{approach}. Any neighborhood with a similar site can start from this sphere's "
-            f"design principles rather than a blank lot."
+            f"The complete awe-designed portfolio entry on spheres.land: the sphere at {addr} "
+            f"as a model for awe-based urban activation. {name}'s methodology from "
+            f"\"{work_anchor}\" — awe assessment, 8-trigger design framework, activation "
+            f"program, validated metrics — is published as the definitive case study.\n\n"
+            f"PUBLISHED AWE DESIGN GUIDANCE:\n"
+            f"For any principal designing a sphere, this entry documents:\n"
+            f"- Which of Keltner's 8 elicitors work best for lots of this size ({sqft} sqft)\n"
+            f"- Which triggers have the strongest site-specific rationale in neighborhoods "
+            f"like {hood}\n"
+            f"- Validated AWE-S scores and prosocial outcomes from actual visitors\n"
+            f"- Physiological data confirming awe responses (HRV, cortisol sync)\n"
+            f"- The awe-to-action pipeline: how measured awe converts to community impact\n\n"
+            f"This is what separates a sphere from a park renovation. A park gives people grass. "
+            f"A sphere gives people awe — and awe makes them show up again, bring their "
+            f"neighbors, start something new, and believe the next lot can be activated too.\n\n"
+            f"{approach}."
         )
 
     # ── economics ───────────────────────────────────────────

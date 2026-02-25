@@ -53,7 +53,9 @@ The first cut. Andre Washington produces the documentary capturing Dasani Coates
 
 ### Deliverable
 
-The concept becomes a complete design package. Elena Vasquez delivers Dasani Coates's dome — every system, every transition, every threshold designed for dignity. Using "Threshold Housing Prototypes" and "The Doorway Papers", the package specifies how SNAP connects to adjacent systems without requiring Dasani Coates to re-prove eligibility. How the physical environment supports autonomy. How the schedule respects stability. Believes every architectural decision is a statement about who deserves beauty. This is the dome. Not a concept — a deliverable. [Ava DuVernay's direction: Individual dignity within structural critique.]
+The concept becomes a complete design package. Elena Vasquez delivers Dasani Coates's dome — every system, every transition, every threshold designed for dignity. Using "Threshold Housing Prototypes" and "The Doorway Papers", the package specifies how SNAP connects to adjacent systems without requiring Dasani Coates to re-prove eligibility. How the physical environment supports autonomy. How the schedule respects stability.
+
+The dome visualization is designed for awe. When Dasani Coates — or anyone watching — sees the complete dome for the first time, the vastness of coordinated support, the moral beauty of a team building this, and the epiphany of fragmented vs. coordinated cost should produce a measurable awe response (target AWE-S 4.0+). Believes every architectural decision is a statement about who deserves beauty. This is the dome. Not a concept — a deliverable that produces transcendence. [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 ---
 

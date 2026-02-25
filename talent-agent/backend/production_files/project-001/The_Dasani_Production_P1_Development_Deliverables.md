@@ -53,7 +53,13 @@ Drawing on "Courtroom Portraits", Andre Washington builds the documentary treatm
 
 ### Deliverable
 
-Using "Threshold Housing Prototypes" as foundation, Elena Vasquez maps Dasani Coates's specific flourishing dimensions: housing, education, family stability, health, creativity, autonomy, belonging. Starting with education, the analysis asks: what does education actually look like for Dasani Coates — not in the abstract, but on a Tuesday morning? Believes every architectural decision is a statement about who deserves beauty. The framework maps each dimension against current system coverage and finds that public education addresses education partially but ignores stability entirely. [Ava DuVernay's direction: Individual dignity within structural critique.]
+Using "Threshold Housing Prototypes" as foundation, Elena Vasquez maps Dasani Coates's specific flourishing dimensions: housing, education, family stability, health, creativity, autonomy, belonging. Starting with education, the analysis asks: what does education actually look like for Dasani Coates — not in the abstract, but on a Tuesday morning? Believes every architectural decision is a statement about who deserves beauty. The framework maps each dimension against current system coverage and finds that public education addresses education partially but ignores stability entirely.
+
+AWE POTENTIAL ASSESSMENT: A person inside a complete dome — where all 7 systems coordinate — should experience awe at the wholeness of their own life. The awe triggers identified for Dasani Coates's dome:
+- VASTNESS: seeing all 7 systems, all 7 dimensions, all resources orbiting one person simultaneously
+- ACCOMMODATION: realizing this coordination IS possible but doesn't currently exist — the mind restructures around what could be
+- MORAL BEAUTY: an entire team designed this for Dasani Coates's flourishing
+- EPIPHANY: fragmented cost vs. coordinated cost, understood for the first time [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 ---
 

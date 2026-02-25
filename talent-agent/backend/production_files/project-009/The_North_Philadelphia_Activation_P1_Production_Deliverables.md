@@ -1,6 +1,6 @@
 # Production — The North Philadelphia Activation
 
-*Activate the space. Every discipline produces. The parcel comes alive.*
+*Activate the space. Deploy awe triggers. Every discipline produces. The parcel comes alive.*
 
 Production #1
 
@@ -23,7 +23,7 @@ The permit pathway becomes an implementation plan. Santiago Reyes-Moreno produce
 
 ---
 
-## Activation Program: Zara Kalil
+## Awe Activation Program: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)  
 **Capability:** activation design  
@@ -36,7 +36,30 @@ The permit pathway becomes an implementation plan. Santiago Reyes-Moreno produce
 
 ### Deliverable
 
-The concept becomes a program. Zara Kalil delivers the full activation: every experience, every performance, every interaction at 2200 N Broad St (adjacent lot) designed and scheduled. Using "Wall Rights" and "The Unofficial History Project", the program creates a rhythm — morning to night, weekday to weekend — that serves North Philadelphia's actual community. A wall is either talking or it's silent. The 15,000 sqft becomes a living room for the neighborhood. Not an event space. A place. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
+The awe framework becomes a live program. Zara Kalil delivers the full activation at 2200 N Broad St (adjacent lot) with every trigger deployed and measured. Using "Wall Rights" and "The Unofficial History Project":
+
+AWE ACTIVATION PROGRAM:
+
+ARRIVAL SEQUENCE (Vastness + Accommodation): Visitors approach from the street through a threshold — the transition from sidewalk to sphere. The canopy opens overhead. The ground plane shifts from concrete to living material. The accommodation hits: this was a vacant lot. The mental model breaks.
+
+GATHERING RHYTHM (Collective Effervescence): Morning: neighborhood walkers. Midday: workers from adjacent blocks. Afternoon: school-age children. Evening: communal dinner every Thursday. Weekend: maker markets, live music. The rhythm creates synchrony — people who came alone leave as a collective.
+
+LIVING SYSTEMS (Nature): The bioswale activates in rain — water flows visibly through the garden. Pollinator counts tracked and displayed. Seasonal plantings change the sphere's character quarterly. The soil program invites community participation: the ground improves because people tend it.
+
+SONIC ENVIRONMENT (Music/Sound): Aeolian sculptures active whenever wind exceeds 5mph — North Philadelphia has a sound. Curated silence in the reflection zone. Live music Fridays — local artists. The acoustic circle amplifies without electronics.
+
+ART PROGRAM (Visual Art + Moral Beauty): Community history wall grows weekly — new stories, new photos, new objects. The forced perspective piece draws people in from 2 blocks away. Evening light installation transforms the sphere at dusk.
+
+REVELATION (Epiphany): The data walk updates live — today's visitor count, this week's community hours, this month's adjacent activation. Visitors walk on real-time proof that their presence creates value.
+
+AWE MEASUREMENT PROTOCOL:
+- AWE-S surveys (Yaden et al.) at exit: target 4.2/5.0
+- Prosocial behavior: community signup rate >15% of visitors
+- Time expansion: 70% of visitors underestimate time spent by >20%
+- HRV monitoring (opt-in wearables): vagal tone increase during gathering events
+- Return visit rate: target 40% within 30 days
+
+A wall is either talking or it's silent. The 15,000 sqft becomes a room the neighborhood didn't know it had. Not an event space — a place that produces awe as reliably as it produces shade. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
 
 ---
 

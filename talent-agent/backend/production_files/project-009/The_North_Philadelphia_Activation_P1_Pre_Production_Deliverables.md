@@ -1,6 +1,6 @@
 # Pre-Production — The North Philadelphia Activation
 
-*Design the activation. Model the economics. Plan the experience.*
+*Design the activation. Deploy awe triggers. Model the economics. Plan the experience.*
 
 Production #1
 
@@ -23,7 +23,7 @@ From the legal analysis, Santiago Reyes-Moreno now maps the permit pathway: ever
 
 ---
 
-## Activation Design Concept: Zara Kalil
+## Awe Design Framework: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)  
 **Capability:** activation design  
@@ -36,7 +36,27 @@ From the legal analysis, Santiago Reyes-Moreno now maps the permit pathway: ever
 
 ### Deliverable
 
-From the site assessment, Zara Kalil designs the activation concept: spatial layout, experience flow, material palette for the sphere at 2200 N Broad St (adjacent lot). Using "Wall Rights", the concept responds to the community's existing use patterns — what people already do here — and amplifies them. The design works within Previous gas station requires environmental study rather than against it. A wall is either talking or it's silent. The material palette pulls from North Philadelphia's built environment: this sphere looks like it belongs here because it's made of here. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
+From the awe assessment, Zara Kalil designs the activation with every trigger mapped to specific design elements. Using "Wall Rights", the framework specifies:
+
+AWE DESIGN FRAMEWORK FOR 2200 N BROAD ST (ADJACENT LOT):
+
+VASTNESS: 40-foot native canopy trees at lot corners creating a green ceiling over open ground. The sky becomes visible through the canopy — perceived height exceeds physical height. Sight lines from North Philadelphia's streets draw the eye through the space to a horizon point. No walls above 4 feet. The space breathes.
+
+ACCOMMODATION: The lot's history (Vacant since 2008. Was a gas station, then briefly) is embedded in the ground plane — old footprints traced in contrasting material. Visitors walk on the before while standing in the after. The juxtaposition forces accommodation: this WAS dead. It IS alive. Your framework for 'vacant lot' no longer holds.
+
+COLLECTIVE EFFERVESCENCE: A central gathering circle with acoustic design — sound carries inward, creating intimacy at scale. Weekly communal meals. Monthly collective making sessions. The rhythm synchronizes the neighborhood. Shared movement paths converge at the circle.
+
+MORAL BEAUTY: Community history wall built BY residents — oral histories, photos, objects. The neighborhood's resilience made physically present. Every visit reveals another story of human goodness that was always here but invisible.
+
+NATURE: Bioswale water management visible as design element — rain becomes a show. Native pollinator garden. Living walls on any retained structure. Soil exposed — the ground itself is alive, not sealed.
+
+MUSIC/SOUND: Aeolian sound sculptures responding to wind. Water features tuned to mask traffic. Acoustic zones: a loud zone for gathering, a quiet zone for reflection. The sphere has a sound signature unique to this site.
+
+VISUAL ART: Site-specific installation using materials from North Philadelphia's industrial history. Forced perspective piece visible from the street that resolves only when you enter the sphere. Light art activating the space after dark.
+
+EPIPHANY: A data walk — the sphere's own metrics embedded in the ground: vacancy cost per day, activation value per visit, the number of people who walked past when this was nothing. The reveal moment: you realize you're standing on the proof.
+
+A wall is either talking or it's silent. The material palette pulls from North Philadelphia's built environment. Every element has a measurable awe target. This sphere looks like it belongs here because it's made of here. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
 
 ---
 

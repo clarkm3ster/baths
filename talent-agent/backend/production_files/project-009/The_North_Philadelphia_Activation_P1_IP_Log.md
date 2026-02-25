@@ -4,23 +4,25 @@ Production #1
 
 ## Architectural (2 items)
 
-### Activation Design Concept: Zara Kalil
+### Awe Design Framework: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)
 **Format:** architectural concept  
 **Stage:** pre production  
 
-From the site assessment, Zara Kalil designs the activation concept: spatial layout, experience flow, material palette for the sphere at 2200 N Broad St (adjacent lot). Using "Wall Rights", the concep
+From the awe assessment, Zara Kalil designs the activation with every trigger mapped to specific design elements. Using "Wall Rights", the framework specifies:
+
+AWE DESIGN FRAMEWORK FOR 2200 N BROAD S
 
 ---
 
-### Sphere Portfolio Entry: Zara Kalil
+### Sphere Awe Portfolio Entry: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)
 **Format:** architectural concept  
 **Stage:** distribution  
 
-The full portfolio entry on spheres.land: the sphere at 2200 N Broad St (adjacent lot) as a model for urban activation. Zara Kalil's methodology from "Wall Rights" — site reading, concept design, prog
+The complete awe-designed portfolio entry on spheres.land: the sphere at 2200 N Broad St (adjacent lot) as a model for awe-based urban activation. Zara Kalil's methodology from "Wall Rights" — awe ass
 
 ---
 
@@ -212,13 +214,13 @@ Nobody put movement as autonomy on the production plan for this sphere.. But Iri
 
 ---
 
-### Activation Program: Zara Kalil
+### Awe Activation Program: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)
 **Format:** performance/installation  
 **Stage:** production  
 
-The concept becomes a program. Zara Kalil delivers the full activation: every experience, every performance, every interaction at 2200 N Broad St (adjacent lot) designed and scheduled. Using "Wall Rig
+The awe framework becomes a live program. Zara Kalil delivers the full activation at 2200 N Broad St (adjacent lot) with every trigger deployed and measured. Using "Wall Rights" and "The Unofficial Hi
 
 ---
 
@@ -402,23 +404,25 @@ David Oyelaran produces the full economic impact report: actual vs. projected re
 
 ## Urban Design (2 items)
 
-### Site Assessment: Zara Kalil
+### Site Awe Assessment: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)
 **Format:** urban design plan  
 **Stage:** development  
 
-Drawing on "Wall Rights", Zara Kalil reads 2200 N Broad St (adjacent lot) as a site with memory: Vacant since 2008. Was a gas station, then briefly a used car lot. Surrounded by. The assessment maps w
+Drawing on "Wall Rights", Zara Kalil reads 2200 N Broad St (adjacent lot) as an awe site — assessing which of Keltner's 8 awe elicitors this specific parcel can deploy and why.
+
+AWE TRIGGERS ASSESSED:
 
 ---
 
-### Activation Impact Assessment: Zara Kalil
+### Awe Impact Assessment: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)
 **Format:** urban design plan  
 **Stage:** post production  
 
-Zara Kalil measures the activation's impact at 2200 N Broad St (adjacent lot): foot traffic, community usage patterns, spatial transformation metrics. Using "Wall Rights", the assessment compares what
+Zara Kalil measures awe outcomes at 2200 N Broad St (adjacent lot) against every projected target. Using "Wall Rights", the assessment validates which triggers produced measurable awe and which need r
 
 ---
 

@@ -1,6 +1,6 @@
 # Post-Production — The North Philadelphia Activation
 
-*Document the impact. Measure the activation. Refine the model.*
+*Measure awe outcomes. Document the impact. Validate the design. Refine the model.*
 
 Production #1
 
@@ -23,7 +23,7 @@ Santiago Reyes-Moreno documents what the permit process actually revealed about 
 
 ---
 
-## Activation Impact Assessment: Zara Kalil
+## Awe Impact Assessment: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)  
 **Capability:** activation design  
@@ -36,7 +36,32 @@ Santiago Reyes-Moreno documents what the permit process actually revealed about 
 
 ### Deliverable
 
-Zara Kalil measures the activation's impact at 2200 N Broad St (adjacent lot): foot traffic, community usage patterns, spatial transformation metrics. Using "Wall Rights", the assessment compares what the site was (vacant, Vacant since 2008. Was a gas station, th) to what it became. A wall is either talking or it's silent. The data shows which program elements drew the most community engagement, which times of day activated the space most effectively, and which design choices made the difference between a visited space and a lived-in one. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
+Zara Kalil measures awe outcomes at 2200 N Broad St (adjacent lot) against every projected target. Using "Wall Rights", the assessment validates which triggers produced measurable awe and which need refinement.
+
+AWE METRICS RESULTS:
+
+Self-reported awe (AWE-S): 4.4/5.0 (target: 4.2) — exceeded. Strongest on 'connection to something larger' subscale. Accommodation and collective effervescence scored highest among the 8 triggers.
+
+Prosocial behavior: 18% community signup rate (target: 15%) — exceeded. Volunteers for the community history wall: 34 in first month. Dictator game variant shows 23% increase in generosity post-visit vs. control.
+
+Time expansion: 74% of surveyed visitors underestimated time spent by >20% (target: 70%) — exceeded. Average visit duration: 47 minutes. Average estimated duration: 25 minutes. The sphere bends time.
+
+Sense of belonging (SCI-2): Significant increase in 'community connection' subscale among visitors from North Philadelphia. New residents report 2.3x higher neighborhood identification after repeated visits.
+
+Small self: Reduced self-focus confirmed via implicit measures — visitors use more collective pronouns ('we', 'our neighborhood') in post-visit interviews. The sphere makes people feel part of something.
+
+Physiological (opt-in, N=89): HRV increased 12% during communal dinner events — vagal tone responding to collective effervescence. Cortisol synchronization detected in groups >8. Piloerection reported by 31% during first canopy walk.
+
+Community impact: 3 adjacent parcels activated within 6 months. Foot traffic on North Philadelphia corridor up 45%. Return visit rate: 52% (target: 40%). 6 new community initiatives launched by sphere visitors.
+
+TRIGGER EFFECTIVENESS RANKING:
+1. Collective Effervescence (communal dinners, maker markets) — highest AWE-S
+2. Nature (canopy, bioswale, living walls) — highest physiological response
+3. Accommodation (before/after ground plane) — highest first-visit impact
+4. Epiphany (data walk) — highest return-visit driver
+5. Moral Beauty (community history wall) — highest prosocial behavior trigger
+
+A wall is either talking or it's silent. This is not a satisfaction survey. It's awe science applied to public space — validated, measured, replicable. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
 
 ---
 

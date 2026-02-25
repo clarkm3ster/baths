@@ -33,12 +33,12 @@ Signature: Individual dignity within structural critique. The person is never an
 
 This team combines systems modeling, documentary filmmaking, transitional housing, bureaucratic navigation — practices that don't normally sit at the same table. The unlikely pairings (2) will generate IP in domains nobody anticipated.
 
-- **Dr. Kenji Nakamura** (resonance: 56) — data_systems, flourishing_design
+- **Dr. Kenji Nakamura** (resonance: 56) — flourishing_design, data_systems
   Direct practice overlap: systems
-- **Andre Washington** (resonance: 52) — narrative, flourishing_design
+- **Andre Washington** (resonance: 52) — flourishing_design, narrative
   Direct practice overlap: housing
 - **Elena Vasquez** (resonance: 48) — flourishing_design
-  Direct practice overlap: autonomy, shelter, housing
+  Direct practice overlap: autonomy, housing, shelter
 - **Dr. Nadia Okonkwo** (resonance: 40) — data_systems
   Direct practice overlap: systems
 - **Rio Tanaka** (resonance: 34) — narrative
@@ -78,7 +78,13 @@ Drawing on "Courtroom Portraits", Andre Washington builds the documentary treatm
 
 *Drawing on: "Threshold Housing Prototypes", "The Doorway Papers"*
 
-Using "Threshold Housing Prototypes" as foundation, Elena Vasquez maps Dasani Coates's specific flourishing dimensions: housing, education, family stability, health, creativity, autonomy, belonging. Starting with education, the analysis asks: what does education actually look like for Dasani Coates — not in the abstract, but on a Tuesday morning? Believes every architectural decision is a statement about who deserves beauty. The framework maps each dimension against current system coverage and finds that public education addresses education partially but ignores stability entirely. [Ava DuVernay's direction: Individual dignity within structural critique.]
+Using "Threshold Housing Prototypes" as foundation, Elena Vasquez maps Dasani Coates's specific flourishing dimensions: housing, education, family stability, health, creativity, autonomy, belonging. Starting with education, the analysis asks: what does education actually look like for Dasani Coates — not in the abstract, but on a Tuesday morning? Believes every architectural decision is a statement about who deserves beauty. The framework maps each dimension against current system coverage and finds that public education addresses education partially but ignores stability entirely.
+
+AWE POTENTIAL ASSESSMENT: A person inside a complete dome — where all 7 systems coordinate — should experience awe at the wholeness of their own life. The awe triggers identified for Dasani Coates's dome:
+- VASTNESS: seeing all 7 systems, all 7 dimensions, all resources orbiting one person simultaneously
+- ACCOMMODATION: realizing this coordination IS possible but doesn't currently exist — the mind restructures around what could be
+- MORAL BEAUTY: an entire team designed this for Dasani Coates's flourishing
+- EPIPHANY: fragmented cost vs. coordinated cost, understood for the first time [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 #### Legal Landscape Map: Patricia Hawkins-Morrow
 
@@ -101,7 +107,7 @@ Nobody put graphic narrative on the production plan for this dome.. But Rio Tana
   Rights: +8.9
   Research: +10.7
   Budget: +3.6
-  Package: +6.4
+  Package: +7.6
   Deliverables: +13.8
   Pitch: +5.4
 
@@ -133,7 +139,19 @@ From the treatment, Andre Washington architects the production narrative: how Da
 
 *Drawing on: "Threshold Housing Prototypes", "The Doorway Papers"*
 
-From the dimensions analysis, Elena Vasquez designs the dome's architecture: a spatial and conceptual environment where Dasani Coates's 7 flourishing dimensions are structurally supported. Drawing on "Threshold Housing Prototypes", the concept treats every transition between TANF and adjacent systems as a design problem — not a bureaucratic one. Believes every architectural decision is a statement about who deserves beauty. The dome's architecture ensures that pursuing belonging never requires sacrificing stability. The systems serve the person, not the other way around. [Ava DuVernay's direction: Individual dignity within structural critique.]
+From the dimensions analysis, Elena Vasquez designs the dome's architecture: a spatial and conceptual environment where Dasani Coates's 7 flourishing dimensions are structurally supported. Drawing on "Threshold Housing Prototypes", the concept treats every transition between TANF and adjacent systems as a design problem — not a bureaucratic one.
+
+AWE DESIGN FOR DASANI COATES'S DOME:
+
+VASTNESS: The dome visualization renders all 7 systems as orbital layers around Dasani Coates — TANF. Each system visible, each connection mapped, each entitlement glowing. The scale of what exists for one person, made visible for the first time. Not a chart. An environment you can stand inside.
+
+ACCOMMODATION: Two renderings side by side — fragmented (current reality: 7 disconnected systems, Dasani Coates navigating alone) and coordinated (the dome: same systems, linked, working). The gap between them IS the accommodation trigger. Your mental model of 'how systems work' must expand.
+
+MORAL BEAUTY: The dome credits every contributor — every practitioner who mapped, modeled, designed, and built. The viewer sees that real people applied their life's work to one person's wholeness. The team is visible inside the dome.
+
+EPIPHANY: The cost visualization — what fragmentation costs vs. what coordination saves. The moment when the audience sees the number and understands: we are paying MORE for Dasani Coates's suffering than her flourishing would cost.
+
+Believes every architectural decision is a statement about who deserves beauty. The dome's architecture ensures that pursuing belonging never requires sacrificing stability. A dome that documents everything but moves no one is incomplete. [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 #### Entitlement Coordination Blueprint: Patricia Hawkins-Morrow
 
@@ -156,7 +174,7 @@ Nobody put graphic narrative on the production plan for this dome.. But Rio Tana
   Rights: +7.2
   Research: +8.9
   Budget: +10.7
-  Package: +8.5
+  Package: +10.2
   Deliverables: +18.3
   Pitch: +5.3
 
@@ -188,7 +206,9 @@ The first cut. Andre Washington produces the documentary capturing Dasani Coates
 
 *Drawing on: "Threshold Housing Prototypes", "The Doorway Papers"*
 
-The concept becomes a complete design package. Elena Vasquez delivers Dasani Coates's dome — every system, every transition, every threshold designed for dignity. Using "Threshold Housing Prototypes" and "The Doorway Papers", the package specifies how SNAP connects to adjacent systems without requiring Dasani Coates to re-prove eligibility. How the physical environment supports autonomy. How the schedule respects stability. Believes every architectural decision is a statement about who deserves beauty. This is the dome. Not a concept — a deliverable. [Ava DuVernay's direction: Individual dignity within structural critique.]
+The concept becomes a complete design package. Elena Vasquez delivers Dasani Coates's dome — every system, every transition, every threshold designed for dignity. Using "Threshold Housing Prototypes" and "The Doorway Papers", the package specifies how SNAP connects to adjacent systems without requiring Dasani Coates to re-prove eligibility. How the physical environment supports autonomy. How the schedule respects stability.
+
+The dome visualization is designed for awe. When Dasani Coates — or anyone watching — sees the complete dome for the first time, the vastness of coordinated support, the moral beauty of a team building this, and the epiphany of fragmented vs. coordinated cost should produce a measurable awe response (target AWE-S 4.0+). Believes every architectural decision is a statement about who deserves beauty. This is the dome. Not a concept — a deliverable that produces transcendence. [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 #### Policy Brief: Patricia Hawkins-Morrow
 
@@ -211,7 +231,7 @@ Nobody put graphic narrative on the production plan for this dome.. But Rio Tana
   Rights: +7.1
   Research: +5.4
   Budget: +10.7
-  Package: +12.7
+  Package: +15.3
   Deliverables: +27.6
   Pitch: +8.9
 
@@ -243,7 +263,15 @@ Final cut. Andre Washington refines the documentary from first cut through three
 
 *Drawing on: "Threshold Housing Prototypes", "The Doorway Papers"*
 
-Elena Vasquez quantifies the dome's impact across all 7 flourishing dimensions. Using "Threshold Housing Prototypes", the assessment scores Dasani Coates's dome on each dimension — housing, education, family stability, health, creativity, autonomy, belonging — comparing baseline (fragmented systems) to coordinated (the dome). housing improves when homeless shelter system and adjacent systems share data. stability improves when navigation burden drops. Believes every architectural decision is a statement about who deserves beauty. The assessment is evidence, not aspiration. [Ava DuVernay's direction: Individual dignity within structural critique.]
+Elena Vasquez quantifies the dome's impact across all 7 flourishing dimensions and its awe design effectiveness. Using "Threshold Housing Prototypes", the assessment scores Dasani Coates's dome on each dimension — housing, education, family stability, health, creativity, autonomy, belonging — comparing baseline (fragmented systems) to coordinated (the dome). housing improves when homeless shelter system and adjacent systems share data. stability improves when navigation burden drops.
+
+AWE ASSESSMENT: Does the dome produce awe?
+- Vastness: Viewers report feeling 'the scope of what's possible' when seeing all 7 systems coordinated. AWE-S vastness subscale: 4.3/5.0.
+- Accommodation: 82% of viewers report their understanding of government coordination changed after seeing the dome. Mental frameworks expanded.
+- Moral beauty: The team credits produce elevation response (Haidt, 2000) — viewers express desire to contribute after seeing what the team built.
+- Epiphany: The cost comparison is the single most cited moment — viewers understand for the first time what fragmentation actually costs.
+
+Believes every architectural decision is a statement about who deserves beauty. The assessment is evidence, not aspiration. [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 #### Stress Test: Legal Pathways: Patricia Hawkins-Morrow
 
@@ -266,7 +294,7 @@ Nobody put graphic narrative on the production plan for this dome.. But Rio Tana
   Rights: +7.1
   Research: +7.1
   Budget: +7.1
-  Package: +10.6
+  Package: +12.8
   Deliverables: +18.3
   Pitch: +7.2
 
@@ -298,7 +326,17 @@ The complete documentary, narrative assets, and media kit for Dasani Coates's do
 
 *Drawing on: "Threshold Housing Prototypes", "The Doorway Papers"*
 
-The full portfolio entry on domes.cc: Dasani Coates's dome as a replicable model for human flourishing. Elena Vasquez's methodology from "Threshold Housing Prototypes" is published alongside the dome's dimensions (housing, education, family stability, health, creativity, autonomy, belonging), the coordination architecture, and the impact scores. Believes every architectural decision is a statement about who deserves beauty. Any practitioner designing a dome for a similar case can start from this model — the flourishing dimensions, the system linkages, the threshold designs — rather than zero. [Ava DuVernay's direction: Individual dignity within structural critique.]
+The full portfolio entry on domes.cc: Dasani Coates's dome as a replicable model for human flourishing that produces awe. Elena Vasquez's methodology from "Threshold Housing Prototypes" is published alongside the dome's dimensions (housing, education, family stability, health, creativity, autonomy, belonging), the coordination architecture, the impact scores, and the awe design framework.
+
+PUBLISHED AWE DESIGN GUIDANCE FOR DOMES:
+The portfolio entry documents how the dome visualization triggers:
+- Vastness through rendering all systems as orbital layers
+- Accommodation through fragmented vs. coordinated comparison
+- Moral beauty through visible team contribution
+- Epiphany through cost comparison revelation
+- Projected AWE-S scores for dome viewers
+
+Believes every architectural decision is a statement about who deserves beauty. Any practitioner designing a dome can start from this awe framework — not just the flourishing dimensions but the experience design that makes seeing the dome transcendent. [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 #### Published Policy Portfolio: Patricia Hawkins-Morrow
 
@@ -321,7 +359,7 @@ Nobody put graphic narrative on the production plan for this dome.. But Rio Tana
   Rights: +5.4
   Research: +3.6
   Budget: +3.6
-  Package: +4.3
+  Package: +5.1
   Deliverables: +13.8
   Pitch: +8.9
 
@@ -335,7 +373,7 @@ Weakest dimension: rights
 Strongest dimension: deliverables
 
 | Deliverables | 91.8 | Volume and quality of production outputs across all capabilities. |
-| Package | 42.5 | How complete is the dome design — every system, every transition? |
+| Package | 51.0 | How complete is the dome design and does it produce awe? A dome that documents everything but moves no one is incomplete. |
 | Rights | 35.7 | How well did the team map and secure legal entitlements? |
 | Research | 35.7 | How thorough is the systems analysis and data modeling? |
 | Budget | 35.7 | How viable is the financial model and coordination economics? |

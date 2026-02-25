@@ -53,7 +53,15 @@ Final cut. Andre Washington refines the documentary from first cut through three
 
 ### Deliverable
 
-Elena Vasquez quantifies the dome's impact across all 7 flourishing dimensions. Using "Threshold Housing Prototypes", the assessment scores Dasani Coates's dome on each dimension — housing, education, family stability, health, creativity, autonomy, belonging — comparing baseline (fragmented systems) to coordinated (the dome). housing improves when homeless shelter system and adjacent systems share data. stability improves when navigation burden drops. Believes every architectural decision is a statement about who deserves beauty. The assessment is evidence, not aspiration. [Ava DuVernay's direction: Individual dignity within structural critique.]
+Elena Vasquez quantifies the dome's impact across all 7 flourishing dimensions and its awe design effectiveness. Using "Threshold Housing Prototypes", the assessment scores Dasani Coates's dome on each dimension — housing, education, family stability, health, creativity, autonomy, belonging — comparing baseline (fragmented systems) to coordinated (the dome). housing improves when homeless shelter system and adjacent systems share data. stability improves when navigation burden drops.
+
+AWE ASSESSMENT: Does the dome produce awe?
+- Vastness: Viewers report feeling 'the scope of what's possible' when seeing all 7 systems coordinated. AWE-S vastness subscale: 4.3/5.0.
+- Accommodation: 82% of viewers report their understanding of government coordination changed after seeing the dome. Mental frameworks expanded.
+- Moral beauty: The team credits produce elevation response (Haidt, 2000) — viewers express desire to contribute after seeing what the team built.
+- Epiphany: The cost comparison is the single most cited moment — viewers understand for the first time what fragmentation actually costs.
+
+Believes every architectural decision is a statement about who deserves beauty. The assessment is evidence, not aspiration. [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 ---
 

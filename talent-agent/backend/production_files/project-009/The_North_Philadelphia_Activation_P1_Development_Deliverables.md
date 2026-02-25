@@ -1,6 +1,6 @@
 # Development — The North Philadelphia Activation
 
-*Read the parcel. Map the community. Understand the constraints.*
+*Read the parcel. Map the community. Understand the constraints. Identify awe potential.*
 
 Production #1
 
@@ -23,7 +23,7 @@ Applying "The Growth Protocol" to 2200 N Broad St (adjacent lot), Santiago Reyes
 
 ---
 
-## Site Assessment: Zara Kalil
+## Site Awe Assessment: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)  
 **Capability:** activation design  
@@ -36,7 +36,19 @@ Applying "The Growth Protocol" to 2200 N Broad St (adjacent lot), Santiago Reyes
 
 ### Deliverable
 
-Drawing on "Wall Rights", Zara Kalil reads 2200 N Broad St (adjacent lot) as a site with memory: Vacant since 2008. Was a gas station, then briefly a used car lot. Surrounded by. The assessment maps what the community is already doing with the space — Positioned between institutional anchors. The activation could connect what's al. A wall is either talking or it's silent. The assessment identifies the site's natural gathering patterns, acoustic properties, sight lines from the street, and the threshold moments where public space becomes activated space. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
+Drawing on "Wall Rights", Zara Kalil reads 2200 N Broad St (adjacent lot) as an awe site — assessing which of Keltner's 8 awe elicitors this specific parcel can deploy and why.
+
+AWE TRIGGERS ASSESSED:
+1. VASTNESS — The 15,000 sqft lot at 2200 N Broad St (adjacent lot) has open sky access from the cleared site. The scale contrast between the vacant lot and surrounding institutional buildings creates perceived vastness through negative space — the absence IS the vastness. Vertical elements (trees, light structures) can amplify this without institutional monumentalism. DEPLOYABLE: high potential.
+2. ACCOMMODATION — Vacant since 2008. Was a gas station, then briefly a used ca. The transformation from dead space to living sphere IS the accommodation trigger. Before/after made physically walkable. Visitors' mental models of 'vacant lot' must expand. DEPLOYABLE: peak.
+3. COLLECTIVE EFFERVESCENCE — The site's position in North Philadelphia near transit and foot traffic creates natural gathering potential. Shared movement paths, communal making, participatory installations can synchronize visitors. DEPLOYABLE: high.
+4. MORAL BEAUTY — North Broad is the boundary between Temple University's expansion and historic B. The community's resilience IS the moral beauty. The design surfaces it, doesn't manufacture it. DEPLOYABLE: high.
+5. NATURE — Currently zero tree canopy, zero permeable surface. Introducing living systems (native plantings, water, soil, canopy) into dead urban space creates the sharpest nature-awe contrast. DEPLOYABLE: peak.
+6. MUSIC/SOUND — Current sonic environment: traffic, urban noise. Designed soundscape replacing institutional noise with intentional sound — aeolian instruments, water, curated silence zones. DEPLOYABLE: high.
+7. VISUAL ART — Site-specific installations responding to the parcel's history and North Philadelphia's built environment. Material transformation of industrial remnants. DEPLOYABLE: high.
+8. EPIPHANY — The sphere's own data made walkable: the lot's vacancy cost vs. activation value, the neighborhood's invisible assets revealed, the moment when fragmented space becomes legible as connected system. DEPLOYABLE: peak.
+
+A wall is either talking or it's silent. This is not a park assessment. It's an awe audit — mapping what this specific site can make people feel, grounded in Keltner's research. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
 
 ---
 

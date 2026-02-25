@@ -220,7 +220,7 @@ Using "Threshold Housing Prototypes" as foundation, Elena Vasquez maps Dasani Co
 **Format:** research paper  
 **Stage:** post production  
 
-Elena Vasquez quantifies the dome's impact across all 7 flourishing dimensions. Using "Threshold Housing Prototypes", the assessment scores Dasani Coates's dome on each dimension — housing, education,
+Elena Vasquez quantifies the dome's impact across all 7 flourishing dimensions and its awe design effectiveness. Using "Threshold Housing Prototypes", the assessment scores Dasani Coates's dome on eac
 
 ---
 
@@ -230,7 +230,7 @@ Elena Vasquez quantifies the dome's impact across all 7 flourishing dimensions. 
 **Format:** research paper  
 **Stage:** distribution  
 
-The full portfolio entry on domes.cc: Dasani Coates's dome as a replicable model for human flourishing. Elena Vasquez's methodology from "Threshold Housing Prototypes" is published alongside the dome'
+The full portfolio entry on domes.cc: Dasani Coates's dome as a replicable model for human flourishing that produces awe. Elena Vasquez's methodology from "Threshold Housing Prototypes" is published a
 
 ---
 

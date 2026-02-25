@@ -284,9 +284,219 @@ class SphereTemporalLayer(SphereLayer):
 
 
 # ── Layer 7: Activation (HUMAN DESIGN REQUIRED) ─────────────────
+#
+# Grounded in Dacher Keltner's awe research (Awe: The New Science
+# of Everyday Wonder, 2023) and the AWE-S validated scale (Yaden
+# et al., 2019). Every activation must document which of 8 awe
+# elicitors it deploys, why each was chosen for this specific site,
+# and what the projected measurable outcomes are.
+#
+# Public space activation without awe is just programming.
+# Public space activation with designed awe is a sphere.
+
+
+class AweElicitor(str, Enum):
+    """Keltner's 8 sources of awe. Each sphere activation must
+    document whether and how it deploys each one."""
+    VASTNESS = "vastness"
+    ACCOMMODATION = "accommodation"
+    COLLECTIVE_EFFERVESCENCE = "collective_effervescence"
+    MORAL_BEAUTY = "moral_beauty"
+    NATURE = "nature"
+    MUSIC_SOUND = "music_sound"
+    VISUAL_ART = "visual_art"
+    EPIPHANY = "epiphany"
+
+
+AWE_ELICITOR_GUIDANCE = {
+    AweElicitor.VASTNESS: {
+        "question": "What creates perceived vastness in this space?",
+        "design_elements": [
+            "vertical elements", "open sky access", "scale contrasts",
+            "horizon lines", "canopy height", "sight line depth",
+        ],
+        "constraint": "Must feel organic, not institutional. Vastness through discovery, not monumentalism.",
+        "research": "Keltner & Haidt (2003): vastness need not be physical — conceptual vastness "
+                     "(realizing a small space contains multitudes) triggers the same neural response.",
+    },
+    AweElicitor.ACCOMMODATION: {
+        "question": "What challenges visitors' mental frameworks?",
+        "design_elements": [
+            "unexpected transformation of dead space", "juxtapositions",
+            "temporal before/after made visible", "material contradictions",
+            "familiar objects in unfamiliar contexts",
+        ],
+        "constraint": "The accommodation must resolve — disorientation that leads to reorientation, not confusion.",
+        "research": "Piaget's schema theory applied to environmental psychology: awe occurs when "
+                     "existing mental models must expand to incorporate new information.",
+    },
+    AweElicitor.COLLECTIVE_EFFERVESCENCE: {
+        "question": "What synchronizes people?",
+        "design_elements": [
+            "shared movement paths", "live music", "communal making",
+            "group meals", "participatory installations", "call-and-response",
+            "synchronized lighting", "collective rhythm",
+        ],
+        "constraint": "Synchrony must emerge from participation, not be imposed. The crowd finds "
+                       "the rhythm; the design creates the conditions.",
+        "research": "Durkheim (1912) via Keltner: collective effervescence — the feeling of being "
+                     "part of something larger — is the most reliable awe trigger in group settings. "
+                     "Confirmed by Páez et al. (2015) in crowd synchrony studies.",
+    },
+    AweElicitor.MORAL_BEAUTY: {
+        "question": "What showcases human goodness?",
+        "design_elements": [
+            "community building made visible", "neighborhood resilience surfaced",
+            "acts of care embedded in design", "mutual aid history documented",
+            "local heroes honored", "collective achievement displayed",
+        ],
+        "constraint": "Must surface real community goodness, not manufacture sentimentality. "
+                       "The moral beauty is already here — the design reveals it.",
+        "research": "Keltner (2023): witnessing moral beauty — courage, kindness, overcoming — "
+                     "is among the most potent awe triggers. Haidt (2000) elevation research confirms "
+                     "that witnessing virtue produces measurable prosocial behavior changes.",
+    },
+    AweElicitor.NATURE: {
+        "question": "What brings living systems into dead urban space?",
+        "design_elements": [
+            "trees", "water features", "soil exposure", "living walls",
+            "sky access", "canopy", "native plantings", "pollinator habitat",
+            "seasonal change made visible", "weather interaction",
+        ],
+        "constraint": "Nature elements must be living systems, not decorative. The ecology must "
+                       "function — pollinators, water management, soil health.",
+        "research": "Kaplan & Kaplan (1989) attention restoration theory. Ulrich (1984) stress "
+                     "reduction through nature exposure. Keltner (2023): nature is the most "
+                     "frequently cited source of awe across all cultures studied.",
+    },
+    AweElicitor.MUSIC_SOUND: {
+        "question": "What is the sonic environment?",
+        "design_elements": [
+            "designed soundscapes", "live music programming", "acoustic properties",
+            "wind instruments (aeolian)", "water sounds", "silence design",
+            "community sound archives", "participatory music",
+        ],
+        "constraint": "Sonic design must replace institutional/urban noise with intentional sound. "
+                       "Silence is a design choice, not an absence.",
+        "research": "Huron (2006): music triggers awe through violation of expectation. "
+                     "Keltner (2023): music is the second most cited source of awe. "
+                     "Bernardi et al. (2006): cardiovascular synchronization in shared music "
+                     "experiences — measurable via heart rate variability.",
+    },
+    AweElicitor.VISUAL_ART: {
+        "question": "What destabilizes expectations about this space?",
+        "design_elements": [
+            "site-specific installations", "projections", "material transformation",
+            "murals", "light art", "shadow play", "forced perspective",
+            "anamorphic design", "community-created art",
+        ],
+        "constraint": "Art must be site-specific — responding to this parcel's history, "
+                       "materiality, and community. No generic public art.",
+        "research": "Pelowski et al. (2017): transformative art experiences correlate with "
+                     "accommodation and self-transcendence. Keltner (2023): visual art triggers "
+                     "awe when it reveals patterns or realities previously invisible.",
+    },
+    AweElicitor.EPIPHANY: {
+        "question": "What creates sudden understanding?",
+        "design_elements": [
+            "the sphere's own data made walkable", "reveal moments",
+            "neighborhood reframing", "before/after transitions",
+            "hidden-then-visible information", "perspective shifts",
+            "the moment when the system becomes legible",
+        ],
+        "constraint": "Epiphany must be earned through the experience sequence — not "
+                       "delivered via signage. The visitor discovers; the design enables.",
+        "research": "Keltner (2023): epiphany — sudden understanding of a larger pattern — "
+                     "is the highest-impact awe trigger for sustained behavior change. "
+                     "Relates to Csikszentmihalyi's flow: the moment when complexity resolves.",
+    },
+}
+
+
+class AweTriggerDeployment(BaseModel):
+    """How a specific awe elicitor is deployed in this activation.
+    Every activation element must document its awe triggers."""
+    elicitor: AweElicitor
+    deployed: bool                         # Is this trigger used?
+    design_elements: List[str] = Field(default_factory=list)  # Specific elements
+    site_rationale: str = ""               # Why this trigger for THIS site
+    projected_intensity: str = ""          # low, moderate, high, peak
+    measurement_method: str = ""           # How we'll know it worked
+
+
+class AweMetric(BaseModel):
+    """Validated measurement instruments for awe outcomes.
+    Each sphere documents projected and actual outcomes."""
+    metric_name: str
+    measurement_method: str
+    validated_instrument: str = ""         # AWE-S, PANAS, GQ-6, etc.
+    baseline: Optional[float] = None
+    target: Optional[float] = None
+    actual: Optional[float] = None
+    research_source: str = ""
+
+
+# Standard awe metrics every sphere must track
+REQUIRED_AWE_METRICS = [
+    AweMetric(
+        metric_name="Self-reported awe",
+        measurement_method="Pre/post survey using AWE-S (Awe Experience Scale)",
+        validated_instrument="AWE-S (Yaden et al., 2019)",
+        research_source="Yaden, D.B., et al. (2019). The Awe Experience Scale. "
+                         "Journal of Personality and Social Psychology.",
+    ),
+    AweMetric(
+        metric_name="Prosocial behavior",
+        measurement_method="Generosity, cooperation, volunteering indicators — "
+                           "dictator game variant, willingness to help, community signup rates",
+        validated_instrument="Piff et al. (2015) prosocial awe protocol",
+        research_source="Piff, P.K., et al. (2015). Awe, the small self, and prosocial behavior. "
+                         "Journal of Personality and Social Psychology.",
+    ),
+    AweMetric(
+        metric_name="Time expansion",
+        measurement_method="Do visitors feel they have more time? Time estimation tasks pre/post.",
+        validated_instrument="Rudd et al. (2012) time perception protocol",
+        research_source="Rudd, M., Vohs, K.D., & Aaker, J. (2012). Awe expands people's "
+                         "perception of time. Psychological Science.",
+    ),
+    AweMetric(
+        metric_name="Sense of belonging",
+        measurement_method="Connection to community — adapted belonging scale, return visit intent",
+        validated_instrument="Sense of Community Index (SCI-2, Chavis et al.)",
+        research_source="Stellar, J.E., et al. (2017). Self-transcendent emotions and their "
+                         "social functions. Journal of Personality and Social Psychology.",
+    ),
+    AweMetric(
+        metric_name="Small self",
+        measurement_method="Reduced self-focus — implicit self measures, small-self scale",
+        validated_instrument="Bai et al. (2017) small self scale",
+        research_source="Bai, Y., et al. (2017). Awe, the diminished self, and collective "
+                         "engagement. Journal of Personality and Social Psychology.",
+    ),
+    AweMetric(
+        metric_name="Physiological markers",
+        measurement_method="Heart rate variability (vagus nerve proxy), cortisol synchronization "
+                           "in group experiences, piloerection (goosebumps) frequency",
+        validated_instrument="HRV via wearable sensors; salivary cortisol",
+        research_source="Stellar, J.E., et al. (2015). Positive affect and markers of inflammation. "
+                         "Emotion. Keltner (2023): vagal tone as physiological signature of awe.",
+    ),
+    AweMetric(
+        metric_name="Community impact",
+        measurement_method="Adjacent engagement, return visits, property activation within "
+                           "radius, new community initiatives sparked",
+        validated_instrument="Custom: adjacent parcel activation tracking, foot traffic counters, "
+                             "community survey",
+        research_source="Sphere-specific metric. Tracks whether awe translates to sustained "
+                         "community engagement beyond the activation itself.",
+    ),
+]
+
 
 class ActivationConcept(BaseModel):
-    """A specific activation concept for the space"""
+    """A specific activation concept for the space.
+    Every concept must document its awe trigger deployment."""
     concept_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     title: str
     description: str
@@ -294,34 +504,46 @@ class ActivationConcept(BaseModel):
     duration: str                          # permanent, temporary, recurring, pop_up
     capacity: Optional[int] = None
     accessibility: str = ""
-    awe_triggers: List[str] = Field(default_factory=list)  # Measurable via environmental psychology
+    # Awe framework — required for every concept
+    awe_triggers: List[AweTriggerDeployment] = Field(default_factory=list)
     emotional_journey: List[str] = Field(default_factory=list)  # Arc of visitor experience
     transformation_arc: str = ""           # How visitor changes through the experience
-
-
-class AweMetric(BaseModel):
-    """Measurement from science of awe research"""
-    metric_name: str
-    measurement_method: str
-    baseline: Optional[float] = None
-    target: Optional[float] = None
-    research_source: str = ""
+    projected_awe_outcomes: Dict[str, Any] = Field(default_factory=dict)
 
 
 class SphereActivationLayer(SphereLayer):
     """Layer 7: Activation — HUMAN DESIGN REQUIRED
 
     What happens in this space. Not just programming —
-    the complete experience design informed by science of awe,
-    experience design research, and measurable awe metrics.
+    the complete experience design informed by Keltner's science
+    of awe, validated measurement instruments, and measurable
+    awe metrics at every activation element.
+
+    Public space activation without awe is just programming.
+    Public space activation with designed awe is a sphere.
     """
     layer_number: int = 7
     layer_name: str = "Activation"
     # Human-designed
     activation_concepts: List[ActivationConcept] = Field(default_factory=list)
     experience_design: Dict[str, Any] = Field(default_factory=dict)
+    # Awe framework — the core of Layer 7
+    awe_trigger_map: List[AweTriggerDeployment] = Field(default_factory=list)
     awe_metrics: List[AweMetric] = Field(default_factory=list)
-    awe_research_sources: List[str] = Field(default_factory=list)
+    awe_research_sources: List[str] = Field(
+        default_factory=lambda: [
+            "Keltner, D. (2023). Awe: The New Science of Everyday Wonder, "
+            "and How It Can Transform Your Life. Penguin Press.",
+            "Yaden, D.B., et al. (2019). The development of the Awe Experience "
+            "Scale (AWE-S). Journal of Personality and Social Psychology.",
+            "Piff, P.K., et al. (2015). Awe, the small self, and prosocial behavior. "
+            "Journal of Personality and Social Psychology.",
+            "Rudd, M., Vohs, K.D., & Aaker, J. (2012). Awe expands people's "
+            "perception of time. Psychological Science.",
+            "Bai, Y., et al. (2017). Awe, the diminished self, and collective "
+            "engagement. Journal of Personality and Social Psychology.",
+        ]
+    )
     design_rationale: str = ""
 
 
@@ -734,30 +956,50 @@ SPHERE_LAYER_DEFINITIONS: List[LayerDefinition] = [
     LayerDefinition(
         layer_number=7,
         name="Activation",
-        description="What happens in this space — experience design + science of awe",
+        description="What happens in this space — Keltner awe framework, 8 elicitors, validated metrics",
         schema_type=GameType.SPHERES,
         human_design_required=True,
-        human_design_description="What happens in this space, informed by science of awe, experience design research, awe metrics",
+        human_design_description=(
+            "Experience design grounded in science of awe. Every activation must document "
+            "which of Keltner's 8 awe elicitors are deployed, why each was chosen for this "
+            "specific site, and projected measurable outcomes. Public space activation "
+            "without designed awe is just programming."
+        ),
         ai_capability_map=AICapabilityMap(
             layer_number=7,
             layer_name="Activation",
             human_design_required=True,
-            human_design_description="What happens in this space",
+            human_design_description=(
+                "Awe-designed activation. 8 elicitors: vastness, accommodation, collective "
+                "effervescence, moral beauty, nature, music/sound, visual art, epiphany. "
+                "Each must be documented with site rationale and measurement method."
+            ),
             capabilities=[
                 AICapability(
-                    name="experience_design_research",
-                    description="Research agent scanning awe science, environmental psychology literature",
+                    name="awe_science_research_agent",
+                    description="Research agent scanning Keltner awe science, environmental "
+                                "psychology, AWE-S validation studies, prosocial behavior literature",
                     category="research",
                     maturity="available",
                     feeds_interface="ingest",
                     human_required=True,
                 ),
                 AICapability(
-                    name="awe_measurement",
-                    description="Sensor-based measurement of awe responses (physiological, behavioral)",
+                    name="awe_measurement_sensors",
+                    description="Wearable HRV sensors for vagal tone, salivary cortisol for "
+                                "group synchronization, piloerection detection, crowd flow analysis",
                     category="sensor",
-                    maturity="speculative",
+                    maturity="emerging",
                     feeds_interface="ingest",
+                    human_required=True,
+                ),
+                AICapability(
+                    name="awe_experience_modeling",
+                    description="Spatial modeling of awe trigger placement — sight lines, "
+                                "acoustic zones, reveal moments, vastness engineering",
+                    category="analysis",
+                    maturity="emerging",
+                    feeds_interface="process",
                     human_required=True,
                 ),
             ],

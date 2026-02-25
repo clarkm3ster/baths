@@ -53,7 +53,19 @@ From the treatment, Andre Washington architects the production narrative: how Da
 
 ### Deliverable
 
-From the dimensions analysis, Elena Vasquez designs the dome's architecture: a spatial and conceptual environment where Dasani Coates's 7 flourishing dimensions are structurally supported. Drawing on "Threshold Housing Prototypes", the concept treats every transition between TANF and adjacent systems as a design problem — not a bureaucratic one. Believes every architectural decision is a statement about who deserves beauty. The dome's architecture ensures that pursuing belonging never requires sacrificing stability. The systems serve the person, not the other way around. [Ava DuVernay's direction: Individual dignity within structural critique.]
+From the dimensions analysis, Elena Vasquez designs the dome's architecture: a spatial and conceptual environment where Dasani Coates's 7 flourishing dimensions are structurally supported. Drawing on "Threshold Housing Prototypes", the concept treats every transition between TANF and adjacent systems as a design problem — not a bureaucratic one.
+
+AWE DESIGN FOR DASANI COATES'S DOME:
+
+VASTNESS: The dome visualization renders all 7 systems as orbital layers around Dasani Coates — TANF. Each system visible, each connection mapped, each entitlement glowing. The scale of what exists for one person, made visible for the first time. Not a chart. An environment you can stand inside.
+
+ACCOMMODATION: Two renderings side by side — fragmented (current reality: 7 disconnected systems, Dasani Coates navigating alone) and coordinated (the dome: same systems, linked, working). The gap between them IS the accommodation trigger. Your mental model of 'how systems work' must expand.
+
+MORAL BEAUTY: The dome credits every contributor — every practitioner who mapped, modeled, designed, and built. The viewer sees that real people applied their life's work to one person's wholeness. The team is visible inside the dome.
+
+EPIPHANY: The cost visualization — what fragmentation costs vs. what coordination saves. The moment when the audience sees the number and understands: we are paying MORE for Dasani Coates's suffering than her flourishing would cost.
+
+Believes every architectural decision is a statement about who deserves beauty. The dome's architecture ensures that pursuing belonging never requires sacrificing stability. A dome that documents everything but moves no one is incomplete. [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 ---
 

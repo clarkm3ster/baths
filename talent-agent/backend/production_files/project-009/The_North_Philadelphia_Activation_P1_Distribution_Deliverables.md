@@ -23,7 +23,7 @@ The replicable activation template from 2200 N Broad St (adjacent lot) is publis
 
 ---
 
-## Sphere Portfolio Entry: Zara Kalil
+## Sphere Awe Portfolio Entry: Zara Kalil
 
 **Practitioner:** Zara Kalil (public art)  
 **Capability:** activation design  
@@ -36,7 +36,19 @@ The replicable activation template from 2200 N Broad St (adjacent lot) is publis
 
 ### Deliverable
 
-The full portfolio entry on spheres.land: the sphere at 2200 N Broad St (adjacent lot) as a model for urban activation. Zara Kalil's methodology from "Wall Rights" — site reading, concept design, programming, impact data — is published as a complete case study. A wall is either talking or it's silent. Any neighborhood with a similar site can start from this sphere's design principles rather than a blank lot. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
+The complete awe-designed portfolio entry on spheres.land: the sphere at 2200 N Broad St (adjacent lot) as a model for awe-based urban activation. Zara Kalil's methodology from "Wall Rights" — awe assessment, 8-trigger design framework, activation program, validated metrics — is published as the definitive case study.
+
+PUBLISHED AWE DESIGN GUIDANCE:
+For any principal designing a sphere, this entry documents:
+- Which of Keltner's 8 elicitors work best for lots of this size (15,000 sqft)
+- Which triggers have the strongest site-specific rationale in neighborhoods like North Philadelphia
+- Validated AWE-S scores and prosocial outcomes from actual visitors
+- Physiological data confirming awe responses (HRV, cortisol sync)
+- The awe-to-action pipeline: how measured awe converts to community impact
+
+This is what separates a sphere from a park renovation. A park gives people grass. A sphere gives people awe — and awe makes them show up again, bring their neighbors, start something new, and believe the next lot can be activated too.
+
+A wall is either talking or it's silent. [James Corner / Field Operations's direction: Infrastructure into ecology into community.]
 
 ---
 

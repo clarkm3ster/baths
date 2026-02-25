@@ -7,16 +7,16 @@ Production #1
 The sphere is only as strong as its weakest dimension.
 
 **Weakest:** unlock  
-**Strongest:** permanence
+**Strongest:** access
 
 ## Dimensions
 
 | Dimension | Score | Description |
 |-----------|-------|-------------|
+| Access | 79.9 | How accessible is the activation and how much awe does it produce? A space that produces measurable awe scores higher — public space activation without awe is just programming. |
 | Permanence | 78.2 | How sustainable is the activation over time? |
 | Policy | 78.2 | How replicable is the activation model? Does it generate policy? |
 | Unlock | 71.4 | How well did the team navigate zoning, permits, and regulatory landscape? |
-| Access | 71.4 | How accessible is the activation to the community it serves? |
 | Catalyst | 71.4 | How much economic and social catalyst does the activation create? |
 
 ## Progression
@@ -26,7 +26,7 @@ The sphere is only as strong as its weakest dimension.
 Total: 7.8
 
   Unlock: 21.4 (+21.4)
-  Access: 10.7 (+10.7)
+  Access: 12.0 (+12.0)
   Permanence: 7.8 (+7.8)
   Catalyst: 10.7 (+10.7)
   Policy: 7.8 (+7.8)
@@ -36,7 +36,7 @@ Total: 7.8
 Total: 19.6
 
   Unlock: 39.3 (+17.9)
-  Access: 28.6 (+17.9)
+  Access: 32.0 (+20.0)
   Permanence: 19.6 (+11.8)
   Catalyst: 25.0 (+14.3)
   Policy: 19.6 (+11.8)
@@ -46,7 +46,7 @@ Total: 19.6
 Total: 31.3
 
   Unlock: 53.5 (+14.2)
-  Access: 50.0 (+21.4)
+  Access: 55.9 (+23.9)
   Permanence: 39.1 (+19.5)
   Catalyst: 46.4 (+21.4)
   Policy: 31.3 (+11.7)
@@ -56,7 +56,7 @@ Total: 31.3
 Total: 50.8
 
   Unlock: 64.3 (+10.8)
-  Access: 64.3 (+14.3)
+  Access: 71.9 (+16.0)
   Permanence: 62.6 (+23.5)
   Catalyst: 64.3 (+17.9)
   Policy: 50.8 (+19.5)
@@ -66,7 +66,7 @@ Total: 50.8
 Total: 71.4
 
   Unlock: 71.4 (+7.1)
-  Access: 71.4 (+7.1)
+  Access: 79.9 (+8.0)
   Permanence: 78.2 (+15.6)
   Catalyst: 71.4 (+7.1)
   Policy: 78.2 (+27.4)

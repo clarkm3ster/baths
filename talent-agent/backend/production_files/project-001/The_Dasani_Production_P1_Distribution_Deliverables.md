@@ -53,7 +53,17 @@ The complete documentary, narrative assets, and media kit for Dasani Coates's do
 
 ### Deliverable
 
-The full portfolio entry on domes.cc: Dasani Coates's dome as a replicable model for human flourishing. Elena Vasquez's methodology from "Threshold Housing Prototypes" is published alongside the dome's dimensions (housing, education, family stability, health, creativity, autonomy, belonging), the coordination architecture, and the impact scores. Believes every architectural decision is a statement about who deserves beauty. Any practitioner designing a dome for a similar case can start from this model — the flourishing dimensions, the system linkages, the threshold designs — rather than zero. [Ava DuVernay's direction: Individual dignity within structural critique.]
+The full portfolio entry on domes.cc: Dasani Coates's dome as a replicable model for human flourishing that produces awe. Elena Vasquez's methodology from "Threshold Housing Prototypes" is published alongside the dome's dimensions (housing, education, family stability, health, creativity, autonomy, belonging), the coordination architecture, the impact scores, and the awe design framework.
+
+PUBLISHED AWE DESIGN GUIDANCE FOR DOMES:
+The portfolio entry documents how the dome visualization triggers:
+- Vastness through rendering all systems as orbital layers
+- Accommodation through fragmented vs. coordinated comparison
+- Moral beauty through visible team contribution
+- Epiphany through cost comparison revelation
+- Projected AWE-S scores for dome viewers
+
+Believes every architectural decision is a statement about who deserves beauty. Any practitioner designing a dome can start from this awe framework — not just the flourishing dimensions but the experience design that makes seeing the dome transcendent. [Ava DuVernay's direction: Individual dignity within structural critique.]
 
 ---
 
