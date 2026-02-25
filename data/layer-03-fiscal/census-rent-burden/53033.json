@@ -1,0 +1,20 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "53033",
+  "county_name": "King County (Seattle), WA",
+  "scraped_at": "2026-02-22T16:26:03.730Z",
+  "data": {
+    "rent_total": 401313,
+    "rent_30_35_pct": 35643,
+    "rent_35_40_pct": 26496,
+    "rent_40_50_pct": 32446,
+    "rent_50_plus_pct": 83511,
+    "rent_not_computed": 14502
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

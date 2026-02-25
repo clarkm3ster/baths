@@ -1,0 +1,20 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "42029",
+  "county_name": "Chester County, PA",
+  "scraped_at": "2026-02-22T16:25:56.244Z",
+  "data": {
+    "rent_total": 50869,
+    "rent_30_35_pct": 4278,
+    "rent_35_40_pct": 2804,
+    "rent_40_50_pct": 4214,
+    "rent_50_plus_pct": 10498,
+    "rent_not_computed": 2614
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

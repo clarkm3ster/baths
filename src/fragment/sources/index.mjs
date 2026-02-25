@@ -20,6 +20,7 @@ import economicSources from './economic.mjs'
 import educationSources from './education.mjs'
 import legalFiscalSources from './legal-fiscal.mjs'
 import communitySources from './community.mjs'
+import nonprofitServicesSources from './nonprofit-services.mjs'
 
 // Flatten all sources into a single registry
 const ALL_SOURCES = [
@@ -31,6 +32,7 @@ const ALL_SOURCES = [
   ...educationSources,
   ...legalFiscalSources,
   ...communitySources,
+  ...nonprofitServicesSources,
 ]
 
 // Validate: no duplicate IDs

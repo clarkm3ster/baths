@@ -1,0 +1,21 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "36005",
+  "county_name": "Bronx County, NY",
+  "scraped_at": "2026-02-22T12:42:29.739Z",
+  "data": {
+    "total_units": 547816,
+    "occupied_units": 525387,
+    "vacant_units": 22429,
+    "owner_occupied": 104887,
+    "renter_occupied": 420500,
+    "median_home_value": 501400,
+    "median_gross_rent": 1401,
+    "median_monthly_housing_cost": 1428
+  },
+  "layers": [
+    5
+  ]
+}

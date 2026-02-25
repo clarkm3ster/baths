@@ -1,0 +1,22 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "39035",
+  "county_name": "Cuyahoga County (Cleveland), OH",
+  "scraped_at": "2026-02-22T12:42:21.175Z",
+  "data": {
+    "median_household_income": 60074,
+    "per_capita_income": 39807,
+    "poverty_total": 1232159,
+    "poverty_below": 203273,
+    "gini_index": 0.508,
+    "snap_households": 90551,
+    "public_assistance_income": 16547,
+    "ssi_income": 38588
+  },
+  "layers": [
+    3,
+    6
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "42017",
+  "county_name": "Bucks County, PA",
+  "scraped_at": "2026-02-22T16:25:55.412Z",
+  "data": {
+    "rent_total": 54368,
+    "rent_30_35_pct": 4059,
+    "rent_35_40_pct": 3298,
+    "rent_40_50_pct": 4139,
+    "rent_50_plus_pct": 12756,
+    "rent_not_computed": 3209
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

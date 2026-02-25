@@ -1,0 +1,20 @@
+{
+  "source": "census-employment",
+  "api": "Census ACS 5-year",
+  "fips": "36061",
+  "county": "New York County (Manhattan), NY",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "pop_16_plus": 1447903,
+    "in_labor_force": 1011534,
+    "civilian_employed": 956270,
+    "civilian_unemployed": 50477,
+    "not_in_labor_force": 436369,
+    "occupation_mgmt": 420756,
+    "occupation_service": 133695,
+    "occupation_production": 47787
+  },
+  "layers": [
+    6
+  ]
+}

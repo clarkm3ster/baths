@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "42017",
+  "county_name": "Bucks County, PA",
+  "scraped_at": "2026-02-22T08:27:56.813Z",
+  "data": {
+    "total_pop": 645163,
+    "median_age": 44,
+    "male_pop": 319410,
+    "female_pop": 325753,
+    "white_alone": 540421,
+    "black_alone": 25143,
+    "asian_alone": 31585,
+    "hispanic_latino": 38195,
+    "foreign_born": 65580
+  },
+  "layers": [
+    8
+  ]
+}

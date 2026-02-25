@@ -1,0 +1,22 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "42091",
+  "county_name": "Montgomery County, PA",
+  "scraped_at": "2026-02-22T08:28:15.482Z",
+  "data": {
+    "median_household_income": 107441,
+    "per_capita_income": 57945,
+    "poverty_total": 835381,
+    "poverty_below": 52365,
+    "gini_index": 0.4694,
+    "snap_households": 18795,
+    "public_assistance_income": 6445,
+    "ssi_income": 10797
+  },
+  "layers": [
+    3,
+    6
+  ]
+}

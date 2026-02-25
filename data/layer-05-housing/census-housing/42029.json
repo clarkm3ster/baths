@@ -1,0 +1,21 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "42029",
+  "county_name": "Chester County, PA",
+  "scraped_at": "2026-02-22T12:42:27.088Z",
+  "data": {
+    "total_units": 208672,
+    "occupied_units": 200622,
+    "vacant_units": 8050,
+    "owner_occupied": 149753,
+    "renter_occupied": 50869,
+    "median_home_value": 435000,
+    "median_gross_rent": 1601,
+    "median_monthly_housing_cost": 1831
+  },
+  "layers": [
+    5
+  ]
+}

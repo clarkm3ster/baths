@@ -1,0 +1,21 @@
+{
+  "source": "census-education",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "edu_pop_25plus": 6654100,
+    "less_than_9th": 731951,
+    "high_school_diploma": 1130197,
+    "some_college": 1264278,
+    "bachelors": 1463702,
+    "masters": 732451,
+    "doctorate": 159698,
+    "school_enrollment_total": 2444830,
+    "school_enrollment_public": 1369104
+  },
+  "layers": [
+    7
+  ]
+}

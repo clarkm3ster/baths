@@ -1,0 +1,21 @@
+{
+  "source": "census-demographics",
+  "api": "Census ACS 5-year",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_pop": 585708,
+    "median_age": 35.4,
+    "male_pop": 276284,
+    "female_pop": 309424,
+    "white_alone": 164798,
+    "black_alone": 363139,
+    "asian_alone": 16004,
+    "hispanic_latino": 34557,
+    "foreign_born": 50231
+  },
+  "layers": [
+    8
+  ]
+}

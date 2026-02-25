@@ -1,0 +1,19 @@
+{
+  "source": "census-rent-burden",
+  "api": "Census ACS 5-year",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "rent_total": 795201,
+    "rent_30_35_pct": 79520,
+    "rent_35_40_pct": 63616,
+    "rent_40_50_pct": 87472,
+    "rent_50_plus_pct": 190849,
+    "rent_not_computed": 39760
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

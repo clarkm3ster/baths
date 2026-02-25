@@ -1,0 +1,21 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "34017",
+  "county_name": "Hudson County, NJ",
+  "scraped_at": "2026-02-22T16:25:51.813Z",
+  "data": {
+    "total_units": 311964,
+    "occupied_units": 290054,
+    "vacant_units": 21910,
+    "owner_occupied": 93531,
+    "renter_occupied": 196523,
+    "median_home_value": 486900,
+    "median_gross_rent": 1722,
+    "median_monthly_housing_cost": 1857
+  },
+  "layers": [
+    5
+  ]
+}

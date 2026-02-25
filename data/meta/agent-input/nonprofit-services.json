@@ -1,0 +1,178 @@
+{
+  "domain": "nonprofit services",
+  "discovered_by": "claude",
+  "discovered_at": "2026-02-25T20:00:00Z",
+  "notes": "Every structured public data source about nonprofit organizations, charitable services, and community-based organizations in the United States.",
+  "sources": [
+    {
+      "name": "propublica-990-search",
+      "label": "ProPublica Nonprofit 990 Search",
+      "description": "IRS 990 filings searchable by state. Returns org name, EIN, NTEE code, revenue, assets.",
+      "probe_url": "https://projects.propublica.org/nonprofits/api/v2/search.json?state[id]=pa&per_page=5",
+      "type": "rest_api",
+      "access": "open",
+      "layers": [3, 8],
+      "geo": "state",
+      "scraper_code": "restJSON({\n  id: 'propublica-990-search',\n  label: 'ProPublica Nonprofit 990 Search',\n  layers: [3, 8],\n  url: (fips) => {\n    const st = stateAbbrev(fips).toLowerCase()\n    return `https://projects.propublica.org/nonprofits/api/v2/search.json?state[id]=${st}&per_page=100`\n  },\n  transform: (data) => {\n    const orgs = data?.organizations || []\n    return {\n      total_results: data?.total_results || 0,\n      count: orgs.length,\n      orgs: orgs.slice(0, 25).map(o => ({\n        name: o.name,\n        ein: o.ein,\n        city: o.city,\n        state: o.state,\n        ntee_code: o.ntee_code,\n        income: o.income_amount,\n        assets: o.asset_amount,\n        tax_period: o.tax_period,\n      })),\n    }\n  },\n})"
+    },
+    {
+      "name": "irs-eo-pub78",
+      "label": "IRS Tax Exempt Organization Search",
+      "description": "IRS EOS API — search exempt organizations by state. Returns EIN, name, city, state, country, deductibility status.",
+      "probe_url": "https://apps.irs.gov/app/eos/api/records?state=PA&pageSize=5",
+      "type": "rest_api",
+      "access": "open",
+      "layers": [1, 8],
+      "geo": "state",
+      "scraper_code": "restJSON({\n  id: 'irs-eo-pub78',\n  label: 'IRS Tax Exempt Organization Search',\n  layers: [1, 8],\n  url: (fips) => {\n    const st = stateAbbrev(fips)\n    return `https://apps.irs.gov/app/eos/api/records?state=${st}&pageSize=100`\n  },\n  transform: (data) => {\n    const orgs = data?.organizations || data?.records || data || []\n    if (!Array.isArray(orgs)) return { note: 'IRS EOS API', raw_keys: Object.keys(data || {}) }\n    return {\n      count: orgs.length,\n      orgs: orgs.slice(0, 25).map(o => ({\n        ein: o.ein,\n        name: o.name || o.legal_name,\n        city: o.city,\n        state: o.state,\n        deductibility: o.deductibility_status || o.deductibility,\n      })),\n    }\n  },\n})"
+    },
+    {
+      "name": "census-nonprofit-employment",
+      "label": "Census CBP Nonprofit Employment (NAICS 813)",
+      "description": "County Business Patterns for NAICS 813 (Religious, Grantmaking, Civic, Professional orgs). Establishment count, employment, payroll.",
+      "probe_url": "https://api.census.gov/data/2021/cbp?get=ESTAB,EMP,PAYANN&for=county:101&in=state:42&NAICS2017=813",
+      "type": "rest_api",
+      "access": "open",
+      "layers": [6, 8],
+      "geo": "county",
+      "scraper_code": "restJSON({\n  id: 'census-nonprofit-employment',\n  label: 'Census CBP Nonprofit Employment (NAICS 813)',\n  layers: [6, 8],\n  url: (fips) => {\n    const st = stateFips(fips)\n    const co = countyFips(fips)\n    return `https://api.census.gov/data/2021/cbp?get=ESTAB,EMP,PAYANN&for=county:${co}&in=state:${st}&NAICS2017=813`\n  },\n  transform: (data) => {\n    if (!Array.isArray(data) || data.length < 2) return null\n    const h = data[0], v = data[1]\n    return {\n      nonprofit_establishments: parseInt(v[h.indexOf('ESTAB')]) || null,\n      nonprofit_employees: parseInt(v[h.indexOf('EMP')]) || null,\n      annual_payroll_thousands: parseInt(v[h.indexOf('PAYANN')]) || null,\n    }\n  },\n})"
+    },
+    {
+      "name": "census-social-assistance",
+      "label": "Census CBP Social Assistance (NAICS 624)",
+      "description": "County Business Patterns for NAICS 624 (Social Assistance — food banks, child services, emergency shelters, vocational rehab).",
+      "probe_url": "https://api.census.gov/data/2021/cbp?get=ESTAB,EMP,PAYANN&for=county:101&in=state:42&NAICS2017=624",
+      "type": "rest_api",
+      "access": "open",
+      "layers": [4, 6, 8],
+      "geo": "county",
+      "scraper_code": "restJSON({\n  id: 'census-social-assistance',\n  label: 'Census CBP Social Assistance (NAICS 624)',\n  layers: [4, 6, 8],\n  url: (fips) => {\n    const st = stateFips(fips)\n    const co = countyFips(fips)\n    return `https://api.census.gov/data/2021/cbp?get=ESTAB,EMP,PAYANN&for=county:${co}&in=state:${st}&NAICS2017=624`\n  },\n  transform: (data) => {\n    if (!Array.isArray(data) || data.length < 2) return null\n    const h = data[0], v = data[1]\n    return {\n      social_assistance_establishments: parseInt(v[h.indexOf('ESTAB')]) || null,\n      social_assistance_employees: parseInt(v[h.indexOf('EMP')]) || null,\n      annual_payroll_thousands: parseInt(v[h.indexOf('PAYANN')]) || null,\n    }\n  },\n})"
+    },
+    {
+      "name": "census-healthcare-social",
+      "label": "Census CBP Healthcare & Social (NAICS 62)",
+      "description": "County Business Patterns for the full Health Care & Social Assistance sector. Superset including hospitals, clinics, social services.",
+      "probe_url": "https://api.census.gov/data/2021/cbp?get=ESTAB,EMP,PAYANN&for=county:101&in=state:42&NAICS2017=62",
+      "type": "rest_api",
+      "access": "open",
+      "layers": [4, 6],
+      "geo": "county",
+      "scraper_code": "restJSON({\n  id: 'census-healthcare-social',\n  label: 'Census CBP Healthcare & Social (NAICS 62)',\n  layers: [4, 6],\n  url: (fips) => {\n    const st = stateFips(fips)\n    const co = countyFips(fips)\n    return `https://api.census.gov/data/2021/cbp?get=ESTAB,EMP,PAYANN&for=county:${co}&in=state:${st}&NAICS2017=62`\n  },\n  transform: (data) => {\n    if (!Array.isArray(data) || data.length < 2) return null\n    const h = data[0], v = data[1]\n    return {\n      healthcare_social_establishments: parseInt(v[h.indexOf('ESTAB')]) || null,\n      healthcare_social_employees: parseInt(v[h.indexOf('EMP')]) || null,\n      annual_payroll_thousands: parseInt(v[h.indexOf('PAYANN')]) || null,\n    }\n  },\n})"
+    },
+    {
+      "name": "imls-public-libraries",
+      "label": "IMLS Public Library Outlet Data",
+      "description": "Institute of Museum & Library Services — every public library in America. Location, visits, circulation, programs, staff, expenditures.",
+      "probe_url": "https://data.imls.gov/resource/b4xf-6nc8.json?$where=STABR=%27PA%27&$limit=5",
+      "type": "soda_api",
+      "access": "open",
+      "layers": [7, 8],
+      "geo": "state",
+      "scraper_code": "sodaAPI({\n  id: 'imls-public-libraries',\n  label: 'IMLS Public Library Outlet Data',\n  layers: [7, 8],\n  host: 'data.imls.gov',\n  dataset: 'b4xf-6nc8',\n  where: (fips) => `STABR='${stateAbbrev(fips)}'`,\n  select: 'STABR,LIBNAME,CITY,CNTY,POPU_LSA,VISITS,TOTCIR,TOTPRO,TOTATTEN,TOTSTAFF,TOTEXPCO',\n  transform: (rows) => {\n    const totalVisits = rows.reduce((s, r) => s + (parseInt(r.VISITS) || 0), 0)\n    const totalCirc = rows.reduce((s, r) => s + (parseInt(r.TOTCIR) || 0), 0)\n    const totalPrograms = rows.reduce((s, r) => s + (parseInt(r.TOTPRO) || 0), 0)\n    const totalAttend = rows.reduce((s, r) => s + (parseInt(r.TOTATTEN) || 0), 0)\n    return {\n      library_outlets: rows.length,\n      total_visits: totalVisits,\n      total_circulation: totalCirc,\n      total_programs: totalPrograms,\n      total_program_attendance: totalAttend,\n      sample: rows.slice(0, 10).map(r => ({\n        name: r.LIBNAME,\n        city: r.CITY,\n        county: r.CNTY,\n        population_served: parseInt(r.POPU_LSA) || null,\n        visits: parseInt(r.VISITS) || null,\n      })),\n    }\n  },\n})"
+    },
+    {
+      "name": "imls-museums",
+      "label": "IMLS Museum Universe Data",
+      "description": "Every museum in the US — art, history, science, children's, nature centers, zoos, botanical gardens. Name, type, revenue, location.",
+      "probe_url": "https://data.imls.gov/resource/ku5e-7x6b.json?$where=PHYSSTATE=%27PA%27&$limit=5",
+      "type": "soda_api",
+      "access": "open",
+      "layers": [7, 8],
+      "geo": "state",
+      "scraper_code": "sodaAPI({\n  id: 'imls-museums',\n  label: 'IMLS Museum Universe Data',\n  layers: [7, 8],\n  host: 'data.imls.gov',\n  dataset: 'ku5e-7x6b',\n  where: (fips) => `PHYSSTATE='${stateAbbrev(fips)}'`,\n  select: 'COMMONNAME,DISCIPL,PHYSADDR,PHYSCITY,PHYSSTATE,PHYSZIP,INCOMECD,REVENUE',\n  transform: (rows) => {\n    const disciplines = {}\n    for (const r of rows) {\n      const d = r.DISCIPL || 'Unknown'\n      disciplines[d] = (disciplines[d] || 0) + 1\n    }\n    return {\n      museums: rows.length,\n      by_discipline: disciplines,\n      total_revenue: rows.reduce((s, r) => s + (parseInt(r.REVENUE) || 0), 0),\n      sample: rows.slice(0, 10).map(r => ({\n        name: r.COMMONNAME,\n        discipline: r.DISCIPL,\n        city: r.PHYSCITY,\n        revenue: parseInt(r.REVENUE) || null,\n      })),\n    }\n  },\n})"
+    },
+    {
+      "name": "datagov-catalog-nonprofit",
+      "label": "Data.gov Nonprofit Dataset Catalog",
+      "description": "Data.gov CKAN catalog — search for all nonprofit-related datasets. Meta-source for discovering more data.",
+      "probe_url": "https://catalog.data.gov/api/3/action/package_search?q=nonprofit&rows=10",
+      "type": "rest_api",
+      "access": "open",
+      "layers": [8],
+      "geo": "national",
+      "scraper_code": "restJSON({\n  id: 'datagov-catalog-nonprofit',\n  label: 'Data.gov Nonprofit Dataset Catalog',\n  layers: [8],\n  url: () => 'https://catalog.data.gov/api/3/action/package_search?q=nonprofit+OR+charitable+OR+501c3&rows=50',\n  transform: (data) => {\n    const results = data?.result?.results || []\n    return {\n      datasets_found: data?.result?.count || 0,\n      sample_count: results.length,\n      datasets: results.slice(0, 25).map(d => ({\n        name: d.name,\n        title: d.title?.slice(0, 120),\n        org: d.organization?.title,\n        formats: (d.resources || []).map(r => r.format).filter(Boolean),\n        notes: d.notes?.slice(0, 200),\n      })),\n    }\n  },\n})"
+    },
+    {
+      "name": "usaspending-grants-nonprofit",
+      "label": "USASpending Grants to Nonprofits by County",
+      "description": "Federal grant awards to nonprofit recipients by county. Amount, agency, program, recipient.",
+      "probe_url": null,
+      "type": "rest_api",
+      "access": "open",
+      "layers": [1, 3, 8],
+      "geo": "county",
+      "scraper_code": "usaSpend({\n  id: 'usaspending-grants-nonprofit',\n  label: 'USASpending Grants to Nonprofits by County',\n  layers: [1, 3, 8],\n  endpoint: 'search/spending_by_award/',\n  body: (fips) => ({\n    filters: {\n      place_of_performance_locations: [{ country: 'USA', county: fips }],\n      time_period: [{ start_date: '2023-10-01', end_date: '2024-09-30' }],\n      award_type_codes: ['02', '03', '04', '05'],\n      recipient_type_names: ['nonprofit'],\n    },\n    fields: ['Award ID', 'Recipient Name', 'Award Amount', 'Awarding Agency', 'CFDA Number'],\n    limit: 100,\n    page: 1,\n  }),\n  transform: (data) => {\n    const results = data?.results || []\n    const total = results.reduce((s, r) => s + (r['Award Amount'] || 0), 0)\n    return {\n      nonprofit_grants: results.length,\n      total_amount: total,\n      avg_grant: results.length > 0 ? Math.round(total / results.length) : 0,\n      top_recipients: results.slice(0, 15).map(r => ({\n        recipient: r['Recipient Name'],\n        amount: r['Award Amount'],\n        agency: r['Awarding Agency'],\n        cfda: r['CFDA Number'],\n      })),\n    }\n  },\n})"
+    },
+    {
+      "name": "sam-gov-entity-search",
+      "label": "SAM.gov Entity Registration (Nonprofits)",
+      "description": "System for Award Management — registered nonprofit entities eligible for federal awards.",
+      "probe_url": "https://api.sam.gov/entity-information/v3/entities?api_key=DEMO_KEY&registrationStatus=A&businessTypeList=2X&stateCode=PA&pageSize=5",
+      "type": "rest_api",
+      "access": "free_key",
+      "layers": [1, 2, 8],
+      "geo": "state",
+      "note": "DEMO_KEY may work for limited queries. Full access requires free registration at api.sam.gov.",
+      "scraper_code": "restJSON({\n  id: 'sam-gov-entity-search',\n  label: 'SAM.gov Nonprofit Entity Registration',\n  layers: [1, 2, 8],\n  url: (fips) => {\n    const st = stateAbbrev(fips)\n    return `https://api.sam.gov/entity-information/v3/entities?api_key=DEMO_KEY&registrationStatus=A&businessTypeList=2X&stateCode=${st}&pageSize=100`\n  },\n  transform: (data) => {\n    const entities = data?.entityData || data?.results || []\n    if (!Array.isArray(entities)) return { note: 'SAM.gov API', raw_keys: Object.keys(data || {}) }\n    return {\n      registered_nonprofits: data?.totalRecords || entities.length,\n      sample: entities.slice(0, 20).map(e => ({\n        name: e.entityRegistration?.legalBusinessName || e.name,\n        uei: e.entityRegistration?.ueiSAM,\n        city: e.entityRegistration?.physicalAddress?.city,\n        state: e.entityRegistration?.physicalAddress?.stateOrProvinceCode,\n      })),\n    }\n  },\n})"
+    },
+    {
+      "name": "hhs-taggs-grants",
+      "label": "HHS TAGGS Grant Awards",
+      "description": "HHS Tracking Accountability in Government Grants. All HHS grants — covers health, social services, child welfare.",
+      "probe_url": "https://taggs.hhs.gov/SearchGrants",
+      "type": "web_page",
+      "access": "open",
+      "layers": [1, 3, 4],
+      "geo": "county",
+      "note": "Web search interface only. No REST API available. Data accessible via bulk download from HHS.",
+      "scraper_code": null
+    },
+    {
+      "name": "charitynavigator-api",
+      "label": "Charity Navigator Ratings & Financials",
+      "description": "Nonprofit ratings, financial health, accountability scores. 1.8M organizations rated.",
+      "probe_url": "https://api.data.charitynavigator.org/v2/Organizations?app_id=DEMO&app_key=DEMO&state=PA&pageSize=5",
+      "type": "rest_api",
+      "access": "free_key",
+      "layers": [8],
+      "geo": "state",
+      "note": "Requires free API key from charitynavigator.org. DEMO credentials may not work.",
+      "scraper_code": "restJSON({\n  id: 'charitynavigator-api',\n  label: 'Charity Navigator Ratings & Financials',\n  layers: [8],\n  url: (fips) => {\n    const st = stateAbbrev(fips)\n    return `https://api.data.charitynavigator.org/v2/Organizations?app_id=DEMO&app_key=DEMO&state=${st}&pageSize=100`\n  },\n  transform: (data) => {\n    if (!Array.isArray(data)) return { note: 'Charity Navigator API requires registered key', needs_key: true }\n    return {\n      rated_orgs: data.length,\n      orgs: data.slice(0, 20).map(o => ({\n        name: o.charityName,\n        ein: o.ein,\n        city: o.mailingAddress?.city,\n        category: o.category?.categoryName,\n        rating: o.currentRating?.rating,\n        score: o.currentRating?.score,\n      })),\n    }\n  },\n})"
+    },
+    {
+      "name": "candid-990finder",
+      "label": "Candid/GuideStar 990 Finder",
+      "description": "Foundation Center 990 lookup. Full 990 data requires paid subscription.",
+      "probe_url": null,
+      "type": "web_page",
+      "access": "auth_required",
+      "layers": [3, 8],
+      "geo": "national",
+      "note": "Structured API (GuideStar Pro) requires paid subscription. Free tier is HTML-only search.",
+      "scraper_code": null
+    },
+    {
+      "name": "volunteermatch-api",
+      "label": "VolunteerMatch Opportunities",
+      "description": "Volunteer opportunities by location. Organization profiles and cause areas.",
+      "probe_url": null,
+      "type": "rest_api",
+      "access": "auth_required",
+      "layers": [8],
+      "geo": "city",
+      "note": "API requires partnership agreement. Not publicly accessible.",
+      "scraper_code": null
+    },
+    {
+      "name": "nces-private-schools",
+      "label": "NCES Private School Universe (PSS)",
+      "description": "Private schools in America — many are nonprofits. Enrollment, affiliation, grade levels.",
+      "probe_url": "https://educationdata.urban.org/api/v1/schools/pss/directory/2021/?fips=42&limit=10",
+      "type": "rest_api",
+      "access": "open",
+      "layers": [7, 8],
+      "geo": "state",
+      "scraper_code": "restJSON({\n  id: 'nces-private-schools',\n  label: 'NCES Private School Universe (PSS)',\n  layers: [7, 8],\n  url: (fips) => {\n    const st = stateFips(fips)\n    return `https://educationdata.urban.org/api/v1/schools/pss/directory/2021/?fips=${st}&limit=100`\n  },\n  transform: (data) => {\n    const results = data?.results || []\n    const affiliations = {}\n    for (const r of results) {\n      const a = r.religious_affiliation_text || 'None'\n      affiliations[a] = (affiliations[a] || 0) + 1\n    }\n    return {\n      private_schools: results.length,\n      total_enrollment: results.reduce((s, r) => s + (r.enrollment || 0), 0),\n      by_affiliation: affiliations,\n      sample: results.slice(0, 10).map(r => ({\n        name: r.school_name,\n        city: r.city_location,\n        enrollment: r.enrollment,\n        affiliation: r.religious_affiliation_text,\n      })),\n    }\n  },\n})"
+    }
+  ]
+}

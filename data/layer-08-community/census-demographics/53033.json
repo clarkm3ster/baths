@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "53033",
+  "county_name": "King County (Seattle), WA",
+  "scraped_at": "2026-02-22T08:28:05.223Z",
+  "data": {
+    "total_pop": 2254371,
+    "median_age": 37.2,
+    "male_pop": 1143593,
+    "female_pop": 1110778,
+    "white_alone": 1325673,
+    "black_alone": 146998,
+    "asian_alone": 437540,
+    "hispanic_latino": 228873,
+    "foreign_born": 553339
+  },
+  "layers": [
+    8
+  ]
+}

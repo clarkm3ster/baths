@@ -1,0 +1,20 @@
+{
+  "source": "census-internet",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_households_internet": 3357792,
+    "with_internet": 3155321,
+    "broadband": 3055131,
+    "no_internet": 202471,
+    "has_computer": 3121744,
+    "has_smartphone_only": 369357,
+    "no_computer": 235896
+  },
+  "layers": [
+    2,
+    7
+  ]
+}

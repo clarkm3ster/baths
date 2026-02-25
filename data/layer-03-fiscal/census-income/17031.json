@@ -1,0 +1,21 @@
+{
+  "source": "census-income",
+  "api": "Census ACS 5-year",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "median_household_income": 72121,
+    "per_capita_income": 40714,
+    "poverty_total": 5096148,
+    "poverty_below": 662099,
+    "gini_index": 0.4914,
+    "snap_households": 268873,
+    "public_assistance_income": 34293,
+    "ssi_income": 63305
+  },
+  "layers": [
+    3,
+    6
+  ]
+}

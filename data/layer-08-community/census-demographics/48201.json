@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "48201",
+  "county_name": "Harris County (Houston), TX",
+  "scraped_at": "2026-02-22T08:28:01.231Z",
+  "data": {
+    "total_pop": 4726177,
+    "median_age": 34.1,
+    "male_pop": 2359415,
+    "female_pop": 2366762,
+    "white_alone": 2175176,
+    "black_alone": 893393,
+    "asian_alone": 333946,
+    "hispanic_latino": 2076103,
+    "foreign_born": 1238667
+  },
+  "layers": [
+    8
+  ]
+}

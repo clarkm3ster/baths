@@ -1,0 +1,20 @@
+{
+  "source": "census-employment",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "pop_16_plus": 8027400,
+    "in_labor_force": 5137536,
+    "civilian_employed": 4813428,
+    "civilian_unemployed": 302598,
+    "not_in_labor_force": 2889864,
+    "occupation_mgmt": 1685696,
+    "occupation_service": 914244,
+    "occupation_production": 481343
+  },
+  "layers": [
+    6
+  ]
+}

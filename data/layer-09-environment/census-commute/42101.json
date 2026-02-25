@@ -1,0 +1,21 @@
+{
+  "source": "census-commute",
+  "api": "Census ACS 5-year",
+  "fips": "42101",
+  "county": "Philadelphia, PA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "workers_total": 654014,
+    "drove_alone": 360028,
+    "public_transit": 157630,
+    "walked": 47089,
+    "worked_from_home": 98102,
+    "mean_travel_time": 33.4,
+    "no_vehicle": 144884,
+    "one_vehicle": 202744
+  },
+  "layers": [
+    5,
+    9
+  ]
+}

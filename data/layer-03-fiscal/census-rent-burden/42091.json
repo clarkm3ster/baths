@@ -1,0 +1,20 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "42091",
+  "county_name": "Montgomery County, PA",
+  "scraped_at": "2026-02-22T16:25:54.442Z",
+  "data": {
+    "rent_total": 93177,
+    "rent_30_35_pct": 7351,
+    "rent_35_40_pct": 5865,
+    "rent_40_50_pct": 7280,
+    "rent_50_plus_pct": 20733,
+    "rent_not_computed": 4980
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

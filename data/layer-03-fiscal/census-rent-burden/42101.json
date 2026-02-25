@@ -1,0 +1,19 @@
+{
+  "source": "census-rent-burden",
+  "api": "Census ACS 5-year",
+  "fips": "42101",
+  "county": "Philadelphia, PA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "rent_total": 291640,
+    "rent_30_35_pct": 29164,
+    "rent_35_40_pct": 25998,
+    "rent_40_50_pct": 32080,
+    "rent_50_plus_pct": 72910,
+    "rent_not_computed": 14582
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

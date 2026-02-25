@@ -1,0 +1,21 @@
+{
+  "source": "census-income",
+  "api": "Census ACS 5-year",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "median_household_income": 54124,
+    "per_capita_income": 33619,
+    "poverty_total": 557568,
+    "poverty_below": 117514,
+    "gini_index": 0.5091,
+    "snap_households": 75342,
+    "public_assistance_income": 10543,
+    "ssi_income": 24360
+  },
+  "layers": [
+    3,
+    6
+  ]
+}

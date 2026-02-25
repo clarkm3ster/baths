@@ -1,0 +1,21 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "01073",
+  "county_name": "Jefferson County (Birmingham), AL",
+  "scraped_at": "2026-02-22T16:25:48.435Z",
+  "data": {
+    "total_units": 308428,
+    "occupied_units": 265794,
+    "vacant_units": 42634,
+    "owner_occupied": 170356,
+    "renter_occupied": 95438,
+    "median_home_value": 208900,
+    "median_gross_rent": 1086,
+    "median_monthly_housing_cost": 1084
+  },
+  "layers": [
+    5
+  ]
+}

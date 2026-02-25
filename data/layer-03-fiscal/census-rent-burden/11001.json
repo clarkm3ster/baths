@@ -1,0 +1,20 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "11001",
+  "county_name": "District of Columbia",
+  "scraped_at": "2026-02-22T16:26:04.574Z",
+  "data": {
+    "rent_total": 184920,
+    "rent_30_35_pct": 17485,
+    "rent_35_40_pct": 12229,
+    "rent_40_50_pct": 12912,
+    "rent_50_plus_pct": 39004,
+    "rent_not_computed": 9503
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

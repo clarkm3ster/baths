@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "42091",
+  "county_name": "Montgomery County, PA",
+  "scraped_at": "2026-02-22T08:27:56.028Z",
+  "data": {
+    "total_pop": 856399,
+    "median_age": 41.2,
+    "male_pop": 419933,
+    "female_pop": 436466,
+    "white_alone": 650218,
+    "black_alone": 78309,
+    "asian_alone": 67279,
+    "hispanic_latino": 48524,
+    "foreign_born": 93717
+  },
+  "layers": [
+    8
+  ]
+}

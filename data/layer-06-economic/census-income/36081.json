@@ -1,0 +1,22 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "36081",
+  "county_name": "Queens County, NY",
+  "scraped_at": "2026-02-22T08:28:19.397Z",
+  "data": {
+    "median_household_income": 82431,
+    "per_capita_income": 39201,
+    "poverty_total": 2334022,
+    "poverty_below": 272926,
+    "gini_index": 0.4582,
+    "snap_households": 111116,
+    "public_assistance_income": 35194,
+    "ssi_income": 44817
+  },
+  "layers": [
+    3,
+    6
+  ]
+}

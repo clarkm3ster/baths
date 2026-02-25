@@ -147,26 +147,7 @@ export default [
     },
   }),
 
-  // ══════════════════════════════════════════════════════════════════
-  // Libraries — IMLS Public Library Survey
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'imls-public-libraries',
-    label: 'IMLS Public Library Survey',
-    layers: [7, 8],
-    url: (fips) => {
-      const state = stateAbbrev(fips)
-      return `https://www.imls.gov/research-evaluation/data-collection/public-libraries-survey`
-    },
-    transform: () => {
-      return {
-        note: 'IMLS Public Library Survey — available as bulk download',
-        available: false,
-        needs_bulk_download: true,
-      }
-    },
-  }),
+  // Libraries: see nonprofit-services.mjs (imls-public-libraries — real SODA scraper)
 
   // ══════════════════════════════════════════════════════════════════
   // Workforce Development — DOL CareerOneStop

@@ -1,0 +1,20 @@
+{
+  "source": "census-employment",
+  "api": "Census ACS 5-year",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "pop_16_plus": 477124,
+    "in_labor_force": 298203,
+    "civilian_employed": 268382,
+    "civilian_unemployed": 27433,
+    "not_in_labor_force": 178921,
+    "occupation_mgmt": 96614,
+    "occupation_service": 48231,
+    "occupation_production": 26838
+  },
+  "layers": [
+    6
+  ]
+}

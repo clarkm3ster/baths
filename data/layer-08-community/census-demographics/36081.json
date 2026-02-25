@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "36081",
+  "county_name": "Queens County, NY",
+  "scraped_at": "2026-02-22T08:27:59.415Z",
+  "data": {
+    "total_pop": 2360826,
+    "median_age": 39.9,
+    "male_pop": 1155898,
+    "female_pop": 1204928,
+    "white_alone": 720630,
+    "black_alone": 417637,
+    "asian_alone": 614652,
+    "hispanic_latino": 661807,
+    "foreign_born": 1112847
+  },
+  "layers": [
+    8
+  ]
+}

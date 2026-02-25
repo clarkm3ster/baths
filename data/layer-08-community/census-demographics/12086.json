@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "12086",
+  "county_name": "Miami-Dade County, FL",
+  "scraped_at": "2026-02-22T08:28:03.603Z",
+  "data": {
+    "total_pop": 2688237,
+    "median_age": 40.6,
+    "male_pop": 1318559,
+    "female_pop": 1369678,
+    "white_alone": 1259156,
+    "black_alone": 426417,
+    "asian_alone": 41646,
+    "hispanic_latino": 1848739,
+    "foreign_born": 1452990
+  },
+  "layers": [
+    8
+  ]
+}

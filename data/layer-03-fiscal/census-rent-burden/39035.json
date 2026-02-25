@@ -1,0 +1,20 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "39035",
+  "county_name": "Cuyahoga County (Cleveland), OH",
+  "scraped_at": "2026-02-22T16:26:09.611Z",
+  "data": {
+    "rent_total": 229555,
+    "rent_30_35_pct": 19021,
+    "rent_35_40_pct": 12251,
+    "rent_40_50_pct": 17292,
+    "rent_50_plus_pct": 52413,
+    "rent_not_computed": 16702
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

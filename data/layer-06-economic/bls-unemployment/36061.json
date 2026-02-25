@@ -1,0 +1,15 @@
+{
+  "source": "bls-unemployment",
+  "api": "BLS Public Data API",
+  "fips": "36061",
+  "county": "New York County (Manhattan), NY",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "rate": 4.8,
+    "year": 2023,
+    "period": "M12"
+  },
+  "layers": [
+    6
+  ]
+}

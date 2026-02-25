@@ -1,0 +1,20 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "36005",
+  "county_name": "Bronx County, NY",
+  "scraped_at": "2026-02-22T16:25:58.730Z",
+  "data": {
+    "rent_total": 420500,
+    "rent_30_35_pct": 38276,
+    "rent_35_40_pct": 26369,
+    "rent_40_50_pct": 37057,
+    "rent_50_plus_pct": 137802,
+    "rent_not_computed": 20348
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "42045",
+  "county_name": "Delaware County, PA",
+  "scraped_at": "2026-02-22T08:28:14.704Z",
+  "data": {
+    "median_household_income": 86390,
+    "per_capita_income": 46926,
+    "poverty_total": 554170,
+    "poverty_below": 53557,
+    "gini_index": 0.4818,
+    "snap_households": 27384,
+    "public_assistance_income": 6655,
+    "ssi_income": 11218
+  },
+  "layers": [
+    3,
+    6
+  ]
+}

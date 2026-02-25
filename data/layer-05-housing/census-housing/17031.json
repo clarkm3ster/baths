@@ -1,0 +1,20 @@
+{
+  "source": "census-housing",
+  "api": "Census ACS 5-year",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_units": 2235100,
+    "occupied_units": 2037342,
+    "vacant_units": 197758,
+    "owner_occupied": 1190384,
+    "renter_occupied": 846958,
+    "median_home_value": 266100,
+    "median_gross_rent": 1152,
+    "median_monthly_housing_cost": 1425
+  },
+  "layers": [
+    5
+  ]
+}

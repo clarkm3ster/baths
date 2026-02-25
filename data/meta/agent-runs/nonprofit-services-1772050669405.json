@@ -1,0 +1,147 @@
+{
+  "domain": "nonprofit services",
+  "timestamp": "2026-02-25T20:17:49.404Z",
+  "stats": {
+    "sources_defined": 14,
+    "urls_probed": 14,
+    "reachable": 0,
+    "scrapers_tested": 11,
+    "scrapers_passed": 0,
+    "scrapers_failed": 11,
+    "gaps_logged": 25
+  },
+  "registered_file": null,
+  "passed": [],
+  "failed": [
+    {
+      "id": "propublica-990-search",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "irs-eo-pub78",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "census-nonprofit-employment",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "census-social-assistance",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "census-healthcare-social",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "imls-museums",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "datagov-catalog-nonprofit",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "usaspending-grants-nonprofit",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "sam-gov-entity-search",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "charitynavigator-api",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "nces-private-schools",
+      "reason": "fetch failed"
+    }
+  ],
+  "unreachable": [
+    {
+      "name": "propublica-990-search",
+      "error": "fetch failed",
+      "type": "rest_api",
+      "access": "open"
+    },
+    {
+      "name": "irs-eo-pub78",
+      "error": "fetch failed",
+      "type": "rest_api",
+      "access": "open"
+    },
+    {
+      "name": "census-nonprofit-employment",
+      "error": "fetch failed",
+      "type": "rest_api",
+      "access": "open"
+    },
+    {
+      "name": "census-social-assistance",
+      "error": "fetch failed",
+      "type": "rest_api",
+      "access": "open"
+    },
+    {
+      "name": "census-healthcare-social",
+      "error": "fetch failed",
+      "type": "rest_api",
+      "access": "open"
+    },
+    {
+      "name": "imls-museums",
+      "error": "fetch failed",
+      "type": "soda_api",
+      "access": "open"
+    },
+    {
+      "name": "datagov-catalog-nonprofit",
+      "error": "fetch failed",
+      "type": "rest_api",
+      "access": "open"
+    },
+    {
+      "name": "usaspending-grants-nonprofit",
+      "error": "No probe URL",
+      "type": "rest_api",
+      "access": "open"
+    },
+    {
+      "name": "sam-gov-entity-search",
+      "error": "fetch failed",
+      "type": "rest_api",
+      "access": "free_key"
+    },
+    {
+      "name": "hhs-taggs-grants",
+      "error": "fetch failed",
+      "type": "web_page",
+      "access": "open"
+    },
+    {
+      "name": "charitynavigator-api",
+      "error": "fetch failed",
+      "type": "rest_api",
+      "access": "free_key"
+    },
+    {
+      "name": "candid-990finder",
+      "error": "No probe URL",
+      "type": "web_page",
+      "access": "auth_required"
+    },
+    {
+      "name": "volunteermatch-api",
+      "error": "No probe URL",
+      "type": "rest_api",
+      "access": "auth_required"
+    },
+    {
+      "name": "nces-private-schools",
+      "error": "fetch failed",
+      "type": "rest_api",
+      "access": "open"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source": "census-employment",
+  "api": "Census ACS 5-year",
+  "fips": "42101",
+  "county": "Philadelphia, PA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "pop_16_plus": 1294876,
+    "in_labor_force": 789871,
+    "civilian_employed": 718463,
+    "civilian_unemployed": 65368,
+    "not_in_labor_force": 505005,
+    "occupation_mgmt": 251230,
+    "occupation_service": 136710,
+    "occupation_production": 71846
+  },
+  "layers": [
+    6
+  ]
+}

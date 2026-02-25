@@ -1,0 +1,22 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "34017",
+  "county_name": "Hudson County, NJ",
+  "scraped_at": "2026-02-22T12:42:22.755Z",
+  "data": {
+    "median_household_income": 86854,
+    "per_capita_income": 51277,
+    "poverty_total": 703117,
+    "poverty_below": 99546,
+    "gini_index": 0.4994,
+    "snap_households": 39238,
+    "public_assistance_income": 8503,
+    "ssi_income": 13276
+  },
+  "layers": [
+    3,
+    6
+  ]
+}

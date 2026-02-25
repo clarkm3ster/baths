@@ -1,0 +1,21 @@
+{
+  "source": "census-education",
+  "api": "Census ACS 5-year",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "edu_pop_25plus": 3640099,
+    "less_than_9th": 254807,
+    "high_school_diploma": 728020,
+    "some_college": 655058,
+    "bachelors": 801062,
+    "masters": 473253,
+    "doctorate": 109203,
+    "school_enrollment_total": 1254614,
+    "school_enrollment_public": 689038
+  },
+  "layers": [
+    7
+  ]
+}

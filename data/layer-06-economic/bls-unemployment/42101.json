@@ -1,0 +1,15 @@
+{
+  "source": "bls-unemployment",
+  "api": "BLS Public Data API",
+  "fips": "42101",
+  "county": "Philadelphia, PA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "rate": 5.1,
+    "year": 2023,
+    "period": "M12"
+  },
+  "layers": [
+    6
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source": "census-housing",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_units": 3596851,
+    "occupied_units": 3357792,
+    "vacant_units": 239059,
+    "owner_occupied": 1544586,
+    "renter_occupied": 1813206,
+    "median_home_value": 740200,
+    "median_gross_rent": 1697,
+    "median_monthly_housing_cost": 1970
+  },
+  "layers": [
+    5
+  ]
+}

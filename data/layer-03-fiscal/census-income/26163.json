@@ -1,0 +1,22 @@
+{
+  "source": "census-income",
+  "source_label": "Census Income & Poverty",
+  "api": "Census ACS 5-year",
+  "fips": "26163",
+  "county_name": "Wayne County (Detroit), MI",
+  "scraped_at": "2026-02-22T12:42:20.374Z",
+  "data": {
+    "median_household_income": 57223,
+    "per_capita_income": 32643,
+    "poverty_total": 1762492,
+    "poverty_below": 355857,
+    "gini_index": 0.4903,
+    "snap_households": 151138,
+    "public_assistance_income": 23677,
+    "ssi_income": 59077
+  },
+  "layers": [
+    3,
+    6
+  ]
+}

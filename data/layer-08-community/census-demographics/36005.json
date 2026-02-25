@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "36005",
+  "county_name": "Bronx County, NY",
+  "scraped_at": "2026-02-22T08:28:00.453Z",
+  "data": {
+    "total_pop": 1443229,
+    "median_age": 35,
+    "male_pop": 683349,
+    "female_pop": 759880,
+    "white_alone": 258727,
+    "black_alone": 491689,
+    "asian_alone": 56630,
+    "hispanic_latino": 814017,
+    "foreign_born": 489783
+  },
+  "layers": [
+    8
+  ]
+}

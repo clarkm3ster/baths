@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "42045",
+  "county_name": "Delaware County, PA",
+  "scraped_at": "2026-02-22T08:27:55.190Z",
+  "data": {
+    "total_pop": 575312,
+    "median_age": 39,
+    "male_pop": 279037,
+    "female_pop": 296275,
+    "white_alone": 378134,
+    "black_alone": 126608,
+    "asian_alone": 34810,
+    "hispanic_latino": 24939,
+    "foreign_born": 61915
+  },
+  "layers": [
+    8
+  ]
+}

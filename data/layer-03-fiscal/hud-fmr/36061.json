@@ -1,0 +1,18 @@
+{
+  "source": "hud-fmr",
+  "api": "HUD User API",
+  "fips": "36061",
+  "county": "New York County (Manhattan), NY",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "fmr_0": 1773,
+    "fmr_1": 1871,
+    "fmr_2": 2146,
+    "fmr_3": 2738,
+    "fmr_4": 2977
+  },
+  "layers": [
+    3,
+    5
+  ]
+}

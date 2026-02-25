@@ -1,0 +1,21 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "54055",
+  "county_name": "Mercer County, WV",
+  "scraped_at": "2026-02-22T16:25:46.695Z",
+  "data": {
+    "total_units": 29375,
+    "occupied_units": 24471,
+    "vacant_units": 4904,
+    "owner_occupied": 17118,
+    "renter_occupied": 7353,
+    "median_home_value": 115100,
+    "median_gross_rent": 777,
+    "median_monthly_housing_cost": 612
+  },
+  "layers": [
+    5
+  ]
+}

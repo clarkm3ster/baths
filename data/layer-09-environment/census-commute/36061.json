@@ -1,0 +1,21 @@
+{
+  "source": "census-commute",
+  "api": "Census ACS 5-year",
+  "fips": "36061",
+  "county": "New York County (Manhattan), NY",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "workers_total": 867500,
+    "drove_alone": 78075,
+    "public_transit": 563875,
+    "walked": 95425,
+    "worked_from_home": 130125,
+    "mean_travel_time": 40.8,
+    "no_vehicle": 563875,
+    "one_vehicle": 173500
+  },
+  "layers": [
+    5,
+    9
+  ]
+}

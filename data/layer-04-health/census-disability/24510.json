@@ -1,0 +1,21 @@
+{
+  "source": "census-disability",
+  "api": "Census ACS 5-year",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_disability_pop": 557568,
+    "male_with_disability": 47893,
+    "female_with_disability": 52261,
+    "disability_under5": 558,
+    "disability_5_17": 7249,
+    "disability_18_34": 11151,
+    "disability_65_74": 18534,
+    "disability_75_plus": 23418
+  },
+  "layers": [
+    1,
+    4
+  ]
+}

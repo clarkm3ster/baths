@@ -1,0 +1,21 @@
+{
+  "source": "census-commute",
+  "api": "Census ACS 5-year",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "workers_total": 265670,
+    "drove_alone": 173696,
+    "public_transit": 34337,
+    "walked": 15940,
+    "worked_from_home": 39851,
+    "mean_travel_time": 30.4,
+    "no_vehicle": 63761,
+    "one_vehicle": 82357
+  },
+  "layers": [
+    5,
+    9
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source": "census-housing",
+  "api": "Census ACS 5-year",
+  "fips": "24510",
+  "county": "Baltimore City, MD",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_units": 296665,
+    "occupied_units": 243265,
+    "vacant_units": 53400,
+    "owner_occupied": 109469,
+    "renter_occupied": 133796,
+    "median_home_value": 164700,
+    "median_gross_rent": 1069,
+    "median_monthly_housing_cost": 1170
+  },
+  "layers": [
+    5
+  ]
+}

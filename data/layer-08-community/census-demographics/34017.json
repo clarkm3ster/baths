@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "34017",
+  "county_name": "Hudson County, NJ",
+  "scraped_at": "2026-02-22T08:28:12.538Z",
+  "data": {
+    "total_pop": 712029,
+    "median_age": 35.6,
+    "male_pop": 356520,
+    "female_pop": 355509,
+    "white_alone": 294600,
+    "black_alone": 85956,
+    "asian_alone": 114096,
+    "hispanic_latino": 302289,
+    "foreign_born": 304156
+  },
+  "layers": [
+    8
+  ]
+}

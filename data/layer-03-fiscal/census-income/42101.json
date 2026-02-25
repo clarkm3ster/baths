@@ -1,0 +1,21 @@
+{
+  "source": "census-income",
+  "api": "Census ACS 5-year",
+  "fips": "42101",
+  "county": "Philadelphia, PA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "median_household_income": 52649,
+    "per_capita_income": 30422,
+    "poverty_total": 1541987,
+    "poverty_below": 347948,
+    "gini_index": 0.5058,
+    "snap_households": 171847,
+    "public_assistance_income": 28941,
+    "ssi_income": 53247
+  },
+  "layers": [
+    3,
+    6
+  ]
+}

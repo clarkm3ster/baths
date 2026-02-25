@@ -1,0 +1,20 @@
+{
+  "source": "census-internet",
+  "api": "Census ACS 5-year",
+  "fips": "36061",
+  "county": "New York County (Manhattan), NY",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "total_households_internet": 812118,
+    "with_internet": 771512,
+    "broadband": 747748,
+    "no_internet": 40606,
+    "has_computer": 763590,
+    "has_smartphone_only": 56849,
+    "no_computer": 48527
+  },
+  "layers": [
+    2,
+    7
+  ]
+}

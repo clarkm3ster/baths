@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "48113",
+  "county_name": "Dallas County, TX",
+  "scraped_at": "2026-02-22T08:28:02.822Z",
+  "data": {
+    "total_pop": 2604053,
+    "median_age": 33.8,
+    "male_pop": 1294332,
+    "female_pop": 1309721,
+    "white_alone": 1208531,
+    "black_alone": 585997,
+    "asian_alone": 174466,
+    "hispanic_latino": 1066429,
+    "foreign_born": 641680
+  },
+  "layers": [
+    8
+  ]
+}

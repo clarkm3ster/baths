@@ -1,0 +1,21 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "28049",
+  "county_name": "Hinds County (Jackson), MS",
+  "scraped_at": "2026-02-22T16:25:47.551Z",
+  "data": {
+    "total_units": 106047,
+    "occupied_units": 89585,
+    "vacant_units": 16462,
+    "owner_occupied": 51765,
+    "renter_occupied": 37820,
+    "median_home_value": 141600,
+    "median_gross_rent": 1004,
+    "median_monthly_housing_cost": 949
+  },
+  "layers": [
+    5
+  ]
+}

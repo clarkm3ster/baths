@@ -1,0 +1,21 @@
+{
+  "source": "census-commute",
+  "api": "Census ACS 5-year",
+  "fips": "06037",
+  "county": "Los Angeles County, CA",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "workers_total": 4524300,
+    "drove_alone": 3167010,
+    "public_transit": 271458,
+    "walked": 122156,
+    "worked_from_home": 678645,
+    "mean_travel_time": 33.7,
+    "no_vehicle": 316701,
+    "one_vehicle": 1131075
+  },
+  "layers": [
+    5,
+    9
+  ]
+}

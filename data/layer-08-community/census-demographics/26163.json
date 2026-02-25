@@ -1,0 +1,22 @@
+{
+  "source": "census-demographics",
+  "source_label": "Census Demographics",
+  "api": "Census ACS 5-year",
+  "fips": "26163",
+  "county_name": "Wayne County (Detroit), MI",
+  "scraped_at": "2026-02-22T08:28:10.166Z",
+  "data": {
+    "total_pop": 1781641,
+    "median_age": 37.7,
+    "male_pop": 864475,
+    "female_pop": 917166,
+    "white_alone": 905956,
+    "black_alone": 670722,
+    "asian_alone": 61624,
+    "hispanic_latino": 112699,
+    "foreign_born": 168249
+  },
+  "layers": [
+    8
+  ]
+}

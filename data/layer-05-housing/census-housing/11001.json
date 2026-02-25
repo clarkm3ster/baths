@@ -1,0 +1,21 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "11001",
+  "county_name": "District of Columbia",
+  "scraped_at": "2026-02-22T12:42:35.332Z",
+  "data": {
+    "total_units": 350372,
+    "occupied_units": 315785,
+    "vacant_units": 34587,
+    "owner_occupied": 130865,
+    "renter_occupied": 184920,
+    "median_home_value": 705000,
+    "median_gross_rent": 1817,
+    "median_monthly_housing_cost": 2004
+  },
+  "layers": [
+    5
+  ]
+}

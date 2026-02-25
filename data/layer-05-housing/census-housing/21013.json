@@ -1,0 +1,21 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "21013",
+  "county_name": "Bell County, KY",
+  "scraped_at": "2026-02-22T16:25:45.861Z",
+  "data": {
+    "total_units": 11634,
+    "occupied_units": 9456,
+    "vacant_units": 2178,
+    "owner_occupied": 5966,
+    "renter_occupied": 3490,
+    "median_home_value": 76700,
+    "median_gross_rent": 608,
+    "median_monthly_housing_cost": 442
+  },
+  "layers": [
+    5
+  ]
+}

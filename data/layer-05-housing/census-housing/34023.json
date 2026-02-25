@@ -1,0 +1,21 @@
+{
+  "source": "census-housing",
+  "source_label": "Census Housing",
+  "api": "Census ACS 5-year",
+  "fips": "34023",
+  "county_name": "Middlesex County, NJ",
+  "scraped_at": "2026-02-22T16:25:52.640Z",
+  "data": {
+    "total_units": 314752,
+    "occupied_units": 301967,
+    "vacant_units": 12785,
+    "owner_occupied": 192805,
+    "renter_occupied": 109162,
+    "median_home_value": 411900,
+    "median_gross_rent": 1739,
+    "median_monthly_housing_cost": 1908
+  },
+  "layers": [
+    5
+  ]
+}

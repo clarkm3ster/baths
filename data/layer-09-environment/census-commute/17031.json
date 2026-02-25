@@ -1,0 +1,21 @@
+{
+  "source": "census-commute",
+  "api": "Census ACS 5-year",
+  "fips": "17031",
+  "county": "Cook County (Chicago), IL",
+  "scraped_at": "2026-02-22T03:49:49.784Z",
+  "data": {
+    "workers_total": 2490700,
+    "drove_alone": 1668369,
+    "public_transit": 323791,
+    "walked": 74721,
+    "worked_from_home": 373605,
+    "mean_travel_time": 34.6,
+    "no_vehicle": 273977,
+    "one_vehicle": 747210
+  },
+  "layers": [
+    5,
+    9
+  ]
+}
