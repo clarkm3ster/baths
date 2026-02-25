@@ -10,13 +10,14 @@
     "children": 1,
     "description": "Benchmark"
   },
-  "assembled_at": "2026-02-24T20:31:51.138Z",
-  "fragments_used": 8,
+  "assembled_at": "2026-02-25T01:55:41.309Z",
+  "fragments_used": 9,
   "fragment_sources": [
     "census-commute",
     "census-demographics",
     "census-disability",
     "census-education",
+    "census-employment",
     "census-housing",
     "census-income",
     "census-internet",
@@ -34,7 +35,7 @@
     "admin_overhead": 0
   },
   "cosm": 10,
-  "cosm_average": 53,
+  "cosm_average": 58,
   "domain_coverage": {
     "health": {
       "score": 33,
@@ -49,8 +50,8 @@
       "note": null
     },
     "economics": {
-      "score": 43,
-      "raw_score": 43,
+      "score": 67,
+      "raw_score": 67,
       "max_score": 100,
       "note": null
     },
@@ -103,8 +104,8 @@
       "note": null
     },
     "purpose": {
-      "score": 50,
-      "raw_score": 50,
+      "score": 90,
+      "raw_score": 90,
       "max_score": 100,
       "note": null
     }
@@ -136,15 +137,7 @@
       "domain": "economics",
       "type": "fragment",
       "missing": [
-        "census-employment",
         "bls-unemployment"
-      ]
-    },
-    {
-      "domain": "economics",
-      "type": "condition",
-      "missing": [
-        "unemployment_rate"
       ]
     },
     {
@@ -196,23 +189,9 @@
       "missing": [
         "no conditions defined"
       ]
-    },
-    {
-      "domain": "purpose",
-      "type": "fragment",
-      "missing": [
-        "census-employment"
-      ]
-    },
-    {
-      "domain": "purpose",
-      "type": "condition",
-      "missing": [
-        "unemployment_rate"
-      ]
     }
   ],
-  "gap_count": 14,
+  "gap_count": 11,
   "conditions": {
     "median_rent": 1257,
     "median_home_value": 289700,
@@ -233,7 +212,8 @@
     "work_from_home_pct": 13.1,
     "no_vehicle_pct": 4.3,
     "broadband_pct": 90.9,
-    "no_internet_pct": 7.2
+    "no_internet_pct": 7.2,
+    "unemployment_rate": 6.8
   },
   "panels": {
     "health": {
@@ -247,7 +227,7 @@
       "program_value": 0
     },
     "economics": {
-      "score": 43,
+      "score": 67,
       "programs": [],
       "program_value": 0
     },
@@ -292,7 +272,7 @@
       "program_value": 0
     },
     "purpose": {
-      "score": 50,
+      "score": 90,
       "programs": [],
       "program_value": 0
     }

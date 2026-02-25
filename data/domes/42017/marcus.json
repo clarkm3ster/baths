@@ -10,13 +10,14 @@
     "children": 2,
     "description": "Single dad, systems-heavy"
   },
-  "assembled_at": "2026-02-24T20:31:51.143Z",
-  "fragments_used": 8,
+  "assembled_at": "2026-02-25T01:55:41.315Z",
+  "fragments_used": 9,
   "fragment_sources": [
     "census-commute",
     "census-demographics",
     "census-disability",
     "census-education",
+    "census-employment",
     "census-housing",
     "census-income",
     "census-internet",
@@ -108,7 +109,7 @@
     "program_count": 8
   },
   "cosm": 10,
-  "cosm_average": 58,
+  "cosm_average": 63,
   "domain_coverage": {
     "health": {
       "score": 53,
@@ -123,8 +124,8 @@
       "note": null
     },
     "economics": {
-      "score": 50,
-      "raw_score": 50,
+      "score": 74,
+      "raw_score": 74,
       "max_score": 100,
       "note": null
     },
@@ -177,8 +178,8 @@
       "note": null
     },
     "purpose": {
-      "score": 50,
-      "raw_score": 50,
+      "score": 90,
+      "raw_score": 90,
       "max_score": 100,
       "note": null
     }
@@ -210,15 +211,7 @@
       "domain": "economics",
       "type": "fragment",
       "missing": [
-        "census-employment",
         "bls-unemployment"
-      ]
-    },
-    {
-      "domain": "economics",
-      "type": "condition",
-      "missing": [
-        "unemployment_rate"
       ]
     },
     {
@@ -270,23 +263,9 @@
       "missing": [
         "no conditions defined"
       ]
-    },
-    {
-      "domain": "purpose",
-      "type": "fragment",
-      "missing": [
-        "census-employment"
-      ]
-    },
-    {
-      "domain": "purpose",
-      "type": "condition",
-      "missing": [
-        "unemployment_rate"
-      ]
     }
   ],
-  "gap_count": 14,
+  "gap_count": 11,
   "conditions": {
     "median_rent": 1461,
     "median_home_value": 395800,
@@ -307,7 +286,8 @@
     "work_from_home_pct": 14.9,
     "no_vehicle_pct": 1.8,
     "broadband_pct": 93,
-    "no_internet_pct": 5.6
+    "no_internet_pct": 5.6,
+    "unemployment_rate": 4.6
   },
   "panels": {
     "health": {
@@ -327,7 +307,7 @@
       "program_value": 9632
     },
     "economics": {
-      "score": 50,
+      "score": 74,
       "programs": [
         "EITC"
       ],
@@ -378,7 +358,7 @@
       "program_value": 0
     },
     "purpose": {
-      "score": 50,
+      "score": 90,
       "programs": [],
       "program_value": 0
     }

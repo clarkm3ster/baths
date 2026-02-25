@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "34017",
+  "county_name": "Hudson County, NJ",
+  "scraped_at": "2026-02-25T01:55:34.667Z",
+  "data": {
+    "total_households_internet": 290054,
+    "with_internet": 261872,
+    "broadband": 261728,
+    "no_internet": 23502,
+    "has_computer": 274836,
+    "has_smartphone_only": 263991,
+    "no_computer": 15218
+  }
+}
