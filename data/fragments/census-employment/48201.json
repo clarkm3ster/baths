@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "48201",
+  "county_name": "Harris County (Houston), TX",
+  "scraped_at": "2026-02-25T05:21:53.222Z",
+  "data": {
+    "pop_16_plus": 3627075,
+    "in_labor_force": 2443959,
+    "civilian_employed": 2285175,
+    "civilian_unemployed": 155955,
+    "not_in_labor_force": 1183116,
+    "occupation_mgmt": 435495,
+    "occupation_service": 153345,
+    "occupation_production": 251741
+  }
+}
