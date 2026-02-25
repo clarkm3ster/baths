@@ -14,6 +14,7 @@ The talent agent is a schema matchmaker.
 The AI agents are schema fillers.
 The creative teams are schema designers.
 The world model is the schema renderer.
+The Person-Runner is the product — character in, dome out.
 Everything is one architecture.
 """
 
@@ -108,4 +109,31 @@ from schema.bridge import (
     schema_to_json,
     dome_from_json,
     sphere_from_json,
+)
+
+from schema.person_runner import (
+    # The product
+    DomeProduction,
+    generate_dome_production,
+    # Input
+    CharacterInput,
+    DomeTier,
+    TIER_SPECS,
+    # IP
+    IPAsset,
+    IPPortfolio,
+    # Production
+    ProductionBudget,
+    BudgetLine,
+    ProductionTeam,
+    TeamMember,
+    ProductionPipeline,
+    ProductionMilestone,
+    # Analytics
+    WholePersonSimulation,
+    SimulationScenario,
+    TechInnovation,
+    # Website
+    DomeWebsite,
+    WebsiteSection,
 )
