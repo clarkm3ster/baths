@@ -70,9 +70,9 @@
   "bls-unemployment": {
     "label": "BLS State Unemployment",
     "api": "BLS Public Data API",
-    "last_scraped": "2026-02-25T20:32:39.983Z",
-    "total_scrapes": 14,
-    "counties_covered": 21
+    "last_scraped": "2026-02-26T01:51:37.689Z",
+    "total_scrapes": 21,
+    "counties_covered": 28
   },
   "hud-fmr": {
     "label": "HUD Fair Market Rents",

@@ -10,9 +10,10 @@
     "children": 1,
     "description": "Working poor"
   },
-  "assembled_at": "2026-02-25T20:32:40.215Z",
-  "fragments_used": 9,
+  "assembled_at": "2026-02-26T01:51:37.866Z",
+  "fragments_used": 10,
   "fragment_sources": [
+    "bls-unemployment",
     "census-commute",
     "census-demographics",
     "census-disability",
@@ -117,7 +118,7 @@
     "program_count": 9
   },
   "cosm": 10,
-  "cosm_average": 64,
+  "cosm_average": 65,
   "domain_coverage": {
     "health": {
       "score": 53,
@@ -132,8 +133,8 @@
       "note": null
     },
     "economics": {
-      "score": 74,
-      "raw_score": 74,
+      "score": 87,
+      "raw_score": 87,
       "max_score": 100,
       "note": null
     },
@@ -216,13 +217,6 @@
       ]
     },
     {
-      "domain": "economics",
-      "type": "fragment",
-      "missing": [
-        "bls-unemployment"
-      ]
-    },
-    {
       "domain": "nutrition",
       "type": "fragment",
       "missing": [
@@ -273,7 +267,7 @@
       ]
     }
   ],
-  "gap_count": 11,
+  "gap_count": 10,
   "conditions": {
     "median_rent": 1043,
     "median_home_value": 158600,
@@ -295,7 +289,9 @@
     "no_vehicle_pct": 4.9,
     "broadband_pct": 85.7,
     "no_internet_pct": 11.1,
-    "unemployment_rate": 9
+    "unemployment_rate": 9,
+    "state_unemployment_rate": 5,
+    "state_unemployment_period": "2025-M12"
   },
   "panels": {
     "health": {
@@ -315,7 +311,7 @@
       "program_value": 6416
     },
     "economics": {
-      "score": 74,
+      "score": 87,
       "programs": [
         "EITC"
       ],

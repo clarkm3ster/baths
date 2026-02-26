@@ -1,0 +1,18 @@
+{
+  "source": "bls-unemployment",
+  "source_label": "BLS State Unemployment",
+  "api": "BLS Public Data API",
+  "fips": "01073",
+  "county_name": "Jefferson County (Birmingham), AL",
+  "scraped_at": "2026-02-26T01:51:33.480Z",
+  "data": {
+    "state_fips": "01",
+    "series_id": "LASST010000000000003",
+    "latest_rate": 2.7,
+    "latest_period": "2025-M12",
+    "year_ago_rate": 2.7,
+    "year_ago_period": "2025-M12",
+    "change": 0,
+    "note": "State-level rate (county not available in public BLS tier)"
+  }
+}

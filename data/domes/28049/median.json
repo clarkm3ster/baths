@@ -10,9 +10,10 @@
     "children": 1,
     "description": "Benchmark"
   },
-  "assembled_at": "2026-02-25T20:32:40.205Z",
-  "fragments_used": 9,
+  "assembled_at": "2026-02-26T01:51:37.858Z",
+  "fragments_used": 10,
   "fragment_sources": [
+    "bls-unemployment",
     "census-commute",
     "census-demographics",
     "census-disability",
@@ -35,7 +36,7 @@
     "admin_overhead": 0
   },
   "cosm": 10,
-  "cosm_average": 58,
+  "cosm_average": 59,
   "domain_coverage": {
     "health": {
       "score": 33,
@@ -50,8 +51,8 @@
       "note": null
     },
     "economics": {
-      "score": 67,
-      "raw_score": 67,
+      "score": 80,
+      "raw_score": 80,
       "max_score": 100,
       "note": null
     },
@@ -134,13 +135,6 @@
       ]
     },
     {
-      "domain": "economics",
-      "type": "fragment",
-      "missing": [
-        "bls-unemployment"
-      ]
-    },
-    {
       "domain": "nutrition",
       "type": "fragment",
       "missing": [
@@ -191,7 +185,7 @@
       ]
     }
   ],
-  "gap_count": 11,
+  "gap_count": 10,
   "conditions": {
     "median_rent": 1004,
     "median_home_value": 141600,
@@ -213,7 +207,9 @@
     "no_vehicle_pct": 2.1,
     "broadband_pct": 86.7,
     "no_internet_pct": 11.2,
-    "unemployment_rate": 7.7
+    "unemployment_rate": 7.7,
+    "state_unemployment_rate": 3.7,
+    "state_unemployment_period": "2025-M12"
   },
   "panels": {
     "health": {
@@ -227,7 +223,7 @@
       "program_value": 0
     },
     "economics": {
-      "score": 67,
+      "score": 80,
       "programs": [],
       "program_value": 0
     },
