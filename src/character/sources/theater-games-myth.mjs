@@ -1,0 +1,340 @@
+/**
+ * CHARACTER FRAGMENT — Theater, Games, Mythology, Comics, Fairy Tales
+ *
+ * Characters from plays, operas, story-driven games, mythology, folklore,
+ * religious texts, fairy tales, comics, graphic novels, manga, and anime
+ * whose circumstances are rendered with enough specificity to build domes.
+ */
+
+export default [
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // THEATER — Characters from Plays
+  // ══════════════════════════════════════════════════════════════════════════════
+
+  {
+    name: 'Willy Loman',
+    real_or_fictional: 'fictional',
+    source_work: 'Death of a Salesman',
+    source_author_creator: 'Arthur Miller',
+    source_year: 1949,
+    circumstances: ['debt', 'mental_illness', 'elderly', 'unemployed', 'housing_insecure'],
+    location: 'Brooklyn, NY',
+    time_period: '1949',
+    systems_touched: ['sales industry', 'mortgage system', 'insurance', 'automobile industry', 'schools'],
+    dome_layer_richness: { 1: 4, 2: 4, 3: 9, 4: 8, 5: 8, 6: 10, 7: 5, 8: 7, 9: 6, 10: 7, 11: 4, 12: 8 },
+    key_relationships: ['Linda (wife)', 'Biff (son)', 'Happy (son)', 'Charley (neighbor)', 'Howard (boss)'],
+    narrative_arc: 'Aging salesman whose company fires him after 34 years. Miller documents the American Dream as a fiscal instrument — the mortgage nearly paid off, the refrigerator still making payments, the car falling apart, the insurance policy worth more than the man. Willy\'s suicide is a financial calculation: his death is worth $20,000 to his family, his life is worth nothing to the market.',
+    why_this_character_matters: 'Willy Loman is the foundational dome of American economic precarity. Layer 3 (Fiscal) and Layer 6 (Economic) tell the story — a life of labor that accumulates nothing. His dome proves that employment without security is a slow-motion crisis.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Blanche DuBois',
+    real_or_fictional: 'fictional',
+    source_work: 'A Streetcar Named Desire',
+    source_author_creator: 'Tennessee Williams',
+    source_year: 1947,
+    circumstances: ['homeless', 'mental_illness', 'poverty', 'addiction', 'domestic_violence', 'bereavement', 'trauma'],
+    location: 'New Orleans, LA (French Quarter, Elysian Fields)',
+    time_period: '1947',
+    systems_touched: ['mental hospital (institutionalized)', 'schools (teacher, fired)', 'hotels', 'dependent on kindness of strangers'],
+    dome_layer_richness: { 1: 6, 2: 3, 3: 7, 4: 9, 5: 8, 6: 7, 7: 6, 8: 7, 9: 5, 10: 9, 11: 8, 12: 8 },
+    key_relationships: ['Stella (sister)', 'Stanley Kowalski', 'Mitch', 'Young husband (deceased)'],
+    narrative_arc: 'Southern aristocrat who lost the family plantation, was fired from teaching for sexual involvement with a student, and arrives at her sister\'s cramped New Orleans apartment with nowhere else to go. Williams documents her psychological unraveling — the dependency, the alcohol, the illusions, and finally the institutionalization after Stanley rapes her.',
+    why_this_character_matters: 'Blanche\'s dome maps downward class mobility. She once had every layer filled; now each one is emptying. Her dome reveals the velocity of collapse when wealth is replaced by nothing — and how mental health (Layer 4) deteriorates fastest when housing (Layer 5) becomes dependent.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Prior Walter',
+    real_or_fictional: 'fictional',
+    source_work: 'Angels in America: A Gay Fantasia on National Themes',
+    source_author_creator: 'Tony Kushner',
+    source_year: 1991,
+    circumstances: ['terminal_illness', 'poverty', 'isolation', 'trauma'],
+    location: 'New York City, NY',
+    time_period: '1985-1986',
+    systems_touched: ['hospitals', 'AZT trials', 'Medicaid', 'gay community support networks', 'ACT UP'],
+    dome_layer_richness: { 1: 5, 2: 5, 3: 6, 4: 10, 5: 5, 6: 5, 7: 4, 8: 8, 9: 4, 10: 8, 11: 8, 12: 10 },
+    key_relationships: ['Louis Ironson (partner who leaves)', 'Belize (nurse/friend)', 'Harper Pitt', 'Angel'],
+    narrative_arc: 'Gay man with AIDS abandoned by his lover in 1985 New York. Kushner documents the medical, social, and spiritual dimensions of dying during the AIDS crisis — the Kaposi\'s sarcoma, the collapsing T-cells, the abandoned hospital wards, the friend-nurses who replace the family that won\'t come.',
+    why_this_character_matters: 'Prior fills Layer 12 (Flourishing) with more intensity than almost any character. Dying of AIDS, abandoned by his partner, he refuses to die. His dome maps what flourishing means when every other layer is collapsing — "More Life" is his demand, and it redefines what the dome exists to protect.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Troy Maxson',
+    real_or_fictional: 'fictional',
+    source_work: 'Fences',
+    source_author_creator: 'August Wilson',
+    source_year: 1985,
+    circumstances: ['formerly_incarcerated', 'poverty', 'working_poor', 'domestic_violence'],
+    location: 'Pittsburgh, PA (Hill District)',
+    time_period: '1957',
+    systems_touched: ['sanitation department', 'prison', 'Negro Leagues', 'unions', 'hospitals', 'military'],
+    dome_layer_richness: { 1: 7, 2: 4, 3: 7, 4: 5, 5: 7, 6: 8, 7: 4, 8: 8, 9: 5, 10: 7, 11: 6, 12: 7 },
+    key_relationships: ['Rose (wife)', 'Cory (son)', 'Lyons (son)', 'Bono (friend)', 'Gabriel (brother, brain-damaged veteran)'],
+    narrative_arc: 'Former Negro League baseball player who aged out before integration. Now a garbage collector fighting to be the first Black driver in Pittsburgh. Wilson documents the specific economic and racial systems of 1957 Pittsburgh — the union, the sanitation department, the color line in sports, the brother whose VA disability check pays the mortgage.',
+    why_this_character_matters: 'Troy\'s dome maps the pre-Civil Rights Black working class. His dome reveals how racial exclusion (denied MLB) created a different life trajectory than equal talent would have produced. Building his dome with real 1957 Pittsburgh data reveals the exact cost of segregation to one person.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Nora Helmer',
+    real_or_fictional: 'fictional',
+    source_work: 'A Doll\'s House',
+    source_author_creator: 'Henrik Ibsen',
+    source_year: 1879,
+    circumstances: ['debt', 'domestic_violence', 'isolation'],
+    location: 'Norway',
+    time_period: '1870s',
+    systems_touched: ['banking', 'law (forgery)', 'marriage as legal system', 'domestic service'],
+    dome_layer_richness: { 1: 8, 2: 3, 3: 8, 4: 3, 5: 5, 6: 4, 7: 4, 8: 5, 9: 3, 10: 10, 11: 4, 12: 8 },
+    key_relationships: ['Torvald (husband)', 'Krogstad (creditor)', 'Mrs. Linde', 'Children'],
+    narrative_arc: 'Secretly borrowed money (by forging her father\'s signature) to save her husband\'s life, then spent years repaying it while he thinks they live on his salary alone. When the secret emerges, Torvald is furious — not about the forgery but about the appearance. Nora walks out the door, abandoning her children.',
+    why_this_character_matters: 'Nora\'s dome maps marriage as a system of confinement. Layer 10 (Autonomy) is at zero inside the marriage and explodes when she leaves. Her dome reveals the cost of exit — she walks away from Layers 3, 5, and 8 to gain Layer 10.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // STORY-DRIVEN GAMES
+  // ══════════════════════════════════════════════════════════════════════════════
+
+  {
+    name: 'Ellie (The Last of Us)',
+    real_or_fictional: 'fictional',
+    source_work: 'The Last of Us (Video Game)',
+    source_author_creator: 'Neil Druckmann, Naughty Dog',
+    source_year: 2013,
+    circumstances: ['orphan', 'displaced', 'trauma', 'refugee', 'foster_care'],
+    location: 'Boston QZ; Pittsburgh; Salt Lake City; Jackson, WY (post-apocalyptic USA)',
+    time_period: 'Near future (post-pandemic)',
+    systems_touched: ['FEDRA (military quarantine zones)', 'Fireflies (resistance)', 'smuggling networks', 'Jackson commune'],
+    dome_layer_richness: { 1: 7, 2: 6, 3: 4, 4: 7, 5: 7, 6: 5, 7: 5, 8: 8, 9: 8, 10: 9, 11: 6, 12: 8 },
+    key_relationships: ['Joel', 'Riley', 'Tess', 'Marlene', 'Dina', 'Abby'],
+    narrative_arc: 'Orphan born after the pandemic who is immune to the fungus. Raised in military quarantine zones, she crosses post-collapse America with a smuggler who becomes a father figure. Her immunity makes her valuable — the Fireflies want to kill her to make a vaccine. Joel kills them instead, choosing one girl over humanity.',
+    why_this_character_matters: 'Ellie\'s dome maps what systems look like after collapse. FEDRA is the military government. The Fireflies are the resistance. Jackson is the commune. Three different dome architectures for the same person. Her dome reveals which systems humans rebuild first when everything is destroyed.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Lee Everett',
+    real_or_fictional: 'fictional',
+    source_work: 'The Walking Dead (Telltale Game)',
+    source_author_creator: 'Telltale Games',
+    source_year: 2012,
+    circumstances: ['formerly_incarcerated', 'displaced', 'caregiver', 'terminal_illness'],
+    location: 'Georgia (post-apocalyptic)',
+    time_period: 'Near future',
+    systems_touched: ['criminal justice (pre-apocalypse)', 'university (professor)', 'survivor groups', 'community governance'],
+    dome_layer_richness: { 1: 7, 2: 3, 3: 3, 4: 6, 5: 6, 6: 4, 7: 6, 8: 9, 9: 7, 10: 8, 11: 4, 12: 8 },
+    key_relationships: ['Clementine', 'Kenny', 'Carley/Doug', 'Lilly', 'Stranger'],
+    narrative_arc: 'University professor convicted of murder who finds redemption protecting an orphaned girl during the zombie apocalypse. Every choice in the game forces trade-offs between dome layers — save one person or another, take supplies from others, decide who leads the group. The game makes the player build domes and tear them down.',
+    why_this_character_matters: 'Lee\'s dome is built by the player\'s choices. Each decision fills or empties a layer. The game is a dome simulator — the player learns that every resource allocated to one layer is unavailable for another.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // MYTHOLOGY AND RELIGIOUS TEXTS
+  // ══════════════════════════════════════════════════════════════════════════════
+
+  {
+    name: 'Job',
+    real_or_fictional: 'fictional',
+    source_work: 'The Book of Job (Hebrew Bible)',
+    source_author_creator: 'Unknown (biblical tradition)',
+    source_year: -500,
+    circumstances: ['poverty', 'deep_poverty', 'chronic_illness', 'bereavement', 'grief', 'isolation', 'housing_insecure'],
+    location: 'Land of Uz (ancient Near East)',
+    time_period: 'Ancient',
+    systems_touched: ['wealth system (destroyed)', 'community (shunned)', 'religious system (challenged)', 'legal system (demanded trial with God)'],
+    dome_layer_richness: { 1: 7, 2: 3, 3: 8, 4: 8, 5: 6, 6: 8, 7: 3, 8: 8, 9: 5, 10: 8, 11: 4, 12: 10 },
+    key_relationships: ['God', 'Satan', 'Three friends (Eliphaz, Bildad, Zophar)', 'Elihu', 'Wife'],
+    narrative_arc: 'Wealthy man who loses everything — children, livestock, health, community standing — as a cosmic test. His friends argue that suffering proves guilt. Job insists on his innocence and demands a trial with God. God responds with questions about cosmic architecture. Job\'s dome is destroyed and rebuilt, but the rebuilt dome is not the same dome.',
+    why_this_character_matters: 'Job is the oldest documented dome destruction and rebuilding in world literature. Every layer goes to zero simultaneously — wealth, health, family, community. His dome asks: when everything is taken, what remains? Layer 12 (Flourishing) is the answer: meaning survives when nothing else does.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Odysseus',
+    real_or_fictional: 'fictional',
+    source_work: 'The Odyssey',
+    source_author_creator: 'Homer',
+    source_year: -700,
+    circumstances: ['displaced', 'veteran', 'homeless', 'refugee'],
+    location: 'Mediterranean Sea → Ithaca, Greece',
+    time_period: 'Bronze Age (c. 1200 BCE)',
+    systems_touched: ['military (Trojan War)', 'divine/supernatural', 'guest-host system (xenia)', 'kingship', 'domestic economy'],
+    dome_layer_richness: { 1: 6, 2: 4, 3: 6, 4: 5, 5: 8, 6: 5, 7: 5, 8: 8, 9: 8, 10: 9, 11: 6, 12: 8 },
+    key_relationships: ['Penelope (wife)', 'Telemachus (son)', 'Athena', 'Calypso', 'Circe', 'Suitors'],
+    narrative_arc: '10 years of war, 10 years trying to get home. Homer documents every system of hospitality and hostility Odysseus encounters — the Cyclops who eats guests, the Phaeacians who honor them, the suitors who abuse the host\'s absence. His dome is the original veteran-trying-to-come-home story.',
+    why_this_character_matters: 'Odysseus is the first documented veteran reintegration narrative. His 20-year dome gap (away from home) means every layer has been maintained by Penelope or collapsed. His return forces a dome rebuild. Every veteran reintegration since echoes this pattern.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Sita',
+    real_or_fictional: 'fictional',
+    source_work: 'The Ramayana',
+    source_author_creator: 'Valmiki',
+    source_year: -300,
+    circumstances: ['displaced', 'detained', 'domestic_violence', 'refugee', 'isolation'],
+    location: 'Ayodhya, India → Lanka → Forest exile',
+    time_period: 'Ancient',
+    systems_touched: ['royal court', 'exile system', 'captivity', 'trial by fire (agni pariksha)', 'forest hermitage'],
+    dome_layer_richness: { 1: 8, 2: 4, 3: 4, 4: 4, 5: 7, 6: 3, 7: 4, 8: 7, 9: 6, 10: 10, 11: 6, 12: 9 },
+    key_relationships: ['Rama (husband)', 'Ravana (captor)', 'Lakshmana', 'Hanuman', 'Sons (Lava and Kusha)'],
+    narrative_arc: 'Queen exiled to the forest, abducted by a demon king, rescued by her husband, then forced to prove her purity through trial by fire, then exiled again when the public doubts her. Sita\'s dome maps how a woman\'s autonomy is destroyed not by her captor but by her rescuer — the system that "saves" her also condemns her.',
+    why_this_character_matters: 'Sita\'s dome is a 3,000-year-old document of how patriarchal systems treat women\'s autonomy. Layer 10 (Autonomy) is destroyed three times — by exile, by abduction, and by her own husband\'s judgment. Her dome reveals that protection and imprisonment are the same mechanism.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Antigone',
+    real_or_fictional: 'fictional',
+    source_work: 'Antigone',
+    source_author_creator: 'Sophocles',
+    source_year: -441,
+    circumstances: ['incarcerated', 'orphan', 'grief'],
+    location: 'Thebes, Greece',
+    time_period: 'Mythological',
+    systems_touched: ['royal/state law (Creon\'s edict)', 'divine law (burial rites)', 'family duty', 'imprisonment'],
+    dome_layer_richness: { 1: 10, 2: 4, 3: 3, 4: 3, 5: 5, 6: 3, 7: 3, 8: 7, 9: 3, 10: 10, 11: 5, 12: 9 },
+    key_relationships: ['Creon (uncle/king)', 'Polynices (brother, unburied)', 'Ismene (sister)', 'Haemon (fiancé)'],
+    narrative_arc: 'Defies the king\'s order to leave her brother\'s body unburied. Sophocles documents the collision between state law and moral law — Creon says the traitor doesn\'t deserve burial, Antigone says divine law outranks royal decree. She is entombed alive. Her dome is Layer 1 (Legal) vs. Layer 12 (Flourishing) — the law against meaning.',
+    why_this_character_matters: 'Antigone is the original civil disobedience dome. She chooses Layer 12 (Flourishing — meaning, duty, honor) over Layer 1 (Legal — survival within the law). Her dome asks whether a dome that preserves the body but destroys meaning is worth having.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // COMICS AND GRAPHIC NOVELS
+  // ══════════════════════════════════════════════════════════════════════════════
+
+  {
+    name: 'Vladek Spiegelman',
+    real_or_fictional: 'real',
+    source_work: 'Maus',
+    source_author_creator: 'Art Spiegelman',
+    source_year: 1986,
+    circumstances: ['refugee', 'incarcerated', 'poverty', 'trauma', 'bereavement', 'displaced'],
+    location: 'Sosnowiec, Poland → Auschwitz → Dachau → USA',
+    time_period: '1930s-1980s',
+    systems_touched: ['Nazi occupation', 'ghetto', 'Auschwitz', 'Dachau', 'DP camps', 'US immigration', 'American life'],
+    dome_layer_richness: { 1: 9, 2: 7, 3: 7, 4: 7, 5: 8, 6: 7, 7: 4, 8: 8, 9: 8, 10: 10, 11: 5, 12: 8 },
+    key_relationships: ['Anja (first wife)', 'Mala (second wife)', 'Art (son)', 'Richieu (first son, killed)'],
+    narrative_arc: 'Polish Jew who survived Auschwitz through resourcefulness, luck, and willingness to trade anything. Spiegelman documents every survival mechanism — the hidden tin shop skills, the languages he spoke, the gold he hid, the shoes he mended. After the war: immigration, remarriage, a difficult relationship with his cartoonist son who draws their conversations.',
+    why_this_character_matters: 'Vladek\'s dome maps the Holocaust as a dome destruction event and then America as a dome rebuilding event. Every layer was brought to zero by the camps. His post-war dome reveals what rebuilds first (economic survival) and what never rebuilds (the first son, the first wife, the trust).',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Marjane Satrapi',
+    real_or_fictional: 'real',
+    source_work: 'Persepolis',
+    source_author_creator: 'Marjane Satrapi',
+    source_year: 2000,
+    circumstances: ['refugee', 'displaced', 'homeless', 'depression', 'isolation'],
+    location: 'Tehran, Iran → Vienna, Austria → Tehran → Paris',
+    time_period: '1979-1994',
+    systems_touched: ['Iranian revolution', 'war (Iran-Iraq)', 'Islamic law', 'Austrian boarding schools', 'homelessness', 'psychiatric care'],
+    dome_layer_richness: { 1: 8, 2: 5, 3: 5, 4: 6, 5: 7, 6: 5, 7: 7, 8: 7, 9: 6, 10: 9, 11: 9, 12: 8 },
+    key_relationships: ['Parents', 'Grandmother', 'Uncle Anoosh (executed)', 'Austrian friends', 'Reza (husband)'],
+    narrative_arc: 'Iranian girl who lives through the revolution and the Iran-Iraq war, is sent to Austria for safety, becomes homeless in Vienna, returns to Iran, and eventually leaves again for Paris. Satrapi documents every system — the morality police who enforce hijab, the Austrian landlords who evict her, the university entrance exams she barely passes.',
+    why_this_character_matters: 'Marjane builds and destroys domes in three countries. Her Tehran dome (revolutionary), her Vienna dome (refugee), and her Paris dome (exile) are three completely different architectures for the same person. Her dome reveals how geography rebuilds identity.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Alison Bechdel',
+    real_or_fictional: 'real',
+    source_work: 'Fun Home: A Family Tragicomic',
+    source_author_creator: 'Alison Bechdel',
+    source_year: 2006,
+    circumstances: ['domestic_violence', 'grief', 'bereavement', 'isolation'],
+    location: 'Beech Creek, PA',
+    time_period: '1960s-1980s',
+    systems_touched: ['funeral home (family business)', 'schools', 'Oberlin College', 'libraries', 'churches'],
+    dome_layer_richness: { 1: 4, 2: 3, 3: 5, 4: 6, 5: 7, 6: 5, 7: 7, 8: 7, 9: 6, 10: 8, 11: 10, 12: 9 },
+    key_relationships: ['Bruce Bechdel (father)', 'Mother', 'Brothers', 'College friends'],
+    narrative_arc: 'Growing up in a funeral home with a closeted gay father who renovates their Victorian house obsessively. When Alison comes out as lesbian, her father comes out too — and then dies, probably by suicide. Bechdel documents the house as the central dome — the literal architecture that her father tried to perfect while his internal architecture collapsed.',
+    why_this_character_matters: 'Alison\'s dome uses the physical house as a metaphor for the dome itself. Layer 5 (Housing) is meticulously maintained (the Victorian restoration) while Layer 10 (Autonomy) is imprisoned (closeted sexuality). Her dome reveals how architecture can perform flourishing while concealing collapse.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // FAIRY TALES AND FOLKLORE
+  // ══════════════════════════════════════════════════════════════════════════════
+
+  {
+    name: 'Cinderella',
+    real_or_fictional: 'fictional',
+    source_work: 'Cinderella (ATU Type 510A — Grimm, Perrault, and hundreds of variants)',
+    source_author_creator: 'Folk tradition (Grimm/Perrault versions)',
+    source_year: 1697,
+    circumstances: ['orphan', 'domestic_violence', 'forced_labor', 'poverty', 'housing_insecure'],
+    location: 'Unspecified European kingdom',
+    time_period: 'Once upon a time',
+    systems_touched: ['family hierarchy', 'domestic service', 'marriage market', 'royal court'],
+    dome_layer_richness: { 1: 5, 2: 3, 3: 5, 4: 3, 5: 7, 6: 7, 7: 3, 8: 6, 9: 5, 10: 8, 11: 5, 12: 6 },
+    key_relationships: ['Stepmother', 'Stepsisters', 'Prince', 'Fairy Godmother / Dead mother\'s tree'],
+    narrative_arc: 'Orphan enslaved by her stepmother and forced to do all domestic labor. The ball is her only chance at escape. The glass slipper is the only system that recognizes her. Across hundreds of variants (Chinese, Egyptian, Native American), the core dome is the same: a person whose Layer 10 (Autonomy) is zero until an external force intervenes.',
+    why_this_character_matters: 'Cinderella exists in every culture — the dome of the enslaved child who escapes through marriage. Building her dome reveals what cultures across millennia identified as the minimum viable escape: beauty (cultural capital), an event (access), and a partner (economic rescue). The dome critique: why is marriage the only exit?',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  {
+    name: 'Hansel and Gretel',
+    real_or_fictional: 'fictional',
+    source_work: 'Hansel and Gretel (Grimm)',
+    source_author_creator: 'Brothers Grimm',
+    source_year: 1812,
+    circumstances: ['poverty', 'deep_poverty', 'orphan', 'homeless', 'food_desert', 'child_labor'],
+    location: 'Forest, unnamed European country',
+    time_period: 'Once upon a time (coded: medieval famine)',
+    systems_touched: ['family (failed)', 'forest (no systems)', 'witch (predator)', 'self-rescue'],
+    dome_layer_richness: { 1: 3, 2: 2, 3: 7, 4: 4, 5: 7, 6: 4, 7: 3, 8: 6, 9: 7, 10: 8, 11: 3, 12: 5 },
+    key_relationships: ['Each other', 'Father', 'Stepmother', 'Witch'],
+    narrative_arc: 'Children abandoned in the forest by parents too poor to feed them. They find a house made of food (the most extreme food desert reversal in folklore). The house is a trap — the witch who built it fattens children to eat them. Gretel pushes the witch into the oven and they escape with her gold.',
+    why_this_character_matters: 'Hansel and Gretel is a dome story about famine and predation. Layer 3 (Fiscal — parents can\'t afford food) forces Layer 5 (Housing — abandonment). The witch\'s house is a false dome — all Layer 5, zero Layer 10. The children build their own escape dome by killing the predator and taking the resources.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // MANGA / ANIME
+  // ══════════════════════════════════════════════════════════════════════════════
+
+  {
+    name: 'Setsuko and Seita',
+    real_or_fictional: 'fictional',
+    source_work: 'Grave of the Fireflies',
+    source_author_creator: 'Akiyuki Nosaka (novel) / Isao Takahata (film)',
+    source_year: 1988,
+    circumstances: ['orphan', 'displaced', 'deep_poverty', 'homeless', 'bereavement', 'climate_displaced'],
+    location: 'Kobe, Japan',
+    time_period: '1945',
+    systems_touched: ['military (father, dead)', 'firebombing (US Air Force)', 'aunt\'s household', 'abandoned bomb shelter', 'rationing system', 'schools (collapsed)'],
+    dome_layer_richness: { 1: 5, 2: 5, 3: 7, 4: 8, 5: 9, 6: 4, 7: 4, 8: 8, 9: 9, 10: 7, 11: 5, 12: 8 },
+    key_relationships: ['Each other', 'Aunt', 'Mother (dead)', 'Father (missing, dead)'],
+    narrative_arc: 'Two children orphaned by the firebombing of Kobe. Their aunt doesn\'t want them. They move into an abandoned bomb shelter and try to survive alone. Setsuko starves to death. Seita dies shortly after. Nosaka/Takahata document every meal, every can of food, every calorie — the exact math of starvation in wartime.',
+    why_this_character_matters: 'Setsuko and Seita\'s dome is the most precise documentation of dome collapse from war. Every layer empties in sequence: parents (Layer 8), housing (Layer 5), food (Layer 3), health (Layer 4). The dome tracks the exact order of systems failure when a society itself collapses.',
+    source_urls: [],
+    scraped_at: new Date().toISOString(),
+  },
+]
