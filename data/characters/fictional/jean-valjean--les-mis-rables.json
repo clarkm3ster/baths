@@ -1,0 +1,170 @@
+{
+  "id": "jean-valjean--les-mis-rables",
+  "name": "Jean Valjean",
+  "real_or_fictional": "fictional",
+  "source_work": "Les Misérables",
+  "source_author_creator": "Victor Hugo",
+  "source_year": 1862,
+  "circumstances": [
+    "incarcerated",
+    "formerly_incarcerated",
+    "poverty",
+    "deep_poverty",
+    "homeless",
+    "orphan"
+  ],
+  "location": "Digne, Montreuil-sur-Mer, Paris, France",
+  "time_period": "1815-1832",
+  "systems_touched": [
+    "prison (bagne)",
+    "parole (yellow passport)",
+    "factories",
+    "municipal government",
+    "courts",
+    "sewers",
+    "convents",
+    "barricades"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 6,
+    "3": 8,
+    "4": 5,
+    "5": 8,
+    "6": 8,
+    "7": 4,
+    "8": 8,
+    "9": 6,
+    "10": 9,
+    "11": 4,
+    "12": 9
+  },
+  "key_relationships": [
+    "Cosette",
+    "Fantine",
+    "Javert",
+    "Bishop Myriel",
+    "Marius",
+    "Thénardiers"
+  ],
+  "narrative_arc": "19 years in prison for stealing bread. Hugo documents every system the ex-convict touches — the yellow passport that marks him, the inns that refuse him, the factory he builds, the mayor he becomes, the identity he hides, the daughter he saves. His dome is the most comprehensive fictional tracking of how criminal records shape an entire life.",
+  "why_this_character_matters": "Jean Valjean is the original \"formerly incarcerated person navigating systems\" story. Hugo wrote it specifically to indict the systems that punish poverty. Building Valjean's dome with modern French AND American systems reveals what has and hasn't changed in 160 years.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 6,
+      "3": 8,
+      "4": 5,
+      "5": 10,
+      "6": 9,
+      "7": 4,
+      "8": 8,
+      "9": 6,
+      "10": 9,
+      "11": 4,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "circumstance:formerly_incarcerated",
+        "circumstance-layer:orphan",
+        "system:prison (bagne)",
+        "system:parole (yellow passport)",
+        "system:courts",
+        "explicit:10"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:homeless",
+        "explicit:8"
+      ],
+      "4": [
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "circumstance-layer:orphan",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "keyword:factory",
+        "explicit:8"
+      ],
+      "7": [
+        "keyword:read",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:orphan",
+        "circumstance-layer:homeless",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:identit",
+        "keyword:story",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 88,
+    "average_score": 7.3,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.019Z"
+}

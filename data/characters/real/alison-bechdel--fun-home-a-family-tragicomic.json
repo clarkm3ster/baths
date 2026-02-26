@@ -1,0 +1,161 @@
+{
+  "id": "alison-bechdel--fun-home-a-family-tragicomic",
+  "name": "Alison Bechdel",
+  "real_or_fictional": "real",
+  "source_work": "Fun Home: A Family Tragicomic",
+  "source_author_creator": "Alison Bechdel",
+  "source_year": 2006,
+  "circumstances": [
+    "domestic_violence",
+    "grief",
+    "bereavement",
+    "isolation"
+  ],
+  "location": "Beech Creek, PA",
+  "time_period": "1960s-1980s",
+  "systems_touched": [
+    "funeral home (family business)",
+    "schools",
+    "Oberlin College",
+    "libraries",
+    "churches"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 3,
+    "3": 5,
+    "4": 6,
+    "5": 7,
+    "6": 5,
+    "7": 7,
+    "8": 7,
+    "9": 6,
+    "10": 8,
+    "11": 10,
+    "12": 9
+  },
+  "key_relationships": [
+    "Bruce Bechdel (father)",
+    "Mother",
+    "Brothers",
+    "College friends"
+  ],
+  "narrative_arc": "Growing up in a funeral home with a closeted gay father who renovates their Victorian house obsessively. When Alison comes out as lesbian, her father comes out too — and then dies, probably by suicide. Bechdel documents the house as the central dome — the literal architecture that her father tried to perfect while his internal architecture collapsed.",
+  "why_this_character_matters": "Alison's dome uses the physical house as a metaphor for the dome itself. Layer 5 (Housing) is meticulously maintained (the Victorian restoration) while Layer 10 (Autonomy) is imprisoned (closeted sexuality). Her dome reveals how architecture can perform flourishing while concealing collapse.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 3,
+      "3": 5,
+      "4": 8,
+      "5": 7,
+      "6": 5,
+      "7": 7,
+      "8": 10,
+      "9": 6,
+      "10": 8,
+      "11": 10,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:domestic_violence",
+        "explicit:4"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance-layer:bereavement",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:grief",
+        "circumstance-layer:bereavement",
+        "circumstance-layer:isolation",
+        "explicit:6"
+      ],
+      "5": [
+        "keyword:hous",
+        "keyword:home",
+        "explicit:7"
+      ],
+      "6": [
+        "explicit:5"
+      ],
+      "7": [
+        "system:schools",
+        "system:libraries",
+        "keyword:liter",
+        "explicit:7"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:isolation",
+        "circumstance-layer:grief",
+        "circumstance-layer:bereavement",
+        "system:funeral home (family business)",
+        "system:churches",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:isolation",
+        "keyword:autonomy",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:10"
+      ],
+      "12": [
+        "circumstance:grief",
+        "keyword:flourish",
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 82,
+    "average_score": 6.8,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 10
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.064Z"
+}

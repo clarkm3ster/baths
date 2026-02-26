@@ -1,0 +1,147 @@
+{
+  "id": "jarvious-cotton--the-new-jim-crow-mass-incarceration-in-the-age-of-colorblindness",
+  "name": "Jarvious Cotton",
+  "real_or_fictional": "real",
+  "source_work": "The New Jim Crow: Mass Incarceration in the Age of Colorblindness",
+  "source_author_creator": "Michelle Alexander",
+  "source_year": 2010,
+  "circumstances": [
+    "formerly_incarcerated",
+    "on_probation",
+    "poverty"
+  ],
+  "location": "Mississippi",
+  "time_period": "2000s",
+  "systems_touched": [
+    "criminal justice",
+    "probation",
+    "voting rights",
+    "employment (barriers)"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 6,
+    "3": 5,
+    "4": 3,
+    "5": 4,
+    "6": 7,
+    "7": 4,
+    "8": 6,
+    "9": 3,
+    "10": 8,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Ancestors (each generation denied voting rights by different mechanism)"
+  ],
+  "narrative_arc": "Alexander opens the book with Jarvious Cotton, who cannot vote because of a felony conviction. His father couldn't vote because of poll taxes. His grandfather couldn't vote because of literacy tests. His great-grandfather couldn't vote because of the KKK. His great-great-grandfather couldn't vote because he was a slave. Five generations, five different mechanisms, same result.",
+  "why_this_character_matters": "Jarvious is a genealogical dome — his Layer 1 (Legal) extends across 5 generations, each facing a different legal mechanism achieving the same exclusion. His dome reveals how systems evolve to maintain the same outcome.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 6,
+      "3": 5,
+      "4": 3,
+      "5": 5,
+      "6": 7,
+      "7": 4,
+      "8": 6,
+      "9": 3,
+      "10": 8,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:formerly_incarcerated",
+        "circumstance:on_probation",
+        "system:criminal justice",
+        "system:probation",
+        "keyword:legal",
+        "keyword:conviction",
+        "explicit:10"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "keyword:rent",
+        "explicit:5"
+      ],
+      "4": [
+        "explicit:3"
+      ],
+      "5": [
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:poverty",
+        "keyword:rent",
+        "explicit:4"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "explicit:7"
+      ],
+      "7": [
+        "keyword:liter",
+        "explicit:4"
+      ],
+      "8": [
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "circumstance-layer:on_probation",
+        "explicit:8"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 65,
+    "average_score": 5.4,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 6
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.944Z"
+}

@@ -1,0 +1,152 @@
+{
+  "id": "anthony-ray-hinton--just-mercy-a-story-of-justice-and-redemption",
+  "name": "Anthony Ray Hinton",
+  "real_or_fictional": "real",
+  "source_work": "Just Mercy: A Story of Justice and Redemption",
+  "source_author_creator": "Bryan Stevenson",
+  "source_year": 2014,
+  "circumstances": [
+    "wrongly_convicted",
+    "incarcerated",
+    "poverty"
+  ],
+  "location": "Alabama",
+  "time_period": "1985-2015",
+  "systems_touched": [
+    "criminal justice",
+    "death row",
+    "courts",
+    "prison",
+    "Supreme Court"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": 5,
+    "6": 5,
+    "7": 3,
+    "8": 7,
+    "9": 3,
+    "10": 9,
+    "11": 4,
+    "12": 8
+  },
+  "key_relationships": [
+    "Bryan Stevenson (attorney)",
+    "Mother",
+    "Fellow death row inmates"
+  ],
+  "narrative_arc": "Spent 30 years on death row for crimes he did not commit because his appointed lawyer couldn't afford a proper ballistics expert. Stevenson documents how poverty — the inability to pay for adequate defense — is itself a death sentence.",
+  "why_this_character_matters": "Anthony Ray Hinton spent 30 years in a system that knew he was likely innocent. His dome reveals the fiscal architecture of injustice — the cost of a ballistics expert ($500-$1000) vs. the cost of 30 years on death row.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 4,
+      "3": 6,
+      "4": 5,
+      "5": 5,
+      "6": 5,
+      "7": 3,
+      "8": 7,
+      "9": 3,
+      "10": 9,
+      "11": 4,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:wrongly_convicted",
+        "circumstance:incarcerated",
+        "system:criminal justice",
+        "system:courts",
+        "system:prison",
+        "keyword:sentenc",
+        "keyword:law",
+        "explicit:10"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "keyword:cost",
+        "keyword:pay",
+        "keyword:afford",
+        "explicit:5"
+      ],
+      "4": [
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:poverty",
+        "explicit:5"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:5"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:wrongly_convicted",
+        "explicit:9"
+      ],
+      "11": [
+        "explicit:4"
+      ],
+      "12": [
+        "circumstance:wrongly_convicted",
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 69,
+    "average_score": 5.8,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.928Z"
+}

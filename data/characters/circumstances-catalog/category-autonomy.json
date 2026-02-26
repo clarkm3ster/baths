@@ -1,0 +1,190 @@
+{
+  "category": "autonomy",
+  "types": 4,
+  "total_characters": 23,
+  "entries": [
+    {
+      "type": "child_labor",
+      "category": "autonomy",
+      "layers": [
+        10,
+        7,
+        4
+      ],
+      "description": "Working as a child",
+      "character_count": 10,
+      "real_count": 6,
+      "fictional_count": 4,
+      "example_characters": [
+        {
+          "name": "Dasani Coates",
+          "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Abdul Husain",
+          "source_work": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Richard Wright",
+          "source_work": "Black Boy / American Hunger",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jeannette Walls",
+          "source_work": "The Glass Castle",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Tara Westover",
+          "source_work": "Educated",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "David Wojnarowicz",
+          "source_work": "In the Shadow of the American Dream: The Diaries of David Wojnarowicz",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jurgis Rudkus",
+          "source_work": "The Jungle",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Huckleberry Finn",
+          "source_work": "Adventures of Huckleberry Finn",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Oliver Twist",
+          "source_work": "Oliver Twist",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Hansel and Gretel",
+          "source_work": "Hansel and Gretel (Grimm)",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "surveillance",
+      "category": "autonomy",
+      "layers": [
+        10,
+        1,
+        8
+      ],
+      "description": "Under surveillance or monitoring",
+      "character_count": 6,
+      "real_count": 2,
+      "fictional_count": 4,
+      "example_characters": [
+        {
+          "name": "George Takei (as child)",
+          "source_work": "They Called Us Enemy",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Brisha Borden",
+          "source_work": "Machine Bias (ProPublica)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Offred (June)",
+          "source_work": "The Handmaid's Tale",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Winston Smith",
+          "source_work": "1984",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "K (Josef K.)",
+          "source_work": "The Trial",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Ladj Ly Neighborhood Characters (Les Misérables)",
+          "source_work": "Les Misérables (2019 film)",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "forced_labor",
+      "category": "autonomy",
+      "layers": [
+        10,
+        1,
+        6
+      ],
+      "description": "Compelled to work against will",
+      "character_count": 4,
+      "real_count": 1,
+      "fictional_count": 3,
+      "example_characters": [
+        {
+          "name": "The Trafficked Farm Workers",
+          "source_work": "Trafficked into Forced Labor (Reveal / CIR)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Offred (June)",
+          "source_work": "The Handmaid's Tale",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Winston Smith",
+          "source_work": "1984",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Cinderella",
+          "source_work": "Cinderella (ATU Type 510A — Grimm, Perrault, and hundreds of variants)",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "child_marriage",
+      "category": "autonomy",
+      "layers": [
+        10,
+        1,
+        7
+      ],
+      "description": "Married as a minor",
+      "character_count": 3,
+      "real_count": 1,
+      "fictional_count": 2,
+      "example_characters": [
+        {
+          "name": "Theresa Flores",
+          "source_work": "Senate Judiciary Committee Testimony on Human Trafficking",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Celie",
+          "source_work": "The Color Purple",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Precious Jones",
+          "source_work": "Push",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "pecola-breedlove--the-bluest-eye",
+  "name": "Pecola Breedlove",
+  "real_or_fictional": "fictional",
+  "source_work": "The Bluest Eye",
+  "source_author_creator": "Toni Morrison",
+  "source_year": 1970,
+  "circumstances": [
+    "poverty",
+    "domestic_violence",
+    "trauma",
+    "mental_illness",
+    "foster_care"
+  ],
+  "location": "Lorain, OH",
+  "time_period": "1941",
+  "systems_touched": [
+    "schools",
+    "community",
+    "churches",
+    "informal foster placement"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 3,
+    "3": 5,
+    "4": 7,
+    "5": 6,
+    "6": 5,
+    "7": 6,
+    "8": 8,
+    "9": 5,
+    "10": 9,
+    "11": 4,
+    "12": 6
+  },
+  "key_relationships": [
+    "Cholly Breedlove (father/rapist)",
+    "Pauline Breedlove (mother)",
+    "Claudia and Frieda MacTeer",
+    "Soaphead Church"
+  ],
+  "narrative_arc": "Black girl who prays for blue eyes because she has internalized white beauty standards as a survival strategy. Morrison documents how racism enters through aesthetics — through Dick-and-Jane readers, through Shirley Temple cups, through every cultural message that says Black is ugly. Raped by her father, she retreats into madness.",
+  "why_this_character_matters": "Pecola's dome maps how cultural violence (Layer 11 — Creativity/Identity) can destroy a person more thoroughly than any institutional system. Her dome would show thin institutional layers but devastated human layers.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 3,
+      "3": 5,
+      "4": 8,
+      "5": 6,
+      "6": 5,
+      "7": 6,
+      "8": 10,
+      "9": 5,
+      "10": 9,
+      "11": 5,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:foster_care",
+        "explicit:4"
+      ],
+      "2": [
+        "circumstance:foster_care",
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance:mental_illness",
+        "circumstance-layer:domestic_violence",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:5"
+      ],
+      "7": [
+        "circumstance:foster_care",
+        "system:schools",
+        "keyword:read",
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:foster_care",
+        "circumstance-layer:mental_illness",
+        "system:churches",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:trauma",
+        "circumstance-layer:mental_illness",
+        "keyword:surviv",
+        "explicit:9"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:creat",
+        "keyword:cultur",
+        "keyword:identit",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 72,
+    "average_score": 6,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 6
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.018Z"
+}

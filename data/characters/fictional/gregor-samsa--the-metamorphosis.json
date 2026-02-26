@@ -1,0 +1,158 @@
+{
+  "id": "gregor-samsa--the-metamorphosis",
+  "name": "Gregor Samsa",
+  "real_or_fictional": "fictional",
+  "source_work": "The Metamorphosis",
+  "source_author_creator": "Franz Kafka",
+  "source_year": 1915,
+  "circumstances": [
+    "disability",
+    "isolation",
+    "working_poor",
+    "caregiver"
+  ],
+  "location": "Prague (unspecified city)",
+  "time_period": "1910s",
+  "systems_touched": [
+    "traveling salesman industry",
+    "family as economic unit",
+    "landlords",
+    "domestic service"
+  ],
+  "dome_layer_richness": {
+    "1": 3,
+    "2": 2,
+    "3": 8,
+    "4": 9,
+    "5": 8,
+    "6": 9,
+    "7": 3,
+    "8": 8,
+    "9": 5,
+    "10": 9,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "Grete (sister)",
+    "Parents",
+    "Chief clerk",
+    "Charwoman"
+  ],
+  "narrative_arc": "Wakes up as a giant insect. Kafka documents the economic and social consequences with bureaucratic precision — the missed work, the family's financial ruin, the shrinking room, the family's transformation from dependence to revulsion to abandonment. The metamorphosis is disability rendered as genre.",
+  "why_this_character_matters": "Gregor is disability as architecture. His dome maps what happens when a provider becomes a dependent — every layer inverts. Layer 6 (Economic) collapses, Layer 5 (Housing) contracts to a single room, Layer 8 (Community) shrinks to one sister and then to nobody.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 3,
+      "2": 2,
+      "3": 8,
+      "4": 9,
+      "5": 8,
+      "6": 9,
+      "7": 3,
+      "8": 10,
+      "9": 5,
+      "10": 9,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:3"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:2"
+      ],
+      "3": [
+        "circumstance:working_poor",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:disability",
+        "circumstance-layer:isolation",
+        "circumstance-layer:caregiver",
+        "explicit:9"
+      ],
+      "5": [
+        "circumstance-layer:working_poor",
+        "keyword:hous",
+        "keyword:room",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:working_poor",
+        "circumstance-layer:disability",
+        "circumstance-layer:caregiver",
+        "keyword:work",
+        "explicit:9"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance:isolation",
+        "circumstance:caregiver",
+        "system:family as economic unit",
+        "keyword:communit",
+        "keyword:family",
+        "keyword:social",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:disability",
+        "circumstance-layer:isolation",
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:5"
+      ],
+      "12": [
+        "keyword:transform",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 78,
+    "average_score": 6.5,
+    "dome_minimum": 2,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.020Z"
+}

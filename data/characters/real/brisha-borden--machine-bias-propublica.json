@@ -1,0 +1,148 @@
+{
+  "id": "brisha-borden--machine-bias-propublica",
+  "name": "Brisha Borden",
+  "real_or_fictional": "real",
+  "source_work": "Machine Bias (ProPublica)",
+  "source_author_creator": "Julia Angwin, Jeff Larson, Surya Mattu, Lauren Kirchner",
+  "source_year": 2016,
+  "circumstances": [
+    "formerly_incarcerated",
+    "poverty",
+    "surveillance"
+  ],
+  "location": "Broward County, FL",
+  "time_period": "2013-2014",
+  "systems_touched": [
+    "criminal justice",
+    "COMPAS risk assessment",
+    "courts",
+    "probation"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 7,
+    "3": 5,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 4,
+    "8": 5,
+    "9": 3,
+    "10": 8,
+    "11": 2,
+    "12": 4
+  },
+  "key_relationships": [
+    "Other defendants scored by COMPAS"
+  ],
+  "narrative_arc": "Black woman scored \"high risk\" by the COMPAS algorithm for a minor offense. A white man with a long criminal history scored \"low risk\" for a similar charge. ProPublica documented how the algorithm systematically overestimated Black defendants' risk and underestimated white defendants' risk.",
+  "why_this_character_matters": "Brisha's dome reveals how algorithmic systems (Layer 2) encode racial bias into legal outcomes (Layer 1). Her dome vs. comparable white defendants' domes would show the exact architecture of algorithmic discrimination.",
+  "source_urls": [
+    "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 7,
+      "3": 5,
+      "4": 3,
+      "5": 4,
+      "6": 5,
+      "7": 4,
+      "8": 5,
+      "9": 3,
+      "10": 8,
+      "11": 2,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:formerly_incarcerated",
+        "circumstance:surveillance",
+        "system:criminal justice",
+        "system:courts",
+        "system:probation",
+        "keyword:legal",
+        "explicit:10"
+      ],
+      "2": [
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:5"
+      ],
+      "4": [
+        "explicit:3"
+      ],
+      "5": [
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:poverty",
+        "explicit:4"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "explicit:5"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance-layer:surveillance",
+        "explicit:5"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "circumstance:surveillance",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:story",
+        "explicit:2"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 60,
+    "average_score": 5,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 5
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 5
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.958Z"
+}

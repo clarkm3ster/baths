@@ -1,0 +1,168 @@
+{
+  "id": "philadelphia-lead-poisoned-children--toxic-city-sick-kids-and-dirty-homes-philadelphia-inquirer",
+  "name": "Philadelphia Lead-Poisoned Children",
+  "real_or_fictional": "real",
+  "source_work": "Toxic City: Sick Kids and Dirty Homes (Philadelphia Inquirer)",
+  "source_author_creator": "Barbara Laker, Wendy Ruderman",
+  "source_year": 2017,
+  "circumstances": [
+    "environmental_exposure",
+    "poverty",
+    "housing_insecure",
+    "chronic_illness"
+  ],
+  "location": "Philadelphia, PA (North Philadelphia, Kensington)",
+  "time_period": "2017",
+  "systems_touched": [
+    "health department",
+    "landlords",
+    "code enforcement",
+    "schools",
+    "Medicaid",
+    "early intervention",
+    "lead abatement"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 7,
+    "3": 6,
+    "4": 9,
+    "5": 9,
+    "6": 4,
+    "7": 6,
+    "8": 7,
+    "9": 10,
+    "10": 6,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Parents",
+    "Landlords",
+    "Health department inspectors"
+  ],
+  "narrative_arc": "The Inquirer documented how thousands of Philadelphia children are lead-poisoned every year in rental housing with known lead paint hazards. The city health department knew which properties were dangerous but couldn't force remediation. Landlords kept renting. Children kept getting poisoned.",
+  "why_this_character_matters": "This dome connects BATHS' home geography (Philadelphia, FIPS 42101) to environmental health catastrophe. Layer 9 and Layer 4 are inseparable — the paint in the walls enters the blood of the children who live behind them.",
+  "source_urls": [
+    "https://www.inquirer.com/news/inq/lead-paint-poison-children-asbestos-mold-housing-philadelphia-toxic-city-20170618.html"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 7,
+      "3": 8,
+      "4": 10,
+      "5": 9,
+      "6": 5,
+      "7": 6,
+      "8": 7,
+      "9": 10,
+      "10": 6,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:environmental_exposure",
+        "explicit:7"
+      ],
+      "2": [
+        "system:Medicaid",
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "circumstance-layer:chronic_illness",
+        "keyword:rent",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:environmental_exposure",
+        "circumstance:chronic_illness",
+        "system:Medicaid",
+        "keyword:health",
+        "keyword:pain",
+        "keyword:mental",
+        "explicit:9"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "keyword:home",
+        "keyword:rent",
+        "explicit:9"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "explicit:4"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:6"
+      ],
+      "8": [
+        "keyword:connect",
+        "explicit:7"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "system:health department",
+        "keyword:lead",
+        "keyword:environment",
+        "explicit:10"
+      ],
+      "10": [
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "keyword:paint",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 82,
+    "average_score": 6.8,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.971Z"
+}

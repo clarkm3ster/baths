@@ -1,0 +1,162 @@
+{
+  "id": "matthew-charles--senate-judiciary-committee-testimony-on-first-step-act",
+  "name": "Matthew Charles",
+  "real_or_fictional": "real",
+  "source_work": "Senate Judiciary Committee Testimony on First Step Act",
+  "source_author_creator": "Senate Judiciary Committee",
+  "source_year": 2018,
+  "circumstances": [
+    "formerly_incarcerated",
+    "homeless",
+    "poverty",
+    "addiction"
+  ],
+  "location": "Nashville, TN",
+  "time_period": "1996-2018",
+  "systems_touched": [
+    "federal prison",
+    "courts",
+    "halfway house",
+    "reentry services",
+    "parole",
+    "employment (barriers)",
+    "housing (barriers)"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 8,
+    "3": 7,
+    "4": 5,
+    "5": 8,
+    "6": 8,
+    "7": 6,
+    "8": 7,
+    "9": 4,
+    "10": 8,
+    "11": 4,
+    "12": 7
+  },
+  "key_relationships": [
+    "Church community",
+    "Prison mentees",
+    "Attorneys",
+    "Employers (denied)"
+  ],
+  "narrative_arc": "Served 21 years for federal drug charges, became a model prisoner and mentor, was released, started rebuilding his life, then was ordered back to prison because a court ruled his early release was a clerical error. Re-released under the First Step Act. Testified about what reentry actually requires — and how the system makes it nearly impossible.",
+  "why_this_character_matters": "Matthew was the face of the First Step Act — the first federal sentencing reform in a generation. His dome maps the reentry obstacle course: Layer 1 (legal barriers), Layer 5 (housing denied to felons), Layer 6 (employers who won't hire), all documented in congressional testimony.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 8,
+      "3": 7,
+      "4": 5,
+      "5": 10,
+      "6": 8,
+      "7": 6,
+      "8": 7,
+      "9": 4,
+      "10": 8,
+      "11": 4,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:formerly_incarcerated",
+        "circumstance-layer:addiction",
+        "system:federal prison",
+        "system:courts",
+        "system:parole",
+        "keyword:sentenc",
+        "keyword:legal",
+        "explicit:10"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:poverty",
+        "system:halfway house",
+        "keyword:hous",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "keyword:employ",
+        "explicit:8"
+      ],
+      "7": [
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance-layer:homeless",
+        "circumstance-layer:addiction",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 84,
+    "average_score": 7,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.978Z"
+}

@@ -1,0 +1,184 @@
+{
+  "id": "chanel-sykes--invisible-child-poverty-survival-hope-in-an-american-city",
+  "name": "Chanel Sykes",
+  "real_or_fictional": "real",
+  "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+  "source_author_creator": "Andrea Elliott",
+  "source_year": 2021,
+  "circumstances": [
+    "homeless",
+    "addiction",
+    "poverty",
+    "domestic_violence",
+    "shelter",
+    "mental_illness",
+    "single_parent"
+  ],
+  "location": "Brooklyn, NY",
+  "time_period": "2003-2020",
+  "systems_touched": [
+    "shelters",
+    "child welfare",
+    "courts",
+    "rehab",
+    "welfare",
+    "Medicaid",
+    "SNAP",
+    "public housing waitlist"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 9,
+    "3": 8,
+    "4": 8,
+    "5": 10,
+    "6": 6,
+    "7": 4,
+    "8": 7,
+    "9": 6,
+    "10": 6,
+    "11": 4,
+    "12": 4
+  },
+  "key_relationships": [
+    "Dasani (daughter)",
+    "Supreme (partner)",
+    "7 children",
+    "Shelter staff",
+    "Case workers"
+  ],
+  "narrative_arc": "Mother of 8 navigating the shelter system while battling addiction, domestic violence, and child welfare investigations. Elliott documents the impossible calculus: comply with every agency requirement while housed in a building with no kitchen, no privacy, and constant surveillance.",
+  "why_this_character_matters": "Chanel is the adult counterpart to Dasani — her dome shows the parent side of family homelessness, where every system demands compliance while providing contradictory instructions and insufficient resources.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 10,
+      "3": 8,
+      "4": 10,
+      "5": 10,
+      "6": 6,
+      "7": 4,
+      "8": 10,
+      "9": 6,
+      "10": 6,
+      "11": 4,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "circumstance-layer:domestic_violence",
+        "system:courts",
+        "explicit:7"
+      ],
+      "2": [
+        "circumstance-layer:shelter",
+        "system:child welfare",
+        "system:welfare",
+        "system:Medicaid",
+        "system:SNAP",
+        "explicit:9"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:single_parent",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance:mental_illness",
+        "circumstance-layer:domestic_violence",
+        "system:rehab",
+        "system:Medicaid",
+        "keyword:addict",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance:shelter",
+        "circumstance-layer:poverty",
+        "system:shelters",
+        "system:public housing waitlist",
+        "keyword:hous",
+        "keyword:home",
+        "keyword:rent",
+        "keyword:shelter",
+        "keyword:homeless",
+        "explicit:10"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:single_parent",
+        "explicit:6"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:single_parent",
+        "circumstance-layer:homeless",
+        "circumstance-layer:addiction",
+        "circumstance-layer:mental_illness",
+        "keyword:family",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:mental_illness",
+        "keyword:agency",
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:art",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 85,
+    "average_score": 7.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.920Z"
+}

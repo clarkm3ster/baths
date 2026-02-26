@@ -1,0 +1,170 @@
+{
+  "id": "oliver-twist--oliver-twist",
+  "name": "Oliver Twist",
+  "real_or_fictional": "fictional",
+  "source_work": "Oliver Twist",
+  "source_author_creator": "Charles Dickens",
+  "source_year": 1838,
+  "circumstances": [
+    "orphan",
+    "poverty",
+    "deep_poverty",
+    "child_labor",
+    "institutionalized",
+    "homeless"
+  ],
+  "location": "London, England (workhouse, Fagin's den, Brownlow house)",
+  "time_period": "1830s",
+  "systems_touched": [
+    "workhouse",
+    "parish system",
+    "apprenticeship",
+    "criminal underworld",
+    "courts",
+    "magistrates"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 8,
+    "3": 6,
+    "4": 6,
+    "5": 8,
+    "6": 7,
+    "7": 4,
+    "8": 8,
+    "9": 7,
+    "10": 8,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Fagin",
+    "Bill Sikes",
+    "Nancy",
+    "The Artful Dodger",
+    "Mr. Brownlow",
+    "Monks"
+  ],
+  "narrative_arc": "Orphan born in a workhouse, sold as an apprentice, runs away to London, recruited by a criminal gang, rescued by a gentleman. Dickens documents the Victorian child welfare system as a pipeline from workhouse to crime — every \"rescue\" just moves Oliver to a different form of exploitation.",
+  "why_this_character_matters": "Oliver is the original child systems-navigation story. Dickens wrote it to indict the New Poor Law. Building Oliver's dome with both Victorian and modern systems reveals whether the workhouse-to-crime pipeline still exists (it does — it's now the foster-care-to-prison pipeline).",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 8,
+      "3": 9,
+      "4": 6,
+      "5": 10,
+      "6": 10,
+      "7": 4,
+      "8": 8,
+      "9": 7,
+      "10": 8,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:orphan",
+        "circumstance-layer:institutionalized",
+        "system:courts",
+        "keyword:law",
+        "explicit:7"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:homeless",
+        "keyword:rent",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance-layer:child_labor",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:institutionalized",
+        "circumstance:homeless",
+        "circumstance-layer:orphan",
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "keyword:hous",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance:child_labor",
+        "keyword:work",
+        "explicit:7"
+      ],
+      "7": [
+        "circumstance-layer:child_labor",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:orphan",
+        "circumstance-layer:homeless",
+        "keyword:gang",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:institutionalized",
+        "circumstance-layer:child_labor",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:story",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 85,
+    "average_score": 7.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 9
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.022Z"
+}

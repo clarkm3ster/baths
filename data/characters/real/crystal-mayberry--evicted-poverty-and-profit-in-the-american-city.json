@@ -1,0 +1,168 @@
+{
+  "id": "crystal-mayberry--evicted-poverty-and-profit-in-the-american-city",
+  "name": "Crystal Mayberry",
+  "real_or_fictional": "real",
+  "source_work": "Evicted: Poverty and Profit in the American City",
+  "source_author_creator": "Matthew Desmond",
+  "source_year": 2016,
+  "circumstances": [
+    "evicted",
+    "foster_care",
+    "homeless",
+    "deep_poverty",
+    "trauma",
+    "isolation"
+  ],
+  "location": "Milwaukee, WI",
+  "time_period": "2008-2009",
+  "systems_touched": [
+    "foster care",
+    "shelters",
+    "landlord-tenant court",
+    "welfare",
+    "job training programs"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 7,
+    "3": 6,
+    "4": 5,
+    "5": 9,
+    "6": 6,
+    "7": 3,
+    "8": 8,
+    "9": 4,
+    "10": 7,
+    "11": 2,
+    "12": 5
+  },
+  "key_relationships": [
+    "Arleen Belle",
+    "Various landlords"
+  ],
+  "narrative_arc": "Aged out of foster care at 18 into homelessness. No safety net caught her. Cycles through shelters, doubled-up situations, and evictions. The system that was supposed to protect her as a child released her into a housing market she could not navigate alone.",
+  "why_this_character_matters": "Crystal represents the foster-care-to-homelessness pipeline. Her dome would reveal the catastrophic gap between child welfare and adult housing systems — the moment the state stops being responsible for you.",
+  "source_urls": [
+    "https://www.evictedbook.com/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 7,
+      "3": 7,
+      "4": 5,
+      "5": 10,
+      "6": 6,
+      "7": 3,
+      "8": 8,
+      "9": 4,
+      "10": 7,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:evicted",
+        "circumstance-layer:foster_care",
+        "explicit:5"
+      ],
+      "2": [
+        "circumstance:foster_care",
+        "system:welfare",
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:deep_poverty",
+        "circumstance-layer:evicted",
+        "circumstance-layer:homeless",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:isolation",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:evicted",
+        "circumstance:homeless",
+        "circumstance-layer:deep_poverty",
+        "system:shelters",
+        "system:landlord-tenant court",
+        "keyword:hous",
+        "keyword:home",
+        "keyword:evict",
+        "keyword:shelter",
+        "keyword:homeless",
+        "explicit:9"
+      ],
+      "6": [
+        "circumstance:deep_poverty",
+        "system:job training programs",
+        "explicit:6"
+      ],
+      "7": [
+        "circumstance:foster_care",
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance:foster_care",
+        "circumstance:isolation",
+        "circumstance-layer:homeless",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "circumstance-layer:trauma",
+        "circumstance-layer:isolation",
+        "explicit:7"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:sing",
+        "explicit:2"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 70,
+    "average_score": 5.8,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.908Z"
+}

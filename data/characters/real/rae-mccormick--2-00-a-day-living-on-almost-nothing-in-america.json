@@ -1,0 +1,158 @@
+{
+  "id": "rae-mccormick--2-00-a-day-living-on-almost-nothing-in-america",
+  "name": "Rae McCormick",
+  "real_or_fictional": "real",
+  "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+  "source_author_creator": "Kathryn Edin & H. Luke Shaefer",
+  "source_year": 2015,
+  "circumstances": [
+    "deep_poverty",
+    "single_parent",
+    "housing_insecure",
+    "disability",
+    "environmental_exposure"
+  ],
+  "location": "Johnson City, TN",
+  "time_period": "2012-2013",
+  "systems_touched": [
+    "SNAP",
+    "SSI",
+    "welfare",
+    "schools",
+    "charity organizations",
+    "plasma donation centers"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 7,
+    "3": 10,
+    "4": 6,
+    "5": 7,
+    "6": 7,
+    "7": 5,
+    "8": 6,
+    "9": 5,
+    "10": 5,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Children",
+    "Extended family"
+  ],
+  "narrative_arc": "Sells plasma to feed her children. Edin and Shaefer document the literal marketplace of the body — how the poorest Americans convert their blood into food money, twice a week, at $30 per donation.",
+  "why_this_character_matters": "Rae's dome reveals the plasma economy — a multi-billion dollar industry built on the blood of people in extreme poverty. Layer 4 (Health) and Layer 3 (Fiscal) intersect in her body.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 7,
+      "3": 10,
+      "4": 7,
+      "5": 7,
+      "6": 7,
+      "7": 5,
+      "8": 6,
+      "9": 5,
+      "10": 5,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:environmental_exposure",
+        "explicit:4"
+      ],
+      "2": [
+        "system:SNAP",
+        "system:welfare",
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:deep_poverty",
+        "circumstance-layer:single_parent",
+        "circumstance-layer:housing_insecure",
+        "keyword:money",
+        "keyword:bill",
+        "explicit:10"
+      ],
+      "4": [
+        "circumstance:disability",
+        "circumstance:environmental_exposure",
+        "keyword:health",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:deep_poverty",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:deep_poverty",
+        "circumstance-layer:single_parent",
+        "circumstance-layer:disability",
+        "explicit:7"
+      ],
+      "7": [
+        "system:schools",
+        "keyword:liter",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:single_parent",
+        "explicit:6"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:disability",
+        "explicit:5"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 70,
+    "average_score": 5.8,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.938Z"
+}

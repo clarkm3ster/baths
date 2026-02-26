@@ -1,0 +1,162 @@
+{
+  "id": "the-opioid-prescribed-patients-of-wv--the-pain-hustlers-opioid-files-multiple-outlets",
+  "name": "The Opioid-Prescribed Patients of WV",
+  "real_or_fictional": "real",
+  "source_work": "The Pain Hustlers / Opioid Files (multiple outlets)",
+  "source_author_creator": "Evan Hughes, Scott Higham (WaPo), Eric Eyre (Charleston Gazette-Mail)",
+  "source_year": 2018,
+  "circumstances": [
+    "addiction",
+    "chronic_illness",
+    "poverty",
+    "disability",
+    "bereavement"
+  ],
+  "location": "West Virginia (Mingo, Logan, Kermit)",
+  "time_period": "2006-2016",
+  "systems_touched": [
+    "pharmacies",
+    "pain clinics",
+    "DEA",
+    "Medicaid",
+    "hospitals",
+    "funeral homes",
+    "disability system"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 7,
+    "3": 7,
+    "4": 10,
+    "5": 5,
+    "6": 7,
+    "7": 4,
+    "8": 8,
+    "9": 5,
+    "10": 6,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Doctors",
+    "Pharmacists",
+    "Drug distributors",
+    "Families of deceased"
+  ],
+  "narrative_arc": "Eric Eyre documented that drug companies shipped 780 million opioid pills to West Virginia in 6 years — enough for 433 pills per person. The Charleston Gazette-Mail revealed that in Kermit (population 392), a single pharmacy received 9 million hydrocodone pills in 2 years. The patients who received these prescriptions were overwhelmingly on Medicaid and disability.",
+  "why_this_character_matters": "This dome maps the pharmaceutical supply chain as it enters the body. Layer 4 (Health) shows the medical system as drug delivery mechanism. Layer 3 (Fiscal) shows Medicaid paying for the pills that killed its own enrollees.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 7,
+      "3": 8,
+      "4": 10,
+      "5": 5,
+      "6": 7,
+      "7": 4,
+      "8": 8,
+      "9": 5,
+      "10": 6,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "explicit:7"
+      ],
+      "2": [
+        "system:Medicaid",
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:bereavement",
+        "keyword:pay",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance:chronic_illness",
+        "circumstance:disability",
+        "circumstance-layer:bereavement",
+        "system:pain clinics",
+        "system:Medicaid",
+        "system:hospitals",
+        "keyword:health",
+        "explicit:10"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:5"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:disability",
+        "explicit:7"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance-layer:addiction",
+        "circumstance-layer:bereavement",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:disability",
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 75,
+    "average_score": 6.3,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.976Z"
+}

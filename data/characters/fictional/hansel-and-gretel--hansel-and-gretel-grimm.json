@@ -1,0 +1,165 @@
+{
+  "id": "hansel-and-gretel--hansel-and-gretel-grimm",
+  "name": "Hansel and Gretel",
+  "real_or_fictional": "fictional",
+  "source_work": "Hansel and Gretel (Grimm)",
+  "source_author_creator": "Brothers Grimm",
+  "source_year": 1812,
+  "circumstances": [
+    "poverty",
+    "deep_poverty",
+    "orphan",
+    "homeless",
+    "food_desert",
+    "child_labor"
+  ],
+  "location": "Forest, unnamed European country",
+  "time_period": "Once upon a time (coded: medieval famine)",
+  "systems_touched": [
+    "family (failed)",
+    "forest (no systems)",
+    "witch (predator)",
+    "self-rescue"
+  ],
+  "dome_layer_richness": {
+    "1": 3,
+    "2": 2,
+    "3": 7,
+    "4": 4,
+    "5": 7,
+    "6": 4,
+    "7": 3,
+    "8": 6,
+    "9": 7,
+    "10": 8,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Each other",
+    "Father",
+    "Stepmother",
+    "Witch"
+  ],
+  "narrative_arc": "Children abandoned in the forest by parents too poor to feed them. They find a house made of food (the most extreme food desert reversal in folklore). The house is a trap — the witch who built it fattens children to eat them. Gretel pushes the witch into the oven and they escape with her gold.",
+  "why_this_character_matters": "Hansel and Gretel is a dome story about famine and predation. Layer 3 (Fiscal — parents can't afford food) forces Layer 5 (Housing — abandonment). The witch's house is a false dome — all Layer 5, zero Layer 10. The children build their own escape dome by killing the predator and taking the resources.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 3,
+      "2": 2,
+      "3": 10,
+      "4": 4,
+      "5": 10,
+      "6": 10,
+      "7": 3,
+      "8": 7,
+      "9": 7,
+      "10": 8,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:orphan",
+        "explicit:3"
+      ],
+      "2": [
+        "explicit:2"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:homeless",
+        "keyword:rent",
+        "keyword:afford",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:food_desert",
+        "circumstance-layer:child_labor",
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "circumstance-layer:orphan",
+        "keyword:hous",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance:child_labor",
+        "circumstance-layer:food_desert",
+        "explicit:4"
+      ],
+      "7": [
+        "circumstance-layer:child_labor",
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance:orphan",
+        "circumstance-layer:homeless",
+        "system:family (failed)",
+        "explicit:6"
+      ],
+      "9": [
+        "circumstance:food_desert",
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance-layer:child_labor",
+        "keyword:escape",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:sing",
+        "keyword:story",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 72,
+    "average_score": 6,
+    "dome_minimum": 2,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.067Z"
+}

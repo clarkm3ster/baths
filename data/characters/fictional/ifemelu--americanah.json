@@ -1,0 +1,162 @@
+{
+  "id": "ifemelu--americanah",
+  "name": "Ifemelu",
+  "real_or_fictional": "fictional",
+  "source_work": "Americanah",
+  "source_author_creator": "Chimamanda Ngozi Adichie",
+  "source_year": 2013,
+  "circumstances": [
+    "immigrant",
+    "poverty",
+    "working_poor",
+    "housing_insecure",
+    "undocumented"
+  ],
+  "location": "Lagos, Nigeria → Philadelphia, PA; Princeton, NJ; Baltimore, MD",
+  "time_period": "1990s-2010s",
+  "systems_touched": [
+    "universities",
+    "immigration (visa), babysitting economy",
+    "hair salons",
+    "blogging",
+    "Trenton DMV"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 6,
+    "3": 7,
+    "4": 4,
+    "5": 6,
+    "6": 7,
+    "7": 8,
+    "8": 7,
+    "9": 4,
+    "10": 7,
+    "11": 8,
+    "12": 7
+  },
+  "key_relationships": [
+    "Obinze",
+    "Aunty Uju",
+    "Dike (cousin)",
+    "Curt",
+    "Blaine"
+  ],
+  "narrative_arc": "Nigerian woman navigating American immigration, race, and class. Adichie documents the practical mechanics of immigrant survival — expired visas, borrowed Social Security numbers, the hair salon economy, the discovery that she is \"Black\" in America in a way she never was in Nigeria.",
+  "why_this_character_matters": "Ifemelu's dome maps how race is a system, not just an identity. Her Layer 1 (Legal — immigration status) and Layer 8 (Community — racial classification) are completely reconfigured by crossing a border. Building her dome with real Philadelphia systems reveals the immigrant experience at ground level.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 6,
+      "3": 8,
+      "4": 4,
+      "5": 7,
+      "6": 10,
+      "7": 8,
+      "8": 7,
+      "9": 4,
+      "10": 7,
+      "11": 8,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:undocumented",
+        "circumstance-layer:immigrant",
+        "system:immigration (visa), babysitting economy",
+        "keyword:legal",
+        "explicit:7"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance-layer:housing_insecure",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:undocumented",
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "circumstance-layer:working_poor",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance-layer:immigrant",
+        "circumstance-layer:undocumented",
+        "explicit:7"
+      ],
+      "7": [
+        "keyword:class",
+        "explicit:8"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "keyword:communit",
+        "keyword:social",
+        "explicit:7"
+      ],
+      "9": [
+        "keyword:air",
+        "explicit:4"
+      ],
+      "10": [
+        "keyword:surviv",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:sing",
+        "keyword:identit",
+        "explicit:8"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 84,
+    "average_score": 7,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 8
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.029Z"
+}

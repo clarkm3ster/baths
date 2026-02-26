@@ -1,0 +1,205 @@
+{
+  "updated_at": "2026-02-26T21:44:52.160Z",
+  "total": 33,
+  "unresolved": 33,
+  "queue": [
+    {
+      "id": "invisible-man",
+      "referenced_by": "native-son",
+      "queued_at": "2026-02-26T21:44:39.008Z",
+      "searched": false
+    },
+    {
+      "id": "the-bluest-eye",
+      "referenced_by": "native-son",
+      "queued_at": "2026-02-26T21:44:39.008Z",
+      "searched": false
+    },
+    {
+      "id": "between-the-world-and-me",
+      "referenced_by": "native-son",
+      "queued_at": "2026-02-26T21:44:39.008Z",
+      "searched": false
+    },
+    {
+      "id": "the-grapes-of-wrath",
+      "referenced_by": "the-jungle",
+      "queued_at": "2026-02-26T21:44:39.009Z",
+      "searched": false
+    },
+    {
+      "id": "nickel-and-dimed",
+      "referenced_by": "the-jungle",
+      "queued_at": "2026-02-26T21:44:39.009Z",
+      "searched": false
+    },
+    {
+      "id": "fast-food-nation",
+      "referenced_by": "the-jungle",
+      "queued_at": "2026-02-26T21:44:39.009Z",
+      "searched": false
+    },
+    {
+      "id": "beloved",
+      "referenced_by": "the-color-purple",
+      "queued_at": "2026-02-26T21:44:39.012Z",
+      "searched": false
+    },
+    {
+      "id": "their-eyes-were-watching-god",
+      "referenced_by": "the-color-purple",
+      "queued_at": "2026-02-26T21:44:39.012Z",
+      "searched": false
+    },
+    {
+      "id": "kindred",
+      "referenced_by": "beloved",
+      "queued_at": "2026-02-26T21:44:39.013Z",
+      "searched": false
+    },
+    {
+      "id": "the-underground-railroad",
+      "referenced_by": "beloved",
+      "queued_at": "2026-02-26T21:44:39.013Z",
+      "searched": false
+    },
+    {
+      "id": "1984",
+      "referenced_by": "the-handmaids-tale",
+      "queued_at": "2026-02-26T21:44:39.016Z",
+      "searched": false
+    },
+    {
+      "id": "brave-new-world",
+      "referenced_by": "the-handmaids-tale",
+      "queued_at": "2026-02-26T21:44:39.016Z",
+      "searched": false
+    },
+    {
+      "id": "the-power",
+      "referenced_by": "the-handmaids-tale",
+      "queued_at": "2026-02-26T21:44:39.016Z",
+      "searched": false
+    },
+    {
+      "id": "minding-the-gap",
+      "referenced_by": "hoop-dreams",
+      "queued_at": "2026-02-26T21:44:39.034Z",
+      "searched": false
+    },
+    {
+      "id": "dark-days",
+      "referenced_by": "hoop-dreams",
+      "queued_at": "2026-02-26T21:44:39.034Z",
+      "searched": false
+    },
+    {
+      "id": "the-interrupters",
+      "referenced_by": "hoop-dreams",
+      "queued_at": "2026-02-26T21:44:39.034Z",
+      "searched": false
+    },
+    {
+      "id": "the-staircase",
+      "referenced_by": "making-a-murderer",
+      "queued_at": "2026-02-26T21:44:39.037Z",
+      "searched": false
+    },
+    {
+      "id": "the-innocence-files",
+      "referenced_by": "making-a-murderer",
+      "queued_at": "2026-02-26T21:44:39.037Z",
+      "searched": false
+    },
+    {
+      "id": "serial",
+      "referenced_by": "making-a-murderer",
+      "queued_at": "2026-02-26T21:44:39.037Z",
+      "searched": false
+    },
+    {
+      "id": "the-corner",
+      "referenced_by": "the-wire",
+      "queued_at": "2026-02-26T21:44:39.041Z",
+      "searched": false
+    },
+    {
+      "id": "homicide-a-year-on-the-killing-streets",
+      "referenced_by": "the-wire",
+      "queued_at": "2026-02-26T21:44:39.041Z",
+      "searched": false
+    },
+    {
+      "id": "we-own-this-city",
+      "referenced_by": "the-wire",
+      "queued_at": "2026-02-26T21:44:39.041Z",
+      "searched": false
+    },
+    {
+      "id": "roma",
+      "referenced_by": "parasite",
+      "queued_at": "2026-02-26T21:44:39.045Z",
+      "searched": false
+    },
+    {
+      "id": "shoplifters",
+      "referenced_by": "parasite",
+      "queued_at": "2026-02-26T21:44:39.045Z",
+      "searched": false
+    },
+    {
+      "id": "capernaum",
+      "referenced_by": "parasite",
+      "queued_at": "2026-02-26T21:44:39.045Z",
+      "searched": false
+    },
+    {
+      "id": "fences",
+      "referenced_by": "death-of-a-salesman",
+      "queued_at": "2026-02-26T21:44:39.050Z",
+      "searched": false
+    },
+    {
+      "id": "glengarry-glen-ross",
+      "referenced_by": "death-of-a-salesman",
+      "queued_at": "2026-02-26T21:44:39.050Z",
+      "searched": false
+    },
+    {
+      "id": "a-raisin-in-the-sun",
+      "referenced_by": "death-of-a-salesman",
+      "queued_at": "2026-02-26T21:44:39.050Z",
+      "searched": false
+    },
+    {
+      "id": "the-glass-menagerie",
+      "referenced_by": "a-streetcar-named-desire",
+      "queued_at": "2026-02-26T21:44:39.051Z",
+      "searched": false
+    },
+    {
+      "id": "cat-on-a-hot-tin-roof",
+      "referenced_by": "a-streetcar-named-desire",
+      "queued_at": "2026-02-26T21:44:39.051Z",
+      "searched": false
+    },
+    {
+      "id": "persepolis",
+      "referenced_by": "maus",
+      "queued_at": "2026-02-26T21:44:39.062Z",
+      "searched": false
+    },
+    {
+      "id": "fun-home",
+      "referenced_by": "maus",
+      "queued_at": "2026-02-26T21:44:39.062Z",
+      "searched": false
+    },
+    {
+      "id": "march",
+      "referenced_by": "maus",
+      "queued_at": "2026-02-26T21:44:39.062Z",
+      "searched": false
+    }
+  ]
+}

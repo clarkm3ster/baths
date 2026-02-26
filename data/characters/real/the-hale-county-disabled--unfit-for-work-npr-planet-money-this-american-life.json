@@ -1,0 +1,160 @@
+{
+  "id": "the-hale-county-disabled--unfit-for-work-npr-planet-money-this-american-life",
+  "name": "The Hale County Disabled",
+  "real_or_fictional": "real",
+  "source_work": "Unfit for Work (NPR Planet Money / This American Life)",
+  "source_author_creator": "Chana Joffe-Walt",
+  "source_year": 2013,
+  "circumstances": [
+    "disability",
+    "poverty",
+    "unemployed",
+    "chronic_illness"
+  ],
+  "location": "Hale County, AL",
+  "time_period": "2013",
+  "systems_touched": [
+    "SSI",
+    "SSDI",
+    "disability determination",
+    "disability attorneys",
+    "Medicaid",
+    "schools",
+    "factories (closed)"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 9,
+    "3": 8,
+    "4": 8,
+    "5": 5,
+    "6": 9,
+    "7": 5,
+    "8": 7,
+    "9": 5,
+    "10": 6,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Disability attorneys",
+    "Case workers",
+    "Former employers"
+  ],
+  "narrative_arc": "In Hale County, Alabama, 1 in 4 working-age adults is on disability. Not because they're faking — because the factories closed and disability became the only remaining safety net. Joffe-Walt documents the system that converts unemployed people into disabled people because there is no other category for them.",
+  "why_this_character_matters": "This dome reveals how Layer 6 (Economic) collapse forces people into Layer 4 (Health) systems. When work disappears, disability becomes the only remaining door. The dome maps the economics of deindustrialization as a health condition.",
+  "source_urls": [
+    "https://apps.npr.org/unfit-for-work/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 9,
+      "3": 8,
+      "4": 10,
+      "5": 5,
+      "6": 10,
+      "7": 5,
+      "8": 7,
+      "9": 5,
+      "10": 6,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "keyword:trial",
+        "explicit:6"
+      ],
+      "2": [
+        "system:Medicaid",
+        "explicit:9"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:unemployed",
+        "circumstance-layer:chronic_illness",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:disability",
+        "circumstance:chronic_illness",
+        "system:Medicaid",
+        "keyword:health",
+        "keyword:disabl",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:5"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:unemployed",
+        "circumstance-layer:disability",
+        "circumstance-layer:chronic_illness",
+        "keyword:work",
+        "keyword:employ",
+        "explicit:9"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance-layer:unemployed",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:disability",
+        "explicit:6"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 78,
+    "average_score": 6.5,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.968Z"
+}

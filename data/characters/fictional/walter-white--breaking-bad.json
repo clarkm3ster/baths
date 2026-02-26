@@ -1,0 +1,168 @@
+{
+  "id": "walter-white--breaking-bad",
+  "name": "Walter White",
+  "real_or_fictional": "fictional",
+  "source_work": "Breaking Bad",
+  "source_author_creator": "Vince Gilligan",
+  "source_year": 2008,
+  "circumstances": [
+    "terminal_illness",
+    "debt",
+    "working_poor",
+    "uninsured"
+  ],
+  "location": "Albuquerque, NM",
+  "time_period": "2008-2010",
+  "systems_touched": [
+    "public schools (teacher)",
+    "hospitals",
+    "insurance (insufficient)",
+    "car wash (second job)",
+    "DEA",
+    "criminal justice",
+    "drug economy"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 5,
+    "3": 10,
+    "4": 10,
+    "5": 6,
+    "6": 8,
+    "7": 8,
+    "8": 7,
+    "9": 5,
+    "10": 8,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "Skyler (wife)",
+    "Walter Jr. (son)",
+    "Jesse Pinkman",
+    "Hank Schrader (DEA brother-in-law)",
+    "Gustavo Fring"
+  ],
+  "narrative_arc": "Chemistry teacher diagnosed with cancer who can't afford treatment on his salary. Gilligan documents the fiscal architecture that drives the plot — the exact gap between a teacher's insurance and cancer treatment costs, the second job at a car wash, the student loan debt, the new baby. Walter doesn't cook meth because he's evil; he cooks meth because the healthcare system is broken.",
+  "why_this_character_matters": "Walter White is the most famous fictional argument that the American healthcare system creates crime. His dome's Layer 3 (Fiscal) and Layer 4 (Health) gap IS the entire plot. Building his dome with real ACA-era insurance reveals whether his story is still possible.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 5,
+      "3": 10,
+      "4": 10,
+      "5": 6,
+      "6": 8,
+      "7": 8,
+      "8": 7,
+      "9": 5,
+      "10": 8,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:debt",
+        "system:criminal justice",
+        "explicit:8"
+      ],
+      "2": [
+        "circumstance-layer:uninsured",
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:debt",
+        "circumstance:working_poor",
+        "circumstance-layer:terminal_illness",
+        "circumstance-layer:uninsured",
+        "keyword:cost",
+        "keyword:debt",
+        "keyword:afford",
+        "keyword:loan",
+        "explicit:10"
+      ],
+      "4": [
+        "circumstance:terminal_illness",
+        "circumstance:uninsured",
+        "system:hospitals",
+        "system:insurance (insufficient)",
+        "keyword:health",
+        "keyword:diagnos",
+        "keyword:treatment",
+        "explicit:10"
+      ],
+      "5": [
+        "circumstance-layer:working_poor",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:debt",
+        "circumstance:working_poor",
+        "keyword:job",
+        "explicit:8"
+      ],
+      "7": [
+        "system:public schools (teacher)",
+        "keyword:teach",
+        "keyword:student",
+        "explicit:8"
+      ],
+      "8": [
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:creat",
+        "keyword:story",
+        "explicit:5"
+      ],
+      "12": [
+        "circumstance:terminal_illness",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 87,
+    "average_score": 7.3,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.043Z"
+}

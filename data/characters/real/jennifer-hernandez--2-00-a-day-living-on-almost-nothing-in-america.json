@@ -1,0 +1,163 @@
+{
+  "id": "jennifer-hernandez--2-00-a-day-living-on-almost-nothing-in-america",
+  "name": "Jennifer Hernandez",
+  "real_or_fictional": "real",
+  "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+  "source_author_creator": "Kathryn Edin & H. Luke Shaefer",
+  "source_year": 2015,
+  "circumstances": [
+    "deep_poverty",
+    "single_parent",
+    "housing_insecure",
+    "domestic_violence",
+    "trauma"
+  ],
+  "location": "Chicago, IL",
+  "time_period": "2012-2013",
+  "systems_touched": [
+    "TANF",
+    "SNAP",
+    "shelters",
+    "domestic violence services",
+    "welfare",
+    "child welfare"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 8,
+    "3": 10,
+    "4": 5,
+    "5": 8,
+    "6": 7,
+    "7": 4,
+    "8": 6,
+    "9": 5,
+    "10": 6,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Children",
+    "Abusive partner",
+    "Shelter staff"
+  ],
+  "narrative_arc": "Living on literally $2 a day with children after fleeing domestic violence. Edin and Shaefer document the precise economics of extreme poverty — how you eat, where you sleep, what you sell, what you trade when money runs out completely.",
+  "why_this_character_matters": "Jennifer's dome fills Layer 3 (Fiscal) with more precision than any other character. The documentation of how someone survives on $2/day reveals the shadow economy that formal systems don't see.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 8,
+      "3": 10,
+      "4": 5,
+      "5": 8,
+      "6": 7,
+      "7": 4,
+      "8": 6,
+      "9": 5,
+      "10": 6,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:domestic_violence",
+        "explicit:5"
+      ],
+      "2": [
+        "system:SNAP",
+        "system:welfare",
+        "system:child welfare",
+        "keyword:form",
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance:deep_poverty",
+        "circumstance-layer:single_parent",
+        "circumstance-layer:housing_insecure",
+        "keyword:money",
+        "explicit:10"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:domestic_violence",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:deep_poverty",
+        "system:shelters",
+        "keyword:sleep",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:deep_poverty",
+        "circumstance-layer:single_parent",
+        "system:TANF",
+        "explicit:7"
+      ],
+      "7": [
+        "keyword:liter",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:single_parent",
+        "circumstance:domestic_violence",
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:trauma",
+        "keyword:surviv",
+        "explicit:6"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 71,
+    "average_score": 5.9,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.936Z"
+}

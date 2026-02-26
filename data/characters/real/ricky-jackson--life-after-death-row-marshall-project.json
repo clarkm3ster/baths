@@ -1,0 +1,167 @@
+{
+  "id": "ricky-jackson--life-after-death-row-marshall-project",
+  "name": "Ricky Jackson",
+  "real_or_fictional": "real",
+  "source_work": "Life After Death Row (Marshall Project)",
+  "source_author_creator": "Maurice Chammah",
+  "source_year": 2015,
+  "circumstances": [
+    "wrongly_convicted",
+    "incarcerated",
+    "formerly_incarcerated",
+    "poverty",
+    "housing_insecure",
+    "isolation"
+  ],
+  "location": "Cleveland, OH",
+  "time_period": "1975-2014",
+  "systems_touched": [
+    "criminal justice",
+    "prison",
+    "Ohio Innocence Project",
+    "reentry services",
+    "SSI",
+    "housing assistance"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 7,
+    "3": 7,
+    "4": 6,
+    "5": 7,
+    "6": 8,
+    "7": 4,
+    "8": 7,
+    "9": 4,
+    "10": 9,
+    "11": 4,
+    "12": 7
+  },
+  "key_relationships": [
+    "Brothers (also convicted)",
+    "Eddie Vernon (false witness)",
+    "Attorneys"
+  ],
+  "narrative_arc": "Spent 39 years in prison — the longest wrongful imprisonment in US history — based on the testimony of a 12-year-old who recanted. Released at 57 into a world he didn't recognize, with no smartphone skills, no work history, no housing, and $75 from the state. The Marshall Project documented his reentry.",
+  "why_this_character_matters": "Ricky's dome maps the total cost of wrongful conviction — 39 years × 12 layers = the most expensive dome failure in American history. His reentry dome shows what happens when every layer must be rebuilt simultaneously from zero.",
+  "source_urls": [
+    "https://www.themarshallproject.org/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 7,
+      "3": 7,
+      "4": 6,
+      "5": 10,
+      "6": 8,
+      "7": 4,
+      "8": 7,
+      "9": 4,
+      "10": 9,
+      "11": 4,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:wrongly_convicted",
+        "circumstance:incarcerated",
+        "circumstance:formerly_incarcerated",
+        "system:criminal justice",
+        "system:prison",
+        "keyword:conviction",
+        "explicit:10"
+      ],
+      "2": [
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "keyword:cost",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:isolation",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "keyword:work",
+        "explicit:8"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:isolation",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:wrongly_convicted",
+        "circumstance-layer:isolation",
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "keyword:story",
+        "explicit:4"
+      ],
+      "12": [
+        "circumstance:wrongly_convicted",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.967Z"
+}

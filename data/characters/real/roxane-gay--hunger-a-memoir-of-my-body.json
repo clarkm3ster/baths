@@ -1,0 +1,147 @@
+{
+  "id": "roxane-gay--hunger-a-memoir-of-my-body",
+  "name": "Roxane Gay",
+  "real_or_fictional": "real",
+  "source_work": "Hunger: A Memoir of (My) Body",
+  "source_author_creator": "Roxane Gay",
+  "source_year": 2017,
+  "circumstances": [
+    "trauma",
+    "chronic_illness",
+    "disability"
+  ],
+  "location": "Nebraska; multiple states",
+  "time_period": "1990s-2017",
+  "systems_touched": [
+    "healthcare (bariatric)",
+    "universities",
+    "airline industry (seat sizes)",
+    "public spaces (accessibility)"
+  ],
+  "dome_layer_richness": {
+    "1": 3,
+    "2": 4,
+    "3": 5,
+    "4": 8,
+    "5": 4,
+    "6": 5,
+    "7": 7,
+    "8": 6,
+    "9": 5,
+    "10": 9,
+    "11": 8,
+    "12": 8
+  },
+  "key_relationships": [
+    "Family",
+    "Partners",
+    "Academic community"
+  ],
+  "narrative_arc": "Memoir about living in a very large body after childhood sexual assault. Gay documents how every physical space — airplane seats, restaurant booths, medical equipment, office chairs — is designed for smaller bodies. Her body is her primary circumstance and every system she encounters responds to it.",
+  "why_this_character_matters": "Roxane's dome maps the built environment as hostile. Layer 9 (Environment) isn't pollution or climate — it's chairs, doors, MRI machines, and every physical space designed to exclude her body. Her dome reveals how infrastructure assumes a body type.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 3,
+      "2": 4,
+      "3": 5,
+      "4": 9,
+      "5": 4,
+      "6": 5,
+      "7": 7,
+      "8": 6,
+      "9": 5,
+      "10": 9,
+      "11": 8,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:3"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance-layer:chronic_illness",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance:chronic_illness",
+        "circumstance:disability",
+        "explicit:8"
+      ],
+      "5": [
+        "explicit:4"
+      ],
+      "6": [
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:disability",
+        "explicit:5"
+      ],
+      "7": [
+        "explicit:7"
+      ],
+      "8": [
+        "explicit:6"
+      ],
+      "9": [
+        "keyword:pollut",
+        "keyword:air",
+        "keyword:climate",
+        "keyword:environment",
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:trauma",
+        "circumstance-layer:disability",
+        "explicit:9"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:8"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 73,
+    "average_score": 6.1,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 8
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.004Z"
+}

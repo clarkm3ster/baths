@@ -1,0 +1,157 @@
+{
+  "id": "sita--the-ramayana",
+  "name": "Sita",
+  "real_or_fictional": "fictional",
+  "source_work": "The Ramayana",
+  "source_author_creator": "Valmiki",
+  "source_year": -300,
+  "circumstances": [
+    "displaced",
+    "detained",
+    "domestic_violence",
+    "refugee",
+    "isolation"
+  ],
+  "location": "Ayodhya, India → Lanka → Forest exile",
+  "time_period": "Ancient",
+  "systems_touched": [
+    "royal court",
+    "exile system",
+    "captivity",
+    "trial by fire (agni pariksha)",
+    "forest hermitage"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": 7,
+    "6": 3,
+    "7": 4,
+    "8": 7,
+    "9": 6,
+    "10": 10,
+    "11": 6,
+    "12": 9
+  },
+  "key_relationships": [
+    "Rama (husband)",
+    "Ravana (captor)",
+    "Lakshmana",
+    "Hanuman",
+    "Sons (Lava and Kusha)"
+  ],
+  "narrative_arc": "Queen exiled to the forest, abducted by a demon king, rescued by her husband, then forced to prove her purity through trial by fire, then exiled again when the public doubts her. Sita's dome maps how a woman's autonomy is destroyed not by her captor but by her rescuer — the system that \"saves\" her also condemns her.",
+  "why_this_character_matters": "Sita's dome is a 3,000-year-old document of how patriarchal systems treat women's autonomy. Layer 10 (Autonomy) is destroyed three times — by exile, by abduction, and by her own husband's judgment. Her dome reveals that protection and imprisonment are the same mechanism.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 7,
+      "6": 3,
+      "7": 4,
+      "8": 10,
+      "9": 6,
+      "10": 10,
+      "11": 6,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:detained",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:refugee",
+        "keyword:trial",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "explicit:4"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:isolation",
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance-layer:detained",
+        "circumstance-layer:refugee",
+        "explicit:7"
+      ],
+      "6": [
+        "explicit:3"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:refugee",
+        "circumstance:isolation",
+        "circumstance-layer:displaced",
+        "explicit:7"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:detained",
+        "circumstance:domestic_violence",
+        "circumstance-layer:isolation",
+        "keyword:autonomy",
+        "explicit:10"
+      ],
+      "11": [
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 75,
+    "average_score": 6.3,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.059Z"
+}

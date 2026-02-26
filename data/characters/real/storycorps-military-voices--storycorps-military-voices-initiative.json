@@ -1,0 +1,164 @@
+{
+  "id": "storycorps-military-voices--storycorps-military-voices-initiative",
+  "name": "StoryCorps Military Voices",
+  "real_or_fictional": "real",
+  "source_work": "StoryCorps Military Voices Initiative",
+  "source_author_creator": "StoryCorps",
+  "source_year": 2010,
+  "circumstances": [
+    "veteran",
+    "mental_illness",
+    "trauma",
+    "disability",
+    "homeless"
+  ],
+  "location": "Nationwide",
+  "time_period": "2010-present",
+  "systems_touched": [
+    "military",
+    "VA",
+    "disability",
+    "homeless veteran services",
+    "therapy",
+    "peer support"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 7,
+    "3": 5,
+    "4": 8,
+    "5": 6,
+    "6": 5,
+    "7": 4,
+    "8": 7,
+    "9": 4,
+    "10": 7,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "Spouses",
+    "Fellow veterans",
+    "Therapists",
+    "Children"
+  ],
+  "narrative_arc": "Thousands of veterans telling their stories in StoryCorps booths — combat experience, PTSD, the transition home, the VA system, relationships damaged and repaired. The archive is the largest collection of veteran first-person testimony in the world.",
+  "why_this_character_matters": "The Military Voices archive fills Layer 12 (Flourishing) for veterans — not diagnoses but meaning, not symptoms but stories. These domes capture what it means to have been at war and then be expected to be normal.",
+  "source_urls": [
+    "https://storycorps.org/discover/military-voices/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 7,
+      "3": 5,
+      "4": 10,
+      "5": 6,
+      "6": 5,
+      "7": 4,
+      "8": 7,
+      "9": 4,
+      "10": 7,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:veteran",
+        "explicit:5"
+      ],
+      "2": [
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance-layer:homeless",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "circumstance:trauma",
+        "circumstance:disability",
+        "circumstance-layer:veteran",
+        "system:therapy",
+        "keyword:diagnos",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "keyword:hous",
+        "keyword:home",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance-layer:veteran",
+        "circumstance-layer:disability",
+        "explicit:5"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:homeless",
+        "explicit:7"
+      ],
+      "9": [
+        "keyword:air",
+        "explicit:4"
+      ],
+      "10": [
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:trauma",
+        "circumstance-layer:disability",
+        "explicit:7"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:story",
+        "explicit:5"
+      ],
+      "12": [
+        "keyword:flourish",
+        "keyword:meaning",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 72,
+    "average_score": 6,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.997Z"
+}

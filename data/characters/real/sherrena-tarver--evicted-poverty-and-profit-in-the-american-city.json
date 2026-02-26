@@ -1,0 +1,144 @@
+{
+  "id": "sherrena-tarver--evicted-poverty-and-profit-in-the-american-city",
+  "name": "Sherrena Tarver",
+  "real_or_fictional": "real",
+  "source_work": "Evicted: Poverty and Profit in the American City",
+  "source_author_creator": "Matthew Desmond",
+  "source_year": 2016,
+  "circumstances": [
+    "wealth"
+  ],
+  "location": "Milwaukee, WI",
+  "time_period": "2008-2009",
+  "systems_touched": [
+    "landlord-tenant court",
+    "property management",
+    "code enforcement",
+    "tax system"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 4,
+    "3": 10,
+    "4": 2,
+    "5": 8,
+    "6": 9,
+    "7": 3,
+    "8": 6,
+    "9": 5,
+    "10": 8,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Arleen Belle (tenant)",
+    "Quentin (husband/partner)",
+    "Multiple tenants"
+  ],
+  "narrative_arc": "Landlord who profits from the eviction economy. Desmond documents her business model in detail — how she extracts rent from the poorest tenants, uses eviction court as a management tool, and accumulates property. She is the system viewed from the other side.",
+  "why_this_character_matters": "Building a dome around a landlord reveals the profit structure of poverty housing. Her dome is the inverse of her tenants — where their layers are thin, hers are thick. The delta between her dome and Arleen's is the architecture of extraction.",
+  "source_urls": [
+    "https://www.evictedbook.com/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 4,
+      "3": 10,
+      "4": 2,
+      "5": 8,
+      "6": 9,
+      "7": 3,
+      "8": 6,
+      "9": 5,
+      "10": 8,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:7"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:wealth",
+        "system:tax system",
+        "keyword:rent",
+        "explicit:10"
+      ],
+      "4": [
+        "explicit:2"
+      ],
+      "5": [
+        "circumstance-layer:wealth",
+        "system:landlord-tenant court",
+        "keyword:hous",
+        "keyword:rent",
+        "keyword:evict",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance-layer:wealth",
+        "explicit:9"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 69,
+    "average_score": 5.8,
+    "dome_minimum": 2,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.914Z"
+}

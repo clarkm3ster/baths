@@ -1,0 +1,155 @@
+{
+  "id": "george-swanson-starling--the-warmth-of-other-suns-the-epic-story-of-americas-great-migration",
+  "name": "George Swanson Starling",
+  "real_or_fictional": "real",
+  "source_work": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+  "source_author_creator": "Isabel Wilkerson",
+  "source_year": 2010,
+  "circumstances": [
+    "poverty",
+    "displaced",
+    "immigrant"
+  ],
+  "location": "Eustis, FL → Harlem, NY",
+  "time_period": "1945-2000s",
+  "systems_touched": [
+    "citrus industry",
+    "Jim Crow",
+    "railroads",
+    "New York transit",
+    "churches",
+    "unions"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 4,
+    "3": 6,
+    "4": 4,
+    "5": 6,
+    "6": 8,
+    "7": 5,
+    "8": 8,
+    "9": 5,
+    "10": 7,
+    "11": 4,
+    "12": 6
+  },
+  "key_relationships": [
+    "Inez (wife)",
+    "Children",
+    "Fellow migrants"
+  ],
+  "narrative_arc": "Fled Florida after organizing citrus workers — his labor activism made him a target. Wilkerson documents his new life in Harlem, working as a railroad attendant, watching his children navigate a different but still constrained world.",
+  "why_this_character_matters": "George's dome shows how labor organizing in one system (agriculture) creates legal danger that forces migration into another system (urban employment). The displacement is economic and political simultaneously.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 4,
+      "3": 6,
+      "4": 4,
+      "5": 7,
+      "6": 8,
+      "7": 5,
+      "8": 8,
+      "9": 5,
+      "10": 7,
+      "11": 4,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:immigrant",
+        "keyword:legal",
+        "explicit:7"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "keyword:rent",
+        "explicit:6"
+      ],
+      "4": [
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance-layer:poverty",
+        "keyword:rent",
+        "keyword:displac",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "keyword:work",
+        "keyword:employ",
+        "keyword:labor",
+        "explicit:8"
+      ],
+      "7": [
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "circumstance-layer:displaced",
+        "system:churches",
+        "explicit:8"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:5"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:creat",
+        "keyword:cultur",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 71,
+    "average_score": 5.9,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.933Z"
+}

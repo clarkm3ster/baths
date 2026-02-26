@@ -1,0 +1,152 @@
+{
+  "id": "henrietta-lacks--the-immortal-life-of-henrietta-lacks",
+  "name": "Henrietta Lacks",
+  "real_or_fictional": "real",
+  "source_work": "The Immortal Life of Henrietta Lacks",
+  "source_author_creator": "Rebecca Skloot",
+  "source_year": 2010,
+  "circumstances": [
+    "poverty",
+    "terminal_illness",
+    "uninsured"
+  ],
+  "location": "Clover, VA; Baltimore, MD",
+  "time_period": "1920-1951",
+  "systems_touched": [
+    "Johns Hopkins Hospital",
+    "medical research",
+    "tobacco farming",
+    "Jim Crow medical system"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 4,
+    "3": 6,
+    "4": 10,
+    "5": 6,
+    "6": 6,
+    "7": 4,
+    "8": 7,
+    "9": 5,
+    "10": 9,
+    "11": 4,
+    "12": 7
+  },
+  "key_relationships": [
+    "David (Day) Lacks (husband)",
+    "Deborah Lacks (daughter)",
+    "Children",
+    "George Gey (researcher)"
+  ],
+  "narrative_arc": "Black woman whose cancer cells were taken without consent and became the most important cell line in medical history (HeLa cells). She died poor in a segregated hospital ward while her cells generated billions in medical advancement. Her family never knew, never consented, never profited.",
+  "why_this_character_matters": "Henrietta's dome reveals the ultimate extraction — her body literally became an industry while her family remained in poverty. Layer 4 (Health) collides with Layer 1 (Legal) and Layer 10 (Autonomy) in unprecedented ways.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 4,
+      "3": 8,
+      "4": 10,
+      "5": 6,
+      "6": 6,
+      "7": 4,
+      "8": 7,
+      "9": 5,
+      "10": 9,
+      "11": 4,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "keyword:legal",
+        "explicit:8"
+      ],
+      "2": [
+        "circumstance-layer:uninsured",
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:terminal_illness",
+        "circumstance-layer:uninsured",
+        "keyword:bill",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:terminal_illness",
+        "circumstance:uninsured",
+        "keyword:health",
+        "keyword:hospital",
+        "explicit:10"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:6"
+      ],
+      "7": [
+        "keyword:liter",
+        "explicit:4"
+      ],
+      "8": [
+        "keyword:family",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "keyword:autonomy",
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:story",
+        "explicit:4"
+      ],
+      "12": [
+        "circumstance:terminal_illness",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 78,
+    "average_score": 6.5,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.941Z"
+}

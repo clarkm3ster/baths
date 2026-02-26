@@ -1,0 +1,159 @@
+{
+  "id": "marjane-satrapi--persepolis",
+  "name": "Marjane Satrapi",
+  "real_or_fictional": "real",
+  "source_work": "Persepolis",
+  "source_author_creator": "Marjane Satrapi",
+  "source_year": 2000,
+  "circumstances": [
+    "refugee",
+    "displaced",
+    "homeless",
+    "depression",
+    "isolation"
+  ],
+  "location": "Tehran, Iran → Vienna, Austria → Tehran → Paris",
+  "time_period": "1979-1994",
+  "systems_touched": [
+    "Iranian revolution",
+    "war (Iran-Iraq)",
+    "Islamic law",
+    "Austrian boarding schools",
+    "homelessness",
+    "psychiatric care"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 5,
+    "3": 5,
+    "4": 6,
+    "5": 7,
+    "6": 5,
+    "7": 7,
+    "8": 7,
+    "9": 6,
+    "10": 9,
+    "11": 9,
+    "12": 8
+  },
+  "key_relationships": [
+    "Parents",
+    "Grandmother",
+    "Uncle Anoosh (executed)",
+    "Austrian friends",
+    "Reza (husband)"
+  ],
+  "narrative_arc": "Iranian girl who lives through the revolution and the Iran-Iraq war, is sent to Austria for safety, becomes homeless in Vienna, returns to Iran, and eventually leaves again for Paris. Satrapi documents every system — the morality police who enforce hijab, the Austrian landlords who evict her, the university entrance exams she barely passes.",
+  "why_this_character_matters": "Marjane builds and destroys domes in three countries. Her Tehran dome (revolutionary), her Vienna dome (refugee), and her Paris dome (exile) are three completely different architectures for the same person. Her dome reveals how geography rebuilds identity.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 5,
+      "3": 5,
+      "4": 6,
+      "5": 10,
+      "6": 5,
+      "7": 7,
+      "8": 10,
+      "9": 6,
+      "10": 9,
+      "11": 9,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:refugee",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance-layer:homeless",
+        "keyword:rent",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance-layer:isolation",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance:homeless",
+        "circumstance-layer:refugee",
+        "keyword:home",
+        "keyword:rent",
+        "keyword:evict",
+        "keyword:homeless",
+        "explicit:7"
+      ],
+      "6": [
+        "explicit:5"
+      ],
+      "7": [
+        "system:Austrian boarding schools",
+        "explicit:7"
+      ],
+      "8": [
+        "circumstance:refugee",
+        "circumstance:isolation",
+        "circumstance-layer:displaced",
+        "circumstance-layer:homeless",
+        "explicit:7"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance-layer:isolation",
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:identit",
+        "explicit:9"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 88,
+    "average_score": 7.3,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.063Z"
+}

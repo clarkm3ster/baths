@@ -1,0 +1,165 @@
+{
+  "id": "children-of-east-chicago--unsafe-at-any-level-reuters",
+  "name": "Children of East Chicago",
+  "real_or_fictional": "real",
+  "source_work": "Unsafe at Any Level (Reuters)",
+  "source_author_creator": "M.B. Pell, Joshua Schneyer",
+  "source_year": 2016,
+  "circumstances": [
+    "environmental_exposure",
+    "poverty",
+    "housing_insecure",
+    "chronic_illness"
+  ],
+  "location": "East Chicago, IN (West Calumet Housing Complex)",
+  "time_period": "2016",
+  "systems_touched": [
+    "EPA Superfund",
+    "public housing",
+    "schools",
+    "Medicaid",
+    "lead testing",
+    "state health department"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 6,
+    "3": 5,
+    "4": 9,
+    "5": 8,
+    "6": 5,
+    "7": 6,
+    "8": 7,
+    "9": 10,
+    "10": 6,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Parents",
+    "EPA officials",
+    "Housing authority"
+  ],
+  "narrative_arc": "Children living in public housing built on a former lead smelter site. Blood lead levels were catastrophically high. The EPA knew for years. The housing authority knew. Nobody moved the families. Reuters mapped 3,810 neighborhoods nationwide with lead exposure rates double Flint's.",
+  "why_this_character_matters": "This dome maps environmental poisoning as housing policy. Layer 9 (Environment) and Layer 5 (Housing) are inseparable — the government built homes on poison and then didn't tell the residents. The children's Layer 4 (Health) damage is permanent.",
+  "source_urls": [
+    "https://www.reuters.com/investigates/special-report/usa-lead-testing/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 6,
+      "3": 7,
+      "4": 10,
+      "5": 9,
+      "6": 5,
+      "7": 6,
+      "8": 7,
+      "9": 10,
+      "10": 6,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:environmental_exposure",
+        "explicit:7"
+      ],
+      "2": [
+        "system:Medicaid",
+        "keyword:form",
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "circumstance-layer:chronic_illness",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance:environmental_exposure",
+        "circumstance:chronic_illness",
+        "system:Medicaid",
+        "keyword:health",
+        "keyword:mental",
+        "explicit:9"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:public housing",
+        "keyword:hous",
+        "keyword:home",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "explicit:5"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:6"
+      ],
+      "8": [
+        "keyword:neighbor",
+        "explicit:7"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "system:EPA Superfund",
+        "system:state health department",
+        "keyword:lead",
+        "keyword:environment",
+        "explicit:10"
+      ],
+      "10": [
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 80,
+    "average_score": 6.7,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.965Z"
+}

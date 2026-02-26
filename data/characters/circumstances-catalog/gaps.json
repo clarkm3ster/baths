@@ -1,0 +1,122 @@
+{
+  "updated_at": "2026-02-26T21:44:52.157Z",
+  "total_gap_types": 11,
+  "gaps": [
+    {
+      "type": "benefits_cliff",
+      "category": "economic",
+      "character_count": 0,
+      "description": "Earning just enough to lose benefits",
+      "layers": [
+        6,
+        3,
+        2
+      ]
+    },
+    {
+      "type": "special_education",
+      "category": "education",
+      "character_count": 0,
+      "description": "In special education systems",
+      "layers": [
+        7,
+        4,
+        1
+      ]
+    },
+    {
+      "type": "institutionalized",
+      "category": "housing",
+      "character_count": 1,
+      "description": "Living in an institution (nursing home, group home, etc.)",
+      "layers": [
+        5,
+        1,
+        10
+      ]
+    },
+    {
+      "type": "on_probation",
+      "category": "legal",
+      "character_count": 1,
+      "description": "Under supervised probation",
+      "layers": [
+        1,
+        10
+      ]
+    },
+    {
+      "type": "asylum_seeker",
+      "category": "legal",
+      "character_count": 1,
+      "description": "Seeking asylum or refugee status",
+      "layers": [
+        1,
+        5,
+        4
+      ]
+    },
+    {
+      "type": "indigenous",
+      "category": "identity",
+      "character_count": 1,
+      "description": "Indigenous person navigating colonial systems",
+      "layers": [
+        1,
+        8,
+        9
+      ]
+    },
+    {
+      "type": "depression",
+      "category": "discovered",
+      "character_count": 1,
+      "description": "Discovered from Marjane Satrapi in Persepolis",
+      "layers": []
+    },
+    {
+      "type": "undocumented",
+      "category": "legal",
+      "character_count": 2,
+      "description": "Without legal immigration status",
+      "layers": [
+        1,
+        6,
+        4
+      ]
+    },
+    {
+      "type": "wealth",
+      "category": "economic",
+      "character_count": 2,
+      "description": "Significant wealth — useful for contrast",
+      "layers": [
+        3,
+        6,
+        5
+      ]
+    },
+    {
+      "type": "caregiver",
+      "category": "community",
+      "character_count": 2,
+      "description": "Primary caregiver for dependent",
+      "layers": [
+        8,
+        4,
+        6
+      ]
+    },
+    {
+      "type": "climate_displaced",
+      "category": "environment",
+      "character_count": 2,
+      "description": "Displaced by climate events",
+      "layers": [
+        9,
+        5,
+        8
+      ]
+    }
+  ]
+}

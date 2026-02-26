@@ -1,0 +1,151 @@
+{
+  "id": "antigone--antigone",
+  "name": "Antigone",
+  "real_or_fictional": "fictional",
+  "source_work": "Antigone",
+  "source_author_creator": "Sophocles",
+  "source_year": -441,
+  "circumstances": [
+    "incarcerated",
+    "orphan",
+    "grief"
+  ],
+  "location": "Thebes, Greece",
+  "time_period": "Mythological",
+  "systems_touched": [
+    "royal/state law (Creon's edict)",
+    "divine law (burial rites)",
+    "family duty",
+    "imprisonment"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 4,
+    "3": 3,
+    "4": 3,
+    "5": 5,
+    "6": 3,
+    "7": 3,
+    "8": 7,
+    "9": 3,
+    "10": 10,
+    "11": 5,
+    "12": 9
+  },
+  "key_relationships": [
+    "Creon (uncle/king)",
+    "Polynices (brother, unburied)",
+    "Ismene (sister)",
+    "Haemon (fiancé)"
+  ],
+  "narrative_arc": "Defies the king's order to leave her brother's body unburied. Sophocles documents the collision between state law and moral law — Creon says the traitor doesn't deserve burial, Antigone says divine law outranks royal decree. She is entombed alive. Her dome is Layer 1 (Legal) vs. Layer 12 (Flourishing) — the law against meaning.",
+  "why_this_character_matters": "Antigone is the original civil disobedience dome. She chooses Layer 12 (Flourishing — meaning, duty, honor) over Layer 1 (Legal — survival within the law). Her dome asks whether a dome that preserves the body but destroys meaning is worth having.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 4,
+      "3": 3,
+      "4": 3,
+      "5": 5,
+      "6": 3,
+      "7": 3,
+      "8": 7,
+      "9": 3,
+      "10": 10,
+      "11": 5,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "circumstance-layer:orphan",
+        "system:imprisonment",
+        "keyword:law",
+        "keyword:legal",
+        "explicit:10"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "explicit:3"
+      ],
+      "4": [
+        "circumstance-layer:grief",
+        "explicit:3"
+      ],
+      "5": [
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:orphan",
+        "explicit:5"
+      ],
+      "6": [
+        "explicit:3"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance:orphan",
+        "circumstance-layer:grief",
+        "system:family duty",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "keyword:surviv",
+        "explicit:10"
+      ],
+      "11": [
+        "explicit:5"
+      ],
+      "12": [
+        "circumstance:grief",
+        "keyword:flourish",
+        "keyword:meaning",
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 65,
+    "average_score": 5.4,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 5
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.060Z"
+}

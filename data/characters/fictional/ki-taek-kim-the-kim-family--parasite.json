@@ -1,0 +1,162 @@
+{
+  "id": "ki-taek-kim-the-kim-family--parasite",
+  "name": "Ki-taek Kim (The Kim Family)",
+  "real_or_fictional": "fictional",
+  "source_work": "Parasite",
+  "source_author_creator": "Bong Joon-ho",
+  "source_year": 2019,
+  "circumstances": [
+    "poverty",
+    "housing_insecure",
+    "unemployed",
+    "environmental_exposure"
+  ],
+  "location": "Seoul, South Korea (semi-basement banjiha)",
+  "time_period": "2019",
+  "systems_touched": [
+    "gig economy (pizza box folding)",
+    "fumigation (exposure)",
+    "flooding (infrastructure failure)",
+    "employment agencies",
+    "schools"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 4,
+    "3": 8,
+    "4": 5,
+    "5": 10,
+    "6": 8,
+    "7": 5,
+    "8": 7,
+    "9": 9,
+    "10": 7,
+    "11": 4,
+    "12": 5
+  },
+  "key_relationships": [
+    "Chung-sook (wife)",
+    "Ki-woo (son)",
+    "Ki-jung (daughter)",
+    "Park family (employers)"
+  ],
+  "narrative_arc": "Family of four living in a semi-basement apartment that floods when it rains. Bong documents the vertical architecture of class — the Kims below ground, the Parks above, and the secret man hidden in the sub-basement. Each family occupies a different altitude in the same city, and water flows downhill.",
+  "why_this_character_matters": "The Kim family dome maps class as architecture. Layer 5 (Housing) is literally underground. Layer 9 (Environment) shows how infrastructure failure (flooding) targets the lowest residents. Their dome vs. the Park family dome is the same city measured at different altitudes.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 4,
+      "3": 8,
+      "4": 5,
+      "5": 10,
+      "6": 8,
+      "7": 5,
+      "8": 7,
+      "9": 9,
+      "10": 7,
+      "11": 4,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:environmental_exposure",
+        "explicit:4"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "circumstance-layer:unemployed",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:environmental_exposure",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "keyword:rent",
+        "keyword:apartment",
+        "explicit:10"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:unemployed",
+        "explicit:8"
+      ],
+      "7": [
+        "system:schools",
+        "keyword:class",
+        "keyword:liter",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance-layer:unemployed",
+        "keyword:family",
+        "explicit:7"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "system:flooding (infrastructure failure)",
+        "keyword:water",
+        "keyword:flood",
+        "keyword:environment",
+        "explicit:9"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 76,
+    "average_score": 6.3,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.044Z"
+}

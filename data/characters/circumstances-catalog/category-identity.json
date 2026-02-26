@@ -1,0 +1,264 @@
+{
+  "category": "identity",
+  "types": 6,
+  "total_characters": 38,
+  "entries": [
+    {
+      "type": "immigrant",
+      "category": "identity",
+      "layers": [
+        1,
+        8,
+        6
+      ],
+      "description": "Navigating immigration experience",
+      "character_count": 17,
+      "real_count": 11,
+      "fictional_count": 6,
+      "example_characters": [
+        {
+          "name": "Abdul Husain",
+          "source_work": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Richard Wright",
+          "source_work": "Black Boy / American Hunger",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ida Mae Brandon Gladney",
+          "source_work": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "George Swanson Starling",
+          "source_work": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Robert Joseph Pershing Foster",
+          "source_work": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Michelle Robinson Obama",
+          "source_work": "Becoming",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Sandra Cisneros (as Esperanza)",
+          "source_work": "A House of My Own: Stories from My Life",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Trafficked Farm Workers",
+          "source_work": "Trafficked into Forced Labor (Reveal / CIR)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Maria (Composite Social Work Case)",
+          "source_work": "Social Work Case Studies in Integrated Care (NASW)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ellis Island Immigrants",
+          "source_work": "Ellis Island Oral History Collection",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "refugee",
+      "category": "identity",
+      "layers": [
+        1,
+        5,
+        8
+      ],
+      "description": "Displaced by conflict or persecution",
+      "character_count": 8,
+      "real_count": 4,
+      "fictional_count": 4,
+      "example_characters": [
+        {
+          "name": "Harriet Jacobs",
+          "source_work": "Incidents in the Life of a Slave Girl",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ellis Island Immigrants",
+          "source_work": "Ellis Island Oral History Collection",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Sethe",
+          "source_work": "Beloved",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Ellie (The Last of Us)",
+          "source_work": "The Last of Us (Video Game)",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Odysseus",
+          "source_work": "The Odyssey",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Sita",
+          "source_work": "The Ramayana",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Vladek Spiegelman",
+          "source_work": "Maus",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Marjane Satrapi",
+          "source_work": "Persepolis",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "veteran",
+      "category": "identity",
+      "layers": [
+        1,
+        4,
+        6
+      ],
+      "description": "Military veteran, navigating VA systems",
+      "character_count": 5,
+      "real_count": 4,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "Herbert Richardson",
+          "source_work": "Just Mercy: A Story of Justice and Redemption",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Afghanistan Veterans",
+          "source_work": "The Afghanistan Papers (Washington Post)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The VA Wait List Veterans",
+          "source_work": "VA Wait Time Scandal (VA IG Report / Multiple outlets)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "StoryCorps Military Voices",
+          "source_work": "StoryCorps Military Voices Initiative",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Odysseus",
+          "source_work": "The Odyssey",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "trafficking",
+      "category": "identity",
+      "layers": [
+        1,
+        10,
+        4
+      ],
+      "description": "Victim of human trafficking",
+      "character_count": 4,
+      "real_count": 3,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "The Trafficked Farm Workers",
+          "source_work": "Trafficked into Forced Labor (Reveal / CIR)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Theresa Flores",
+          "source_work": "Senate Judiciary Committee Testimony on Human Trafficking",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Harriet Jacobs",
+          "source_work": "Incidents in the Life of a Slave Girl",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Offred (June)",
+          "source_work": "The Handmaid's Tale",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "enslaved",
+      "category": "identity",
+      "layers": [
+        1,
+        10,
+        12
+      ],
+      "description": "Person held in slavery (historical or contemporary)",
+      "character_count": 3,
+      "real_count": 2,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "Fountain Hughes",
+          "source_work": "WPA Slave Narrative Collection / Library of Congress Audio",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Harriet Jacobs",
+          "source_work": "Incidents in the Life of a Slave Girl",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Sethe",
+          "source_work": "Beloved",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "indigenous",
+      "category": "identity",
+      "layers": [
+        1,
+        8,
+        9
+      ],
+      "description": "Indigenous person navigating colonial systems",
+      "character_count": 1,
+      "real_count": 1,
+      "fictional_count": 0,
+      "example_characters": [
+        {
+          "name": "Crystal Echo Hawk",
+          "source_work": "Congressional Testimony on Native American Issues",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    }
+  ]
+}

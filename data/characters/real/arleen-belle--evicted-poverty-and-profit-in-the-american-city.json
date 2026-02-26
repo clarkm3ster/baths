@@ -1,0 +1,182 @@
+{
+  "id": "arleen-belle--evicted-poverty-and-profit-in-the-american-city",
+  "name": "Arleen Belle",
+  "real_or_fictional": "real",
+  "source_work": "Evicted: Poverty and Profit in the American City",
+  "source_author_creator": "Matthew Desmond",
+  "source_year": 2016,
+  "circumstances": [
+    "evicted",
+    "poverty",
+    "single_parent",
+    "housing_insecure",
+    "mental_illness",
+    "domestic_violence"
+  ],
+  "location": "Milwaukee, WI",
+  "time_period": "2008-2009",
+  "systems_touched": [
+    "landlord-tenant court",
+    "welfare",
+    "public housing",
+    "shelters",
+    "child welfare",
+    "schools",
+    "SNAP",
+    "W-2 (Wisconsin Works)"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 8,
+    "3": 9,
+    "4": 6,
+    "5": 10,
+    "6": 7,
+    "7": 4,
+    "8": 8,
+    "9": 5,
+    "10": 7,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Jori (son)",
+    "Jafaris (son)",
+    "Crystal Mayberry",
+    "Sherrena Tarver (landlord)"
+  ],
+  "narrative_arc": "Cycles through 5 addresses in 2 years. Each eviction destabilizes every other system — kids change schools, benefits get disrupted, depression deepens. The eviction record itself becomes a barrier to future housing, creating a downward spiral that Desmond documents with financial precision.",
+  "why_this_character_matters": "Arleen is the most comprehensively documented eviction case in American nonfiction. Building a dome around her reveals exactly how housing instability cascades across every other system — legal, fiscal, health, education, community. The coordinated cost vs. fragmented cost delta would be enormous.",
+  "source_urls": [
+    "https://www.evictedbook.com/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 8,
+      "3": 10,
+      "4": 7,
+      "5": 10,
+      "6": 7,
+      "7": 4,
+      "8": 9,
+      "9": 5,
+      "10": 7,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:evicted",
+        "circumstance-layer:domestic_violence",
+        "keyword:legal",
+        "explicit:7"
+      ],
+      "2": [
+        "system:welfare",
+        "system:child welfare",
+        "system:SNAP",
+        "keyword:benefit",
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:evicted",
+        "circumstance-layer:single_parent",
+        "circumstance-layer:housing_insecure",
+        "keyword:cost",
+        "explicit:9"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "circumstance-layer:domestic_violence",
+        "keyword:health",
+        "keyword:depress",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:evicted",
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:landlord-tenant court",
+        "system:public housing",
+        "system:shelters",
+        "keyword:hous",
+        "keyword:evict",
+        "explicit:10"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:single_parent",
+        "explicit:7"
+      ],
+      "7": [
+        "system:schools",
+        "keyword:school",
+        "keyword:educat",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:single_parent",
+        "circumstance:domestic_violence",
+        "circumstance-layer:mental_illness",
+        "keyword:communit",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:mental_illness",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:creat",
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "keyword:future",
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 81,
+    "average_score": 6.8,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.906Z"
+}

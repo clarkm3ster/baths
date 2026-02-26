@@ -1,0 +1,163 @@
+{
+  "id": "chiron-harris--in-moonlight-black-boys-look-blue-short-story-moonlight-film",
+  "name": "Chiron Harris",
+  "real_or_fictional": "fictional",
+  "source_work": "In Moonlight Black Boys Look Blue (short story) / Moonlight (film)",
+  "source_author_creator": "Tarell Alvin McCraney / Barry Jenkins",
+  "source_year": 2016,
+  "circumstances": [
+    "poverty",
+    "addiction",
+    "homeless",
+    "incarcerated",
+    "isolation",
+    "trauma"
+  ],
+  "location": "Liberty City, Miami, FL",
+  "time_period": "1980s-2000s",
+  "systems_touched": [
+    "public schools",
+    "drug economy",
+    "foster care (informal)",
+    "prison",
+    "restaurants (employment)"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 4,
+    "3": 5,
+    "4": 7,
+    "5": 7,
+    "6": 6,
+    "7": 5,
+    "8": 8,
+    "9": 6,
+    "10": 9,
+    "11": 7,
+    "12": 8
+  },
+  "key_relationships": [
+    "Juan (drug dealer/father figure)",
+    "Teresa",
+    "Paula (mother)",
+    "Kevin"
+  ],
+  "narrative_arc": "Three chapters of one life: Little (bullied child), Chiron (teenager discovering sexuality), Black (hardened adult). McCraney/Jenkins document how a queer Black boy in the crack era navigates masculinity, violence, addiction (mother's), and love (his own). Each chapter shows the same dome layers filling and emptying as context changes.",
+  "why_this_character_matters": "Chiron's dome is told in three snapshots — childhood, adolescence, adulthood. The same person, the same circumstances, but different dome configurations at each stage. His dome reveals how layers shift weight over a lifetime.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 4,
+      "3": 6,
+      "4": 9,
+      "5": 8,
+      "6": 6,
+      "7": 5,
+      "8": 8,
+      "9": 6,
+      "10": 9,
+      "11": 7,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "circumstance-layer:addiction",
+        "system:prison",
+        "explicit:6"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "keyword:rent",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance:trauma",
+        "circumstance-layer:isolation",
+        "keyword:addict",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:poverty",
+        "circumstance-layer:incarcerated",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "keyword:shift",
+        "explicit:6"
+      ],
+      "7": [
+        "system:public schools",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:isolation",
+        "circumstance-layer:addiction",
+        "circumstance-layer:homeless",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:isolation",
+        "circumstance-layer:trauma",
+        "explicit:9"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:7"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.026Z"
+}

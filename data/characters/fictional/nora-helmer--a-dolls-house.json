@@ -1,0 +1,149 @@
+{
+  "id": "nora-helmer--a-dolls-house",
+  "name": "Nora Helmer",
+  "real_or_fictional": "fictional",
+  "source_work": "A Doll's House",
+  "source_author_creator": "Henrik Ibsen",
+  "source_year": 1879,
+  "circumstances": [
+    "debt",
+    "domestic_violence",
+    "isolation"
+  ],
+  "location": "Norway",
+  "time_period": "1870s",
+  "systems_touched": [
+    "banking",
+    "law (forgery)",
+    "marriage as legal system",
+    "domestic service"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 3,
+    "3": 8,
+    "4": 3,
+    "5": 5,
+    "6": 4,
+    "7": 4,
+    "8": 5,
+    "9": 3,
+    "10": 10,
+    "11": 4,
+    "12": 8
+  },
+  "key_relationships": [
+    "Torvald (husband)",
+    "Krogstad (creditor)",
+    "Mrs. Linde",
+    "Children"
+  ],
+  "narrative_arc": "Secretly borrowed money (by forging her father's signature) to save her husband's life, then spent years repaying it while he thinks they live on his salary alone. When the secret emerges, Torvald is furious — not about the forgery but about the appearance. Nora walks out the door, abandoning her children.",
+  "why_this_character_matters": "Nora's dome maps marriage as a system of confinement. Layer 10 (Autonomy) is at zero inside the marriage and explodes when she leaves. Her dome reveals the cost of exit — she walks away from Layers 3, 5, and 8 to gain Layer 10.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 3,
+      "3": 8,
+      "4": 4,
+      "5": 5,
+      "6": 4,
+      "7": 4,
+      "8": 6,
+      "9": 3,
+      "10": 10,
+      "11": 4,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:debt",
+        "circumstance-layer:domestic_violence",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:debt",
+        "keyword:money",
+        "keyword:cost",
+        "keyword:pay",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:isolation",
+        "explicit:3"
+      ],
+      "5": [
+        "explicit:5"
+      ],
+      "6": [
+        "circumstance:debt",
+        "explicit:4"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:isolation",
+        "explicit:5"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:isolation",
+        "keyword:autonomy",
+        "explicit:10"
+      ],
+      "11": [
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 67,
+    "average_score": 5.6,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.054Z"
+}

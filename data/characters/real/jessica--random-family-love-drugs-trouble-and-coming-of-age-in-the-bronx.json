@@ -1,0 +1,172 @@
+{
+  "id": "jessica--random-family-love-drugs-trouble-and-coming-of-age-in-the-bronx",
+  "name": "Jessica",
+  "real_or_fictional": "real",
+  "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+  "source_author_creator": "Adrian Nicole LeBlanc",
+  "source_year": 2003,
+  "circumstances": [
+    "poverty",
+    "incarcerated",
+    "domestic_violence",
+    "addiction",
+    "single_parent",
+    "housing_insecure"
+  ],
+  "location": "Bronx, NY",
+  "time_period": "1988-2000",
+  "systems_touched": [
+    "criminal justice",
+    "prison",
+    "welfare",
+    "child welfare",
+    "public housing",
+    "courts",
+    "schools",
+    "hospitals"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 7,
+    "3": 7,
+    "4": 6,
+    "5": 8,
+    "6": 6,
+    "7": 4,
+    "8": 9,
+    "9": 5,
+    "10": 8,
+    "11": 5,
+    "12": 6
+  },
+  "key_relationships": [
+    "Boy George (partner)",
+    "Coco (friend)",
+    "Serena (daughter)",
+    "Multiple children",
+    "Lourdes (mother)"
+  ],
+  "narrative_arc": "Beautiful teenager drawn into the drug economy through her boyfriend Boy George. LeBlanc follows her through federal prison, multiple children by different fathers, release, and the struggle to rebuild. 11 years of documentation captures every system she touches.",
+  "why_this_character_matters": "Jessica is documented across a longer time span than almost any other character in American nonfiction. Her dome would track system interactions over 11 years — the temporal dimension reveals how systems compound disadvantage over time.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 7,
+      "3": 8,
+      "4": 7,
+      "5": 10,
+      "6": 6,
+      "7": 4,
+      "8": 9,
+      "9": 5,
+      "10": 8,
+      "11": 5,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:addiction",
+        "system:criminal justice",
+        "system:prison",
+        "system:courts",
+        "explicit:9"
+      ],
+      "2": [
+        "system:welfare",
+        "system:child welfare",
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:single_parent",
+        "circumstance-layer:housing_insecure",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance-layer:domestic_violence",
+        "system:hospitals",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "circumstance-layer:incarcerated",
+        "system:public housing",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:single_parent",
+        "explicit:6"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:single_parent",
+        "circumstance-layer:addiction",
+        "keyword:friend",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance:domestic_violence",
+        "explicit:8"
+      ],
+      "11": [
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 85,
+    "average_score": 7.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.916Z"
+}

@@ -1,0 +1,145 @@
+{
+  "id": "asha-waghekar--behind-the-beautiful-forevers-life-death-and-hope-in-a-mumbai-undercity",
+  "name": "Asha Waghekar",
+  "real_or_fictional": "real",
+  "source_work": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+  "source_author_creator": "Katherine Boo",
+  "source_year": 2012,
+  "circumstances": [
+    "poverty",
+    "housing_insecure"
+  ],
+  "location": "Annawadi slum, Mumbai, India",
+  "time_period": "2007-2011",
+  "systems_touched": [
+    "municipal politics",
+    "schools",
+    "police",
+    "slum redevelopment",
+    "NGOs"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 7,
+    "3": 7,
+    "4": 3,
+    "5": 7,
+    "6": 8,
+    "7": 6,
+    "8": 9,
+    "9": 6,
+    "10": 8,
+    "11": 4,
+    "12": 6
+  },
+  "key_relationships": [
+    "Manju (daughter)",
+    "Political party bosses",
+    "Slum residents"
+  ],
+  "narrative_arc": "Aspiring slumlord who navigates corruption as a ladder out of poverty. Boo documents her political economy — how she brokers deals between slum residents, NGOs, and politicians, extracting a percentage at every step.",
+  "why_this_character_matters": "Asha shows how informal power structures work inside communities that formal systems have abandoned. Her dome reveals Layer 8 (Community) as a shadow government.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 7,
+      "3": 7,
+      "4": 3,
+      "5": 7,
+      "6": 8,
+      "7": 6,
+      "8": 9,
+      "9": 6,
+      "10": 8,
+      "11": 4,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "system:police",
+        "explicit:6"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:7"
+      ],
+      "4": [
+        "explicit:3"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "keyword:work",
+        "explicit:8"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:6"
+      ],
+      "8": [
+        "keyword:communit",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "keyword:power",
+        "explicit:8"
+      ],
+      "11": [
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 77,
+    "average_score": 6.4,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.924Z"
+}

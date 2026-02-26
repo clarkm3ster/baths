@@ -1,0 +1,162 @@
+{
+  "id": "ladj-ly-neighborhood-characters-les-mis-rables--les-mis-rables-2019-film",
+  "name": "Ladj Ly Neighborhood Characters (Les Misérables)",
+  "real_or_fictional": "fictional",
+  "source_work": "Les Misérables (2019 film)",
+  "source_author_creator": "Ladj Ly",
+  "source_year": 2019,
+  "circumstances": [
+    "poverty",
+    "housing_insecure",
+    "immigrant",
+    "surveillance",
+    "environmental_exposure"
+  ],
+  "location": "Montfermeil (banlieue), Paris, France",
+  "time_period": "2019",
+  "systems_touched": [
+    "police (BAC anti-crime brigade)",
+    "public housing (HLM)",
+    "mosques",
+    "community leaders",
+    "drone surveillance",
+    "schools"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 5,
+    "3": 5,
+    "4": 4,
+    "5": 8,
+    "6": 5,
+    "7": 5,
+    "8": 9,
+    "9": 7,
+    "10": 7,
+    "11": 4,
+    "12": 4
+  },
+  "key_relationships": [
+    "Stéphane (new cop)",
+    "Chris and Gwada (experienced cops)",
+    "The Mayor (community boss)",
+    "Issa (the boy)"
+  ],
+  "narrative_arc": "One day in a Paris banlieue where police shoot a boy with a rubber bullet and a drone captures it on video. Ly documents the parallel governance structures — police, mosque leaders, community bosses, and drug dealers all compete for authority in a housing project the state has abandoned.",
+  "why_this_character_matters": "This dome maps the French banlieue as a parallel system — Layer 1 (Legal) is the police, but Layer 8 (Community) has its own competing authority. The drone footage becomes the layer that forces all other layers to reckon with what happened.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 5,
+      "3": 5,
+      "4": 4,
+      "5": 8,
+      "6": 5,
+      "7": 5,
+      "8": 9,
+      "9": 7,
+      "10": 7,
+      "11": 4,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:surveillance",
+        "circumstance-layer:immigrant",
+        "circumstance-layer:environmental_exposure",
+        "system:police (BAC anti-crime brigade)",
+        "keyword:legal",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance:environmental_exposure",
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:public housing (HLM)",
+        "keyword:hous",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "explicit:5"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "circumstance-layer:surveillance",
+        "system:mosques",
+        "keyword:communit",
+        "explicit:9"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "keyword:lead",
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:surveillance",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 73,
+    "average_score": 6.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 7
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.048Z"
+}

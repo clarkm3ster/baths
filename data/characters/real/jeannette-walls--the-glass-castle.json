@@ -1,0 +1,174 @@
+{
+  "id": "jeannette-walls--the-glass-castle",
+  "name": "Jeannette Walls",
+  "real_or_fictional": "real",
+  "source_work": "The Glass Castle",
+  "source_author_creator": "Jeannette Walls",
+  "source_year": 2005,
+  "circumstances": [
+    "poverty",
+    "deep_poverty",
+    "homeless",
+    "housing_insecure",
+    "mental_illness",
+    "child_labor",
+    "food_desert"
+  ],
+  "location": "Welch, WV; Phoenix, AZ; New York City, NY",
+  "time_period": "1960s-1990s",
+  "systems_touched": [
+    "schools",
+    "child welfare (avoided)",
+    "hospitals",
+    "squatting"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 3,
+    "3": 7,
+    "4": 6,
+    "5": 9,
+    "6": 7,
+    "7": 7,
+    "8": 7,
+    "9": 7,
+    "10": 8,
+    "11": 7,
+    "12": 8
+  },
+  "key_relationships": [
+    "Rex (father)",
+    "Rose Mary (mother)",
+    "Lori, Brian, Maureen (siblings)"
+  ],
+  "narrative_arc": "Growing up with brilliant but mentally ill parents who chose homelessness and refused assistance. Walls documents a childhood of starvation, no heat, collapsing houses, and parents who viewed poverty as freedom. She escaped through self-rescue.",
+  "why_this_character_matters": "Jeannette's dome is unique because her family actively avoided systems. It reveals what happens when Layer 2 (Systems) is empty not because systems failed but because they were refused. Her dome measures the cost of anti-system ideology.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 3,
+      "3": 10,
+      "4": 10,
+      "5": 10,
+      "6": 10,
+      "7": 7,
+      "8": 7,
+      "9": 7,
+      "10": 8,
+      "11": 7,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:4"
+      ],
+      "2": [
+        "system:child welfare (avoided)",
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:housing_insecure",
+        "keyword:cost",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "circumstance-layer:child_labor",
+        "circumstance-layer:food_desert",
+        "system:hospitals",
+        "keyword:mental",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "keyword:hous",
+        "keyword:home",
+        "keyword:rent",
+        "keyword:homeless",
+        "explicit:9"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance:child_labor",
+        "circumstance-layer:food_desert",
+        "explicit:7"
+      ],
+      "7": [
+        "circumstance-layer:child_labor",
+        "system:schools",
+        "explicit:7"
+      ],
+      "8": [
+        "circumstance-layer:homeless",
+        "circumstance-layer:mental_illness",
+        "keyword:family",
+        "explicit:7"
+      ],
+      "9": [
+        "circumstance:food_desert",
+        "keyword:heat",
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:child_labor",
+        "keyword:freedom",
+        "keyword:escape",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:7"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 91,
+    "average_score": 7.6,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.940Z"
+}

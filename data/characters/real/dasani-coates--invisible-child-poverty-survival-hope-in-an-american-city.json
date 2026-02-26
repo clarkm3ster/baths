@@ -1,0 +1,182 @@
+{
+  "id": "dasani-coates--invisible-child-poverty-survival-hope-in-an-american-city",
+  "name": "Dasani Coates",
+  "real_or_fictional": "real",
+  "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+  "source_author_creator": "Andrea Elliott",
+  "source_year": 2021,
+  "circumstances": [
+    "homeless",
+    "poverty",
+    "shelter",
+    "foster_care",
+    "trauma",
+    "child_labor"
+  ],
+  "location": "Brooklyn, NY; Hershey, PA",
+  "time_period": "2003-2020",
+  "systems_touched": [
+    "shelters",
+    "child welfare",
+    "schools",
+    "homeless services",
+    "foster care",
+    "courts",
+    "Medicaid",
+    "SNAP",
+    "Milton Hershey School"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 9,
+    "3": 7,
+    "4": 7,
+    "5": 10,
+    "6": 5,
+    "7": 9,
+    "8": 9,
+    "9": 7,
+    "10": 8,
+    "11": 7,
+    "12": 8
+  },
+  "key_relationships": [
+    "Chanel (mother)",
+    "Supreme (father)",
+    "7 siblings",
+    "Teachers",
+    "Social workers"
+  ],
+  "narrative_arc": "Born into homelessness in Brooklyn, growing up in the Auburn shelter. Elliott follows her for 12 years — through shelter life, school struggles, a scholarship to a boarding school in Pennsylvania, the pull between family and opportunity, and eventual return. The most granular documentation of child homelessness ever published.",
+  "why_this_character_matters": "Dasani has the richest dome of any documented child in American nonfiction. 12 years of reporting means every layer has material. Her dome reveals how childhood homelessness interacts with education, health, community, and autonomy across a full developmental arc.",
+  "source_urls": [
+    "https://www.nytimes.com/projects/2013/invisible-child/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 10,
+      "3": 7,
+      "4": 9,
+      "5": 10,
+      "6": 6,
+      "7": 9,
+      "8": 9,
+      "9": 7,
+      "10": 8,
+      "11": 7,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:foster_care",
+        "system:courts",
+        "explicit:6"
+      ],
+      "2": [
+        "circumstance:foster_care",
+        "circumstance-layer:shelter",
+        "system:child welfare",
+        "system:Medicaid",
+        "system:SNAP",
+        "explicit:9"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:child_labor",
+        "system:Medicaid",
+        "keyword:health",
+        "keyword:mental",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance:shelter",
+        "circumstance-layer:poverty",
+        "system:shelters",
+        "keyword:home",
+        "keyword:shelter",
+        "keyword:homeless",
+        "explicit:10"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:child_labor",
+        "explicit:5"
+      ],
+      "7": [
+        "circumstance:foster_care",
+        "circumstance-layer:child_labor",
+        "system:schools",
+        "keyword:school",
+        "keyword:educat",
+        "explicit:9"
+      ],
+      "8": [
+        "circumstance:foster_care",
+        "circumstance-layer:homeless",
+        "keyword:communit",
+        "keyword:family",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance-layer:trauma",
+        "circumstance-layer:child_labor",
+        "keyword:autonomy",
+        "explicit:8"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:7"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 96,
+    "average_score": 8,
+    "dome_minimum": 6,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 9
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.918Z"
+}

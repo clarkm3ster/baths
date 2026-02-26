@@ -1,0 +1,158 @@
+{
+  "id": "leeanne-walters--flint-water-crisis-coverage-washington-post-multiple",
+  "name": "LeeAnne Walters",
+  "real_or_fictional": "real",
+  "source_work": "Flint Water Crisis Coverage (Washington Post/multiple)",
+  "source_author_creator": "Multiple journalists",
+  "source_year": 2015,
+  "circumstances": [
+    "environmental_exposure",
+    "chronic_illness",
+    "housing_insecure"
+  ],
+  "location": "Flint, MI",
+  "time_period": "2014-2016",
+  "systems_touched": [
+    "city water system",
+    "EPA",
+    "MDEQ",
+    "hospitals",
+    "schools",
+    "Medicaid",
+    "emergency management"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 7,
+    "3": 6,
+    "4": 8,
+    "5": 7,
+    "6": 5,
+    "7": 6,
+    "8": 8,
+    "9": 10,
+    "10": 8,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Children (lead-exposed)",
+    "Marc Edwards (Virginia Tech researcher)",
+    "Community activists"
+  ],
+  "narrative_arc": "Mother who first sounded the alarm about Flint's water. Her children's blood lead levels were off the charts. She fought city, state, and federal agencies who all insisted the water was safe. Her persistence, and her decision to send water samples to Virginia Tech, eventually broke the cover-up open.",
+  "why_this_character_matters": "LeeAnne's dome maps environmental racism with precision. Layer 9 (Environment) dominates — lead in the water that the government knew about and covered up. Her dome reveals the full cost of infrastructure neglect to a single family.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 7,
+      "3": 6,
+      "4": 10,
+      "5": 7,
+      "6": 5,
+      "7": 6,
+      "8": 8,
+      "9": 10,
+      "10": 8,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:environmental_exposure",
+        "explicit:8"
+      ],
+      "2": [
+        "system:Medicaid",
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:housing_insecure",
+        "keyword:cost",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:environmental_exposure",
+        "circumstance:chronic_illness",
+        "system:hospitals",
+        "system:Medicaid",
+        "keyword:mental",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance-layer:chronic_illness",
+        "explicit:5"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:6"
+      ],
+      "8": [
+        "keyword:family",
+        "explicit:8"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "system:EPA",
+        "keyword:water",
+        "keyword:lead",
+        "keyword:environment",
+        "explicit:10"
+      ],
+      "10": [
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.961Z"
+}

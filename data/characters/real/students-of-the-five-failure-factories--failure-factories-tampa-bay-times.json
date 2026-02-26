@@ -1,0 +1,153 @@
+{
+  "id": "students-of-the-five-failure-factories--failure-factories-tampa-bay-times",
+  "name": "Students of the Five Failure Factories",
+  "real_or_fictional": "real",
+  "source_work": "Failure Factories (Tampa Bay Times)",
+  "source_author_creator": "Cara Fitzpatrick, Lisa Gartner, Michael LaForgia",
+  "source_year": 2015,
+  "circumstances": [
+    "poverty",
+    "dropout",
+    "housing_insecure"
+  ],
+  "location": "Pinellas County, FL (south St. Petersburg)",
+  "time_period": "2007-2015",
+  "systems_touched": [
+    "public schools",
+    "school board",
+    "housing",
+    "juvenile justice",
+    "NAACP"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 6,
+    "3": 5,
+    "4": 4,
+    "5": 6,
+    "6": 5,
+    "7": 10,
+    "8": 8,
+    "9": 6,
+    "10": 6,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Teachers",
+    "Parents",
+    "School administrators"
+  ],
+  "narrative_arc": "The Tampa Bay Times documented how Pinellas County systematically resegregated five elementary schools by ending school choice programs, concentrating poverty and Black students into schools that then received fewer resources. Test scores collapsed. Violence increased. The schools became failure factories.",
+  "why_this_character_matters": "This dome fills Layer 7 (Education) with the mechanics of school failure — not student failure but institutional failure. The dome reveals how housing policy (Layer 5) creates school composition (Layer 7) which determines educational outcomes.",
+  "source_urls": [
+    "https://projects.tampabay.com/projects/2015/investigations/pinellas-failure-factories/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 6,
+      "3": 5,
+      "4": 4,
+      "5": 6,
+      "6": 5,
+      "7": 10,
+      "8": 8,
+      "9": 6,
+      "10": 6,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "system:juvenile justice",
+        "explicit:5"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:5"
+      ],
+      "4": [
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:dropout",
+        "explicit:5"
+      ],
+      "7": [
+        "circumstance:dropout",
+        "system:public schools",
+        "keyword:school",
+        "keyword:educat",
+        "keyword:student",
+        "explicit:10"
+      ],
+      "8": [
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "keyword:choice",
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:creat",
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 68,
+    "average_score": 5.7,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 6
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 6
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.964Z"
+}

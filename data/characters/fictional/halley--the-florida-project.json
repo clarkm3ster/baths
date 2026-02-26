@@ -1,0 +1,166 @@
+{
+  "id": "halley--the-florida-project",
+  "name": "Halley",
+  "real_or_fictional": "fictional",
+  "source_work": "The Florida Project",
+  "source_author_creator": "Sean Baker",
+  "source_year": 2017,
+  "circumstances": [
+    "homeless",
+    "poverty",
+    "single_parent",
+    "housing_insecure",
+    "addiction"
+  ],
+  "location": "Kissimmee, FL (motels near Disney World)",
+  "time_period": "2017",
+  "systems_touched": [
+    "motel system (hidden homelessness)",
+    "welfare",
+    "child welfare (DCF)",
+    "sex work",
+    "fast food employment",
+    "schools"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 6,
+    "3": 8,
+    "4": 5,
+    "5": 10,
+    "6": 7,
+    "7": 4,
+    "8": 7,
+    "9": 7,
+    "10": 6,
+    "11": 4,
+    "12": 4
+  },
+  "key_relationships": [
+    "Moonee (daughter)",
+    "Bobby (motel manager)",
+    "Ashley (friend)",
+    "Other motel families"
+  ],
+  "narrative_arc": "Single mother living in a budget motel outside Disney World — technically homeless but not in a shelter, invisible to homelessness statistics. Baker documents the economics of motel poverty — weekly rates that exceed monthly rent, no kitchen, no lease protections, one paycheck from the street. When she turns to sex work to pay the motel, DCF comes for Moonee.",
+  "why_this_character_matters": "Halley's dome maps hidden homelessness — the motel economy that doesn't count as homeless but isn't housing. Her Layer 5 is the liminal space between shelter and home. Her dome reveals a population that no government system sees or serves.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 6,
+      "3": 10,
+      "4": 5,
+      "5": 10,
+      "6": 7,
+      "7": 4,
+      "8": 7,
+      "9": 7,
+      "10": 6,
+      "11": 4,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "explicit:5"
+      ],
+      "2": [
+        "system:welfare",
+        "system:child welfare (DCF)",
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:single_parent",
+        "circumstance-layer:housing_insecure",
+        "keyword:pay",
+        "keyword:rent",
+        "keyword:budget",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "keyword:home",
+        "keyword:rent",
+        "keyword:shelter",
+        "keyword:street",
+        "explicit:10"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:single_parent",
+        "keyword:work",
+        "explicit:7"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:single_parent",
+        "circumstance-layer:homeless",
+        "circumstance-layer:addiction",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 75,
+    "average_score": 6.3,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.039Z"
+}

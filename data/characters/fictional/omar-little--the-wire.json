@@ -1,0 +1,154 @@
+{
+  "id": "omar-little--the-wire",
+  "name": "Omar Little",
+  "real_or_fictional": "fictional",
+  "source_work": "The Wire",
+  "source_author_creator": "David Simon, Ed Burns",
+  "source_year": 2002,
+  "circumstances": [
+    "poverty",
+    "homeless",
+    "formerly_incarcerated"
+  ],
+  "location": "West Baltimore, MD",
+  "time_period": "2002-2008",
+  "systems_touched": [
+    "drug economy (robbing dealers)",
+    "courts",
+    "prison",
+    "hospitals",
+    "community (street code)"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 4,
+    "3": 6,
+    "4": 5,
+    "5": 6,
+    "6": 7,
+    "7": 3,
+    "8": 9,
+    "9": 7,
+    "10": 9,
+    "11": 5,
+    "12": 6
+  },
+  "key_relationships": [
+    "Brandon",
+    "Donnie",
+    "Bunk Moreland",
+    "Avon Barksdale",
+    "Marlo Stanfield"
+  ],
+  "narrative_arc": "Gay stick-up artist who robs drug dealers with a code — he never targets civilians. Simon uses Omar to document the parallel legal system of the street — its own courts (respect), its own penalties (violence), its own honor code. Omar navigates the street system more skillfully than the police navigate the legal one.",
+  "why_this_character_matters": "Omar's dome maps the shadow legal system. Layer 1 (Legal) has two versions in his dome — the formal law that hunts him and the street law he enforces. Building his dome reveals how informal justice systems emerge when formal ones are absent or hostile.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 4,
+      "3": 6,
+      "4": 5,
+      "5": 8,
+      "6": 7,
+      "7": 3,
+      "8": 9,
+      "9": 7,
+      "10": 9,
+      "11": 5,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:formerly_incarcerated",
+        "system:courts",
+        "system:prison",
+        "keyword:law",
+        "keyword:legal",
+        "explicit:8"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "explicit:6"
+      ],
+      "4": [
+        "system:hospitals",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "keyword:street",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "explicit:7"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance-layer:homeless",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:art",
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 78,
+    "average_score": 6.5,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.040Z"
+}

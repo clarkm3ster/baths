@@ -1,0 +1,162 @@
+{
+  "id": "ellis-island-immigrants--ellis-island-oral-history-collection",
+  "name": "Ellis Island Immigrants",
+  "real_or_fictional": "real",
+  "source_work": "Ellis Island Oral History Collection",
+  "source_author_creator": "National Park Service / Statue of Liberty-Ellis Island Foundation",
+  "source_year": 1973,
+  "circumstances": [
+    "immigrant",
+    "refugee",
+    "poverty",
+    "housing_insecure"
+  ],
+  "location": "Ellis Island, NY → nationwide",
+  "time_period": "1892-1954",
+  "systems_touched": [
+    "immigration inspection",
+    "quarantine",
+    "settlement houses",
+    "tenement housing",
+    "public schools",
+    "factories",
+    "draft boards"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 7,
+    "3": 6,
+    "4": 6,
+    "5": 7,
+    "6": 7,
+    "7": 6,
+    "8": 8,
+    "9": 6,
+    "10": 7,
+    "11": 6,
+    "12": 7
+  },
+  "key_relationships": [
+    "Family members",
+    "Settlement house workers",
+    "Employers",
+    "Neighbors"
+  ],
+  "narrative_arc": "Over 2,000 oral histories from immigrants who passed through Ellis Island. They describe the voyage, the inspection, the fear of rejection, and the decades of settlement — tenement conditions, factory work, learning English, navigating a new legal system, building communities.",
+  "why_this_character_matters": "Ellis Island domes map the immigrant dome-from-zero — every layer starts empty and fills simultaneously. These domes reveal the order in which layers fill (housing first? work first? community first?) and how long it takes.",
+  "source_urls": [
+    "https://www.nps.gov/elis/learn/historyculture/oral-histories.htm"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 7,
+      "3": 6,
+      "4": 6,
+      "5": 8,
+      "6": 7,
+      "7": 6,
+      "8": 8,
+      "9": 6,
+      "10": 7,
+      "11": 6,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:immigrant",
+        "circumstance-layer:refugee",
+        "system:immigration inspection",
+        "keyword:legal",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:6"
+      ],
+      "4": [
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:refugee",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "keyword:work",
+        "keyword:factory",
+        "explicit:7"
+      ],
+      "7": [
+        "system:public schools",
+        "keyword:learn",
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "circumstance:refugee",
+        "keyword:communit",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 82,
+    "average_score": 6.8,
+    "dome_minimum": 6,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.999Z"
+}

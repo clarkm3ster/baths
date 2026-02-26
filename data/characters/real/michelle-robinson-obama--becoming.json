@@ -1,0 +1,155 @@
+{
+  "id": "michelle-robinson-obama--becoming",
+  "name": "Michelle Robinson Obama",
+  "real_or_fictional": "real",
+  "source_work": "Becoming",
+  "source_author_creator": "Michelle Obama",
+  "source_year": 2018,
+  "circumstances": [
+    "poverty",
+    "immigrant"
+  ],
+  "location": "South Side Chicago, IL; Princeton, NJ; Cambridge, MA; Washington, DC",
+  "time_period": "1964-2017",
+  "systems_touched": [
+    "public schools",
+    "Princeton University",
+    "Harvard Law",
+    "hospitals",
+    "law firms",
+    "nonprofits",
+    "White House"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 5,
+    "3": 7,
+    "4": 5,
+    "5": 7,
+    "6": 9,
+    "7": 10,
+    "8": 9,
+    "9": 5,
+    "10": 8,
+    "11": 7,
+    "12": 9
+  },
+  "key_relationships": [
+    "Fraser Robinson (father, disabled)",
+    "Marian Robinson (mother)",
+    "Craig Robinson (brother)",
+    "Barack Obama"
+  ],
+  "narrative_arc": "From a South Side apartment above her great-aunt's house to Princeton to the White House. Obama documents the specific mechanisms of upward mobility — the busing program, the guidance counselor who doubted her, the law firm pipeline, the neighborhood that raised her. Also documents her father's MS and disability with precision.",
+  "why_this_character_matters": "Michelle's dome is an upward mobility map with maximum documentation. Comparing it to static-poverty domes reveals which Layer 8 (Community) and Layer 7 (Education) features enable trajectory change. Her father's disability story fills Layer 4.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 5,
+      "3": 7,
+      "4": 5,
+      "5": 7,
+      "6": 9,
+      "7": 10,
+      "8": 9,
+      "9": 5,
+      "10": 8,
+      "11": 7,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:immigrant",
+        "keyword:law",
+        "explicit:4"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:7"
+      ],
+      "4": [
+        "system:hospitals",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "keyword:apartment",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "explicit:9"
+      ],
+      "7": [
+        "system:public schools",
+        "keyword:educat",
+        "explicit:10"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "keyword:communit",
+        "keyword:neighbor",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "keyword:danc",
+        "keyword:story",
+        "explicit:7"
+      ],
+      "12": [
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 85,
+    "average_score": 7.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.953Z"
+}

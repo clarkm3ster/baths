@@ -1,0 +1,166 @@
+{
+  "id": "raskolnikov--crime-and-punishment",
+  "name": "Raskolnikov",
+  "real_or_fictional": "fictional",
+  "source_work": "Crime and Punishment",
+  "source_author_creator": "Fyodor Dostoevsky",
+  "source_year": 1866,
+  "circumstances": [
+    "poverty",
+    "deep_poverty",
+    "housing_insecure",
+    "mental_illness",
+    "dropout",
+    "incarcerated"
+  ],
+  "location": "St. Petersburg, Russia; Siberia",
+  "time_period": "1860s",
+  "systems_touched": [
+    "university (dropped out)",
+    "pawnbroker economy",
+    "police",
+    "courts",
+    "penal labor (Siberia)"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 3,
+    "3": 7,
+    "4": 8,
+    "5": 8,
+    "6": 6,
+    "7": 6,
+    "8": 6,
+    "9": 6,
+    "10": 8,
+    "11": 4,
+    "12": 8
+  },
+  "key_relationships": [
+    "Sonya Marmeladov",
+    "Razumikhin",
+    "Porfiry Petrovich (detective)",
+    "Dunya (sister)",
+    "Mother"
+  ],
+  "narrative_arc": "Starving ex-student in a coffin-sized garret who murders a pawnbroker. Dostoevsky documents his poverty with sensory detail — the stench of the stairwell, the heat of a St. Petersburg summer, the delirium of hunger. His confession isn't guilt but exhaustion — every system he touches demands performance he cannot sustain.",
+  "why_this_character_matters": "Raskolnikov's dome maps the interior architecture of poverty-driven crime. His Layer 5 (Housing — the coffin room) and Layer 4 (Health — the fevers) are precisely documented. His dome tests whether circumstance explanations hold up when measured against real systems.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 3,
+      "3": 8,
+      "4": 8,
+      "5": 10,
+      "6": 8,
+      "7": 6,
+      "8": 6,
+      "9": 6,
+      "10": 8,
+      "11": 4,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "system:police",
+        "system:courts",
+        "explicit:8"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "keyword:health",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "circumstance-layer:incarcerated",
+        "keyword:hous",
+        "keyword:room",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:dropout",
+        "explicit:6"
+      ],
+      "7": [
+        "circumstance:dropout",
+        "keyword:student",
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance-layer:mental_illness",
+        "explicit:6"
+      ],
+      "9": [
+        "keyword:air",
+        "keyword:heat",
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:mental_illness",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.021Z"
+}

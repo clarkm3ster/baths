@@ -1,0 +1,163 @@
+{
+  "id": "vladek-spiegelman--maus",
+  "name": "Vladek Spiegelman",
+  "real_or_fictional": "real",
+  "source_work": "Maus",
+  "source_author_creator": "Art Spiegelman",
+  "source_year": 1986,
+  "circumstances": [
+    "refugee",
+    "incarcerated",
+    "poverty",
+    "trauma",
+    "bereavement",
+    "displaced"
+  ],
+  "location": "Sosnowiec, Poland → Auschwitz → Dachau → USA",
+  "time_period": "1930s-1980s",
+  "systems_touched": [
+    "Nazi occupation",
+    "ghetto",
+    "Auschwitz",
+    "Dachau",
+    "DP camps",
+    "US immigration",
+    "American life"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 7,
+    "3": 7,
+    "4": 7,
+    "5": 8,
+    "6": 7,
+    "7": 4,
+    "8": 8,
+    "9": 8,
+    "10": 10,
+    "11": 5,
+    "12": 8
+  },
+  "key_relationships": [
+    "Anja (first wife)",
+    "Mala (second wife)",
+    "Art (son)",
+    "Richieu (first son, killed)"
+  ],
+  "narrative_arc": "Polish Jew who survived Auschwitz through resourcefulness, luck, and willingness to trade anything. Spiegelman documents every survival mechanism — the hidden tin shop skills, the languages he spoke, the gold he hid, the shoes he mended. After the war: immigration, remarriage, a difficult relationship with his cartoonist son who draws their conversations.",
+  "why_this_character_matters": "Vladek's dome maps the Holocaust as a dome destruction event and then America as a dome rebuilding event. Every layer was brought to zero by the camps. His post-war dome reveals what rebuilds first (economic survival) and what never rebuilds (the first son, the first wife, the trust).",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 7,
+      "3": 7,
+      "4": 7,
+      "5": 9,
+      "6": 7,
+      "7": 4,
+      "8": 8,
+      "9": 8,
+      "10": 10,
+      "11": 5,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "circumstance-layer:refugee",
+        "system:US immigration",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:bereavement",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:bereavement",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance-layer:refugee",
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:poverty",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:7"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:refugee",
+        "circumstance-layer:bereavement",
+        "circumstance-layer:displaced",
+        "keyword:trust",
+        "explicit:8"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:8"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:trauma",
+        "keyword:surviv",
+        "explicit:10"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:art",
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 89,
+    "average_score": 7.4,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.061Z"
+}

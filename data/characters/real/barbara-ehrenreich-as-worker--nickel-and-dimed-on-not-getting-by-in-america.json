@@ -1,0 +1,147 @@
+{
+  "id": "barbara-ehrenreich-as-worker--nickel-and-dimed-on-not-getting-by-in-america",
+  "name": "Barbara Ehrenreich (as worker)",
+  "real_or_fictional": "real",
+  "source_work": "Nickel and Dimed: On (Not) Getting By in America",
+  "source_author_creator": "Barbara Ehrenreich",
+  "source_year": 2001,
+  "circumstances": [
+    "working_poor",
+    "housing_insecure"
+  ],
+  "location": "Key West, FL; Portland, ME; Minneapolis, MN",
+  "time_period": "1998-2000",
+  "systems_touched": [
+    "temp agencies",
+    "fast food",
+    "retail",
+    "housekeeping",
+    "nursing homes",
+    "Walmart"
+  ],
+  "dome_layer_richness": {
+    "1": 3,
+    "2": 4,
+    "3": 9,
+    "4": 6,
+    "5": 8,
+    "6": 10,
+    "7": 3,
+    "8": 5,
+    "9": 5,
+    "10": 7,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Co-workers at each job",
+    "Managers",
+    "Holly (Walmart co-worker)"
+  ],
+  "narrative_arc": "Journalist goes undercover as a low-wage worker in three American cities. Documents with financial precision how minimum-wage math doesn't work — the gap between wages and rent is unbridgeable without assistance. The body breaks down, the math never adds up.",
+  "why_this_character_matters": "The first systematic documentation of the working-poor fiscal architecture. Her dome would show Layer 3 (Fiscal) and Layer 6 (Economic) in extraordinary detail — the exact math of why you cannot survive on minimum wage in any American city.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 3,
+      "2": 4,
+      "3": 9,
+      "4": 6,
+      "5": 8,
+      "6": 10,
+      "7": 3,
+      "8": 5,
+      "9": 5,
+      "10": 7,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:3"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:working_poor",
+        "circumstance-layer:housing_insecure",
+        "keyword:wage",
+        "keyword:rent",
+        "explicit:9"
+      ],
+      "4": [
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:working_poor",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:working_poor",
+        "system:temp agencies",
+        "keyword:work",
+        "keyword:wage",
+        "explicit:10"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "explicit:5"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "keyword:surviv",
+        "explicit:7"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 68,
+    "average_score": 5.7,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.921Z"
+}

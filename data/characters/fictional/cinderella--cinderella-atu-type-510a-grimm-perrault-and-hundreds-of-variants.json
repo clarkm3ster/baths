@@ -1,0 +1,158 @@
+{
+  "id": "cinderella--cinderella-atu-type-510a-grimm-perrault-and-hundreds-of-variants",
+  "name": "Cinderella",
+  "real_or_fictional": "fictional",
+  "source_work": "Cinderella (ATU Type 510A — Grimm, Perrault, and hundreds of variants)",
+  "source_author_creator": "Folk tradition (Grimm/Perrault versions)",
+  "source_year": 1697,
+  "circumstances": [
+    "orphan",
+    "domestic_violence",
+    "forced_labor",
+    "poverty",
+    "housing_insecure"
+  ],
+  "location": "Unspecified European kingdom",
+  "time_period": "Once upon a time",
+  "systems_touched": [
+    "family hierarchy",
+    "domestic service",
+    "marriage market",
+    "royal court"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 3,
+    "3": 5,
+    "4": 3,
+    "5": 7,
+    "6": 7,
+    "7": 3,
+    "8": 6,
+    "9": 5,
+    "10": 8,
+    "11": 5,
+    "12": 6
+  },
+  "key_relationships": [
+    "Stepmother",
+    "Stepsisters",
+    "Prince",
+    "Fairy Godmother / Dead mother's tree"
+  ],
+  "narrative_arc": "Orphan enslaved by her stepmother and forced to do all domestic labor. The ball is her only chance at escape. The glass slipper is the only system that recognizes her. Across hundreds of variants (Chinese, Egyptian, Native American), the core dome is the same: a person whose Layer 10 (Autonomy) is zero until an external force intervenes.",
+  "why_this_character_matters": "Cinderella exists in every culture — the dome of the enslaved child who escapes through marriage. Building her dome reveals what cultures across millennia identified as the minimum viable escape: beauty (cultural capital), an event (access), and a partner (economic rescue). The dome critique: why is marriage the only exit?",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 3,
+      "3": 5,
+      "4": 3,
+      "5": 7,
+      "6": 7,
+      "7": 3,
+      "8": 8,
+      "9": 5,
+      "10": 8,
+      "11": 5,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:orphan",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:forced_labor",
+        "explicit:5"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "explicit:3"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:orphan",
+        "circumstance-layer:poverty",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:forced_labor",
+        "circumstance:poverty",
+        "keyword:labor",
+        "explicit:7"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance:orphan",
+        "circumstance:domestic_violence",
+        "system:family hierarchy",
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance:forced_labor",
+        "keyword:autonomy",
+        "keyword:escape",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:cultur",
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 66,
+    "average_score": 5.5,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.065Z"
+}

@@ -1,0 +1,154 @@
+{
+  "id": "odysseus--the-odyssey",
+  "name": "Odysseus",
+  "real_or_fictional": "fictional",
+  "source_work": "The Odyssey",
+  "source_author_creator": "Homer",
+  "source_year": -700,
+  "circumstances": [
+    "displaced",
+    "veteran",
+    "homeless",
+    "refugee"
+  ],
+  "location": "Mediterranean Sea → Ithaca, Greece",
+  "time_period": "Bronze Age (c. 1200 BCE)",
+  "systems_touched": [
+    "military (Trojan War)",
+    "divine/supernatural",
+    "guest-host system (xenia)",
+    "kingship",
+    "domestic economy"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 4,
+    "3": 6,
+    "4": 5,
+    "5": 8,
+    "6": 5,
+    "7": 5,
+    "8": 8,
+    "9": 8,
+    "10": 9,
+    "11": 6,
+    "12": 8
+  },
+  "key_relationships": [
+    "Penelope (wife)",
+    "Telemachus (son)",
+    "Athena",
+    "Calypso",
+    "Circe",
+    "Suitors"
+  ],
+  "narrative_arc": "10 years of war, 10 years trying to get home. Homer documents every system of hospitality and hostility Odysseus encounters — the Cyclops who eats guests, the Phaeacians who honor them, the suitors who abuse the host's absence. His dome is the original veteran-trying-to-come-home story.",
+  "why_this_character_matters": "Odysseus is the first documented veteran reintegration narrative. His 20-year dome gap (away from home) means every layer has been maintained by Penelope or collapsed. His return forces a dome rebuild. Every veteran reintegration since echoes this pattern.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 4,
+      "3": 6,
+      "4": 5,
+      "5": 9,
+      "6": 5,
+      "7": 5,
+      "8": 8,
+      "9": 8,
+      "10": 9,
+      "11": 6,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:veteran",
+        "circumstance-layer:refugee",
+        "explicit:6"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance-layer:homeless",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance-layer:veteran",
+        "keyword:hospital",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance:homeless",
+        "circumstance-layer:refugee",
+        "keyword:home",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance-layer:veteran",
+        "explicit:5"
+      ],
+      "7": [
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:refugee",
+        "circumstance-layer:displaced",
+        "circumstance-layer:homeless",
+        "explicit:8"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:8"
+      ],
+      "10": [
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:story",
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 79,
+    "average_score": 6.6,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 8
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.058Z"
+}

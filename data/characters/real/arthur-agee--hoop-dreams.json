@@ -1,0 +1,159 @@
+{
+  "id": "arthur-agee--hoop-dreams",
+  "name": "Arthur Agee",
+  "real_or_fictional": "real",
+  "source_work": "Hoop Dreams",
+  "source_author_creator": "Steve James, Frederick Marx, Peter Gilbert",
+  "source_year": 1994,
+  "circumstances": [
+    "poverty",
+    "housing_insecure",
+    "addiction",
+    "dropout"
+  ],
+  "location": "West Garfield Park, Chicago, IL",
+  "time_period": "1986-1991",
+  "systems_touched": [
+    "public schools",
+    "private school (expelled)",
+    "welfare",
+    "drug economy",
+    "community college athletics",
+    "public housing"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 5,
+    "3": 7,
+    "4": 5,
+    "5": 8,
+    "6": 7,
+    "7": 7,
+    "8": 9,
+    "9": 7,
+    "10": 6,
+    "11": 6,
+    "12": 6
+  },
+  "key_relationships": [
+    "William Gates",
+    "Bo Agee (father)",
+    "Sheila Agee (mother)",
+    "Coach Bedford"
+  ],
+  "narrative_arc": "The mirror to William — also recruited, then cut when the school decided he wasn't good enough. Returns to the neighborhood school, watches his father descend into crack addiction, sees basketball as the only remaining door. The documentary's most devastating sequence: his father stealing from the family to buy drugs.",
+  "why_this_character_matters": "Arthur and William are the same dome experiment with different Layer 8 (Community) variables. Same starting conditions, different family stability, different outcomes. Comparing their domes reveals which community factors are decisive.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 5,
+      "3": 7,
+      "4": 5,
+      "5": 8,
+      "6": 7,
+      "7": 7,
+      "8": 9,
+      "9": 7,
+      "10": 6,
+      "11": 6,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "explicit:5"
+      ],
+      "2": [
+        "system:welfare",
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "keyword:addict",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:public housing",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:dropout",
+        "explicit:7"
+      ],
+      "7": [
+        "circumstance:dropout",
+        "system:public schools",
+        "keyword:school",
+        "explicit:7"
+      ],
+      "8": [
+        "circumstance-layer:addiction",
+        "keyword:communit",
+        "keyword:neighbor",
+        "keyword:family",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:art",
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 78,
+    "average_score": 6.5,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.035Z"
+}

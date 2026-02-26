@@ -1,0 +1,171 @@
+{
+  "id": "job--the-book-of-job-hebrew-bible",
+  "name": "Job",
+  "real_or_fictional": "fictional",
+  "source_work": "The Book of Job (Hebrew Bible)",
+  "source_author_creator": "Unknown (biblical tradition)",
+  "source_year": -500,
+  "circumstances": [
+    "poverty",
+    "deep_poverty",
+    "chronic_illness",
+    "bereavement",
+    "grief",
+    "isolation",
+    "housing_insecure"
+  ],
+  "location": "Land of Uz (ancient Near East)",
+  "time_period": "Ancient",
+  "systems_touched": [
+    "wealth system (destroyed)",
+    "community (shunned)",
+    "religious system (challenged)",
+    "legal system (demanded trial with God)"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 3,
+    "3": 8,
+    "4": 8,
+    "5": 6,
+    "6": 8,
+    "7": 3,
+    "8": 8,
+    "9": 5,
+    "10": 8,
+    "11": 4,
+    "12": 10
+  },
+  "key_relationships": [
+    "God",
+    "Satan",
+    "Three friends (Eliphaz, Bildad, Zophar)",
+    "Elihu",
+    "Wife"
+  ],
+  "narrative_arc": "Wealthy man who loses everything — children, livestock, health, community standing — as a cosmic test. His friends argue that suffering proves guilt. Job insists on his innocence and demands a trial with God. God responds with questions about cosmic architecture. Job's dome is destroyed and rebuilt, but the rebuilt dome is not the same dome.",
+  "why_this_character_matters": "Job is the oldest documented dome destruction and rebuilding in world literature. Every layer goes to zero simultaneously — wealth, health, family, community. His dome asks: when everything is taken, what remains? Layer 12 (Flourishing) is the answer: meaning survives when nothing else does.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 3,
+      "3": 10,
+      "4": 10,
+      "5": 7,
+      "6": 9,
+      "7": 3,
+      "8": 10,
+      "9": 5,
+      "10": 8,
+      "11": 4,
+      "12": 10
+    },
+    "layer_evidence": {
+      "1": [
+        "keyword:trial",
+        "explicit:7"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:bereavement",
+        "circumstance-layer:housing_insecure",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:chronic_illness",
+        "circumstance-layer:bereavement",
+        "circumstance-layer:grief",
+        "circumstance-layer:isolation",
+        "keyword:health",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:chronic_illness",
+        "keyword:job",
+        "explicit:8"
+      ],
+      "7": [
+        "system:religious system (challenged)",
+        "keyword:liter",
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance:isolation",
+        "circumstance-layer:bereavement",
+        "circumstance-layer:grief",
+        "keyword:communit",
+        "keyword:friend",
+        "keyword:family",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:isolation",
+        "keyword:surviv",
+        "explicit:8"
+      ],
+      "11": [
+        "explicit:4"
+      ],
+      "12": [
+        "circumstance:grief",
+        "keyword:flourish",
+        "keyword:meaning",
+        "explicit:10"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 86,
+    "average_score": 7.2,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.057Z"
+}

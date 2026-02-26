@@ -1,0 +1,182 @@
+{
+  "id": "precious-jones--push",
+  "name": "Precious Jones",
+  "real_or_fictional": "fictional",
+  "source_work": "Push",
+  "source_author_creator": "Sapphire",
+  "source_year": 1996,
+  "circumstances": [
+    "poverty",
+    "domestic_violence",
+    "illiterate",
+    "trauma",
+    "child_marriage",
+    "foster_care",
+    "mental_illness"
+  ],
+  "location": "Harlem, New York City, NY",
+  "time_period": "1987-1989",
+  "systems_touched": [
+    "public schools",
+    "alternative education (Each One Teach One)",
+    "welfare",
+    "child welfare",
+    "halfway house",
+    "Medicaid",
+    "HIV services"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 7,
+    "3": 6,
+    "4": 8,
+    "5": 7,
+    "6": 5,
+    "7": 9,
+    "8": 7,
+    "9": 5,
+    "10": 8,
+    "11": 8,
+    "12": 7
+  },
+  "key_relationships": [
+    "Mary (mother)",
+    "Carl (father/abuser)",
+    "Ms. Rain (teacher)",
+    "Abdul and Little Mongo (children)",
+    "Classmates at Each One Teach One"
+  ],
+  "narrative_arc": "Illiterate, obese, HIV-positive teenager pregnant by her own father for the second time. Sapphire documents her journey through an alternative literacy program that changes everything. Learning to read and write is the single intervention that unlocks every other layer. Her journal entries — growing from single words to full paragraphs — are the dome building itself in real time.",
+  "why_this_character_matters": "Precious proves that Layer 7 (Education) can be the keystone that unlocks all other layers. Her dome before and after literacy are completely different structures. The dome delta from a single intervention (one teacher, one classroom) is the most dramatic in this catalog.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 9,
+      "3": 6,
+      "4": 10,
+      "5": 7,
+      "6": 5,
+      "7": 10,
+      "8": 8,
+      "9": 5,
+      "10": 10,
+      "11": 8,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:child_marriage",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:foster_care",
+        "explicit:5"
+      ],
+      "2": [
+        "circumstance:foster_care",
+        "system:welfare",
+        "system:child welfare",
+        "system:Medicaid",
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "keyword:rent",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance:mental_illness",
+        "circumstance-layer:domestic_violence",
+        "system:Medicaid",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "system:halfway house",
+        "keyword:rent",
+        "keyword:room",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:illiterate",
+        "explicit:5"
+      ],
+      "7": [
+        "circumstance:illiterate",
+        "circumstance:foster_care",
+        "circumstance-layer:child_marriage",
+        "system:public schools",
+        "keyword:learn",
+        "keyword:read",
+        "keyword:teach",
+        "keyword:class",
+        "keyword:educat",
+        "explicit:9"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:foster_care",
+        "circumstance-layer:mental_illness",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance:child_marriage",
+        "circumstance-layer:illiterate",
+        "circumstance-layer:trauma",
+        "circumstance-layer:mental_illness",
+        "explicit:8"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:write",
+        "keyword:sing",
+        "explicit:8"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 92,
+    "average_score": 7.7,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.024Z"
+}

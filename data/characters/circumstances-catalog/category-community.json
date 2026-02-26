@@ -1,0 +1,386 @@
+{
+  "category": "community",
+  "types": 7,
+  "total_characters": 77,
+  "entries": [
+    {
+      "type": "domestic_violence",
+      "category": "community",
+      "layers": [
+        8,
+        1,
+        4
+      ],
+      "description": "Experiencing intimate partner violence",
+      "character_count": 29,
+      "real_count": 17,
+      "fictional_count": 12,
+      "example_characters": [
+        {
+          "name": "Arleen Belle",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jessica",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Coco",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Chanel Sykes",
+          "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jennifer Hernandez",
+          "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "J.D. Vance",
+          "source_work": "Hillbilly Elegy: A Memoir of a Family and Culture in Crisis",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Tara Westover",
+          "source_work": "Educated",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "David Wojnarowicz",
+          "source_work": "In the Shadow of the American Dream: The Diaries of David Wojnarowicz",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Theresa Flores",
+          "source_work": "Senate Judiciary Committee Testimony on Human Trafficking",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Maria (Composite Social Work Case)",
+          "source_work": "Social Work Case Studies in Integrated Care (NASW)",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "isolation",
+      "category": "community",
+      "layers": [
+        8,
+        4,
+        10
+      ],
+      "description": "Socially isolated, disconnected from community",
+      "character_count": 16,
+      "real_count": 7,
+      "fictional_count": 9,
+      "example_characters": [
+        {
+          "name": "Crystal Mayberry",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Appalachian Miner",
+          "source_work": "The Other America: Poverty in the United States",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Tara Westover",
+          "source_work": "Educated",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ricky Jackson",
+          "source_work": "Life After Death Row (Marshall Project)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Dual-Eligible Elders",
+          "source_work": "CMS Dual-Eligible Demonstration Evaluation",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Celie",
+          "source_work": "The Color Purple",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Sethe",
+          "source_work": "Beloved",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Gregor Samsa",
+          "source_work": "The Metamorphosis",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Chiron Harris",
+          "source_work": "In Moonlight Black Boys Look Blue (short story) / Moonlight (film)",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Turtle Alveston",
+          "source_work": "My Year of Rest and Relaxation",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "single_parent",
+      "category": "community",
+      "layers": [
+        8,
+        6,
+        3
+      ],
+      "description": "Raising children alone",
+      "character_count": 10,
+      "real_count": 9,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "Arleen Belle",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Lamar",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jessica",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Coco",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Chanel Sykes",
+          "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jennifer Hernandez",
+          "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Rae McCormick",
+          "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Auburn Shelter Families",
+          "source_work": "Invisible Child (NYT Series)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Dolores Dante (Waitress)",
+          "source_work": "Working: People Talk About What They Do All Day and How They Feel About What They Do",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Halley",
+          "source_work": "The Florida Project",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "orphan",
+      "category": "community",
+      "layers": [
+        8,
+        1,
+        5
+      ],
+      "description": "Without parents or guardians",
+      "character_count": 9,
+      "real_count": 1,
+      "fictional_count": 8,
+      "example_characters": [
+        {
+          "name": "Richard Wright",
+          "source_work": "Black Boy / American Hunger",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Huckleberry Finn",
+          "source_work": "Adventures of Huckleberry Finn",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Jean Valjean",
+          "source_work": "Les Misérables",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Oliver Twist",
+          "source_work": "Oliver Twist",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Ellie (The Last of Us)",
+          "source_work": "The Last of Us (Video Game)",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Antigone",
+          "source_work": "Antigone",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Cinderella",
+          "source_work": "Cinderella (ATU Type 510A — Grimm, Perrault, and hundreds of variants)",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Hansel and Gretel",
+          "source_work": "Hansel and Gretel (Grimm)",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Setsuko and Seita",
+          "source_work": "Grave of the Fireflies",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "foster_care",
+      "category": "community",
+      "layers": [
+        8,
+        1,
+        7
+      ],
+      "description": "In or aged out of foster care system",
+      "character_count": 7,
+      "real_count": 4,
+      "fictional_count": 3,
+      "example_characters": [
+        {
+          "name": "Crystal Mayberry",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Dasani Coates",
+          "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "J.D. Vance",
+          "source_work": "Hillbilly Elegy: A Memoir of a Family and Culture in Crisis",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The \"Falling Through the Cracks\" Children",
+          "source_work": "Child Welfare System Failures (HHS Inspector General)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Pecola Breedlove",
+          "source_work": "The Bluest Eye",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Precious Jones",
+          "source_work": "Push",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Ellie (The Last of Us)",
+          "source_work": "The Last of Us (Video Game)",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "elderly",
+      "category": "community",
+      "layers": [
+        8,
+        4,
+        3
+      ],
+      "description": "Elderly, navigating aging-related systems",
+      "character_count": 4,
+      "real_count": 2,
+      "fictional_count": 2,
+      "example_characters": [
+        {
+          "name": "The Dual-Eligible Elders",
+          "source_work": "CMS Dual-Eligible Demonstration Evaluation",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Fountain Hughes",
+          "source_work": "WPA Slave Narrative Collection / Library of Congress Audio",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Daniel Blake",
+          "source_work": "I, Daniel Blake",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Willy Loman",
+          "source_work": "Death of a Salesman",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "caregiver",
+      "category": "community",
+      "layers": [
+        8,
+        4,
+        6
+      ],
+      "description": "Primary caregiver for dependent",
+      "character_count": 2,
+      "real_count": 0,
+      "fictional_count": 2,
+      "example_characters": [
+        {
+          "name": "Gregor Samsa",
+          "source_work": "The Metamorphosis",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Lee Everett",
+          "source_work": "The Walking Dead (Telltale Game)",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    }
+  ]
+}

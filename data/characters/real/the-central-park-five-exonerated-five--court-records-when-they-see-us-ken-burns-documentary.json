@@ -1,0 +1,162 @@
+{
+  "id": "the-central-park-five-exonerated-five--court-records-when-they-see-us-ken-burns-documentary",
+  "name": "The Central Park Five (Exonerated Five)",
+  "real_or_fictional": "real",
+  "source_work": "Court Records / When They See Us / Ken Burns Documentary",
+  "source_author_creator": "Ava DuVernay (Netflix); Ken Burns (PBS); Court records",
+  "source_year": 2019,
+  "circumstances": [
+    "wrongly_convicted",
+    "incarcerated",
+    "poverty",
+    "trauma"
+  ],
+  "location": "New York City, NY",
+  "time_period": "1989-2002",
+  "systems_touched": [
+    "NYPD",
+    "DA office",
+    "criminal courts",
+    "Rikers Island",
+    "prison",
+    "parole",
+    "exoneration process",
+    "civil lawsuit"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 6,
+    "3": 7,
+    "4": 7,
+    "5": 6,
+    "6": 8,
+    "7": 7,
+    "8": 8,
+    "9": 4,
+    "10": 10,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "Each other",
+    "Families",
+    "Matias Reyes (actual perpetrator)",
+    "Defense attorneys",
+    "Media"
+  ],
+  "narrative_arc": "Five Black and Latino teenagers falsely convicted of assault in Central Park. Coerced confessions, rushed trial, 6-13 years in prison each. Exonerated by DNA evidence and the actual perpetrator's confession. Their civil suit revealed the NYPD's systematic failures — every procedure that was supposed to prevent false conviction failed.",
+  "why_this_character_matters": "Five domes built from the same wrongful prosecution reveal how the same legal failure (Layer 1) creates five different life trajectories. Comparing their post-release domes — who recovered and who didn't — reveals which other layers buffer against injustice.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 6,
+      "3": 7,
+      "4": 7,
+      "5": 6,
+      "6": 8,
+      "7": 7,
+      "8": 8,
+      "9": 4,
+      "10": 10,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:wrongly_convicted",
+        "circumstance:incarcerated",
+        "system:criminal courts",
+        "system:prison",
+        "system:parole",
+        "keyword:trial",
+        "keyword:legal",
+        "keyword:conviction",
+        "explicit:10"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:poverty",
+        "keyword:rent",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:8"
+      ],
+      "7": [
+        "explicit:7"
+      ],
+      "8": [
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:wrongly_convicted",
+        "circumstance-layer:trauma",
+        "explicit:10"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:creat",
+        "explicit:5"
+      ],
+      "12": [
+        "circumstance:wrongly_convicted",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 85,
+    "average_score": 7.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.985Z"
+}

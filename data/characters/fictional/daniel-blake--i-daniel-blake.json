@@ -1,0 +1,164 @@
+{
+  "id": "daniel-blake--i-daniel-blake",
+  "name": "Daniel Blake",
+  "real_or_fictional": "fictional",
+  "source_work": "I, Daniel Blake",
+  "source_author_creator": "Ken Loach",
+  "source_year": 2016,
+  "circumstances": [
+    "disability",
+    "poverty",
+    "elderly",
+    "unemployed",
+    "housing_insecure"
+  ],
+  "location": "Newcastle, England",
+  "time_period": "2016",
+  "systems_touched": [
+    "NHS",
+    "DWP (benefits)",
+    "Jobcentre Plus",
+    "Universal Credit",
+    "food bank",
+    "housing association",
+    "appeals tribunal"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 10,
+    "3": 8,
+    "4": 8,
+    "5": 6,
+    "6": 7,
+    "7": 4,
+    "8": 7,
+    "9": 5,
+    "10": 8,
+    "11": 4,
+    "12": 7
+  },
+  "key_relationships": [
+    "Katie Morgan",
+    "China (friend)",
+    "DWP staff",
+    "Food bank volunteers"
+  ],
+  "narrative_arc": "Carpenter who had a heart attack and can't work but is deemed \"fit for work\" by a computer assessment. Loach documents every step of the UK benefits system — the online-only application he can't navigate, the Jobcentre sanctions, the food bank, the appeal tribunal. He dies of a heart attack in the waiting room of the appeals office.",
+  "why_this_character_matters": "Daniel Blake is the most detailed fictional map of benefits system navigation ever filmed. Layer 2 (Systems) is documented with such precision that the film was used as evidence in UK parliamentary hearings on welfare reform. His dome maps the bureaucratic kill zone.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 10,
+      "3": 10,
+      "4": 8,
+      "5": 6,
+      "6": 10,
+      "7": 4,
+      "8": 7,
+      "9": 5,
+      "10": 8,
+      "11": 4,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "keyword:hearing",
+        "keyword:appeal",
+        "explicit:6"
+      ],
+      "2": [
+        "keyword:application",
+        "keyword:benefit",
+        "keyword:form",
+        "explicit:10"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:elderly",
+        "circumstance-layer:unemployed",
+        "circumstance-layer:housing_insecure",
+        "system:Universal Credit",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:disability",
+        "circumstance-layer:elderly",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:room",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:unemployed",
+        "circumstance-layer:disability",
+        "keyword:work",
+        "keyword:job",
+        "explicit:7"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:elderly",
+        "circumstance-layer:unemployed",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:disability",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:art",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 85,
+    "average_score": 7.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.047Z"
+}

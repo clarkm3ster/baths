@@ -1,0 +1,166 @@
+{
+  "id": "scott-bunker--evicted-poverty-and-profit-in-the-american-city",
+  "name": "Scott Bunker",
+  "real_or_fictional": "real",
+  "source_work": "Evicted: Poverty and Profit in the American City",
+  "source_author_creator": "Matthew Desmond",
+  "source_year": 2016,
+  "circumstances": [
+    "evicted",
+    "addiction",
+    "formerly_incarcerated",
+    "poverty",
+    "housing_insecure"
+  ],
+  "location": "Milwaukee, WI",
+  "time_period": "2008-2009",
+  "systems_touched": [
+    "criminal justice",
+    "rehab",
+    "landlord-tenant court",
+    "rooming houses",
+    "nursing homes"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 5,
+    "3": 7,
+    "4": 8,
+    "5": 9,
+    "6": 6,
+    "7": 3,
+    "8": 6,
+    "9": 4,
+    "10": 6,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Other rooming house residents",
+    "Sherrena Tarver (landlord)"
+  ],
+  "narrative_arc": "Former nurse whose addiction cost him his career, freedom, and housing. Desmond documents his attempts at sobriety, the economics of rooming houses, and how the housing market creates a separate tier for people with criminal records and addiction histories.",
+  "why_this_character_matters": "Scott shows how addiction, incarceration, and housing markets interact. His dome reveals the fiscal architecture of bottom-tier housing — rooming houses that charge per week, extracting maximum rent from people with minimum options.",
+  "source_urls": [
+    "https://www.evictedbook.com/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 5,
+      "3": 9,
+      "4": 8,
+      "5": 10,
+      "6": 6,
+      "7": 3,
+      "8": 6,
+      "9": 4,
+      "10": 6,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:formerly_incarcerated",
+        "circumstance-layer:evicted",
+        "circumstance-layer:addiction",
+        "system:criminal justice",
+        "explicit:7"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:evicted",
+        "circumstance-layer:housing_insecure",
+        "keyword:cost",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "system:rehab",
+        "keyword:addict",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance:evicted",
+        "circumstance:housing_insecure",
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:poverty",
+        "system:landlord-tenant court",
+        "keyword:hous",
+        "keyword:rent",
+        "keyword:room",
+        "explicit:9"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "keyword:career",
+        "explicit:6"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance-layer:addiction",
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "keyword:freedom",
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:creat",
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 73,
+    "average_score": 6.1,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 9
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.910Z"
+}

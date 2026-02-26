@@ -1,0 +1,147 @@
+{
+  "id": "fountain-hughes--wpa-slave-narrative-collection-library-of-congress-audio",
+  "name": "Fountain Hughes",
+  "real_or_fictional": "real",
+  "source_work": "WPA Slave Narrative Collection / Library of Congress Audio",
+  "source_author_creator": "WPA Federal Writers' Project",
+  "source_year": 1949,
+  "circumstances": [
+    "enslaved",
+    "poverty",
+    "elderly"
+  ],
+  "location": "Charlottesville, VA; Baltimore, MD",
+  "time_period": "1848-1949",
+  "systems_touched": [
+    "slavery",
+    "emancipation",
+    "sharecropping",
+    "Jim Crow",
+    "wage labor"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 3,
+    "3": 7,
+    "4": 5,
+    "5": 7,
+    "6": 8,
+    "7": 4,
+    "8": 8,
+    "9": 6,
+    "10": 10,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "Former enslaver's family",
+    "Community in Baltimore"
+  ],
+  "narrative_arc": "One of the few WPA interviews recorded on audio. Born enslaved, he describes the transition from slavery to freedom in his own voice at age 101 — what it meant to own nothing, to be owned, and then to be \"free\" with nothing. His account spans the entire arc from bondage through Reconstruction through Jim Crow.",
+  "why_this_character_matters": "Fountain is the only person in this catalog who experienced slavery firsthand and whose voice was recorded. His dome spans the most extreme Layer 10 (Autonomy) transition possible — from owned property to free person. Building his dome reveals what \"freedom\" meant without any other layer being filled.",
+  "source_urls": [
+    "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 3,
+      "3": 7,
+      "4": 5,
+      "5": 7,
+      "6": 8,
+      "7": 4,
+      "8": 8,
+      "9": 6,
+      "10": 10,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:enslaved",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:elderly",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:elderly",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:8"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:elderly",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:enslaved",
+        "keyword:freedom",
+        "keyword:autonomy",
+        "explicit:10"
+      ],
+      "11": [
+        "explicit:5"
+      ],
+      "12": [
+        "circumstance-layer:enslaved",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 79,
+    "average_score": 6.6,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.991Z"
+}

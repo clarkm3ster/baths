@@ -1,0 +1,166 @@
+{
+  "id": "kalief-browder--kalief-browder-investigation-new-yorker-propublica-marshall-project",
+  "name": "Kalief Browder",
+  "real_or_fictional": "real",
+  "source_work": "Kalief Browder Investigation (New Yorker / ProPublica / Marshall Project)",
+  "source_author_creator": "Jennifer Gonnerman (New Yorker)",
+  "source_year": 2014,
+  "circumstances": [
+    "detained",
+    "incarcerated",
+    "mental_illness",
+    "trauma",
+    "poverty"
+  ],
+  "location": "Bronx, NY; Rikers Island, NY",
+  "time_period": "2010-2015",
+  "systems_touched": [
+    "NYPD",
+    "Rikers Island",
+    "Bronx criminal court",
+    "bail system",
+    "solitary confinement",
+    "mental health",
+    "Medicaid"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 6,
+    "3": 7,
+    "4": 9,
+    "5": 7,
+    "6": 5,
+    "7": 6,
+    "8": 7,
+    "9": 5,
+    "10": 10,
+    "11": 3,
+    "12": 7
+  },
+  "key_relationships": [
+    "Venida Browder (mother)",
+    "Siblings",
+    "Defense attorney"
+  ],
+  "narrative_arc": "Sixteen-year-old held at Rikers for 3 years without trial for allegedly stealing a backpack. Could not make $3,000 bail. Spent 2 of 3 years in solitary confinement. Repeatedly beaten. Case eventually dismissed. Died by suicide at 22. His story changed bail reform nationally.",
+  "why_this_character_matters": "Kalief's dome is the definitive indictment of pretrial detention. Layer 1 (Legal) shows a system that held a child for 3 years for a crime that was never proven. Layer 10 (Autonomy) shows what solitary confinement does to a developing mind. The $3,000 bail is the dome's financial hinge.",
+  "source_urls": [
+    "https://www.newyorker.com/magazine/2014/10/06/before-the-law"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 6,
+      "3": 7,
+      "4": 10,
+      "5": 7,
+      "6": 5,
+      "7": 6,
+      "8": 7,
+      "9": 5,
+      "10": 10,
+      "11": 3,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:detained",
+        "circumstance:incarcerated",
+        "keyword:trial",
+        "keyword:legal",
+        "keyword:bail",
+        "explicit:10"
+      ],
+      "2": [
+        "system:Medicaid",
+        "keyword:form",
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "circumstance:trauma",
+        "system:mental health",
+        "system:Medicaid",
+        "explicit:9"
+      ],
+      "5": [
+        "circumstance-layer:detained",
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:poverty",
+        "keyword:tent",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:5"
+      ],
+      "7": [
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance-layer:mental_illness",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:detained",
+        "circumstance:incarcerated",
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:trauma",
+        "keyword:autonomy",
+        "explicit:10"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:story",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.962Z"
+}

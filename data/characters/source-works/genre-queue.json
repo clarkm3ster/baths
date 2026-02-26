@@ -1,0 +1,346 @@
+{
+  "updated_at": "2026-02-26T21:44:52.161Z",
+  "genres_discovered": [
+    "prison-literature",
+    "migration-narratives",
+    "disability-memoirs",
+    "addiction-recovery",
+    "foster-care",
+    "indigenous-narratives",
+    "appalachian-poverty",
+    "domestic-violence"
+  ],
+  "total_queued": 47,
+  "unresolved": 47,
+  "queue": [
+    {
+      "id": "orange-is-the-new-black",
+      "title": "Orange Is the New Black",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "in-the-place-of-justice",
+      "title": "In the Place of Justice",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "newjack",
+      "title": "Newjack",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-sun-does-shine",
+      "title": "The Sun Does Shine",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "writing-my-wrongs",
+      "title": "Writing My Wrongs",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "are-prisons-obsolete",
+      "title": "Are Prisons Obsolete?",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "solitary",
+      "title": "Solitary",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "american-prison",
+      "title": "American Prison",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "enriques-journey",
+      "title": "Enrique's Journey",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-distance-between-us",
+      "title": "The Distance Between Us",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "tell-me-how-it-ends",
+      "title": "Tell Me How It Ends",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-far-away-brothers",
+      "title": "The Far Away Brothers",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "lost-children-archive",
+      "title": "Lost Children Archive",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "exit-west",
+      "title": "Exit West",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-diving-bell-and-the-butterfly",
+      "title": "The Diving Bell and the Butterfly",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "still-alice",
+      "title": "Still Alice",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-reason-i-jump",
+      "title": "The Reason I Jump",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "my-stroke-of-insight",
+      "title": "My Stroke of Insight",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "look-me-in-the-eye",
+      "title": "Look Me in the Eye",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-collected-schizophrenias",
+      "title": "The Collected Schizophrenias",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "beautiful-boy",
+      "title": "Beautiful Boy",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "tweak",
+      "title": "Tweak",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "lit",
+      "title": "Lit",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "drinking-a-love-story",
+      "title": "Drinking: A Love Story",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "the-night-of-the-gun",
+      "title": "The Night of the Gun",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "in-the-realm-of-hungry-ghosts",
+      "title": "In the Realm of Hungry Ghosts",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "sober-curious",
+      "title": "Sober Curious",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "three-little-words",
+      "title": "Three Little Words",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "a-place-called-home",
+      "title": "A Place Called Home",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "another-place-at-the-table",
+      "title": "Another Place at the Table",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "the-lost-children-of-wilder",
+      "title": "The Lost Children of Wilder",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "somebodys-someone",
+      "title": "Somebody's Someone",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "there-there",
+      "title": "There There",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "the-absolutely-true-diary-of-a-part-time-indian",
+      "title": "The Absolutely True Diary of a Part-Time Indian",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "killers-of-the-flower-moon",
+      "title": "Killers of the Flower Moon",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "an-indigenous-peoples-history-of-the-united-states",
+      "title": "An Indigenous Peoples' History of the United States",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "heart-berries",
+      "title": "Heart Berries",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "braiding-sweetgrass",
+      "title": "Braiding Sweetgrass",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "night-comes-to-the-cumberlands",
+      "title": "Night Comes to the Cumberlands",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "hillbilly-elegy",
+      "title": "Hillbilly Elegy",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "dopesick",
+      "title": "Dopesick",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "what-you-are-getting-wrong-about-appalachia",
+      "title": "What You Are Getting Wrong About Appalachia",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "ramp-hollow",
+      "title": "Ramp Hollow",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "no-visible-bruises",
+      "title": "No Visible Bruises",
+      "genre": "domestic-violence",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "why-does-he-do-that",
+      "title": "Why Does He Do That?",
+      "genre": "domestic-violence",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "behind-closed-doors",
+      "title": "Behind Closed Doors",
+      "genre": "domestic-violence",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "a-burning",
+      "title": "A Burning",
+      "genre": "domestic-violence",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    }
+  ]
+}

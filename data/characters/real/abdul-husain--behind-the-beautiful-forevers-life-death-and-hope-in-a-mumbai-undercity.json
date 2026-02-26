@@ -1,0 +1,163 @@
+{
+  "id": "abdul-husain--behind-the-beautiful-forevers-life-death-and-hope-in-a-mumbai-undercity",
+  "name": "Abdul Husain",
+  "real_or_fictional": "real",
+  "source_work": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+  "source_author_creator": "Katherine Boo",
+  "source_year": 2012,
+  "circumstances": [
+    "poverty",
+    "housing_insecure",
+    "wrongly_convicted",
+    "child_labor",
+    "immigrant"
+  ],
+  "location": "Annawadi slum, Mumbai, India",
+  "time_period": "2007-2011",
+  "systems_touched": [
+    "police",
+    "courts",
+    "recycling economy",
+    "hospitals",
+    "municipal government",
+    "schools"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 6,
+    "3": 8,
+    "4": 5,
+    "5": 8,
+    "6": 9,
+    "7": 4,
+    "8": 8,
+    "9": 8,
+    "10": 7,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Karam (father)",
+    "Zehrunisa (mother)",
+    "Kehkashan (sister)",
+    "Fatima (neighbor)"
+  ],
+  "narrative_arc": "Teenage garbage sorter who is the primary earner for his family. When a neighbor self-immolates, his family is falsely accused. Boo documents his journey through Mumbai's criminal justice system — the corruption, the delays, the economics of innocence in a system where everything has a price.",
+  "why_this_character_matters": "Abdul's dome bridges international systems. Building a dome with US systems applied to his Mumbai circumstances reveals universal patterns in how poverty, housing, and justice interact — and where systems diverge.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 6,
+      "3": 8,
+      "4": 5,
+      "5": 8,
+      "6": 9,
+      "7": 4,
+      "8": 8,
+      "9": 8,
+      "10": 7,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:wrongly_convicted",
+        "circumstance-layer:immigrant",
+        "system:police",
+        "system:courts",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "keyword:price",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance-layer:child_labor",
+        "system:hospitals",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:child_labor",
+        "circumstance-layer:immigrant",
+        "explicit:9"
+      ],
+      "7": [
+        "circumstance-layer:child_labor",
+        "system:schools",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "keyword:neighbor",
+        "keyword:family",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:8"
+      ],
+      "10": [
+        "circumstance-layer:wrongly_convicted",
+        "circumstance-layer:child_labor",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "circumstance:wrongly_convicted",
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 80,
+    "average_score": 6.7,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.922Z"
+}

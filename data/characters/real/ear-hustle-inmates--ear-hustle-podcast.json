@@ -1,0 +1,165 @@
+{
+  "id": "ear-hustle-inmates--ear-hustle-podcast",
+  "name": "Ear Hustle Inmates",
+  "real_or_fictional": "real",
+  "source_work": "Ear Hustle (Podcast)",
+  "source_author_creator": "Earlonne Woods, Nigel Poor, Rahsaan \"New York\" Thomas",
+  "source_year": 2017,
+  "circumstances": [
+    "incarcerated",
+    "poverty",
+    "trauma",
+    "formerly_incarcerated"
+  ],
+  "location": "San Quentin State Prison, CA",
+  "time_period": "2017-present",
+  "systems_touched": [
+    "state prison",
+    "parole",
+    "prison education",
+    "prison health",
+    "disciplinary system",
+    "mail system",
+    "visitation"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 8,
+    "3": 5,
+    "4": 7,
+    "5": 8,
+    "6": 6,
+    "7": 6,
+    "8": 9,
+    "9": 7,
+    "10": 9,
+    "11": 8,
+    "12": 7
+  },
+  "key_relationships": [
+    "Fellow inmates",
+    "Families outside",
+    "Prison staff",
+    "Parole officers"
+  ],
+  "narrative_arc": "The first podcast produced inside a prison. Over 100+ episodes, inmates describe their daily circumstances in extraordinary detail — cell conditions, food, health care, relationships, the experience of time, the bureaucracy of discipline, the architecture of hope inside confinement.",
+  "why_this_character_matters": "Ear Hustle fills every dome layer from inside the prison. Layer 9 (Environment) has never been documented from the inhabitant's perspective with this much granularity. Layer 10 (Autonomy) and Layer 11 (Creativity) reveal how people create meaning inside total institutional control.",
+  "source_urls": [
+    "https://www.earhustlesq.com/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 8,
+      "3": 5,
+      "4": 7,
+      "5": 8,
+      "6": 6,
+      "7": 6,
+      "8": 9,
+      "9": 7,
+      "10": 9,
+      "11": 8,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "circumstance:formerly_incarcerated",
+        "system:state prison",
+        "system:parole",
+        "system:prison education",
+        "system:prison health",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "keyword:health",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "keyword:hustle",
+        "explicit:6"
+      ],
+      "7": [
+        "explicit:6"
+      ],
+      "8": [
+        "explicit:9"
+      ],
+      "9": [
+        "keyword:environment",
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:trauma",
+        "keyword:autonomy",
+        "keyword:control",
+        "explicit:9"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:creat",
+        "explicit:8"
+      ],
+      "12": [
+        "keyword:meaning",
+        "keyword:hope",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 90,
+    "average_score": 7.5,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.986Z"
+}

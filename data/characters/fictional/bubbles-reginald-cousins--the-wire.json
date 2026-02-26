@@ -1,0 +1,173 @@
+{
+  "id": "bubbles-reginald-cousins--the-wire",
+  "name": "Bubbles (Reginald Cousins)",
+  "real_or_fictional": "fictional",
+  "source_work": "The Wire",
+  "source_author_creator": "David Simon, Ed Burns",
+  "source_year": 2002,
+  "circumstances": [
+    "addiction",
+    "homeless",
+    "poverty",
+    "deep_poverty",
+    "trauma",
+    "bereavement"
+  ],
+  "location": "West Baltimore, MD",
+  "time_period": "2002-2008",
+  "systems_touched": [
+    "drug economy",
+    "police (informant)",
+    "homeless services",
+    "rehab (multiple)",
+    "hospitals",
+    "NA meetings",
+    "newspaper (selling)"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 6,
+    "3": 6,
+    "4": 9,
+    "5": 8,
+    "6": 7,
+    "7": 3,
+    "8": 8,
+    "9": 7,
+    "10": 8,
+    "11": 4,
+    "12": 8
+  },
+  "key_relationships": [
+    "Johnny (partner)",
+    "Kima Greggs (detective)",
+    "Walon (sponsor)",
+    "Sherrod (protégé)",
+    "Sister"
+  ],
+  "narrative_arc": "Heroin addict whose arc across all five seasons is the most complete addiction-recovery-relapse-recovery narrative in television. Simon documents every institutional encounter — the rehab that doesn't work, the homelessness between relapses, the police who use him as an informant, and ultimately the NA meeting and the sister's house that save him.",
+  "why_this_character_matters": "Bubbles' dome across 5 seasons is the most granular addiction dome in fiction. Each season is a different dome configuration — same person, different layer states. His dome proves that recovery requires multiple layers to change simultaneously, not just Layer 4 (Health).",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 6,
+      "3": 10,
+      "4": 10,
+      "5": 10,
+      "6": 7,
+      "7": 3,
+      "8": 8,
+      "9": 7,
+      "10": 8,
+      "11": 4,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "system:police (informant)",
+        "explicit:6"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:bereavement",
+        "keyword:rent",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance:trauma",
+        "circumstance-layer:bereavement",
+        "system:rehab (multiple)",
+        "system:hospitals",
+        "keyword:health",
+        "keyword:addict",
+        "explicit:9"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "keyword:hous",
+        "keyword:home",
+        "keyword:rent",
+        "keyword:homeless",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "keyword:work",
+        "explicit:7"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance-layer:addiction",
+        "circumstance-layer:homeless",
+        "circumstance-layer:bereavement",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance-layer:trauma",
+        "explicit:8"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:4"
+      ],
+      "12": [
+        "keyword:vision",
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 87,
+    "average_score": 7.3,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.042Z"
+}

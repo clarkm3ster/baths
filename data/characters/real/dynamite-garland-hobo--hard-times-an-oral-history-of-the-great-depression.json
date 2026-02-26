@@ -1,0 +1,154 @@
+{
+  "id": "dynamite-garland-hobo--hard-times-an-oral-history-of-the-great-depression",
+  "name": "Dynamite Garland (Hobo)",
+  "real_or_fictional": "real",
+  "source_work": "Hard Times: An Oral History of the Great Depression",
+  "source_author_creator": "Studs Terkel",
+  "source_year": 1970,
+  "circumstances": [
+    "homeless",
+    "unemployed",
+    "poverty",
+    "deep_poverty"
+  ],
+  "location": "Nationwide (riding freight trains)",
+  "time_period": "1929-1940",
+  "systems_touched": [
+    "railroad police",
+    "jails",
+    "soup kitchens",
+    "CCC camps",
+    "WPA",
+    "Hoovervilles"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 4,
+    "3": 7,
+    "4": 5,
+    "5": 8,
+    "6": 8,
+    "7": 3,
+    "8": 8,
+    "9": 7,
+    "10": 7,
+    "11": 5,
+    "12": 5
+  },
+  "key_relationships": [
+    "Fellow hobos",
+    "Railroad bulls (police)",
+    "Relief workers"
+  ],
+  "narrative_arc": "Depression-era hobo who rode freight trains across America looking for work. Terkel captures the economics of homelessness in the 1930s — the hobo jungles, the kindness of farm wives, the brutality of railroad police, and the CCC camps that eventually gave structure.",
+  "why_this_character_matters": "Dynamite's dome maps homelessness when it was nationwide and systemic — not individual failure but economic collapse. Comparing his dome to contemporary homeless domes reveals which systems existed in the 1930s that don't exist now (CCC, WPA) and vice versa.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 4,
+      "3": 10,
+      "4": 5,
+      "5": 9,
+      "6": 10,
+      "7": 3,
+      "8": 8,
+      "9": 7,
+      "10": 7,
+      "11": 5,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "system:railroad police",
+        "explicit:5"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:unemployed",
+        "explicit:7"
+      ],
+      "4": [
+        "keyword:depress",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "keyword:home",
+        "keyword:homeless",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:unemployed",
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "keyword:work",
+        "explicit:8"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance-layer:homeless",
+        "circumstance-layer:unemployed",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 78,
+    "average_score": 6.5,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.996Z"
+}

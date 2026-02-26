@@ -1,0 +1,161 @@
+{
+  "id": "cleo--roma",
+  "name": "Cleo",
+  "real_or_fictional": "fictional",
+  "source_work": "Roma",
+  "source_author_creator": "Alfonso Cuarón",
+  "source_year": 2018,
+  "circumstances": [
+    "poverty",
+    "working_poor",
+    "immigrant",
+    "domestic_violence",
+    "bereavement"
+  ],
+  "location": "Roma neighborhood, Mexico City, Mexico",
+  "time_period": "1970-1971",
+  "systems_touched": [
+    "domestic service",
+    "hospitals",
+    "political protests",
+    "martial arts dojos",
+    "community"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 3,
+    "3": 6,
+    "4": 7,
+    "5": 7,
+    "6": 8,
+    "7": 4,
+    "8": 8,
+    "9": 7,
+    "10": 7,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "Sofía (employer)",
+    "Children she cares for",
+    "Fermín (boyfriend)",
+    "Adela (fellow domestic worker)"
+  ],
+  "narrative_arc": "Indigenous domestic worker in a middle-class Mexico City household. Cuarón documents her pregnancy (by a man who abandons her), the earthquake, the Corpus Christi massacre, and the ocean scene where she saves the children despite not knowing how to swim. Her dome is invisible to the family she serves — she lives inside their dome but has her own, smaller, more fragile one.",
+  "why_this_character_matters": "Cleo occupies a dome inside a dome — she lives in her employer's house but has a separate, thinner dome. Her dome reveals the domestic worker paradox: physical proximity to wealth with zero access to its protections.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 3,
+      "3": 8,
+      "4": 7,
+      "5": 7,
+      "6": 10,
+      "7": 4,
+      "8": 9,
+      "9": 7,
+      "10": 7,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:immigrant",
+        "circumstance-layer:domestic_violence",
+        "explicit:4"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance-layer:bereavement",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:bereavement",
+        "system:hospitals",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "circumstance-layer:working_poor",
+        "keyword:hous",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance-layer:immigrant",
+        "keyword:work",
+        "keyword:employ",
+        "explicit:8"
+      ],
+      "7": [
+        "keyword:class",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "circumstance:domestic_violence",
+        "circumstance-layer:bereavement",
+        "keyword:family",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:art",
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 78,
+    "average_score": 6.5,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.045Z"
+}

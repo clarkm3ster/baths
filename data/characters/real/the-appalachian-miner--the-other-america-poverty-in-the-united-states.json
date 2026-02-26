@@ -1,0 +1,160 @@
+{
+  "id": "the-appalachian-miner--the-other-america-poverty-in-the-united-states",
+  "name": "The Appalachian Miner",
+  "real_or_fictional": "real",
+  "source_work": "The Other America: Poverty in the United States",
+  "source_author_creator": "Michael Harrington",
+  "source_year": 1962,
+  "circumstances": [
+    "poverty",
+    "chronic_illness",
+    "unemployed",
+    "environmental_exposure",
+    "isolation"
+  ],
+  "location": "Appalachia, WV/KY",
+  "time_period": "1950s-1960s",
+  "systems_touched": [
+    "mining companies",
+    "black lung benefits",
+    "welfare",
+    "hospitals",
+    "schools"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 5,
+    "3": 7,
+    "4": 8,
+    "5": 6,
+    "6": 8,
+    "7": 5,
+    "8": 7,
+    "9": 9,
+    "10": 5,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Mining community",
+    "Family"
+  ],
+  "narrative_arc": "Composite of miners Harrington documented in Appalachia — men whose bodies were destroyed by coal dust, whose communities were owned by mining companies, whose economic options disappeared when mines closed. The environment literally killed them while the legal system protected the companies.",
+  "why_this_character_matters": "The Appalachian miner dome reveals environmental-health-economic triangulation — how an industry can destroy bodies, communities, and landscapes simultaneously while extracting all the wealth.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 5,
+      "3": 7,
+      "4": 10,
+      "5": 6,
+      "6": 8,
+      "7": 5,
+      "8": 7,
+      "9": 9,
+      "10": 5,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:environmental_exposure",
+        "keyword:legal",
+        "explicit:4"
+      ],
+      "2": [
+        "system:welfare",
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:unemployed",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:chronic_illness",
+        "circumstance:environmental_exposure",
+        "circumstance-layer:isolation",
+        "system:hospitals",
+        "keyword:health",
+        "keyword:mental",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:unemployed",
+        "circumstance-layer:chronic_illness",
+        "explicit:8"
+      ],
+      "7": [
+        "system:schools",
+        "keyword:liter",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:isolation",
+        "circumstance-layer:unemployed",
+        "keyword:communit",
+        "explicit:7"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "keyword:environment",
+        "explicit:9"
+      ],
+      "10": [
+        "circumstance-layer:isolation",
+        "explicit:5"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 73,
+    "average_score": 6.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.929Z"
+}

@@ -1,0 +1,165 @@
+{
+  "id": "celie--the-color-purple",
+  "name": "Celie",
+  "real_or_fictional": "fictional",
+  "source_work": "The Color Purple",
+  "source_author_creator": "Alice Walker",
+  "source_year": 1982,
+  "circumstances": [
+    "domestic_violence",
+    "poverty",
+    "illiterate",
+    "child_marriage",
+    "trauma",
+    "isolation"
+  ],
+  "location": "Rural Georgia",
+  "time_period": "1910s-1940s",
+  "systems_touched": [
+    "sharecropping",
+    "churches",
+    "domestic service",
+    "informal economy (pants-making business)"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 3,
+    "3": 6,
+    "4": 6,
+    "5": 6,
+    "6": 7,
+    "7": 5,
+    "8": 8,
+    "9": 5,
+    "10": 10,
+    "11": 9,
+    "12": 10
+  },
+  "key_relationships": [
+    "Mister (Albert)",
+    "Shug Avery",
+    "Nettie (sister)",
+    "Sofia",
+    "Harpo"
+  ],
+  "narrative_arc": "Given away as a child bride, brutalized by her husband, separated from her sister. Celie's transformation comes through love (Shug), creativity (pants-making), and literacy (letters). Walker documents every dimension of Southern Black women's oppression and then maps every dimension of liberation — all without any formal system intervening.",
+  "why_this_character_matters": "Celie's dome is defined by the absence of systems and the presence of community. Layer 2 (Systems) is empty — no government helped her. Layer 8 (Community), Layer 11 (Creativity), and Layer 12 (Flourishing) are what saved her. Her dome proves that human layers can compensate for empty institutional layers.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 3,
+      "3": 6,
+      "4": 7,
+      "5": 6,
+      "6": 7,
+      "7": 6,
+      "8": 9,
+      "9": 5,
+      "10": 10,
+      "11": 9,
+      "12": 10
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:child_marriage",
+        "circumstance-layer:domestic_violence",
+        "explicit:6"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:isolation",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:illiterate",
+        "explicit:7"
+      ],
+      "7": [
+        "circumstance:illiterate",
+        "circumstance-layer:child_marriage",
+        "keyword:liter",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:isolation",
+        "system:churches",
+        "keyword:communit",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance:child_marriage",
+        "circumstance-layer:illiterate",
+        "circumstance-layer:trauma",
+        "circumstance-layer:isolation",
+        "explicit:10"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:creat",
+        "explicit:9"
+      ],
+      "12": [
+        "keyword:flourish",
+        "keyword:transform",
+        "explicit:10"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 84,
+    "average_score": 7,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 9
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.011Z"
+}

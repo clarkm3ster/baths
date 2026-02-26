@@ -1,0 +1,164 @@
+{
+  "id": "huckleberry-finn--adventures-of-huckleberry-finn",
+  "name": "Huckleberry Finn",
+  "real_or_fictional": "fictional",
+  "source_work": "Adventures of Huckleberry Finn",
+  "source_author_creator": "Mark Twain",
+  "source_year": 1884,
+  "circumstances": [
+    "orphan",
+    "homeless",
+    "domestic_violence",
+    "poverty",
+    "child_labor"
+  ],
+  "location": "Mississippi River (Missouri, Illinois, Arkansas)",
+  "time_period": "1840s",
+  "systems_touched": [
+    "widow's guardianship",
+    "schools (ran away)",
+    "courts (custody)",
+    "slavery system",
+    "river economy"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 3,
+    "3": 5,
+    "4": 4,
+    "5": 7,
+    "6": 5,
+    "7": 5,
+    "8": 8,
+    "9": 7,
+    "10": 9,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "Jim",
+    "Tom Sawyer",
+    "Pap Finn",
+    "The Widow Douglas",
+    "The King and the Duke"
+  ],
+  "narrative_arc": "Abused boy who fakes his own death to escape his father and rides a raft down the Mississippi with an escaped slave. Twain documents every social system they encounter — the feuding families, the con artists, the slave catchers, the \"respectable\" people who enable slavery. Huck's moral journey: deciding that saving Jim from slavery is worth going to hell.",
+  "why_this_character_matters": "Huck's dome maps a child navigating antebellum America with no adult protection. Layer 10 (Autonomy) is maximized — he is totally free on the raft — while Layer 1 (Legal) is hostile. His dome reveals the tension between freedom and protection for children.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 3,
+      "3": 5,
+      "4": 4,
+      "5": 7,
+      "6": 6,
+      "7": 5,
+      "8": 9,
+      "9": 7,
+      "10": 9,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:orphan",
+        "circumstance-layer:domestic_violence",
+        "system:courts (custody)",
+        "keyword:legal",
+        "explicit:7"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:child_labor",
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:orphan",
+        "circumstance-layer:poverty",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:child_labor",
+        "explicit:5"
+      ],
+      "7": [
+        "circumstance-layer:child_labor",
+        "system:schools (ran away)",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:orphan",
+        "circumstance:domestic_violence",
+        "circumstance-layer:homeless",
+        "keyword:social",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:child_labor",
+        "keyword:freedom",
+        "keyword:autonomy",
+        "keyword:escape",
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:art",
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 74,
+    "average_score": 6.2,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.017Z"
+}

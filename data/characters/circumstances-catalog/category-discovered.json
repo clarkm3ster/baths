@@ -1,0 +1,25 @@
+{
+  "category": "discovered",
+  "types": 1,
+  "total_characters": 1,
+  "entries": [
+    {
+      "type": "depression",
+      "category": "discovered",
+      "layers": [],
+      "description": "Discovered from Marjane Satrapi in Persepolis",
+      "character_count": 1,
+      "real_count": 1,
+      "fictional_count": 0,
+      "example_characters": [
+        {
+          "name": "Marjane Satrapi",
+          "source_work": "Persepolis",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:39.064Z",
+      "discovered_from": "Marjane Satrapi (Persepolis)"
+    }
+  ]
+}

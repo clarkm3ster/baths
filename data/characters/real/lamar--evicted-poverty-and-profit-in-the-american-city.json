@@ -1,0 +1,162 @@
+{
+  "id": "lamar--evicted-poverty-and-profit-in-the-american-city",
+  "name": "Lamar",
+  "real_or_fictional": "real",
+  "source_work": "Evicted: Poverty and Profit in the American City",
+  "source_author_creator": "Matthew Desmond",
+  "source_year": 2016,
+  "circumstances": [
+    "disability",
+    "poverty",
+    "housing_insecure",
+    "single_parent",
+    "evicted"
+  ],
+  "location": "Milwaukee, WI",
+  "time_period": "2008-2009",
+  "systems_touched": [
+    "SSI",
+    "disability services",
+    "landlord-tenant court",
+    "schools",
+    "child welfare"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 6,
+    "3": 8,
+    "4": 7,
+    "5": 9,
+    "6": 5,
+    "7": 4,
+    "8": 7,
+    "9": 5,
+    "10": 6,
+    "11": 4,
+    "12": 5
+  },
+  "key_relationships": [
+    "Two sons",
+    "Neighbors in trailer park"
+  ],
+  "narrative_arc": "Lost both legs, raising two sons on SSI in a dilapidated trailer park. His disability income is consumed almost entirely by rent. Desmond documents with precision how the disability benefits system interacts with the housing market to keep him trapped.",
+  "why_this_character_matters": "Lamar reveals how disability benefits get captured by landlords. His dome would show that SSI was designed to support independence but the housing market converts it into landlord revenue.",
+  "source_urls": [
+    "https://www.evictedbook.com/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 6,
+      "3": 10,
+      "4": 7,
+      "5": 10,
+      "6": 7,
+      "7": 4,
+      "8": 7,
+      "9": 5,
+      "10": 6,
+      "11": 4,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:evicted",
+        "explicit:5"
+      ],
+      "2": [
+        "system:disability services",
+        "system:child welfare",
+        "keyword:benefit",
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "circumstance-layer:single_parent",
+        "circumstance-layer:evicted",
+        "keyword:income",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:disability",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance:evicted",
+        "circumstance-layer:poverty",
+        "system:landlord-tenant court",
+        "keyword:hous",
+        "keyword:rent",
+        "explicit:9"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:disability",
+        "circumstance-layer:single_parent",
+        "explicit:5"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:single_parent",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:disability",
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 76,
+    "average_score": 6.3,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.911Z"
+}

@@ -1,0 +1,166 @@
+{
+  "id": "sethe--beloved",
+  "name": "Sethe",
+  "real_or_fictional": "fictional",
+  "source_work": "Beloved",
+  "source_author_creator": "Toni Morrison",
+  "source_year": 1987,
+  "circumstances": [
+    "enslaved",
+    "refugee",
+    "domestic_violence",
+    "trauma",
+    "grief",
+    "isolation",
+    "mental_illness"
+  ],
+  "location": "124 Bluestone Road, Cincinnati, OH (Sweet Home, KY)",
+  "time_period": "1850s-1870s",
+  "systems_touched": [
+    "slavery",
+    "Fugitive Slave Act",
+    "Underground Railroad",
+    "community (both supporting and shunning)"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 3,
+    "3": 4,
+    "4": 8,
+    "5": 8,
+    "6": 5,
+    "7": 3,
+    "8": 9,
+    "9": 5,
+    "10": 10,
+    "11": 7,
+    "12": 9
+  },
+  "key_relationships": [
+    "Beloved (daughter/ghost)",
+    "Denver (daughter)",
+    "Paul D",
+    "Baby Suggs",
+    "Schoolteacher (enslaver)"
+  ],
+  "narrative_arc": "Escaped from slavery and killed her own daughter rather than let her be returned to bondage. Morrison documents the interior architecture of slavery's aftermath — not just the physical scars on Sethe's back (shaped like a tree) but the way memory itself becomes a haunting. The house at 124 is both shelter and prison.",
+  "why_this_character_matters": "Sethe's dome maps trauma as a layer that sits on top of all others. Her Layer 10 (Autonomy) action — killing her child to free it — is the most extreme autonomy claim in this catalog. Building her dome reveals whether any system could have offered an alternative.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 3,
+      "3": 4,
+      "4": 10,
+      "5": 8,
+      "6": 5,
+      "7": 3,
+      "8": 10,
+      "9": 5,
+      "10": 10,
+      "11": 7,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:enslaved",
+        "circumstance-layer:refugee",
+        "circumstance-layer:domestic_violence",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "explicit:4"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance:mental_illness",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:grief",
+        "circumstance-layer:isolation",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance-layer:refugee",
+        "keyword:hous",
+        "keyword:shelter",
+        "explicit:8"
+      ],
+      "6": [
+        "explicit:5"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance:refugee",
+        "circumstance:domestic_violence",
+        "circumstance:isolation",
+        "circumstance-layer:grief",
+        "circumstance-layer:mental_illness",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:enslaved",
+        "circumstance:domestic_violence",
+        "circumstance-layer:trauma",
+        "circumstance-layer:isolation",
+        "circumstance-layer:mental_illness",
+        "keyword:autonomy",
+        "keyword:escape",
+        "explicit:10"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:7"
+      ],
+      "12": [
+        "circumstance:grief",
+        "circumstance-layer:enslaved",
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.012Z"
+}

@@ -1,0 +1,161 @@
+{
+  "id": "dark-days-tunnel-dwellers--dark-days",
+  "name": "Dark Days Tunnel Dwellers",
+  "real_or_fictional": "real",
+  "source_work": "Dark Days",
+  "source_author_creator": "Marc Singer",
+  "source_year": 2000,
+  "circumstances": [
+    "homeless",
+    "addiction",
+    "poverty",
+    "deep_poverty",
+    "mental_illness"
+  ],
+  "location": "Freedom Tunnel (Amtrak tunnel under Riverside Park), New York City, NY",
+  "time_period": "1994-1997",
+  "systems_touched": [
+    "Amtrak (unwitting landlord)",
+    "shelters (avoided)",
+    "scavenging economy",
+    "Coalition for the Homeless",
+    "Section 8 (eventual)"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 5,
+    "3": 6,
+    "4": 7,
+    "5": 10,
+    "6": 6,
+    "7": 3,
+    "8": 9,
+    "9": 9,
+    "10": 8,
+    "11": 6,
+    "12": 6
+  },
+  "key_relationships": [
+    "Each other (tunnel community)",
+    "Marc Singer (filmmaker)"
+  ],
+  "narrative_arc": "Community of homeless people living in an abandoned Amtrak tunnel under Manhattan's Upper West Side. They built homes — with electricity tapped from above, furniture scavenged from the street, pets, gardens. Singer (himself homeless, living in the tunnel) documents a functioning community in the most extreme environment.",
+  "why_this_character_matters": "The tunnel dwellers built a dome from nothing, underground. Layer 8 (Community) is at maximum — they formed a society. Layer 9 (Environment) is extraordinary — the tunnel itself. Their dome reveals that community can exist where all other layers are absent.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 5,
+      "3": 8,
+      "4": 7,
+      "5": 10,
+      "6": 6,
+      "7": 3,
+      "8": 9,
+      "9": 9,
+      "10": 8,
+      "11": 6,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "explicit:4"
+      ],
+      "2": [
+        "system:Section 8 (eventual)",
+        "keyword:form",
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance-layer:homeless",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance:mental_illness",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "system:shelters (avoided)",
+        "system:Section 8 (eventual)",
+        "keyword:home",
+        "keyword:street",
+        "keyword:homeless",
+        "explicit:10"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "explicit:6"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance-layer:homeless",
+        "circumstance-layer:addiction",
+        "circumstance-layer:mental_illness",
+        "keyword:communit",
+        "explicit:9"
+      ],
+      "9": [
+        "keyword:environment",
+        "explicit:9"
+      ],
+      "10": [
+        "circumstance-layer:mental_illness",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 81,
+    "average_score": 6.8,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.037Z"
+}

@@ -1,0 +1,144 @@
+{
+  "id": "babe-secoli-supermarket-checker--working-people-talk-about-what-they-do-all-day-and-how-they-feel-about-what-they-do",
+  "name": "Babe Secoli (Supermarket Checker)",
+  "real_or_fictional": "real",
+  "source_work": "Working: People Talk About What They Do All Day and How They Feel About What They Do",
+  "source_author_creator": "Studs Terkel",
+  "source_year": 1974,
+  "circumstances": [
+    "working_poor",
+    "chronic_illness"
+  ],
+  "location": "Chicago, IL",
+  "time_period": "1970s",
+  "systems_touched": [
+    "supermarket chain",
+    "union",
+    "Social Security"
+  ],
+  "dome_layer_richness": {
+    "1": 2,
+    "2": 3,
+    "3": 6,
+    "4": 5,
+    "5": 4,
+    "6": 9,
+    "7": 3,
+    "8": 6,
+    "9": 4,
+    "10": 5,
+    "11": 4,
+    "12": 6
+  },
+  "key_relationships": [
+    "Co-workers",
+    "Regular customers",
+    "Union steward"
+  ],
+  "narrative_arc": "Supermarket checker for 30 years who loves her job — knows every product by touch, reads customers' moods from their groceries. Terkel captures work as knowledge and routine as meaning. Her body deteriorates (standing all day, repetitive motion) but she can't imagine stopping.",
+  "why_this_character_matters": "Babe's dome fills Layer 6 (Economic) with the micro-economics of retail — what the body costs to stand 8 hours, what knowledge is embedded in routine, what happens when the union is the only buffer between the worker and the company.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 2,
+      "2": 3,
+      "3": 6,
+      "4": 5,
+      "5": 4,
+      "6": 9,
+      "7": 3,
+      "8": 6,
+      "9": 4,
+      "10": 5,
+      "11": 4,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:2"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:working_poor",
+        "circumstance-layer:chronic_illness",
+        "keyword:cost",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:chronic_illness",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance-layer:working_poor",
+        "explicit:4"
+      ],
+      "6": [
+        "circumstance:working_poor",
+        "circumstance-layer:chronic_illness",
+        "keyword:work",
+        "keyword:job",
+        "keyword:union",
+        "explicit:9"
+      ],
+      "7": [
+        "keyword:read",
+        "explicit:3"
+      ],
+      "8": [
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "explicit:5"
+      ],
+      "11": [
+        "explicit:4"
+      ],
+      "12": [
+        "keyword:meaning",
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 57,
+    "average_score": 4.8,
+    "dome_minimum": 2,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 6
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 6
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 6
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 5
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.995Z"
+}

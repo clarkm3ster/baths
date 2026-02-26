@@ -1,0 +1,179 @@
+{
+  "id": "jurgis-rudkus--the-jungle",
+  "name": "Jurgis Rudkus",
+  "real_or_fictional": "fictional",
+  "source_work": "The Jungle",
+  "source_author_creator": "Upton Sinclair",
+  "source_year": 1906,
+  "circumstances": [
+    "immigrant",
+    "poverty",
+    "working_poor",
+    "housing_insecure",
+    "environmental_exposure",
+    "incarcerated",
+    "child_labor",
+    "bereavement"
+  ],
+  "location": "Packingtown (Back of the Yards), Chicago, IL",
+  "time_period": "1900s",
+  "systems_touched": [
+    "meatpacking industry",
+    "immigration",
+    "courts",
+    "jails",
+    "unions",
+    "housing (contract buying)",
+    "political machines",
+    "hospitals"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 5,
+    "3": 8,
+    "4": 7,
+    "5": 8,
+    "6": 10,
+    "7": 4,
+    "8": 7,
+    "9": 10,
+    "10": 7,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Ona (wife)",
+    "Elzbieta (mother-in-law)",
+    "Children",
+    "Union organizers",
+    "Political bosses"
+  ],
+  "narrative_arc": "Lithuanian immigrant whose entire family is destroyed by the meatpacking industry. Sinclair documents every system failure: the scam home purchase, the injury with no workers comp, the wife's sexual assault by a foreman, the child's drowning in an unpaved street, the jail for punching the foreman. Layer by layer, every system extracts from him until nothing remains.",
+  "why_this_character_matters": "Jurgis is the most complete fictional dome in American literature. Sinclair fills every layer with documented industrial-era conditions. Building his dome with 1906 vs. 2024 systems reveals exactly which protections were added and which gaps remain.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 5,
+      "3": 10,
+      "4": 9,
+      "5": 10,
+      "6": 10,
+      "7": 4,
+      "8": 7,
+      "9": 10,
+      "10": 7,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "circumstance-layer:immigrant",
+        "circumstance-layer:environmental_exposure",
+        "system:immigration",
+        "system:courts",
+        "keyword:trial",
+        "explicit:7"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance-layer:housing_insecure",
+        "circumstance-layer:bereavement",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:environmental_exposure",
+        "circumstance-layer:child_labor",
+        "circumstance-layer:bereavement",
+        "system:hospitals",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "circumstance-layer:working_poor",
+        "circumstance-layer:incarcerated",
+        "keyword:home",
+        "keyword:street",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance:child_labor",
+        "circumstance-layer:immigrant",
+        "keyword:work",
+        "explicit:10"
+      ],
+      "7": [
+        "circumstance-layer:child_labor",
+        "keyword:liter",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "circumstance-layer:bereavement",
+        "keyword:family",
+        "explicit:7"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "keyword:air",
+        "explicit:10"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:child_labor",
+        "explicit:7"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 90,
+    "average_score": 7.5,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 10
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.009Z"
+}

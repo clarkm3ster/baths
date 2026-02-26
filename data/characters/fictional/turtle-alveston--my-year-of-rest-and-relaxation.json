@@ -1,0 +1,162 @@
+{
+  "id": "turtle-alveston--my-year-of-rest-and-relaxation",
+  "name": "Turtle Alveston",
+  "real_or_fictional": "fictional",
+  "source_work": "My Year of Rest and Relaxation",
+  "source_author_creator": "Ottessa Moshfegh",
+  "source_year": 2018,
+  "circumstances": [
+    "grief",
+    "mental_illness",
+    "addiction",
+    "wealth",
+    "isolation"
+  ],
+  "location": "Upper East Side, Manhattan, NY",
+  "time_period": "2000-2001",
+  "systems_touched": [
+    "psychiatry",
+    "pharmacy",
+    "art world",
+    "trust funds",
+    "Columbia University"
+  ],
+  "dome_layer_richness": {
+    "1": 2,
+    "2": 3,
+    "3": 8,
+    "4": 8,
+    "5": 3,
+    "6": 3,
+    "7": 5,
+    "8": 5,
+    "9": 3,
+    "10": 7,
+    "11": 6,
+    "12": 7
+  },
+  "key_relationships": [
+    "Dr. Tuttle (psychiatrist)",
+    "Reva (friend)",
+    "Ping Xi (artist)"
+  ],
+  "narrative_arc": "Wealthy, beautiful, bereaved woman who decides to sleep for a year using a cocktail of prescription drugs. Moshfegh documents the pharmacy of privilege — a compliant psychiatrist, unlimited prescriptions, a rent-free apartment. Her dome is filled with resources and empty of meaning.",
+  "why_this_character_matters": "This is a wealthy dome — Layer 3 (Fiscal) is maximized, Layer 5 (Housing) is secure, but Layers 10-12 are in crisis. Her dome proves that filling lower layers doesn't guarantee flourishing. The COSM score for a rich, devastated person reveals the system's blind spots.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 2,
+      "2": 3,
+      "3": 8,
+      "4": 10,
+      "5": 6,
+      "6": 3,
+      "7": 5,
+      "8": 9,
+      "9": 3,
+      "10": 7,
+      "11": 6,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "explicit:2"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:wealth",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "circumstance:addiction",
+        "circumstance-layer:grief",
+        "circumstance-layer:isolation",
+        "system:pharmacy",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance-layer:wealth",
+        "keyword:hous",
+        "keyword:rent",
+        "keyword:apartment",
+        "keyword:sleep",
+        "explicit:3"
+      ],
+      "6": [
+        "circumstance-layer:wealth",
+        "explicit:3"
+      ],
+      "7": [
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:isolation",
+        "circumstance-layer:grief",
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:addiction",
+        "explicit:5"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:isolation",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "explicit:6"
+      ],
+      "12": [
+        "circumstance:grief",
+        "keyword:flourish",
+        "keyword:meaning",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 69,
+    "average_score": 5.8,
+    "dome_minimum": 2,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.028Z"
+}

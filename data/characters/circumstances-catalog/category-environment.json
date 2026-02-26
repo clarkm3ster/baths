@@ -1,0 +1,133 @@
+{
+  "category": "environment",
+  "types": 3,
+  "total_characters": 17,
+  "entries": [
+    {
+      "type": "environmental_exposure",
+      "category": "environment",
+      "layers": [
+        9,
+        4,
+        1
+      ],
+      "description": "Exposed to environmental hazards",
+      "character_count": 12,
+      "real_count": 9,
+      "fictional_count": 3,
+      "example_characters": [
+        {
+          "name": "The Appalachian Miner",
+          "source_work": "The Other America: Poverty in the United States",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Rae McCormick",
+          "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Pharoah Rivers",
+          "source_work": "There Are No Children Here: The Story of Two Boys Growing Up in the Other America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Lafayette Rivers",
+          "source_work": "There Are No Children Here: The Story of Two Boys Growing Up in the Other America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "LeeAnne Walters",
+          "source_work": "Flint Water Crisis Coverage (Washington Post/multiple)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Children of East Chicago",
+          "source_work": "Unsafe at Any Level (Reuters)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Philadelphia Lead-Poisoned Children",
+          "source_work": "Toxic City: Sick Kids and Dirty Homes (Philadelphia Inquirer)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Crystal Echo Hawk",
+          "source_work": "Congressional Testimony on Native American Issues",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Mike LeFevre (Steelworker)",
+          "source_work": "Working: People Talk About What They Do All Day and How They Feel About What They Do",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jurgis Rudkus",
+          "source_work": "The Jungle",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "food_desert",
+      "category": "environment",
+      "layers": [
+        9,
+        4,
+        6
+      ],
+      "description": "Living in area without food access",
+      "character_count": 3,
+      "real_count": 2,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "Richard Wright",
+          "source_work": "Black Boy / American Hunger",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jeannette Walls",
+          "source_work": "The Glass Castle",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Hansel and Gretel",
+          "source_work": "Hansel and Gretel (Grimm)",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "climate_displaced",
+      "category": "environment",
+      "layers": [
+        9,
+        5,
+        8
+      ],
+      "description": "Displaced by climate events",
+      "character_count": 2,
+      "real_count": 0,
+      "fictional_count": 2,
+      "example_characters": [
+        {
+          "name": "Tom Joad",
+          "source_work": "The Grapes of Wrath",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Setsuko and Seita",
+          "source_work": "Grave of the Fireflies",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "id": "troy-maxson--fences",
+  "name": "Troy Maxson",
+  "real_or_fictional": "fictional",
+  "source_work": "Fences",
+  "source_author_creator": "August Wilson",
+  "source_year": 1985,
+  "circumstances": [
+    "formerly_incarcerated",
+    "poverty",
+    "working_poor",
+    "domestic_violence"
+  ],
+  "location": "Pittsburgh, PA (Hill District)",
+  "time_period": "1957",
+  "systems_touched": [
+    "sanitation department",
+    "prison",
+    "Negro Leagues",
+    "unions",
+    "hospitals",
+    "military"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 4,
+    "3": 7,
+    "4": 5,
+    "5": 7,
+    "6": 8,
+    "7": 4,
+    "8": 8,
+    "9": 5,
+    "10": 7,
+    "11": 6,
+    "12": 7
+  },
+  "key_relationships": [
+    "Rose (wife)",
+    "Cory (son)",
+    "Lyons (son)",
+    "Bono (friend)",
+    "Gabriel (brother, brain-damaged veteran)"
+  ],
+  "narrative_arc": "Former Negro League baseball player who aged out before integration. Now a garbage collector fighting to be the first Black driver in Pittsburgh. Wilson documents the specific economic and racial systems of 1957 Pittsburgh — the union, the sanitation department, the color line in sports, the brother whose VA disability check pays the mortgage.",
+  "why_this_character_matters": "Troy's dome maps the pre-Civil Rights Black working class. His dome reveals how racial exclusion (denied MLB) created a different life trajectory than equal talent would have produced. Building his dome with real 1957 Pittsburgh data reveals the exact cost of segregation to one person.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 4,
+      "3": 9,
+      "4": 5,
+      "5": 7,
+      "6": 10,
+      "7": 4,
+      "8": 8,
+      "9": 5,
+      "10": 7,
+      "11": 6,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:formerly_incarcerated",
+        "circumstance-layer:domestic_violence",
+        "system:prison",
+        "keyword:rights",
+        "explicit:7"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "keyword:cost",
+        "keyword:pay",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "system:hospitals",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:poverty",
+        "circumstance-layer:working_poor",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance-layer:formerly_incarcerated",
+        "keyword:work",
+        "keyword:union",
+        "explicit:8"
+      ],
+      "7": [
+        "keyword:class",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "explicit:8"
+      ],
+      "9": [
+        "system:sanitation department",
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:creat",
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 80,
+    "average_score": 6.7,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.053Z"
+}

@@ -1,0 +1,168 @@
+{
+  "id": "tess-durbeyfield--tess-of-the-durbervilles",
+  "name": "Tess Durbeyfield",
+  "real_or_fictional": "fictional",
+  "source_work": "Tess of the d'Urbervilles",
+  "source_author_creator": "Thomas Hardy",
+  "source_year": 1891,
+  "circumstances": [
+    "poverty",
+    "domestic_violence",
+    "working_poor",
+    "housing_insecure",
+    "incarcerated",
+    "bereavement"
+  ],
+  "location": "Wessex (Dorset), England",
+  "time_period": "1880s-1890s",
+  "systems_touched": [
+    "farm labor",
+    "dairy work",
+    "clergy",
+    "courts",
+    "prison",
+    "estate system"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 3,
+    "3": 7,
+    "4": 5,
+    "5": 7,
+    "6": 8,
+    "7": 4,
+    "8": 7,
+    "9": 7,
+    "10": 9,
+    "11": 4,
+    "12": 7
+  },
+  "key_relationships": [
+    "Alec d'Urberville",
+    "Angel Clare",
+    "Family (parents, siblings)"
+  ],
+  "narrative_arc": "Raped by a wealthy man, abandoned by the husband who can't forgive her, driven to murder and execution. Hardy documents every economic pressure — the family's poverty that forces her to \"claim kin\" with Alec, the dairy work that connects her to Angel, the migrant farm labor that breaks her body. Every system pushes her toward destruction.",
+  "why_this_character_matters": "Tess's dome maps how gender, class, and law conspire. Layer 1 (Legal) defines her as both victim and criminal. Layer 6 (Economic) drives every choice. Building her dome with modern systems reveals which protections now exist that would have saved her.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 3,
+      "3": 10,
+      "4": 5,
+      "5": 9,
+      "6": 8,
+      "7": 4,
+      "8": 7,
+      "9": 7,
+      "10": 9,
+      "11": 4,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "circumstance-layer:domestic_violence",
+        "system:courts",
+        "system:prison",
+        "keyword:law",
+        "keyword:legal",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance-layer:housing_insecure",
+        "circumstance-layer:bereavement",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:bereavement",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "circumstance-layer:working_poor",
+        "circumstance-layer:incarcerated",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "keyword:work",
+        "keyword:labor",
+        "explicit:8"
+      ],
+      "7": [
+        "keyword:class",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:bereavement",
+        "keyword:family",
+        "keyword:connect",
+        "explicit:7"
+      ],
+      "9": [
+        "keyword:air",
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance:incarcerated",
+        "keyword:choice",
+        "explicit:9"
+      ],
+      "11": [
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.023Z"
+}

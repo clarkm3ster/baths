@@ -1,0 +1,2245 @@
+{
+  "created_at": "2026-02-26T21:44:38.904Z",
+  "updated_at": "2026-02-26T21:44:52.158Z",
+  "version": 2,
+  "works": {
+    "1984": {
+      "id": "1984",
+      "title": "1984",
+      "authors": [
+        "George Orwell"
+      ],
+      "year": 1949,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.032Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.032Z"
+    },
+    "evicted-poverty-and-profit-in-the-american-city": {
+      "id": "evicted-poverty-and-profit-in-the-american-city",
+      "title": "Evicted: Poverty and Profit in the American City",
+      "authors": [
+        "Matthew Desmond"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 5,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.907Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.915Z"
+    },
+    "random-family-love-drugs-trouble-and-coming-of-age-in-the-bronx": {
+      "id": "random-family-love-drugs-trouble-and-coming-of-age-in-the-bronx",
+      "title": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+      "authors": [
+        "Adrian Nicole LeBlanc"
+      ],
+      "year": 2003,
+      "type": "book",
+      "characters_extracted": 2,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.917Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.918Z"
+    },
+    "invisible-child-poverty-survival-hope-in-an-american-city": {
+      "id": "invisible-child-poverty-survival-hope-in-an-american-city",
+      "title": "Invisible Child: Poverty, Survival & Hope in an American City",
+      "authors": [
+        "Andrea Elliott"
+      ],
+      "year": 2021,
+      "type": "book",
+      "characters_extracted": 2,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.919Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.921Z"
+    },
+    "nickel-and-dimed-on-not-getting-by-in-america": {
+      "id": "nickel-and-dimed-on-not-getting-by-in-america",
+      "title": "Nickel and Dimed: On (Not) Getting By in America",
+      "authors": [
+        "Barbara Ehrenreich"
+      ],
+      "year": 2001,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.922Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.922Z"
+    },
+    "behind-the-beautiful-forevers-life-death-and-hope-in-a-mumbai-undercity": {
+      "id": "behind-the-beautiful-forevers-life-death-and-hope-in-a-mumbai-undercity",
+      "title": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+      "authors": [
+        "Katherine Boo"
+      ],
+      "year": 2012,
+      "type": "book",
+      "characters_extracted": 2,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.923Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.925Z"
+    },
+    "just-mercy-a-story-of-justice-and-redemption": {
+      "id": "just-mercy-a-story-of-justice-and-redemption",
+      "title": "Just Mercy: A Story of Justice and Redemption",
+      "authors": [
+        "Bryan Stevenson"
+      ],
+      "year": 2014,
+      "type": "book",
+      "characters_extracted": 3,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.926Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.928Z"
+    },
+    "the-other-america-poverty-in-the-united-states": {
+      "id": "the-other-america-poverty-in-the-united-states",
+      "title": "The Other America: Poverty in the United States",
+      "authors": [
+        "Michael Harrington"
+      ],
+      "year": 1962,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.929Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.929Z"
+    },
+    "black-boy-american-hunger": {
+      "id": "black-boy-american-hunger",
+      "title": "Black Boy / American Hunger",
+      "authors": [
+        "Richard Wright"
+      ],
+      "year": 1945,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.931Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.931Z"
+    },
+    "the-warmth-of-other-suns-the-epic-story-of-americas-great-migration": {
+      "id": "the-warmth-of-other-suns-the-epic-story-of-americas-great-migration",
+      "title": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+      "authors": [
+        "Isabel Wilkerson"
+      ],
+      "year": 2010,
+      "type": "book",
+      "characters_extracted": 3,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.932Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.936Z"
+    },
+    "2-00-a-day-living-on-almost-nothing-in-america": {
+      "id": "2-00-a-day-living-on-almost-nothing-in-america",
+      "title": "$2.00 a Day: Living on Almost Nothing in America",
+      "authors": [
+        "Kathryn Edin & H. Luke Shaefer"
+      ],
+      "year": 2015,
+      "type": "book",
+      "characters_extracted": 2,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.937Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.938Z"
+    },
+    "hillbilly-elegy-a-memoir-of-a-family-and-culture-in-crisis": {
+      "id": "hillbilly-elegy-a-memoir-of-a-family-and-culture-in-crisis",
+      "title": "Hillbilly Elegy: A Memoir of a Family and Culture in Crisis",
+      "authors": [
+        "J.D. Vance"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.940Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.940Z"
+    },
+    "the-glass-castle": {
+      "id": "the-glass-castle",
+      "title": "The Glass Castle",
+      "authors": [
+        "Jeannette Walls"
+      ],
+      "year": 2005,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.941Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.941Z"
+    },
+    "the-immortal-life-of-henrietta-lacks": {
+      "id": "the-immortal-life-of-henrietta-lacks",
+      "title": "The Immortal Life of Henrietta Lacks",
+      "authors": [
+        "Rebecca Skloot"
+      ],
+      "year": 2010,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.942Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.942Z"
+    },
+    "educated": {
+      "id": "educated",
+      "title": "Educated",
+      "authors": [
+        "Tara Westover"
+      ],
+      "year": 2018,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.943Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.943Z"
+    },
+    "the-new-jim-crow-mass-incarceration-in-the-age-of-colorblindness": {
+      "id": "the-new-jim-crow-mass-incarceration-in-the-age-of-colorblindness",
+      "title": "The New Jim Crow: Mass Incarceration in the Age of Colorblindness",
+      "authors": [
+        "Michelle Alexander"
+      ],
+      "year": 2010,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.944Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.944Z"
+    },
+    "there-are-no-children-here-the-story-of-two-boys-growing-up-in-the-other-america": {
+      "id": "there-are-no-children-here-the-story-of-two-boys-growing-up-in-the-other-america",
+      "title": "There Are No Children Here: The Story of Two Boys Growing Up in the Other America",
+      "authors": [
+        "Alex Kotlowitz"
+      ],
+      "year": 1991,
+      "type": "book",
+      "characters_extracted": 2,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.945Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.947Z"
+    },
+    "dreamland-the-true-tale-of-americas-opiate-epidemic": {
+      "id": "dreamland-the-true-tale-of-americas-opiate-epidemic",
+      "title": "Dreamland: The True Tale of America's Opiate Epidemic",
+      "authors": [
+        "Sam Quinones"
+      ],
+      "year": 2015,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.948Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.948Z"
+    },
+    "gang-leader-for-a-day": {
+      "id": "gang-leader-for-a-day",
+      "title": "Gang Leader for a Day",
+      "authors": [
+        "Sudhir Venkatesh"
+      ],
+      "year": 2008,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.949Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.949Z"
+    },
+    "they-called-us-enemy": {
+      "id": "they-called-us-enemy",
+      "title": "They Called Us Enemy",
+      "authors": [
+        "George Takei, Justin Eisinger, Steven Scott"
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.950Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.950Z"
+    },
+    "men-we-reaped": {
+      "id": "men-we-reaped",
+      "title": "Men We Reaped",
+      "authors": [
+        "Jesmyn Ward"
+      ],
+      "year": 2013,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.952Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.952Z"
+    },
+    "brain-on-fire-my-month-of-madness": {
+      "id": "brain-on-fire-my-month-of-madness",
+      "title": "Brain on Fire: My Month of Madness",
+      "authors": [
+        "Susannah Cahalan"
+      ],
+      "year": 2012,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.953Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.953Z"
+    },
+    "becoming": {
+      "id": "becoming",
+      "title": "Becoming",
+      "authors": [
+        "Michelle Obama"
+      ],
+      "year": 2018,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.954Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.954Z"
+    },
+    "a-house-of-my-own-stories-from-my-life": {
+      "id": "a-house-of-my-own-stories-from-my-life",
+      "title": "A House of My Own: Stories from My Life",
+      "authors": [
+        "Sandra Cisneros"
+      ],
+      "year": 2015,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.956Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.956Z"
+    },
+    "in-the-shadow-of-the-american-dream-the-diaries-of-david-wojnarowicz": {
+      "id": "in-the-shadow-of-the-american-dream-the-diaries-of-david-wojnarowicz",
+      "title": "In the Shadow of the American Dream: The Diaries of David Wojnarowicz",
+      "authors": [
+        "David Wojnarowicz"
+      ],
+      "year": 1999,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.957Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.957Z"
+    },
+    "machine-bias-propublica": {
+      "id": "machine-bias-propublica",
+      "title": "Machine Bias (ProPublica)",
+      "authors": [
+        "Julia Angwin, Jeff Larson, Surya Mattu, Lauren Kirchner"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.958Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.958Z"
+    },
+    "lost-mothers-maternal-mortality-in-the-u-s-propublica-npr": {
+      "id": "lost-mothers-maternal-mortality-in-the-u-s-propublica-npr",
+      "title": "Lost Mothers: Maternal Mortality in the U.S. (ProPublica/NPR)",
+      "authors": [
+        "ProPublica & NPR"
+      ],
+      "year": 2017,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.960Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.960Z"
+    },
+    "the-case-for-reparations-the-atlantic-the-1619-project": {
+      "id": "the-case-for-reparations-the-atlantic-the-1619-project",
+      "title": "The Case for Reparations (The Atlantic) / The 1619 Project",
+      "authors": [
+        "Ta-Nehisi Coates"
+      ],
+      "year": 2014,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.961Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.961Z"
+    },
+    "flint-water-crisis-coverage-washington-post-multiple": {
+      "id": "flint-water-crisis-coverage-washington-post-multiple",
+      "title": "Flint Water Crisis Coverage (Washington Post/multiple)",
+      "authors": [
+        "Multiple journalists"
+      ],
+      "year": 2015,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.962Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.962Z"
+    },
+    "kalief-browder-investigation-new-yorker-propublica-marshall-project": {
+      "id": "kalief-browder-investigation-new-yorker-propublica-marshall-project",
+      "title": "Kalief Browder Investigation (New Yorker / ProPublica / Marshall Project)",
+      "authors": [
+        "Jennifer Gonnerman (New Yorker)"
+      ],
+      "year": 2014,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.963Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.963Z"
+    },
+    "failure-factories-tampa-bay-times": {
+      "id": "failure-factories-tampa-bay-times",
+      "title": "Failure Factories (Tampa Bay Times)",
+      "authors": [
+        "Cara Fitzpatrick, Lisa Gartner, Michael LaForgia"
+      ],
+      "year": 2015,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.965Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.965Z"
+    },
+    "unsafe-at-any-level-reuters": {
+      "id": "unsafe-at-any-level-reuters",
+      "title": "Unsafe at Any Level (Reuters)",
+      "authors": [
+        "M.B. Pell, Joshua Schneyer"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.966Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.966Z"
+    },
+    "life-after-death-row-marshall-project": {
+      "id": "life-after-death-row-marshall-project",
+      "title": "Life After Death Row (Marshall Project)",
+      "authors": [
+        "Maurice Chammah"
+      ],
+      "year": 2015,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.967Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.967Z"
+    },
+    "unfit-for-work-npr-planet-money-this-american-life": {
+      "id": "unfit-for-work-npr-planet-money-this-american-life",
+      "title": "Unfit for Work (NPR Planet Money / This American Life)",
+      "authors": [
+        "Chana Joffe-Walt"
+      ],
+      "year": 2013,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.968Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.968Z"
+    },
+    "dissecting-racial-bias-in-an-algorithm-propublica-science": {
+      "id": "dissecting-racial-bias-in-an-algorithm-propublica-science",
+      "title": "Dissecting Racial Bias in an Algorithm (ProPublica / Science)",
+      "authors": [
+        "Ziad Obermeyer et al."
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.969Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.969Z"
+    },
+    "the-afghanistan-papers-washington-post": {
+      "id": "the-afghanistan-papers-washington-post",
+      "title": "The Afghanistan Papers (Washington Post)",
+      "authors": [
+        "Craig Whitlock"
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.971Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.971Z"
+    },
+    "toxic-city-sick-kids-and-dirty-homes-philadelphia-inquirer": {
+      "id": "toxic-city-sick-kids-and-dirty-homes-philadelphia-inquirer",
+      "title": "Toxic City: Sick Kids and Dirty Homes (Philadelphia Inquirer)",
+      "authors": [
+        "Barbara Laker, Wendy Ruderman"
+      ],
+      "year": 2017,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.972Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.972Z"
+    },
+    "the-turbotax-trap-propublica": {
+      "id": "the-turbotax-trap-propublica",
+      "title": "The TurboTax Trap (ProPublica)",
+      "authors": [
+        "Justin Elliott, Lucas Waldron"
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.973Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.973Z"
+    },
+    "trafficked-into-forced-labor-reveal-cir": {
+      "id": "trafficked-into-forced-labor-reveal-cir",
+      "title": "Trafficked into Forced Labor (Reveal / CIR)",
+      "authors": [
+        "Bernice Yeung, Grace Rubenstein"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.974Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.974Z"
+    },
+    "invisible-child-nyt-series": {
+      "id": "invisible-child-nyt-series",
+      "title": "Invisible Child (NYT Series)",
+      "authors": [
+        "Andrea Elliott"
+      ],
+      "year": 2013,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.975Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.975Z"
+    },
+    "the-pain-hustlers-opioid-files-multiple-outlets": {
+      "id": "the-pain-hustlers-opioid-files-multiple-outlets",
+      "title": "The Pain Hustlers / Opioid Files (multiple outlets)",
+      "authors": [
+        "Evan Hughes, Scott Higham (WaPo), Eric Eyre (Charleston Gazette-Mail)"
+      ],
+      "year": 2018,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.977Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.977Z"
+    },
+    "senate-judiciary-committee-testimony-on-human-trafficking": {
+      "id": "senate-judiciary-committee-testimony-on-human-trafficking",
+      "title": "Senate Judiciary Committee Testimony on Human Trafficking",
+      "authors": [
+        "Senate Judiciary Committee"
+      ],
+      "year": 2010,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.978Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.978Z"
+    },
+    "senate-judiciary-committee-testimony-on-first-step-act": {
+      "id": "senate-judiciary-committee-testimony-on-first-step-act",
+      "title": "Senate Judiciary Committee Testimony on First Step Act",
+      "authors": [
+        "Senate Judiciary Committee"
+      ],
+      "year": 2018,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.979Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.979Z"
+    },
+    "congressional-testimony-on-native-american-issues": {
+      "id": "congressional-testimony-on-native-american-issues",
+      "title": "Congressional Testimony on Native American Issues",
+      "authors": [
+        "Multiple congressional committees"
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.980Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.980Z"
+    },
+    "gao-report-on-medicaid-enrollment-barriers": {
+      "id": "gao-report-on-medicaid-enrollment-barriers",
+      "title": "GAO Report on Medicaid Enrollment Barriers",
+      "authors": [
+        "Government Accountability Office"
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.981Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.981Z"
+    },
+    "cms-dual-eligible-demonstration-evaluation": {
+      "id": "cms-dual-eligible-demonstration-evaluation",
+      "title": "CMS Dual-Eligible Demonstration Evaluation",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "year": 2020,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.982Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.982Z"
+    },
+    "social-work-case-studies-in-integrated-care-nasw": {
+      "id": "social-work-case-studies-in-integrated-care-nasw",
+      "title": "Social Work Case Studies in Integrated Care (NASW)",
+      "authors": [
+        "National Association of Social Workers"
+      ],
+      "year": 2018,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.983Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.983Z"
+    },
+    "super-utilizers-in-emergency-medicine-annals-of-emergency-medicine": {
+      "id": "super-utilizers-in-emergency-medicine-annals-of-emergency-medicine",
+      "title": "Super-Utilizers in Emergency Medicine (Annals of Emergency Medicine)",
+      "authors": [
+        "Various medical researchers"
+      ],
+      "year": 2017,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.984Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.984Z"
+    },
+    "court-records-when-they-see-us-ken-burns-documentary": {
+      "id": "court-records-when-they-see-us-ken-burns-documentary",
+      "title": "Court Records / When They See Us / Ken Burns Documentary",
+      "authors": [
+        "Ava DuVernay (Netflix); Ken Burns (PBS); Court records"
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.985Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.985Z"
+    },
+    "ear-hustle-podcast": {
+      "id": "ear-hustle-podcast",
+      "title": "Ear Hustle (Podcast)",
+      "authors": [
+        "Earlonne Woods, Nigel Poor, Rahsaan \"New York\" Thomas"
+      ],
+      "year": 2017,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.987Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.987Z"
+    },
+    "death-sex-money-podcast": {
+      "id": "death-sex-money-podcast",
+      "title": "Death, Sex & Money (Podcast)",
+      "authors": [
+        "Anna Sale (WNYC)"
+      ],
+      "year": 2014,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.989Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.989Z"
+    },
+    "child-welfare-system-failures-hhs-inspector-general": {
+      "id": "child-welfare-system-failures-hhs-inspector-general",
+      "title": "Child Welfare System Failures (HHS Inspector General)",
+      "authors": [
+        "HHS Office of Inspector General"
+      ],
+      "year": 2020,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.990Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.990Z"
+    },
+    "va-wait-time-scandal-va-ig-report-multiple-outlets": {
+      "id": "va-wait-time-scandal-va-ig-report-multiple-outlets",
+      "title": "VA Wait Time Scandal (VA IG Report / Multiple outlets)",
+      "authors": [
+        "VA Inspector General / CNN"
+      ],
+      "year": 2014,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.991Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.991Z"
+    },
+    "wpa-slave-narrative-collection-library-of-congress-audio": {
+      "id": "wpa-slave-narrative-collection-library-of-congress-audio",
+      "title": "WPA Slave Narrative Collection / Library of Congress Audio",
+      "authors": [
+        "WPA Federal Writers' Project"
+      ],
+      "year": 1949,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.992Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.992Z"
+    },
+    "incidents-in-the-life-of-a-slave-girl": {
+      "id": "incidents-in-the-life-of-a-slave-girl",
+      "title": "Incidents in the Life of a Slave Girl",
+      "authors": [
+        "Harriet Jacobs (as Linda Brent)"
+      ],
+      "year": 1861,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.993Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.993Z"
+    },
+    "working-people-talk-about-what-they-do-all-day-and-how-they-feel-about-what-they-do": {
+      "id": "working-people-talk-about-what-they-do-all-day-and-how-they-feel-about-what-they-do",
+      "title": "Working: People Talk About What They Do All Day and How They Feel About What They Do",
+      "authors": [
+        "Studs Terkel"
+      ],
+      "year": 1974,
+      "type": "book",
+      "characters_extracted": 3,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.994Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.996Z"
+    },
+    "hard-times-an-oral-history-of-the-great-depression": {
+      "id": "hard-times-an-oral-history-of-the-great-depression",
+      "title": "Hard Times: An Oral History of the Great Depression",
+      "authors": [
+        "Studs Terkel"
+      ],
+      "year": 1970,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.997Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.997Z"
+    },
+    "storycorps-military-voices-initiative": {
+      "id": "storycorps-military-voices-initiative",
+      "title": "StoryCorps Military Voices Initiative",
+      "authors": [
+        "StoryCorps"
+      ],
+      "year": 2010,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.998Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.998Z"
+    },
+    "storycorps-september-11th-initiative": {
+      "id": "storycorps-september-11th-initiative",
+      "title": "StoryCorps September 11th Initiative",
+      "authors": [
+        "StoryCorps"
+      ],
+      "year": 2005,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:38.999Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:38.999Z"
+    },
+    "ellis-island-oral-history-collection": {
+      "id": "ellis-island-oral-history-collection",
+      "title": "Ellis Island Oral History Collection",
+      "authors": [
+        "National Park Service / Statue of Liberty-Ellis Island Foundation"
+      ],
+      "year": 1973,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.001Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.001Z"
+    },
+    "heavy-an-american-memoir": {
+      "id": "heavy-an-american-memoir",
+      "title": "Heavy: An American Memoir",
+      "authors": [
+        "Kiese Laymon"
+      ],
+      "year": 2018,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.002Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.002Z"
+    },
+    "in-the-dream-house": {
+      "id": "in-the-dream-house",
+      "title": "In the Dream House",
+      "authors": [
+        "Carmen Maria Machado"
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.003Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.003Z"
+    },
+    "hunger-a-memoir-of-my-body": {
+      "id": "hunger-a-memoir-of-my-body",
+      "title": "Hunger: A Memoir of (My) Body",
+      "authors": [
+        "Roxane Gay"
+      ],
+      "year": 2017,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.004Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.004Z"
+    },
+    "born-a-crime-stories-from-a-south-african-childhood": {
+      "id": "born-a-crime-stories-from-a-south-african-childhood",
+      "title": "Born a Crime: Stories from a South African Childhood",
+      "authors": [
+        "Trevor Noah"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.006Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.006Z"
+    },
+    "when-breath-becomes-air": {
+      "id": "when-breath-becomes-air",
+      "title": "When Breath Becomes Air",
+      "authors": [
+        "Paul Kalanithi"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.007Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.007Z"
+    },
+    "native-son": {
+      "id": "native-son",
+      "title": "Native Son",
+      "authors": [
+        "Richard Wright"
+      ],
+      "year": 1940,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.008Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.008Z"
+    },
+    "the-jungle": {
+      "id": "the-jungle",
+      "title": "The Jungle",
+      "authors": [
+        "Upton Sinclair"
+      ],
+      "year": 1906,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.009Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.009Z"
+    },
+    "the-grapes-of-wrath": {
+      "id": "the-grapes-of-wrath",
+      "title": "The Grapes of Wrath",
+      "authors": [
+        "John Steinbeck"
+      ],
+      "year": 1939,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.010Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.010Z"
+    },
+    "the-color-purple": {
+      "id": "the-color-purple",
+      "title": "The Color Purple",
+      "authors": [
+        "Alice Walker"
+      ],
+      "year": 1982,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.012Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.012Z"
+    },
+    "beloved": {
+      "id": "beloved",
+      "title": "Beloved",
+      "authors": [
+        "Toni Morrison"
+      ],
+      "year": 1987,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.013Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.013Z"
+    },
+    "the-house-on-mango-street": {
+      "id": "the-house-on-mango-street",
+      "title": "The House on Mango Street",
+      "authors": [
+        "Sandra Cisneros"
+      ],
+      "year": 1984,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.015Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.015Z"
+    },
+    "the-handmaids-tale": {
+      "id": "the-handmaids-tale",
+      "title": "The Handmaid's Tale",
+      "authors": [
+        "Margaret Atwood"
+      ],
+      "year": 1985,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.016Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.016Z"
+    },
+    "adventures-of-huckleberry-finn": {
+      "id": "adventures-of-huckleberry-finn",
+      "title": "Adventures of Huckleberry Finn",
+      "authors": [
+        "Mark Twain"
+      ],
+      "year": 1884,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.017Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.017Z"
+    },
+    "the-bluest-eye": {
+      "id": "the-bluest-eye",
+      "title": "The Bluest Eye",
+      "authors": [
+        "Toni Morrison"
+      ],
+      "year": 1970,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.019Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.019Z"
+    },
+    "les-mis-rables": {
+      "id": "les-mis-rables",
+      "title": "Les Misérables",
+      "authors": [
+        "Victor Hugo"
+      ],
+      "year": 1862,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.020Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.020Z"
+    },
+    "the-metamorphosis": {
+      "id": "the-metamorphosis",
+      "title": "The Metamorphosis",
+      "authors": [
+        "Franz Kafka"
+      ],
+      "year": 1915,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.021Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.021Z"
+    },
+    "crime-and-punishment": {
+      "id": "crime-and-punishment",
+      "title": "Crime and Punishment",
+      "authors": [
+        "Fyodor Dostoevsky"
+      ],
+      "year": 1866,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.022Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.022Z"
+    },
+    "oliver-twist": {
+      "id": "oliver-twist",
+      "title": "Oliver Twist",
+      "authors": [
+        "Charles Dickens"
+      ],
+      "year": 1838,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.023Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.023Z"
+    },
+    "tess-of-the-durbervilles": {
+      "id": "tess-of-the-durbervilles",
+      "title": "Tess of the d'Urbervilles",
+      "authors": [
+        "Thomas Hardy"
+      ],
+      "year": 1891,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.024Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.024Z"
+    },
+    "push": {
+      "id": "push",
+      "title": "Push",
+      "authors": [
+        "Sapphire"
+      ],
+      "year": 1996,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.026Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.026Z"
+    },
+    "in-moonlight-black-boys-look-blue-short-story-moonlight-film": {
+      "id": "in-moonlight-black-boys-look-blue-short-story-moonlight-film",
+      "title": "In Moonlight Black Boys Look Blue (short story) / Moonlight (film)",
+      "authors": [
+        "Tarell Alvin McCraney / Barry Jenkins"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.027Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.027Z"
+    },
+    "my-year-of-rest-and-relaxation": {
+      "id": "my-year-of-rest-and-relaxation",
+      "title": "My Year of Rest and Relaxation",
+      "authors": [
+        "Ottessa Moshfegh"
+      ],
+      "year": 2018,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.029Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.029Z"
+    },
+    "americanah": {
+      "id": "americanah",
+      "title": "Americanah",
+      "authors": [
+        "Chimamanda Ngozi Adichie"
+      ],
+      "year": 2013,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.030Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.030Z"
+    },
+    "behold-the-dreamers": {
+      "id": "behold-the-dreamers",
+      "title": "Behold the Dreamers",
+      "authors": [
+        "Imbolo Mbue"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.031Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.031Z"
+    },
+    "the-trial": {
+      "id": "the-trial",
+      "title": "The Trial",
+      "authors": [
+        "Franz Kafka"
+      ],
+      "year": 1925,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.033Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.033Z"
+    },
+    "hoop-dreams": {
+      "id": "hoop-dreams",
+      "title": "Hoop Dreams",
+      "authors": [
+        "Steve James, Frederick Marx, Peter Gilbert"
+      ],
+      "year": 1994,
+      "type": "book",
+      "characters_extracted": 2,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.034Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.035Z"
+    },
+    "making-a-murderer": {
+      "id": "making-a-murderer",
+      "title": "Making a Murderer",
+      "authors": [
+        "Laura Ricciardi, Moira Demos"
+      ],
+      "year": 2015,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.037Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.037Z"
+    },
+    "dark-days": {
+      "id": "dark-days",
+      "title": "Dark Days",
+      "authors": [
+        "Marc Singer"
+      ],
+      "year": 2000,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.038Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.038Z"
+    },
+    "minding-the-gap": {
+      "id": "minding-the-gap",
+      "title": "Minding the Gap",
+      "authors": [
+        "Bing Liu"
+      ],
+      "year": 2018,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.039Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.039Z"
+    },
+    "the-florida-project": {
+      "id": "the-florida-project",
+      "title": "The Florida Project",
+      "authors": [
+        "Sean Baker"
+      ],
+      "year": 2017,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.040Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.040Z"
+    },
+    "the-wire": {
+      "id": "the-wire",
+      "title": "The Wire",
+      "authors": [
+        "David Simon, Ed Burns"
+      ],
+      "year": 2002,
+      "type": "book",
+      "characters_extracted": 3,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.041Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.043Z"
+    },
+    "breaking-bad": {
+      "id": "breaking-bad",
+      "title": "Breaking Bad",
+      "authors": [
+        "Vince Gilligan"
+      ],
+      "year": 2008,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.044Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.044Z"
+    },
+    "parasite": {
+      "id": "parasite",
+      "title": "Parasite",
+      "authors": [
+        "Bong Joon-ho"
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.045Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.045Z"
+    },
+    "roma": {
+      "id": "roma",
+      "title": "Roma",
+      "authors": [
+        "Alfonso Cuarón"
+      ],
+      "year": 2018,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.046Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.046Z"
+    },
+    "i-daniel-blake": {
+      "id": "i-daniel-blake",
+      "title": "I, Daniel Blake",
+      "authors": [
+        "Ken Loach"
+      ],
+      "year": 2016,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.047Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.047Z"
+    },
+    "les-mis-rables-2019-film": {
+      "id": "les-mis-rables-2019-film",
+      "title": "Les Misérables (2019 film)",
+      "authors": [
+        "Ladj Ly"
+      ],
+      "year": 2019,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.049Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.049Z"
+    },
+    "death-of-a-salesman": {
+      "id": "death-of-a-salesman",
+      "title": "Death of a Salesman",
+      "authors": [
+        "Arthur Miller"
+      ],
+      "year": 1949,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.050Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.050Z"
+    },
+    "a-streetcar-named-desire": {
+      "id": "a-streetcar-named-desire",
+      "title": "A Streetcar Named Desire",
+      "authors": [
+        "Tennessee Williams"
+      ],
+      "year": 1947,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.051Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.051Z"
+    },
+    "angels-in-america-a-gay-fantasia-on-national-themes": {
+      "id": "angels-in-america-a-gay-fantasia-on-national-themes",
+      "title": "Angels in America: A Gay Fantasia on National Themes",
+      "authors": [
+        "Tony Kushner"
+      ],
+      "year": 1991,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.052Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.052Z"
+    },
+    "fences": {
+      "id": "fences",
+      "title": "Fences",
+      "authors": [
+        "August Wilson"
+      ],
+      "year": 1985,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.053Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.053Z"
+    },
+    "a-dolls-house": {
+      "id": "a-dolls-house",
+      "title": "A Doll's House",
+      "authors": [
+        "Henrik Ibsen"
+      ],
+      "year": 1879,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.054Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.054Z"
+    },
+    "the-last-of-us-video-game": {
+      "id": "the-last-of-us-video-game",
+      "title": "The Last of Us (Video Game)",
+      "authors": [
+        "Neil Druckmann, Naughty Dog"
+      ],
+      "year": 2013,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.055Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.055Z"
+    },
+    "the-walking-dead-telltale-game": {
+      "id": "the-walking-dead-telltale-game",
+      "title": "The Walking Dead (Telltale Game)",
+      "authors": [
+        "Telltale Games"
+      ],
+      "year": 2012,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.057Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.057Z"
+    },
+    "the-book-of-job-hebrew-bible": {
+      "id": "the-book-of-job-hebrew-bible",
+      "title": "The Book of Job (Hebrew Bible)",
+      "authors": [
+        "Unknown (biblical tradition)"
+      ],
+      "year": -500,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.058Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.058Z"
+    },
+    "the-odyssey": {
+      "id": "the-odyssey",
+      "title": "The Odyssey",
+      "authors": [
+        "Homer"
+      ],
+      "year": -700,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.059Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.059Z"
+    },
+    "the-ramayana": {
+      "id": "the-ramayana",
+      "title": "The Ramayana",
+      "authors": [
+        "Valmiki"
+      ],
+      "year": -300,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.060Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.060Z"
+    },
+    "antigone": {
+      "id": "antigone",
+      "title": "Antigone",
+      "authors": [
+        "Sophocles"
+      ],
+      "year": -441,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.061Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.061Z"
+    },
+    "maus": {
+      "id": "maus",
+      "title": "Maus",
+      "authors": [
+        "Art Spiegelman"
+      ],
+      "year": 1986,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.062Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.062Z"
+    },
+    "persepolis": {
+      "id": "persepolis",
+      "title": "Persepolis",
+      "authors": [
+        "Marjane Satrapi"
+      ],
+      "year": 2000,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.064Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.064Z"
+    },
+    "fun-home-a-family-tragicomic": {
+      "id": "fun-home-a-family-tragicomic",
+      "title": "Fun Home: A Family Tragicomic",
+      "authors": [
+        "Alison Bechdel"
+      ],
+      "year": 2006,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.065Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.065Z"
+    },
+    "cinderella-atu-type-510a-grimm-perrault-and-hundreds-of-variants": {
+      "id": "cinderella-atu-type-510a-grimm-perrault-and-hundreds-of-variants",
+      "title": "Cinderella (ATU Type 510A — Grimm, Perrault, and hundreds of variants)",
+      "authors": [
+        "Folk tradition (Grimm/Perrault versions)"
+      ],
+      "year": 1697,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.066Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.066Z"
+    },
+    "hansel-and-gretel-grimm": {
+      "id": "hansel-and-gretel-grimm",
+      "title": "Hansel and Gretel (Grimm)",
+      "authors": [
+        "Brothers Grimm"
+      ],
+      "year": 1812,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.067Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.067Z"
+    },
+    "grave-of-the-fireflies": {
+      "id": "grave-of-the-fireflies",
+      "title": "Grave of the Fireflies",
+      "authors": [
+        "Akiyuki Nosaka (novel) / Isao Takahata (film)"
+      ],
+      "year": 1988,
+      "type": "book",
+      "characters_extracted": 1,
+      "fully_processed": false,
+      "first_seen": "2026-02-26T21:44:39.068Z",
+      "source_api": "seed",
+      "dome_potential": null,
+      "last_character_added": "2026-02-26T21:44:39.068Z"
+    }
+  },
+  "reference_queue": [
+    {
+      "id": "invisible-man",
+      "referenced_by": "native-son",
+      "queued_at": "2026-02-26T21:44:39.008Z",
+      "searched": false
+    },
+    {
+      "id": "the-bluest-eye",
+      "referenced_by": "native-son",
+      "queued_at": "2026-02-26T21:44:39.008Z",
+      "searched": false
+    },
+    {
+      "id": "between-the-world-and-me",
+      "referenced_by": "native-son",
+      "queued_at": "2026-02-26T21:44:39.008Z",
+      "searched": false
+    },
+    {
+      "id": "the-grapes-of-wrath",
+      "referenced_by": "the-jungle",
+      "queued_at": "2026-02-26T21:44:39.009Z",
+      "searched": false
+    },
+    {
+      "id": "nickel-and-dimed",
+      "referenced_by": "the-jungle",
+      "queued_at": "2026-02-26T21:44:39.009Z",
+      "searched": false
+    },
+    {
+      "id": "fast-food-nation",
+      "referenced_by": "the-jungle",
+      "queued_at": "2026-02-26T21:44:39.009Z",
+      "searched": false
+    },
+    {
+      "id": "beloved",
+      "referenced_by": "the-color-purple",
+      "queued_at": "2026-02-26T21:44:39.012Z",
+      "searched": false
+    },
+    {
+      "id": "their-eyes-were-watching-god",
+      "referenced_by": "the-color-purple",
+      "queued_at": "2026-02-26T21:44:39.012Z",
+      "searched": false
+    },
+    {
+      "id": "kindred",
+      "referenced_by": "beloved",
+      "queued_at": "2026-02-26T21:44:39.013Z",
+      "searched": false
+    },
+    {
+      "id": "the-underground-railroad",
+      "referenced_by": "beloved",
+      "queued_at": "2026-02-26T21:44:39.013Z",
+      "searched": false
+    },
+    {
+      "id": "1984",
+      "referenced_by": "the-handmaids-tale",
+      "queued_at": "2026-02-26T21:44:39.016Z",
+      "searched": false
+    },
+    {
+      "id": "brave-new-world",
+      "referenced_by": "the-handmaids-tale",
+      "queued_at": "2026-02-26T21:44:39.016Z",
+      "searched": false
+    },
+    {
+      "id": "the-power",
+      "referenced_by": "the-handmaids-tale",
+      "queued_at": "2026-02-26T21:44:39.016Z",
+      "searched": false
+    },
+    {
+      "id": "minding-the-gap",
+      "referenced_by": "hoop-dreams",
+      "queued_at": "2026-02-26T21:44:39.034Z",
+      "searched": false
+    },
+    {
+      "id": "dark-days",
+      "referenced_by": "hoop-dreams",
+      "queued_at": "2026-02-26T21:44:39.034Z",
+      "searched": false
+    },
+    {
+      "id": "the-interrupters",
+      "referenced_by": "hoop-dreams",
+      "queued_at": "2026-02-26T21:44:39.034Z",
+      "searched": false
+    },
+    {
+      "id": "the-staircase",
+      "referenced_by": "making-a-murderer",
+      "queued_at": "2026-02-26T21:44:39.037Z",
+      "searched": false
+    },
+    {
+      "id": "the-innocence-files",
+      "referenced_by": "making-a-murderer",
+      "queued_at": "2026-02-26T21:44:39.037Z",
+      "searched": false
+    },
+    {
+      "id": "serial",
+      "referenced_by": "making-a-murderer",
+      "queued_at": "2026-02-26T21:44:39.037Z",
+      "searched": false
+    },
+    {
+      "id": "the-corner",
+      "referenced_by": "the-wire",
+      "queued_at": "2026-02-26T21:44:39.041Z",
+      "searched": false
+    },
+    {
+      "id": "homicide-a-year-on-the-killing-streets",
+      "referenced_by": "the-wire",
+      "queued_at": "2026-02-26T21:44:39.041Z",
+      "searched": false
+    },
+    {
+      "id": "we-own-this-city",
+      "referenced_by": "the-wire",
+      "queued_at": "2026-02-26T21:44:39.041Z",
+      "searched": false
+    },
+    {
+      "id": "roma",
+      "referenced_by": "parasite",
+      "queued_at": "2026-02-26T21:44:39.045Z",
+      "searched": false
+    },
+    {
+      "id": "shoplifters",
+      "referenced_by": "parasite",
+      "queued_at": "2026-02-26T21:44:39.045Z",
+      "searched": false
+    },
+    {
+      "id": "capernaum",
+      "referenced_by": "parasite",
+      "queued_at": "2026-02-26T21:44:39.045Z",
+      "searched": false
+    },
+    {
+      "id": "fences",
+      "referenced_by": "death-of-a-salesman",
+      "queued_at": "2026-02-26T21:44:39.050Z",
+      "searched": false
+    },
+    {
+      "id": "glengarry-glen-ross",
+      "referenced_by": "death-of-a-salesman",
+      "queued_at": "2026-02-26T21:44:39.050Z",
+      "searched": false
+    },
+    {
+      "id": "a-raisin-in-the-sun",
+      "referenced_by": "death-of-a-salesman",
+      "queued_at": "2026-02-26T21:44:39.050Z",
+      "searched": false
+    },
+    {
+      "id": "the-glass-menagerie",
+      "referenced_by": "a-streetcar-named-desire",
+      "queued_at": "2026-02-26T21:44:39.051Z",
+      "searched": false
+    },
+    {
+      "id": "cat-on-a-hot-tin-roof",
+      "referenced_by": "a-streetcar-named-desire",
+      "queued_at": "2026-02-26T21:44:39.051Z",
+      "searched": false
+    },
+    {
+      "id": "persepolis",
+      "referenced_by": "maus",
+      "queued_at": "2026-02-26T21:44:39.062Z",
+      "searched": false
+    },
+    {
+      "id": "fun-home",
+      "referenced_by": "maus",
+      "queued_at": "2026-02-26T21:44:39.062Z",
+      "searched": false
+    },
+    {
+      "id": "march",
+      "referenced_by": "maus",
+      "queued_at": "2026-02-26T21:44:39.062Z",
+      "searched": false
+    }
+  ],
+  "genre_queue": [
+    {
+      "id": "orange-is-the-new-black",
+      "title": "Orange Is the New Black",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "in-the-place-of-justice",
+      "title": "In the Place of Justice",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "newjack",
+      "title": "Newjack",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-sun-does-shine",
+      "title": "The Sun Does Shine",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "writing-my-wrongs",
+      "title": "Writing My Wrongs",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "are-prisons-obsolete",
+      "title": "Are Prisons Obsolete?",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "solitary",
+      "title": "Solitary",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "american-prison",
+      "title": "American Prison",
+      "genre": "prison-literature",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "enriques-journey",
+      "title": "Enrique's Journey",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-distance-between-us",
+      "title": "The Distance Between Us",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "tell-me-how-it-ends",
+      "title": "Tell Me How It Ends",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-far-away-brothers",
+      "title": "The Far Away Brothers",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "lost-children-archive",
+      "title": "Lost Children Archive",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "exit-west",
+      "title": "Exit West",
+      "genre": "migration-narratives",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-diving-bell-and-the-butterfly",
+      "title": "The Diving Bell and the Butterfly",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "still-alice",
+      "title": "Still Alice",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-reason-i-jump",
+      "title": "The Reason I Jump",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "my-stroke-of-insight",
+      "title": "My Stroke of Insight",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "look-me-in-the-eye",
+      "title": "Look Me in the Eye",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "the-collected-schizophrenias",
+      "title": "The Collected Schizophrenias",
+      "genre": "disability-memoirs",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "beautiful-boy",
+      "title": "Beautiful Boy",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "tweak",
+      "title": "Tweak",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "lit",
+      "title": "Lit",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.060Z",
+      "searched": false
+    },
+    {
+      "id": "drinking-a-love-story",
+      "title": "Drinking: A Love Story",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "the-night-of-the-gun",
+      "title": "The Night of the Gun",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "in-the-realm-of-hungry-ghosts",
+      "title": "In the Realm of Hungry Ghosts",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "sober-curious",
+      "title": "Sober Curious",
+      "genre": "addiction-recovery",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "three-little-words",
+      "title": "Three Little Words",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "a-place-called-home",
+      "title": "A Place Called Home",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "another-place-at-the-table",
+      "title": "Another Place at the Table",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "the-lost-children-of-wilder",
+      "title": "The Lost Children of Wilder",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "somebodys-someone",
+      "title": "Somebody's Someone",
+      "genre": "foster-care",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "there-there",
+      "title": "There There",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "the-absolutely-true-diary-of-a-part-time-indian",
+      "title": "The Absolutely True Diary of a Part-Time Indian",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "killers-of-the-flower-moon",
+      "title": "Killers of the Flower Moon",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "an-indigenous-peoples-history-of-the-united-states",
+      "title": "An Indigenous Peoples' History of the United States",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "heart-berries",
+      "title": "Heart Berries",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "braiding-sweetgrass",
+      "title": "Braiding Sweetgrass",
+      "genre": "indigenous-narratives",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "night-comes-to-the-cumberlands",
+      "title": "Night Comes to the Cumberlands",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "hillbilly-elegy",
+      "title": "Hillbilly Elegy",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "dopesick",
+      "title": "Dopesick",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "what-you-are-getting-wrong-about-appalachia",
+      "title": "What You Are Getting Wrong About Appalachia",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "ramp-hollow",
+      "title": "Ramp Hollow",
+      "genre": "appalachian-poverty",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "no-visible-bruises",
+      "title": "No Visible Bruises",
+      "genre": "domestic-violence",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "why-does-he-do-that",
+      "title": "Why Does He Do That?",
+      "genre": "domestic-violence",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "behind-closed-doors",
+      "title": "Behind Closed Doors",
+      "genre": "domestic-violence",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    },
+    {
+      "id": "a-burning",
+      "title": "A Burning",
+      "genre": "domestic-violence",
+      "queued_at": "2026-02-26T21:44:41.061Z",
+      "searched": false
+    }
+  ],
+  "genres_discovered": [
+    "prison-literature",
+    "migration-narratives",
+    "disability-memoirs",
+    "addiction-recovery",
+    "foster-care",
+    "indigenous-narratives",
+    "appalachian-poverty",
+    "domestic-violence"
+  ],
+  "total_works": 113,
+  "total_processed": 0
+}

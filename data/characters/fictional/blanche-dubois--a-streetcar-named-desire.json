@@ -1,0 +1,173 @@
+{
+  "id": "blanche-dubois--a-streetcar-named-desire",
+  "name": "Blanche DuBois",
+  "real_or_fictional": "fictional",
+  "source_work": "A Streetcar Named Desire",
+  "source_author_creator": "Tennessee Williams",
+  "source_year": 1947,
+  "circumstances": [
+    "homeless",
+    "mental_illness",
+    "poverty",
+    "addiction",
+    "domestic_violence",
+    "bereavement",
+    "trauma"
+  ],
+  "location": "New Orleans, LA (French Quarter, Elysian Fields)",
+  "time_period": "1947",
+  "systems_touched": [
+    "mental hospital (institutionalized)",
+    "schools (teacher, fired)",
+    "hotels",
+    "dependent on kindness of strangers"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 3,
+    "3": 7,
+    "4": 9,
+    "5": 8,
+    "6": 7,
+    "7": 6,
+    "8": 7,
+    "9": 5,
+    "10": 9,
+    "11": 8,
+    "12": 8
+  },
+  "key_relationships": [
+    "Stella (sister)",
+    "Stanley Kowalski",
+    "Mitch",
+    "Young husband (deceased)"
+  ],
+  "narrative_arc": "Southern aristocrat who lost the family plantation, was fired from teaching for sexual involvement with a student, and arrives at her sister's cramped New Orleans apartment with nowhere else to go. Williams documents her psychological unraveling — the dependency, the alcohol, the illusions, and finally the institutionalization after Stanley rapes her.",
+  "why_this_character_matters": "Blanche's dome maps downward class mobility. She once had every layer filled; now each one is emptying. Her dome reveals the velocity of collapse when wealth is replaced by nothing — and how mental health (Layer 4) deteriorates fastest when housing (Layer 5) becomes dependent.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 3,
+      "3": 7,
+      "4": 10,
+      "5": 8,
+      "6": 7,
+      "7": 6,
+      "8": 10,
+      "9": 5,
+      "10": 9,
+      "11": 8,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "circumstance-layer:domestic_violence",
+        "explicit:6"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:bereavement",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "circumstance:addiction",
+        "circumstance:trauma",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:bereavement",
+        "keyword:health",
+        "keyword:mental",
+        "explicit:9"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "keyword:apartment",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "keyword:fired",
+        "explicit:7"
+      ],
+      "7": [
+        "system:schools (teacher, fired)",
+        "keyword:teach",
+        "keyword:class",
+        "keyword:student",
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:homeless",
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:addiction",
+        "circumstance-layer:bereavement",
+        "keyword:family",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:trauma",
+        "explicit:9"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:art",
+        "keyword:sing",
+        "explicit:8"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 87,
+    "average_score": 7.3,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.050Z"
+}

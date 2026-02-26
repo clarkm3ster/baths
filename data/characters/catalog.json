@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-02-26T21:44:52.165Z",
+  "characters": {
+    "total": 131,
+    "real": 87,
+    "fictional": 44
+  },
+  "circumstances": {
+    "total_types": 53,
+    "total_characters": 578,
+    "real_characters": 359,
+    "fictional_characters": 219,
+    "categories": 11,
+    "discovered_types": 1,
+    "empty_types": 2,
+    "most_common": [
+      {
+        "type": "poverty",
+        "count": 90
+      },
+      {
+        "type": "housing_insecure",
+        "count": 48
+      },
+      {
+        "type": "trauma",
+        "count": 36
+      },
+      {
+        "type": "domestic_violence",
+        "count": 29
+      },
+      {
+        "type": "homeless",
+        "count": 25
+      },
+      {
+        "type": "chronic_illness",
+        "count": 19
+      },
+      {
+        "type": "addiction",
+        "count": 19
+      },
+      {
+        "type": "incarcerated",
+        "count": 18
+      },
+      {
+        "type": "mental_illness",
+        "count": 18
+      },
+      {
+        "type": "immigrant",
+        "count": 17
+      }
+    ],
+    "discovery_queue": 1
+  },
+  "source_works": {
+    "total_works": 113,
+    "processed": 0,
+    "unprocessed": 113,
+    "total_characters_extracted": 131,
+    "reference_queue": 33,
+    "genre_queue": 47,
+    "genres_discovered": 8,
+    "by_type": [
+      [
+        "book",
+        113
+      ]
+    ]
+  },
+  "rankings": {
+    "high_buildability": 131,
+    "medium_buildability": 0,
+    "low_buildability": 0
+  }
+}

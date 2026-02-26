@@ -1,0 +1,156 @@
+{
+  "id": "the-phantom-medicaid-patients--gao-report-on-medicaid-enrollment-barriers",
+  "name": "The \"Phantom\" Medicaid Patients",
+  "real_or_fictional": "real",
+  "source_work": "GAO Report on Medicaid Enrollment Barriers",
+  "source_author_creator": "Government Accountability Office",
+  "source_year": 2019,
+  "circumstances": [
+    "uninsured",
+    "poverty",
+    "chronic_illness",
+    "illiterate"
+  ],
+  "location": "Rural South (Alabama, Mississippi, Georgia)",
+  "time_period": "2019",
+  "systems_touched": [
+    "Medicaid (denied)",
+    "emergency rooms",
+    "community health centers",
+    "charity care",
+    "state eligibility systems"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 10,
+    "3": 7,
+    "4": 8,
+    "5": 4,
+    "6": 6,
+    "7": 4,
+    "8": 5,
+    "9": 4,
+    "10": 5,
+    "11": 2,
+    "12": 3
+  },
+  "key_relationships": [
+    "Community health workers",
+    "Emergency room staff",
+    "State bureaucrats"
+  ],
+  "narrative_arc": "GAO documented people who qualified for Medicaid but couldn't enroll — they lacked internet access for online applications, couldn't navigate the phone system, couldn't provide required documentation, or didn't know Medicaid existed. They used emergency rooms as primary care at 10x the cost.",
+  "why_this_character_matters": "This dome is defined by Layer 2 (Systems) failure. The benefit exists. The eligibility exists. But the interface between person and system is broken. These domes reveal the cost of bad UX at government scale.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 10,
+      "3": 8,
+      "4": 10,
+      "5": 4,
+      "6": 7,
+      "7": 4,
+      "8": 5,
+      "9": 4,
+      "10": 5,
+      "11": 2,
+      "12": 3
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:5"
+      ],
+      "2": [
+        "circumstance-layer:uninsured",
+        "system:Medicaid (denied)",
+        "keyword:application",
+        "keyword:eligib",
+        "keyword:benefit",
+        "explicit:10"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:uninsured",
+        "circumstance-layer:chronic_illness",
+        "keyword:cost",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:uninsured",
+        "circumstance:chronic_illness",
+        "system:Medicaid (denied)",
+        "system:emergency rooms",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "keyword:room",
+        "explicit:4"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:illiterate",
+        "explicit:6"
+      ],
+      "7": [
+        "circumstance:illiterate",
+        "explicit:4"
+      ],
+      "8": [
+        "explicit:5"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "circumstance-layer:illiterate",
+        "explicit:5"
+      ],
+      "11": [
+        "explicit:2"
+      ],
+      "12": [
+        "explicit:3"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 67,
+    "average_score": 5.6,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 5
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.980Z"
+}

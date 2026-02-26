@@ -1,0 +1,159 @@
+{
+  "id": "winston-smith--1984",
+  "name": "Winston Smith",
+  "real_or_fictional": "fictional",
+  "source_work": "1984",
+  "source_author_creator": "George Orwell",
+  "source_year": 1949,
+  "circumstances": [
+    "surveillance",
+    "poverty",
+    "housing_insecure",
+    "forced_labor"
+  ],
+  "location": "Airstrip One (London), Oceania",
+  "time_period": "1984",
+  "systems_touched": [
+    "Ministry of Truth",
+    "Thought Police",
+    "telescreen surveillance",
+    "Victory Mansions (housing)",
+    "canteen system",
+    "lottery"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 8,
+    "3": 5,
+    "4": 6,
+    "5": 7,
+    "6": 7,
+    "7": 5,
+    "8": 6,
+    "9": 6,
+    "10": 10,
+    "11": 6,
+    "12": 7
+  },
+  "key_relationships": [
+    "Julia",
+    "O'Brien",
+    "Big Brother",
+    "Syme",
+    "Parsons"
+  ],
+  "narrative_arc": "Party member who secretly rebels against total surveillance. Orwell documents the infrastructure of totalitarian control — the telescreen in every room, the Newspeak that eliminates dissenting thoughts, the memory holes that rewrite history, the Two Minutes Hate that redirects anger. Winston's rebellion is an attempt to fill Layers 10-12 in a system designed to empty them.",
+  "why_this_character_matters": "Winston's dome maps total state control. Every layer is managed by a different Ministry — Truth (information), Peace (war), Love (torture), Plenty (scarcity). His dome is the theoretical maximum of system penetration into a life.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 8,
+      "3": 6,
+      "4": 6,
+      "5": 7,
+      "6": 7,
+      "7": 5,
+      "8": 6,
+      "9": 6,
+      "10": 10,
+      "11": 6,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:surveillance",
+        "circumstance-layer:forced_labor",
+        "system:Thought Police",
+        "explicit:9"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "keyword:rent",
+        "explicit:5"
+      ],
+      "4": [
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:rent",
+        "keyword:room",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:forced_labor",
+        "explicit:7"
+      ],
+      "7": [
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance-layer:surveillance",
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:surveillance",
+        "circumstance:forced_labor",
+        "keyword:control",
+        "explicit:10"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:write",
+        "keyword:story",
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.031Z"
+}

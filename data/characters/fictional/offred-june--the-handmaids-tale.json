@@ -1,0 +1,164 @@
+{
+  "id": "offred-june--the-handmaids-tale",
+  "name": "Offred (June)",
+  "real_or_fictional": "fictional",
+  "source_work": "The Handmaid's Tale",
+  "source_author_creator": "Margaret Atwood",
+  "source_year": 1985,
+  "circumstances": [
+    "detained",
+    "surveillance",
+    "forced_labor",
+    "trafficking",
+    "trauma"
+  ],
+  "location": "Republic of Gilead (formerly Cambridge, MA)",
+  "time_period": "Near future",
+  "systems_touched": [
+    "theocratic government",
+    "Aunts (training)",
+    "Commanders (assignment)",
+    "Eyes (secret police)",
+    "Underground resistance"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 8,
+    "3": 4,
+    "4": 7,
+    "5": 7,
+    "6": 4,
+    "7": 5,
+    "8": 6,
+    "9": 5,
+    "10": 10,
+    "11": 6,
+    "12": 7
+  },
+  "key_relationships": [
+    "Commander Fred",
+    "Serena Joy",
+    "Nick",
+    "Moira",
+    "Ofglen",
+    "Luke (husband, before)"
+  ],
+  "narrative_arc": "Woman enslaved as a reproductive vessel in a theocratic state. Atwood documents the architecture of total control — the uniform, the restricted walking routes, the forbidden reading, the mandated rape ceremony, and the small resistances (butter on skin, whispered words).",
+  "why_this_character_matters": "Offred's dome maps a system designed to destroy Layers 10-12 (Autonomy, Creativity, Flourishing) while maintaining Layers 1-5. Her dome reveals that a person can be housed, fed, and medically maintained while having zero autonomy. The dome's COSM score would be zero despite filled lower layers.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 8,
+      "3": 4,
+      "4": 7,
+      "5": 7,
+      "6": 4,
+      "7": 5,
+      "8": 6,
+      "9": 5,
+      "10": 10,
+      "11": 6,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:detained",
+        "circumstance:surveillance",
+        "circumstance:trafficking",
+        "circumstance-layer:forced_labor",
+        "system:Eyes (secret police)",
+        "explicit:10"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:8"
+      ],
+      "3": [
+        "explicit:4"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:trafficking",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance-layer:detained",
+        "keyword:hous",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:forced_labor",
+        "explicit:4"
+      ],
+      "7": [
+        "keyword:read",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance-layer:surveillance",
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:detained",
+        "circumstance:surveillance",
+        "circumstance:forced_labor",
+        "circumstance:trafficking",
+        "circumstance-layer:trauma",
+        "keyword:autonomy",
+        "keyword:control",
+        "keyword:resist",
+        "explicit:10"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:creat",
+        "explicit:6"
+      ],
+      "12": [
+        "keyword:flourish",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 79,
+    "average_score": 6.6,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.015Z"
+}

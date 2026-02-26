@@ -1,0 +1,158 @@
+{
+  "id": "trevor-noah--born-a-crime-stories-from-a-south-african-childhood",
+  "name": "Trevor Noah",
+  "real_or_fictional": "real",
+  "source_work": "Born a Crime: Stories from a South African Childhood",
+  "source_author_creator": "Trevor Noah",
+  "source_year": 2016,
+  "circumstances": [
+    "poverty",
+    "domestic_violence",
+    "immigrant",
+    "housing_insecure"
+  ],
+  "location": "Soweto / Johannesburg, South Africa",
+  "time_period": "1984-2000s",
+  "systems_touched": [
+    "apartheid legal system",
+    "township schools",
+    "informal economy",
+    "churches",
+    "hospitals",
+    "police"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 6,
+    "3": 7,
+    "4": 5,
+    "5": 7,
+    "6": 7,
+    "7": 7,
+    "8": 9,
+    "9": 6,
+    "10": 8,
+    "11": 7,
+    "12": 8
+  },
+  "key_relationships": [
+    "Patricia Noah (mother)",
+    "Abel (stepfather)",
+    "Grandmother"
+  ],
+  "narrative_arc": "Born a crime — his existence (mixed-race child under apartheid) was illegal. Noah documents how his mother navigated apartheid's bureaucracy to give him access to white schools, how she survived his stepfather's violence, and how language (he speaks 6+) was the primary survival tool.",
+  "why_this_character_matters": "Trevor's dome maps apartheid as a system — Layer 1 (Legal) determines everything because his body is classified as a crime. Building a dome with US systems around his South African circumstances reveals universal patterns of racial classification.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 6,
+      "3": 7,
+      "4": 5,
+      "5": 7,
+      "6": 7,
+      "7": 7,
+      "8": 9,
+      "9": 6,
+      "10": 8,
+      "11": 7,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:immigrant",
+        "system:police",
+        "keyword:legal",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "system:hospitals",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "explicit:7"
+      ],
+      "7": [
+        "system:township schools",
+        "keyword:school",
+        "keyword:class",
+        "explicit:7"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:immigrant",
+        "system:churches",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "keyword:surviv",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:art",
+        "explicit:7"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 86,
+    "average_score": 7.2,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.005Z"
+}

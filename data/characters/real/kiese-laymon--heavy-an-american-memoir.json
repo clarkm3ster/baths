@@ -1,0 +1,155 @@
+{
+  "id": "kiese-laymon--heavy-an-american-memoir",
+  "name": "Kiese Laymon",
+  "real_or_fictional": "real",
+  "source_work": "Heavy: An American Memoir",
+  "source_author_creator": "Kiese Laymon",
+  "source_year": 2018,
+  "circumstances": [
+    "poverty",
+    "addiction",
+    "domestic_violence",
+    "trauma"
+  ],
+  "location": "Jackson, MS",
+  "time_period": "1974-2018",
+  "systems_touched": [
+    "public schools",
+    "Millsaps College",
+    "Oberlin College",
+    "gambling industry",
+    "food systems"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 3,
+    "3": 6,
+    "4": 8,
+    "5": 5,
+    "6": 6,
+    "7": 8,
+    "8": 8,
+    "9": 5,
+    "10": 7,
+    "11": 9,
+    "12": 9
+  },
+  "key_relationships": [
+    "Mother",
+    "Grandmother",
+    "Mississippi community"
+  ],
+  "narrative_arc": "Memoir about the body — Black, Southern, heavy. Laymon documents how food, gambling, exercise, and language became tools for managing pain his family couldn't name. His mother's physical abuse, his sexual abuse, his obesity — all documented with a precision that fills the body-layers (Health, Autonomy, Creativity) completely.",
+  "why_this_character_matters": "Kiese fills Layers 10-12 with more depth than almost any other memoirist. His dome reveals how the body carries systems — how poverty enters through food, how trauma lives in weight, how language is both wound and healing.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 3,
+      "3": 6,
+      "4": 10,
+      "5": 5,
+      "6": 6,
+      "7": 8,
+      "8": 8,
+      "9": 5,
+      "10": 7,
+      "11": 9,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "circumstance-layer:domestic_violence",
+        "explicit:4"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance:trauma",
+        "circumstance-layer:domestic_violence",
+        "keyword:health",
+        "keyword:pain",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:5"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:6"
+      ],
+      "7": [
+        "system:public schools",
+        "explicit:8"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:addiction",
+        "keyword:family",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:trauma",
+        "keyword:autonomy",
+        "explicit:7"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:creat",
+        "explicit:9"
+      ],
+      "12": [
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 80,
+    "average_score": 6.7,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 9
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.001Z"
+}

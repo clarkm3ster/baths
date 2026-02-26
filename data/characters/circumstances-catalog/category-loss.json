@@ -1,0 +1,136 @@
+{
+  "category": "loss",
+  "types": 2,
+  "total_characters": 24,
+  "entries": [
+    {
+      "type": "bereavement",
+      "category": "loss",
+      "layers": [
+        4,
+        8,
+        3
+      ],
+      "description": "Death of close person, navigating aftermath",
+      "character_count": 15,
+      "real_count": 8,
+      "fictional_count": 7,
+      "example_characters": [
+        {
+          "name": "Jesmyn Ward",
+          "source_work": "Men We Reaped",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Kira Johnson",
+          "source_work": "Lost Mothers: Maternal Mortality in the U.S. (ProPublica/NPR)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Opioid-Prescribed Patients of WV",
+          "source_work": "The Pain Hustlers / Opioid Files (multiple outlets)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The VA Wait List Veterans",
+          "source_work": "VA Wait Time Scandal (VA IG Report / Multiple outlets)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "StoryCorps 9/11 Witnesses",
+          "source_work": "StoryCorps September 11th Initiative",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jurgis Rudkus",
+          "source_work": "The Jungle",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Tess Durbeyfield",
+          "source_work": "Tess of the d'Urbervilles",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Keire Johnson",
+          "source_work": "Minding the Gap",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Bubbles (Reginald Cousins)",
+          "source_work": "The Wire",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Cleo",
+          "source_work": "Roma",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "grief",
+      "category": "loss",
+      "layers": [
+        4,
+        8,
+        12
+      ],
+      "description": "Processing significant loss",
+      "character_count": 9,
+      "real_count": 5,
+      "fictional_count": 4,
+      "example_characters": [
+        {
+          "name": "Jesmyn Ward",
+          "source_work": "Men We Reaped",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Death, Sex & Money Interviewees",
+          "source_work": "Death, Sex & Money (Podcast)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "StoryCorps 9/11 Witnesses",
+          "source_work": "StoryCorps September 11th Initiative",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Paul Kalanithi",
+          "source_work": "When Breath Becomes Air",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Sethe",
+          "source_work": "Beloved",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Turtle Alveston",
+          "source_work": "My Year of Rest and Relaxation",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Job",
+          "source_work": "The Book of Job (Hebrew Bible)",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Antigone",
+          "source_work": "Antigone",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Alison Bechdel",
+          "source_work": "Fun Home: A Family Tragicomic",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "id": "steven-avery--making-a-murderer",
+  "name": "Steven Avery",
+  "real_or_fictional": "real",
+  "source_work": "Making a Murderer",
+  "source_author_creator": "Laura Ricciardi, Moira Demos",
+  "source_year": 2015,
+  "circumstances": [
+    "wrongly_convicted",
+    "incarcerated",
+    "formerly_incarcerated",
+    "poverty"
+  ],
+  "location": "Manitowoc County, WI",
+  "time_period": "1985-2015",
+  "systems_touched": [
+    "criminal justice",
+    "DNA exoneration",
+    "civil lawsuit",
+    "Manitowoc County Sheriff",
+    "public defender",
+    "prison"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 6,
+    "3": 7,
+    "4": 5,
+    "5": 6,
+    "6": 6,
+    "7": 4,
+    "8": 7,
+    "9": 5,
+    "10": 9,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Brendan Dassey (nephew)",
+    "Family",
+    "Dean Strang and Jerry Buting (lawyers)",
+    "Teresa Halbach"
+  ],
+  "narrative_arc": "Wrongly convicted, served 18 years, exonerated by DNA, then accused of murder while suing the county for $36 million. The documentary raises the question of whether the second prosecution was retaliation. 10 episodes of legal system documentation — every motion, every hearing, every manipulation.",
+  "why_this_character_matters": "Steven's dome maps how the legal system responds to being proven wrong. His first dome (wrongful conviction) collapsed. His second dome (freedom + lawsuit) was then demolished by the same system. The dome reveals whether systems can self-correct or only self-protect.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 6,
+      "3": 7,
+      "4": 5,
+      "5": 6,
+      "6": 6,
+      "7": 4,
+      "8": 7,
+      "9": 5,
+      "10": 9,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:wrongly_convicted",
+        "circumstance:incarcerated",
+        "circumstance:formerly_incarcerated",
+        "system:criminal justice",
+        "system:public defender",
+        "system:prison",
+        "keyword:law",
+        "keyword:legal",
+        "keyword:hearing",
+        "keyword:conviction",
+        "explicit:10"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:7"
+      ],
+      "4": [
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:poverty",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:formerly_incarcerated",
+        "explicit:6"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:wrongly_convicted",
+        "keyword:freedom",
+        "explicit:9"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "circumstance:wrongly_convicted",
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 73,
+    "average_score": 6.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.036Z"
+}

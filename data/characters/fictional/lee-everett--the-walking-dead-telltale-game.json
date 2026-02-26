@@ -1,0 +1,153 @@
+{
+  "id": "lee-everett--the-walking-dead-telltale-game",
+  "name": "Lee Everett",
+  "real_or_fictional": "fictional",
+  "source_work": "The Walking Dead (Telltale Game)",
+  "source_author_creator": "Telltale Games",
+  "source_year": 2012,
+  "circumstances": [
+    "formerly_incarcerated",
+    "displaced",
+    "caregiver",
+    "terminal_illness"
+  ],
+  "location": "Georgia (post-apocalyptic)",
+  "time_period": "Near future",
+  "systems_touched": [
+    "criminal justice (pre-apocalypse)",
+    "university (professor)",
+    "survivor groups",
+    "community governance"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 3,
+    "3": 3,
+    "4": 6,
+    "5": 6,
+    "6": 4,
+    "7": 6,
+    "8": 9,
+    "9": 7,
+    "10": 8,
+    "11": 4,
+    "12": 8
+  },
+  "key_relationships": [
+    "Clementine",
+    "Kenny",
+    "Carley/Doug",
+    "Lilly",
+    "Stranger"
+  ],
+  "narrative_arc": "University professor convicted of murder who finds redemption protecting an orphaned girl during the zombie apocalypse. Every choice in the game forces trade-offs between dome layers — save one person or another, take supplies from others, decide who leads the group. The game makes the player build domes and tear them down.",
+  "why_this_character_matters": "Lee's dome is built by the player's choices. Each decision fills or empties a layer. The game is a dome simulator — the player learns that every resource allocated to one layer is unavailable for another.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 3,
+      "3": 3,
+      "4": 6,
+      "5": 6,
+      "6": 4,
+      "7": 6,
+      "8": 9,
+      "9": 7,
+      "10": 8,
+      "11": 4,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:formerly_incarcerated",
+        "system:criminal justice (pre-apocalypse)",
+        "explicit:7"
+      ],
+      "2": [
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance-layer:terminal_illness",
+        "explicit:3"
+      ],
+      "4": [
+        "circumstance:terminal_illness",
+        "circumstance-layer:caregiver",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance-layer:formerly_incarcerated",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:caregiver",
+        "explicit:4"
+      ],
+      "7": [
+        "keyword:learn",
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance:caregiver",
+        "circumstance-layer:displaced",
+        "explicit:9"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "keyword:lead",
+        "explicit:7"
+      ],
+      "10": [
+        "keyword:choice",
+        "explicit:8"
+      ],
+      "11": [
+        "explicit:4"
+      ],
+      "12": [
+        "circumstance:terminal_illness",
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 71,
+    "average_score": 5.9,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.056Z"
+}

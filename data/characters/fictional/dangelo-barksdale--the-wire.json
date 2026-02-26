@@ -1,0 +1,152 @@
+{
+  "id": "dangelo-barksdale--the-wire",
+  "name": "D'Angelo Barksdale",
+  "real_or_fictional": "fictional",
+  "source_work": "The Wire",
+  "source_author_creator": "David Simon, Ed Burns",
+  "source_year": 2002,
+  "circumstances": [
+    "incarcerated",
+    "poverty",
+    "trauma"
+  ],
+  "location": "West Baltimore, MD; Jessup Correctional Institution",
+  "time_period": "2002-2003",
+  "systems_touched": [
+    "drug organization",
+    "criminal justice",
+    "prison",
+    "public housing (the pit, the towers)"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 5,
+    "3": 7,
+    "4": 6,
+    "5": 7,
+    "6": 7,
+    "7": 5,
+    "8": 8,
+    "9": 7,
+    "10": 8,
+    "11": 5,
+    "12": 6
+  },
+  "key_relationships": [
+    "Avon Barksdale (uncle)",
+    "Brianna (mother)",
+    "Donette (partner)",
+    "Wallace",
+    "Stringer Bell"
+  ],
+  "narrative_arc": "Nephew of a drug kingpin who doesn't want to be in the game. Simon documents his attempt to walk away — and the impossibility of it. D'Angelo reads The Great Gatsby in prison and sees himself in it. His murder (made to look like suicide) is ordered by his own uncle to protect the organization.",
+  "why_this_character_matters": "D'Angelo's dome maps the trap — Layer 8 (Community) and Layer 1 (Legal) conspire to prevent exit. His dome reveals that some communities are prisons, and some prisons offer more freedom than the community.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 5,
+      "3": 7,
+      "4": 6,
+      "5": 7,
+      "6": 7,
+      "7": 5,
+      "8": 8,
+      "9": 7,
+      "10": 8,
+      "11": 5,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "system:criminal justice",
+        "system:prison",
+        "keyword:legal",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:poverty",
+        "system:public housing (the pit, the towers)",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:7"
+      ],
+      "7": [
+        "keyword:read",
+        "explicit:5"
+      ],
+      "8": [
+        "keyword:communit",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:trauma",
+        "keyword:freedom",
+        "explicit:8"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 80,
+    "average_score": 6.7,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.042Z"
+}

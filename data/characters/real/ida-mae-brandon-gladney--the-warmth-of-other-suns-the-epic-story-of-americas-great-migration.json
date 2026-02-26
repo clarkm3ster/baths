@@ -1,0 +1,153 @@
+{
+  "id": "ida-mae-brandon-gladney--the-warmth-of-other-suns-the-epic-story-of-americas-great-migration",
+  "name": "Ida Mae Brandon Gladney",
+  "real_or_fictional": "real",
+  "source_work": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+  "source_author_creator": "Isabel Wilkerson",
+  "source_year": 2010,
+  "circumstances": [
+    "poverty",
+    "displaced",
+    "immigrant"
+  ],
+  "location": "Chickasaw County, MS → Chicago, IL",
+  "time_period": "1937-2000s",
+  "systems_touched": [
+    "sharecropping system",
+    "Jim Crow",
+    "Chicago public housing",
+    "schools",
+    "factories",
+    "churches"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 5,
+    "3": 7,
+    "4": 4,
+    "5": 8,
+    "6": 8,
+    "7": 5,
+    "8": 9,
+    "9": 6,
+    "10": 7,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "George Gladney (husband)",
+    "Children",
+    "Church community in Chicago"
+  ],
+  "narrative_arc": "Left Mississippi sharecropping after a relative was beaten. Wilkerson follows her entire life — the journey north, settling in Chicago, raising a family, watching the South Side transform. Her story spans 70 years of American racial and economic history.",
+  "why_this_character_matters": "Ida Mae's dome spans the longest timeframe of any documented character — from 1930s sharecropping to 2000s Chicago. It reveals how migration transforms every dome layer simultaneously.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 5,
+      "3": 7,
+      "4": 4,
+      "5": 8,
+      "6": 8,
+      "7": 5,
+      "8": 9,
+      "9": 6,
+      "10": 7,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:immigrant",
+        "explicit:6"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "explicit:7"
+      ],
+      "4": [
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance-layer:poverty",
+        "system:Chicago public housing",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "explicit:8"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "circumstance-layer:displaced",
+        "system:churches",
+        "keyword:family",
+        "explicit:9"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:6"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:sing",
+        "keyword:story",
+        "explicit:5"
+      ],
+      "12": [
+        "keyword:transform",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 77,
+    "average_score": 6.4,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.932Z"
+}

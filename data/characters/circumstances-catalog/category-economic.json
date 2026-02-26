@@ -1,0 +1,360 @@
+{
+  "category": "economic",
+  "types": 7,
+  "total_characters": 133,
+  "entries": [
+    {
+      "type": "poverty",
+      "category": "economic",
+      "layers": [
+        6,
+        3,
+        5
+      ],
+      "description": "Living in poverty",
+      "character_count": 90,
+      "real_count": 60,
+      "fictional_count": 30,
+      "example_characters": [
+        {
+          "name": "Arleen Belle",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Scott Bunker",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Lamar",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jessica",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Coco",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Dasani Coates",
+          "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Chanel Sykes",
+          "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Abdul Husain",
+          "source_work": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Asha Waghekar",
+          "source_work": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Walter McMillian",
+          "source_work": "Just Mercy: A Story of Justice and Redemption",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "deep_poverty",
+      "category": "economic",
+      "layers": [
+        6,
+        3,
+        5
+      ],
+      "description": "Living below 50% of poverty line",
+      "character_count": 14,
+      "real_count": 7,
+      "fictional_count": 7,
+      "example_characters": [
+        {
+          "name": "Crystal Mayberry",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Richard Wright",
+          "source_work": "Black Boy / American Hunger",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jennifer Hernandez",
+          "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Rae McCormick",
+          "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jeannette Walls",
+          "source_work": "The Glass Castle",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Dynamite Garland (Hobo)",
+          "source_work": "Hard Times: An Oral History of the Great Depression",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jean Valjean",
+          "source_work": "Les Misérables",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Raskolnikov",
+          "source_work": "Crime and Punishment",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Oliver Twist",
+          "source_work": "Oliver Twist",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Dark Days Tunnel Dwellers",
+          "source_work": "Dark Days",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "working_poor",
+      "category": "economic",
+      "layers": [
+        6,
+        3,
+        5
+      ],
+      "description": "Working but still in poverty",
+      "character_count": 12,
+      "real_count": 5,
+      "fictional_count": 7,
+      "example_characters": [
+        {
+          "name": "Barbara Ehrenreich (as worker)",
+          "source_work": "Nickel and Dimed: On (Not) Getting By in America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Free File Denied Taxpayers",
+          "source_work": "The TurboTax Trap (ProPublica)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Mike LeFevre (Steelworker)",
+          "source_work": "Working: People Talk About What They Do All Day and How They Feel About What They Do",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Dolores Dante (Waitress)",
+          "source_work": "Working: People Talk About What They Do All Day and How They Feel About What They Do",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Babe Secoli (Supermarket Checker)",
+          "source_work": "Working: People Talk About What They Do All Day and How They Feel About What They Do",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jurgis Rudkus",
+          "source_work": "The Jungle",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Gregor Samsa",
+          "source_work": "The Metamorphosis",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Tess Durbeyfield",
+          "source_work": "Tess of the d'Urbervilles",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Ifemelu",
+          "source_work": "Americanah",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Walter White",
+          "source_work": "Breaking Bad",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "unemployed",
+      "category": "economic",
+      "layers": [
+        6,
+        3,
+        8
+      ],
+      "description": "Without employment",
+      "character_count": 9,
+      "real_count": 4,
+      "fictional_count": 5,
+      "example_characters": [
+        {
+          "name": "The Appalachian Miner",
+          "source_work": "The Other America: Poverty in the United States",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Portsmouth Addicts",
+          "source_work": "Dreamland: The True Tale of America's Opiate Epidemic",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Hale County Disabled",
+          "source_work": "Unfit for Work (NPR Planet Money / This American Life)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Dynamite Garland (Hobo)",
+          "source_work": "Hard Times: An Oral History of the Great Depression",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Bigger Thomas",
+          "source_work": "Native Son",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Tom Joad",
+          "source_work": "The Grapes of Wrath",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Ki-taek Kim (The Kim Family)",
+          "source_work": "Parasite",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Daniel Blake",
+          "source_work": "I, Daniel Blake",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Willy Loman",
+          "source_work": "Death of a Salesman",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "debt",
+      "category": "economic",
+      "layers": [
+        3,
+        6,
+        1
+      ],
+      "description": "Significant debt burden",
+      "character_count": 6,
+      "real_count": 3,
+      "fictional_count": 3,
+      "example_characters": [
+        {
+          "name": "Clyde Ross",
+          "source_work": "The Case for Reparations (The Atlantic) / The 1619 Project",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Free File Denied Taxpayers",
+          "source_work": "The TurboTax Trap (ProPublica)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Death, Sex & Money Interviewees",
+          "source_work": "Death, Sex & Money (Podcast)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Walter White",
+          "source_work": "Breaking Bad",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Willy Loman",
+          "source_work": "Death of a Salesman",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Nora Helmer",
+          "source_work": "A Doll's House",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "wealth",
+      "category": "economic",
+      "layers": [
+        3,
+        6,
+        5
+      ],
+      "description": "Significant wealth — useful for contrast",
+      "character_count": 2,
+      "real_count": 1,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "Sherrena Tarver",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Turtle Alveston",
+          "source_work": "My Year of Rest and Relaxation",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "benefits_cliff",
+      "category": "economic",
+      "layers": [
+        6,
+        3,
+        2
+      ],
+      "description": "Earning just enough to lose benefits",
+      "character_count": 0,
+      "real_count": 0,
+      "fictional_count": 0,
+      "example_characters": [],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    }
+  ]
+}

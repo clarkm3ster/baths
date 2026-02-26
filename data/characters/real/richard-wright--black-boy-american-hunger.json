@@ -1,0 +1,175 @@
+{
+  "id": "richard-wright--black-boy-american-hunger",
+  "name": "Richard Wright",
+  "real_or_fictional": "real",
+  "source_work": "Black Boy / American Hunger",
+  "source_author_creator": "Richard Wright",
+  "source_year": 1945,
+  "circumstances": [
+    "poverty",
+    "deep_poverty",
+    "orphan",
+    "child_labor",
+    "dropout",
+    "immigrant",
+    "food_desert"
+  ],
+  "location": "Natchez, MS; Memphis, TN; Chicago, IL",
+  "time_period": "1908-1937",
+  "systems_touched": [
+    "schools",
+    "Jim Crow legal system",
+    "welfare",
+    "WPA",
+    "factories",
+    "post office"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 5,
+    "3": 7,
+    "4": 6,
+    "5": 7,
+    "6": 8,
+    "7": 8,
+    "8": 8,
+    "9": 5,
+    "10": 9,
+    "11": 10,
+    "12": 8
+  },
+  "key_relationships": [
+    "Ella (mother)",
+    "Grandmother",
+    "Uncle",
+    "Communist Party members"
+  ],
+  "narrative_arc": "From literal starvation in Mississippi to self-education to literary career. Wright documents hunger (real, physical hunger) as a constant. Every system he encounters — schools, jobs, libraries, legal restrictions — is shaped by Jim Crow. His escape is through literacy, which the South tried to deny him.",
+  "why_this_character_matters": "Wright documented the sensory experience of poverty — what hunger feels like, what cold feels like, what fear of white violence feels like. His dome fills layers 10, 11, 12 (Autonomy, Creativity, Flourishing) with extraordinary depth.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 5,
+      "3": 7,
+      "4": 6,
+      "5": 7,
+      "6": 10,
+      "7": 10,
+      "8": 8,
+      "9": 5,
+      "10": 9,
+      "11": 10,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:orphan",
+        "circumstance-layer:immigrant",
+        "keyword:legal",
+        "explicit:7"
+      ],
+      "2": [
+        "system:welfare",
+        "keyword:deny",
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:child_labor",
+        "circumstance-layer:food_desert",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "circumstance-layer:deep_poverty",
+        "circumstance-layer:orphan",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:deep_poverty",
+        "circumstance:child_labor",
+        "circumstance-layer:dropout",
+        "circumstance-layer:immigrant",
+        "circumstance-layer:food_desert",
+        "keyword:job",
+        "keyword:career",
+        "explicit:8"
+      ],
+      "7": [
+        "circumstance:dropout",
+        "circumstance-layer:child_labor",
+        "system:schools",
+        "keyword:school",
+        "keyword:educat",
+        "keyword:liter",
+        "explicit:8"
+      ],
+      "8": [
+        "circumstance:orphan",
+        "circumstance:immigrant",
+        "explicit:8"
+      ],
+      "9": [
+        "circumstance:food_desert",
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:child_labor",
+        "keyword:autonomy",
+        "keyword:escape",
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:creat",
+        "explicit:10"
+      ],
+      "12": [
+        "keyword:flourish",
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 92,
+    "average_score": 7.7,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 10
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.930Z"
+}

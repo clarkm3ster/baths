@@ -1,0 +1,159 @@
+{
+  "id": "ellie-the-last-of-us--the-last-of-us-video-game",
+  "name": "Ellie (The Last of Us)",
+  "real_or_fictional": "fictional",
+  "source_work": "The Last of Us (Video Game)",
+  "source_author_creator": "Neil Druckmann, Naughty Dog",
+  "source_year": 2013,
+  "circumstances": [
+    "orphan",
+    "displaced",
+    "trauma",
+    "refugee",
+    "foster_care"
+  ],
+  "location": "Boston QZ; Pittsburgh; Salt Lake City; Jackson, WY (post-apocalyptic USA)",
+  "time_period": "Near future (post-pandemic)",
+  "systems_touched": [
+    "FEDRA (military quarantine zones)",
+    "Fireflies (resistance)",
+    "smuggling networks",
+    "Jackson commune"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 6,
+    "3": 4,
+    "4": 7,
+    "5": 7,
+    "6": 5,
+    "7": 5,
+    "8": 8,
+    "9": 8,
+    "10": 9,
+    "11": 6,
+    "12": 8
+  },
+  "key_relationships": [
+    "Joel",
+    "Riley",
+    "Tess",
+    "Marlene",
+    "Dina",
+    "Abby"
+  ],
+  "narrative_arc": "Orphan born after the pandemic who is immune to the fungus. Raised in military quarantine zones, she crosses post-collapse America with a smuggler who becomes a father figure. Her immunity makes her valuable — the Fireflies want to kill her to make a vaccine. Joel kills them instead, choosing one girl over humanity.",
+  "why_this_character_matters": "Ellie's dome maps what systems look like after collapse. FEDRA is the military government. The Fireflies are the resistance. Jackson is the commune. Three different dome architectures for the same person. Her dome reveals which systems humans rebuild first when everything is destroyed.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 6,
+      "3": 4,
+      "4": 7,
+      "5": 8,
+      "6": 5,
+      "7": 5,
+      "8": 10,
+      "9": 8,
+      "10": 9,
+      "11": 6,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:orphan",
+        "circumstance-layer:refugee",
+        "circumstance-layer:foster_care",
+        "explicit:7"
+      ],
+      "2": [
+        "circumstance:foster_care",
+        "explicit:6"
+      ],
+      "3": [
+        "keyword:rent",
+        "explicit:4"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance-layer:orphan",
+        "circumstance-layer:refugee",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "6": [
+        "explicit:5"
+      ],
+      "7": [
+        "circumstance:foster_care",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:orphan",
+        "circumstance:refugee",
+        "circumstance:foster_care",
+        "circumstance-layer:displaced",
+        "explicit:8"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:8"
+      ],
+      "10": [
+        "circumstance-layer:trauma",
+        "keyword:resist",
+        "explicit:9"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:sing",
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 8
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.055Z"
+}

@@ -1,0 +1,150 @@
+{
+  "id": "storycorps-9-11-witnesses--storycorps-september-11th-initiative",
+  "name": "StoryCorps 9/11 Witnesses",
+  "real_or_fictional": "real",
+  "source_work": "StoryCorps September 11th Initiative",
+  "source_author_creator": "StoryCorps",
+  "source_year": 2005,
+  "circumstances": [
+    "grief",
+    "bereavement",
+    "trauma"
+  ],
+  "location": "New York City, NY; Pentagon, VA; Shanksville, PA",
+  "time_period": "2001-present",
+  "systems_touched": [
+    "September 11th Victim Compensation Fund",
+    "mental health services",
+    "first responder benefits",
+    "Social Security survivor benefits"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 6,
+    "3": 7,
+    "4": 7,
+    "5": 4,
+    "6": 6,
+    "7": 4,
+    "8": 8,
+    "9": 5,
+    "10": 5,
+    "11": 5,
+    "12": 9
+  },
+  "key_relationships": [
+    "Lost loved ones",
+    "Fellow survivors",
+    "First responders",
+    "Victim advocates"
+  ],
+  "narrative_arc": "First-person accounts of September 11th — not the event but the aftermath. How families navigated the Victim Compensation Fund, how first responders fought for health coverage, how grief reshaped every layer of daily life for decades.",
+  "why_this_character_matters": "These domes map catastrophic loss at national scale. The VCF is a real-world dome attempt — the government trying to wrap systems around victims of a single event. Building individual domes from these testimonies reveals whether the VCF succeeded.",
+  "source_urls": [
+    "https://storycorps.org/discover/september-11th/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 6,
+      "3": 7,
+      "4": 10,
+      "5": 4,
+      "6": 6,
+      "7": 4,
+      "8": 8,
+      "9": 5,
+      "10": 5,
+      "11": 5,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:5"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance-layer:bereavement",
+        "system:first responder benefits",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:grief",
+        "circumstance-layer:bereavement",
+        "system:mental health services",
+        "keyword:health",
+        "explicit:7"
+      ],
+      "5": [
+        "explicit:4"
+      ],
+      "6": [
+        "explicit:6"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance-layer:grief",
+        "circumstance-layer:bereavement",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:trauma",
+        "explicit:5"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:sing",
+        "explicit:5"
+      ],
+      "12": [
+        "circumstance:grief",
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 74,
+    "average_score": 6.2,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.998Z"
+}

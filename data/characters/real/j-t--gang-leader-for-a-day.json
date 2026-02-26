@@ -1,0 +1,154 @@
+{
+  "id": "j-t--gang-leader-for-a-day",
+  "name": "J.T.",
+  "real_or_fictional": "real",
+  "source_work": "Gang Leader for a Day",
+  "source_author_creator": "Sudhir Venkatesh",
+  "source_year": 2008,
+  "circumstances": [
+    "poverty",
+    "housing_insecure"
+  ],
+  "location": "Robert Taylor Homes, Chicago, IL",
+  "time_period": "1989-1996",
+  "systems_touched": [
+    "public housing (CHA)",
+    "drug economy",
+    "police",
+    "gang hierarchy",
+    "community governance"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 5,
+    "3": 9,
+    "4": 4,
+    "5": 8,
+    "6": 9,
+    "7": 5,
+    "8": 10,
+    "9": 7,
+    "10": 7,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Ms. Bailey (building president)",
+    "Gang members",
+    "Sudhir Venkatesh (researcher)",
+    "Tenants"
+  ],
+  "narrative_arc": "College-educated gang leader running a crack franchise in Robert Taylor Homes. Venkatesh embeds with him for years, documenting the economics — who earns what, where the money goes, how the gang provides governance (settling disputes, maintaining infrastructure) when the city won't.",
+  "why_this_character_matters": "J.T.'s dome reveals the shadow government of public housing. Where Layer 2 (Systems) fails, Layer 8 (Community) creates its own institutions. His fiscal data (Layer 3) shows the exact economics of the drug trade at street level.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 5,
+      "3": 9,
+      "4": 4,
+      "5": 10,
+      "6": 9,
+      "7": 5,
+      "8": 10,
+      "9": 7,
+      "10": 7,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "system:police",
+        "explicit:7"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "keyword:money",
+        "explicit:9"
+      ],
+      "4": [
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:public housing (CHA)",
+        "keyword:hous",
+        "keyword:home",
+        "keyword:street",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:9"
+      ],
+      "7": [
+        "keyword:educat",
+        "keyword:college",
+        "explicit:5"
+      ],
+      "8": [
+        "system:gang hierarchy",
+        "keyword:communit",
+        "keyword:gang",
+        "explicit:10"
+      ],
+      "9": [
+        "keyword:lead",
+        "explicit:7"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:creat",
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 81,
+    "average_score": 6.8,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.948Z"
+}

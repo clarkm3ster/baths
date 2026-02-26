@@ -1,0 +1,159 @@
+{
+  "id": "jende-jonga--behold-the-dreamers",
+  "name": "Jende Jonga",
+  "real_or_fictional": "fictional",
+  "source_work": "Behold the Dreamers",
+  "source_author_creator": "Imbolo Mbue",
+  "source_year": 2016,
+  "circumstances": [
+    "immigrant",
+    "asylum_seeker",
+    "poverty",
+    "housing_insecure"
+  ],
+  "location": "Harlem, New York City, NY; Limbe, Cameroon",
+  "time_period": "2007-2009 (financial crisis)",
+  "systems_touched": [
+    "immigration court",
+    "asylum process",
+    "Lehman Brothers (employer's employer)",
+    "taxi/car service economy",
+    "churches",
+    "schools"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 7,
+    "3": 7,
+    "4": 4,
+    "5": 6,
+    "6": 7,
+    "7": 5,
+    "8": 7,
+    "9": 4,
+    "10": 7,
+    "11": 4,
+    "12": 6
+  },
+  "key_relationships": [
+    "Neni (wife)",
+    "Liomi (son)",
+    "Clark Edwards (employer)",
+    "Cindy Edwards",
+    "Immigration lawyer"
+  ],
+  "narrative_arc": "Cameroonian immigrant working as a chauffeur for a Lehman Brothers executive during the 2008 financial crisis. Mbue documents two domes collapsing simultaneously — the immigrant family losing their asylum case while the American family loses their wealth. The intersection reveals that both systems — immigration and finance — are equally precarious.",
+  "why_this_character_matters": "Jende's dome maps the immigration-employment nexus during economic crisis. Layer 1 (Legal — asylum) and Layer 6 (Economic — the crash) collapse simultaneously, revealing how immigrant domes are doubly exposed to systemic shocks.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 7,
+      "3": 7,
+      "4": 4,
+      "5": 7,
+      "6": 7,
+      "7": 5,
+      "8": 7,
+      "9": 4,
+      "10": 7,
+      "11": 4,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:asylum_seeker",
+        "circumstance-layer:immigrant",
+        "system:immigration court",
+        "keyword:legal",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "system:taxi/car service economy",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:asylum_seeker",
+        "explicit:4"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:asylum_seeker",
+        "circumstance-layer:poverty",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "keyword:work",
+        "keyword:employ",
+        "explicit:7"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "system:churches",
+        "keyword:family",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 74,
+    "average_score": 6.2,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.030Z"
+}

@@ -1,0 +1,161 @@
+{
+  "id": "keire-johnson--minding-the-gap",
+  "name": "Keire Johnson",
+  "real_or_fictional": "real",
+  "source_work": "Minding the Gap",
+  "source_author_creator": "Bing Liu",
+  "source_year": 2018,
+  "circumstances": [
+    "domestic_violence",
+    "poverty",
+    "trauma",
+    "bereavement"
+  ],
+  "location": "Rockford, IL",
+  "time_period": "2012-2017",
+  "systems_touched": [
+    "schools",
+    "skateparks (informal community)",
+    "restaurants (employment)",
+    "domestic violence services"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 3,
+    "3": 5,
+    "4": 6,
+    "5": 5,
+    "6": 6,
+    "7": 5,
+    "8": 8,
+    "9": 6,
+    "10": 7,
+    "11": 8,
+    "12": 7
+  },
+  "key_relationships": [
+    "Bing Liu",
+    "Zack",
+    "Father (abuser, deceased)",
+    "Skateboarding community"
+  ],
+  "narrative_arc": "Young Black man in Rockford processing his father's abuse after his father's death. Liu documents how skateboarding culture becomes a substitute family, how the physical act of skating is a form of therapy, and how domestic violence echoes through working-class communities across racial lines.",
+  "why_this_character_matters": "Keire's dome fills Layer 11 (Creativity) with skateboarding — physical expression as meaning-making. His dome reveals how informal community (a skatepark) can fill functions that formal systems (therapy, family) fail to provide.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 3,
+      "3": 5,
+      "4": 7,
+      "5": 5,
+      "6": 6,
+      "7": 5,
+      "8": 8,
+      "9": 6,
+      "10": 7,
+      "11": 8,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:domestic_violence",
+        "explicit:4"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:bereavement",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:bereavement",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:5"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "keyword:work",
+        "explicit:6"
+      ],
+      "7": [
+        "system:schools",
+        "keyword:class",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:bereavement",
+        "keyword:communit",
+        "keyword:family",
+        "explicit:8"
+      ],
+      "9": [
+        "system:skateparks (informal community)",
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:trauma",
+        "explicit:7"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:creat",
+        "keyword:express",
+        "keyword:sing",
+        "keyword:cultur",
+        "explicit:8"
+      ],
+      "12": [
+        "keyword:meaning",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 71,
+    "average_score": 5.9,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 8
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 7
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.038Z"
+}

@@ -1,0 +1,167 @@
+{
+  "id": "the-frequent-flyer-emergency-medicine-literature--super-utilizers-in-emergency-medicine-annals-of-emergency-medicine",
+  "name": "The Frequent Flyer (Emergency Medicine Literature)",
+  "real_or_fictional": "real",
+  "source_work": "Super-Utilizers in Emergency Medicine (Annals of Emergency Medicine)",
+  "source_author_creator": "Various medical researchers",
+  "source_year": 2017,
+  "circumstances": [
+    "homeless",
+    "addiction",
+    "mental_illness",
+    "chronic_illness",
+    "uninsured"
+  ],
+  "location": "Urban emergency departments nationwide",
+  "time_period": "2017",
+  "systems_touched": [
+    "emergency rooms",
+    "ambulances",
+    "police",
+    "shelters",
+    "psychiatric holds",
+    "Medicaid",
+    "detox programs",
+    "sobering centers"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 8,
+    "3": 10,
+    "4": 10,
+    "5": 8,
+    "6": 4,
+    "7": 3,
+    "8": 5,
+    "9": 5,
+    "10": 5,
+    "11": 2,
+    "12": 3
+  },
+  "key_relationships": [
+    "ER nurses",
+    "Paramedics",
+    "Shelter staff"
+  ],
+  "narrative_arc": "Medical literature documents \"super-utilizers\" — patients who visit the ER 50-100+ times per year. Each visit costs $2,000-$5,000. The same person costs the healthcare system $150,000-$500,000/year through fragmented emergency care. A coordinated dome (permanent housing + primary care + mental health) costs a fraction.",
+  "why_this_character_matters": "The super-utilizer dome has the largest fragmented-vs-coordinated cost delta in the entire BATHS system. Their dome proves the financial thesis: wrapping systems around one person saves more money than treating crises as they come.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 8,
+      "3": 10,
+      "4": 10,
+      "5": 8,
+      "6": 4,
+      "7": 3,
+      "8": 6,
+      "9": 5,
+      "10": 5,
+      "11": 2,
+      "12": 3
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "system:police",
+        "explicit:5"
+      ],
+      "2": [
+        "circumstance-layer:uninsured",
+        "system:Medicaid",
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance-layer:homeless",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:uninsured",
+        "keyword:money",
+        "keyword:cost",
+        "explicit:10"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance:mental_illness",
+        "circumstance:chronic_illness",
+        "circumstance:uninsured",
+        "system:emergency rooms",
+        "system:Medicaid",
+        "keyword:health",
+        "keyword:mental",
+        "explicit:10"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "system:shelters",
+        "keyword:hous",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance-layer:chronic_illness",
+        "explicit:4"
+      ],
+      "7": [
+        "keyword:liter",
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance-layer:homeless",
+        "circumstance-layer:addiction",
+        "circumstance-layer:mental_illness",
+        "explicit:5"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:mental_illness",
+        "explicit:5"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:2"
+      ],
+      "12": [
+        "explicit:3"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 69,
+    "average_score": 5.8,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.984Z"
+}

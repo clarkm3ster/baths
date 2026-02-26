@@ -1,0 +1,156 @@
+{
+  "id": "walter-mcmillian--just-mercy-a-story-of-justice-and-redemption",
+  "name": "Walter McMillian",
+  "real_or_fictional": "real",
+  "source_work": "Just Mercy: A Story of Justice and Redemption",
+  "source_author_creator": "Bryan Stevenson",
+  "source_year": 2014,
+  "circumstances": [
+    "wrongly_convicted",
+    "incarcerated",
+    "poverty"
+  ],
+  "location": "Monroeville, AL",
+  "time_period": "1986-1993",
+  "systems_touched": [
+    "criminal justice",
+    "death row",
+    "courts",
+    "police",
+    "prison",
+    "public defender",
+    "Supreme Court"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 5,
+    "3": 6,
+    "4": 6,
+    "5": 7,
+    "6": 7,
+    "7": 3,
+    "8": 8,
+    "9": 4,
+    "10": 9,
+    "11": 3,
+    "12": 7
+  },
+  "key_relationships": [
+    "Bryan Stevenson (attorney)",
+    "Minnie McMillian (wife)",
+    "Ralph Myers (coerced witness)",
+    "Community supporters"
+  ],
+  "narrative_arc": "Black man wrongly convicted of murder and sentenced to death in Alabama. Stevenson documents every stage of the legal system's failure — coerced witnesses, prosecutorial misconduct, racial bias, and the 6-year fight for exoneration.",
+  "why_this_character_matters": "Walter's dome is a map of criminal justice failure. Every layer of the legal system that should have protected him instead convicted him. Building his dome reveals the cost — financial, human, communal — of wrongful conviction.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 5,
+      "3": 6,
+      "4": 6,
+      "5": 7,
+      "6": 7,
+      "7": 3,
+      "8": 8,
+      "9": 4,
+      "10": 9,
+      "11": 3,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:wrongly_convicted",
+        "circumstance:incarcerated",
+        "system:criminal justice",
+        "system:courts",
+        "system:police",
+        "system:prison",
+        "system:public defender",
+        "keyword:sentenc",
+        "keyword:legal",
+        "keyword:conviction",
+        "explicit:10"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "keyword:cost",
+        "explicit:6"
+      ],
+      "4": [
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance-layer:incarcerated",
+        "circumstance-layer:poverty",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:7"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:wrongly_convicted",
+        "explicit:9"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "circumstance:wrongly_convicted",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 75,
+    "average_score": 6.3,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.925Z"
+}

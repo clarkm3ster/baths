@@ -1,0 +1,152 @@
+{
+  "id": "the-va-wait-list-veterans--va-wait-time-scandal-va-ig-report-multiple-outlets",
+  "name": "The VA Wait List Veterans",
+  "real_or_fictional": "real",
+  "source_work": "VA Wait Time Scandal (VA IG Report / Multiple outlets)",
+  "source_author_creator": "VA Inspector General / CNN",
+  "source_year": 2014,
+  "circumstances": [
+    "veteran",
+    "chronic_illness",
+    "mental_illness",
+    "bereavement"
+  ],
+  "location": "Phoenix, AZ (initially); nationwide",
+  "time_period": "2014",
+  "systems_touched": [
+    "VA hospitals",
+    "VA scheduling system",
+    "private healthcare (delayed referral)",
+    "disability benefits",
+    "congressional complaints"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 10,
+    "3": 6,
+    "4": 10,
+    "5": 5,
+    "6": 5,
+    "7": 4,
+    "8": 6,
+    "9": 4,
+    "10": 7,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "VA staff",
+    "Fellow veterans",
+    "Families",
+    "Congressional representatives"
+  ],
+  "narrative_arc": "Veterans who died waiting for VA appointments that were hidden on secret wait lists. The Phoenix VA created a fake scheduling system showing short wait times while the actual wait times stretched to months. At least 40 veterans died waiting. The IG documented the systematic deception.",
+  "why_this_character_matters": "These domes map Layer 2 (Systems) as a deliberate lie. The system didn't fail — it was designed to appear functional while letting people die. Building domes with actual wait times vs. reported wait times reveals the cost of bureaucratic fraud.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 10,
+      "3": 6,
+      "4": 10,
+      "5": 5,
+      "6": 5,
+      "7": 4,
+      "8": 6,
+      "9": 4,
+      "10": 7,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:veteran",
+        "explicit:6"
+      ],
+      "2": [
+        "explicit:10"
+      ],
+      "3": [
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:bereavement",
+        "keyword:cost",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:chronic_illness",
+        "circumstance:mental_illness",
+        "circumstance-layer:veteran",
+        "circumstance-layer:bereavement",
+        "system:VA hospitals",
+        "explicit:10"
+      ],
+      "5": [
+        "explicit:5"
+      ],
+      "6": [
+        "circumstance-layer:veteran",
+        "circumstance-layer:chronic_illness",
+        "explicit:5"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:bereavement",
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "circumstance-layer:mental_illness",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:creat",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 71,
+    "average_score": 5.9,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 6
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.990Z"
+}

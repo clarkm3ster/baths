@@ -1,0 +1,177 @@
+{
+  "id": "david-wojnarowicz--in-the-shadow-of-the-american-dream-the-diaries-of-david-wojnarowicz",
+  "name": "David Wojnarowicz",
+  "real_or_fictional": "real",
+  "source_work": "In the Shadow of the American Dream: The Diaries of David Wojnarowicz",
+  "source_author_creator": "David Wojnarowicz",
+  "source_year": 1999,
+  "circumstances": [
+    "homeless",
+    "terminal_illness",
+    "poverty",
+    "child_labor",
+    "domestic_violence",
+    "trauma",
+    "addiction"
+  ],
+  "location": "New York City, NY",
+  "time_period": "1970s-1992",
+  "systems_touched": [
+    "shelters",
+    "hospitals",
+    "hustling economy",
+    "art world",
+    "ACT UP",
+    "Medicaid"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 4,
+    "3": 6,
+    "4": 9,
+    "5": 8,
+    "6": 6,
+    "7": 4,
+    "8": 7,
+    "9": 6,
+    "10": 9,
+    "11": 10,
+    "12": 9
+  },
+  "key_relationships": [
+    "Peter Hujar (mentor/partner)",
+    "ACT UP community",
+    "East Village art community"
+  ],
+  "narrative_arc": "From child abuse and teenage hustling on the piers to becoming one of the most important artists of the AIDS crisis. His diaries document every form of precarity — homelessness, sex work, addiction, and then AIDS, while making art that became the visual language of an epidemic.",
+  "why_this_character_matters": "David fills Layers 10-12 (Autonomy, Creativity, Flourishing) with intensity that most documented lives lack. His dome reveals how crisis produces art, and how the systems that failed him (Layer 2) were replaced by the community he built (Layer 8).",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 4,
+      "3": 7,
+      "4": 10,
+      "5": 9,
+      "6": 7,
+      "7": 4,
+      "8": 8,
+      "9": 6,
+      "10": 9,
+      "11": 10,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:addiction",
+        "explicit:6"
+      ],
+      "2": [
+        "system:Medicaid",
+        "keyword:form",
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:terminal_illness",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:terminal_illness",
+        "circumstance:trauma",
+        "circumstance:addiction",
+        "circumstance-layer:child_labor",
+        "circumstance-layer:domestic_violence",
+        "system:hospitals",
+        "system:Medicaid",
+        "keyword:addict",
+        "explicit:9"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance-layer:poverty",
+        "system:shelters",
+        "keyword:home",
+        "keyword:homeless",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:child_labor",
+        "keyword:work",
+        "explicit:6"
+      ],
+      "7": [
+        "circumstance-layer:child_labor",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:homeless",
+        "circumstance-layer:addiction",
+        "keyword:communit",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:child_labor",
+        "circumstance-layer:trauma",
+        "keyword:autonomy",
+        "explicit:9"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:art",
+        "keyword:creat",
+        "explicit:10"
+      ],
+      "12": [
+        "circumstance:terminal_illness",
+        "keyword:flourish",
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 89,
+    "average_score": 7.4,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.956Z"
+}

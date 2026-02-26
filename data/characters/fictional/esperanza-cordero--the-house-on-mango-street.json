@@ -1,0 +1,156 @@
+{
+  "id": "esperanza-cordero--the-house-on-mango-street",
+  "name": "Esperanza Cordero",
+  "real_or_fictional": "fictional",
+  "source_work": "The House on Mango Street",
+  "source_author_creator": "Sandra Cisneros",
+  "source_year": 1984,
+  "circumstances": [
+    "poverty",
+    "housing_insecure",
+    "immigrant"
+  ],
+  "location": "Mango Street, Chicago, IL (Humboldt Park/Pilsen)",
+  "time_period": "1960s-1970s",
+  "systems_touched": [
+    "public schools",
+    "public housing",
+    "churches",
+    "neighborhood"
+  ],
+  "dome_layer_richness": {
+    "1": 3,
+    "2": 3,
+    "3": 5,
+    "4": 3,
+    "5": 9,
+    "6": 5,
+    "7": 6,
+    "8": 9,
+    "9": 7,
+    "10": 7,
+    "11": 9,
+    "12": 8
+  },
+  "key_relationships": [
+    "Rachel and Lucy (friends)",
+    "Sally",
+    "Parents",
+    "Mango Street neighbors"
+  ],
+  "narrative_arc": "Young Latina girl who wants a house of her own — not the crumbling house on Mango Street. Cisneros renders the neighborhood with poetic precision: every house, every family, every yard. Esperanza maps her world through architecture — houses as destiny, houses as identity, houses as escape.",
+  "why_this_character_matters": "Esperanza fills Layer 5 (Housing) with the experiential dimension no data can capture — what it feels like to be ashamed of where you live. Her dome links housing shame to identity formation to creative ambition.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 3,
+      "2": 3,
+      "3": 5,
+      "4": 3,
+      "5": 9,
+      "6": 5,
+      "7": 6,
+      "8": 9,
+      "9": 7,
+      "10": 7,
+      "11": 9,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:immigrant",
+        "explicit:3"
+      ],
+      "2": [
+        "keyword:form",
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:5"
+      ],
+      "4": [
+        "explicit:3"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:public housing",
+        "keyword:hous",
+        "keyword:street",
+        "explicit:9"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "explicit:5"
+      ],
+      "7": [
+        "system:public schools",
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "system:churches",
+        "system:neighborhood",
+        "keyword:neighbor",
+        "keyword:family",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:7"
+      ],
+      "10": [
+        "keyword:escape",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:creat",
+        "keyword:sing",
+        "keyword:identit",
+        "explicit:9"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 74,
+    "average_score": 6.2,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 9
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.014Z"
+}

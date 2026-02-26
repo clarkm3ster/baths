@@ -1,0 +1,156 @@
+{
+  "id": "the-free-file-denied-taxpayers--the-turbotax-trap-propublica",
+  "name": "The Free File Denied Taxpayers",
+  "real_or_fictional": "real",
+  "source_work": "The TurboTax Trap (ProPublica)",
+  "source_author_creator": "Justin Elliott, Lucas Waldron",
+  "source_year": 2019,
+  "circumstances": [
+    "poverty",
+    "working_poor",
+    "debt"
+  ],
+  "location": "Nationwide",
+  "time_period": "2019",
+  "systems_touched": [
+    "IRS",
+    "TurboTax",
+    "H&R Block",
+    "EITC",
+    "tax preparation industry"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 9,
+    "3": 10,
+    "4": 2,
+    "5": 3,
+    "6": 6,
+    "7": 3,
+    "8": 4,
+    "9": 2,
+    "10": 5,
+    "11": 2,
+    "12": 3
+  },
+  "key_relationships": [
+    "IRS",
+    "Tax preparation companies"
+  ],
+  "narrative_arc": "ProPublica documented how Intuit (TurboTax) deliberately hid the free version of its tax software that it was legally required to offer low-income taxpayers. Millions of people who qualified for free filing were steered to paid products, losing hundreds of dollars from their EITC refunds — the very money designed to lift them out of poverty.",
+  "why_this_character_matters": "This dome reveals Layer 2 (Systems) and Layer 3 (Fiscal) in collision. The system designed to return money to the poor (EITC) is intercepted by the system designed to process it (TurboTax). The fragmentation tax is literal.",
+  "source_urls": [
+    "https://www.propublica.org/article/inside-turbotax-20-year-fight-to-stop-americans-from-filing-their-taxes-for-free"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 9,
+      "3": 10,
+      "4": 2,
+      "5": 4,
+      "6": 9,
+      "7": 3,
+      "8": 4,
+      "9": 2,
+      "10": 5,
+      "11": 2,
+      "12": 3
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:debt",
+        "keyword:legal",
+        "explicit:5"
+      ],
+      "2": [
+        "explicit:9"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance:debt",
+        "system:IRS",
+        "system:TurboTax",
+        "system:EITC",
+        "system:tax preparation industry",
+        "keyword:income",
+        "keyword:money",
+        "keyword:pay",
+        "explicit:10"
+      ],
+      "4": [
+        "explicit:2"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "circumstance-layer:working_poor",
+        "explicit:3"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:working_poor",
+        "circumstance:debt",
+        "explicit:6"
+      ],
+      "7": [
+        "keyword:liter",
+        "explicit:3"
+      ],
+      "8": [
+        "explicit:4"
+      ],
+      "9": [
+        "system:tax preparation industry",
+        "explicit:2"
+      ],
+      "10": [
+        "explicit:5"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:2"
+      ],
+      "12": [
+        "explicit:3"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 58,
+    "average_score": 4.8,
+    "dome_minimum": 2,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 5
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 5
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.972Z"
+}

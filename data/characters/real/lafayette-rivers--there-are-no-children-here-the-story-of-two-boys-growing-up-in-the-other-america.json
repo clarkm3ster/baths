@@ -1,0 +1,160 @@
+{
+  "id": "lafayette-rivers--there-are-no-children-here-the-story-of-two-boys-growing-up-in-the-other-america",
+  "name": "Lafayette Rivers",
+  "real_or_fictional": "real",
+  "source_work": "There Are No Children Here: The Story of Two Boys Growing Up in the Other America",
+  "source_author_creator": "Alex Kotlowitz",
+  "source_year": 1991,
+  "circumstances": [
+    "poverty",
+    "housing_insecure",
+    "trauma",
+    "environmental_exposure"
+  ],
+  "location": "Henry Horner Homes, Chicago, IL",
+  "time_period": "1987-1990",
+  "systems_touched": [
+    "public housing (CHA)",
+    "schools",
+    "police",
+    "juvenile justice",
+    "community organizations"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 6,
+    "3": 6,
+    "4": 5,
+    "5": 9,
+    "6": 4,
+    "7": 6,
+    "8": 9,
+    "9": 8,
+    "10": 6,
+    "11": 4,
+    "12": 5
+  },
+  "key_relationships": [
+    "Pharoah (brother)",
+    "LaJoe (mother)",
+    "Gang-involved friends"
+  ],
+  "narrative_arc": "Pharoah's older brother, pulled toward the street economy that Pharoah tries to avoid. Kotlowitz documents the impossible choice facing boys in public housing — stay inside and be safe but trapped, or go outside and face violence that also offers belonging and income.",
+  "why_this_character_matters": "Lafayette and Pharoah are the same dome in two versions — same address, same systems, different trajectories. Comparing their domes reveals which layer differences cause divergent outcomes from identical starting conditions.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 6,
+      "3": 7,
+      "4": 6,
+      "5": 10,
+      "6": 4,
+      "7": 6,
+      "8": 9,
+      "9": 8,
+      "10": 6,
+      "11": 4,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:environmental_exposure",
+        "system:police",
+        "system:juvenile justice",
+        "explicit:6"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "keyword:income",
+        "keyword:rent",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance:environmental_exposure",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:public housing (CHA)",
+        "keyword:hous",
+        "keyword:rent",
+        "keyword:street",
+        "explicit:9"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:4"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:6"
+      ],
+      "8": [
+        "keyword:belong",
+        "explicit:9"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "explicit:8"
+      ],
+      "10": [
+        "circumstance-layer:trauma",
+        "keyword:choice",
+        "explicit:6"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:art",
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 77,
+    "average_score": 6.4,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.946Z"
+}

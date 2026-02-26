@@ -1,0 +1,158 @@
+{
+  "id": "theresa-flores--senate-judiciary-committee-testimony-on-human-trafficking",
+  "name": "Theresa Flores",
+  "real_or_fictional": "real",
+  "source_work": "Senate Judiciary Committee Testimony on Human Trafficking",
+  "source_author_creator": "Senate Judiciary Committee",
+  "source_year": 2010,
+  "circumstances": [
+    "trafficking",
+    "domestic_violence",
+    "trauma",
+    "child_marriage"
+  ],
+  "location": "Detroit, MI; Ohio",
+  "time_period": "1980s-2010s",
+  "systems_touched": [
+    "schools (while being trafficked)",
+    "churches",
+    "law enforcement",
+    "victim services",
+    "congressional testimony"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 5,
+    "3": 4,
+    "4": 7,
+    "5": 5,
+    "6": 4,
+    "7": 5,
+    "8": 6,
+    "9": 4,
+    "10": 10,
+    "11": 3,
+    "12": 6
+  },
+  "key_relationships": [
+    "Traffickers",
+    "Family (unaware)",
+    "Advocacy organizations"
+  ],
+  "narrative_arc": "Trafficked as a teenager while attending a suburban high school — her family never knew. She testified before Congress about how trafficking happens in plain sight, inside middle-class communities, and how the systems that should detect it (schools, healthcare, police) consistently fail to.",
+  "why_this_character_matters": "Theresa's dome reveals trafficking as invisible. Layer 10 (Autonomy) is at zero while every other layer appears normal to outside systems. Her dome tests whether a well-built dome would have detected her situation.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 5,
+      "3": 4,
+      "4": 8,
+      "5": 5,
+      "6": 4,
+      "7": 6,
+      "8": 7,
+      "9": 4,
+      "10": 10,
+      "11": 3,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:trafficking",
+        "circumstance:child_marriage",
+        "circumstance-layer:domestic_violence",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "explicit:4"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:trafficking",
+        "circumstance-layer:domestic_violence",
+        "keyword:health",
+        "explicit:7"
+      ],
+      "5": [
+        "keyword:tent",
+        "explicit:5"
+      ],
+      "6": [
+        "explicit:4"
+      ],
+      "7": [
+        "circumstance-layer:child_marriage",
+        "system:schools (while being trafficked)",
+        "keyword:school",
+        "keyword:class",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "system:churches",
+        "keyword:communit",
+        "keyword:family",
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:4"
+      ],
+      "10": [
+        "circumstance:trafficking",
+        "circumstance:domestic_violence",
+        "circumstance:child_marriage",
+        "circumstance-layer:trauma",
+        "keyword:autonomy",
+        "explicit:10"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 70,
+    "average_score": 5.8,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.977Z"
+}

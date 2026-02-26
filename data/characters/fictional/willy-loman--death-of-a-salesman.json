@@ -1,0 +1,162 @@
+{
+  "id": "willy-loman--death-of-a-salesman",
+  "name": "Willy Loman",
+  "real_or_fictional": "fictional",
+  "source_work": "Death of a Salesman",
+  "source_author_creator": "Arthur Miller",
+  "source_year": 1949,
+  "circumstances": [
+    "debt",
+    "mental_illness",
+    "elderly",
+    "unemployed",
+    "housing_insecure"
+  ],
+  "location": "Brooklyn, NY",
+  "time_period": "1949",
+  "systems_touched": [
+    "sales industry",
+    "mortgage system",
+    "insurance",
+    "automobile industry",
+    "schools"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 4,
+    "3": 9,
+    "4": 8,
+    "5": 8,
+    "6": 10,
+    "7": 5,
+    "8": 7,
+    "9": 6,
+    "10": 7,
+    "11": 4,
+    "12": 8
+  },
+  "key_relationships": [
+    "Linda (wife)",
+    "Biff (son)",
+    "Happy (son)",
+    "Charley (neighbor)",
+    "Howard (boss)"
+  ],
+  "narrative_arc": "Aging salesman whose company fires him after 34 years. Miller documents the American Dream as a fiscal instrument — the mortgage nearly paid off, the refrigerator still making payments, the car falling apart, the insurance policy worth more than the man. Willy's suicide is a financial calculation: his death is worth $20,000 to his family, his life is worth nothing to the market.",
+  "why_this_character_matters": "Willy Loman is the foundational dome of American economic precarity. Layer 3 (Fiscal) and Layer 6 (Economic) tell the story — a life of labor that accumulates nothing. His dome proves that employment without security is a slow-motion crisis.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 4,
+      "3": 10,
+      "4": 8,
+      "5": 8,
+      "6": 10,
+      "7": 5,
+      "8": 8,
+      "9": 6,
+      "10": 7,
+      "11": 4,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:debt",
+        "explicit:4"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:debt",
+        "circumstance-layer:elderly",
+        "circumstance-layer:unemployed",
+        "circumstance-layer:housing_insecure",
+        "keyword:pay",
+        "explicit:9"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "circumstance-layer:elderly",
+        "system:insurance",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:debt",
+        "circumstance:unemployed",
+        "keyword:employ",
+        "keyword:labor",
+        "explicit:10"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:elderly",
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:unemployed",
+        "keyword:family",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance-layer:mental_illness",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:story",
+        "explicit:4"
+      ],
+      "12": [
+        "keyword:dream",
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 82,
+    "average_score": 6.8,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.049Z"
+}

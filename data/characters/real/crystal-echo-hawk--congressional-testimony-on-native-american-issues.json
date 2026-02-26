@@ -1,0 +1,153 @@
+{
+  "id": "crystal-echo-hawk--congressional-testimony-on-native-american-issues",
+  "name": "Crystal Echo Hawk",
+  "real_or_fictional": "real",
+  "source_work": "Congressional Testimony on Native American Issues",
+  "source_author_creator": "Multiple congressional committees",
+  "source_year": 2019,
+  "circumstances": [
+    "indigenous",
+    "poverty",
+    "housing_insecure",
+    "environmental_exposure"
+  ],
+  "location": "Pawnee Nation, OK",
+  "time_period": "2010s",
+  "systems_touched": [
+    "BIA",
+    "IHS",
+    "tribal courts",
+    "federal trust responsibility",
+    "housing (HUD NAHASDA)",
+    "education"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 8,
+    "3": 6,
+    "4": 7,
+    "5": 7,
+    "6": 5,
+    "7": 6,
+    "8": 9,
+    "9": 7,
+    "10": 7,
+    "11": 7,
+    "12": 7
+  },
+  "key_relationships": [
+    "Pawnee community",
+    "Tribal leaders",
+    "Congressional allies"
+  ],
+  "narrative_arc": "Testified about the invisibility of Native Americans in national data systems — how federal agencies literally don't count indigenous people in their surveys, creating a statistical genocide that makes it impossible to document need and therefore impossible to fund solutions.",
+  "why_this_character_matters": "Crystal's dome reveals the meta-problem: you can't build domes for people the data systems don't count. Her Layer 2 (Systems) maps the absence of systems — the federal trust responsibility that exists on paper but not in databases.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 8,
+      "3": 6,
+      "4": 7,
+      "5": 7,
+      "6": 5,
+      "7": 6,
+      "8": 9,
+      "9": 7,
+      "10": 7,
+      "11": 7,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:indigenous",
+        "circumstance-layer:environmental_exposure",
+        "system:tribal courts",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:environmental_exposure",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:housing (HUD NAHASDA)",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:5"
+      ],
+      "7": [
+        "keyword:liter",
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance:indigenous",
+        "keyword:trust",
+        "explicit:9"
+      ],
+      "9": [
+        "circumstance:environmental_exposure",
+        "circumstance-layer:indigenous",
+        "explicit:7"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:creat",
+        "explicit:7"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 84,
+    "average_score": 7,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.979Z"
+}

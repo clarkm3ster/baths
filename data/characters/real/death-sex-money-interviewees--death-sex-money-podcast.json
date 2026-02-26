@@ -1,0 +1,167 @@
+{
+  "id": "death-sex-money-interviewees--death-sex-money-podcast",
+  "name": "Death, Sex & Money Interviewees",
+  "real_or_fictional": "real",
+  "source_work": "Death, Sex & Money (Podcast)",
+  "source_author_creator": "Anna Sale (WNYC)",
+  "source_year": 2014,
+  "circumstances": [
+    "debt",
+    "grief",
+    "chronic_illness",
+    "poverty",
+    "addiction",
+    "housing_insecure"
+  ],
+  "location": "Nationwide",
+  "time_period": "2014-present",
+  "systems_touched": [
+    "hospitals",
+    "bankruptcy",
+    "student loans",
+    "hospice",
+    "welfare",
+    "rehab"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 5,
+    "3": 8,
+    "4": 7,
+    "5": 5,
+    "6": 6,
+    "7": 5,
+    "8": 7,
+    "9": 3,
+    "10": 6,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "Various — each episode features different person"
+  ],
+  "narrative_arc": "Hundreds of episodes where ordinary people describe the financial, medical, and emotional circumstances that formal systems don't ask about. The \"Student Loan Confessions\" series alone documented hundreds of people describing how debt shapes every life decision.",
+  "why_this_character_matters": "Death, Sex & Money fills Layer 3 (Fiscal) and Layer 12 (Flourishing) with first-person testimony about how money, health, and death actually feel. These are the layers that government data can't fill.",
+  "source_urls": [
+    "https://www.wnycstudios.org/podcasts/deathsexmoney"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 5,
+      "3": 10,
+      "4": 10,
+      "5": 5,
+      "6": 8,
+      "7": 5,
+      "8": 7,
+      "9": 3,
+      "10": 6,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:debt",
+        "circumstance-layer:addiction",
+        "explicit:4"
+      ],
+      "2": [
+        "system:welfare",
+        "keyword:form",
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:debt",
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:housing_insecure",
+        "system:bankruptcy",
+        "keyword:money",
+        "keyword:debt",
+        "keyword:loan",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:chronic_illness",
+        "circumstance:addiction",
+        "circumstance-layer:grief",
+        "system:hospitals",
+        "system:rehab",
+        "keyword:health",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "explicit:5"
+      ],
+      "6": [
+        "circumstance:debt",
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "explicit:6"
+      ],
+      "7": [
+        "keyword:student",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance-layer:grief",
+        "circumstance-layer:addiction",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "explicit:6"
+      ],
+      "11": [
+        "explicit:5"
+      ],
+      "12": [
+        "circumstance:grief",
+        "keyword:flourish",
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 75,
+    "average_score": 6.3,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.988Z"
+}

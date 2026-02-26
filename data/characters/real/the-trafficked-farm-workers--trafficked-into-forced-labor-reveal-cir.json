@@ -1,0 +1,174 @@
+{
+  "id": "the-trafficked-farm-workers--trafficked-into-forced-labor-reveal-cir",
+  "name": "The Trafficked Farm Workers",
+  "real_or_fictional": "real",
+  "source_work": "Trafficked into Forced Labor (Reveal / CIR)",
+  "source_author_creator": "Bernice Yeung, Grace Rubenstein",
+  "source_year": 2016,
+  "circumstances": [
+    "trafficking",
+    "forced_labor",
+    "immigrant",
+    "undocumented",
+    "housing_insecure",
+    "poverty"
+  ],
+  "location": "California Central Valley; Georgia; multiple states",
+  "time_period": "2010s",
+  "systems_touched": [
+    "H-2A visa program",
+    "Department of Labor",
+    "immigration enforcement",
+    "farm labor contractors",
+    "courts"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 6,
+    "3": 7,
+    "4": 5,
+    "5": 7,
+    "6": 9,
+    "7": 3,
+    "8": 6,
+    "9": 7,
+    "10": 10,
+    "11": 2,
+    "12": 4
+  },
+  "key_relationships": [
+    "Labor contractors",
+    "Other workers",
+    "Legal aid attorneys"
+  ],
+  "narrative_arc": "Workers brought to the US on temporary agricultural visas and then trapped — passports confiscated, housed in labor camps, paid below minimum wage, threatened with deportation if they complained. Reveal documented the supply chain from recruitment in home countries to exploitation in American fields.",
+  "why_this_character_matters": "This dome maps modern slavery in America. Layer 10 (Autonomy) is at zero — these workers had no freedom of movement, no ability to leave. Layer 1 (Legal) shows how immigration law creates the conditions for trafficking by tying visas to specific employers.",
+  "source_urls": [
+    "https://revealnews.org/topic/forced-labor/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 6,
+      "3": 7,
+      "4": 5,
+      "5": 7,
+      "6": 10,
+      "7": 3,
+      "8": 6,
+      "9": 7,
+      "10": 10,
+      "11": 2,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:trafficking",
+        "circumstance:undocumented",
+        "circumstance-layer:forced_labor",
+        "circumstance-layer:immigrant",
+        "system:immigration enforcement",
+        "system:courts",
+        "keyword:law",
+        "keyword:legal",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "keyword:wage",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:trafficking",
+        "circumstance-layer:undocumented",
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "keyword:home",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:forced_labor",
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "circumstance-layer:undocumented",
+        "keyword:work",
+        "keyword:employ",
+        "keyword:labor",
+        "keyword:wage",
+        "explicit:9"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "explicit:6"
+      ],
+      "9": [
+        "system:Department of Labor",
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:trafficking",
+        "circumstance:forced_labor",
+        "keyword:freedom",
+        "keyword:autonomy",
+        "keyword:movement",
+        "explicit:10"
+      ],
+      "11": [
+        "keyword:creat",
+        "keyword:cultur",
+        "explicit:2"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 77,
+    "average_score": 6.4,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.974Z"
+}

@@ -1,0 +1,177 @@
+{
+  "id": "tom-joad--the-grapes-of-wrath",
+  "name": "Tom Joad",
+  "real_or_fictional": "fictional",
+  "source_work": "The Grapes of Wrath",
+  "source_author_creator": "John Steinbeck",
+  "source_year": 1939,
+  "circumstances": [
+    "formerly_incarcerated",
+    "displaced",
+    "poverty",
+    "homeless",
+    "unemployed",
+    "climate_displaced"
+  ],
+  "location": "Oklahoma → California (Route 66)",
+  "time_period": "1930s (Dust Bowl)",
+  "systems_touched": [
+    "criminal justice",
+    "parole",
+    "farm labor",
+    "Hoovervilles",
+    "migrant camps (government)",
+    "police",
+    "growers associations"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 5,
+    "3": 7,
+    "4": 5,
+    "5": 8,
+    "6": 9,
+    "7": 3,
+    "8": 9,
+    "9": 9,
+    "10": 8,
+    "11": 4,
+    "12": 7
+  },
+  "key_relationships": [
+    "Ma Joad",
+    "Pa Joad",
+    "Jim Casy (preacher)",
+    "Rose of Sharon",
+    "Entire Joad family"
+  ],
+  "narrative_arc": "Returns from prison to find his family evicted by the Dust Bowl and bank foreclosure. Joins the migration to California, where every promise of work is a trap. Steinbeck documents the economics of exploitation — how surplus labor drives wages below survival, how police serve growers, how government camps are the only humane response.",
+  "why_this_character_matters": "Tom Joad's dome maps climate displacement in the American context. Layer 9 (Environment — the Dust Bowl) destroys Layer 5 (Housing) and Layer 6 (Economic), creating mass migration that overwhelms every system in the destination. His story is climate migration before we had the term.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "literature",
+  "_source_label": "Literature (Fiction)",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 5,
+      "3": 8,
+      "4": 5,
+      "5": 10,
+      "6": 10,
+      "7": 3,
+      "8": 9,
+      "9": 9,
+      "10": 8,
+      "11": 4,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:formerly_incarcerated",
+        "system:criminal justice",
+        "system:parole",
+        "system:police",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:unemployed",
+        "keyword:wage",
+        "explicit:7"
+      ],
+      "4": [
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance:homeless",
+        "circumstance:climate_displaced",
+        "circumstance-layer:formerly_incarcerated",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "keyword:evict",
+        "keyword:displac",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:unemployed",
+        "circumstance-layer:formerly_incarcerated",
+        "keyword:work",
+        "keyword:labor",
+        "keyword:wage",
+        "explicit:9"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance-layer:displaced",
+        "circumstance-layer:homeless",
+        "circumstance-layer:unemployed",
+        "circumstance-layer:climate_displaced",
+        "keyword:family",
+        "explicit:9"
+      ],
+      "9": [
+        "circumstance:climate_displaced",
+        "circumstance-layer:displaced",
+        "keyword:climate",
+        "keyword:environment",
+        "explicit:9"
+      ],
+      "10": [
+        "keyword:surviv",
+        "explicit:8"
+      ],
+      "11": [
+        "keyword:creat",
+        "keyword:sing",
+        "keyword:story",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 87,
+    "average_score": 7.3,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 9
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.010Z"
+}

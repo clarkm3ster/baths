@@ -1,0 +1,167 @@
+{
+  "id": "the-portsmouth-addicts--dreamland-the-true-tale-of-americas-opiate-epidemic",
+  "name": "The Portsmouth Addicts",
+  "real_or_fictional": "real",
+  "source_work": "Dreamland: The True Tale of America's Opiate Epidemic",
+  "source_author_creator": "Sam Quinones",
+  "source_year": 2015,
+  "circumstances": [
+    "addiction",
+    "poverty",
+    "unemployed",
+    "housing_insecure",
+    "chronic_illness"
+  ],
+  "location": "Portsmouth, OH",
+  "time_period": "1990s-2010s",
+  "systems_touched": [
+    "pill mills",
+    "pain clinics",
+    "Medicaid",
+    "emergency rooms",
+    "rehab",
+    "criminal justice",
+    "pharmacy"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 6,
+    "3": 7,
+    "4": 10,
+    "5": 6,
+    "6": 8,
+    "7": 4,
+    "8": 8,
+    "9": 6,
+    "10": 7,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Dealers",
+    "Doctors",
+    "Fellow addicts",
+    "Families"
+  ],
+  "narrative_arc": "Quinones documents how OxyContin destroyed a town — from the pill mills that prescribed it, to the Medicaid system that paid for it, to the Mexican heroin networks that replaced it when pills got expensive. Portsmouth went from manufacturing town to addiction capital in one generation.",
+  "why_this_character_matters": "This dome maps the pharmaceutical-to-street pipeline. Layer 4 (Health) contains the entire arc — legitimate medicine becoming addiction becoming black market. The system that was supposed to heal became the system that destroyed.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 6,
+      "3": 9,
+      "4": 10,
+      "5": 6,
+      "6": 9,
+      "7": 4,
+      "8": 8,
+      "9": 6,
+      "10": 7,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "system:criminal justice",
+        "explicit:6"
+      ],
+      "2": [
+        "system:Medicaid",
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:unemployed",
+        "circumstance-layer:housing_insecure",
+        "circumstance-layer:chronic_illness",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance:chronic_illness",
+        "system:pain clinics",
+        "system:Medicaid",
+        "system:emergency rooms",
+        "system:rehab",
+        "system:pharmacy",
+        "keyword:health",
+        "keyword:medicin",
+        "keyword:addict",
+        "explicit:10"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:street",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:unemployed",
+        "circumstance-layer:chronic_illness",
+        "keyword:work",
+        "explicit:8"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance-layer:addiction",
+        "circumstance-layer:unemployed",
+        "keyword:network",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 79,
+    "average_score": 6.6,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.947Z"
+}

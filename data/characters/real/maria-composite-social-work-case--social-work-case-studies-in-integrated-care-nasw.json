@@ -1,0 +1,167 @@
+{
+  "id": "maria-composite-social-work-case--social-work-case-studies-in-integrated-care-nasw",
+  "name": "Maria (Composite Social Work Case)",
+  "real_or_fictional": "real",
+  "source_work": "Social Work Case Studies in Integrated Care (NASW)",
+  "source_author_creator": "National Association of Social Workers",
+  "source_year": 2018,
+  "circumstances": [
+    "immigrant",
+    "poverty",
+    "domestic_violence",
+    "chronic_illness",
+    "uninsured",
+    "illiterate"
+  ],
+  "location": "Texas-Mexico border region",
+  "time_period": "2010s",
+  "systems_touched": [
+    "community health center",
+    "domestic violence shelter",
+    "immigration services",
+    "food bank",
+    "ESL classes",
+    "legal aid",
+    "Medicaid (ineligible)"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 7,
+    "3": 6,
+    "4": 7,
+    "5": 7,
+    "6": 6,
+    "7": 7,
+    "8": 6,
+    "9": 5,
+    "10": 8,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Children",
+    "Abusive spouse",
+    "Social worker",
+    "Legal aid attorney"
+  ],
+  "narrative_arc": "Undocumented immigrant with diabetes who can't access Medicaid, fleeing domestic violence but afraid to call police because of immigration status. The social work case study documents every system she needs but can't safely access — the gap between what exists and what's available to people without status.",
+  "why_this_character_matters": "Maria's dome maps the \"anti-dome\" — every system that should wrap around her instead pushes her away because of immigration status. Her Layer 1 (Legal) status nullifies Layers 2-9.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 7,
+      "3": 7,
+      "4": 10,
+      "5": 7,
+      "6": 10,
+      "7": 7,
+      "8": 7,
+      "9": 5,
+      "10": 8,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:immigrant",
+        "circumstance-layer:domestic_violence",
+        "system:immigration services",
+        "system:legal aid",
+        "keyword:legal",
+        "explicit:8"
+      ],
+      "2": [
+        "circumstance-layer:uninsured",
+        "system:Medicaid (ineligible)",
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:uninsured",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:chronic_illness",
+        "circumstance:uninsured",
+        "circumstance-layer:domestic_violence",
+        "system:Medicaid (ineligible)",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:illiterate",
+        "keyword:work",
+        "explicit:6"
+      ],
+      "7": [
+        "circumstance:illiterate",
+        "explicit:7"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "circumstance:domestic_violence",
+        "keyword:social",
+        "explicit:6"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:illiterate",
+        "explicit:8"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 84,
+    "average_score": 7,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.982Z"
+}

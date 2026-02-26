@@ -1,0 +1,151 @@
+{
+  "id": "herbert-richardson--just-mercy-a-story-of-justice-and-redemption",
+  "name": "Herbert Richardson",
+  "real_or_fictional": "real",
+  "source_work": "Just Mercy: A Story of Justice and Redemption",
+  "source_author_creator": "Bryan Stevenson",
+  "source_year": 2014,
+  "circumstances": [
+    "incarcerated",
+    "veteran",
+    "mental_illness",
+    "trauma"
+  ],
+  "location": "Alabama",
+  "time_period": "1970s-1989",
+  "systems_touched": [
+    "military",
+    "VA",
+    "criminal justice",
+    "death row",
+    "mental health",
+    "prison"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 5,
+    "3": 4,
+    "4": 8,
+    "5": 5,
+    "6": 4,
+    "7": 3,
+    "8": 5,
+    "9": 3,
+    "10": 8,
+    "11": 2,
+    "12": 6
+  },
+  "key_relationships": [
+    "Bryan Stevenson (attorney)",
+    "Fellow veterans"
+  ],
+  "narrative_arc": "Vietnam veteran with severe PTSD who committed a crime while in a dissociative state. The military broke him, the VA failed him, and the criminal justice system executed him. Stevenson documents how combat trauma traveled through every system that touched him.",
+  "why_this_character_matters": "Herbert's dome is a map of the veteran pipeline — from military trauma to inadequate VA care to criminal behavior to execution. Each system failure feeds the next.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 5,
+      "3": 4,
+      "4": 10,
+      "5": 5,
+      "6": 4,
+      "7": 3,
+      "8": 5,
+      "9": 3,
+      "10": 8,
+      "11": 2,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:incarcerated",
+        "circumstance-layer:veteran",
+        "system:criminal justice",
+        "system:prison",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "explicit:4"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "circumstance:trauma",
+        "circumstance-layer:veteran",
+        "system:mental health",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance-layer:incarcerated",
+        "explicit:5"
+      ],
+      "6": [
+        "circumstance-layer:veteran",
+        "explicit:4"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance-layer:mental_illness",
+        "explicit:5"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "circumstance:incarcerated",
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:trauma",
+        "explicit:8"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:2"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 64,
+    "average_score": 5.3,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 6
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 5
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.926Z"
+}

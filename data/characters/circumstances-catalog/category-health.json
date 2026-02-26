@@ -1,0 +1,441 @@
+{
+  "category": "health",
+  "types": 7,
+  "total_characters": 115,
+  "entries": [
+    {
+      "type": "trauma",
+      "category": "health",
+      "layers": [
+        4,
+        10,
+        11
+      ],
+      "description": "Surviving significant trauma",
+      "character_count": 36,
+      "real_count": 24,
+      "fictional_count": 12,
+      "example_characters": [
+        {
+          "name": "Crystal Mayberry",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Coco",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Dasani Coates",
+          "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Herbert Richardson",
+          "source_work": "Just Mercy: A Story of Justice and Redemption",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jennifer Hernandez",
+          "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "J.D. Vance",
+          "source_work": "Hillbilly Elegy: A Memoir of a Family and Culture in Crisis",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Pharoah Rivers",
+          "source_work": "There Are No Children Here: The Story of Two Boys Growing Up in the Other America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Lafayette Rivers",
+          "source_work": "There Are No Children Here: The Story of Two Boys Growing Up in the Other America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jesmyn Ward",
+          "source_work": "Men We Reaped",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Susannah Cahalan",
+          "source_work": "Brain on Fire: My Month of Madness",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "chronic_illness",
+      "category": "health",
+      "layers": [
+        4,
+        3,
+        6
+      ],
+      "description": "Living with chronic disease",
+      "character_count": 19,
+      "real_count": 18,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "The Appalachian Miner",
+          "source_work": "The Other America: Poverty in the United States",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Portsmouth Addicts",
+          "source_work": "Dreamland: The True Tale of America's Opiate Epidemic",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Susannah Cahalan",
+          "source_work": "Brain on Fire: My Month of Madness",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "LeeAnne Walters",
+          "source_work": "Flint Water Crisis Coverage (Washington Post/multiple)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Children of East Chicago",
+          "source_work": "Unsafe at Any Level (Reuters)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Hale County Disabled",
+          "source_work": "Unfit for Work (NPR Planet Money / This American Life)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Undercounted Kidney Patients",
+          "source_work": "Dissecting Racial Bias in an Algorithm (ProPublica / Science)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Philadelphia Lead-Poisoned Children",
+          "source_work": "Toxic City: Sick Kids and Dirty Homes (Philadelphia Inquirer)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Opioid-Prescribed Patients of WV",
+          "source_work": "The Pain Hustlers / Opioid Files (multiple outlets)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The \"Phantom\" Medicaid Patients",
+          "source_work": "GAO Report on Medicaid Enrollment Barriers",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "addiction",
+      "category": "health",
+      "layers": [
+        4,
+        1,
+        8
+      ],
+      "description": "Substance use disorder",
+      "character_count": 19,
+      "real_count": 14,
+      "fictional_count": 5,
+      "example_characters": [
+        {
+          "name": "Scott Bunker",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jessica",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Chanel Sykes",
+          "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "J.D. Vance",
+          "source_work": "Hillbilly Elegy: A Memoir of a Family and Culture in Crisis",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Portsmouth Addicts",
+          "source_work": "Dreamland: The True Tale of America's Opiate Epidemic",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "David Wojnarowicz",
+          "source_work": "In the Shadow of the American Dream: The Diaries of David Wojnarowicz",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Afghanistan Veterans",
+          "source_work": "The Afghanistan Papers (Washington Post)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Opioid-Prescribed Patients of WV",
+          "source_work": "The Pain Hustlers / Opioid Files (multiple outlets)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Matthew Charles",
+          "source_work": "Senate Judiciary Committee Testimony on First Step Act",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Frequent Flyer (Emergency Medicine Literature)",
+          "source_work": "Super-Utilizers in Emergency Medicine (Annals of Emergency Medicine)",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "mental_illness",
+      "category": "health",
+      "layers": [
+        4,
+        10,
+        8
+      ],
+      "description": "Living with mental health condition",
+      "character_count": 18,
+      "real_count": 11,
+      "fictional_count": 7,
+      "example_characters": [
+        {
+          "name": "Arleen Belle",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Chanel Sykes",
+          "source_work": "Invisible Child: Poverty, Survival & Hope in an American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Herbert Richardson",
+          "source_work": "Just Mercy: A Story of Justice and Redemption",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jeannette Walls",
+          "source_work": "The Glass Castle",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Susannah Cahalan",
+          "source_work": "Brain on Fire: My Month of Madness",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Kalief Browder",
+          "source_work": "Kalief Browder Investigation (New Yorker / ProPublica / Marshall Project)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Afghanistan Veterans",
+          "source_work": "The Afghanistan Papers (Washington Post)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Frequent Flyer (Emergency Medicine Literature)",
+          "source_work": "Super-Utilizers in Emergency Medicine (Annals of Emergency Medicine)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The VA Wait List Veterans",
+          "source_work": "VA Wait Time Scandal (VA IG Report / Multiple outlets)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "StoryCorps Military Voices",
+          "source_work": "StoryCorps Military Voices Initiative",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "disability",
+      "category": "health",
+      "layers": [
+        4,
+        10,
+        6
+      ],
+      "description": "Physical or cognitive disability",
+      "character_count": 9,
+      "real_count": 7,
+      "fictional_count": 2,
+      "example_characters": [
+        {
+          "name": "Lamar",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Rae McCormick",
+          "source_work": "$2.00 a Day: Living on Almost Nothing in America",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Hale County Disabled",
+          "source_work": "Unfit for Work (NPR Planet Money / This American Life)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Opioid-Prescribed Patients of WV",
+          "source_work": "The Pain Hustlers / Opioid Files (multiple outlets)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Dual-Eligible Elders",
+          "source_work": "CMS Dual-Eligible Demonstration Evaluation",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "StoryCorps Military Voices",
+          "source_work": "StoryCorps Military Voices Initiative",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Roxane Gay",
+          "source_work": "Hunger: A Memoir of (My) Body",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Gregor Samsa",
+          "source_work": "The Metamorphosis",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Daniel Blake",
+          "source_work": "I, Daniel Blake",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "terminal_illness",
+      "category": "health",
+      "layers": [
+        4,
+        12,
+        3
+      ],
+      "description": "Facing terminal diagnosis",
+      "character_count": 7,
+      "real_count": 4,
+      "fictional_count": 3,
+      "example_characters": [
+        {
+          "name": "Henrietta Lacks",
+          "source_work": "The Immortal Life of Henrietta Lacks",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "David Wojnarowicz",
+          "source_work": "In the Shadow of the American Dream: The Diaries of David Wojnarowicz",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Kira Johnson",
+          "source_work": "Lost Mothers: Maternal Mortality in the U.S. (ProPublica/NPR)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Paul Kalanithi",
+          "source_work": "When Breath Becomes Air",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Walter White",
+          "source_work": "Breaking Bad",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Prior Walter",
+          "source_work": "Angels in America: A Gay Fantasia on National Themes",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Lee Everett",
+          "source_work": "The Walking Dead (Telltale Game)",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "uninsured",
+      "category": "health",
+      "layers": [
+        4,
+        3,
+        2
+      ],
+      "description": "Without health insurance",
+      "character_count": 7,
+      "real_count": 6,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "Henrietta Lacks",
+          "source_work": "The Immortal Life of Henrietta Lacks",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Tara Westover",
+          "source_work": "Educated",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Undercounted Kidney Patients",
+          "source_work": "Dissecting Racial Bias in an Algorithm (ProPublica / Science)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The \"Phantom\" Medicaid Patients",
+          "source_work": "GAO Report on Medicaid Enrollment Barriers",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Maria (Composite Social Work Case)",
+          "source_work": "Social Work Case Studies in Integrated Care (NASW)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Frequent Flyer (Emergency Medicine Literature)",
+          "source_work": "Super-Utilizers in Emergency Medicine (Annals of Emergency Medicine)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Walter White",
+          "source_work": "Breaking Bad",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    }
+  ]
+}

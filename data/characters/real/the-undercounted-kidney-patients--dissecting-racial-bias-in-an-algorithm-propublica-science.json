@@ -1,0 +1,151 @@
+{
+  "id": "the-undercounted-kidney-patients--dissecting-racial-bias-in-an-algorithm-propublica-science",
+  "name": "The Undercounted Kidney Patients",
+  "real_or_fictional": "real",
+  "source_work": "Dissecting Racial Bias in an Algorithm (ProPublica / Science)",
+  "source_author_creator": "Ziad Obermeyer et al.",
+  "source_year": 2019,
+  "circumstances": [
+    "chronic_illness",
+    "poverty",
+    "uninsured"
+  ],
+  "location": "Nationwide",
+  "time_period": "2019",
+  "systems_touched": [
+    "hospitals",
+    "insurance",
+    "care management algorithms",
+    "Medicaid",
+    "dialysis centers"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 8,
+    "3": 7,
+    "4": 10,
+    "5": 3,
+    "6": 4,
+    "7": 3,
+    "8": 4,
+    "9": 3,
+    "10": 7,
+    "11": 2,
+    "12": 4
+  },
+  "key_relationships": [
+    "Healthcare providers",
+    "Insurance companies"
+  ],
+  "narrative_arc": "A widely used algorithm determined that Black patients needed less care than equally sick white patients because it used healthcare spending as a proxy for health need. Since Black patients had historically received less care (due to access barriers), the algorithm concluded they were healthier. Obermeyer documented how the algorithm reduced care referrals for Black patients by more than half.",
+  "why_this_character_matters": "This dome reveals how Layer 2 (Systems) automates inequality. The algorithm's logic: past discrimination → less spending → \"lower need\" → continued discrimination. Building domes around these patients with real health data (not spending data) reveals the gap.",
+  "source_urls": [
+    "https://www.science.org/doi/10.1126/science.aax2342"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 8,
+      "3": 7,
+      "4": 10,
+      "5": 3,
+      "6": 5,
+      "7": 3,
+      "8": 4,
+      "9": 3,
+      "10": 7,
+      "11": 2,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:5"
+      ],
+      "2": [
+        "circumstance-layer:uninsured",
+        "system:Medicaid",
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "circumstance-layer:uninsured",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:chronic_illness",
+        "circumstance:uninsured",
+        "system:hospitals",
+        "system:insurance",
+        "system:Medicaid",
+        "keyword:health",
+        "keyword:sick",
+        "explicit:10"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:3"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:chronic_illness",
+        "explicit:4"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "explicit:4"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "explicit:2"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 61,
+    "average_score": 5.1,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 5
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.969Z"
+}

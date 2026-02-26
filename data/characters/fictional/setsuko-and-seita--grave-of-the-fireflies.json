@@ -1,0 +1,167 @@
+{
+  "id": "setsuko-and-seita--grave-of-the-fireflies",
+  "name": "Setsuko and Seita",
+  "real_or_fictional": "fictional",
+  "source_work": "Grave of the Fireflies",
+  "source_author_creator": "Akiyuki Nosaka (novel) / Isao Takahata (film)",
+  "source_year": 1988,
+  "circumstances": [
+    "orphan",
+    "displaced",
+    "deep_poverty",
+    "homeless",
+    "bereavement",
+    "climate_displaced"
+  ],
+  "location": "Kobe, Japan",
+  "time_period": "1945",
+  "systems_touched": [
+    "military (father, dead)",
+    "firebombing (US Air Force)",
+    "aunt's household",
+    "abandoned bomb shelter",
+    "rationing system",
+    "schools (collapsed)"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 5,
+    "3": 7,
+    "4": 8,
+    "5": 9,
+    "6": 4,
+    "7": 4,
+    "8": 8,
+    "9": 9,
+    "10": 7,
+    "11": 5,
+    "12": 8
+  },
+  "key_relationships": [
+    "Each other",
+    "Aunt",
+    "Mother (dead)",
+    "Father (missing, dead)"
+  ],
+  "narrative_arc": "Two children orphaned by the firebombing of Kobe. Their aunt doesn't want them. They move into an abandoned bomb shelter and try to survive alone. Setsuko starves to death. Seita dies shortly after. Nosaka/Takahata document every meal, every can of food, every calorie — the exact math of starvation in wartime.",
+  "why_this_character_matters": "Setsuko and Seita's dome is the most precise documentation of dome collapse from war. Every layer empties in sequence: parents (Layer 8), housing (Layer 5), food (Layer 3), health (Layer 4). The dome tracks the exact order of systems failure when a society itself collapses.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "theater-games-mythology",
+  "_source_label": "Theater, Games, Mythology & Comics",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 5,
+      "3": 8,
+      "4": 8,
+      "5": 10,
+      "6": 4,
+      "7": 4,
+      "8": 10,
+      "9": 9,
+      "10": 7,
+      "11": 5,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:orphan",
+        "explicit:5"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:deep_poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:bereavement",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance-layer:bereavement",
+        "keyword:health",
+        "explicit:8"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance:homeless",
+        "circumstance:climate_displaced",
+        "circumstance-layer:orphan",
+        "circumstance-layer:deep_poverty",
+        "keyword:hous",
+        "keyword:rent",
+        "keyword:shelter",
+        "explicit:9"
+      ],
+      "6": [
+        "circumstance:deep_poverty",
+        "explicit:4"
+      ],
+      "7": [
+        "system:schools (collapsed)",
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance:orphan",
+        "circumstance-layer:displaced",
+        "circumstance-layer:homeless",
+        "circumstance-layer:bereavement",
+        "circumstance-layer:climate_displaced",
+        "explicit:8"
+      ],
+      "9": [
+        "circumstance:climate_displaced",
+        "circumstance-layer:displaced",
+        "explicit:9"
+      ],
+      "10": [
+        "keyword:surviv",
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 83,
+    "average_score": 6.9,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.067Z"
+}

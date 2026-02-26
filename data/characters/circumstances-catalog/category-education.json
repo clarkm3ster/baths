@@ -1,0 +1,111 @@
+{
+  "category": "education",
+  "types": 3,
+  "total_characters": 11,
+  "entries": [
+    {
+      "type": "dropout",
+      "category": "education",
+      "layers": [
+        7,
+        6
+      ],
+      "description": "Left school before completion",
+      "character_count": 6,
+      "real_count": 5,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "Coco",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Richard Wright",
+          "source_work": "Black Boy / American Hunger",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Students of the Five Failure Factories",
+          "source_work": "Failure Factories (Tampa Bay Times)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Raskolnikov",
+          "source_work": "Crime and Punishment",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "William Gates",
+          "source_work": "Hoop Dreams",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Arthur Agee",
+          "source_work": "Hoop Dreams",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "illiterate",
+      "category": "education",
+      "layers": [
+        7,
+        6,
+        10
+      ],
+      "description": "Cannot read or write",
+      "character_count": 5,
+      "real_count": 3,
+      "fictional_count": 2,
+      "example_characters": [
+        {
+          "name": "Tara Westover",
+          "source_work": "Educated",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The \"Phantom\" Medicaid Patients",
+          "source_work": "GAO Report on Medicaid Enrollment Barriers",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Maria (Composite Social Work Case)",
+          "source_work": "Social Work Case Studies in Integrated Care (NASW)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Celie",
+          "source_work": "The Color Purple",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Precious Jones",
+          "source_work": "Push",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "special_education",
+      "category": "education",
+      "layers": [
+        7,
+        4,
+        1
+      ],
+      "description": "In special education systems",
+      "character_count": 0,
+      "real_count": 0,
+      "fictional_count": 0,
+      "example_characters": [],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    }
+  ]
+}

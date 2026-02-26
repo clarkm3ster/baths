@@ -1,0 +1,155 @@
+{
+  "id": "sandra-cisneros-as-esperanza--a-house-of-my-own-stories-from-my-life",
+  "name": "Sandra Cisneros (as Esperanza)",
+  "real_or_fictional": "real",
+  "source_work": "A House of My Own: Stories from My Life",
+  "source_author_creator": "Sandra Cisneros",
+  "source_year": 2015,
+  "circumstances": [
+    "poverty",
+    "immigrant",
+    "housing_insecure"
+  ],
+  "location": "Chicago, IL (Humboldt Park, Pilsen)",
+  "time_period": "1960s-1970s",
+  "systems_touched": [
+    "public schools",
+    "public housing",
+    "universities",
+    "NEA/arts grants",
+    "libraries"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 4,
+    "3": 6,
+    "4": 3,
+    "5": 8,
+    "6": 5,
+    "7": 7,
+    "8": 9,
+    "9": 6,
+    "10": 7,
+    "11": 10,
+    "12": 8
+  },
+  "key_relationships": [
+    "Parents",
+    "Six siblings",
+    "Neighborhood"
+  ],
+  "narrative_arc": "Mexican-American girl growing up in a series of cramped Chicago apartments, dreaming of a house of her own. Cisneros documents the neighborhood with poetic precision — who lives where, how spaces shape identity, how housing shame drives ambition.",
+  "why_this_character_matters": "Sandra fills Layer 11 (Creativity) and Layer 5 (Housing) with equal depth. Her dome reveals how housing conditions create creative expression — the house you don't have becomes the house you write.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 4,
+      "3": 6,
+      "4": 3,
+      "5": 9,
+      "6": 5,
+      "7": 7,
+      "8": 9,
+      "9": 6,
+      "10": 7,
+      "11": 10,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:immigrant",
+        "explicit:4"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "explicit:6"
+      ],
+      "4": [
+        "explicit:3"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:public housing",
+        "keyword:hous",
+        "keyword:apartment",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:immigrant",
+        "explicit:5"
+      ],
+      "7": [
+        "system:public schools",
+        "system:libraries",
+        "explicit:7"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "keyword:neighbor",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:creat",
+        "keyword:express",
+        "keyword:write",
+        "keyword:sing",
+        "explicit:10"
+      ],
+      "12": [
+        "keyword:dream",
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 78,
+    "average_score": 6.5,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 11,
+        "name": "Creativity",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.955Z"
+}

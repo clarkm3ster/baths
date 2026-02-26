@@ -1,0 +1,300 @@
+{
+  "category": "legal",
+  "types": 7,
+  "total_characters": 45,
+  "entries": [
+    {
+      "type": "incarcerated",
+      "category": "legal",
+      "layers": [
+        1,
+        5,
+        10
+      ],
+      "description": "Currently in prison or jail",
+      "character_count": 18,
+      "real_count": 10,
+      "fictional_count": 8,
+      "example_characters": [
+        {
+          "name": "Jessica",
+          "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Walter McMillian",
+          "source_work": "Just Mercy: A Story of Justice and Redemption",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Herbert Richardson",
+          "source_work": "Just Mercy: A Story of Justice and Redemption",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Anthony Ray Hinton",
+          "source_work": "Just Mercy: A Story of Justice and Redemption",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Kalief Browder",
+          "source_work": "Kalief Browder Investigation (New Yorker / ProPublica / Marshall Project)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ricky Jackson",
+          "source_work": "Life After Death Row (Marshall Project)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Central Park Five (Exonerated Five)",
+          "source_work": "Court Records / When They See Us / Ken Burns Documentary",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ear Hustle Inmates",
+          "source_work": "Ear Hustle (Podcast)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Bigger Thomas",
+          "source_work": "Native Son",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Jurgis Rudkus",
+          "source_work": "The Jungle",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "formerly_incarcerated",
+      "category": "legal",
+      "layers": [
+        1,
+        6,
+        5
+      ],
+      "description": "Previously incarcerated, navigating reentry",
+      "character_count": 12,
+      "real_count": 7,
+      "fictional_count": 5,
+      "example_characters": [
+        {
+          "name": "Scott Bunker",
+          "source_work": "Evicted: Poverty and Profit in the American City",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Jarvious Cotton",
+          "source_work": "The New Jim Crow: Mass Incarceration in the Age of Colorblindness",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Brisha Borden",
+          "source_work": "Machine Bias (ProPublica)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ricky Jackson",
+          "source_work": "Life After Death Row (Marshall Project)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Matthew Charles",
+          "source_work": "Senate Judiciary Committee Testimony on First Step Act",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ear Hustle Inmates",
+          "source_work": "Ear Hustle (Podcast)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Tom Joad",
+          "source_work": "The Grapes of Wrath",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Jean Valjean",
+          "source_work": "Les Misérables",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Steven Avery",
+          "source_work": "Making a Murderer",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Omar Little",
+          "source_work": "The Wire",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "wrongly_convicted",
+      "category": "legal",
+      "layers": [
+        1,
+        10,
+        12
+      ],
+      "description": "Convicted of crime they did not commit",
+      "character_count": 6,
+      "real_count": 6,
+      "fictional_count": 0,
+      "example_characters": [
+        {
+          "name": "Abdul Husain",
+          "source_work": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Walter McMillian",
+          "source_work": "Just Mercy: A Story of Justice and Redemption",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Anthony Ray Hinton",
+          "source_work": "Just Mercy: A Story of Justice and Redemption",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ricky Jackson",
+          "source_work": "Life After Death Row (Marshall Project)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "The Central Park Five (Exonerated Five)",
+          "source_work": "Court Records / When They See Us / Ken Burns Documentary",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Steven Avery",
+          "source_work": "Making a Murderer",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "detained",
+      "category": "legal",
+      "layers": [
+        1,
+        5,
+        10
+      ],
+      "description": "In immigration or other detention",
+      "character_count": 5,
+      "real_count": 2,
+      "fictional_count": 3,
+      "example_characters": [
+        {
+          "name": "George Takei (as child)",
+          "source_work": "They Called Us Enemy",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Kalief Browder",
+          "source_work": "Kalief Browder Investigation (New Yorker / ProPublica / Marshall Project)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Offred (June)",
+          "source_work": "The Handmaid's Tale",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "K (Josef K.)",
+          "source_work": "The Trial",
+          "real_or_fictional": "fictional"
+        },
+        {
+          "name": "Sita",
+          "source_work": "The Ramayana",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "undocumented",
+      "category": "legal",
+      "layers": [
+        1,
+        6,
+        4
+      ],
+      "description": "Without legal immigration status",
+      "character_count": 2,
+      "real_count": 1,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "The Trafficked Farm Workers",
+          "source_work": "Trafficked into Forced Labor (Reveal / CIR)",
+          "real_or_fictional": "real"
+        },
+        {
+          "name": "Ifemelu",
+          "source_work": "Americanah",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "on_probation",
+      "category": "legal",
+      "layers": [
+        1,
+        10
+      ],
+      "description": "Under supervised probation",
+      "character_count": 1,
+      "real_count": 1,
+      "fictional_count": 0,
+      "example_characters": [
+        {
+          "name": "Jarvious Cotton",
+          "source_work": "The New Jim Crow: Mass Incarceration in the Age of Colorblindness",
+          "real_or_fictional": "real"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    },
+    {
+      "type": "asylum_seeker",
+      "category": "legal",
+      "layers": [
+        1,
+        5,
+        4
+      ],
+      "description": "Seeking asylum or refugee status",
+      "character_count": 1,
+      "real_count": 0,
+      "fictional_count": 1,
+      "example_characters": [
+        {
+          "name": "Jende Jonga",
+          "source_work": "Behold the Dreamers",
+          "real_or_fictional": "fictional"
+        }
+      ],
+      "discovered_at": "2026-02-26T21:44:38.904Z",
+      "discovered_from": "built-in taxonomy"
+    }
+  ]
+}

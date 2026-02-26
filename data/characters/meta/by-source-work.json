@@ -1,0 +1,1356 @@
+{
+  "generated_at": "2026-02-26T21:44:50.228Z",
+  "works": [
+    {
+      "work": "Evicted: Poverty and Profit in the American City",
+      "characters": [
+        {
+          "name": "Arleen Belle",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Crystal Mayberry",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Lamar",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Scott Bunker",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Sherrena Tarver",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Just Mercy: A Story of Justice and Redemption",
+      "characters": [
+        {
+          "name": "Anthony Ray Hinton",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Herbert Richardson",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Walter McMillian",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Working: People Talk About What They Do All Day and How They Feel About What They Do",
+      "characters": [
+        {
+          "name": "Babe Secoli (Supermarket Checker)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Dolores Dante (Waitress)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Mike LeFevre (Steelworker)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+      "characters": [
+        {
+          "name": "George Swanson Starling",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Ida Mae Brandon Gladney",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Robert Joseph Pershing Foster",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Wire",
+      "characters": [
+        {
+          "name": "Bubbles (Reginald Cousins)",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "D'Angelo Barksdale",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Omar Little",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+      "characters": [
+        {
+          "name": "Abdul Husain",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Asha Waghekar",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Hoop Dreams",
+      "characters": [
+        {
+          "name": "Arthur Agee",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "William Gates",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Invisible Child: Poverty, Survival & Hope in an American City",
+      "characters": [
+        {
+          "name": "Chanel Sykes",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Dasani Coates",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+      "characters": [
+        {
+          "name": "Coco",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Jessica",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "$2.00 a Day: Living on Almost Nothing in America",
+      "characters": [
+        {
+          "name": "Jennifer Hernandez",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Rae McCormick",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "There Are No Children Here: The Story of Two Boys Growing Up in the Other America",
+      "characters": [
+        {
+          "name": "Lafayette Rivers",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        },
+        {
+          "name": "Pharoah Rivers",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "1984",
+      "characters": [
+        {
+          "name": "Winston Smith",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Fun Home: A Family Tragicomic",
+      "characters": [
+        {
+          "name": "Alison Bechdel",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Nickel and Dimed: On (Not) Getting By in America",
+      "characters": [
+        {
+          "name": "Barbara Ehrenreich (as worker)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Machine Bias (ProPublica)",
+      "characters": [
+        {
+          "name": "Brisha Borden",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "In the Dream House",
+      "characters": [
+        {
+          "name": "Carmen Maria Machado",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Unsafe at Any Level (Reuters)",
+      "characters": [
+        {
+          "name": "Children of East Chicago",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Case for Reparations (The Atlantic) / The 1619 Project",
+      "characters": [
+        {
+          "name": "Clyde Ross",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Congressional Testimony on Native American Issues",
+      "characters": [
+        {
+          "name": "Crystal Echo Hawk",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Dark Days",
+      "characters": [
+        {
+          "name": "Dark Days Tunnel Dwellers",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "In the Shadow of the American Dream: The Diaries of David Wojnarowicz",
+      "characters": [
+        {
+          "name": "David Wojnarowicz",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Death, Sex & Money (Podcast)",
+      "characters": [
+        {
+          "name": "Death, Sex & Money Interviewees",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Hard Times: An Oral History of the Great Depression",
+      "characters": [
+        {
+          "name": "Dynamite Garland (Hobo)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Ear Hustle (Podcast)",
+      "characters": [
+        {
+          "name": "Ear Hustle Inmates",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Ellis Island Oral History Collection",
+      "characters": [
+        {
+          "name": "Ellis Island Immigrants",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "WPA Slave Narrative Collection / Library of Congress Audio",
+      "characters": [
+        {
+          "name": "Fountain Hughes",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "They Called Us Enemy",
+      "characters": [
+        {
+          "name": "George Takei (as child)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Incidents in the Life of a Slave Girl",
+      "characters": [
+        {
+          "name": "Harriet Jacobs",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Immortal Life of Henrietta Lacks",
+      "characters": [
+        {
+          "name": "Henrietta Lacks",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Hillbilly Elegy: A Memoir of a Family and Culture in Crisis",
+      "characters": [
+        {
+          "name": "J.D. Vance",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Gang Leader for a Day",
+      "characters": [
+        {
+          "name": "J.T.",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The New Jim Crow: Mass Incarceration in the Age of Colorblindness",
+      "characters": [
+        {
+          "name": "Jarvious Cotton",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Glass Castle",
+      "characters": [
+        {
+          "name": "Jeannette Walls",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Men We Reaped",
+      "characters": [
+        {
+          "name": "Jesmyn Ward",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Kalief Browder Investigation (New Yorker / ProPublica / Marshall Project)",
+      "characters": [
+        {
+          "name": "Kalief Browder",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Minding the Gap",
+      "characters": [
+        {
+          "name": "Keire Johnson",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Heavy: An American Memoir",
+      "characters": [
+        {
+          "name": "Kiese Laymon",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Lost Mothers: Maternal Mortality in the U.S. (ProPublica/NPR)",
+      "characters": [
+        {
+          "name": "Kira Johnson",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Flint Water Crisis Coverage (Washington Post/multiple)",
+      "characters": [
+        {
+          "name": "LeeAnne Walters",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Social Work Case Studies in Integrated Care (NASW)",
+      "characters": [
+        {
+          "name": "Maria (Composite Social Work Case)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Persepolis",
+      "characters": [
+        {
+          "name": "Marjane Satrapi",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Senate Judiciary Committee Testimony on First Step Act",
+      "characters": [
+        {
+          "name": "Matthew Charles",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Becoming",
+      "characters": [
+        {
+          "name": "Michelle Robinson Obama",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "When Breath Becomes Air",
+      "characters": [
+        {
+          "name": "Paul Kalanithi",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Toxic City: Sick Kids and Dirty Homes (Philadelphia Inquirer)",
+      "characters": [
+        {
+          "name": "Philadelphia Lead-Poisoned Children",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Black Boy / American Hunger",
+      "characters": [
+        {
+          "name": "Richard Wright",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Life After Death Row (Marshall Project)",
+      "characters": [
+        {
+          "name": "Ricky Jackson",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Hunger: A Memoir of (My) Body",
+      "characters": [
+        {
+          "name": "Roxane Gay",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "A House of My Own: Stories from My Life",
+      "characters": [
+        {
+          "name": "Sandra Cisneros (as Esperanza)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Making a Murderer",
+      "characters": [
+        {
+          "name": "Steven Avery",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "StoryCorps September 11th Initiative",
+      "characters": [
+        {
+          "name": "StoryCorps 9/11 Witnesses",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "StoryCorps Military Voices Initiative",
+      "characters": [
+        {
+          "name": "StoryCorps Military Voices",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Failure Factories (Tampa Bay Times)",
+      "characters": [
+        {
+          "name": "Students of the Five Failure Factories",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Brain on Fire: My Month of Madness",
+      "characters": [
+        {
+          "name": "Susannah Cahalan",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Educated",
+      "characters": [
+        {
+          "name": "Tara Westover",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Afghanistan Papers (Washington Post)",
+      "characters": [
+        {
+          "name": "The Afghanistan Veterans",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Other America: Poverty in the United States",
+      "characters": [
+        {
+          "name": "The Appalachian Miner",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Invisible Child (NYT Series)",
+      "characters": [
+        {
+          "name": "The Auburn Shelter Families",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Court Records / When They See Us / Ken Burns Documentary",
+      "characters": [
+        {
+          "name": "The Central Park Five (Exonerated Five)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "CMS Dual-Eligible Demonstration Evaluation",
+      "characters": [
+        {
+          "name": "The Dual-Eligible Elders",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Child Welfare System Failures (HHS Inspector General)",
+      "characters": [
+        {
+          "name": "The \"Falling Through the Cracks\" Children",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The TurboTax Trap (ProPublica)",
+      "characters": [
+        {
+          "name": "The Free File Denied Taxpayers",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Super-Utilizers in Emergency Medicine (Annals of Emergency Medicine)",
+      "characters": [
+        {
+          "name": "The Frequent Flyer (Emergency Medicine Literature)",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Unfit for Work (NPR Planet Money / This American Life)",
+      "characters": [
+        {
+          "name": "The Hale County Disabled",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Pain Hustlers / Opioid Files (multiple outlets)",
+      "characters": [
+        {
+          "name": "The Opioid-Prescribed Patients of WV",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "GAO Report on Medicaid Enrollment Barriers",
+      "characters": [
+        {
+          "name": "The \"Phantom\" Medicaid Patients",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Dreamland: The True Tale of America's Opiate Epidemic",
+      "characters": [
+        {
+          "name": "The Portsmouth Addicts",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Trafficked into Forced Labor (Reveal / CIR)",
+      "characters": [
+        {
+          "name": "The Trafficked Farm Workers",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Dissecting Racial Bias in an Algorithm (ProPublica / Science)",
+      "characters": [
+        {
+          "name": "The Undercounted Kidney Patients",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "VA Wait Time Scandal (VA IG Report / Multiple outlets)",
+      "characters": [
+        {
+          "name": "The VA Wait List Veterans",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Senate Judiciary Committee Testimony on Human Trafficking",
+      "characters": [
+        {
+          "name": "Theresa Flores",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Born a Crime: Stories from a South African Childhood",
+      "characters": [
+        {
+          "name": "Trevor Noah",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Maus",
+      "characters": [
+        {
+          "name": "Vladek Spiegelman",
+          "real_or_fictional": "real",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Antigone",
+      "characters": [
+        {
+          "name": "Antigone",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Native Son",
+      "characters": [
+        {
+          "name": "Bigger Thomas",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "A Streetcar Named Desire",
+      "characters": [
+        {
+          "name": "Blanche DuBois",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Color Purple",
+      "characters": [
+        {
+          "name": "Celie",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "In Moonlight Black Boys Look Blue (short story) / Moonlight (film)",
+      "characters": [
+        {
+          "name": "Chiron Harris",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Cinderella (ATU Type 510A — Grimm, Perrault, and hundreds of variants)",
+      "characters": [
+        {
+          "name": "Cinderella",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Roma",
+      "characters": [
+        {
+          "name": "Cleo",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "I, Daniel Blake",
+      "characters": [
+        {
+          "name": "Daniel Blake",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Last of Us (Video Game)",
+      "characters": [
+        {
+          "name": "Ellie (The Last of Us)",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The House on Mango Street",
+      "characters": [
+        {
+          "name": "Esperanza Cordero",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Metamorphosis",
+      "characters": [
+        {
+          "name": "Gregor Samsa",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Florida Project",
+      "characters": [
+        {
+          "name": "Halley",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Hansel and Gretel (Grimm)",
+      "characters": [
+        {
+          "name": "Hansel and Gretel",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Adventures of Huckleberry Finn",
+      "characters": [
+        {
+          "name": "Huckleberry Finn",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Americanah",
+      "characters": [
+        {
+          "name": "Ifemelu",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Les Misérables",
+      "characters": [
+        {
+          "name": "Jean Valjean",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Behold the Dreamers",
+      "characters": [
+        {
+          "name": "Jende Jonga",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Book of Job (Hebrew Bible)",
+      "characters": [
+        {
+          "name": "Job",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Jungle",
+      "characters": [
+        {
+          "name": "Jurgis Rudkus",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Trial",
+      "characters": [
+        {
+          "name": "K (Josef K.)",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Parasite",
+      "characters": [
+        {
+          "name": "Ki-taek Kim (The Kim Family)",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Les Misérables (2019 film)",
+      "characters": [
+        {
+          "name": "Ladj Ly Neighborhood Characters (Les Misérables)",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Walking Dead (Telltale Game)",
+      "characters": [
+        {
+          "name": "Lee Everett",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "A Doll's House",
+      "characters": [
+        {
+          "name": "Nora Helmer",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Odyssey",
+      "characters": [
+        {
+          "name": "Odysseus",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Handmaid's Tale",
+      "characters": [
+        {
+          "name": "Offred (June)",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Oliver Twist",
+      "characters": [
+        {
+          "name": "Oliver Twist",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Bluest Eye",
+      "characters": [
+        {
+          "name": "Pecola Breedlove",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Push",
+      "characters": [
+        {
+          "name": "Precious Jones",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Angels in America: A Gay Fantasia on National Themes",
+      "characters": [
+        {
+          "name": "Prior Walter",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Crime and Punishment",
+      "characters": [
+        {
+          "name": "Raskolnikov",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Beloved",
+      "characters": [
+        {
+          "name": "Sethe",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Grave of the Fireflies",
+      "characters": [
+        {
+          "name": "Setsuko and Seita",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Ramayana",
+      "characters": [
+        {
+          "name": "Sita",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Tess of the d'Urbervilles",
+      "characters": [
+        {
+          "name": "Tess Durbeyfield",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "The Grapes of Wrath",
+      "characters": [
+        {
+          "name": "Tom Joad",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Fences",
+      "characters": [
+        {
+          "name": "Troy Maxson",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "My Year of Rest and Relaxation",
+      "characters": [
+        {
+          "name": "Turtle Alveston",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Breaking Bad",
+      "characters": [
+        {
+          "name": "Walter White",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    },
+    {
+      "work": "Death of a Salesman",
+      "characters": [
+        {
+          "name": "Willy Loman",
+          "real_or_fictional": "fictional",
+          "filled_layers": 12,
+          "dome_buildability": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "id": "the-falling-through-the-cracks-children--child-welfare-system-failures-hhs-inspector-general",
+  "name": "The \"Falling Through the Cracks\" Children",
+  "real_or_fictional": "real",
+  "source_work": "Child Welfare System Failures (HHS Inspector General)",
+  "source_author_creator": "HHS Office of Inspector General",
+  "source_year": 2020,
+  "circumstances": [
+    "foster_care",
+    "domestic_violence",
+    "trauma",
+    "housing_insecure"
+  ],
+  "location": "Multiple states",
+  "time_period": "2015-2020",
+  "systems_touched": [
+    "child welfare (CPS)",
+    "foster care",
+    "courts",
+    "schools",
+    "Medicaid",
+    "mental health",
+    "group homes"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 9,
+    "3": 6,
+    "4": 7,
+    "5": 8,
+    "6": 4,
+    "7": 7,
+    "8": 7,
+    "9": 5,
+    "10": 8,
+    "11": 3,
+    "12": 4
+  },
+  "key_relationships": [
+    "Biological parents",
+    "Foster parents",
+    "Case workers",
+    "Judges",
+    "Teachers"
+  ],
+  "narrative_arc": "The HHS IG documented children who were reported to CPS multiple times before dying. Each case showed the same pattern: referral, investigation, case closed, repeat. The reports map every system failure — the overworked caseworker, the understaffed agency, the judge who believed the parents, the school that didn't follow up.",
+  "why_this_character_matters": "These domes map fatal system failure. Every layer touched the child and none of them saved them. Building domes retroactively reveals which layer, if strengthened, could have changed the outcome.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 9,
+      "3": 6,
+      "4": 9,
+      "5": 8,
+      "6": 4,
+      "7": 7,
+      "8": 7,
+      "9": 5,
+      "10": 8,
+      "11": 3,
+      "12": 4
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:foster_care",
+        "circumstance-layer:domestic_violence",
+        "system:courts",
+        "keyword:judge",
+        "explicit:8"
+      ],
+      "2": [
+        "circumstance:foster_care",
+        "system:child welfare (CPS)",
+        "system:Medicaid",
+        "keyword:casework",
+        "explicit:9"
+      ],
+      "3": [
+        "circumstance-layer:housing_insecure",
+        "keyword:rent",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:domestic_violence",
+        "system:Medicaid",
+        "system:mental health",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "system:group homes",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "6": [
+        "keyword:work",
+        "explicit:4"
+      ],
+      "7": [
+        "circumstance:foster_care",
+        "system:schools",
+        "keyword:school",
+        "explicit:7"
+      ],
+      "8": [
+        "circumstance:foster_care",
+        "circumstance:domestic_violence",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:trauma",
+        "keyword:agency",
+        "explicit:8"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:4"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 78,
+    "average_score": 6.5,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 9
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 9
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.989Z"
+}

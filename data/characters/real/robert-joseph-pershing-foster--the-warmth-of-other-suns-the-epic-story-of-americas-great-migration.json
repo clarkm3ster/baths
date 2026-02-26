@@ -1,0 +1,146 @@
+{
+  "id": "robert-joseph-pershing-foster--the-warmth-of-other-suns-the-epic-story-of-americas-great-migration",
+  "name": "Robert Joseph Pershing Foster",
+  "real_or_fictional": "real",
+  "source_work": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+  "source_author_creator": "Isabel Wilkerson",
+  "source_year": 2010,
+  "circumstances": [
+    "displaced",
+    "immigrant"
+  ],
+  "location": "Monroe, LA → Los Angeles, CA",
+  "time_period": "1953-2000s",
+  "systems_touched": [
+    "Jim Crow medical system",
+    "hospitals",
+    "medical licensing",
+    "VA",
+    "military"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 5,
+    "3": 7,
+    "4": 7,
+    "5": 6,
+    "6": 8,
+    "7": 8,
+    "8": 7,
+    "9": 4,
+    "10": 7,
+    "11": 4,
+    "12": 6
+  },
+  "key_relationships": [
+    "Alice (wife)",
+    "Patients",
+    "Medical community"
+  ],
+  "narrative_arc": "Black doctor who couldn't practice freely in Louisiana. Drove to Los Angeles alone, rebuilt his career, became a doctor to the stars while carrying the psychological weight of what the South denied him. Wilkerson documents how even professional success doesn't heal displacement.",
+  "why_this_character_matters": "Robert shows that migration doesn't only happen to the poor. His dome reveals how racial systems constrain even the economically privileged — and how displacement affects Layer 12 (Flourishing) regardless of income.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 5,
+      "3": 7,
+      "4": 7,
+      "5": 6,
+      "6": 8,
+      "7": 8,
+      "8": 7,
+      "9": 4,
+      "10": 7,
+      "11": 4,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:immigrant",
+        "explicit:6"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "keyword:income",
+        "explicit:7"
+      ],
+      "4": [
+        "system:hospitals",
+        "keyword:doctor",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "keyword:displac",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance-layer:immigrant",
+        "keyword:career",
+        "explicit:8"
+      ],
+      "7": [
+        "explicit:8"
+      ],
+      "8": [
+        "circumstance:immigrant",
+        "circumstance-layer:displaced",
+        "explicit:7"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:4"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "explicit:4"
+      ],
+      "12": [
+        "keyword:flourish",
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 75,
+    "average_score": 6.3,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 7
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.935Z"
+}

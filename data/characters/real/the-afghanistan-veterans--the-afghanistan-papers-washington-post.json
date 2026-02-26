@@ -1,0 +1,164 @@
+{
+  "id": "the-afghanistan-veterans--the-afghanistan-papers-washington-post",
+  "name": "The Afghanistan Veterans",
+  "real_or_fictional": "real",
+  "source_work": "The Afghanistan Papers (Washington Post)",
+  "source_author_creator": "Craig Whitlock",
+  "source_year": 2019,
+  "circumstances": [
+    "veteran",
+    "mental_illness",
+    "trauma",
+    "addiction",
+    "homeless"
+  ],
+  "location": "Nationwide",
+  "time_period": "2001-2021",
+  "systems_touched": [
+    "military",
+    "VA hospitals",
+    "VA benefits",
+    "GI Bill",
+    "homeless veteran programs",
+    "mental health",
+    "disability determination"
+  ],
+  "dome_layer_richness": {
+    "1": 6,
+    "2": 8,
+    "3": 7,
+    "4": 9,
+    "5": 6,
+    "6": 6,
+    "7": 5,
+    "8": 7,
+    "9": 5,
+    "10": 7,
+    "11": 3,
+    "12": 6
+  },
+  "key_relationships": [
+    "Fellow veterans",
+    "VA staff",
+    "Families"
+  ],
+  "narrative_arc": "Veterans returning from a war their own leaders knew was failing. The Afghanistan Papers revealed that senior officials consistently lied about progress. Veterans came home with PTSD, traumatic brain injuries, and moral injury from a war documented as fraudulent.",
+  "why_this_character_matters": "This dome maps the veteran reentry pipeline. Layer 4 (Health) carries combat trauma. Layer 2 (Systems) maps VA navigation. Layer 1 (Legal) covers benefits claims. The dome reveals the gap between what veterans were promised and what they received.",
+  "source_urls": [
+    "https://www.washingtonpost.com/graphics/2019/investigations/afghanistan-papers/afghanistan-war-confidential-documents/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 6,
+      "2": 8,
+      "3": 7,
+      "4": 10,
+      "5": 6,
+      "6": 6,
+      "7": 5,
+      "8": 7,
+      "9": 5,
+      "10": 7,
+      "11": 3,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:veteran",
+        "circumstance-layer:addiction",
+        "keyword:legal",
+        "explicit:6"
+      ],
+      "2": [
+        "keyword:benefit",
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance-layer:homeless",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:mental_illness",
+        "circumstance:trauma",
+        "circumstance:addiction",
+        "circumstance-layer:veteran",
+        "system:VA hospitals",
+        "system:mental health",
+        "keyword:health",
+        "explicit:9"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "keyword:home",
+        "keyword:tent",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance-layer:veteran",
+        "explicit:6"
+      ],
+      "7": [
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:addiction",
+        "circumstance-layer:homeless",
+        "explicit:7"
+      ],
+      "9": [
+        "keyword:lead",
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:mental_illness",
+        "circumstance-layer:trauma",
+        "explicit:7"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 76,
+    "average_score": 6.3,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 7
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.970Z"
+}

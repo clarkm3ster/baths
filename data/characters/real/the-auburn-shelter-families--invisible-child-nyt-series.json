@@ -1,0 +1,166 @@
+{
+  "id": "the-auburn-shelter-families--invisible-child-nyt-series",
+  "name": "The Auburn Shelter Families",
+  "real_or_fictional": "real",
+  "source_work": "Invisible Child (NYT Series)",
+  "source_author_creator": "Andrea Elliott",
+  "source_year": 2013,
+  "circumstances": [
+    "homeless",
+    "shelter",
+    "poverty",
+    "single_parent"
+  ],
+  "location": "Brooklyn, NY (Auburn Family Residence)",
+  "time_period": "2012-2013",
+  "systems_touched": [
+    "NYC Department of Homeless Services",
+    "shelters",
+    "schools",
+    "Medicaid",
+    "SNAP",
+    "child welfare"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 9,
+    "3": 7,
+    "4": 6,
+    "5": 10,
+    "6": 5,
+    "7": 7,
+    "8": 8,
+    "9": 8,
+    "10": 6,
+    "11": 4,
+    "12": 5
+  },
+  "key_relationships": [
+    "Other shelter families",
+    "Shelter staff",
+    "Teachers"
+  ],
+  "narrative_arc": "Beyond Dasani, Elliott documented the Auburn shelter system itself — 433 children in a former jail, sharing one communal bathroom per floor, passing through metal detectors to enter their home. The 5-part NYT series is a systems map of how NYC warehouses its homeless children.",
+  "why_this_character_matters": "The Auburn families collectively map the shelter system as environment. Their dome reveals Layer 9 (Environment) inside a shelter — the physical conditions that are supposed to be temporary but become years.",
+  "source_urls": [
+    "https://www.nytimes.com/projects/2013/invisible-child/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 9,
+      "3": 7,
+      "4": 6,
+      "5": 10,
+      "6": 5,
+      "7": 7,
+      "8": 8,
+      "9": 8,
+      "10": 6,
+      "11": 4,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:5"
+      ],
+      "2": [
+        "circumstance-layer:shelter",
+        "system:Medicaid",
+        "system:SNAP",
+        "system:child welfare",
+        "keyword:form",
+        "explicit:9"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:homeless",
+        "circumstance-layer:single_parent",
+        "explicit:7"
+      ],
+      "4": [
+        "system:Medicaid",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:homeless",
+        "circumstance:shelter",
+        "circumstance-layer:poverty",
+        "system:shelters",
+        "keyword:hous",
+        "keyword:home",
+        "keyword:shelter",
+        "keyword:room",
+        "keyword:homeless",
+        "explicit:10"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:single_parent",
+        "explicit:5"
+      ],
+      "7": [
+        "system:schools",
+        "explicit:7"
+      ],
+      "8": [
+        "circumstance:single_parent",
+        "circumstance-layer:homeless",
+        "explicit:8"
+      ],
+      "9": [
+        "system:NYC Department of Homeless Services",
+        "keyword:environment",
+        "explicit:8"
+      ],
+      "10": [
+        "explicit:6"
+      ],
+      "11": [
+        "keyword:art",
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 80,
+    "average_score": 6.7,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 9,
+        "name": "Environment",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.975Z"
+}

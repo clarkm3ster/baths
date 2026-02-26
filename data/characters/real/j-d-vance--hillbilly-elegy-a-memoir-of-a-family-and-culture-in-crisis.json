@@ -1,0 +1,165 @@
+{
+  "id": "j-d-vance--hillbilly-elegy-a-memoir-of-a-family-and-culture-in-crisis",
+  "name": "J.D. Vance",
+  "real_or_fictional": "real",
+  "source_work": "Hillbilly Elegy: A Memoir of a Family and Culture in Crisis",
+  "source_author_creator": "J.D. Vance",
+  "source_year": 2016,
+  "circumstances": [
+    "poverty",
+    "addiction",
+    "domestic_violence",
+    "foster_care",
+    "trauma"
+  ],
+  "location": "Middletown, OH; Jackson, KY",
+  "time_period": "1984-2010s",
+  "systems_touched": [
+    "schools",
+    "child welfare",
+    "military (Marines)",
+    "universities",
+    "legal system"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 5,
+    "3": 7,
+    "4": 6,
+    "5": 7,
+    "6": 8,
+    "7": 8,
+    "8": 8,
+    "9": 6,
+    "10": 7,
+    "11": 4,
+    "12": 7
+  },
+  "key_relationships": [
+    "Mamaw (grandmother)",
+    "Bev (mother)",
+    "Lindsay (sister)",
+    "Usha (wife)"
+  ],
+  "narrative_arc": "Child of addiction and instability who made it to Yale Law School. The memoir documents the Appalachian family structure, the decline of Middletown, the role of grandparents as stabilizers, and how the military provided the structure his family couldn't.",
+  "why_this_character_matters": "Vance's dome is a rare upward-mobility case. Comparing it to static-poverty domes reveals which systems enabled escape and which trapped others. The grandmother (Mamaw) is the key variable — community as rescue.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 5,
+      "3": 7,
+      "4": 9,
+      "5": 7,
+      "6": 8,
+      "7": 8,
+      "8": 10,
+      "9": 6,
+      "10": 7,
+      "11": 4,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:addiction",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:foster_care",
+        "keyword:law",
+        "explicit:5"
+      ],
+      "2": [
+        "circumstance:foster_care",
+        "system:child welfare",
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "4": [
+        "circumstance:addiction",
+        "circumstance:trauma",
+        "circumstance-layer:domestic_violence",
+        "keyword:addict",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "explicit:8"
+      ],
+      "7": [
+        "circumstance:foster_care",
+        "system:schools",
+        "keyword:school",
+        "explicit:8"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:foster_care",
+        "circumstance-layer:addiction",
+        "keyword:communit",
+        "keyword:family",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:trauma",
+        "keyword:escape",
+        "explicit:7"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 85,
+    "average_score": 7.1,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 9
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 8
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 8
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.939Z"
+}

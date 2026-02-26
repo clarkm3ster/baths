@@ -1,0 +1,168 @@
+{
+  "id": "the-dual-eligible-elders--cms-dual-eligible-demonstration-evaluation",
+  "name": "The Dual-Eligible Elders",
+  "real_or_fictional": "real",
+  "source_work": "CMS Dual-Eligible Demonstration Evaluation",
+  "source_author_creator": "Centers for Medicare & Medicaid Services",
+  "source_year": 2020,
+  "circumstances": [
+    "elderly",
+    "disability",
+    "chronic_illness",
+    "poverty",
+    "isolation"
+  ],
+  "location": "Multiple states",
+  "time_period": "2015-2020",
+  "systems_touched": [
+    "Medicare",
+    "Medicaid",
+    "nursing homes",
+    "home health aides",
+    "hospitals",
+    "pharmacies",
+    "disability services",
+    "food delivery"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 10,
+    "3": 9,
+    "4": 9,
+    "5": 7,
+    "6": 4,
+    "7": 3,
+    "8": 7,
+    "9": 5,
+    "10": 6,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Home health aides",
+    "Case managers",
+    "Family members",
+    "Doctors"
+  ],
+  "narrative_arc": "CMS documented elderly people simultaneously enrolled in Medicare and Medicaid — the most system-intensive population in America. Each person navigates two parallel bureaucracies with different rules, different providers, different formularies. The demonstration tried to coordinate them and documented the staggering complexity.",
+  "why_this_character_matters": "Dual-eligible elders are the human proof of fragmentation cost. Their domes have the richest Layer 2 (Systems) of any population — two complete insurance bureaucracies, each with its own portal, its own forms, its own appeals process. The fragmented vs. coordinated cost delta is highest here.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "case-studies",
+  "_source_label": "Case Studies & Testimony",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 10,
+      "3": 9,
+      "4": 10,
+      "5": 7,
+      "6": 7,
+      "7": 3,
+      "8": 7,
+      "9": 5,
+      "10": 6,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "keyword:appeal",
+        "explicit:5"
+      ],
+      "2": [
+        "system:Medicaid",
+        "system:disability services",
+        "keyword:eligib",
+        "keyword:portal",
+        "keyword:form",
+        "explicit:10"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:elderly",
+        "circumstance-layer:chronic_illness",
+        "keyword:cost",
+        "keyword:rent",
+        "explicit:9"
+      ],
+      "4": [
+        "circumstance:disability",
+        "circumstance:chronic_illness",
+        "circumstance-layer:elderly",
+        "circumstance-layer:isolation",
+        "system:Medicare",
+        "system:Medicaid",
+        "system:hospitals",
+        "explicit:9"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:disability",
+        "circumstance-layer:chronic_illness",
+        "explicit:4"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance:elderly",
+        "circumstance:isolation",
+        "explicit:7"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance-layer:disability",
+        "circumstance-layer:isolation",
+        "explicit:6"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 77,
+    "average_score": 6.4,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 10
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 9
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.981Z"
+}

@@ -1,0 +1,166 @@
+{
+  "id": "tara-westover--educated",
+  "name": "Tara Westover",
+  "real_or_fictional": "real",
+  "source_work": "Educated",
+  "source_author_creator": "Tara Westover",
+  "source_year": 2018,
+  "circumstances": [
+    "isolation",
+    "domestic_violence",
+    "poverty",
+    "illiterate",
+    "uninsured",
+    "child_labor"
+  ],
+  "location": "Buck's Peak, ID; Provo, UT; Cambridge, UK",
+  "time_period": "1986-2014",
+  "systems_touched": [
+    "homeschooling (non)system",
+    "BYU",
+    "Cambridge University",
+    "hospitals (avoided)",
+    "birth certificates (lacked)"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 3,
+    "3": 5,
+    "4": 7,
+    "5": 6,
+    "6": 6,
+    "7": 10,
+    "8": 8,
+    "9": 6,
+    "10": 9,
+    "11": 6,
+    "12": 9
+  },
+  "key_relationships": [
+    "Gene (father)",
+    "Faye (mother)",
+    "Shawn (brother)",
+    "Tyler (brother)",
+    "Professors"
+  ],
+  "narrative_arc": "Never attended school, no birth certificate until age 9, no medical care, working in her father's junkyard. Self-educated her way to a PhD from Cambridge. Westover documents the total absence of systems — what a dome looks like when almost every layer is empty by design.",
+  "why_this_character_matters": "Tara's dome is defined by absence. Most layers are deliberately empty — no schooling, no healthcare, no government contact. Her dome reveals what happens when Layer 7 (Education) is the single pathway out and every other layer is hostile.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 3,
+      "3": 5,
+      "4": 10,
+      "5": 6,
+      "6": 9,
+      "7": 10,
+      "8": 8,
+      "9": 6,
+      "10": 9,
+      "11": 6,
+      "12": 9
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:domestic_violence",
+        "explicit:5"
+      ],
+      "2": [
+        "circumstance-layer:uninsured",
+        "explicit:3"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:uninsured",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance:uninsured",
+        "circumstance-layer:isolation",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:child_labor",
+        "system:hospitals (avoided)",
+        "keyword:health",
+        "explicit:7"
+      ],
+      "5": [
+        "circumstance-layer:poverty",
+        "explicit:6"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:child_labor",
+        "circumstance-layer:illiterate",
+        "keyword:work",
+        "explicit:6"
+      ],
+      "7": [
+        "circumstance:illiterate",
+        "circumstance-layer:child_labor",
+        "keyword:school",
+        "keyword:educat",
+        "explicit:10"
+      ],
+      "8": [
+        "circumstance:isolation",
+        "circumstance:domestic_violence",
+        "explicit:8"
+      ],
+      "9": [
+        "explicit:6"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:isolation",
+        "circumstance-layer:illiterate",
+        "circumstance-layer:child_labor",
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:9"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 86,
+    "average_score": 7.2,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 10
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 9
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.942Z"
+}

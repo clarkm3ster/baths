@@ -1,0 +1,155 @@
+{
+  "id": "william-gates--hoop-dreams",
+  "name": "William Gates",
+  "real_or_fictional": "real",
+  "source_work": "Hoop Dreams",
+  "source_author_creator": "Steve James, Frederick Marx, Peter Gilbert",
+  "source_year": 1994,
+  "circumstances": [
+    "poverty",
+    "housing_insecure",
+    "dropout"
+  ],
+  "location": "Cabrini-Green, Chicago, IL; Suburban Chicago",
+  "time_period": "1986-1991",
+  "systems_touched": [
+    "public schools",
+    "private schools (St. Joseph)",
+    "basketball recruitment",
+    "college athletics",
+    "public housing"
+  ],
+  "dome_layer_richness": {
+    "1": 4,
+    "2": 5,
+    "3": 7,
+    "4": 5,
+    "5": 8,
+    "6": 7,
+    "7": 8,
+    "8": 9,
+    "9": 7,
+    "10": 7,
+    "11": 6,
+    "12": 7
+  },
+  "key_relationships": [
+    "Arthur Agee",
+    "Emma Gates (mother)",
+    "Curtis Gates (brother)",
+    "Coach Pingatore",
+    "Family"
+  ],
+  "narrative_arc": "Recruited from Cabrini-Green to a suburban private school for basketball. The documentary follows him for 5 years — the bus commute between worlds, the knee injury that threatens everything, the academic gaps between his neighborhood school and St. Joseph's, the weight of being his family's lottery ticket.",
+  "why_this_character_matters": "William's dome maps the recruitment pipeline — how athletics becomes the only visible pathway out of public housing, and how that pathway requires navigating two completely different dome environments (Cabrini-Green and suburban Chicago) simultaneously.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "film-tv",
+  "_source_label": "Film, TV & Documentary",
+  "richness": {
+    "layer_scores": {
+      "1": 4,
+      "2": 5,
+      "3": 7,
+      "4": 5,
+      "5": 9,
+      "6": 7,
+      "7": 8,
+      "8": 9,
+      "9": 7,
+      "10": 7,
+      "11": 6,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:4"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:housing_insecure",
+        "keyword:rent",
+        "explicit:7"
+      ],
+      "4": [
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:public housing",
+        "keyword:hous",
+        "keyword:rent",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:dropout",
+        "explicit:7"
+      ],
+      "7": [
+        "circumstance:dropout",
+        "system:public schools",
+        "system:private schools (St. Joseph)",
+        "keyword:school",
+        "explicit:8"
+      ],
+      "8": [
+        "keyword:neighbor",
+        "keyword:family",
+        "explicit:9"
+      ],
+      "9": [
+        "keyword:environment",
+        "explicit:7"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:6"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 81,
+    "average_score": 6.8,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 7,
+        "name": "Education",
+        "score": 8
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 7
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:39.033Z"
+}

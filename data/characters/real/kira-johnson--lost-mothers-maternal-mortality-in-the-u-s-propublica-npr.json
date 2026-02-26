@@ -1,0 +1,145 @@
+{
+  "id": "kira-johnson--lost-mothers-maternal-mortality-in-the-u-s-propublica-npr",
+  "name": "Kira Johnson",
+  "real_or_fictional": "real",
+  "source_work": "Lost Mothers: Maternal Mortality in the U.S. (ProPublica/NPR)",
+  "source_author_creator": "ProPublica & NPR",
+  "source_year": 2017,
+  "circumstances": [
+    "terminal_illness",
+    "bereavement"
+  ],
+  "location": "Los Angeles, CA",
+  "time_period": "2016",
+  "systems_touched": [
+    "Cedars-Sinai Hospital",
+    "insurance",
+    "obstetric care",
+    "emergency surgery"
+  ],
+  "dome_layer_richness": {
+    "1": 7,
+    "2": 5,
+    "3": 6,
+    "4": 10,
+    "5": 3,
+    "6": 4,
+    "7": 3,
+    "8": 5,
+    "9": 3,
+    "10": 8,
+    "11": 3,
+    "12": 6
+  },
+  "key_relationships": [
+    "Charles Johnson IV (husband)",
+    "Langston (son)",
+    "Medical staff"
+  ],
+  "narrative_arc": "Died of internal bleeding after a routine cesarean section at Cedars-Sinai. Her husband begged staff for 10 hours to check on her while her condition deteriorated. ProPublica documented how the hospital ignored a Black woman's pain until it was too late — in one of the best-resourced hospitals in America.",
+  "why_this_character_matters": "Kira's dome reveals maternal mortality architecture. Layer 4 (Health) shows exactly where the medical system failed — not from lack of resources but from failure to listen. Her case launched a national investigation into why the US has the highest maternal mortality rate in the developed world.",
+  "source_urls": [
+    "https://www.propublica.org/article/lost-mothers-maternal-health-died-childbirth-pregnancy"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 7,
+      "2": 5,
+      "3": 6,
+      "4": 10,
+      "5": 3,
+      "6": 4,
+      "7": 3,
+      "8": 5,
+      "9": 3,
+      "10": 8,
+      "11": 3,
+      "12": 6
+    },
+    "layer_evidence": {
+      "1": [
+        "explicit:7"
+      ],
+      "2": [
+        "explicit:5"
+      ],
+      "3": [
+        "circumstance-layer:terminal_illness",
+        "circumstance-layer:bereavement",
+        "explicit:6"
+      ],
+      "4": [
+        "circumstance:terminal_illness",
+        "circumstance-layer:bereavement",
+        "system:insurance",
+        "keyword:health",
+        "keyword:hospital",
+        "keyword:pain",
+        "explicit:10"
+      ],
+      "5": [
+        "explicit:3"
+      ],
+      "6": [
+        "explicit:4"
+      ],
+      "7": [
+        "explicit:3"
+      ],
+      "8": [
+        "circumstance-layer:bereavement",
+        "explicit:5"
+      ],
+      "9": [
+        "explicit:3"
+      ],
+      "10": [
+        "explicit:8"
+      ],
+      "11": [
+        "explicit:3"
+      ],
+      "12": [
+        "circumstance:terminal_illness",
+        "explicit:6"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 63,
+    "average_score": 5.3,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 8
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 7
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 6
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 6
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.959Z"
+}

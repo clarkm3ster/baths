@@ -1,0 +1,154 @@
+{
+  "id": "george-takei-as-child--they-called-us-enemy",
+  "name": "George Takei (as child)",
+  "real_or_fictional": "real",
+  "source_work": "They Called Us Enemy",
+  "source_author_creator": "George Takei, Justin Eisinger, Steven Scott",
+  "source_year": 2019,
+  "circumstances": [
+    "detained",
+    "displaced",
+    "housing_insecure",
+    "surveillance"
+  ],
+  "location": "Los Angeles, CA; Rohwer, AR; Tule Lake, CA",
+  "time_period": "1942-1946",
+  "systems_touched": [
+    "War Relocation Authority",
+    "internment camps",
+    "military",
+    "schools (in camp)",
+    "loyalty questionnaires"
+  ],
+  "dome_layer_richness": {
+    "1": 9,
+    "2": 7,
+    "3": 6,
+    "4": 5,
+    "5": 8,
+    "6": 7,
+    "7": 6,
+    "8": 8,
+    "9": 7,
+    "10": 9,
+    "11": 5,
+    "12": 7
+  },
+  "key_relationships": [
+    "Parents",
+    "Siblings",
+    "Camp community"
+  ],
+  "narrative_arc": "Five years old when his family was forced into internment. Takei documents the logistics of mass detention — the property seizures, the identification numbers, the barracks, the barbed wire, the loyalty tests. A child's experience of state power exercised against an entire ethnic group.",
+  "why_this_character_matters": "George's dome is state-sponsored displacement documented from a child's perspective. Every layer was simultaneously disrupted by a single government order. His dome reveals the total cost of mass detention — and the systems required to execute it.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 9,
+      "2": 7,
+      "3": 6,
+      "4": 5,
+      "5": 10,
+      "6": 7,
+      "7": 6,
+      "8": 8,
+      "9": 7,
+      "10": 9,
+      "11": 5,
+      "12": 7
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:detained",
+        "circumstance:surveillance",
+        "explicit:9"
+      ],
+      "2": [
+        "explicit:7"
+      ],
+      "3": [
+        "circumstance-layer:housing_insecure",
+        "keyword:cost",
+        "explicit:6"
+      ],
+      "4": [
+        "explicit:5"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance:housing_insecure",
+        "circumstance-layer:detained",
+        "keyword:tent",
+        "keyword:displac",
+        "explicit:8"
+      ],
+      "6": [
+        "explicit:7"
+      ],
+      "7": [
+        "system:schools (in camp)",
+        "explicit:6"
+      ],
+      "8": [
+        "circumstance-layer:displaced",
+        "circumstance-layer:surveillance",
+        "keyword:family",
+        "explicit:8"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:detained",
+        "circumstance:surveillance",
+        "keyword:power",
+        "explicit:9"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:5"
+      ],
+      "12": [
+        "explicit:7"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 86,
+    "average_score": 7.2,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 9
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.950Z"
+}

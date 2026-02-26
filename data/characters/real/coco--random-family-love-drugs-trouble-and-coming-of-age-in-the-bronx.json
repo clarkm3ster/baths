@@ -1,0 +1,173 @@
+{
+  "id": "coco--random-family-love-drugs-trouble-and-coming-of-age-in-the-bronx",
+  "name": "Coco",
+  "real_or_fictional": "real",
+  "source_work": "Random Family: Love, Drugs, Trouble, and Coming of Age in the Bronx",
+  "source_author_creator": "Adrian Nicole LeBlanc",
+  "source_year": 2003,
+  "circumstances": [
+    "poverty",
+    "single_parent",
+    "domestic_violence",
+    "housing_insecure",
+    "dropout",
+    "trauma"
+  ],
+  "location": "Bronx, NY; Troy, NY",
+  "time_period": "1988-2000",
+  "systems_touched": [
+    "welfare",
+    "public housing",
+    "WIC",
+    "SNAP",
+    "Medicaid",
+    "schools",
+    "child welfare",
+    "domestic violence services"
+  ],
+  "dome_layer_richness": {
+    "1": 5,
+    "2": 8,
+    "3": 8,
+    "4": 6,
+    "5": 8,
+    "6": 7,
+    "7": 5,
+    "8": 9,
+    "9": 5,
+    "10": 6,
+    "11": 4,
+    "12": 5
+  },
+  "key_relationships": [
+    "Jessica",
+    "Cesar (partner)",
+    "Mercedes, Nikki, Nautica, Pearl (daughters)",
+    "Foxy (mother)"
+  ],
+  "narrative_arc": "Navigates welfare, public housing, and raising four daughters largely alone while partners cycle through incarceration. LeBlanc documents every welfare appointment, every housing application, every school enrollment — the bureaucratic texture of poverty.",
+  "why_this_character_matters": "Coco's dome would be the most detailed map of Layer 2 (Systems) ever built. LeBlanc documented her bureaucratic navigation with extraordinary precision — every form, every office, every denial and approval.",
+  "source_urls": [],
+  "scraped_at": "2026-02-26T21:44:38.892Z",
+  "_source_category": "nonfiction",
+  "_source_label": "Nonfiction Books",
+  "richness": {
+    "layer_scores": {
+      "1": 5,
+      "2": 10,
+      "3": 8,
+      "4": 7,
+      "5": 8,
+      "6": 7,
+      "7": 6,
+      "8": 9,
+      "9": 5,
+      "10": 6,
+      "11": 4,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:domestic_violence",
+        "explicit:5"
+      ],
+      "2": [
+        "system:welfare",
+        "system:WIC",
+        "system:SNAP",
+        "system:Medicaid",
+        "system:child welfare",
+        "keyword:application",
+        "keyword:form",
+        "explicit:8"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance-layer:single_parent",
+        "circumstance-layer:housing_insecure",
+        "explicit:8"
+      ],
+      "4": [
+        "circumstance:trauma",
+        "circumstance-layer:domestic_violence",
+        "system:Medicaid",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "system:public housing",
+        "keyword:hous",
+        "explicit:8"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance-layer:single_parent",
+        "circumstance-layer:dropout",
+        "explicit:7"
+      ],
+      "7": [
+        "circumstance:dropout",
+        "system:schools",
+        "keyword:school",
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:single_parent",
+        "circumstance:domestic_violence",
+        "explicit:9"
+      ],
+      "9": [
+        "explicit:5"
+      ],
+      "10": [
+        "circumstance:domestic_violence",
+        "circumstance-layer:trauma",
+        "explicit:6"
+      ],
+      "11": [
+        "circumstance-layer:trauma",
+        "keyword:art",
+        "keyword:sing",
+        "explicit:4"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 80,
+    "average_score": 6.7,
+    "dome_minimum": 5,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 2,
+        "name": "Systems",
+        "score": 10
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 9
+      },
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 8
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 8
+      },
+      {
+        "layer": 4,
+        "name": "Health",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.917Z"
+}

@@ -1,0 +1,160 @@
+{
+  "id": "harriet-jacobs--incidents-in-the-life-of-a-slave-girl",
+  "name": "Harriet Jacobs",
+  "real_or_fictional": "real",
+  "source_work": "Incidents in the Life of a Slave Girl",
+  "source_author_creator": "Harriet Jacobs (as Linda Brent)",
+  "source_year": 1861,
+  "circumstances": [
+    "enslaved",
+    "domestic_violence",
+    "trafficking",
+    "housing_insecure",
+    "refugee"
+  ],
+  "location": "Edenton, NC; Philadelphia, PA; New York City, NY",
+  "time_period": "1813-1897",
+  "systems_touched": [
+    "slavery",
+    "Fugitive Slave Act",
+    "abolitionist networks",
+    "domestic service"
+  ],
+  "dome_layer_richness": {
+    "1": 10,
+    "2": 4,
+    "3": 5,
+    "4": 6,
+    "5": 9,
+    "6": 6,
+    "7": 5,
+    "8": 8,
+    "9": 7,
+    "10": 10,
+    "11": 7,
+    "12": 8
+  },
+  "key_relationships": [
+    "Dr. Norcom (enslaver)",
+    "Children",
+    "Grandmother",
+    "Abolitionist allies"
+  ],
+  "narrative_arc": "Hid in a crawl space above her grandmother's house for 7 years to escape her enslaver. The crawl space was 3 feet high, unheated, and without light. She endured it to stay near her children. Eventually escaped North. Her narrative is the most detailed first-person account of enslaved women's experience.",
+  "why_this_character_matters": "Harriet's dome maps the architecture of escape from slavery. Layer 5 (Housing) includes 7 years in a 3-foot crawl space — the most extreme housing documentation in this catalog. Layer 10 (Autonomy) maps the precise mechanics of unfreedom.",
+  "source_urls": [
+    "https://docsouth.unc.edu/fpn/jacobs/jacobs.html"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "oral-histories",
+  "_source_label": "Oral Histories & Memoirs",
+  "richness": {
+    "layer_scores": {
+      "1": 10,
+      "2": 4,
+      "3": 5,
+      "4": 6,
+      "5": 9,
+      "6": 6,
+      "7": 5,
+      "8": 8,
+      "9": 7,
+      "10": 10,
+      "11": 7,
+      "12": 8
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance:enslaved",
+        "circumstance:trafficking",
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:refugee",
+        "explicit:10"
+      ],
+      "2": [
+        "explicit:4"
+      ],
+      "3": [
+        "circumstance-layer:housing_insecure",
+        "explicit:5"
+      ],
+      "4": [
+        "circumstance-layer:domestic_violence",
+        "circumstance-layer:trafficking",
+        "explicit:6"
+      ],
+      "5": [
+        "circumstance:housing_insecure",
+        "circumstance-layer:refugee",
+        "keyword:hous",
+        "explicit:9"
+      ],
+      "6": [
+        "explicit:6"
+      ],
+      "7": [
+        "explicit:5"
+      ],
+      "8": [
+        "circumstance:domestic_violence",
+        "circumstance:refugee",
+        "explicit:8"
+      ],
+      "9": [
+        "keyword:heat",
+        "explicit:7"
+      ],
+      "10": [
+        "circumstance:enslaved",
+        "circumstance:domestic_violence",
+        "circumstance:trafficking",
+        "keyword:freedom",
+        "keyword:autonomy",
+        "keyword:escape",
+        "explicit:10"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:7"
+      ],
+      "12": [
+        "circumstance-layer:enslaved",
+        "explicit:8"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 85,
+    "average_score": 7.1,
+    "dome_minimum": 4,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 10
+      },
+      {
+        "layer": 10,
+        "name": "Autonomy",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 9
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 12,
+        "name": "Flourishing",
+        "score": 8
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.992Z"
+}

@@ -1,0 +1,156 @@
+{
+  "id": "clyde-ross--the-case-for-reparations-the-atlantic-the-1619-project",
+  "name": "Clyde Ross",
+  "real_or_fictional": "real",
+  "source_work": "The Case for Reparations (The Atlantic) / The 1619 Project",
+  "source_author_creator": "Ta-Nehisi Coates",
+  "source_year": 2014,
+  "circumstances": [
+    "poverty",
+    "displaced",
+    "housing_insecure",
+    "debt"
+  ],
+  "location": "Clarksdale, MS → Chicago, IL (North Lawndale)",
+  "time_period": "1940s-2010s",
+  "systems_touched": [
+    "sharecropping",
+    "contract buying (predatory housing)",
+    "FHA (denied)",
+    "banks",
+    "courts",
+    "Contract Buyers League"
+  ],
+  "dome_layer_richness": {
+    "1": 8,
+    "2": 6,
+    "3": 10,
+    "4": 3,
+    "5": 10,
+    "6": 7,
+    "7": 4,
+    "8": 8,
+    "9": 5,
+    "10": 7,
+    "11": 3,
+    "12": 5
+  },
+  "key_relationships": [
+    "Wife",
+    "Children",
+    "Contract Buyers League members"
+  ],
+  "narrative_arc": "Fled Mississippi sharecropping for Chicago, where he was sold a house on contract — a predatory financing scheme that charged inflated prices with no equity until the final payment. One missed payment and you lost everything. Coates documents the exact financial architecture of racial housing exploitation.",
+  "why_this_character_matters": "Clyde's dome is the definitive map of racialized housing economics. Layer 3 (Fiscal) and Layer 5 (Housing) are documented with forensic precision — the exact numbers showing how contract buying extracted wealth from Black neighborhoods.",
+  "source_urls": [
+    "https://www.theatlantic.com/magazine/archive/2014/06/the-case-for-reparations/361631/"
+  ],
+  "scraped_at": "2026-02-26T21:44:38.893Z",
+  "_source_category": "journalism",
+  "_source_label": "Investigative Journalism",
+  "richness": {
+    "layer_scores": {
+      "1": 8,
+      "2": 6,
+      "3": 10,
+      "4": 3,
+      "5": 10,
+      "6": 7,
+      "7": 4,
+      "8": 8,
+      "9": 5,
+      "10": 7,
+      "11": 3,
+      "12": 5
+    },
+    "layer_evidence": {
+      "1": [
+        "circumstance-layer:debt",
+        "system:courts",
+        "explicit:8"
+      ],
+      "2": [
+        "explicit:6"
+      ],
+      "3": [
+        "circumstance:poverty",
+        "circumstance:debt",
+        "circumstance-layer:housing_insecure",
+        "keyword:pay",
+        "keyword:price",
+        "explicit:10"
+      ],
+      "4": [
+        "explicit:3"
+      ],
+      "5": [
+        "circumstance:displaced",
+        "circumstance:housing_insecure",
+        "circumstance-layer:poverty",
+        "keyword:hous",
+        "explicit:10"
+      ],
+      "6": [
+        "circumstance:poverty",
+        "circumstance:debt",
+        "explicit:7"
+      ],
+      "7": [
+        "explicit:4"
+      ],
+      "8": [
+        "circumstance-layer:displaced",
+        "keyword:neighbor",
+        "explicit:8"
+      ],
+      "9": [
+        "circumstance-layer:displaced",
+        "explicit:5"
+      ],
+      "10": [
+        "explicit:7"
+      ],
+      "11": [
+        "keyword:sing",
+        "explicit:3"
+      ],
+      "12": [
+        "explicit:5"
+      ]
+    },
+    "filled_layers": 12,
+    "total_score": 76,
+    "average_score": 6.3,
+    "dome_minimum": 3,
+    "dome_buildability": "high",
+    "richest_layers": [
+      {
+        "layer": 3,
+        "name": "Fiscal",
+        "score": 10
+      },
+      {
+        "layer": 5,
+        "name": "Housing",
+        "score": 10
+      },
+      {
+        "layer": 1,
+        "name": "Legal",
+        "score": 8
+      },
+      {
+        "layer": 8,
+        "name": "Community",
+        "score": 8
+      },
+      {
+        "layer": 6,
+        "name": "Economic",
+        "score": 7
+      }
+    ],
+    "thinnest_layers": []
+  },
+  "indexed_at": "2026-02-26T21:44:38.960Z"
+}
