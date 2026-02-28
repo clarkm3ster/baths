@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOMES v2 — Digital Twin of Robert Jackson</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   DOMES v2 — DARK MEDICAL COMMAND CENTER
+   meets PHILOSOPHICAL OBSERVATORY
+   ============================================ */
+
+:root {
+  /* Core palette */
+  --bg-void: #050508;
+  --bg-primary: #0a0a10;
+  --bg-secondary: #0e0e18;
+  --bg-panel: #111120;
+  --bg-panel-hover: #16162a;
+  --border-dim: #1a1a2e;
+  --border-glow: #2a2a4a;
+
+  /* Teal spectrum */
+  --teal-dark: #0a3d3d;
+  --teal: #0d8a8a;
+  --teal-light: #14b8a6;
+  --teal-glow: #2dd4bf;
+  --teal-faint: rgba(13, 138, 138, 0.08);
+
+  /* Amber/Warning spectrum */
+  --amber-dark: #5c3a0a;
+  --amber: #d4890a;
+  --amber-light: #f5a623;
+  --amber-glow: #fbbf24;
+  --amber-pulse: rgba(245, 166, 35, 0.15);
+
+  /* Red/Critical spectrum */
+  --red-dark: #4a0a0a;
+  --red: #dc2626;
+  --red-light: #ef4444;
+  --red-glow: #f87171;
+  --red-pulse: rgba(220, 38, 38, 0.12);
+
+  /* Green */
+  --green: #10b981;
+  --green-light: #34d399;
+
+  /* Text */
+  --text-primary: #e4e4f0;
+  --text-secondary: #8888a8;
+  --text-dim: #555570;
+  --text-bright: #f0f0ff;
+
+  /* Fonts */
+  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+  --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Background grain/texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(13, 138, 138, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(212, 137, 10, 0.02) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(10, 10, 16, 0.95) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-void); }
+::-webkit-scrollbar-thumb { background: var(--border-glow); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--teal-dark); }
+
+/* ====== LAYOUT ====== */
+.dashboard {
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+}
+
+/* ====== HEADER ====== */
+.header {
+  border-bottom: 1px solid var(--border-dim);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-bright);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.header-title span.v2 {
+  color: var(--teal);
+  font-weight: 600;
+}
+
+.header-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+
+.header-metrics {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.metric-badge {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  padding: 8px 14px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.metric-badge.twin-state {
+  border-color: var(--teal-dark);
+  background: var(--teal-faint);
+}
+
+.metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+
+.metric-value {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.metric-value.teal { color: var(--teal-light); }
+.metric-value.amber { color: var(--amber-light); }
+.metric-value.red { color: var(--red-light); }
+
+.twin-state-stages {
+  display: flex;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.stage-pip {
+  width: 16px;
+  height: 3px;
+  border-radius: 1px;
+  background: var(--border-dim);
+}
+
+.stage-pip.active {
+  background: var(--teal);
+}
+
+.stage-pip.current {
+  background: var(--teal-glow);
+  box-shadow: 0 0 6px var(--teal);
+}
+
+.compute-bar {
+  width: 100%;
+  height: 3px;
+  background: var(--bg-void);
+  border-radius: 2px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.compute-bar-fill {
+  height: 100%;
+  width: 4.2%;
+  background: linear-gradient(90deg, var(--teal), var(--teal-glow));
+  border-radius: 2px;
+  transition: width 2s ease;
+}
+
+/* ====== GRID LAYOUT ====== */
+.grid-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-main .full-width {
+  grid-column: 1 / -1;
+}
+
+.grid-triple {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ====== PANELS ====== */
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-glow), transparent);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.panel-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.panel-status {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+}
+
+/* ====== SECTION 1: FLOURISHING DOME ====== */
+.flourishing-section {
+  grid-column: 1 / -1;
+}
+
+.dome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.dome-chart-wrapper {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  flex-shrink: 0;
+}
+
+.dome-center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+  background: rgba(10, 10, 16, 0.85);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-dim);
+}
+
+.dome-center-score {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--amber-light);
+  line-height: 1;
+}
+
+.dome-center-status {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--amber-glow);
+  letter-spacing: 0.15em;
+  animation: pulseAmber 2s ease-in-out infinite;
+  margin-top: 2px;
+}
+
+@keyframes pulseAmber {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.dome-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.domain-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.domain-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: var(--bg-secondary);
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.domain-item:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-panel-hover);
+}
+
+.domain-item.critical {
+  border-color: var(--red-dark);
+  background: var(--red-pulse);
+}
+
+.domain-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.domain-name {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  flex: 1;
+  letter-spacing: 0.04em;
+}
+
+.domain-score {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Philosophical traditions */
+.philosophy-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-dim);
+  justify-content: center;
+}
+
+.phil-item {
+  text-align: center;
+  min-width: 100px;
+}
+
+.phil-name {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.phil-score {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ====== SECTION 2: RISK DASHBOARD ====== */
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.risk-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.risk-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.risk-card.critical::after { background: var(--red); }
+.risk-card.high::after { background: var(--amber); }
+.risk-card.elevated::after { background: var(--amber-dark); }
+.risk-card.moderate::after { background: var(--teal-dark); }
+
+.risk-card.critical {
+  border-color: var(--red-dark);
+  animation: pulseRed 3s ease-in-out infinite;
+}
+
+.risk-card.high {
+  border-color: rgba(212, 137, 10, 0.3);
+}
+
+@keyframes pulseRed {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); 
+    background: var(--bg-secondary);
+  }
+  50% { 
+    box-shadow: 0 0 20px 0 rgba(220, 38, 38, 0.1); 
+    background: rgba(220, 38, 38, 0.04);
+  }
+}
+
+.risk-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.risk-timeframe {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  opacity: 0.6;
+}
+
+.risk-percent {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 4px 0;
+}
+
+.risk-percent.crit-color { color: var(--red-light); }
+.risk-percent.high-color { color: var(--amber-light); }
+.risk-percent.elev-color { color: var(--amber); }
+.risk-percent.mod-color { color: var(--teal-light); }
+
+.risk-severity {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.risk-severity.sev-critical { color: var(--red); }
+.risk-severity.sev-high { color: var(--amber); }
+.risk-severity.sev-elevated { color: var(--amber-dark); }
+.risk-severity.sev-moderate { color: var(--teal); }
+
+.sparkline-container {
+  height: 30px;
+  position: relative;
+}
+
+.sparkline-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* ====== SECTION 3: CAUSAL PATHWAYS ====== */
+.pathway-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pathway-item {
+  padding: 12px 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  border-left: 3px solid;
+}
+
+.pathway-item:nth-child(1) { border-left-color: var(--red); }
+.pathway-item:nth-child(2) { border-left-color: var(--amber); }
+.pathway-item:nth-child(3) { border-left-color: var(--amber-dark); }
+.pathway-item:nth-child(4) { border-left-color: var(--teal-dark); }
+
+.pathway-id {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.pathway-nodes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pathway-node {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-primary);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.pathway-node.trigger {
+  border-color: var(--red-dark);
+  color: var(--red-light);
+}
+
+.pathway-node.outcome {
+  border-color: var(--amber-dark);
+  color: var(--amber-light);
+}
+
+.pathway-arrow {
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin: 0 2px;
+}
+
+/* ====== SECTION 4: INTERVENTIONS ====== */
+.intervention-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intervention-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.intervention-item:hover {
+  border-color: var(--border-glow);
+}
+
+.intervention-priority {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.intervention-priority.pri-critical { color: var(--red); }
+.intervention-priority.pri-urgent { color: var(--amber); }
+.intervention-priority.pri-high { color: var(--amber-dark); }
+.intervention-priority.pri-moderate { color: var(--teal); }
+
+.intervention-body {
+  flex: 1;
+}
+
+.intervention-title {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 3px;
+}
+
+.intervention-detail {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.intervention-detail strong {
+  color: var(--teal-light);
+  font-weight: 500;
+}
+
+.intervention-rank {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--border-glow);
+  line-height: 1;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* ====== SECTION 5: FRAGMENTATION MAP ====== */
+.frag-map-container {
+  position: relative;
+}
+
+.frag-cost {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.frag-cost-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.frag-cost-value {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--red-light);
+}
+
+.frag-canvas-wrapper {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+#fragCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* ====== SECTION 6: FRAGMENT FEED ====== */
+.feed-container {
+  max-height: 460px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.feed-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-dim);
+  opacity: 0;
+  animation: fadeInFeed 0.5s ease forwards;
+}
+
+.feed-item:last-child {
+  border-bottom: none;
+}
+
+.feed-time {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  min-width: 70px;
+  white-space: nowrap;
+  padding-top: 1px;
+}
+
+.feed-body {
+  flex: 1;
+}
+
+.feed-text {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.feed-source {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+}
+
+.feed-quality {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.quality-badge {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.quality-badge.high { border-color: var(--teal-dark); color: var(--teal); }
+.quality-badge.med { border-color: var(--amber-dark); color: var(--amber); }
+.quality-badge.low { border-color: var(--red-dark); color: var(--red); }
+
+@keyframes fadeInFeed {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== SECTION 7: COMPUTE ALLOCATION ====== */
+.compute-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.compute-chart-wrapper {
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.compute-center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.compute-center-label .rate-val {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal-light);
+}
+
+.compute-center-label .rate-unit {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--text-dim);
+  display: block;
+}
+
+.compute-legend {
+  flex: 1;
+}
+
+.compute-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+}
+
+.compute-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.compute-legend-name {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.compute-legend-pct {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  border-top: 1px solid var(--border-dim);
+  padding-top: 20px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.footer-tech {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.footer-philosophy {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.footer-link {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--teal-dark);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.footer-link:hover {
+  color: var(--teal);
+}
+
+/* ====== PULSING LIVE INDICATORS ====== */
+.live-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  animation: livePulse 2s ease-in-out infinite;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.live-dot.red { background: var(--red); }
+.live-dot.amber { background: var(--amber); }
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(13, 138, 138, 0.4); }
+  50% { opacity: 0.6; box-shadow: 0 0 8px 2px rgba(13, 138, 138, 0.2); }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1200px) {
+  .grid-main { grid-template-columns: 1fr; }
+  .grid-triple { grid-template-columns: 1fr 1fr; }
+  .grid-bottom { grid-template-columns: 1fr; }
+  .risk-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .header-top { flex-direction: column; }
+  .header-metrics { flex-direction: column; align-items: flex-start; }
+  .dome-container { flex-direction: column; }
+  .dome-chart-wrapper { width: 320px; height: 320px; }
+  .domain-list { grid-template-columns: 1fr; }
+  .risk-grid { grid-template-columns: 1fr; }
+  .grid-triple { grid-template-columns: 1fr; }
+  .compute-section { flex-direction: column; }
+}
+
+/* ====== SCAN LINE EFFECT ====== */
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  opacity: 0.15;
+  animation: scanMove 8s linear infinite;
+  pointer-events: none;
+  z-index: 100;
+}
+
+@keyframes scanMove {
+  0% { top: -2px; }
+  100% { top: 100vh; }
+}
+</style>
+</head>
+<body>
+
+<div class="scanline"></div>
+
+<div class="dashboard">
+
+  <!-- ====== HEADER ====== -->
+  <header class="header">
+    <div class="header-top">
+      <div>
+        <h1 class="header-title">DOMES <span class="v2">v2</span> — Dome of Robert Jackson</h1>
+        <p class="header-subtitle">Subject 001 &nbsp;|&nbsp; Cosm × Chron = Flourishing &nbsp;|&nbsp; <span class="live-dot"></span>LIVE</p>
+      </div>
+      <div class="header-metrics">
+        <div class="metric-badge twin-state">
+          <div class="metric-label">Twin State</div>
+          <div class="metric-value teal">PREDICTIVE</div>
+          <div class="twin-state-stages">
+            <div class="stage-pip active"></div>
+            <div class="stage-pip active"></div>
+            <div class="stage-pip active"></div>
+            <div class="stage-pip current"></div>
+            <div class="stage-pip"></div>
+            <div class="stage-pip"></div>
+          </div>
+        </div>
+        <div class="metric-badge">
+          <div class="metric-label">Cosm Score</div>
+          <div class="metric-value teal">0.565</div>
+        </div>
+        <div class="metric-badge">
+          <div class="metric-label">Chron Score</div>
+          <div class="metric-value amber">0.42</div>
+        </div>
+        <div class="metric-badge">
+          <div class="metric-label">Composite</div>
+          <div class="metric-value amber">0.237</div>
+        </div>
+        <div class="metric-badge">
+          <div class="metric-label">Compute Budget</div>
+          <div class="metric-value">4.2%</div>
+          <div class="compute-bar"><div class="compute-bar-fill"></div></div>
+          <div class="metric-label" style="margin-top:2px; font-size:0.55rem;">3×10²¹ FLOPS · $33-50B · 5yr</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== SECTION 1: FLOURISHING DOME ====== -->
+  <div class="grid-main">
+    <div class="panel flourishing-section full-width">
+      <div class="panel-header">
+        <div class="panel-title"><span class="live-dot amber"></span>Flourishing Dome — 12 Domains</div>
+        <div class="panel-status">Cosm snapshot · updated 2 min ago</div>
+      </div>
+      <div class="dome-container">
+        <div class="dome-chart-wrapper">
+          <canvas id="flourishingChart"></canvas>
+          <div class="dome-center-label">
+            <div class="dome-center-score">0.095</div>
+            <div class="dome-center-status">CRISIS</div>
+          </div>
+        </div>
+        <div class="dome-details">
+          <div class="domain-list" id="domainList"></div>
+        </div>
+      </div>
+      <div class="philosophy-bar" id="philBar"></div>
+    </div>
+  </div>
+
+  <!-- ====== SECTION 2 & 3: RISK + CAUSAL ====== -->
+  <div class="grid-main">
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><span class="live-dot red"></span>Risk Dashboard</div>
+        <div class="panel-status">Predictive · 30-day window</div>
+      </div>
+      <div class="risk-grid" id="riskGrid"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Active Causal Pathways</div>
+        <div class="panel-status">4 chains detected</div>
+      </div>
+      <div class="pathway-list" id="pathwayList"></div>
+    </div>
+  </div>
+
+  <!-- ====== SECTION 4 & 5: INTERVENTIONS + FRAGMENTATION ====== -->
+  <div class="grid-main">
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><span class="live-dot"></span>Recommended Interventions</div>
+        <div class="panel-status">Ranked by expected impact</div>
+      </div>
+      <div class="intervention-list" id="interventionList"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">System Fragmentation Map</div>
+        <div class="panel-status">9 systems · 6 data gaps</div>
+      </div>
+      <div class="frag-map-container">
+        <div class="frag-cost">
+          <div class="frag-cost-label">Annual Cost of Fragmentation</div>
+          <div class="frag-cost-value">$112,100</div>
+        </div>
+        <div class="frag-canvas-wrapper">
+          <canvas id="fragCanvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== SECTION 6 & 7: FEED + COMPUTE ====== -->
+  <div class="grid-bottom">
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><span class="live-dot"></span>Fragment Feed</div>
+        <div class="panel-status" id="feedCount">8 fragments today</div>
+      </div>
+      <div class="feed-container" id="feedContainer"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Compute Allocation</div>
+        <div class="panel-status">By domain</div>
+      </div>
+      <div class="compute-section">
+        <div class="compute-chart-wrapper">
+          <canvas id="computeChart"></canvas>
+          <div class="compute-center-label">
+            <span class="rate-val">0.23</span>
+            <span class="rate-unit">bits / 10¹⁵ FLOPS</span>
+          </div>
+        </div>
+        <div class="compute-legend" id="computeLegend"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer-tech">DOMES v2 &nbsp;|&nbsp; 17 tables · 505 columns · 19,770 lines · 30 government systems</div>
+    <div class="footer-philosophy">"This is a thought experiment. What if we cared enough to look?"</div>
+    <a href="#" class="footer-link" onclick="return false;">Built on the BATHS game engine — Cosm × Chron = Flourishing</a>
+  </footer>
+
+</div>
+
+<script>
+// ============================================
+// DATA
+// ============================================
+
+const DOMAINS = [
+  { name: 'SHELTER',       score: 0.05, critical: true },
+  { name: 'NOURISHMENT',   score: 0.12, critical: false },
+  { name: 'HEALTH',        score: 0.15, critical: false },
+  { name: 'MENTAL_HEALTH', score: 0.10, critical: true },
+  { name: 'SAFETY',        score: 0.20, critical: false },
+  { name: 'BELONGING',     score: 0.08, critical: false },
+  { name: 'PURPOSE',       score: 0.05, critical: true },
+  { name: 'DIGNITY',       score: 0.03, critical: true },
+  { name: 'ECONOMIC',      score: 0.02, critical: true },
+  { name: 'LEGAL',         score: 0.18, critical: false },
+  { name: 'LEARNING',      score: 0.07, critical: false },
+  { name: 'TRANSCENDENCE', score: 0.06, critical: false },
+];
+
+const PHILOSOPHY = [
+  { name: 'Aristotelian',  score: 0.087 },
+  { name: 'Utilitarian',   score: 0.103 },
+  { name: 'Capabilities',  score: 0.072 },
+  { name: 'Rawlsian',      score: 0.091 },
+  { name: 'Ubuntu',         score: 0.068 },
+  { name: 'Buddhist',       score: 0.112 },
+  { name: 'Existentialist', score: 0.085 },
+  { name: 'Indigenous',     score: 0.076 },
+];
+
+const RISKS = [
+  { label: 'ER Visit', timeframe: '24h', pct: 71, severity: 'CRITICAL', cls: 'critical', colorCls: 'crit-color', sevCls: 'sev-critical' },
+  { label: 'Psychiatric Crisis', timeframe: '72h', pct: 54, severity: 'HIGH', cls: 'high', colorCls: 'high-color', sevCls: 'sev-high' },
+  { label: 'Hypothermia', timeframe: '24h', pct: 34, severity: 'ELEVATED', cls: 'elevated', colorCls: 'elev-color', sevCls: 'sev-elevated', note: "Tonight's temp: 28°F" },
+  { label: 'Hospitalization', timeframe: '30d', pct: 82, severity: 'CRITICAL', cls: 'critical', colorCls: 'crit-color', sevCls: 'sev-critical' },
+  { label: 'Incarceration', timeframe: '90d', pct: 23, severity: 'MODERATE', cls: 'moderate', colorCls: 'mod-color', sevCls: 'sev-moderate' },
+  { label: 'Mortality', timeframe: '365d', pct: 18, severity: 'ELEVATED', cls: 'elevated', colorCls: 'elev-color', sevCls: 'sev-elevated' },
+];
+
+const PATHWAYS = [
+  {
+    id: 'CP-001',
+    nodes: [
+      { text: 'Antipsychotic gap (12d)', type: 'trigger' },
+      { text: 'Psychotic symptoms ↑', type: 'normal' },
+      { text: 'ER visit (71%)', type: 'outcome' },
+      { text: 'Possible incarceration', type: 'outcome' },
+    ]
+  },
+  {
+    id: 'CP-002',
+    nodes: [
+      { text: 'Temp drop (28°F)', type: 'trigger' },
+      { text: 'No shelter', type: 'trigger' },
+      { text: 'Hypothermia (34%)', type: 'outcome' },
+      { text: 'ER / death', type: 'outcome' },
+    ]
+  },
+  {
+    id: 'CP-003',
+    nodes: [
+      { text: 'Assessment fatigue (9/mo)', type: 'trigger' },
+      { text: 'Disengagement', type: 'normal' },
+      { text: 'Crisis spiral', type: 'outcome' },
+    ]
+  },
+  {
+    id: 'CP-004',
+    nodes: [
+      { text: 'SSDI cycle day 25', type: 'trigger' },
+      { text: 'Funds depleted', type: 'normal' },
+      { text: 'Food insecurity', type: 'normal' },
+      { text: 'Health decline', type: 'outcome' },
+    ]
+  },
+];
+
+const INTERVENTIONS = [
+  {
+    rank: 1,
+    priority: 'CRITICAL',
+    priCls: 'pri-critical',
+    title: 'Warming center referral TONIGHT',
+    detail: '$45/night prevents <strong>$4,800 ER visit</strong> — ROI: 107×'
+  },
+  {
+    rank: 2,
+    priority: 'URGENT',
+    priCls: 'pri-urgent',
+    title: 'Medication reconciliation — olanzapine 12 days overdue',
+    detail: 'NNT: <strong>1.9</strong> — antipsychotic gap is primary crisis driver'
+  },
+  {
+    rank: 3,
+    priority: 'HIGH',
+    priCls: 'pri-high',
+    title: 'ACT team outreach — 9 days since last contact',
+    detail: 'Engagement window closing — <strong>72h optimal</strong>'
+  },
+  {
+    rank: 4,
+    priority: 'MODERATE',
+    priCls: 'pri-moderate',
+    title: 'Benefits coordination — consolidate 9 fragmented systems',
+    detail: 'Projected savings: <strong>$52,000/yr</strong> in administrative overhead'
+  },
+];
+
+const FEED_DATA = [
+  { time: '11:00 PM', text: 'ER discharge — Rush University Medical Center', source: 'Hospital ADT', freshness: 'high', reliability: 'high', completeness: 'med' },
+  { time: '8:00 PM', text: 'ER check-in — chief complaint: chest pain', source: 'FHIR EHR', freshness: 'high', reliability: 'high', completeness: 'high' },
+  { time: '4:00 PM', text: 'Weather alert — cold front, temp dropping to 28°F', source: 'NOAA', freshness: 'high', reliability: 'high', completeness: 'high' },
+  { time: '2:00 PM', text: 'Pharmacy claim — olanzapine 10mg filled (12 days late)', source: 'SureScripts', freshness: 'high', reliability: 'high', completeness: 'med' },
+  { time: '11:00 AM', text: 'Outreach encounter note', source: 'Community Report', freshness: 'med', reliability: 'med', completeness: 'low' },
+  { time: '9:00 AM', text: 'Blood glucose 180 mg/dL (elevated)', source: 'LabCorp FHIR', freshness: 'med', reliability: 'high', completeness: 'high' },
+  { time: '3 days ago', text: 'PHQ-9 score: 19 (severe)', source: 'Epic MyChart', freshness: 'med', reliability: 'high', completeness: 'high' },
+  { time: '5 days ago', text: 'VI-SPDAT: 14 — high acuity', source: 'HMIS Export', freshness: 'low', reliability: 'med', completeness: 'med' },
+];
+
+const COMPUTE_DATA = [
+  { name: 'Risk Prediction', pct: 28, color: '#ef4444' },
+  { name: 'Causal Modeling', pct: 22, color: '#d4890a' },
+  { name: 'Fragment Fusion', pct: 18, color: '#0d8a8a' },
+  { name: 'Intervention Opt', pct: 15, color: '#14b8a6' },
+  { name: 'Frag Map', pct: 10, color: '#2a2a4a' },
+  { name: 'Other', pct: 7, color: '#555570' },
+];
+
+const FRAG_SYSTEMS = [
+  { name: 'HMIS', x: 0.15, y: 0.2, r: 28, color: '#0d8a8a', connections: [1, 2] },
+  { name: 'Epic EHR', x: 0.38, y: 0.15, r: 32, color: '#14b8a6', connections: [0, 2, 3] },
+  { name: 'SureScripts', x: 0.62, y: 0.25, r: 22, color: '#d4890a', connections: [1, 4] },
+  { name: 'SSA SSDI', x: 0.80, y: 0.4, r: 26, color: '#f5a623', connections: [1, 4, 5] },
+  { name: 'SNAP/IL DHS', x: 0.65, y: 0.65, r: 24, color: '#dc2626', connections: [3, 5] },
+  { name: 'Medicaid', x: 0.40, y: 0.75, r: 30, color: '#ef4444', connections: [3, 4, 6] },
+  { name: 'VA/CMS', x: 0.18, y: 0.65, r: 20, color: '#555570', connections: [5, 7] },
+  { name: 'NOAA', x: 0.05, y: 0.45, r: 16, color: '#2a2a4a', connections: [6] },
+  { name: 'LabCorp', x: 0.85, y: 0.72, r: 18, color: '#555570', connections: [3] },
+];
+
+// ============================================
+// HELPERS
+// ============================================
+
+function scoreToColor(score) {
+  if (score <= 0.10) return 'var(--red-light)';
+  if (score <= 0.20) return 'var(--amber-light)';
+  if (score <= 0.40) return 'var(--amber)';
+  if (score <= 0.60) return 'var(--teal-light)';
+  return 'var(--green-light)';
+}
+
+function scoreToClass(score) {
+  if (score <= 0.10) return 'crit-color';
+  if (score <= 0.20) return 'high-color';
+  if (score <= 0.40) return 'elev-color';
+  return 'mod-color';
+}
+
+// ============================================
+// RENDER: FLOURISHING DOME
+// ============================================
+
+function renderFlourishingChart() {
+  const ctx = document.getElementById('flourishingChart').getContext('2d');
+  const scores = DOMAINS.map(d => d.score * 100);
+  const colors = DOMAINS.map(d => scoreToColor(d.score));
+  
+  new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: DOMAINS.map(d => d.name),
+      datasets: [{
+        label: 'Flourishing',
+        data: scores,
+        backgroundColor: 'rgba(13, 138, 138, 0.08)',
+        borderColor: 'rgba(13, 138, 138, 0.6)',
+        borderWidth: 1.5,
+        pointBackgroundColor: colors,
+        pointBorderColor: colors,
+        pointRadius: 4,
+        pointHoverRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        r: {
+          min: 0,
+          max: 100,
+          ticks: { display: false, stepSize: 20 },
+          grid: { color: 'rgba(42, 42, 74, 0.6)' },
+          angleLines: { color: 'rgba(42, 42, 74, 0.4)' },
+          pointLabels: {
+            color: 'rgba(136, 136, 168, 0.7)',
+            font: { family: "'JetBrains Mono', monospace", size: 9 }
+          }
+        }
+      }
+    }
+  });
+}
+
+function renderDomainList() {
+  const el = document.getElementById('domainList');
+  el.innerHTML = DOMAINS.map(d => `
+    <div class="domain-item ${d.critical ? 'critical' : ''}">
+      <div class="domain-dot" style="background: ${scoreToColor(d.score)}"></div>
+      <span class="domain-name">${d.name}</span>
+      <span class="domain-score ${scoreToClass(d.score)}">${d.score.toFixed(2)}</span>
+    </div>
+  `).join('');
+}
+
+function renderPhilosophyBar() {
+  const el = document.getElementById('philBar');
+  el.innerHTML = PHILOSOPHY.map(p => `
+    <div class="phil-item">
+      <div class="phil-name">${p.name}</div>
+      <div class="phil-score ${scoreToClass(p.score)}">${p.score.toFixed(3)}</div>
+    </div>
+  `).join('');
+}
+
+// ============================================
+// RENDER: RISK GRID + SPARKLINES
+// ============================================
+
+function renderRiskGrid() {
+  const el = document.getElementById('riskGrid');
+  el.innerHTML = RISKS.map((r, i) => `
+    <div class="risk-card ${r.cls}">
+      <div class="risk-label">${r.label}</div>
+      <div class="risk-timeframe">${r.timeframe} window</div>
+      <div class="risk-percent ${r.colorCls}">${r.pct}%</div>
+      <div class="risk-severity ${r.sevCls}">${r.severity}</div>
+      ${r.note ? `<div class="risk-timeframe" style="color:var(--teal-light);opacity:0.8;margin-bottom:4px;">${r.note}</div>` : ''}
+      <div class="sparkline-container">
+        <canvas class="sparkline-canvas" id="spark-${i}"></canvas>
+      </div>
+    </div>
+  `).join('');
+
+  // Draw sparklines
+  RISKS.forEach((r, i) => {
+    const canvas = document.getElementById(`spark-${i}`);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const pts = Array.from({length: 12}, (_, j) => {
+      const base = r.pct;
+      return base + (Math.random() - 0.5) * 20 + (j / 12) * (r.cls === 'critical' ? 10 : 5);
+    });
+    const color = r.cls === 'critical' ? '#ef4444' : r.cls === 'high' ? '#f5a623' : r.cls === 'elevated' ? '#d4890a' : '#14b8a6';
+    
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: pts.map((_, j) => j),
+        datasets: [{
+          data: pts,
+          borderColor: color,
+          borderWidth: 1.5,
+          fill: true,
+          backgroundColor: color + '15',
+          pointRadius: 0,
+          tension: 0.4,
+        }]
+      },
+      options: {
+        responsive: false,
+        plugins: { legend: { display: false } },
+        scales: { x: { display: false }, y: { display: false } },
+        animation: false,
+      }
+    });
+  });
+}
+
+// ============================================
+// RENDER: PATHWAYS
+// ============================================
+
+function renderPathways() {
+  const el = document.getElementById('pathwayList');
+  el.innerHTML = PATHWAYS.map(p => `
+    <div class="pathway-item">
+      <div class="pathway-id">${p.id}</div>
+      <div class="pathway-nodes">
+        ${p.nodes.map((n, i) => `
+          ${i > 0 ? '<span class="pathway-arrow">→</span>' : ''}
+          <span class="pathway-node ${n.type === 'trigger' ? 'trigger' : n.type === 'outcome' ? 'outcome' : ''}">${n.text}</span>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============================================
+// RENDER: INTERVENTIONS
+// ============================================
+
+function renderInterventions() {
+  const el = document.getElementById('interventionList');
+  el.innerHTML = INTERVENTIONS.map(item => `
+    <div class="intervention-item">
+      <div class="intervention-rank">${item.rank}</div>
+      <div class="intervention-body">
+        <div class="intervention-title">${item.title}</div>
+        <div class="intervention-detail">${item.detail}</div>
+      </div>
+      <div class="intervention-priority ${item.priCls}">${item.priority}</div>
+    </div>
+  `).join('');
+}
+
+// ============================================
+// RENDER: FRAGMENT FEED
+// ============================================
+
+function renderFeed() {
+  const el = document.getElementById('feedContainer');
+  el.innerHTML = FEED_DATA.map((f, i) => `
+    <div class="feed-item" style="animation-delay: ${i * 0.1}s">
+      <div class="feed-time">${f.time}</div>
+      <div class="feed-body">
+        <div class="feed-text">${f.text}</div>
+        <div class="feed-source">${f.source}</div>
+      </div>
+      <div class="feed-quality">
+        <span class="quality-badge ${f.freshness}">F:${f.freshness.toUpperCase()[0]}</span>
+        <span class="quality-badge ${f.reliability}">R:${f.reliability.toUpperCase()[0]}</span>
+        <span class="quality-badge ${f.completeness}">C:${f.completeness.toUpperCase()[0]}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============================================
+// RENDER: COMPUTE CHART
+// ============================================
+
+function renderComputeChart() {
+  const ctx = document.getElementById('computeChart').getContext('2d');
+  
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: COMPUTE_DATA.map(d => d.name),
+      datasets: [{
+        data: COMPUTE_DATA.map(d => d.pct),
+        backgroundColor: COMPUTE_DATA.map(d => d.color),
+        borderColor: '#0a0a10',
+        borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      cutout: '70%',
+      plugins: { legend: { display: false } },
+      animation: { duration: 1200, easing: 'easeInOutQuart' },
+    }
+  });
+
+  const el = document.getElementById('computeLegend');
+  el.innerHTML = COMPUTE_DATA.map(d => `
+    <div class="compute-legend-item">
+      <div class="compute-legend-dot" style="background: ${d.color}"></div>
+      <span class="compute-legend-name">${d.name}</span>
+      <span class="compute-legend-pct">${d.pct}%</span>
+    </div>
+  `).join('');
+}
+
+// ============================================
+// RENDER: FRAGMENTATION MAP (Canvas2D)
+// ============================================
+
+function renderFragMap() {
+  const canvas = document.getElementById('fragCanvas');
+  const wrapper = canvas.parentElement;
+  
+  function draw() {
+    const W = wrapper.clientWidth;
+    const H = wrapper.clientHeight;
+    canvas.width = W;
+    canvas.height = H;
+    const ctx = canvas.getContext('2d');
+    
+    ctx.clearRect(0, 0, W, H);
+    
+    // Draw connections first
+    FRAG_SYSTEMS.forEach((sys, i) => {
+      sys.connections.forEach(j => {
+        if (j > i) {
+          const x1 = sys.x * W;
+          const y1 = sys.y * H;
+          const x2 = FRAG_SYSTEMS[j].x * W;
+          const y2 = FRAG_SYSTEMS[j].y * H;
+          
+          ctx.beginPath();
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(x2, y2);
+          ctx.strokeStyle = 'rgba(42, 42, 74, 0.6)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([3, 5]);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
+      });
+    });
+    
+    // Draw gap indicators (red dashed lines where data is missing)
+    const gaps = [
+      [0, 3], [1, 5], [2, 6], [4, 7], [5, 8], [6, 8]
+    ];
+    gaps.forEach(([i, j]) => {
+      const x1 = FRAG_SYSTEMS[i].x * W;
+      const y1 = FRAG_SYSTEMS[i].y * H;
+      const x2 = FRAG_SYSTEMS[j].x * W;
+      const y2 = FRAG_SYSTEMS[j].y * H;
+      
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = 'rgba(220, 38, 38, 0.25)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([2, 6]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    });
+    
+    // Draw nodes
+    FRAG_SYSTEMS.forEach(sys => {
+      const x = sys.x * W;
+      const y = sys.y * H;
+      
+      // Glow
+      const grad = ctx.createRadialGradient(x, y, 0, x, y, sys.r * 1.5);
+      grad.addColorStop(0, sys.color + '30');
+      grad.addColorStop(1, 'transparent');
+      ctx.beginPath();
+      ctx.arc(x, y, sys.r * 1.5, 0, Math.PI * 2);
+      ctx.fillStyle = grad;
+      ctx.fill();
+      
+      // Circle
+      ctx.beginPath();
+      ctx.arc(x, y, sys.r, 0, Math.PI * 2);
+      ctx.fillStyle = '#0e0e18';
+      ctx.fill();
+      ctx.strokeStyle = sys.color;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      
+      // Label
+      ctx.fillStyle = 'rgba(228, 228, 240, 0.8)';
+      ctx.font = "bold 9px 'JetBrains Mono', monospace";
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(sys.name, x, y);
+    });
+  }
+  
+  draw();
+  window.addEventListener('resize', draw);
+}
+
+// ============================================
+// INIT
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderFlourishingChart();
+  renderDomainList();
+  renderPhilosophyBar();
+  renderRiskGrid();
+  renderPathways();
+  renderInterventions();
+  renderFeed();
+  renderComputeChart();
+  
+  // Small delay for fragmentation map to get proper dimensions
+  setTimeout(renderFragMap, 100);
+  
+  // Simulate live updates
+  setInterval(() => {
+    const feedStatus = document.getElementById('feedCount');
+    if (feedStatus) {
+      const count = 8 + Math.floor(Math.random() * 3);
+      feedStatus.textContent = `${count} fragments today`;
+    }
+  }, 30000);
+});
+</script>
+
+</body>
+</html>
