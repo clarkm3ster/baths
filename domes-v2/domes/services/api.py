@@ -1,1 +1,1 @@
-CONTENT_FROM_FILE:/tmp/clean_api.py
+LOAD_FROM_FILE:/tmp/clean_api.py
