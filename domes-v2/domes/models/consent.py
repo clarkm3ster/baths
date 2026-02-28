@@ -384,68 +384,108 @@ class ConsentAuditEntry(
     - Why (purpose)
     - What system they accessed it from/to
 
-    These records are immutable once created — no updates, no deletes.
-    Required for HIPAA and 42 CFR Part 2 compliance.
+    This table is append-only — records are NEVER updated or deleted.
+    This is required for 42 CFR Part 2 compliance.
     """
 
     __tablename__ = "consent_audit_entry"
     __table_args__ = {
         "comment": (
-            "Immutable audit trail for consent-based data access. "
-            "Every data access under a consent must create an audit entry."
+            "Immutable audit log for consent actions. "
+            "42 CFR Part 2 requires tracking all accesses under each consent. "
+            "This table is append-only."
         )
     }
 
-    person_id: Mapped[uuid.UUID] = mapped_column(
-        UUID(as_uuid=True),
-        ForeignKey("person.id", ondelete="CASCADE"),
-        nullable=False,
-        index=True,
-    )
+    # ------------------------------------------------------------------
+    # Relations
+    # ------------------------------------------------------------------
+
     consent_id: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True),
         ForeignKey("consent.id", ondelete="CASCADE"),
         nullable=False,
         index=True,
     )
+    person_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True),
+        ForeignKey("person.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+        comment="Denormalized for query efficiency",
+    )
+
+    # ------------------------------------------------------------------
+    # Audit fields
+    # ------------------------------------------------------------------
+
+    occurred_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        nullable=False,
+        comment="When this action occurred (UTC)",
+    )
     action: Mapped[ConsentAuditAction] = mapped_column(
         Enum(ConsentAuditAction, name="consent_audit_action_enum"),
         nullable=False,
-        comment="Type of action taken under this consent",
+        comment="What action was performed",
     )
     actor: Mapped[str] = mapped_column(
         String(255),
         nullable=False,
-        comment="Staff member, system, or patient who performed the action",
+        comment="User ID, system ID, or service name that performed the action",
     )
-    occurred_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True),
-        nullable=False,
-        comment="When the action occurred",
-    )
-    data_accessed: Mapped[str | None] = mapped_column(
-        Text,
+    actor_role: Mapped[str | None] = mapped_column(
+        String(100),
         nullable=True,
-        comment="Description of what data was accessed (for DATA_ACCESSED actions)",
+        comment="Role of the actor (e.g., 'case_manager', 'physician', 'etl_service')",
     )
-    system_accessed: Mapped[str | None] = mapped_column(
+    data_domain: Mapped[DataDomain | None] = mapped_column(
+        Enum(DataDomain, name="audit_data_domain_enum"),
+        nullable=True,
+        comment="What data domain was accessed",
+    )
+    resource_type: Mapped[str | None] = mapped_column(
+        String(64),
+        nullable=True,
+        comment="FHIR resource type accessed (e.g., 'Observation', 'Condition')",
+    )
+    resource_id: Mapped[str | None] = mapped_column(
         String(255),
         nullable=True,
-        comment="System from which data was accessed",
+        comment="ID of the specific resource accessed",
+    )
+    recipient_system: Mapped[str | None] = mapped_column(
+        String(255),
+        nullable=True,
+        comment="System or entity the data was shared with (if action=SHARED)",
+    )
+    purpose: Mapped[str | None] = mapped_column(
+        String(100),
+        nullable=True,
+        comment="Stated purpose for this specific access",
     )
     notes: Mapped[str | None] = mapped_column(
         Text,
         nullable=True,
+        comment="Additional context",
+    )
+    ip_address: Mapped[str | None] = mapped_column(
+        String(45),
+        nullable=True,
+        comment="IP address of the requester (IPv4 or IPv6)",
     )
 
+    # ------------------------------------------------------------------
     # Relationships
-    person: Mapped["Person"] = relationship(
-        "Person",
-        back_populates="consent_audit_entries",
-        lazy="select",
-    )
+    # ------------------------------------------------------------------
+
     consent: Mapped["Consent"] = relationship(
         "Consent",
         back_populates="audit_entries",
+        lazy="select",
+    )
+    person: Mapped["Person"] = relationship(
+        "Person",
+        back_populates="consent_audit_entries",
         lazy="select",
     )
