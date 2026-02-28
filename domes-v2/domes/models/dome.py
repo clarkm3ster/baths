@@ -1,37 +1,58 @@
 """
 DOMES v2 — Dome Model (Assembled Digital Twin Snapshot)
 
-The Dome is a computed, point-in-time snapshot of a person's full digital twin.
-It is the central artifact that the DOMES system produces.
+The Dome is a computed, point-in-time snapshot of a person's complete
+digital twin. It assembles data from all underlying tables into a unified
+view optimized for care coordination, resource allocation, and crisis prediction.
 
-A Dome assembles data from all sources:
-- Clinical: diagnoses, medications, assessments, encounters
-- Benefits: enrollments, housing, income support
-- Biometrics: real-time vitals, sleep, activity
-- Social: relationships, community support, barriers
-- Environmental: neighborhood conditions, air quality
+The Dome is the PRIMARY DELIVERABLE of the DOMES system. It is:
+1. Assembled on trigger (new_data, scheduled, manual, crisis_event)
+2. Stored as an immutable snapshot — never updated, only superseded
+3. Includes cost analysis: fragmented vs. coordinated annual spend delta
+4. Contains risk scores, domain scores, and structured recommendations
+5. Tracks which fragments / source systems contributed to this assembly
 
-Key computed fields:
-- flourishing_score: 0-100 composite wellbeing score
-- crisis_probability_30d: ML prediction of crisis in next 30 days
-- system_involvement_count: number of active government systems
-- cosm_score: Coordination of Systems Metric (0-100)
+Key financial metrics (Robert Jackson example):
+    fragmented_annual_cost  = $112,100  (what the system currently spends)
+    coordinated_annual_cost =  $41,200  (what proper coordination would cost)
+    delta                   =  $70,900  (annual savings from coordination)
+    lifetime_cost_estimate  = $1,446,360 (50-year projection at fragmented rate)
 
-The Dome is recomputed:
-- On new fragment ingestion
-- On scheduled refresh (daily for high-risk persons)
-- On explicit API request
+COSM Score (Comprehensive Outcome Stability Metric):
+    0-100 composite score across 12 flourishing domains.
+    <25 = Crisis  |  25-50 = Fragile  |  50-75 = Stable  |  75-100 = Thriving
+
+Risk scores (stored as JSONB):
+    {
+        "crisis_30d": {"score": 0.87, "level": "critical", "drivers": [...]},
+        "readmission_30d": {"score": 0.73, "level": "high"},
+        "housing_loss_90d": {"score": 0.65, "level": "high"},
+        "substance_relapse_30d": {"score": 0.45, "level": "moderate"},
+        "medication_nonadherence_7d": {"score": 0.92, "level": "critical"}
+    }
 """
 from __future__ import annotations
 
 import uuid
 from datetime import datetime
+from decimal import Decimal
 from typing import Any, TYPE_CHECKING
 
-from sqlalchemy import Boolean, DateTime, Float, ForeignKey, Integer, String, Text
-from sqlalchemy.dialects.postgresql import JSONB, UUID
+from sqlalchemy import (
+    Boolean,
+    DateTime,
+    Enum,
+    ForeignKey,
+    Index,
+    Integer,
+    Numeric,
+    String,
+    Text,
+)
+from sqlalchemy.dialects.postgresql import ARRAY, JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
+from domes.enums import DomeTrigger, RiskLevel
 from domes.models.base import (
     AuditMixin,
     DOMESBase,
@@ -40,7 +61,6 @@ from domes.models.base import (
 )
 
 if TYPE_CHECKING:
-    from domes.models.flourishing import FlourishingScore
     from domes.models.person import Person
 
 
@@ -50,25 +70,52 @@ class Dome(
     AuditMixin,
     DOMESBase,
 ):
-    """Assembled digital twin snapshot for a person at a point in time.
+    """
+    An immutable assembled digital twin snapshot for a person.
 
-    A Dome is immutable once created. New data triggers a new Dome version.
-    The latest Dome for a person is the current digital twin.
+    Each Dome represents the complete view of a person at a specific
+    assembled_at timestamp. When new data arrives or a trigger fires,
+    a new Dome is assembled and the previous one is marked is_current=False.
 
-    Storage: The full assembled data is stored in `full_snapshot` JSONB.
-    Computed scores are denormalized into columns for fast querying.
+    Never update an existing Dome row — always insert a new one and
+    flip is_current flags. This preserves the full history of a person's
+    digital twin over time.
+
+    Indexes:
+        - idx_dome_person_current: (person_id) WHERE is_current = true
+          — the most common query: "give me this person's current dome"
+        - idx_dome_person_assembled: (person_id, assembled_at DESC)
+          — historical dome timeline
+        - idx_dome_cosm: (cosm_score) — population-level risk stratification
+        - idx_dome_crisis: (overall_risk_level) WHERE = 'critical'
+          — crisis response queue
     """
 
     __tablename__ = "dome"
-    __table_args__ = {
-        "comment": (
-            "Assembled digital twin snapshots. One row = one point-in-time view "
-            "of a person's full DOMES profile. Immutable after creation."
-        )
-    }
+    __table_args__ = (
+        Index(
+            "idx_dome_person_current",
+            "person_id",
+            postgresql_where="is_current = true",
+            unique=True,  # Only one current dome per person
+        ),
+        Index(
+            "idx_dome_person_assembled",
+            "person_id",
+            "assembled_at",
+            postgresql_ops={"assembled_at": "DESC"},
+        ),
+        Index("idx_dome_cosm", "cosm_score"),
+        Index(
+            "idx_dome_crisis",
+            "overall_risk_level",
+            postgresql_where="overall_risk_level = 'critical'",
+        ),
+        {"comment": "Assembled digital twin snapshots — one current per person, full history retained"},
+    )
 
     # ------------------------------------------------------------------
-    # Person link
+    # Core identity
     # ------------------------------------------------------------------
 
     person_id: Mapped[uuid.UUID] = mapped_column(
@@ -76,186 +123,241 @@ class Dome(
         ForeignKey("person.id", ondelete="CASCADE"),
         nullable=False,
         index=True,
+        comment="Person this dome snapshot belongs to",
     )
 
-    # ------------------------------------------------------------------
-    # Version / assembly metadata
-    # ------------------------------------------------------------------
-
-    version: Mapped[int] = mapped_column(
-        Integer,
-        nullable=False,
-        default=1,
-        comment="Incremental version number for this person's dome sequence",
-    )
     assembled_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         nullable=False,
-        comment="Timestamp when this dome was assembled",
+        comment="UTC timestamp when this dome was assembled",
     )
-    assembly_trigger: Mapped[str | None] = mapped_column(
-        String(100),
-        nullable=True,
-        comment="What triggered assembly: 'fragment_ingestion', 'scheduled', 'api_request'",
-    )
+
     is_current: Mapped[bool] = mapped_column(
         Boolean,
         nullable=False,
         default=True,
-        comment="True if this is the most recent dome for this person",
+        comment="True = this is the most recent dome for this person",
     )
-    data_currency_hours: Mapped[float | None] = mapped_column(
-        Float,
-        nullable=True,
-        comment="Age of oldest data source used in assembly (hours)",
+
+    trigger: Mapped[DomeTrigger] = mapped_column(
+        Enum(DomeTrigger, name="dome_trigger_enum", create_type=False),
+        nullable=False,
+        default=DomeTrigger.SCHEDULED,
+        comment="What triggered this dome assembly",
     )
-    fragment_count: Mapped[int | None] = mapped_column(
-        Integer,
-        nullable=True,
-        comment="Number of fragments incorporated into this dome",
+
+    assembly_version: Mapped[str] = mapped_column(
+        String(32),
+        nullable=False,
+        default="2.0.0",
+        comment="DOMES assembly engine version that produced this snapshot",
     )
 
     # ------------------------------------------------------------------
-    # Flourishing score (primary output)
-    # ------------------------------------------------------------------
-
-    flourishing_score: Mapped[float | None] = mapped_column(
-        Float,
-        nullable=True,
-        comment="Overall flourishing score 0-100 (higher = better)",
-    )
-    flourishing_score_id: Mapped[uuid.UUID | None] = mapped_column(
-        UUID(as_uuid=True),
-        ForeignKey("flourishing_score.id", ondelete="SET NULL"),
-        nullable=True,
-        comment="FK to detailed per-domain flourishing score",
-    )
-    flourishing_delta_7d: Mapped[float | None] = mapped_column(
-        Float,
-        nullable=True,
-        comment="Change in flourishing score over past 7 days",
-    )
-    flourishing_delta_30d: Mapped[float | None] = mapped_column(
-        Float,
-        nullable=True,
-        comment="Change in flourishing score over past 30 days",
-    )
-
-    # ------------------------------------------------------------------
-    # Crisis prediction (ML output)
-    # ------------------------------------------------------------------
-
-    crisis_probability_30d: Mapped[float | None] = mapped_column(
-        Float,
-        nullable=True,
-        comment="ML probability of crisis event in next 30 days (0.0-1.0)",
-    )
-    crisis_probability_90d: Mapped[float | None] = mapped_column(
-        Float,
-        nullable=True,
-        comment="ML probability of crisis event in next 90 days (0.0-1.0)",
-    )
-    crisis_risk_level: Mapped[str | None] = mapped_column(
-        String(20),
-        nullable=True,
-        comment="Risk level: LOW/MEDIUM/HIGH/CRITICAL based on crisis_probability",
-    )
-    crisis_drivers: Mapped[Any | None] = mapped_column(
-        JSONB(),
-        nullable=True,
-        comment="Top crisis risk factors from ML model",
-    )
-
-    # ------------------------------------------------------------------
-    # COSM score (system coordination)
+    # COSM Score — Comprehensive Outcome Stability Metric
     # ------------------------------------------------------------------
 
     cosm_score: Mapped[float | None] = mapped_column(
-        Float,
+        Numeric(5, 2),
         nullable=True,
-        comment="Coordination of Systems Metric 0-100 (higher = better coordination)",
+        comment=(
+            "COSM composite score 0-100. "
+            "0-24: Crisis | 25-49: Fragile | 50-74: Stable | 75-100: Thriving. "
+            "Weighted mean of 12 flourishing domain scores."
+        ),
     )
-    cosm_components: Mapped[Any | None] = mapped_column(
+
+    cosm_label: Mapped[str | None] = mapped_column(
+        String(32),
+        nullable=True,
+        comment="Human-readable COSM label: 'Crisis', 'Fragile', 'Stable', or 'Thriving'",
+    )
+
+    cosm_delta: Mapped[float | None] = mapped_column(
+        Numeric(5, 2),
+        nullable=True,
+        comment="Change in COSM score since previous dome (+positive = improvement)",
+    )
+
+    # ------------------------------------------------------------------
+    # Risk scores (structured JSONB)
+    # ------------------------------------------------------------------
+
+    risk_scores: Mapped[Any | None] = mapped_column(
         JSONB(),
         nullable=True,
-        comment="Per-system COSM breakdown",
+        comment=(
+            "Computed risk scores by domain. Schema per key: "
+            "{'score': float 0-1, 'level': RiskLevel, 'drivers': [str], "
+            "'model_version': str, 'computed_at': ISO8601}. "
+            "Keys: crisis_30d, readmission_30d, housing_loss_90d, "
+            "substance_relapse_30d, medication_nonadherence_7d, "
+            "legal_involvement_30d, child_welfare_involvement_90d"
+        ),
     )
-    system_involvement_count: Mapped[int | None] = mapped_column(
+
+    overall_risk_level: Mapped[RiskLevel] = mapped_column(
+        Enum(RiskLevel, name="risk_level_enum", create_type=False),
+        nullable=False,
+        default=RiskLevel.UNKNOWN,
+        comment="Highest risk level across all risk_scores domains",
+    )
+
+    # ------------------------------------------------------------------
+    # Domain scores (12 flourishing domains)
+    # ------------------------------------------------------------------
+
+    domain_scores: Mapped[Any | None] = mapped_column(
+        JSONB(),
+        nullable=True,
+        comment=(
+            "Scores for each of the 12 FlourishingDomain values. Schema per key: "
+            "{'score': float 0-100, 'trend': 'improving'|'stable'|'declining', "
+            "'threats': [str], 'supports': [str]}. "
+            "Keyed by FlourishingDomain enum values."
+        ),
+    )
+
+    # ------------------------------------------------------------------
+    # Cost analysis
+    # ------------------------------------------------------------------
+
+    fragmented_annual_cost: Mapped[Decimal | None] = mapped_column(
+        Numeric(precision=12, scale=2),
+        nullable=True,
+        comment=(
+            "Estimated annual cost of current fragmented service delivery (USD). "
+            "Robert Jackson example: $112,100 (47 ER visits + shelter + justice + BH)."
+        ),
+    )
+
+    coordinated_annual_cost: Mapped[Decimal | None] = mapped_column(
+        Numeric(precision=12, scale=2),
+        nullable=True,
+        comment=(
+            "Projected annual cost under fully coordinated care (USD). "
+            "Robert Jackson example: $41,200 (PSH + ACT team + Medicaid MCO)."
+        ),
+    )
+
+    delta: Mapped[Decimal | None] = mapped_column(
+        Numeric(precision=12, scale=2),
+        nullable=True,
+        comment=(
+            "Annual savings from coordination: fragmented - coordinated (USD). "
+            "Positive = savings. Robert Jackson example: $70,900."
+        ),
+    )
+
+    lifetime_cost_estimate: Mapped[Decimal | None] = mapped_column(
+        Numeric(precision=15, scale=2),
+        nullable=True,
+        comment=(
+            "50-year lifetime cost projection at current fragmented rate (USD). "
+            "Robert Jackson example: $1,446,360."
+        ),
+    )
+
+    cost_methodology: Mapped[str | None] = mapped_column(
+        String(255),
+        nullable=True,
+        comment="Description of cost calculation methodology and data sources used",
+    )
+
+    # ------------------------------------------------------------------
+    # System coverage
+    # ------------------------------------------------------------------
+
+    systems_represented: Mapped[Any | None] = mapped_column(
+        JSONB(),
+        ARRAY(String),
+        nullable=True,
+        comment="List of GovernmentSystem.system_code values that contributed to this dome",
+    )
+
+    systems_missing: Mapped[Any | None] = mapped_column(
+        JSONB(),
+        ARRAY(String),
+        nullable=True,
+        comment="Expected systems with no data available at assembly time",
+    )
+
+    fragment_count: Mapped[int] = mapped_column(
+        Integer,
+        nullable=False,
+        default=0,
+        comment="Number of fragments assembled into this dome",
+    )
+
+    # ------------------------------------------------------------------
+    # Recommendations
+    # ------------------------------------------------------------------
+
+    recommendations: Mapped[Any | None] = mapped_column(
+        JSONB(),
+        nullable=True,
+        comment=(
+            "Prioritized action recommendations. Each item: "
+            "{'priority': int, 'domain': FlourishingDomain, "
+            "'action': str, 'rationale': str, 'estimated_impact': str, "
+            "'system_responsible': str, 'urgency': 'immediate'|'soon'|'routine'}"
+        ),
+    )
+
+    # ------------------------------------------------------------------
+    # Crisis / alert flags
+    # ------------------------------------------------------------------
+
+    crisis_flags: Mapped[Any | None] = mapped_column(
+        JSONB(),
+        ARRAY(String),
+        nullable=True,
+        comment=(
+            "Active crisis flags at assembly time. Examples: "
+            "'active_suicidal_ideation', 'medication_lapse_7d', "
+            "'housing_loss_imminent', 'glucose_critical', 'unseen_30d'"
+        ),
+    )
+
+    # ------------------------------------------------------------------
+    # Assembly metadata
+    # ------------------------------------------------------------------
+
+    assembly_duration_ms: Mapped[int | None] = mapped_column(
         Integer,
         nullable=True,
-        comment="Number of active government systems",
+        comment="Time in milliseconds the assembly pipeline took to compute this dome",
     )
-    active_system_ids: Mapped[Any | None] = mapped_column(
+
+    assembly_errors: Mapped[Any | None] = mapped_column(
+        JSONB(),
+        ARRAY(String),
+        nullable=True,
+        comment="Non-fatal errors encountered during assembly (system unavailabilities, parse failures)",
+    )
+
+    assembly_metadata: Mapped[Any | None] = mapped_column(
         JSONB(),
         nullable=True,
-        comment="Array of UUIDs of active government systems",
+        comment="Assembly pipeline diagnostics: data freshness, model confidence, etc.",
     )
 
-    # ------------------------------------------------------------------
-    # Data quality
-    # ------------------------------------------------------------------
-
-    data_completeness_score: Mapped[float | None] = mapped_column(
-        Float,
-        nullable=True,
-        comment="Fraction of expected data domains present (0.0-1.0)",
-    )
-    gap_count: Mapped[int | None] = mapped_column(
-        Integer,
-        nullable=True,
-        comment="Number of active data gaps affecting this dome",
-    )
-    biometric_freshness_hours: Mapped[float | None] = mapped_column(
-        Float,
-        nullable=True,
-        comment="Hours since last biometric reading",
-    )
-
-    # ------------------------------------------------------------------
-    # Key clinical indicators (denormalized for fast access)
-    # ------------------------------------------------------------------
-
-    active_diagnoses_count: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    active_medications_count: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    last_encounter_days_ago: Mapped[float | None] = mapped_column(Float, nullable=True)
-    housing_status: Mapped[str | None] = mapped_column(
-        String(50),
-        nullable=True,
-        comment="Current housing status: housed/unstably_housed/homeless",
-    )
-    medicaid_active: Mapped[bool | None] = mapped_column(nullable=True)
-    suicidality_flag: Mapped[bool | None] = mapped_column(
-        nullable=True,
-        comment="True if any recent assessment indicates suicidal ideation",
-    )
-
-    # ------------------------------------------------------------------
-    # Full snapshot (the dome payload)
-    # ------------------------------------------------------------------
-
-    full_snapshot: Mapped[Any | None] = mapped_column(
-        JSONB(),
-        nullable=True,
-        comment="Complete assembled digital twin as JSON (for API responses)",
-    )
-    summary: Mapped[str | None] = mapped_column(
+    narrative_summary: Mapped[str | None] = mapped_column(
         Text,
         nullable=True,
-        comment="Natural language summary of this person's current state",
+        comment=(
+            "LLM-generated narrative summary of this person's current situation, "
+            "risks, and recommended next actions. Plain English for case managers."
+        ),
     )
 
     # ------------------------------------------------------------------
     # Relationships
     # ------------------------------------------------------------------
 
-    person: Mapped["Person"] = relationship(
+    person: Mapped[Person] = relationship(
         "Person",
         back_populates="domes",
-        lazy="select",
-    )
-    flourishing_score_obj: Mapped["FlourishingScore | None"] = relationship(
-        "FlourishingScore",
-        foreign_keys=[flourishing_score_id],
         lazy="select",
     )
 
@@ -264,26 +366,31 @@ class Dome(
     # ------------------------------------------------------------------
 
     @property
-    def risk_category(self) -> str:
-        """Return human-readable risk category."""
-        p = self.crisis_probability_30d or 0.0
-        if p >= 0.7:
-            return "CRITICAL"
-        elif p >= 0.4:
-            return "HIGH"
-        elif p >= 0.2:
-            return "MEDIUM"
-        else:
-            return "LOW"
+    def is_crisis(self) -> bool:
+        """Return True if this dome indicates a crisis situation."""
+        return self.overall_risk_level == RiskLevel.CRITICAL or bool(self.crisis_flags)
 
     @property
-    def flourishing_tier(self) -> str:
-        """Return flourishing tier label."""
-        score = self.flourishing_score or 0.0
+    def savings_percentage(self) -> float | None:
+        """Return the percentage savings from coordination vs. fragmented care."""
+        if (
+            self.fragmented_annual_cost
+            and self.delta
+            and float(self.fragmented_annual_cost) > 0
+        ):
+            return round(float(self.delta) / float(self.fragmented_annual_cost) * 100, 1)
+        return None
+
+    @property
+    def cosm_tier(self) -> str:
+        """Return the COSM tier label based on the current score."""
+        if self.cosm_score is None:
+            return "Unknown"
+        score = float(self.cosm_score)
         if score < 25:
             return "Crisis"
         elif score < 50:
-            return "Struggling"
+            return "Fragile"
         elif score < 75:
             return "Stable"
         else:
