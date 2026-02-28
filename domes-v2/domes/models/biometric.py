@@ -121,6 +121,10 @@ class BiometricReading(
         },
     )
 
+    # ------------------------------------------------------------------
+    # Core: who, what, when
+    # ------------------------------------------------------------------
+
     person_id: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True),
         ForeignKey("person.id", ondelete="CASCADE"),
@@ -128,75 +132,201 @@ class BiometricReading(
         index=True,
         comment="Person this reading belongs to",
     )
+
     timestamp: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         nullable=False,
         index=True,
         comment="UTC timestamp of the measurement (hypertable partition key)",
     )
+
     metric: Mapped[BiometricMetric] = mapped_column(
         Enum(BiometricMetric, name="biometric_metric_enum", create_type=False),
         nullable=False,
         comment="Type of biometric measurement (BiometricMetric enum)",
     )
+
+    # ------------------------------------------------------------------
+    # Value — numeric or categorical
+    # ------------------------------------------------------------------
+
     value: Mapped[Decimal | None] = mapped_column(
         Numeric(precision=12, scale=4),
         nullable=True,
-        comment="Numeric measurement value. NULL for categorical metrics (e.g., sleep_stage).",
+        comment=(
+            "Numeric measurement value. NULL for categorical metrics (e.g., sleep_stage). "
+            "Precision 12,4 handles most biometric ranges (e.g., 98.6°F, 0.1234 BAC)."
+        ),
     )
+
     value_string: Mapped[str | None] = mapped_column(
         String(64),
         nullable=True,
-        comment="String value for categorical metrics (e.g., sleep_stage='rem').",
+        comment=(
+            "String value for categorical metrics (e.g., sleep_stage='rem'). "
+            "Exactly one of value / value_string should be populated."
+        ),
     )
+
     unit: Mapped[str] = mapped_column(
         String(32),
         nullable=False,
         default="",
         comment="UCUM unit string (e.g., 'bpm', 'mg/dL', '%', 'ms', 'kcal', 'kg')",
     )
+
     loinc_code: Mapped[str | None] = mapped_column(
         String(16),
         nullable=True,
         comment="LOINC code for this metric (e.g., '8867-4' for heart rate)",
     )
+
+    # ------------------------------------------------------------------
+    # Source / device
+    # ------------------------------------------------------------------
+
     device: Mapped[BiometricDevice] = mapped_column(
         Enum(BiometricDevice, name="biometric_device_enum", create_type=False),
         nullable=False,
         default=BiometricDevice.UNKNOWN,
+        comment="Wearable/device that captured this reading",
     )
-    device_serial: Mapped[str | None] = mapped_column(String(128), nullable=True)
+
+    device_serial: Mapped[str | None] = mapped_column(
+        String(128),
+        nullable=True,
+        comment="Device serial number or hardware identifier (optional)",
+    )
+
     data_domain: Mapped[DataDomain] = mapped_column(
         Enum(DataDomain, name="data_domain_enum", create_type=False),
         nullable=False,
         default=DataDomain.BIOMETRIC,
+        comment="Data sensitivity domain (always BIOMETRIC for this table)",
     )
-    quality_score: Mapped[float | None] = mapped_column(Float, nullable=True)
-    is_anomaly: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
-    anomaly_reason: Mapped[str | None] = mapped_column(String(500), nullable=True)
+
+    # ------------------------------------------------------------------
+    # Quality / reliability
+    # ------------------------------------------------------------------
+
+    quality_score: Mapped[float | None] = mapped_column(
+        Float,
+        nullable=True,
+        comment=(
+            "Signal quality 0.0–1.0. "
+            "1.0 = perfect; <0.5 = unreliable and should be excluded from aggregations."
+        ),
+    )
+
+    is_anomaly: Mapped[bool] = mapped_column(
+        Boolean,
+        nullable=False,
+        default=False,
+        comment="Flagged by anomaly detection pipeline (e.g., HR=250 bpm)",
+    )
+
+    anomaly_reason: Mapped[str | None] = mapped_column(
+        String(500),
+        nullable=True,
+        comment="Explanation of why this reading was flagged as anomalous",
+    )
+
+    # ------------------------------------------------------------------
+    # CGM-specific (Dexcom / Libre)
+    # ------------------------------------------------------------------
+
     cgm_trend: Mapped[CGMTrend | None] = mapped_column(
         Enum(CGMTrend, name="cgm_trend_enum", create_type=False),
         nullable=True,
+        comment="CGM trend arrow — only populated for blood_glucose metric from CGM devices",
     )
-    cgm_transmitter_id: Mapped[str | None] = mapped_column(String(32), nullable=True)
-    interval_seconds: Mapped[int | None] = mapped_column(nullable=True)
+
+    cgm_transmitter_id: Mapped[str | None] = mapped_column(
+        String(32),
+        nullable=True,
+        comment="Dexcom transmitter ID for device pairing verification",
+    )
+
+    # ------------------------------------------------------------------
+    # Interval aggregation context
+    # ------------------------------------------------------------------
+
+    interval_seconds: Mapped[int | None] = mapped_column(
+        nullable=True,
+        comment=(
+            "Duration this reading covers (seconds). "
+            "NULL = instantaneous. >0 = aggregated interval "
+            "(e.g., 300 for 5-min CGM, 86400 for daily RHR)."
+        ),
+    )
+
+    # ------------------------------------------------------------------
+    # Raw source linkage
+    # ------------------------------------------------------------------
+
     source_fragment_id: Mapped[uuid.UUID | None] = mapped_column(
         UUID(as_uuid=True),
         ForeignKey("fragment.id", ondelete="SET NULL"),
         nullable=True,
         index=True,
+        comment="Raw data fragment this reading was parsed from",
     )
-    metadata_: Mapped[Any | None] = mapped_column("metadata", JSONB(), nullable=True)
-    notes: Mapped[str | None] = mapped_column(Text, nullable=True)
 
-    person: Mapped[Person] = relationship("Person", back_populates="biometric_readings", lazy="select")
-    source_fragment: Mapped[Fragment | None] = relationship(
-        "Fragment", foreign_keys=[source_fragment_id], lazy="select"
+    # ------------------------------------------------------------------
+    # Extended attributes (device-native fields)
+    # ------------------------------------------------------------------
+
+    metadata_: Mapped[Any | None] = mapped_column(
+        "metadata",
+        JSONB(),
+        nullable=True,
+        comment=(
+            "Device-specific extended fields. Examples: "
+            "Apple Watch: {motion_context, heart_rate_context}, "
+            "Oura: {contributors: {deep_sleep, efficiency}}, "
+            "Dexcom: {transmitter_generation, noise_mode}"
+        ),
     )
+
+    notes: Mapped[str | None] = mapped_column(
+        Text,
+        nullable=True,
+        comment="Clinical notes or context about this reading",
+    )
+
+    # ------------------------------------------------------------------
+    # Relationships
+    # ------------------------------------------------------------------
+
+    person: Mapped[Person] = relationship(
+        "Person",
+        back_populates="biometric_readings",
+        lazy="select",
+    )
+
+    source_fragment: Mapped[Fragment | None] = relationship(
+        "Fragment",
+        foreign_keys=[source_fragment_id],
+        lazy="select",
+    )
+
+    # ------------------------------------------------------------------
+    # Computed properties
+    # ------------------------------------------------------------------
 
     @property
-    def is_critical_glucose(self) -> bool:
-        """True if blood glucose is critically low (<54 mg/dL Level 2 hypo) or >300 mg/dL"""
-        if self.metric.value != "blood_glucose" or self.value is None:
+    def display_value(self) -> str:
+        """Return a human-readable value + unit string."""
+        if self.value is not None:
+            return f"{self.value} {self.unit}".strip()
+        if self.value_string is not None:
+            return self.value_string
+        return "N/A"
+
+    @property
+    def is_glucose_critical(self) -> bool:
+        """Return True if this is a critically high/low glucose reading."""
+        if self.metric != BiometricMetric.BLOOD_GLUCOSE or self.value is None:
             return False
+        # Critical thresholds per ADA: <54 mg/dL (Level 2 hypo) or >300 mg/dL
         return float(self.value) < 54.0 or float(self.value) > 300.0
