@@ -1,0 +1,168 @@
+{
+  "_description": "Philosophical tradition weights for scoring dome domains. Each tradition assigns weights (0-1) to each of the 12 dome domains, expressing what that tradition considers most essential to human flourishing. The assembler scores each dome through each tradition: tradition_score = sum(domain_score * weight) / sum(weights).",
+  "_sources": {
+    "nussbaum": "Nussbaum, M. (2011). Creating Capabilities. Harvard UP.",
+    "sen": "Sen, A. (1999). Development as Freedom. Knopf.",
+    "oecd": "OECD (2020). How's Life? Measuring Well-being. OECD Publishing.",
+    "gnh": "Centre for Bhutan & GNH Studies. GNH Index methodology.",
+    "maslow": "Maslow, A. (1943). A Theory of Human Motivation. Psychological Review.",
+    "ubuntu": "Metz, T. (2007). Toward an African Moral Theory. Journal of Political Philosophy.",
+    "buddhist": "Payutto, P.A. (1994). Buddhist Economics. Buddhadhamma Foundation.",
+    "indigenous": "Kimmerer, R.W. (2013). Braiding Sweetgrass. Milkweed Editions."
+  },
+  "domains": ["health", "housing", "economics", "education", "nutrition", "safety", "transportation", "infrastructure", "environment", "legal", "community", "purpose"],
+  "traditions": {
+    "nussbaum": {
+      "name": "Nussbaum's Central Capabilities",
+      "tradition": "Capabilities Approach (Aristotelian / Liberal)",
+      "principle": "Ten capabilities a just society must secure at a threshold level for all",
+      "weights": {
+        "health": 0.95,
+        "housing": 0.85,
+        "economics": 0.70,
+        "education": 0.90,
+        "nutrition": 0.90,
+        "safety": 0.95,
+        "transportation": 0.40,
+        "infrastructure": 0.45,
+        "environment": 0.60,
+        "legal": 0.80,
+        "community": 0.85,
+        "purpose": 0.95
+      }
+    },
+    "sen": {
+      "name": "Sen's Capability Approach",
+      "tradition": "Development Economics / Freedom-Centered",
+      "principle": "Expand real freedoms; no fixed list — capabilities emerge from democratic deliberation",
+      "weights": {
+        "health": 0.85,
+        "housing": 0.80,
+        "economics": 0.90,
+        "education": 0.90,
+        "nutrition": 0.85,
+        "safety": 0.75,
+        "transportation": 0.65,
+        "infrastructure": 0.70,
+        "environment": 0.55,
+        "legal": 0.95,
+        "community": 0.70,
+        "purpose": 0.90
+      }
+    },
+    "oecd": {
+      "name": "OECD Better Life Index",
+      "tradition": "International Development / Measurement",
+      "principle": "11 measurable dimensions of well-being; US high on income, low on health and safety",
+      "weights": {
+        "health": 0.90,
+        "housing": 0.85,
+        "economics": 0.90,
+        "education": 0.80,
+        "nutrition": 0.60,
+        "safety": 0.85,
+        "transportation": 0.50,
+        "infrastructure": 0.55,
+        "environment": 0.75,
+        "legal": 0.65,
+        "community": 0.75,
+        "purpose": 0.70
+      }
+    },
+    "gnh": {
+      "name": "Gross National Happiness (Bhutan)",
+      "tradition": "Buddhist Economics / Holistic Measurement",
+      "principle": "Sufficiency across 6+ of 9 domains makes a person happy; policy should expand breadth",
+      "weights": {
+        "health": 0.85,
+        "housing": 0.75,
+        "economics": 0.70,
+        "education": 0.90,
+        "nutrition": 0.70,
+        "safety": 0.65,
+        "transportation": 0.35,
+        "infrastructure": 0.40,
+        "environment": 0.95,
+        "legal": 0.75,
+        "community": 0.95,
+        "purpose": 1.00
+      }
+    },
+    "maslow": {
+      "name": "Maslow's Hierarchy (Extended for Systems Design)",
+      "tradition": "Humanistic Psychology",
+      "principle": "Lower needs must be met before higher ones become accessible; weakest link matters",
+      "weights": {
+        "health": 0.95,
+        "housing": 0.95,
+        "economics": 0.85,
+        "education": 0.70,
+        "nutrition": 1.00,
+        "safety": 0.95,
+        "transportation": 0.55,
+        "infrastructure": 0.50,
+        "environment": 0.55,
+        "legal": 0.60,
+        "community": 0.65,
+        "purpose": 0.60
+      }
+    },
+    "ubuntu": {
+      "name": "Ubuntu Ethics",
+      "tradition": "African Communitarian / Relational",
+      "principle": "I am because we are — a person is a person through other persons; flourishing is communal",
+      "weights": {
+        "health": 0.80,
+        "housing": 0.75,
+        "economics": 0.65,
+        "education": 0.80,
+        "nutrition": 0.75,
+        "safety": 0.85,
+        "transportation": 0.50,
+        "infrastructure": 0.55,
+        "environment": 0.70,
+        "legal": 0.75,
+        "community": 1.00,
+        "purpose": 0.90
+      }
+    },
+    "buddhist": {
+      "name": "Buddhist Economics",
+      "tradition": "Right Livelihood / Sufficiency",
+      "principle": "Maximize well-being while minimizing consumption; sufficiency over accumulation",
+      "weights": {
+        "health": 0.90,
+        "housing": 0.65,
+        "economics": 0.50,
+        "education": 0.85,
+        "nutrition": 0.80,
+        "safety": 0.70,
+        "transportation": 0.40,
+        "infrastructure": 0.35,
+        "environment": 1.00,
+        "legal": 0.55,
+        "community": 0.90,
+        "purpose": 1.00
+      }
+    },
+    "indigenous": {
+      "name": "Indigenous Relational Worldview",
+      "tradition": "Reciprocity / Land-Based Knowledge",
+      "principle": "All beings are related; health of land, water, community are inseparable from human health",
+      "weights": {
+        "health": 0.85,
+        "housing": 0.65,
+        "economics": 0.45,
+        "education": 0.80,
+        "nutrition": 0.90,
+        "safety": 0.70,
+        "transportation": 0.35,
+        "infrastructure": 0.30,
+        "environment": 1.00,
+        "legal": 0.80,
+        "community": 0.95,
+        "purpose": 0.95
+      }
+    }
+  }
+}

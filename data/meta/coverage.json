@@ -1,254 +1,1443 @@
 {
-  "generated_at": "2026-02-22T16:26:10.943Z",
-  "total_sources": 17,
-  "active_sources": 15,
-  "gap_sources": 2,
+  "generated_at": "2026-02-28T20:33:33.462Z",
+  "total_sources": 142,
   "total_counties": 28,
-  "total_fragments": 155,
+  "total_fragments": 234,
+  "max_possible_fragments": 3976,
+  "storage": "layer-based",
+  "by_layer": {
+    "1": {
+      "name": "Legal",
+      "directory": "layer-01-legal",
+      "sources": 31,
+      "fragments": 5
+    },
+    "2": {
+      "name": "Systems",
+      "directory": "layer-02-systems",
+      "sources": 8,
+      "fragments": 5
+    },
+    "3": {
+      "name": "Fiscal",
+      "directory": "layer-03-fiscal",
+      "sources": 30,
+      "fragments": 59
+    },
+    "4": {
+      "name": "Health",
+      "directory": "layer-04-health",
+      "sources": 34,
+      "fragments": 10
+    },
+    "5": {
+      "name": "Housing",
+      "directory": "layer-05-housing",
+      "sources": 30,
+      "fragments": 69
+    },
+    "6": {
+      "name": "Economic",
+      "directory": "layer-06-economic",
+      "sources": 33,
+      "fragments": 38
+    },
+    "7": {
+      "name": "Education",
+      "directory": "layer-07-education",
+      "sources": 18,
+      "fragments": 10
+    },
+    "8": {
+      "name": "Community",
+      "directory": "layer-08-community",
+      "sources": 37,
+      "fragments": 28
+    },
+    "9": {
+      "name": "Environment",
+      "directory": "layer-09-environment",
+      "sources": 20,
+      "fragments": 10
+    }
+  },
   "by_source": {
     "census-demographics": {
       "label": "Census Demographics",
       "api": "Census ACS 5-year",
-      "fragments": 28,
-      "gap": false
+      "layers": [
+        8
+      ],
+      "fragments": 28
+    },
+    "census-age-detail": {
+      "label": "Census Age Distribution",
+      "api": "Census ACS 5-year",
+      "layers": [
+        4,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-citizenship": {
+      "label": "Census Citizenship & Nativity",
+      "api": "Census ACS 5-year",
+      "layers": [
+        1,
+        2,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-language": {
+      "label": "Census Language Spoken at Home",
+      "api": "Census ACS 5-year",
+      "layers": [
+        2,
+        7,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-mobility": {
+      "label": "Census Geographic Mobility",
+      "api": "Census ACS 5-year",
+      "layers": [
+        5,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-household-type": {
+      "label": "Census Household Type & Size",
+      "api": "Census ACS 5-year",
+      "layers": [
+        5,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-grandparents": {
+      "label": "Census Grandparents as Caregivers",
+      "api": "Census ACS 5-year",
+      "layers": [
+        4,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-children": {
+      "label": "Census Children & Family Structure",
+      "api": "Census ACS 5-year",
+      "layers": [
+        7,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-marital-status": {
+      "label": "Census Marital Status",
+      "api": "Census ACS 5-year",
+      "layers": [
+        8
+      ],
+      "fragments": 0
+    },
+    "census-veteran-status": {
+      "label": "Census Veteran Status",
+      "api": "Census ACS 5-year",
+      "layers": [
+        1,
+        4,
+        6
+      ],
+      "fragments": 0
+    },
+    "census-group-quarters": {
+      "label": "Census Group Quarters",
+      "api": "Census ACS 5-year",
+      "layers": [
+        5,
+        8
+      ],
+      "fragments": 0
     },
     "census-income": {
       "label": "Census Income & Poverty",
       "api": "Census ACS 5-year",
-      "fragments": 28,
-      "gap": false
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 28
+    },
+    "census-income-distribution": {
+      "label": "Census Household Income Distribution",
+      "api": "Census ACS 5-year",
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "census-poverty-detail": {
+      "label": "Census Poverty by Age & Sex",
+      "api": "Census ACS 5-year",
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "census-earnings": {
+      "label": "Census Individual Earnings",
+      "api": "Census ACS 5-year",
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "census-snap-detail": {
+      "label": "Census SNAP/Food Stamps Detail",
+      "api": "Census ACS 5-year",
+      "layers": [
+        1,
+        3
+      ],
+      "fragments": 0
+    },
+    "census-public-assistance": {
+      "label": "Census Public Assistance Income",
+      "api": "Census ACS 5-year",
+      "layers": [
+        1,
+        3
+      ],
+      "fragments": 0
     },
     "census-housing": {
       "label": "Census Housing",
       "api": "Census ACS 5-year",
-      "fragments": 28,
-      "gap": false
+      "layers": [
+        5
+      ],
+      "fragments": 28
     },
     "census-rent-burden": {
       "label": "Census Rent Burden",
       "api": "Census ACS 5-year",
-      "fragments": 26,
-      "gap": false
+      "layers": [
+        3,
+        5
+      ],
+      "fragments": 26
+    },
+    "census-housing-age": {
+      "label": "Census Housing Age (Year Built)",
+      "api": "Census ACS 5-year",
+      "layers": [
+        5,
+        9
+      ],
+      "fragments": 0
+    },
+    "census-housing-units-structure": {
+      "label": "Census Housing Units in Structure",
+      "api": "Census ACS 5-year",
+      "layers": [
+        5
+      ],
+      "fragments": 0
+    },
+    "census-housing-cost-mortgage": {
+      "label": "Census Monthly Housing Costs (Owners)",
+      "api": "Census ACS 5-year",
+      "layers": [
+        3,
+        5
+      ],
+      "fragments": 0
+    },
+    "census-vacancy-status": {
+      "label": "Census Vacancy Status Detail",
+      "api": "Census ACS 5-year",
+      "layers": [
+        5
+      ],
+      "fragments": 0
+    },
+    "census-heating-fuel": {
+      "label": "Census House Heating Fuel",
+      "api": "Census ACS 5-year",
+      "layers": [
+        5,
+        9
+      ],
+      "fragments": 0
+    },
+    "census-plumbing-kitchen": {
+      "label": "Census Plumbing & Kitchen Facilities",
+      "api": "Census ACS 5-year",
+      "layers": [
+        4,
+        5
+      ],
+      "fragments": 0
+    },
+    "census-overcrowding": {
+      "label": "Census Overcrowding (Occupants per Room)",
+      "api": "Census ACS 5-year",
+      "layers": [
+        4,
+        5
+      ],
+      "fragments": 0
     },
     "census-health-insurance": {
       "label": "Census Health Insurance",
       "api": "Census ACS 5-year",
-      "fragments": 5,
-      "gap": false
+      "layers": [
+        4
+      ],
+      "fragments": 5
+    },
+    "census-insurance-type": {
+      "label": "Census Health Insurance Type",
+      "api": "Census ACS 5-year",
+      "layers": [
+        4
+      ],
+      "fragments": 0
     },
     "census-disability": {
       "label": "Census Disability",
       "api": "Census ACS 5-year",
-      "fragments": 5,
-      "gap": false
+      "layers": [
+        1,
+        4
+      ],
+      "fragments": 5
+    },
+    "census-disability-type": {
+      "label": "Census Disability Type",
+      "api": "Census ACS 5-year",
+      "layers": [
+        1,
+        4
+      ],
+      "fragments": 0
+    },
+    "census-disability-employment": {
+      "label": "Census Disability & Employment",
+      "api": "Census ACS 5-year",
+      "layers": [
+        4,
+        6
+      ],
+      "fragments": 0
     },
     "census-education": {
       "label": "Census Education",
       "api": "Census ACS 5-year",
-      "fragments": 5,
-      "gap": false
+      "layers": [
+        7
+      ],
+      "fragments": 5
     },
-    "census-commute": {
-      "label": "Census Commute & Transportation",
+    "census-school-enrollment": {
+      "label": "Census School Enrollment Detail",
       "api": "Census ACS 5-year",
-      "fragments": 5,
-      "gap": false
+      "layers": [
+        7
+      ],
+      "fragments": 0
     },
-    "census-internet": {
-      "label": "Census Internet & Technology",
+    "census-education-by-race": {
+      "label": "Census Educational Attainment by Race",
       "api": "Census ACS 5-year",
-      "fragments": 5,
-      "gap": false
+      "layers": [
+        7,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-field-of-degree": {
+      "label": "Census Field of Bachelor's Degree",
+      "api": "Census ACS 5-year",
+      "layers": [
+        6,
+        7
+      ],
+      "fragments": 0
     },
     "census-employment": {
       "label": "Census Employment",
       "api": "Census ACS 5-year",
-      "fragments": 5,
-      "gap": false
+      "layers": [
+        6
+      ],
+      "fragments": 5
     },
-    "bls-unemployment": {
-      "label": "BLS State Unemployment",
-      "api": "BLS Public Data API",
-      "fragments": 5,
-      "gap": false
+    "census-industry": {
+      "label": "Census Industry of Employment",
+      "api": "Census ACS 5-year",
+      "layers": [
+        6
+      ],
+      "fragments": 0
+    },
+    "census-class-of-worker": {
+      "label": "Census Class of Worker",
+      "api": "Census ACS 5-year",
+      "layers": [
+        6
+      ],
+      "fragments": 0
+    },
+    "census-work-hours": {
+      "label": "Census Usual Hours Worked",
+      "api": "Census ACS 5-year",
+      "layers": [
+        6
+      ],
+      "fragments": 0
+    },
+    "census-commute": {
+      "label": "Census Commute & Transportation",
+      "api": "Census ACS 5-year",
+      "layers": [
+        5,
+        9
+      ],
+      "fragments": 5
+    },
+    "census-vehicle-availability": {
+      "label": "Census Vehicle Availability",
+      "api": "Census ACS 5-year",
+      "layers": [
+        5,
+        6
+      ],
+      "fragments": 0
+    },
+    "census-internet": {
+      "label": "Census Internet & Technology",
+      "api": "Census ACS 5-year",
+      "layers": [
+        2,
+        7
+      ],
+      "fragments": 5
+    },
+    "census-internet-by-age": {
+      "label": "Census Internet by Age",
+      "api": "Census ACS 5-year",
+      "layers": [
+        2,
+        7
+      ],
+      "fragments": 0
+    },
+    "census-fertility": {
+      "label": "Census Fertility (Women Who Gave Birth)",
+      "api": "Census ACS 5-year",
+      "layers": [
+        4,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-poverty-ratio": {
+      "label": "Census Poverty Ratio Distribution",
+      "api": "Census ACS 5-year",
+      "layers": [
+        1,
+        3
+      ],
+      "fragments": 0
+    },
+    "census-income-by-family-type": {
+      "label": "Census Income by Family Type",
+      "api": "Census ACS 5-year",
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "census-median-income-by-race": {
+      "label": "Census Median Income by Race",
+      "api": "Census ACS 5-year",
+      "layers": [
+        3,
+        6,
+        8
+      ],
+      "fragments": 0
+    },
+    "cdc-places-prevention": {
+      "label": "CDC PLACES Prevention Measures",
+      "api": "Socrata SODA (data.cdc.gov)",
+      "layers": [
+        4
+      ],
+      "fragments": 0
+    },
+    "cdc-places-outcomes": {
+      "label": "CDC PLACES Health Outcomes",
+      "api": "Socrata SODA (data.cdc.gov)",
+      "layers": [
+        4
+      ],
+      "fragments": 0
+    },
+    "cdc-places-status": {
+      "label": "CDC PLACES Health Status",
+      "api": "Socrata SODA (data.cdc.gov)",
+      "layers": [
+        4
+      ],
+      "fragments": 0
+    },
+    "cdc-places-disability": {
+      "label": "CDC PLACES Disability Measures",
+      "api": "Socrata SODA (data.cdc.gov)",
+      "layers": [
+        1,
+        4
+      ],
+      "fragments": 0
+    },
+    "cdc-places-risk": {
+      "label": "CDC PLACES Risk Behaviors",
+      "api": "Socrata SODA (data.cdc.gov)",
+      "layers": [
+        4
+      ],
+      "fragments": 0
+    },
+    "cms-medicare-enrollment": {
+      "label": "CMS Medicare Enrollment by County",
+      "api": "Socrata SODA (data.cms.gov)",
+      "layers": [
+        3,
+        4
+      ],
+      "fragments": 0
+    },
+    "hrsa-hpsa": {
+      "label": "HRSA Health Professional Shortage Areas",
+      "api": "REST JSON",
+      "layers": [
+        4
+      ],
+      "fragments": 0
+    },
+    "hrsa-health-centers": {
+      "label": "HRSA Community Health Centers",
+      "api": "Socrata SODA (data.hrsa.gov)",
+      "layers": [
+        4,
+        8
+      ],
+      "fragments": 0
+    },
+    "samhsa-treatment-locator": {
+      "label": "SAMHSA Treatment Facility Locator",
+      "api": "REST JSON",
+      "layers": [
+        4
+      ],
+      "fragments": 0
+    },
+    "cms-hospital-general": {
+      "label": "CMS Hospital General Information",
+      "api": "Socrata SODA (data.cms.gov)",
+      "layers": [
+        4
+      ],
+      "fragments": 0
+    },
+    "cdc-svi": {
+      "label": "CDC Social Vulnerability Index",
+      "api": "Socrata SODA (data.cdc.gov)",
+      "layers": [
+        4,
+        8,
+        9
+      ],
+      "fragments": 0
+    },
+    "cdc-natality": {
+      "label": "CDC Natality (Birth Statistics)",
+      "api": "Socrata SODA (data.cdc.gov)",
+      "layers": [
+        4
+      ],
+      "fragments": 0
+    },
+    "cdc-drug-overdose": {
+      "label": "CDC Drug Overdose Death Rates",
+      "api": "Socrata SODA (data.cdc.gov)",
+      "layers": [
+        4
+      ],
+      "fragments": 0
+    },
+    "hrsa-mua": {
+      "label": "HRSA Medically Underserved Areas",
+      "api": "Socrata SODA (data.hrsa.gov)",
+      "layers": [
+        4
+      ],
+      "fragments": 0
     },
     "hud-fmr": {
       "label": "HUD Fair Market Rents",
-      "api": "HUD User API",
-      "fragments": 5,
-      "gap": false
+      "api": "REST JSON",
+      "layers": [
+        3,
+        5
+      ],
+      "fragments": 5
     },
-    "epa-air-quality": {
-      "label": "EPA Air Quality",
-      "api": "EPA AQS API",
-      "fragments": 0,
-      "gap": false
+    "hud-pit-homeless": {
+      "label": "HUD Point-in-Time Homeless Count",
+      "api": "Socrata SODA (data.hudexchange.info)",
+      "layers": [
+        5
+      ],
+      "fragments": 0
     },
-    "usda-food-access": {
-      "label": "USDA Food Access",
-      "api": "USDA Food Access Atlas",
-      "fragments": 0,
-      "gap": false
+    "fhfa-house-price-index": {
+      "label": "FHFA House Price Index",
+      "api": "REST JSON",
+      "layers": [
+        3,
+        5
+      ],
+      "fragments": 0
+    },
+    "census-building-permits": {
+      "label": "Census Building Permits Survey",
+      "api": "REST JSON",
+      "layers": [
+        5,
+        6
+      ],
+      "fragments": 0
+    },
+    "hmda-mortgage-data": {
+      "label": "HMDA Home Mortgage Disclosure",
+      "api": "REST JSON",
+      "layers": [
+        3,
+        5
+      ],
+      "fragments": 0
+    },
+    "hud-chas": {
+      "label": "HUD CHAS Housing Affordability",
+      "api": "REST JSON",
+      "layers": [
+        3,
+        5
+      ],
+      "fragments": 0
+    },
+    "hud-usps-vacancy": {
+      "label": "HUD/USPS Vacancy Data",
+      "api": "REST JSON",
+      "layers": [
+        5
+      ],
+      "fragments": 0
     },
     "fema-disasters": {
       "label": "FEMA Disaster Declarations",
       "api": "OpenFEMA API",
-      "fragments": 5,
-      "gap": false
+      "layers": [
+        5,
+        9
+      ],
+      "fragments": 5
     },
-    "cdc-mortality": {
-      "label": "CDC Mortality",
-      "api": "CDC WONDER",
-      "fragments": 0,
-      "gap": true
+    "fema-individual-assistance": {
+      "label": "FEMA Individual Housing Assistance",
+      "api": "OpenFEMA API",
+      "layers": [
+        1,
+        5
+      ],
+      "fragments": 0
     },
-    "fbi-crime": {
-      "label": "FBI Crime Statistics",
-      "api": "FBI UCR API",
-      "fragments": 0,
-      "gap": true
+    "hud-public-housing": {
+      "label": "HUD Public Housing Buildings",
+      "api": "REST JSON",
+      "layers": [
+        5
+      ],
+      "fragments": 0
+    },
+    "hud-lihtc": {
+      "label": "HUD LIHTC Properties",
+      "api": "REST JSON",
+      "layers": [
+        5
+      ],
+      "fragments": 0
+    },
+    "epa-echo-facilities": {
+      "label": "EPA ECHO Regulated Facilities",
+      "api": "REST JSON",
+      "layers": [
+        9
+      ],
+      "fragments": 0
+    },
+    "epa-echo-violations": {
+      "label": "EPA ECHO Compliance Violations",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        9
+      ],
+      "fragments": 0
+    },
+    "epa-ejscreen": {
+      "label": "EPA EJSCREEN Environmental Justice",
+      "api": "REST JSON",
+      "layers": [
+        8,
+        9
+      ],
+      "fragments": 0
+    },
+    "epa-tri": {
+      "label": "EPA Toxic Release Inventory",
+      "api": "REST JSON",
+      "layers": [
+        4,
+        9
+      ],
+      "fragments": 0
+    },
+    "epa-superfund": {
+      "label": "EPA Superfund Sites",
+      "api": "REST JSON",
+      "layers": [
+        5,
+        9
+      ],
+      "fragments": 0
+    },
+    "epa-airnow": {
+      "label": "EPA AirNow Current Air Quality",
+      "api": "REST JSON",
+      "layers": [
+        4,
+        9
+      ],
+      "fragments": 0
+    },
+    "epa-drinking-water": {
+      "label": "EPA Safe Drinking Water Violations",
+      "api": "REST JSON",
+      "layers": [
+        4,
+        9
+      ],
+      "fragments": 0
+    },
+    "usgs-water-quality": {
+      "label": "USGS Water Quality Monitoring Sites",
+      "api": "REST JSON",
+      "layers": [
+        9
+      ],
+      "fragments": 0
+    },
+    "nws-alerts": {
+      "label": "NWS Active Weather Alerts",
+      "api": "REST JSON",
+      "layers": [
+        9
+      ],
+      "fragments": 0
+    },
+    "fema-national-risk-index": {
+      "label": "FEMA National Risk Index",
+      "api": "OpenFEMA API",
+      "layers": [
+        5,
+        9
+      ],
+      "fragments": 0
+    },
+    "fema-flood-zones": {
+      "label": "FEMA Flood Insurance Data",
+      "api": "OpenFEMA API",
+      "layers": [
+        5,
+        9
+      ],
+      "fragments": 0
+    },
+    "noaa-climate-normals": {
+      "label": "NOAA 30-Year Climate Normals",
+      "api": "REST JSON",
+      "layers": [
+        9
+      ],
+      "fragments": 0
+    },
+    "usda-food-access": {
+      "label": "USDA Food Access Research Atlas",
+      "api": "REST JSON",
+      "layers": [
+        4,
+        9
+      ],
+      "fragments": 0
+    },
+    "bls-unemployment": {
+      "label": "BLS State Unemployment Rate",
+      "api": "BLS Public Data API v2",
+      "layers": [
+        6
+      ],
+      "fragments": 5
+    },
+    "bls-employment-level": {
+      "label": "BLS State Employment Level",
+      "api": "BLS Public Data API v2",
+      "layers": [
+        6
+      ],
+      "fragments": 0
+    },
+    "bls-labor-force": {
+      "label": "BLS State Labor Force",
+      "api": "BLS Public Data API v2",
+      "layers": [
+        6
+      ],
+      "fragments": 0
+    },
+    "bls-cpi-all-urban": {
+      "label": "BLS CPI All Urban Consumers",
+      "api": "BLS Public Data API v2",
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "bls-average-weekly-wages": {
+      "label": "BLS Average Weekly Wages",
+      "api": "BLS Public Data API v2",
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "census-county-business-patterns": {
+      "label": "Census County Business Patterns",
+      "api": "REST JSON",
+      "layers": [
+        6
+      ],
+      "fragments": 0
+    },
+    "census-cbp-by-sector": {
+      "label": "Census Business Patterns by Industry",
+      "api": "REST JSON",
+      "layers": [
+        6
+      ],
+      "fragments": 0
+    },
+    "fdic-bank-branches": {
+      "label": "FDIC Bank Branch Locations",
+      "api": "REST JSON",
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "fdic-bank-summary": {
+      "label": "FDIC Bank Financial Summary",
+      "api": "REST JSON",
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "usaspending-county-spending": {
+      "label": "USASpending Federal Spending by County",
+      "api": "USASpending.gov",
+      "layers": [
+        1,
+        3
+      ],
+      "fragments": 0
+    },
+    "usaspending-county-awards": {
+      "label": "USASpending Federal Awards by County",
+      "api": "USASpending.gov",
+      "layers": [
+        1,
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "treasury-federal-spending": {
+      "label": "Treasury Federal Account Spending",
+      "api": "Treasury Fiscal Data",
+      "layers": [
+        1,
+        3
+      ],
+      "fragments": 0
+    },
+    "treasury-debt": {
+      "label": "Treasury National Debt",
+      "api": "Treasury Fiscal Data",
+      "layers": [
+        3
+      ],
+      "fragments": 0
+    },
+    "sba-loan-data": {
+      "label": "SBA Small Business Loan Data",
+      "api": "Socrata SODA (data.sba.gov)",
+      "layers": [
+        6
+      ],
+      "fragments": 0
+    },
+    "irs-soi-county": {
+      "label": "IRS Statistics of Income by County",
+      "api": "REST JSON",
+      "layers": [
+        3,
+        6
+      ],
+      "fragments": 0
+    },
+    "nces-school-districts": {
+      "label": "NCES School Districts (CCD)",
+      "api": "REST JSON",
+      "layers": [
+        7
+      ],
+      "fragments": 0
+    },
+    "nces-district-finance": {
+      "label": "NCES School District Finance",
+      "api": "REST JSON",
+      "layers": [
+        3,
+        7
+      ],
+      "fragments": 0
+    },
+    "college-scorecard": {
+      "label": "College Scorecard Institutions",
+      "api": "REST JSON",
+      "layers": [
+        6,
+        7
+      ],
+      "fragments": 0
+    },
+    "ipeds-institutions": {
+      "label": "IPEDS Postsecondary Institutions",
+      "api": "REST JSON",
+      "layers": [
+        7
+      ],
+      "fragments": 0
+    },
+    "headstart-programs": {
+      "label": "Head Start Program Data",
+      "api": "Socrata SODA (data.acf.hhs.gov)",
+      "layers": [
+        7
+      ],
+      "fragments": 0
+    },
+    "dol-career-onestop": {
+      "label": "DOL CareerOneStop Centers",
+      "api": "REST JSON",
+      "layers": [
+        6,
+        7
+      ],
+      "fragments": 0
+    },
+    "federal-register-rules": {
+      "label": "Federal Register Final Rules",
+      "api": "REST JSON",
+      "layers": [
+        1
+      ],
+      "fragments": 0
+    },
+    "federal-register-proposed": {
+      "label": "Federal Register Proposed Rules",
+      "api": "REST JSON",
+      "layers": [
+        1
+      ],
+      "fragments": 0
+    },
+    "federal-register-hhs": {
+      "label": "Federal Register: Health and Human Services",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        4
+      ],
+      "fragments": 0
+    },
+    "federal-register-hud": {
+      "label": "Federal Register: Housing and Urban Development",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        5
+      ],
+      "fragments": 0
+    },
+    "federal-register-dol": {
+      "label": "Federal Register: Labor",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        6
+      ],
+      "fragments": 0
+    },
+    "federal-register-ed": {
+      "label": "Federal Register: Education",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        7
+      ],
+      "fragments": 0
+    },
+    "federal-register-usda": {
+      "label": "Federal Register: Agriculture",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        9
+      ],
+      "fragments": 0
+    },
+    "ecfr-titles": {
+      "label": "eCFR Regulation Titles",
+      "api": "REST JSON",
+      "layers": [
+        1
+      ],
+      "fragments": 0
+    },
+    "ecfr-title-42": {
+      "label": "eCFR Title 42 (Public Health & Welfare)",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        4
+      ],
+      "fragments": 0
+    },
+    "ecfr-title-24": {
+      "label": "eCFR Title 24 (Housing & Urban Development)",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        5
+      ],
+      "fragments": 0
+    },
+    "sam-assistance-listings": {
+      "label": "SAM.gov Federal Assistance Listings",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        2
+      ],
+      "fragments": 0
+    },
+    "congress-bills": {
+      "label": "Congress.gov Recent Bills",
+      "api": "REST JSON",
+      "layers": [
+        1
+      ],
+      "fragments": 0
+    },
+    "regulations-gov-dockets": {
+      "label": "Regulations.gov Open Comment Periods",
+      "api": "REST JSON",
+      "layers": [
+        1
+      ],
+      "fragments": 0
+    },
+    "usaspending-social-programs": {
+      "label": "USASpending Social Program Spending",
+      "api": "USASpending.gov",
+      "layers": [
+        1,
+        3
+      ],
+      "fragments": 0
+    },
+    "propublica-nonprofits": {
+      "label": "ProPublica Nonprofit Explorer",
+      "api": "REST JSON",
+      "layers": [
+        8
+      ],
+      "fragments": 0
+    },
+    "census-population-estimates": {
+      "label": "Census Population Estimates",
+      "api": "REST JSON",
+      "layers": [
+        8
+      ],
+      "fragments": 0
+    },
+    "census-saipe": {
+      "label": "Census Small Area Poverty Estimates",
+      "api": "REST JSON",
+      "layers": [
+        3,
+        8
+      ],
+      "fragments": 0
+    },
+    "tpl-park-access": {
+      "label": "Trust for Public Land ParkServe",
+      "api": "REST JSON",
+      "layers": [
+        8,
+        9
+      ],
+      "fragments": 0
+    },
+    "211-community-services": {
+      "label": "211 Community Services Directory",
+      "api": "REST JSON",
+      "layers": [
+        2,
+        8
+      ],
+      "fragments": 0
+    },
+    "fcc-broadband": {
+      "label": "FCC Broadband Deployment",
+      "api": "REST JSON",
+      "layers": [
+        2,
+        8
+      ],
+      "fragments": 0
+    },
+    "election-data": {
+      "label": "County-Level Election Data",
+      "api": "REST JSON",
+      "layers": [
+        8
+      ],
+      "fragments": 0
+    },
+    "americorps-programs": {
+      "label": "AmeriCorps National Service Programs",
+      "api": "REST JSON",
+      "layers": [
+        8
+      ],
+      "fragments": 0
+    },
+    "fbi-crime-stats": {
+      "label": "FBI Uniform Crime Report",
+      "api": "REST JSON",
+      "layers": [
+        8
+      ],
+      "fragments": 0
+    },
+    "va-facilities": {
+      "label": "VA Health Care Facilities",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        4,
+        8
+      ],
+      "fragments": 0
+    },
+    "propublica-990-search": {
+      "label": "ProPublica Nonprofit 990 Search",
+      "api": "REST JSON",
+      "layers": [
+        3,
+        8
+      ],
+      "fragments": 0
+    },
+    "irs-eo-pub78": {
+      "label": "IRS Tax Exempt Organization Search",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-nonprofit-employment": {
+      "label": "Census CBP Nonprofit Employment (NAICS 813)",
+      "api": "REST JSON",
+      "layers": [
+        6,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-social-assistance": {
+      "label": "Census CBP Social Assistance (NAICS 624)",
+      "api": "REST JSON",
+      "layers": [
+        4,
+        6,
+        8
+      ],
+      "fragments": 0
+    },
+    "census-healthcare-social": {
+      "label": "Census CBP Healthcare & Social (NAICS 62)",
+      "api": "REST JSON",
+      "layers": [
+        4,
+        6
+      ],
+      "fragments": 0
+    },
+    "imls-public-libraries": {
+      "label": "IMLS Public Library Outlet Data",
+      "api": "Socrata SODA (data.imls.gov)",
+      "layers": [
+        7,
+        8
+      ],
+      "fragments": 0
+    },
+    "imls-museums": {
+      "label": "IMLS Museum Universe Data",
+      "api": "Socrata SODA (data.imls.gov)",
+      "layers": [
+        7,
+        8
+      ],
+      "fragments": 0
+    },
+    "datagov-catalog-nonprofit": {
+      "label": "Data.gov Nonprofit Dataset Catalog",
+      "api": "REST JSON",
+      "layers": [
+        8
+      ],
+      "fragments": 0
+    },
+    "usaspending-grants-nonprofit": {
+      "label": "USASpending Grants to Nonprofits by County",
+      "api": "USASpending.gov",
+      "layers": [
+        1,
+        3,
+        8
+      ],
+      "fragments": 0
+    },
+    "sam-gov-entity-search": {
+      "label": "SAM.gov Nonprofit Entity Registration",
+      "api": "REST JSON",
+      "layers": [
+        1,
+        2,
+        8
+      ],
+      "fragments": 0
+    },
+    "charitynavigator-api": {
+      "label": "Charity Navigator Ratings & Financials",
+      "api": "REST JSON",
+      "layers": [
+        8
+      ],
+      "fragments": 0
+    },
+    "nces-private-schools": {
+      "label": "NCES Private School Universe (PSS)",
+      "api": "REST JSON",
+      "layers": [
+        7,
+        8
+      ],
+      "fragments": 0
     }
   },
   "by_county": {
     "11001": {
       "name": "District of Columbia",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "12086": {
       "name": "Miami-Dade County, FL",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "13121": {
       "name": "Fulton County (Atlanta), GA",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "17031": {
       "name": "Cook County (Chicago), IL",
       "fragments": 13,
-      "coverage_pct": 76
+      "coverage_pct": 9
     },
     "21013": {
       "name": "Bell County, KY",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "24510": {
       "name": "Baltimore City, MD",
       "fragments": 13,
-      "coverage_pct": 76
+      "coverage_pct": 9
     },
     "26163": {
       "name": "Wayne County (Detroit), MI",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "28049": {
       "name": "Hinds County (Jackson), MS",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "34013": {
       "name": "Essex County, NJ",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "34017": {
       "name": "Hudson County, NJ",
       "fragments": 3,
-      "coverage_pct": 18
+      "coverage_pct": 2
     },
     "34023": {
       "name": "Middlesex County, NJ",
       "fragments": 3,
-      "coverage_pct": 18
+      "coverage_pct": 2
     },
     "36005": {
       "name": "Bronx County, NY",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "36047": {
       "name": "Kings County (Brooklyn), NY",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "36061": {
       "name": "New York County (Manhattan), NY",
       "fragments": 13,
-      "coverage_pct": 76
+      "coverage_pct": 9
     },
     "36081": {
       "name": "Queens County, NY",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "39035": {
       "name": "Cuyahoga County (Cleveland), OH",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "42017": {
       "name": "Bucks County, PA",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "42029": {
       "name": "Chester County, PA",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "42045": {
       "name": "Delaware County, PA",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "42091": {
       "name": "Montgomery County, PA",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "42101": {
       "name": "Philadelphia, PA",
       "fragments": 13,
-      "coverage_pct": 76
+      "coverage_pct": 9
     },
     "48113": {
       "name": "Dallas County, TX",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "48201": {
       "name": "Harris County (Houston), TX",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "53033": {
       "name": "King County (Seattle), WA",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "54055": {
       "name": "Mercer County, WV",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "06037": {
       "name": "Los Angeles County, CA",
       "fragments": 13,
-      "coverage_pct": 76
+      "coverage_pct": 9
     },
     "04013": {
       "name": "Maricopa County (Phoenix), AZ",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     },
     "01073": {
       "name": "Jefferson County (Birmingham), AL",
       "fragments": 4,
-      "coverage_pct": 24
+      "coverage_pct": 3
     }
   }
 }

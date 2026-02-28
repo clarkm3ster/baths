@@ -10,13 +10,13 @@
     "children": 1,
     "description": "Working poor"
   },
-  "assembled_at": "2026-02-22T16:26:11.303Z",
+  "assembled_at": "2026-02-28T20:37:26.631Z",
   "fragments_used": 4,
   "fragment_sources": [
-    "census-demographics",
-    "census-housing",
     "census-income",
-    "census-rent-burden"
+    "census-rent-burden",
+    "census-housing",
+    "census-demographics"
   ],
   "eligible_programs": [
     {
@@ -112,80 +112,237 @@
     "program_count": 9
   },
   "cosm": 10,
-  "cosm_average": 33,
+  "cosm_average": 42,
   "domain_coverage": {
     "health": {
-      "score": 20,
+      "score": 51,
       "raw_score": 20,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 20,
+      "synergy_boost": 31
     },
     "housing": {
-      "score": 87,
+      "score": 94,
       "raw_score": 87,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 87,
+      "synergy_boost": 7
     },
     "economics": {
-      "score": 50,
+      "score": 66,
       "raw_score": 50,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 50,
+      "synergy_boost": 16
     },
     "education": {
-      "score": 10,
+      "score": 30,
       "raw_score": 10,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 10,
+      "synergy_boost": 20
     },
     "nutrition": {
-      "score": 75,
+      "score": 82,
       "raw_score": 75,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 75,
+      "synergy_boost": 7
     },
     "safety": {
-      "score": 10,
+      "score": 23,
       "raw_score": 10,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 10,
+      "synergy_boost": 13
     },
     "transportation": {
       "score": 10,
       "raw_score": 10,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 10,
+      "synergy_boost": 0
     },
     "infrastructure": {
       "score": 10,
       "raw_score": 10,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 10,
+      "synergy_boost": 0
     },
     "environment": {
       "score": 10,
       "raw_score": 10,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 10,
+      "synergy_boost": 0
     },
     "legal": {
       "score": 10,
       "raw_score": 10,
       "max_score": 100,
-      "note": "Legal framework data not yet scraped — future fragment source"
+      "note": "Legal framework data not yet scraped — future fragment source",
+      "raw_score_before_synergy": 10,
+      "synergy_boost": 0
     },
     "community": {
-      "score": 90,
+      "score": 100,
       "raw_score": 90,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 90,
+      "synergy_boost": 11
     },
     "purpose": {
-      "score": 10,
+      "score": 20,
       "raw_score": 10,
       "max_score": 100,
-      "note": null
+      "note": null,
+      "raw_score_before_synergy": 10,
+      "synergy_boost": 10
     }
+  },
+  "tradition_scores": {
+    "nussbaum": {
+      "name": "Nussbaum's Central Capabilities",
+      "tradition": "Capabilities Approach (Aristotelian / Liberal)",
+      "score": 46
+    },
+    "sen": {
+      "name": "Sen's Capability Approach",
+      "tradition": "Development Economics / Freedom-Centered",
+      "score": 43
+    },
+    "oecd": {
+      "name": "OECD Better Life Index",
+      "tradition": "International Development / Measurement",
+      "score": 44
+    },
+    "gnh": {
+      "name": "Gross National Happiness (Bhutan)",
+      "tradition": "Buddhist Economics / Holistic Measurement",
+      "score": 45
+    },
+    "maslow": {
+      "name": "Maslow's Hierarchy (Extended for Systems Design)",
+      "tradition": "Humanistic Psychology",
+      "score": 47
+    },
+    "ubuntu": {
+      "name": "Ubuntu Ethics",
+      "tradition": "African Communitarian / Relational",
+      "score": 45
+    },
+    "buddhist": {
+      "name": "Buddhist Economics",
+      "tradition": "Right Livelihood / Sufficiency",
+      "score": 44
+    },
+    "indigenous": {
+      "name": "Indigenous Relational Worldview",
+      "tradition": "Reciprocity / Land-Based Knowledge",
+      "score": 44
+    }
+  },
+  "domain_costs": {
+    "by_domain": {
+      "health": {
+        "score": 51,
+        "current_annual_burden": 20224,
+        "investment_to_sufficiency": 5600,
+        "annual_savings_at_sufficiency": 7842,
+        "tenths_needed": 2
+      },
+      "housing": {
+        "score": 94,
+        "current_annual_burden": 2135,
+        "investment_to_sufficiency": 0,
+        "annual_savings_at_sufficiency": 0,
+        "tenths_needed": 0
+      },
+      "economics": {
+        "score": 66,
+        "current_annual_burden": 8500,
+        "investment_to_sufficiency": 1800,
+        "annual_savings_at_sufficiency": 1000,
+        "tenths_needed": 1
+      },
+      "education": {
+        "score": 30,
+        "current_annual_burden": 10043,
+        "investment_to_sufficiency": 8800,
+        "annual_savings_at_sufficiency": 5739,
+        "tenths_needed": 4
+      },
+      "nutrition": {
+        "score": 82,
+        "current_annual_burden": 1530,
+        "investment_to_sufficiency": 0,
+        "annual_savings_at_sufficiency": 0,
+        "tenths_needed": 0
+      },
+      "safety": {
+        "score": 23,
+        "current_annual_burden": 35244,
+        "investment_to_sufficiency": 17500,
+        "annual_savings_at_sufficiency": 21513,
+        "tenths_needed": 5
+      },
+      "transportation": {
+        "score": 10,
+        "current_annual_burden": 5850,
+        "investment_to_sufficiency": 4800,
+        "annual_savings_at_sufficiency": 3900,
+        "tenths_needed": 6
+      },
+      "infrastructure": {
+        "score": 10,
+        "current_annual_burden": 3600,
+        "investment_to_sufficiency": 3600,
+        "annual_savings_at_sufficiency": 2400,
+        "tenths_needed": 6
+      },
+      "environment": {
+        "score": 10,
+        "current_annual_burden": 16650,
+        "investment_to_sufficiency": 15000,
+        "annual_savings_at_sufficiency": 11100,
+        "tenths_needed": 6
+      },
+      "legal": {
+        "score": 10,
+        "current_annual_burden": 13500,
+        "investment_to_sufficiency": 9000,
+        "annual_savings_at_sufficiency": 9000,
+        "tenths_needed": 6
+      },
+      "community": {
+        "score": 100,
+        "current_annual_burden": 0,
+        "investment_to_sufficiency": 0,
+        "annual_savings_at_sufficiency": 0,
+        "tenths_needed": 0
+      },
+      "purpose": {
+        "score": 20,
+        "current_annual_burden": 9600,
+        "investment_to_sufficiency": 5000,
+        "annual_savings_at_sufficiency": 6000,
+        "tenths_needed": 5
+      }
+    },
+    "total_annual_burden": 126876,
+    "total_investment_to_sufficiency": 71100,
+    "total_annual_savings": 68494
   },
   "gaps": [
     {
@@ -357,7 +514,8 @@
   },
   "panels": {
     "health": {
-      "score": 20,
+      "score": 51,
+      "synergy_boost": 31,
       "programs": [
         "Medicaid",
         "CHIP"
@@ -365,7 +523,8 @@
       "program_value": 11300
     },
     "housing": {
-      "score": 87,
+      "score": 94,
+      "synergy_boost": 7,
       "programs": [
         "Section 8 HCV",
         "LIHEAP"
@@ -373,21 +532,24 @@
       "program_value": 12248
     },
     "economics": {
-      "score": 50,
+      "score": 66,
+      "synergy_boost": 16,
       "programs": [
         "EITC"
       ],
       "program_value": 2397
     },
     "education": {
-      "score": 10,
+      "score": 30,
+      "synergy_boost": 20,
       "programs": [
         "Pell Grant"
       ],
       "program_value": 7395
     },
     "nutrition": {
-      "score": 75,
+      "score": 82,
+      "synergy_boost": 7,
       "programs": [
         "SNAP",
         "WIC",
@@ -396,37 +558,44 @@
       "program_value": 6300
     },
     "safety": {
-      "score": 10,
+      "score": 23,
+      "synergy_boost": 13,
       "programs": [],
       "program_value": 0
     },
     "transportation": {
       "score": 10,
+      "synergy_boost": 0,
       "programs": [],
       "program_value": 0
     },
     "infrastructure": {
       "score": 10,
+      "synergy_boost": 0,
       "programs": [],
       "program_value": 0
     },
     "environment": {
       "score": 10,
+      "synergy_boost": 0,
       "programs": [],
       "program_value": 0
     },
     "legal": {
       "score": 10,
+      "synergy_boost": 0,
       "programs": [],
       "program_value": 0
     },
     "community": {
-      "score": 90,
+      "score": 100,
+      "synergy_boost": 11,
       "programs": [],
       "program_value": 0
     },
     "purpose": {
-      "score": 10,
+      "score": 20,
+      "synergy_boost": 10,
       "programs": [],
       "program_value": 0
     }

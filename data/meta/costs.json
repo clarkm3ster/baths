@@ -1,0 +1,99 @@
+{
+  "_description": "Domain-level cost data for the assembler. Two numbers per domain: (1) cost_at_zero — annual societal cost per person when a domain scores 0 (complete failure), (2) cost_per_tenth — marginal cost to improve domain score by 10 points. These let the assembler produce per-domain investment estimates: 'moving health from 40 to 60 costs $X and saves $Y'.",
+  "_methodology": "cost_at_zero derived from published total cost estimates (healthcare for uninsured, homelessness costs, incarceration costs, etc.) divided by affected population. cost_per_tenth is the marginal intervention cost to move from current baseline toward sufficiency, based on program evaluation literature.",
+  "_sources": {
+    "health": "Coughlin, T. et al. (2014). Uncompensated Care for the Uninsured. Kaiser Family Foundation.",
+    "housing": "Culhane, D. (2008). The Cost of Homelessness. European Journal of Homelessness.",
+    "economics": "Holzer, H. et al. (2008). The Economic Costs of Childhood Poverty. NASW.",
+    "education": "Levin, H. et al. (2007). The Costs and Benefits of an Excellent Education. Teachers College.",
+    "nutrition": "Cook, J. & Jeng, K. (2009). Child Food Insecurity: The Economic Impact. Feeding America.",
+    "safety": "Miller, T. et al. (2021). Costs of Fatal and Nonfatal Injury. National Safety Council.",
+    "general": "baths-engine/backend/data/costs.py SEED_COST_POINTS"
+  },
+  "domains": {
+    "health": {
+      "cost_at_zero": 41274,
+      "cost_per_tenth": 2800,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "Uninsured, no primary care, ER-dependent, untreated chronic conditions",
+      "tenth_intervention": "Each 10-point improvement: insurance enrollment, primary care linkage, chronic disease management, behavioral health integration"
+    },
+    "housing": {
+      "cost_at_zero": 35578,
+      "cost_per_tenth": 3200,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "Chronic homelessness: shelter cycling, ER visits, justice involvement",
+      "tenth_intervention": "Each 10-point improvement: rapid rehousing ($5K), rent stabilization, permanent supportive housing ($21K)"
+    },
+    "economics": {
+      "cost_at_zero": 25000,
+      "cost_per_tenth": 1800,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "Zero income, no labor force participation, full public assistance dependency",
+      "tenth_intervention": "Each 10-point improvement: workforce development, subsidized employment, EITC expansion, barrier removal"
+    },
+    "education": {
+      "cost_at_zero": 14347,
+      "cost_per_tenth": 2200,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "No educational engagement, no credentials, no pathway to skill development",
+      "tenth_intervention": "Each 10-point improvement: enrollment support, tutoring, credential programs, Pell access"
+    },
+    "nutrition": {
+      "cost_at_zero": 8500,
+      "cost_per_tenth": 900,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "Severe food insecurity, malnutrition, diet-related chronic disease onset",
+      "tenth_intervention": "Each 10-point improvement: SNAP enrollment ($2328/yr), WIC ($564/yr), food bank access, medically tailored meals"
+    },
+    "safety": {
+      "cost_at_zero": 45771,
+      "cost_per_tenth": 3500,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "Incarceration or chronic violence exposure, complete loss of personal security",
+      "tenth_intervention": "Each 10-point improvement: violence interruption, reentry programs, community policing, diversion"
+    },
+    "transportation": {
+      "cost_at_zero": 6500,
+      "cost_per_tenth": 800,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "No vehicle, no transit access, isolated from employment and services",
+      "tenth_intervention": "Each 10-point improvement: transit passes ($1200/yr), ride-to-work programs, vehicle repair assistance"
+    },
+    "infrastructure": {
+      "cost_at_zero": 4000,
+      "cost_per_tenth": 600,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "No internet, no computer, no digital access to services or employment",
+      "tenth_intervention": "Each 10-point improvement: broadband subsidy ($360/yr), device provision, digital literacy training"
+    },
+    "environment": {
+      "cost_at_zero": 18500,
+      "cost_per_tenth": 2500,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "Toxic exposure, contaminated water, hazardous housing (lead, mold, asbestos)",
+      "tenth_intervention": "Each 10-point improvement: lead abatement ($10K one-time), air quality remediation, water treatment, Superfund cleanup"
+    },
+    "legal": {
+      "cost_at_zero": 15000,
+      "cost_per_tenth": 1500,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "No legal identity, no benefits access, unresolved legal barriers (warrants, records, immigration)",
+      "tenth_intervention": "Each 10-point improvement: legal aid ($1200/yr), record expungement, benefits enrollment assistance, immigration counsel"
+    },
+    "community": {
+      "cost_at_zero": 9000,
+      "cost_per_tenth": 700,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "Complete social isolation, no civic participation, no informal support network",
+      "tenth_intervention": "Each 10-point improvement: community center access, peer support programs, civic engagement facilitation"
+    },
+    "purpose": {
+      "cost_at_zero": 12000,
+      "cost_per_tenth": 1000,
+      "unit": "annual_per_person_usd",
+      "zero_scenario": "No meaningful activity, no goals, no sense of contribution or belonging",
+      "tenth_intervention": "Each 10-point improvement: vocational counseling, arts programs, volunteer coordination, mentorship"
+    }
+  }
+}

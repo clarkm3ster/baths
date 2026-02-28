@@ -1,0 +1,68 @@
+{
+  "_description": "Domain synergy graph. When a dome's score in domain X improves, connected domains also improve proportionally. Edge weight (0-1) indicates the strength of the downstream effect. Based on published evidence on social determinants of health, housing-first outcomes, and integrated service delivery research.",
+  "_sources": {
+    "housing_health": "Maqbool, N. et al. (2015). The Impacts of Affordable Housing on Health. NHCHC.",
+    "nutrition_health": "Gundersen, C. & Ziliak, J. (2015). Food Insecurity and Health Outcomes. Health Affairs.",
+    "education_economics": "Autor, D. (2014). Skills, Education, and the Rise of Earnings Inequality. Science.",
+    "safety_health": "Sharkey, P. (2018). Uneasy Peace: The Great Crime Decline. Norton.",
+    "housing_education": "Brennan, M. (2011). The Impacts of Affordable Housing on Education. NHCHC.",
+    "economics_nutrition": "Coleman-Jensen, A. et al. (2023). Household Food Security in the US. USDA ERS."
+  },
+  "domains": ["health", "housing", "economics", "education", "nutrition", "safety", "transportation", "infrastructure", "environment", "legal", "community", "purpose"],
+  "edges": [
+    {"from": "housing", "to": "health", "weight": 0.72, "evidence": "Stable housing reduces ER visits 40-60%; PSH reduces Medicaid costs 12%"},
+    {"from": "housing", "to": "education", "weight": 0.58, "evidence": "Housing stability improves school attendance 10-15%; reduces grade retention"},
+    {"from": "housing", "to": "safety", "weight": 0.45, "evidence": "Housing-first reduces victimization risk; neighborhood stability reduces crime"},
+    {"from": "housing", "to": "economics", "weight": 0.52, "evidence": "Stable address enables job search, maintains employment; reduces presenteeism"},
+    {"from": "housing", "to": "community", "weight": 0.40, "evidence": "Residential stability builds social networks; tenure enables civic participation"},
+
+    {"from": "health", "to": "economics", "weight": 0.65, "evidence": "Medicaid expansion increased labor force participation 3-6% in expansion states"},
+    {"from": "health", "to": "education", "weight": 0.42, "evidence": "Untreated health conditions are leading cause of school absence and dropout"},
+    {"from": "health", "to": "nutrition", "weight": 0.35, "evidence": "Healthcare navigation connects to WIC/SNAP; chronic disease management requires nutrition"},
+    {"from": "health", "to": "purpose", "weight": 0.48, "evidence": "Mental health treatment restores agency; chronic pain management enables participation"},
+
+    {"from": "economics", "to": "housing", "weight": 0.70, "evidence": "Income is primary determinant of housing stability; $1000 income increase reduces homelessness risk 2%"},
+    {"from": "economics", "to": "nutrition", "weight": 0.75, "evidence": "Income is strongest predictor of food security; EITC reduces food insecurity 5-10%"},
+    {"from": "economics", "to": "health", "weight": 0.55, "evidence": "$10K income increase associated with 1-2 year life expectancy gain at lower incomes"},
+    {"from": "economics", "to": "education", "weight": 0.40, "evidence": "Economic stability enables educational investment; reduces child labor and dropout"},
+    {"from": "economics", "to": "community", "weight": 0.35, "evidence": "Financial stability enables civic participation; poverty isolates"},
+
+    {"from": "education", "to": "economics", "weight": 0.68, "evidence": "Each year of education increases earnings 8-13%; bachelor's degree premium is 65%"},
+    {"from": "education", "to": "health", "weight": 0.50, "evidence": "Education gradient in mortality: 4-year degree associated with 7+ years additional life expectancy"},
+    {"from": "education", "to": "purpose", "weight": 0.55, "evidence": "Education expands agency and life options; strongest predictor of self-reported meaning"},
+    {"from": "education", "to": "community", "weight": 0.38, "evidence": "Educational attainment predicts civic engagement, voting, and volunteering"},
+
+    {"from": "nutrition", "to": "health", "weight": 0.60, "evidence": "Food insecurity doubles risk of diabetes, depression; adequate nutrition reduces chronic disease"},
+    {"from": "nutrition", "to": "education", "weight": 0.52, "evidence": "School breakfast programs improve test scores 15-25%; hunger impairs cognition directly"},
+    {"from": "nutrition", "to": "economics", "weight": 0.30, "evidence": "Malnutrition reduces productivity; childhood nutrition predicts adult earnings"},
+
+    {"from": "safety", "to": "health", "weight": 0.55, "evidence": "Violence exposure causes PTSD, depression; safe neighborhoods enable outdoor activity"},
+    {"from": "safety", "to": "education", "weight": 0.48, "evidence": "Neighborhood violence reduces school test scores equivalent to missing 1 year of school"},
+    {"from": "safety", "to": "economics", "weight": 0.42, "evidence": "Crime reduces property values, business investment; violence reduces labor force participation"},
+    {"from": "safety", "to": "community", "weight": 0.50, "evidence": "Safety is prerequisite for social cohesion; crime erodes trust and civic participation"},
+
+    {"from": "transportation", "to": "economics", "weight": 0.55, "evidence": "Car access is strongest predictor of employment for welfare recipients; transit access expands job search radius 60%"},
+    {"from": "transportation", "to": "health", "weight": 0.35, "evidence": "3.6M Americans miss medical appointments due to transportation; non-emergency medical transport saves $2400/year"},
+    {"from": "transportation", "to": "education", "weight": 0.30, "evidence": "Transportation access predicts college enrollment and completion for low-income students"},
+
+    {"from": "infrastructure", "to": "education", "weight": 0.45, "evidence": "Broadband access is prerequisite for modern education; digital divide maps to achievement gap"},
+    {"from": "infrastructure", "to": "economics", "weight": 0.40, "evidence": "Internet access required for 80% of job applications; digital literacy predicts earnings"},
+    {"from": "infrastructure", "to": "health", "weight": 0.30, "evidence": "Telehealth requires broadband; digital health tools improve chronic disease management"},
+
+    {"from": "environment", "to": "health", "weight": 0.60, "evidence": "Air pollution causes 100K+ US deaths/year; lead exposure reduces IQ 3-5 points; water contamination causes chronic illness"},
+    {"from": "environment", "to": "housing", "weight": 0.35, "evidence": "Environmental hazards reduce housing value; flooding/toxics make housing uninhabitable"},
+    {"from": "environment", "to": "community", "weight": 0.30, "evidence": "Green space increases social cohesion; environmental justice drives community organizing"},
+
+    {"from": "legal", "to": "economics", "weight": 0.55, "evidence": "Criminal record reduces callbacks 50%; occupational licensing bars 30% of jobs; immigration status determines work authorization"},
+    {"from": "legal", "to": "housing", "weight": 0.60, "evidence": "Eviction record reduces housing access; criminal record bars public housing; legal aid prevents 70% of evictions"},
+    {"from": "legal", "to": "health", "weight": 0.40, "evidence": "Legal status determines Medicaid eligibility; disability benefits require legal advocacy; medical debt requires legal protection"},
+    {"from": "legal", "to": "community", "weight": 0.35, "evidence": "Felony disenfranchisement removes civic voice; immigration enforcement fragments communities"},
+
+    {"from": "community", "to": "health", "weight": 0.45, "evidence": "Social isolation mortality risk equivalent to smoking 15 cigarettes/day; community ties reduce depression 40%"},
+    {"from": "community", "to": "safety", "weight": 0.50, "evidence": "Social cohesion is strongest neighborhood-level predictor of reduced violence"},
+    {"from": "community", "to": "purpose", "weight": 0.55, "evidence": "Belonging and recognition are prerequisites for meaning-making; isolation destroys purpose"},
+
+    {"from": "purpose", "to": "health", "weight": 0.40, "evidence": "Sense of purpose associated with 15% lower mortality; reduces allostatic load"},
+    {"from": "purpose", "to": "community", "weight": 0.45, "evidence": "Purpose drives contribution; meaning-making builds social bonds"}
+  ]
+}

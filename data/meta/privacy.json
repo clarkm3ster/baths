@@ -1,0 +1,94 @@
+{
+  "_description": "Privacy and consent framework for dome data domains. Maps each dome layer and data source type to applicable privacy laws, consent requirements, and de-identification rules. The assembler checks this before admitting new fragment sources. Currently all fragments are public data (Census, BLS, HUD, EPA) — no consent needed. This becomes critical when HMIS, behavioral health, or justice data enters the pipeline.",
+  "_sources": {
+    "hipaa": "45 CFR Parts 160, 164 — Health Insurance Portability and Accountability Act",
+    "42cfr": "42 CFR Part 2 — Confidentiality of Substance Use Disorder Records",
+    "ferpa": "20 USC § 1232g — Family Educational Rights and Privacy Act",
+    "fcra": "15 USC § 1681 — Fair Credit Reporting Act",
+    "vawa": "34 USC § 12291 — Violence Against Women Act (HMIS protections)",
+    "hhid": "HUD HMIS Data Standards — Client-level data protection"
+  },
+  "classification": {
+    "public": {
+      "description": "Aggregate statistics, no individual records, freely available",
+      "consent_required": false,
+      "examples": ["Census ACS", "BLS unemployment", "HUD FMR", "EPA air quality", "FEMA disasters"],
+      "applies_to_layers": [1, 2, 3, 5, 6, 7, 8, 9]
+    },
+    "protected_health": {
+      "description": "Individually identifiable health information",
+      "consent_required": true,
+      "governing_law": "HIPAA (45 CFR 164)",
+      "consent_type": "Written authorization with specific elements",
+      "minimum_necessary": true,
+      "de_identification": "Safe Harbor (remove 18 identifiers) or Expert Determination",
+      "applies_to_layers": [4]
+    },
+    "substance_use": {
+      "description": "Substance use disorder diagnosis, treatment, or referral records",
+      "consent_required": true,
+      "governing_law": "42 CFR Part 2",
+      "consent_type": "Dual written consent — more restrictive than HIPAA",
+      "re_disclosure_prohibited": true,
+      "applies_to_layers": [4]
+    },
+    "education_records": {
+      "description": "Student education records maintained by educational institutions",
+      "consent_required": true,
+      "governing_law": "FERPA (20 USC § 1232g)",
+      "consent_type": "Written consent from parent (under 18) or student",
+      "directory_info_exception": true,
+      "applies_to_layers": [7]
+    },
+    "hmis_client": {
+      "description": "Client-level data in Homeless Management Information System",
+      "consent_required": true,
+      "governing_law": "HUD HMIS Data Standards + VAWA",
+      "consent_type": "Informed consent at intake; VAWA survivors can opt out entirely",
+      "data_sharing_agreements": true,
+      "applies_to_layers": [2, 4, 5]
+    },
+    "justice_records": {
+      "description": "Criminal justice records, arrest records, incarceration data",
+      "consent_required": true,
+      "governing_law": "Varies by state — CORI, state privacy acts",
+      "consent_type": "Written authorization; some records sealed/expunged by law",
+      "ban_the_box": "Many jurisdictions restrict employer/housing access to records",
+      "applies_to_layers": [1, 8]
+    },
+    "financial_records": {
+      "description": "Credit reports, bank records, tax returns",
+      "consent_required": true,
+      "governing_law": "FCRA (15 USC § 1681), IRC § 6103",
+      "consent_type": "Written authorization with permissible purpose",
+      "applies_to_layers": [3]
+    }
+  },
+  "fragment_sources": {
+    "census-*": {"classification": "public", "consent": "none", "notes": "Aggregate estimates, no individual data"},
+    "bls-*": {"classification": "public", "consent": "none", "notes": "State/national labor statistics"},
+    "hud-fmr": {"classification": "public", "consent": "none", "notes": "Area-level rent standards"},
+    "hud-pit-homeless": {"classification": "public", "consent": "none", "notes": "Aggregate PIT counts, not client data"},
+    "epa-*": {"classification": "public", "consent": "none", "notes": "Environmental monitoring data"},
+    "fema-*": {"classification": "public", "consent": "none", "notes": "Disaster declarations and risk indices"},
+    "cdc-places-*": {"classification": "public", "consent": "none", "notes": "Model-based county estimates, no individual data"},
+    "cms-*": {"classification": "public", "consent": "none", "notes": "Aggregate enrollment and spending"},
+    "usda-*": {"classification": "public", "consent": "none", "notes": "Census tract food access measures"},
+    "FUTURE:hmis-client": {"classification": "hmis_client", "consent": "required", "notes": "DO NOT INGEST without data sharing agreement and client consent"},
+    "FUTURE:behavioral-health": {"classification": "substance_use", "consent": "required", "notes": "42 CFR Part 2 — dual written consent BEFORE any fragment creation"},
+    "FUTURE:hospital-discharge": {"classification": "protected_health", "consent": "required", "notes": "HIPAA authorization or BAA with covered entity"},
+    "FUTURE:school-records": {"classification": "education_records", "consent": "required", "notes": "FERPA consent from parent or eligible student"},
+    "FUTURE:criminal-history": {"classification": "justice_records", "consent": "required", "notes": "State CORI laws apply; many records sealed"}
+  },
+  "de_identification_rules": {
+    "safe_harbor_identifiers_to_remove": [
+      "names", "geographic_data_smaller_than_state", "dates_except_year", "phone_numbers",
+      "fax_numbers", "email_addresses", "ssn", "medical_record_numbers", "health_plan_ids",
+      "account_numbers", "certificate_license_numbers", "vehicle_identifiers",
+      "device_identifiers", "web_urls", "ip_addresses", "biometric_identifiers",
+      "full_face_photos", "any_other_unique_identifier"
+    ],
+    "minimum_cell_size": 11,
+    "suppression_note": "Census already suppresses cells < 11; BATHS fragments inherit this protection"
+  }
+}

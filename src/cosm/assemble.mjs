@@ -16,10 +16,21 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..', '..')
 const DATA = join(ROOT, 'data')
-const FRAGMENTS = join(DATA, 'fragments')
 const DOMES = join(DATA, 'domes')
 const PATTERNS = join(DATA, 'patterns')
 const META = join(DATA, 'meta')
+
+const LAYER_DIRS = {
+  1: 'layer-01-legal',
+  2: 'layer-02-systems',
+  3: 'layer-03-fiscal',
+  4: 'layer-04-health',
+  5: 'layer-05-housing',
+  6: 'layer-06-economic',
+  7: 'layer-07-education',
+  8: 'layer-08-community',
+  9: 'layer-09-environment',
+}
 
 // ── File I/O ─────────────────────────────────────────────────────────────────
 
@@ -30,6 +41,12 @@ function readJSON(path) {
     return null
   }
 }
+
+// ── Meta files — loaded once at startup ──────────────────────────────────────
+
+const TRADITIONS = readJSON(join(META, 'traditions.json'))
+const SYNERGY = readJSON(join(META, 'synergy.json'))
+const DOMAIN_COSTS = readJSON(join(META, 'costs.json'))
 
 function writeJSON(path, data) {
   mkdirSync(dirname(path), { recursive: true })
@@ -570,23 +587,129 @@ function calculateDomainCoverage(fragments, conditions, programs) {
 }
 
 // ── Load all fragments for a FIPS ────────────────────────────────────────────
+// Reads from data/layer-*/{source-id}/{fips}.json — deduplicates by source ID
+// since the same fragment can live in multiple layer directories.
 
 function loadFragments(fips) {
   const result = {}
-  let count = 0
 
-  if (!existsSync(FRAGMENTS)) return { fragments: result, count }
-
-  for (const sourceDir of readdirSync(FRAGMENTS)) {
-    const filePath = join(FRAGMENTS, sourceDir, `${fips}.json`)
-    const fragment = readJSON(filePath)
-    if (fragment) {
-      result[sourceDir] = fragment
-      count++
+  for (const layerDir of Object.values(LAYER_DIRS)) {
+    const dir = join(DATA, layerDir)
+    if (!existsSync(dir)) continue
+    for (const sourceDir of readdirSync(dir)) {
+      if (result[sourceDir]) continue // already loaded from an earlier layer
+      const filePath = join(dir, sourceDir, `${fips}.json`)
+      const fragment = readJSON(filePath)
+      if (fragment) {
+        result[sourceDir] = fragment
+      }
     }
   }
 
-  return { fragments: result, count }
+  return { fragments: result, count: Object.keys(result).length }
+}
+
+// ── Tradition Scoring ────────────────────────────────────────────────────────
+// Score each dome through each philosophical tradition's weight matrix.
+
+function scoreByTraditions(domainCoverage) {
+  if (!TRADITIONS?.traditions) return null
+
+  const scores = {}
+  for (const [tid, tradition] of Object.entries(TRADITIONS.traditions)) {
+    const weights = tradition.weights
+    let weightedSum = 0
+    let totalWeight = 0
+    for (const [domain, weight] of Object.entries(weights)) {
+      const domScore = domainCoverage[domain]?.score ?? 0
+      weightedSum += domScore * weight
+      totalWeight += weight
+    }
+    scores[tid] = {
+      name: tradition.name,
+      tradition: tradition.tradition,
+      score: totalWeight > 0 ? Math.round(weightedSum / totalWeight) : 0,
+    }
+  }
+  return scores
+}
+
+// ── Synergy Propagation ──────────────────────────────────────────────────────
+// Given domain scores, propagate improvements through the synergy graph.
+// One pass: for each edge, add (source_score * weight * 0.15) to the target.
+// The 0.15 damping prevents runaway feedback while showing real connections.
+
+function applySynergy(domainCoverage) {
+  if (!SYNERGY?.edges) return domainCoverage
+
+  // Start with raw scores
+  const raw = {}
+  const propagated = {}
+  for (const [domain, cov] of Object.entries(domainCoverage)) {
+    raw[domain] = cov.score
+    propagated[domain] = 0
+  }
+
+  const DAMPING = 0.15
+
+  for (const edge of SYNERGY.edges) {
+    if (raw[edge.from] !== undefined && raw[edge.to] !== undefined) {
+      propagated[edge.to] += raw[edge.from] * edge.weight * DAMPING
+    }
+  }
+
+  // Merge: synergy-adjusted score = raw + propagated, capped at 100
+  const adjusted = {}
+  for (const [domain, cov] of Object.entries(domainCoverage)) {
+    const boost = Math.round(propagated[domain] || 0)
+    adjusted[domain] = {
+      ...cov,
+      score: Math.min(100, cov.score + boost),
+      raw_score_before_synergy: cov.score,
+      synergy_boost: boost,
+    }
+  }
+  return adjusted
+}
+
+// ── Domain Cost Estimates ────────────────────────────────────────────────────
+// For each domain, estimate: current cost burden, improvement cost, and savings.
+
+function estimateDomainCosts(domainCoverage) {
+  if (!DOMAIN_COSTS?.domains) return null
+
+  const estimates = {}
+  for (const [domain, cov] of Object.entries(domainCoverage)) {
+    const costData = DOMAIN_COSTS.domains[domain]
+    if (!costData) continue
+
+    const score = cov.score
+    const gap = 100 - score
+    const gapFraction = gap / 100
+
+    // Current cost burden: proportional to how far domain is from 100
+    const currentBurden = Math.round(costData.cost_at_zero * gapFraction)
+    // Cost to reach sufficiency (score=70): invest cost_per_tenth for each 10 points needed
+    const tenthsToSufficiency = Math.max(0, Math.ceil((70 - score) / 10))
+    const investmentToSufficiency = tenthsToSufficiency * costData.cost_per_tenth
+    // Savings = burden reduction from reaching sufficiency
+    const sufficiencyBurden = Math.round(costData.cost_at_zero * 0.30) // 30% burden remains at score=70
+    const savingsAtSufficiency = Math.max(0, currentBurden - sufficiencyBurden)
+
+    estimates[domain] = {
+      score,
+      current_annual_burden: currentBurden,
+      investment_to_sufficiency: investmentToSufficiency,
+      annual_savings_at_sufficiency: savingsAtSufficiency,
+      tenths_needed: tenthsToSufficiency,
+    }
+  }
+
+  const totalBurden = Object.values(estimates).reduce((s, e) => s + e.current_annual_burden, 0)
+  const totalInvestment = Object.values(estimates).reduce((s, e) => s + e.investment_to_sufficiency, 0)
+  const totalSavings = Object.values(estimates).reduce((s, e) => s + e.annual_savings_at_sufficiency, 0)
+
+  return { by_domain: estimates, total_annual_burden: totalBurden, total_investment_to_sufficiency: totalInvestment, total_annual_savings: totalSavings }
 }
 
 // ── Assemble a single dome ───────────────────────────────────────────────────
@@ -608,19 +731,29 @@ function assembleDome(profile, fips, countyName) {
   const costs = calculateCosts(eligiblePrograms)
 
   // 4. Calculate domain coverage
-  const { coverage: domainCoverage, gaps } = calculateDomainCoverage(fragments, conditions, eligiblePrograms)
+  const { coverage: rawCoverage, gaps } = calculateDomainCoverage(fragments, conditions, eligiblePrograms)
 
-  // 5. Cosm score = MINIMUM coverage across all 12 domains
+  // 5. Apply synergy propagation — connected domains boost each other
+  const domainCoverage = applySynergy(rawCoverage)
+
+  // 6. Cosm score = MINIMUM coverage across all 12 domains
   const domainScores = Object.values(domainCoverage).map(d => d.score)
   const cosmScore = Math.min(...domainScores)
   const cosmAverage = Math.round(domainScores.reduce((a, b) => a + b, 0) / domainScores.length)
 
-  // 6. Build panels — the narrative explanation for each domain
+  // 7. Score through philosophical traditions
+  const traditionScores = scoreByTraditions(domainCoverage)
+
+  // 8. Estimate per-domain costs and investment needs
+  const domainCostEstimates = estimateDomainCosts(domainCoverage)
+
+  // 9. Build panels — the narrative explanation for each domain
   const panels = {}
   for (const [domain, cov] of Object.entries(domainCoverage)) {
     const relevantPrograms = eligiblePrograms.filter(p => p.category === domain)
     panels[domain] = {
       score: cov.score,
+      synergy_boost: cov.synergy_boost || 0,
       programs: relevantPrograms.map(p => p.program),
       program_value: relevantPrograms.reduce((s, p) => s + (p.annual_value || 0), 0),
     }
@@ -659,6 +792,12 @@ function assembleDome(profile, fips, countyName) {
     cosm: cosmScore,
     cosm_average: cosmAverage,
     domain_coverage: domainCoverage,
+
+    // Tradition scores — same dome through 8 lenses
+    tradition_scores: traditionScores,
+
+    // Domain cost estimates — per-domain investment analysis
+    domain_costs: domainCostEstimates,
 
     // Gaps
     gaps,
