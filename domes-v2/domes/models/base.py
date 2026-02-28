@@ -1,14 +1,7 @@
 """
 DOMES v2 — SQLAlchemy Declarative Base + Shared Mixins
 
-All models inherit from DOMESBase. Mixins provide reusable columns.
-
-Usage:
-    from domes.models.base import Base, DOMESBase, TimestampMixin
-
-    class MyModel(DOMESBase):
-        __tablename__ = "my_table"
-        ...
+All models inherit from DOMESBase. Mixins provide reusable column sets.
 """
 from __future__ import annotations
 
@@ -16,56 +9,80 @@ import uuid
 from datetime import datetime, timezone
 from typing import Any
 
-from sqlalchemy import DateTime, func, text
+from sqlalchemy import DateTime, String, func
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
-class Base(DeclarativeBase):
-    """
-    SQLAlchemy 2.0 declarative base.
+def _utcnow() -> datetime:
+    """Return timezone-aware UTC datetime."""
+    return datetime.now(timezone.utc)
 
-    All DOMES v2 models inherit from this class.
-    Alembic uses Base.metadata to detect schema changes.
+
+class DOMESBase(DeclarativeBase):
+    """Declarative base for all DOMES v2 models.
+
+    Provides:
+    - Type annotation support (SQLAlchemy 2.0 style)
+    - Common __repr__ based on primary key
+    - JSON serialization helper
     """
-    pass
+
+    type_annotation_map: dict[Any, Any] = {}  # Populated by subclasses
+
+    def __repr__(self) -> str:
+        pk_col = self.__class__.__table__.primary_key.columns
+        pk_vals = {c.name: getattr(self, c.name, None) for c in pk_col}
+        return f"<{self.__class__.__name__} {pk_vals}>"
+
+
+# ---------------------------------------------------------------------------
+# Mixins
+# ---------------------------------------------------------------------------
+
+class UUIDPrimaryKeyMixin:
+    """UUID primary key — every core entity gets a UUID, never an integer."""
+
+    id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True),
+        primary_key=True,
+        default=uuid.uuid4,
+        comment="UUID primary key",
+    )
 
 
 class TimestampMixin:
-    """
-    Adds created_at and updated_at columns to a model.
+    """created_at / updated_at timestamps — auto-managed by the database."""
 
-    Uses PostgreSQL server-side now() for created_at and a trigger-updated
-    updated_at column. The updated_at default ensures Python-side inserts
-    also work without a database trigger.
-    """
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         server_default=func.now(),
         nullable=False,
-        doc="Timestamp when the record was created (UTC)",
+        comment="Row creation timestamp (UTC)",
     )
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         server_default=func.now(),
         onupdate=func.now(),
         nullable=False,
-        doc="Timestamp when the record was last updated (UTC)",
+        comment="Row last-updated timestamp (UTC)",
     )
 
 
 class SoftDeleteMixin:
-    """
-    Adds soft-delete support via a deleted_at timestamp.
+    """Soft-delete support — records are never hard-deleted, just flagged."""
 
-    Records are never physically deleted — instead deleted_at is set.
-    All queries should filter WHERE deleted_at IS NULL.
-    """
     deleted_at: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True),
         nullable=True,
         default=None,
-        doc="If set, the record is soft-deleted (not physically removed)",
+        comment="Soft-delete timestamp; NULL = active record",
+    )
+    deleted_reason: Mapped[str | None] = mapped_column(
+        String(500),
+        nullable=True,
+        default=None,
+        comment="Reason for soft-deletion (optional)",
     )
 
     @property
@@ -73,35 +90,47 @@ class SoftDeleteMixin:
         """Return True if this record has been soft-deleted."""
         return self.deleted_at is not None
 
-    def soft_delete(self) -> None:
-        """Mark this record as deleted."""
-        self.deleted_at = datetime.now(timezone.utc)
+
+class PersonLinkedMixin:
+    """Foreign key link to the Person table — used by almost every model."""
+
+    # NOTE: The actual FK constraint is defined in each subclass using
+    # ForeignKey("person.id") to avoid circular import issues. This mixin
+    # documents the pattern; see person.py for FK definitions in models.
+    pass
 
 
-class DOMESBase(Base, TimestampMixin):
-    """
-    Abstract base class for all DOMES v2 models.
+class FHIRMixin:
+    """FHIR interoperability columns for models that map to FHIR resources."""
 
-    Provides:
-    - UUID primary key (PostgreSQL gen_random_uuid())
-    - created_at / updated_at timestamps
-    - __repr__ for debugging
-    """
-    __abstract__ = True
-
-    id: Mapped[uuid.UUID] = mapped_column(
-        UUID(as_uuid=True),
-        primary_key=True,
-        server_default=text("gen_random_uuid()"),
-        doc="Primary key — PostgreSQL gen_random_uuid() UUID v4",
+    fhir_resource_type: Mapped[str | None] = mapped_column(
+        String(64),
+        nullable=True,
+        comment="FHIR resource type (e.g., 'Observation', 'Condition')",
+    )
+    fhir_resource_id: Mapped[str | None] = mapped_column(
+        String(255),
+        nullable=True,
+        index=True,
+        comment="FHIR resource ID in the originating system",
+    )
+    fhir_system: Mapped[str | None] = mapped_column(
+        String(512),
+        nullable=True,
+        comment="Base URL of the FHIR server this resource came from",
     )
 
-    def __repr__(self) -> str:
-        return f"<{self.__class__.__name__} id={self.id}>"
 
-    def to_dict(self) -> dict[str, Any]:
-        """Return a dict of column values. Useful for debugging and testing."""
-        return {
-            c.key: getattr(self, c.key)
-            for c in self.__table__.columns  # type: ignore[attr-defined]
-        }
+class AuditMixin:
+    """Who created / last modified a record — for audit trail compliance."""
+
+    created_by: Mapped[str | None] = mapped_column(
+        String(255),
+        nullable=True,
+        comment="User / system that created this record",
+    )
+    updated_by: Mapped[str | None] = mapped_column(
+        String(255),
+        nullable=True,
+        comment="User / system that last updated this record",
+    )

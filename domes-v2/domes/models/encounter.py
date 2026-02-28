@@ -1,12 +1,27 @@
 """
 DOMES v2 — Encounter Model
 
-An Encounter is any contact between a person and the service system.
-This covers medical, behavioral health, housing, justice, outreach, and
-civil encounters — essentially any recorded service interaction.
+An Encounter is any contact between a person and a system — clinical, social,
+or justice. DOMES tracks the full spectrum of encounters because the pattern
+of encounters IS the digital twin in action.
 
-FHIR alignment: maps to FHIR Encounter resource.
-FHIR Encounter: https://hl7.org/fhir/R4/encounter.html
+For Robert Jackson: 47 ER visits/year = 47 Encounters of type ER_VISIT.
+These encounters drive the dome assembly and cost calculation.
+
+Types tracked:
+- ER visits (emergency department)
+- Psychiatric hospitalizations
+- Shelter stays (HMIS bed nights)
+- Jail bookings / releases
+- Mobile crisis responses
+- ACT team contacts
+- Probation check-ins
+- Court appearances
+- Clinic visits
+- Telehealth calls
+- Street outreach contacts
+
+FHIR alignment: Encounter resource
 """
 from __future__ import annotations
 
@@ -15,14 +30,10 @@ from datetime import datetime
 from typing import Any, TYPE_CHECKING
 
 from sqlalchemy import DateTime, Enum, ForeignKey, Integer, String, Text
-from sqlalchemy.dialects.postgresql import JSONB, UUID
+from sqlalchemy.dialects.postgresql import ARRAY, JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from domes.enums import (
-    EncounterClass,
-    EncounterStatus,
-    EncounterType,
-)
+from domes.enums import EncounterClass, EncounterStatus, EncounterType
 from domes.models.base import (
     AuditMixin,
     DOMESBase,
@@ -32,7 +43,9 @@ from domes.models.base import (
 )
 
 if TYPE_CHECKING:
+    from domes.models.fragment import Fragment
     from domes.models.person import Person
+    from domes.models.system import GovernmentSystem
 
 
 class Encounter(
@@ -42,18 +55,26 @@ class Encounter(
     FHIRMixin,
     DOMESBase,
 ):
-    """A service encounter between a person and the service system.
+    """A single contact between a person and a system or service.
 
-    Covers all encounter types across all 9+ government systems:
-    medical, behavioral health, housing, justice, outreach, etc.
-    Follows FHIR Encounter R4 structure.
+    FHIR resource type: Encounter
+
+    Encounters are the primary driver of the fragmented cost calculation.
+    The pattern of ER visits, hospitalizations, and shelter stays reveals
+    the true cost of uncoordinated care.
+
+    Key relationships:
+    - Many encounters → one Person
+    - Each encounter → one source GovernmentSystem
+    - Each encounter → optional originating Fragment
     """
 
     __tablename__ = "encounter"
     __table_args__ = {
         "comment": (
-            "Service encounters across all system types. "
-            "Follows FHIR Encounter R4 structure."
+            "Clinical, social, and justice system contacts. "
+            "47 ER visits/year (Robert Jackson) = 47 rows here. "
+            "Drives the fragmented cost calculation."
         )
     }
 
@@ -67,123 +88,137 @@ class Encounter(
         nullable=False,
         index=True,
     )
+    fragment_id: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True),
+        ForeignKey("fragment.id", ondelete="SET NULL"),
+        nullable=True,
+    )
+    source_system_id: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True),
+        ForeignKey("government_system.id", ondelete="SET NULL"),
+        nullable=True,
+        index=True,
+        comment="System that recorded this encounter",
+    )
 
     # ------------------------------------------------------------------
-    # Classification
+    # FHIR Encounter fields
     # ------------------------------------------------------------------
 
+    status: Mapped[EncounterStatus] = mapped_column(
+        Enum(EncounterStatus, name="encounter_status_enum"),
+        nullable=False,
+        default=EncounterStatus.COMPLETED,
+    )
     encounter_class: Mapped[EncounterClass] = mapped_column(
         Enum(EncounterClass, name="encounter_class_enum"),
         nullable=False,
-        comment="FHIR v3-ActCode encounter class (setting)",
+        comment="FHIR v3-ActCode encounter class (AMB, IMP, EMER, etc.)",
     )
     encounter_type: Mapped[EncounterType] = mapped_column(
         Enum(EncounterType, name="encounter_type_enum"),
         nullable=False,
         comment="DOMES-specific encounter type taxonomy",
     )
-    status: Mapped[EncounterStatus] = mapped_column(
-        Enum(EncounterStatus, name="encounter_status_enum"),
-        nullable=False,
-        default=EncounterStatus.COMPLETED,
-        comment="FHIR Encounter.status",
-    )
 
     # ------------------------------------------------------------------
     # Timing
     # ------------------------------------------------------------------
 
-    start_time: Mapped[datetime] = mapped_column(
+    period_start: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         nullable=False,
         index=True,
-        comment="When the encounter started",
+        comment="Start of the encounter",
     )
-    end_time: Mapped[datetime | None] = mapped_column(
+    period_end: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True),
         nullable=True,
-        comment="When the encounter ended (NULL if still in progress)",
+        comment="End of the encounter (NULL = still in progress)",
     )
-    length_minutes: Mapped[int | None] = mapped_column(
+    length_of_stay_days: Mapped[int | None] = mapped_column(
         Integer,
         nullable=True,
-        comment="Duration in minutes (if known)",
-    )
-
-    # ------------------------------------------------------------------
-    # Location / provider
-    # ------------------------------------------------------------------
-
-    facility_name: Mapped[str | None] = mapped_column(
-        String(255),
-        nullable=True,
-        comment="Name of the facility / location",
-    )
-    facility_type: Mapped[str | None] = mapped_column(
-        String(100),
-        nullable=True,
-        comment="Type of facility (hospital, clinic, shelter, jail, etc.)",
-    )
-    city: Mapped[str | None] = mapped_column(String(100), nullable=True)
-    state: Mapped[str | None] = mapped_column(String(2), nullable=True)
-    provider_name: Mapped[str | None] = mapped_column(
-        String(255),
-        nullable=True,
-        comment="Primary provider name (physician, case manager, officer, etc.)",
-    )
-    provider_npi: Mapped[str | None] = mapped_column(
-        String(20),
-        nullable=True,
-        comment="NPI of the provider (for medical encounters)",
+        comment="Length of stay in days (computed from period for inpatient/shelter)",
     )
 
     # ------------------------------------------------------------------
     # Clinical content
     # ------------------------------------------------------------------
 
+    reason_codes: Mapped[Any | None] = mapped_column(
+        JSONB(),
+        ARRAY(String),
+        nullable=True,
+        comment="ICD-10 or SNOMED codes for why this encounter occurred",
+    )
+    reason_display: Mapped[str | None] = mapped_column(
+        String(1000),
+        nullable=True,
+        comment="Human-readable reason(s) for this encounter",
+    )
     chief_complaint: Mapped[str | None] = mapped_column(
         Text,
         nullable=True,
-        comment="Chief complaint or reason for encounter",
+        comment="Patient's stated chief complaint",
     )
-    diagnosis_codes: Mapped[Any | None] = mapped_column(
-        JSONB(),
+    discharge_disposition_code: Mapped[str | None] = mapped_column(
+        String(50),
         nullable=True,
-        comment="Array of ICD-10 diagnosis codes and display names",
+        comment="FHIR discharge disposition code",
     )
-    procedure_codes: Mapped[Any | None] = mapped_column(
-        JSONB(),
-        nullable=True,
-        comment="Array of CPT/HCPCS procedure codes",
-    )
-    disposition: Mapped[str | None] = mapped_column(
+    discharge_disposition_display: Mapped[str | None] = mapped_column(
         String(255),
         nullable=True,
-        comment="Encounter disposition (discharged, admitted, released, etc.)",
-    )
-    notes: Mapped[str | None] = mapped_column(
-        Text,
-        nullable=True,
-        comment="Encounter notes",
+        comment="Human-readable discharge disposition (e.g., 'Returned to homelessness')",
     )
 
     # ------------------------------------------------------------------
-    # Source provenance
+    # Location
     # ------------------------------------------------------------------
 
-    source_fragment_id: Mapped[uuid.UUID | None] = mapped_column(
-        UUID(as_uuid=True),
-        nullable=True,
-        comment="Fragment that produced this encounter record",
-    )
-    source_system_name: Mapped[str | None] = mapped_column(
+    location_name: Mapped[str | None] = mapped_column(
         String(255),
         nullable=True,
+        comment="Name of facility or location (e.g., 'Rush University Medical Center ER')",
     )
-    source_encounter_id: Mapped[str | None] = mapped_column(
-        String(255),
+    location_type: Mapped[str | None] = mapped_column(
+        String(100),
         nullable=True,
-        comment="Original encounter ID in the source system",
+        comment="Type of location (e.g., 'hospital', 'shelter', 'jail', 'street')",
+    )
+    location_city: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    location_state: Mapped[str | None] = mapped_column(String(2), nullable=True)
+
+    # ------------------------------------------------------------------
+    # Cost
+    # ------------------------------------------------------------------
+
+    estimated_cost: Mapped[float | None] = mapped_column(
+        nullable=True,
+        comment="Estimated cost of this encounter (USD) — for fragmented cost calculation",
+    )
+    actual_cost: Mapped[float | None] = mapped_column(
+        nullable=True,
+        comment="Actual billed/paid cost if available from claims data",
+    )
+    payer: Mapped[str | None] = mapped_column(
+        String(100),
+        nullable=True,
+        comment="Primary payer (Medicaid, Medicare, VA, Uninsured, etc.)",
+    )
+
+    # ------------------------------------------------------------------
+    # Notes and metadata
+    # ------------------------------------------------------------------
+
+    clinical_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+    case_manager_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+    metadata_: Mapped[Any | None] = mapped_column(
+        "metadata",
+        JSONB(),
+        nullable=True,
+        comment="Additional encounter-specific data",
     )
 
     # ------------------------------------------------------------------
@@ -193,5 +228,13 @@ class Encounter(
     person: Mapped["Person"] = relationship(
         "Person",
         back_populates="encounters",
+        lazy="select",
+    )
+    fragment: Mapped["Fragment | None"] = relationship(
+        "Fragment",
+        lazy="select",
+    )
+    source_system: Mapped["GovernmentSystem | None"] = relationship(
+        "GovernmentSystem",
         lazy="select",
     )
