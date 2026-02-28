@@ -145,8 +145,10 @@ class PipelineDirector:
                 "legal_authority": l.get("legal_authority", ""),
             })
 
-        # 5. Subject profile (the talent)
-        profile = self._build_profile(subject, rights_package, market_analysis)
+        # 5. Subject profile (the talent) — grounded in real dome if available
+        seed_data = production.stage_data.get("seed", {})
+        profile = self._build_profile(subject, rights_package, market_analysis,
+                                      seed_data=seed_data)
 
         # 6. Data engine stats
         stats = self.store.stats()
@@ -534,6 +536,12 @@ class PipelineDirector:
         # 7. Innovations
         innovations = post_data.get("vfx_finals", {}).get("innovations", [])
 
+        # 8. Tradition scores + domain costs from assembled dome
+        seed_data = production.stage_data.get("seed", {})
+        dome = seed_data.get("dome") if seed_data else None
+        tradition_scores = dome.get("tradition_scores") if dome else None
+        domain_cost_estimates = dome.get("domain_costs") if dome else None
+
         distribution = {
             "narrative": narrative,
             "cosm": cosm.model_dump(),
@@ -542,6 +550,8 @@ class PipelineDirector:
             "replication_kit": replication_kit,
             "innovations": innovations,
             "industries_changed": industries,
+            "tradition_scores": tradition_scores,
+            "domain_costs": domain_cost_estimates,
             "data_engine_stats": self.store.stats(),
         }
 
@@ -1386,32 +1396,78 @@ class PipelineDirector:
     # ══════════════════════════════════════════════════════════════════
 
     def _calculate_cosm(self, production: ProductionState) -> CosmDimensions:
-        """Calculate COSM across 6 production dimensions."""
+        """Calculate COSM across 6 production dimensions.
+
+        When real dome data is available (from the Cosm assembler), blend the
+        production's pipeline scores with the actual domain coverage scores.
+        This grounds COSM in real data: rights comes from both legal provisions
+        identified AND the dome's actual legal coverage score.
+        """
         dev_data = production.stage_data.get("development", {})
         pre_data = production.stage_data.get("pre_production", {})
         post_data = production.stage_data.get("post_production", {})
+        seed_data = production.stage_data.get("seed", {})
+        dome = seed_data.get("dome") if seed_data else None
 
-        # Rights — from rights acquisition
+        # Rights — from rights acquisition + dome legal domain
         rights_count = dev_data.get("rights_count", 0)
-        rights_score = min(100.0, rights_count * 4.0)
+        rights_pipeline = min(100.0, rights_count * 4.0)
+        if dome:
+            dome_legal = dome.get("domain_coverage", {}).get("legal", {})
+            dome_safety = dome.get("domain_coverage", {}).get("safety", {})
+            rights_dome = (
+                (dome_legal.get("score", 0) if isinstance(dome_legal, dict) else 0) +
+                (dome_safety.get("score", 0) if isinstance(dome_safety, dict) else 0)
+            ) / 2
+            rights_score = (rights_pipeline * 0.4 + rights_dome * 0.6)
+        else:
+            rights_score = rights_pipeline
 
-        # Research — from data systems connectivity
+        # Research — from data systems connectivity + dome fragment depth
         active_links = dev_data.get("active_links", 0)
         total_links = dev_data.get("link_count", 1)
-        research_score = min(100.0, (active_links / max(1, total_links)) * 120)
+        research_pipeline = min(100.0, (active_links / max(1, total_links)) * 120)
+        if dome:
+            frag_count = dome.get("fragments_used", 0)
+            research_dome = min(100.0, frag_count * 8)
+            research_score = (research_pipeline * 0.4 + research_dome * 0.6)
+        else:
+            research_score = research_pipeline
 
-        # Budget — from cost landscape depth
+        # Budget — from cost landscape + dome cost analysis
         cost_count = dev_data.get("cost_point_count", 0)
-        budget_score = min(100.0, cost_count * 2.5)
+        budget_pipeline = min(100.0, cost_count * 2.5)
+        if dome and dome.get("domain_costs"):
+            dc = dome["domain_costs"]
+            # Higher savings ratio = better budget score
+            if dc.get("total_annual_burden", 0) > 0:
+                savings_ratio = dc.get("total_annual_savings", 0) / dc["total_annual_burden"]
+                budget_dome = min(100.0, savings_ratio * 120)
+            else:
+                budget_dome = budget_pipeline
+            budget_score = (budget_pipeline * 0.4 + budget_dome * 0.6)
+        else:
+            budget_score = budget_pipeline
 
-        # Package — from coordination architecture
+        # Package — from coordination architecture + dome program count
         crew = pre_data.get("coordination_crew", [])
         best_savings = max([m.get("estimated_savings_pct", 0) for m in crew], default=0)
-        package_score = min(100.0, len(crew) * 15 + best_savings)
+        package_pipeline = min(100.0, len(crew) * 15 + best_savings)
+        if dome:
+            program_count = dome.get("program_count", 0)
+            package_dome = min(100.0, program_count * 12)
+            package_score = (package_pipeline * 0.4 + package_dome * 0.6)
+        else:
+            package_score = package_pipeline
 
-        # Deliverables — from flourishing outcomes
+        # Deliverables — from flourishing outcomes + dome cosm_average
         flour_data = pre_data.get("flourishing", {})
-        deliverables_score = flour_data.get("overall_score", 0.5) * 100
+        deliverables_pipeline = flour_data.get("overall_score", 0.5) * 100
+        if dome:
+            deliverables_dome = dome.get("cosm_average", 50)
+            deliverables_score = (deliverables_pipeline * 0.4 + deliverables_dome * 0.6)
+        else:
+            deliverables_score = deliverables_pipeline
 
         # Pitch — from narrative + IP generation
         sound_mix = post_data.get("sound_mix", {})
@@ -1420,12 +1476,12 @@ class PipelineDirector:
                           len(sound_mix.get("sections", [])) * 15 + ip_count * 5)
 
         return CosmDimensions(
-            rights=round(rights_score, 1),
-            research=round(research_score, 1),
-            budget=round(budget_score, 1),
-            package=round(package_score, 1),
-            deliverables=round(deliverables_score, 1),
-            pitch=round(pitch_score, 1),
+            rights=round(min(100.0, rights_score), 1),
+            research=round(min(100.0, research_score), 1),
+            budget=round(min(100.0, budget_score), 1),
+            package=round(min(100.0, package_score), 1),
+            deliverables=round(min(100.0, deliverables_score), 1),
+            pitch=round(min(100.0, pitch_score), 1),
         )
 
     def _calculate_chron(self, production: ProductionState) -> ChronDimensions:
@@ -1459,7 +1515,61 @@ class PipelineDirector:
     # INTERNAL HELPERS
     # ══════════════════════════════════════════════════════════════════
 
-    def _build_profile(self, subject: str, rights_package: dict, market_analysis: dict) -> dict:
+    def _build_profile(self, subject: str, rights_package: dict,
+                        market_analysis: dict,
+                        seed_data: dict | None = None) -> dict:
+        """Build a subject profile.  When a real assembled dome is available
+        in seed_data['dome'], use its actual programs, domain coverage, costs,
+        and traditions — grounding the game in real data."""
+
+        dome = (seed_data or {}).get("dome")
+        if dome:
+            profile_info = dome.get("profile", {})
+            domain_cov = dome.get("domain_coverage", {})
+            programs = dome.get("eligible_programs", [])
+            traditions = dome.get("tradition_scores")
+            domain_costs = dome.get("domain_costs")
+
+            # Identify gaps — domains scoring below 50
+            needs = []
+            for dom, cov in domain_cov.items():
+                score = cov.get("score", 0) if isinstance(cov, dict) else 0
+                if score < 50:
+                    needs.append(dom)
+
+            return {
+                "name": profile_info.get("name", subject),
+                "age": profile_info.get("age"),
+                "income": profile_info.get("income"),
+                "household": profile_info.get("household"),
+                "description": profile_info.get("description"),
+                "needs": needs,
+                "dimensions_affected": list(domain_cov.keys()),
+                "domain_coverage": domain_cov,
+                "eligible_programs": programs,
+                "program_count": len(programs),
+                "cosm_score": dome.get("cosm"),
+                "cosm_average": dome.get("cosm_average"),
+                "fragmented_cost": dome.get("fragmented_cost"),
+                "coordinated_cost": dome.get("coordinated_cost"),
+                "delta": dome.get("delta"),
+                "estimated_annual_fragmentation_cost": dome.get("fragmented_cost", self._get_fragmentation_cost()),
+                "tradition_scores": traditions,
+                "domain_cost_estimates": domain_costs,
+                "systems_involved": dome.get("fragments_used", len(domain_cov) * 2),
+                "risk_factors": [
+                    f"Data fragmented across {dome.get('fragments_used', 0)} systems",
+                    f"COSM score {dome.get('cosm', 0)} (minimum domain) — weakest link is {needs[0] if needs else 'none'}",
+                    f"Estimated ${dome.get('fragmented_cost', 0):,.0f}/year in fragmentation costs",
+                ],
+                "strengths": [
+                    f"Dome assembled with {len(programs)} eligible programs",
+                    f"Average domain score: {dome.get('cosm_average', 0)}",
+                    f"Coordination delta: ${dome.get('delta', 0):,.0f}/year savings",
+                ],
+            }
+
+        # Fallback: generic profile when no dome data
         dimensions = list(rights_package.keys())
         needs = []
         dim_map = {

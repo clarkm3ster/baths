@@ -125,8 +125,15 @@ def list_players():
 # ========== PRODUCTION MANAGEMENT ==========
 
 @app.post("/api/productions/start", response_model=ProductionState)
-def start_production(player_id: str, game_type: GameType, subject: str):
-    """Start a new production"""
+def start_production(player_id: str, game_type: GameType, subject: str,
+                     fips: str = "42101"):
+    """Start a new production.
+
+    For DOMES games, `subject` is an archetype name (marcus, elena, james, etc.)
+    and `fips` is the county FIPS code.  The assembled dome + fragments for that
+    subject are loaded automatically and stored in stage_data["seed"] so the
+    pipeline has real data from the first stage.
+    """
     if player_id not in players:
         raise HTTPException(status_code=404, detail="Player not found")
 
@@ -136,13 +143,29 @@ def start_production(player_id: str, game_type: GameType, subject: str):
         raise HTTPException(status_code=400, detail="Player already has active production")
 
     production_id = str(uuid.uuid4())
+
+    # Pre-load real Cosm data for DOMES games
+    seed_data: Dict[str, Any] = {}
+    if game_type == GameType.DOMES:
+        archetype = subject.lower().strip()
+        dome = _read_json(FRAG_DATA / "domes" / fips / f"{archetype}.json")
+        if dome:
+            seed_data["dome"] = dome
+            seed_data["fips"] = fips
+            seed_data["archetype"] = archetype
+        # Also load meta files
+        seed_data["traditions"] = _read_json(FRAG_DATA / "meta" / "traditions.json")
+        seed_data["synergy"] = _read_json(FRAG_DATA / "meta" / "synergy.json")
+        seed_data["costs_meta"] = _read_json(FRAG_DATA / "meta" / "costs.json")
+
     production = ProductionState(
         production_id=production_id,
         game_type=game_type,
         subject=subject,
         stage=ProductionStage.DEVELOPMENT,
-        progress=0.0
+        progress=0.0,
     )
+    production.stage_data["seed"] = seed_data
 
     productions[production_id] = production
     player.active_production = production
@@ -410,11 +433,18 @@ def fragment_stats():
 @app.get("/api/fragment/county/{fips}")
 def fragment_county(fips: str):
     """All scraped fragments for a given county FIPS code."""
-    fragments_dir = FRAG_DATA / "fragments"
+    layer_dirs = [
+        "layer-01-legal", "layer-02-systems", "layer-03-fiscal",
+        "layer-04-health", "layer-05-housing", "layer-06-economic",
+        "layer-07-education", "layer-08-community", "layer-09-environment",
+    ]
     result = {}
-    if fragments_dir.exists():
-        for source_dir in sorted(fragments_dir.iterdir()):
-            if source_dir.is_dir():
+    for ld in layer_dirs:
+        layer_path = FRAG_DATA / ld
+        if not layer_path.exists():
+            continue
+        for source_dir in sorted(layer_path.iterdir()):
+            if source_dir.is_dir() and source_dir.name not in result:
                 frag_file = source_dir / f"{fips}.json"
                 data = _read_json(frag_file)
                 if data:
