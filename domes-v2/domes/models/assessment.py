@@ -72,6 +72,10 @@ class Assessment(
         )
     }
 
+    # ------------------------------------------------------------------
+    # Core relations
+    # ------------------------------------------------------------------
+
     person_id: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True),
         ForeignKey("person.id", ondelete="CASCADE"),
@@ -95,6 +99,10 @@ class Assessment(
         nullable=True,
     )
 
+    # ------------------------------------------------------------------
+    # Assessment identity
+    # ------------------------------------------------------------------
+
     assessment_type: Mapped[AssessmentType] = mapped_column(
         Enum(AssessmentType, name="assessment_type_enum"),
         nullable=False,
@@ -103,31 +111,154 @@ class Assessment(
     assessment_tool_name: Mapped[str] = mapped_column(
         String(100),
         nullable=False,
+        comment="Official tool name (e.g., 'PHQ-9', 'VI-SPDAT v2.0', 'C-SSRS')",
     )
-    assessment_version: Mapped[str | None] = mapped_column(String(50), nullable=True)
-    loinc_code: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    assessment_version: Mapped[str | None] = mapped_column(
+        String(50),
+        nullable=True,
+        comment="Version of the assessment tool",
+    )
+    loinc_code: Mapped[str | None] = mapped_column(
+        String(20),
+        nullable=True,
+        comment="LOINC panel code for this assessment (e.g., '44261-6' for PHQ-9)",
+    )
+
+    # ------------------------------------------------------------------
+    # Status and timing
+    # ------------------------------------------------------------------
+
     status: Mapped[AssessmentStatus] = mapped_column(
         Enum(AssessmentStatus, name="assessment_status_enum"),
         nullable=False,
         default=AssessmentStatus.COMPLETED,
     )
-    assessment_date: Mapped[date] = mapped_column(Date, nullable=False, index=True)
-    assessed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
-    administered_by: Mapped[str | None] = mapped_column(String(255), nullable=True)
-    total_score: Mapped[float | None] = mapped_column(Float, nullable=True)
-    score_min: Mapped[float | None] = mapped_column(Float, nullable=True)
-    score_max: Mapped[float | None] = mapped_column(Float, nullable=True)
-    severity_classification: Mapped[str | None] = mapped_column(String(100), nullable=True)
-    subscale_scores: Mapped[Any | None] = mapped_column(JSONB(), nullable=True)
-    item_responses: Mapped[Any | None] = mapped_column(JSONB(), nullable=True)
-    suicidality_flag: Mapped[bool | None] = mapped_column(nullable=True)
-    hmis_assessment_id: Mapped[str | None] = mapped_column(String(100), nullable=True)
-    prioritization_status: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    housing_recommendation: Mapped[str | None] = mapped_column(String(100), nullable=True)
-    clinical_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
-    metadata_: Mapped[Any | None] = mapped_column("metadata", JSONB(), nullable=True)
+    assessment_date: Mapped[date] = mapped_column(
+        Date,
+        nullable=False,
+        index=True,
+        comment="Date assessment was administered",
+    )
+    assessed_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True),
+        nullable=True,
+        comment="Exact datetime (if available)",
+    )
+    administered_by: Mapped[str | None] = mapped_column(
+        String(255),
+        nullable=True,
+        comment="Name / role of person who administered the assessment",
+    )
 
-    person: Mapped["Person"] = relationship("Person", back_populates="assessments", lazy="select")
-    fragment: Mapped["Fragment | None"] = relationship("Fragment", lazy="select")
-    encounter: Mapped["Encounter | None"] = relationship("Encounter", lazy="select")
-    administered_by_system: Mapped["GovernmentSystem | None"] = relationship("GovernmentSystem", lazy="select")
+    # ------------------------------------------------------------------
+    # Scores
+    # ------------------------------------------------------------------
+
+    total_score: Mapped[float | None] = mapped_column(
+        Float,
+        nullable=True,
+        comment="Total/composite score",
+    )
+    score_min: Mapped[float | None] = mapped_column(
+        Float,
+        nullable=True,
+        comment="Minimum possible score for this tool",
+    )
+    score_max: Mapped[float | None] = mapped_column(
+        Float,
+        nullable=True,
+        comment="Maximum possible score for this tool",
+    )
+    severity_classification: Mapped[str | None] = mapped_column(
+        String(100),
+        nullable=True,
+        comment=(
+            "Severity based on score thresholds. "
+            "PHQ-9: None/Mild/Moderate/Moderately Severe/Severe. "
+            "VI-SPDAT: Diversion/Rapid Re-Housing/PSH. "
+            "GAF: 0-100 scale."
+        ),
+    )
+    subscale_scores: Mapped[Any | None] = mapped_column(
+        JSONB(),
+        nullable=True,
+        comment=(
+            "Subscale scores for multi-domain tools. "
+            "PANSS: {'positive': 28, 'negative': 22, 'general': 45}. "
+            "VI-SPDAT: {'history': 3, 'risks': 4, 'socialization': 3, 'wellness': 4}."
+        ),
+    )
+
+    # ------------------------------------------------------------------
+    # Item-level responses
+    # ------------------------------------------------------------------
+
+    item_responses: Mapped[Any | None] = mapped_column(
+        JSONB(),
+        nullable=True,
+        comment=(
+            "Array of individual item responses. "
+            "Structure: [{'item_code': '44250-9', 'display': '...', 'value': 3, 'loinc_code': '44250-9'}, ...]. "
+            "PHQ-9 item 9 (suicidality = code 44260-8) is flagged separately."
+        ),
+    )
+    suicidality_flag: Mapped[bool | None] = mapped_column(
+        nullable=True,
+        comment=(
+            "True if assessment indicates active suicidal ideation. "
+            "PHQ-9 Q9 score > 0 or C-SSRS active ideation = True."
+        ),
+    )
+
+    # ------------------------------------------------------------------
+    # HMIS-specific fields (for VI-SPDAT, SPDAT)
+    # ------------------------------------------------------------------
+
+    hmis_assessment_id: Mapped[str | None] = mapped_column(
+        String(100),
+        nullable=True,
+        comment="HMIS AssessmentID (for coordinated entry assessments)",
+    )
+    prioritization_status: Mapped[int | None] = mapped_column(
+        Integer,
+        nullable=True,
+        comment="HMIS PrioritizationStatus: 1=Placed on prioritization list",
+    )
+    housing_recommendation: Mapped[str | None] = mapped_column(
+        String(100),
+        nullable=True,
+        comment="Housing intervention recommendation from VI-SPDAT/SPDAT score",
+    )
+
+    # ------------------------------------------------------------------
+    # Notes
+    # ------------------------------------------------------------------
+
+    clinical_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+    metadata_: Mapped[Any | None] = mapped_column(
+        "metadata",
+        JSONB(),
+        nullable=True,
+    )
+
+    # ------------------------------------------------------------------
+    # Relationships
+    # ------------------------------------------------------------------
+
+    person: Mapped["Person"] = relationship(
+        "Person",
+        back_populates="assessments",
+        lazy="select",
+    )
+    fragment: Mapped["Fragment | None"] = relationship(
+        "Fragment",
+        lazy="select",
+    )
+    encounter: Mapped["Encounter | None"] = relationship(
+        "Encounter",
+        lazy="select",
+    )
+    administered_by_system: Mapped["GovernmentSystem | None"] = relationship(
+        "GovernmentSystem",
+        lazy="select",
+    )
