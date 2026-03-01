@@ -5,10 +5,11 @@
   "description": "BATHS — Cosm x Chron = Flourishing. Fragment and Cosm data agents.",
   "scripts": {
     "fragment": "node src/fragment/scrape.mjs",
+    "entity": "node src/entity/run.mjs",
     "cosm": "node src/cosm/assemble.mjs",
     "character": "node src/character/discover.mjs",
-    "run": "node src/fragment/scrape.mjs && node src/cosm/assemble.mjs",
-    "run:all": "node src/fragment/scrape.mjs && node src/cosm/assemble.mjs && node src/character/discover.mjs"
+    "run": "node src/fragment/scrape.mjs && node src/entity/run.mjs && node src/cosm/assemble.mjs",
+    "run:all": "node src/fragment/scrape.mjs && node src/entity/run.mjs && node src/cosm/assemble.mjs && node src/character/discover.mjs"
   },
   "engines": {
     "node": ">=20.0.0"

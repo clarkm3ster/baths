@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-03-01T07:07:18.000Z",
+  "total_records": 168,
+  "archetypes": [
+    "marcus",
+    "elena",
+    "james",
+    "rivera",
+    "aisha",
+    "median"
+  ],
+  "counties": [
+    "42101",
+    "42045",
+    "42091",
+    "42017",
+    "42029",
+    "36061",
+    "36047",
+    "36081",
+    "36005",
+    "06037",
+    "17031",
+    "48201",
+    "04013",
+    "48113",
+    "12086",
+    "13121",
+    "53033",
+    "24510",
+    "11001",
+    "21013",
+    "54055",
+    "28049",
+    "01073",
+    "26163",
+    "39035",
+    "34013",
+    "34017",
+    "34023"
+  ],
+  "columns": 78,
+  "avg_net_fiscal_impact": -49917,
+  "avg_total_taxes": 6186,
+  "avg_total_benefits": 18869,
+  "avg_total_services": 26708,
+  "avg_total_collective": 10525,
+  "avg_fragments_used": 6,
+  "by_archetype": {
+    "marcus": {
+      "records": 28,
+      "avg_taxes": 4984,
+      "avg_benefits": 25184,
+      "avg_net": -63675
+    },
+    "elena": {
+      "records": 28,
+      "avg_taxes": 3933,
+      "avg_benefits": 17303,
+      "avg_net": -40845
+    },
+    "james": {
+      "records": 28,
+      "avg_taxes": 2603,
+      "avg_benefits": 25132,
+      "avg_net": -34004
+    },
+    "rivera": {
+      "records": 28,
+      "avg_taxes": 8658,
+      "avg_benefits": 24858,
+      "avg_net": -75675
+    },
+    "aisha": {
+      "records": 28,
+      "avg_taxes": 2242,
+      "avg_benefits": 16596,
+      "avg_net": -69329
+    },
+    "median": {
+      "records": 28,
+      "avg_taxes": 14694,
+      "avg_benefits": 4143,
+      "avg_net": -15974
+    }
+  }
+}
