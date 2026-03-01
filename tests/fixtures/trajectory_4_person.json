@@ -1,0 +1,304 @@
+{
+  "person_uid": "dome-james-042",
+  "identity_spine": {
+    "ssn_hash": null,
+    "name_hash": "f7g8h9i0j1k2james",
+    "dob": "1984-07-22",
+    "sex_at_birth": "male",
+    "address_history": [
+      {
+        "street_hash": "hash_shelter_main",
+        "city": "Chicago",
+        "state": "IL",
+        "zip5": "60612",
+        "tract_fips": "17031839100",
+        "start_date": "2024-11-01",
+        "end_date": null
+      },
+      {
+        "street_hash": "hash_prison_unit_b",
+        "city": "Joliet",
+        "state": "IL",
+        "zip5": "60433",
+        "tract_fips": "17197884200",
+        "start_date": "2020-03-01",
+        "end_date": "2022-02-28"
+      }
+    ],
+    "cross_system_ids": {
+      "irs_tin_hash": null,
+      "ssa_beneficiary_id": null,
+      "medicare_id": null,
+      "medicaid_id": "IL-MC-4420189",
+      "chip_id": null,
+      "snap_case_id": "IL-SNAP-42018",
+      "tanf_case_id": null,
+      "hud_client_id": null,
+      "pha_household_id": null,
+      "hmis_id": "HMIS-CHI-88421",
+      "state_prison_id": "IDOC-2020-44218",
+      "county_jail_id": "COOK-2019-31204",
+      "court_case_ids": ["2019-CR-44218", "2023-CR-12044"],
+      "school_district_student_id": null,
+      "higher_ed_student_id": null,
+      "unemployment_insurance_id": null,
+      "wioa_participant_id": null,
+      "va_id": null
+    },
+    "linkage_confidence_by_system": {
+      "medicaid": 0.92,
+      "snap": 0.88,
+      "hmis": 0.90,
+      "state_prison": 0.99,
+      "county_jail": 0.95,
+      "courts": 0.93
+    }
+  },
+  "static_profile": {
+    "birth_tract_fips": "17031770800",
+    "current_tract_fips": "17031839100",
+    "parental_income_quintile": 1,
+    "parental_education_level": "<HS",
+    "ace_score_estimate": 6.0,
+    "birth_weight_grams": 2800.0,
+    "genetics_risk_flags": ["hepatitis_c_exposure", "substance_use_vulnerability"]
+  },
+  "dynamic_state": {
+    "timestamp": "2026-01-15T10:00:00",
+    "age_years": 41.5,
+    "bio_state": {
+      "bmi": 24.0,
+      "blood_pressure_systolic": 128.0,
+      "blood_pressure_diastolic": 82.0,
+      "hba1c": 5.4,
+      "lipid_profile_known": false,
+      "chronic_conditions": ["hepatitis_c", "chronic_pain"],
+      "functional_limitations_score": 0.35
+    },
+    "mental_state": {
+      "depression_severity": 0.65,
+      "anxiety_severity": 0.55,
+      "sud_severity": 0.70,
+      "psychosis_flag": false,
+      "suicide_risk_score": 0.15
+    },
+    "econ_state": {
+      "current_annual_income": 6000.0,
+      "income_volatility_score": 0.90,
+      "employment_status": "unemployed",
+      "occupation_code": null,
+      "assets_estimate": 0.0,
+      "debts_estimate": 15000.0
+    },
+    "housing_state": {
+      "housing_status": "shelter",
+      "rent_to_income_ratio": null,
+      "homelessness_history_flag": true,
+      "nights_homeless_past_year": 180,
+      "housing_quality_score": 2.0
+    },
+    "family_state": {
+      "household_size": 1,
+      "dependents_ages": [],
+      "caregiving_burden_score": 0.0,
+      "social_network_size": 2,
+      "social_isolation_score": 0.80
+    },
+    "justice_state": {
+      "justice_involvement_flag": true,
+      "past_12m_jail_days": 14,
+      "past_12m_prison_days": 0,
+      "past_12m_police_contacts": 6,
+      "current_supervision_status": "parole"
+    },
+    "education_state": {
+      "highest_credential": "HS",
+      "currently_enrolled_flag": false,
+      "special_ed_history_flag": false,
+      "literacy_score": 0.60
+    },
+    "program_state": {
+      "eligibility_snapshot": {
+        "medicaid": true, "medicare": false, "marketplace_subsidy": false,
+        "snap": true, "tanf": false, "housing_assistance": true,
+        "ssi": true, "ssdi": false, "unemployment_insurance": false,
+        "wioa": true, "va_benefits": false
+      },
+      "enrollment_snapshot": {
+        "medicaid": true, "medicare": false, "marketplace_subsidy": false,
+        "snap": true, "tanf": false, "housing_assistance": false,
+        "ssi": false, "ssdi": false, "unemployment_insurance": false,
+        "wioa": false, "va_benefits": false
+      }
+    }
+  },
+  "dome_metrics": {
+    "biometric_layer": {"bmi": 24.0, "hba1c": 5.4, "bp_systolic": 128, "bp_diastolic": 82, "hep_c_viral_load": "detectable"},
+    "clinical_layer": {"er_visits_12m": 8, "hospitalizations_12m": 2, "rx_count": 5, "hep_c_treatment_status": "untreated"},
+    "behavioral_layer": {"medication_adherence": 0.30, "appointment_compliance": 0.25, "substance_use_active": true},
+    "economic_layer": {"income": 6000, "debt_to_income": 2.5, "employment_stability": 0.1},
+    "environmental_layer": {"adi_score": 92, "housing_quality": 2.0, "shelter_based": true},
+    "social_layer": {"network_size": 2, "isolation_score": 0.80, "peer_support": false},
+    "institutional_layer": {"program_count": 2, "system_touchpoints": 12, "incarceration_history": true},
+    "legal_layer": {"justice_contacts": 6, "supervision_status": "parole", "pending_cases": 0},
+    "subjective_wellbeing_layer": {"self_rated_health": 0.25, "life_satisfaction": 0.20}
+  },
+  "fiscal_history": [
+    {
+      "event_id": "evt-james-001",
+      "person_uid": "dome-james-042",
+      "event_date": "2025-01-15",
+      "payer_level": "federal",
+      "payer_entity": "CMS-Medicaid",
+      "program_or_fund": "Medicaid",
+      "domain": "healthcare",
+      "mechanism": "service_utilization",
+      "service_category": "er_visit",
+      "utilization_unit": "visit",
+      "quantity": 8.0,
+      "amount_paid": 17600.0,
+      "amount_type": "actual_claim",
+      "confidence": 0.95,
+      "data_source_system": "state_medicaid",
+      "attribution_tags": ["substance_use", "chronic_pain", "hepatitis_c"]
+    },
+    {
+      "event_id": "evt-james-002",
+      "person_uid": "dome-james-042",
+      "event_date": "2025-04-01",
+      "payer_level": "federal",
+      "payer_entity": "CMS-Medicaid",
+      "program_or_fund": "Medicaid",
+      "domain": "healthcare",
+      "mechanism": "service_utilization",
+      "service_category": "inpatient",
+      "utilization_unit": "day",
+      "quantity": 12.0,
+      "amount_paid": 34596.0,
+      "amount_type": "actual_claim",
+      "confidence": 0.95,
+      "data_source_system": "state_medicaid",
+      "attribution_tags": ["detox", "hepatitis_c_complication"]
+    },
+    {
+      "event_id": "evt-james-003",
+      "person_uid": "dome-james-042",
+      "event_date": "2020-03-01",
+      "payer_level": "state",
+      "payer_entity": "IDOC",
+      "program_or_fund": "State Prison",
+      "domain": "justice",
+      "mechanism": "service_utilization",
+      "service_category": "incarceration",
+      "utilization_unit": "year",
+      "quantity": 2.0,
+      "amount_paid": 95000.0,
+      "amount_type": "estimated_unit_cost",
+      "confidence": 0.90,
+      "data_source_system": "state_corrections",
+      "attribution_tags": ["drug_offense"]
+    },
+    {
+      "event_id": "evt-james-004",
+      "person_uid": "dome-james-042",
+      "event_date": "2025-01-01",
+      "payer_level": "local",
+      "payer_entity": "City-Chicago-HHS",
+      "program_or_fund": "Homeless Shelter System",
+      "domain": "housing",
+      "mechanism": "service_utilization",
+      "service_category": "shelter",
+      "utilization_unit": "night",
+      "quantity": 180.0,
+      "amount_paid": 18630.0,
+      "amount_type": "estimated_unit_cost",
+      "confidence": 0.85,
+      "data_source_system": "hmis",
+      "attribution_tags": ["chronic_homeless"]
+    },
+    {
+      "event_id": "evt-james-005",
+      "person_uid": "dome-james-042",
+      "event_date": "2025-01-15",
+      "payer_level": "federal",
+      "payer_entity": "USDA-FNS",
+      "program_or_fund": "SNAP",
+      "domain": "food",
+      "mechanism": "in_kind_benefit",
+      "service_category": "food_assistance",
+      "utilization_unit": "month",
+      "quantity": 12.0,
+      "amount_paid": 2400.0,
+      "amount_type": "actual_claim",
+      "confidence": 1.0,
+      "data_source_system": "state_snap",
+      "attribution_tags": ["individual"]
+    },
+    {
+      "event_id": "evt-james-006",
+      "person_uid": "dome-james-042",
+      "event_date": "2025-08-01",
+      "payer_level": "local",
+      "payer_entity": "Cook-County-Jail",
+      "program_or_fund": "County Jail",
+      "domain": "justice",
+      "mechanism": "service_utilization",
+      "service_category": "jail",
+      "utilization_unit": "day",
+      "quantity": 14.0,
+      "amount_paid": 2240.0,
+      "amount_type": "estimated_unit_cost",
+      "confidence": 0.90,
+      "data_source_system": "county_jail",
+      "attribution_tags": ["parole_violation"]
+    }
+  ],
+  "whole_person_budget_key": {
+    "person_uid": "dome-james-042",
+    "age": 42,
+    "sex_at_birth": "male",
+    "current_tract_fips": "17031839100",
+    "household_size": 1,
+    "dependents_ages": [],
+    "current_annual_income": 6000.0,
+    "income_volatility_score": 0.90,
+    "employment_status": "unemployed",
+    "occupation_code": null,
+    "educational_attainment": "HS",
+    "disability_flag": false,
+    "chronic_condition_flags": ["hepatitis_c", "chronic_pain"],
+    "high_need_flag": true,
+    "housing_status": "shelter",
+    "homelessness_history_flag": true,
+    "area_deprivation_index": 92.0,
+    "justice_involvement_flag": true,
+    "past_12m_jail_days": 14,
+    "past_12m_prison_days": 0,
+    "past_12m_police_contacts": 6,
+    "eligibility_snapshot": {
+      "medicaid": true, "medicare": false, "marketplace_subsidy": false,
+      "snap": true, "tanf": false, "housing_assistance": true,
+      "ssi": true, "ssdi": false, "unemployment_insurance": false,
+      "wioa": true, "va_benefits": false
+    },
+    "enrollment_snapshot": {
+      "medicaid": true, "medicare": false, "marketplace_subsidy": false,
+      "snap": true, "tanf": false, "housing_assistance": false,
+      "ssi": false, "ssdi": false, "unemployment_insurance": false,
+      "wioa": false, "va_benefits": false
+    },
+    "budget_horizons": [
+      {"label": "1y", "start_date": "2026-01-01", "end_date": "2027-01-01", "time_step": "month"},
+      {"label": "5y", "start_date": "2026-01-01", "end_date": "2031-01-01", "time_step": "quarter"},
+      {"label": "lifetime", "start_date": "2026-01-01", "end_date": "2068-01-01", "time_step": "year"}
+    ]
+  },
+  "_notes": {
+    "trajectory": "high_net_cost (trajectory 4)",
+    "path_a_lifetime_cost": 1800000,
+    "path_b_dome_cost": 350000,
+    "path_b_new_lifetime_cost": 280000,
+    "net_savings": 1170000,
+    "description": "James, age 42 — SUD history, prior incarceration (2 years), unstable housing (shelter), Hep C diagnosis, no steady employment. Multiple active cascades: legal→econ→social→geo→bio→fiscal AND social→psych→bio→fiscal."
+  }
+}

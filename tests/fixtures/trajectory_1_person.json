@@ -1,0 +1,219 @@
+{
+  "person_uid": "dome-sarah-028",
+  "identity_spine": {
+    "ssn_hash": "sha256_sarah_ssn_hash",
+    "name_hash": "m3n4o5p6q7r8sarah",
+    "dob": "1998-01-10",
+    "sex_at_birth": "female",
+    "address_history": [
+      {
+        "street_hash": "hash_oak_ave_12b",
+        "city": "Austin",
+        "state": "TX",
+        "zip5": "78704",
+        "tract_fips": "48453001702",
+        "start_date": "2022-08-01",
+        "end_date": null
+      }
+    ],
+    "cross_system_ids": {
+      "irs_tin_hash": "sha256_sarah_tin",
+      "ssa_beneficiary_id": null,
+      "medicare_id": null,
+      "medicaid_id": null,
+      "chip_id": null,
+      "snap_case_id": null,
+      "tanf_case_id": null,
+      "hud_client_id": null,
+      "pha_household_id": null,
+      "hmis_id": null,
+      "state_prison_id": null,
+      "county_jail_id": null,
+      "court_case_ids": [],
+      "school_district_student_id": null,
+      "higher_ed_student_id": "UT-2016-SB2801",
+      "unemployment_insurance_id": null,
+      "wioa_participant_id": null,
+      "va_id": null
+    },
+    "linkage_confidence_by_system": {
+      "irs": 0.98,
+      "higher_ed": 0.95
+    }
+  },
+  "static_profile": {
+    "birth_tract_fips": "48453002300",
+    "current_tract_fips": "48453001702",
+    "parental_income_quintile": 4,
+    "parental_education_level": "BA",
+    "ace_score_estimate": 1.0,
+    "birth_weight_grams": 3400.0,
+    "genetics_risk_flags": []
+  },
+  "dynamic_state": {
+    "timestamp": "2026-01-15T10:00:00",
+    "age_years": 28.0,
+    "bio_state": {
+      "bmi": 23.5,
+      "blood_pressure_systolic": 118.0,
+      "blood_pressure_diastolic": 74.0,
+      "hba1c": 5.0,
+      "lipid_profile_known": true,
+      "chronic_conditions": [],
+      "functional_limitations_score": 0.0
+    },
+    "mental_state": {
+      "depression_severity": 0.10,
+      "anxiety_severity": 0.15,
+      "sud_severity": null,
+      "psychosis_flag": false,
+      "suicide_risk_score": 0.01
+    },
+    "econ_state": {
+      "current_annual_income": 72000.0,
+      "income_volatility_score": 0.15,
+      "employment_status": "FT",
+      "occupation_code": "15-1252",
+      "assets_estimate": 35000.0,
+      "debts_estimate": 28000.0
+    },
+    "housing_state": {
+      "housing_status": "stable",
+      "rent_to_income_ratio": 0.25,
+      "homelessness_history_flag": false,
+      "nights_homeless_past_year": 0,
+      "housing_quality_score": 8.0
+    },
+    "family_state": {
+      "household_size": 2,
+      "dependents_ages": [],
+      "caregiving_burden_score": 0.0,
+      "social_network_size": 15,
+      "social_isolation_score": 0.10
+    },
+    "justice_state": {
+      "justice_involvement_flag": false,
+      "past_12m_jail_days": 0,
+      "past_12m_prison_days": 0,
+      "past_12m_police_contacts": 0,
+      "current_supervision_status": null
+    },
+    "education_state": {
+      "highest_credential": "BA",
+      "currently_enrolled_flag": false,
+      "special_ed_history_flag": false,
+      "literacy_score": 0.95
+    },
+    "program_state": {
+      "eligibility_snapshot": {
+        "medicaid": false, "medicare": false, "marketplace_subsidy": false,
+        "snap": false, "tanf": false, "housing_assistance": false,
+        "ssi": false, "ssdi": false, "unemployment_insurance": true,
+        "wioa": false, "va_benefits": false
+      },
+      "enrollment_snapshot": {
+        "medicaid": false, "medicare": false, "marketplace_subsidy": false,
+        "snap": false, "tanf": false, "housing_assistance": false,
+        "ssi": false, "ssdi": false, "unemployment_insurance": false,
+        "wioa": false, "va_benefits": false
+      }
+    }
+  },
+  "dome_metrics": {
+    "biometric_layer": {"bmi": 23.5, "hba1c": 5.0, "bp_systolic": 118, "bp_diastolic": 74},
+    "clinical_layer": {"er_visits_12m": 0, "hospitalizations_12m": 0, "rx_count": 0, "preventive_visits": 1},
+    "behavioral_layer": {"medication_adherence": null, "exercise_frequency": "3x_weekly"},
+    "economic_layer": {"income": 72000, "debt_to_income": 0.39, "employment_stability": 0.9},
+    "environmental_layer": {"adi_score": 25, "housing_quality": 8.0},
+    "social_layer": {"network_size": 15, "isolation_score": 0.10},
+    "institutional_layer": {"program_count": 0, "system_touchpoints": 1},
+    "legal_layer": {"justice_contacts": 0},
+    "subjective_wellbeing_layer": {"self_rated_health": 0.85, "life_satisfaction": 0.80}
+  },
+  "fiscal_history": [
+    {
+      "event_id": "evt-sarah-001",
+      "person_uid": "dome-sarah-028",
+      "event_date": "2025-04-15",
+      "payer_level": "federal",
+      "payer_entity": "IRS",
+      "program_or_fund": "Federal Income Tax",
+      "domain": "other",
+      "mechanism": "tax_expenditure",
+      "service_category": "standard_deduction",
+      "utilization_unit": "annual",
+      "quantity": 1.0,
+      "amount_paid": -14400.0,
+      "amount_type": "actual_claim",
+      "confidence": 1.0,
+      "data_source_system": "irs",
+      "attribution_tags": ["taxes_paid", "negative_means_revenue"]
+    },
+    {
+      "event_id": "evt-sarah-002",
+      "person_uid": "dome-sarah-028",
+      "event_date": "2025-01-01",
+      "payer_level": "federal",
+      "payer_entity": "Employer-ESI",
+      "program_or_fund": "Employer Health Insurance Tax Exclusion",
+      "domain": "healthcare",
+      "mechanism": "tax_expenditure",
+      "service_category": "employer_health_exclusion",
+      "utilization_unit": "annual",
+      "quantity": 1.0,
+      "amount_paid": 3200.0,
+      "amount_type": "estimated_unit_cost",
+      "confidence": 0.80,
+      "data_source_system": "estimated",
+      "attribution_tags": ["employer_sponsored_insurance"]
+    }
+  ],
+  "whole_person_budget_key": {
+    "person_uid": "dome-sarah-028",
+    "age": 28,
+    "sex_at_birth": "female",
+    "current_tract_fips": "48453001702",
+    "household_size": 2,
+    "dependents_ages": [],
+    "current_annual_income": 72000.0,
+    "income_volatility_score": 0.15,
+    "employment_status": "FT",
+    "occupation_code": "15-1252",
+    "educational_attainment": "BA",
+    "disability_flag": false,
+    "chronic_condition_flags": [],
+    "high_need_flag": false,
+    "housing_status": "stable",
+    "homelessness_history_flag": false,
+    "area_deprivation_index": 25.0,
+    "justice_involvement_flag": false,
+    "past_12m_jail_days": 0,
+    "past_12m_prison_days": 0,
+    "past_12m_police_contacts": 0,
+    "eligibility_snapshot": {
+      "medicaid": false, "medicare": false, "marketplace_subsidy": false,
+      "snap": false, "tanf": false, "housing_assistance": false,
+      "ssi": false, "ssdi": false, "unemployment_insurance": true,
+      "wioa": false, "va_benefits": false
+    },
+    "enrollment_snapshot": {
+      "medicaid": false, "medicare": false, "marketplace_subsidy": false,
+      "snap": false, "tanf": false, "housing_assistance": false,
+      "ssi": false, "ssdi": false, "unemployment_insurance": false,
+      "wioa": false, "va_benefits": false
+    },
+    "budget_horizons": [
+      {"label": "1y", "start_date": "2026-01-01", "end_date": "2027-01-01", "time_step": "month"},
+      {"label": "5y", "start_date": "2026-01-01", "end_date": "2031-01-01", "time_step": "quarter"},
+      {"label": "lifetime", "start_date": "2026-01-01", "end_date": "2084-01-01", "time_step": "year"}
+    ]
+  },
+  "_notes": {
+    "trajectory": "net_contributor (trajectory 1)",
+    "lifetime_net_fiscal_contribution": 250000,
+    "dome_value": "moderate — late-life prevention",
+    "dome_cost_lifetime": 120000,
+    "roi": "3:1 (mostly Medicare/end-of-life savings)",
+    "description": "Sarah, age 28 — employed FT as software developer, bachelor's degree, stable housing, no chronic conditions. Net fiscal contributor. DOME value is primarily in late-life prevention (avoiding chronic disease, reducing Medicare spending)."
+  }
+}

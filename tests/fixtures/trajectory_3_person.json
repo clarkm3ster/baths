@@ -1,0 +1,270 @@
+{
+  "person_uid": "dome-maria-034",
+  "identity_spine": {
+    "ssn_hash": null,
+    "name_hash": "a1b2c3d4e5f6maria",
+    "dob": "1992-03-15",
+    "sex_at_birth": "female",
+    "address_history": [
+      {
+        "street_hash": "hash_elm_st_apt4",
+        "city": "Philadelphia",
+        "state": "PA",
+        "zip5": "19134",
+        "tract_fips": "42101002500",
+        "start_date": "2019-06-01",
+        "end_date": null
+      }
+    ],
+    "cross_system_ids": {
+      "irs_tin_hash": null,
+      "ssa_beneficiary_id": null,
+      "medicare_id": null,
+      "medicaid_id": "PA-MC-9920341",
+      "chip_id": null,
+      "snap_case_id": "PA-SNAP-20341",
+      "tanf_case_id": null,
+      "hud_client_id": null,
+      "pha_household_id": null,
+      "hmis_id": null,
+      "state_prison_id": null,
+      "county_jail_id": null,
+      "court_case_ids": [],
+      "school_district_student_id": null,
+      "higher_ed_student_id": null,
+      "unemployment_insurance_id": "PA-UI-88341",
+      "wioa_participant_id": null,
+      "va_id": null
+    },
+    "linkage_confidence_by_system": {
+      "medicaid": 0.95,
+      "snap": 0.92,
+      "unemployment_insurance": 0.88
+    }
+  },
+  "static_profile": {
+    "birth_tract_fips": "42101003200",
+    "current_tract_fips": "42101002500",
+    "parental_income_quintile": 2,
+    "parental_education_level": "HS",
+    "ace_score_estimate": 3.0,
+    "birth_weight_grams": 3100.0,
+    "genetics_risk_flags": ["type2_diabetes_risk"]
+  },
+  "dynamic_state": {
+    "timestamp": "2026-01-15T10:00:00",
+    "age_years": 33.8,
+    "bio_state": {
+      "bmi": 29.5,
+      "blood_pressure_systolic": 135.0,
+      "blood_pressure_diastolic": 88.0,
+      "hba1c": 6.2,
+      "lipid_profile_known": true,
+      "chronic_conditions": ["pre_diabetes", "hypertension_stage1"],
+      "functional_limitations_score": 0.1
+    },
+    "mental_state": {
+      "depression_severity": 0.55,
+      "anxiety_severity": 0.40,
+      "sud_severity": null,
+      "psychosis_flag": false,
+      "suicide_risk_score": 0.05
+    },
+    "econ_state": {
+      "current_annual_income": 24000.0,
+      "income_volatility_score": 0.65,
+      "employment_status": "gig",
+      "occupation_code": "45-2011",
+      "assets_estimate": 1200.0,
+      "debts_estimate": 8500.0
+    },
+    "housing_state": {
+      "housing_status": "cost_burdened",
+      "rent_to_income_ratio": 0.48,
+      "homelessness_history_flag": false,
+      "nights_homeless_past_year": 0,
+      "housing_quality_score": 5.0
+    },
+    "family_state": {
+      "household_size": 3,
+      "dependents_ages": [6, 4],
+      "caregiving_burden_score": 0.45,
+      "social_network_size": 8,
+      "social_isolation_score": 0.30
+    },
+    "justice_state": {
+      "justice_involvement_flag": false,
+      "past_12m_jail_days": 0,
+      "past_12m_prison_days": 0,
+      "past_12m_police_contacts": 0,
+      "current_supervision_status": null
+    },
+    "education_state": {
+      "highest_credential": "some_college",
+      "currently_enrolled_flag": false,
+      "special_ed_history_flag": false,
+      "literacy_score": 0.75
+    },
+    "program_state": {
+      "eligibility_snapshot": {
+        "medicaid": true,
+        "medicare": false,
+        "marketplace_subsidy": true,
+        "snap": true,
+        "tanf": false,
+        "housing_assistance": true,
+        "ssi": false,
+        "ssdi": false,
+        "unemployment_insurance": true,
+        "wioa": true,
+        "va_benefits": false
+      },
+      "enrollment_snapshot": {
+        "medicaid": true,
+        "medicare": false,
+        "marketplace_subsidy": false,
+        "snap": true,
+        "tanf": false,
+        "housing_assistance": false,
+        "ssi": false,
+        "ssdi": false,
+        "unemployment_insurance": false,
+        "wioa": false,
+        "va_benefits": false
+      }
+    }
+  },
+  "dome_metrics": {
+    "biometric_layer": {"bmi": 29.5, "hba1c": 6.2, "bp_systolic": 135, "bp_diastolic": 88},
+    "clinical_layer": {"er_visits_12m": 2, "hospitalizations_12m": 0, "rx_count": 2},
+    "behavioral_layer": {"medication_adherence": 0.70, "appointment_compliance": 0.65},
+    "economic_layer": {"income": 24000, "debt_to_income": 0.35, "employment_stability": 0.4},
+    "environmental_layer": {"adi_score": 72, "housing_quality": 5.0},
+    "social_layer": {"network_size": 8, "isolation_score": 0.30},
+    "institutional_layer": {"program_count": 2, "system_touchpoints": 4},
+    "legal_layer": {"justice_contacts": 0},
+    "subjective_wellbeing_layer": {"self_rated_health": 0.5, "life_satisfaction": 0.45}
+  },
+  "fiscal_history": [
+    {
+      "event_id": "evt-maria-001",
+      "person_uid": "dome-maria-034",
+      "event_date": "2025-03-10",
+      "payer_level": "federal",
+      "payer_entity": "CMS-Medicaid",
+      "program_or_fund": "Medicaid",
+      "domain": "healthcare",
+      "mechanism": "service_utilization",
+      "service_category": "outpatient_visit",
+      "utilization_unit": "visit",
+      "quantity": 4.0,
+      "amount_paid": 1400.0,
+      "amount_type": "actual_claim",
+      "confidence": 0.95,
+      "data_source_system": "state_medicaid",
+      "attribution_tags": ["primary_care", "pre_diabetes"]
+    },
+    {
+      "event_id": "evt-maria-002",
+      "person_uid": "dome-maria-034",
+      "event_date": "2025-06-22",
+      "payer_level": "federal",
+      "payer_entity": "CMS-Medicaid",
+      "program_or_fund": "Medicaid",
+      "domain": "healthcare",
+      "mechanism": "service_utilization",
+      "service_category": "er_visit",
+      "utilization_unit": "visit",
+      "quantity": 1.0,
+      "amount_paid": 2200.0,
+      "amount_type": "actual_claim",
+      "confidence": 0.95,
+      "data_source_system": "state_medicaid",
+      "attribution_tags": ["anxiety_episode"]
+    },
+    {
+      "event_id": "evt-maria-003",
+      "person_uid": "dome-maria-034",
+      "event_date": "2025-01-15",
+      "payer_level": "federal",
+      "payer_entity": "USDA-FNS",
+      "program_or_fund": "SNAP",
+      "domain": "food",
+      "mechanism": "in_kind_benefit",
+      "service_category": "food_assistance",
+      "utilization_unit": "month",
+      "quantity": 12.0,
+      "amount_paid": 3600.0,
+      "amount_type": "actual_claim",
+      "confidence": 1.0,
+      "data_source_system": "state_snap",
+      "attribution_tags": ["household_of_3"]
+    },
+    {
+      "event_id": "evt-maria-004",
+      "person_uid": "dome-maria-034",
+      "event_date": "2025-09-01",
+      "payer_level": "federal",
+      "payer_entity": "IRS",
+      "program_or_fund": "EITC",
+      "domain": "income_support",
+      "mechanism": "tax_expenditure",
+      "service_category": "tax_credit",
+      "utilization_unit": "annual",
+      "quantity": 1.0,
+      "amount_paid": 5800.0,
+      "amount_type": "actual_claim",
+      "confidence": 1.0,
+      "data_source_system": "irs",
+      "attribution_tags": ["2_qualifying_children"]
+    }
+  ],
+  "whole_person_budget_key": {
+    "person_uid": "dome-maria-034",
+    "age": 34,
+    "sex_at_birth": "female",
+    "current_tract_fips": "42101002500",
+    "household_size": 3,
+    "dependents_ages": [6, 4],
+    "current_annual_income": 24000.0,
+    "income_volatility_score": 0.65,
+    "employment_status": "gig",
+    "occupation_code": "45-2011",
+    "educational_attainment": "some_college",
+    "disability_flag": false,
+    "chronic_condition_flags": ["pre_diabetes", "hypertension_stage1"],
+    "high_need_flag": false,
+    "housing_status": "cost_burdened",
+    "homelessness_history_flag": false,
+    "area_deprivation_index": 72.0,
+    "justice_involvement_flag": false,
+    "past_12m_jail_days": 0,
+    "past_12m_prison_days": 0,
+    "past_12m_police_contacts": 0,
+    "eligibility_snapshot": {
+      "medicaid": true, "medicare": false, "marketplace_subsidy": true,
+      "snap": true, "tanf": false, "housing_assistance": true,
+      "ssi": false, "ssdi": false, "unemployment_insurance": true,
+      "wioa": true, "va_benefits": false
+    },
+    "enrollment_snapshot": {
+      "medicaid": true, "medicare": false, "marketplace_subsidy": false,
+      "snap": true, "tanf": false, "housing_assistance": false,
+      "ssi": false, "ssdi": false, "unemployment_insurance": false,
+      "wioa": false, "va_benefits": false
+    },
+    "budget_horizons": [
+      {"label": "1y", "start_date": "2026-01-01", "end_date": "2027-01-01", "time_step": "month"},
+      {"label": "5y", "start_date": "2026-01-01", "end_date": "2031-01-01", "time_step": "quarter"},
+      {"label": "lifetime", "start_date": "2026-01-01", "end_date": "2072-01-01", "time_step": "year"}
+    ]
+  },
+  "_notes": {
+    "trajectory": "moderate_net_cost (trajectory 3)",
+    "path_a_lifetime_cost": 868000,
+    "path_b_dome_cost": 197000,
+    "path_b_new_lifetime_cost": 188000,
+    "net_savings": 483000,
+    "description": "Maria, age 34 — moderate depression, gig employment, pre-diabetes, housing cost burden 48%. Cascade risk: economic→psychological→biological→fiscal."
+  }
+}

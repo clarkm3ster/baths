@@ -1,0 +1,46 @@
+# THE DOME — Docker Compose stack
+#
+# Services:
+#   dome_db  — PostgreSQL 16 database
+#   dome_app — FastAPI application (uvicorn)
+#
+# Usage:
+#   docker compose up --build
+#   docker compose down -v   # tear down including volumes
+
+services:
+  dome_db:
+    image: postgres:16-alpine
+    container_name: dome_db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: dome
+      POSTGRES_PASSWORD: dome
+      POSTGRES_DB: dome
+    volumes:
+      - dome_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dome -d dome"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  dome_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dome_app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      DOME_DATABASE_URL: "postgresql+asyncpg://dome:dome@dome_db:5432/dome"
+      DOME_DEBUG: "true"
+    depends_on:
+      dome_db:
+        condition: service_healthy
+
+volumes:
+  dome_pgdata:
