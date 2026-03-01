@@ -10,15 +10,15 @@
  *   data/layer-09-environment/{source-id}/{fips}.json
  *   data/raw/{source-id}/{fips}.json          ← unmapped sources
  *
- * Each fragment is tagged with every layer it feeds. A single fragment can
- * live in multiple layer directories (via hardlink or copy). The file system
- * is the data lake. The schema is the database.
- *
- * Scheduling: breadth-first, oldest-first across all (source, county) pairs.
- * New sources added by Fragment Agent are automatically picked up.
+ * Scheduling: split-batch strategy
+ *   - 70% of batch goes to REFRESH (re-scrape existing data, oldest first)
+ *   - 30% of batch goes to DISCOVERY (try never-scraped pairs)
+ *   - Sources with >5 consecutive failures are deprioritized (1 pair per run)
+ *   - Sources with >15 consecutive failures are disabled until manual reset
+ *   - Failure counts are tracked in data/meta/failures.json
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, linkSync, copyFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, copyFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { delay, readJSON, writeJSON, COUNTIES } from './lib.mjs'
@@ -44,6 +44,10 @@ const LAYER_DIRS = {
 // ── Config ───────────────────────────────────────────────────────────────────
 const BATCH_LIMIT = parseInt(process.env.FRAGMENT_BATCH_LIMIT || '100')
 const DELAY_MS = parseInt(process.env.FRAGMENT_DELAY_MS || '400')
+const REFRESH_PCT = 0.7     // 70% of batch for refreshing known-working sources
+const DISCOVERY_PCT = 0.3   // 30% for trying never-scraped sources
+const BACKOFF_THRESHOLD = 5  // After 5 consecutive failures, deprioritize
+const DISABLE_THRESHOLD = 15 // After 15 consecutive failures, disable source
 
 // ── Fragment path helpers ────────────────────────────────────────────────────
 
@@ -55,13 +59,11 @@ function fragmentPath(sourceId, fips, layerNum) {
   return join(layerDir(layerNum), sourceId, `${fips}.json`)
 }
 
-// Primary path = first layer in the source's layers array
 function primaryPath(source, fips) {
   const primary = source.layers?.[0]
   return fragmentPath(source.id, fips, primary)
 }
 
-// All paths this fragment should exist at (one per layer)
 function allPaths(source, fips) {
   const layers = source.layers || []
   if (layers.length === 0) return [join(DATA, 'raw', source.id, `${fips}.json`)]
@@ -74,21 +76,115 @@ function getFragmentAge(source, fips) {
   return Date.now() - new Date(existing.scraped_at).getTime()
 }
 
-// ── Scheduling — breadth first, oldest first ─────────────────────────────────
+// ── Failure tracking ─────────────────────────────────────────────────────────
 
-function pickWork(sources, counties, limit) {
-  const pairs = []
+function loadFailures() {
+  return readJSON(join(META, 'failures.json')) || {}
+}
+
+function saveFailures(failures) {
+  writeJSON(join(META, 'failures.json'), failures)
+}
+
+function recordFailure(failures, sourceId, error) {
+  if (!failures[sourceId]) {
+    failures[sourceId] = { consecutive: 0, total: 0, last_error: '', last_tried: '' }
+  }
+  failures[sourceId].consecutive++
+  failures[sourceId].total++
+  failures[sourceId].last_error = error
+  failures[sourceId].last_tried = new Date().toISOString()
+}
+
+function recordSuccess(failures, sourceId) {
+  if (failures[sourceId]) {
+    failures[sourceId].consecutive = 0
+    failures[sourceId].last_success = new Date().toISOString()
+  }
+}
+
+function isDisabled(failures, sourceId) {
+  return (failures[sourceId]?.consecutive || 0) >= DISABLE_THRESHOLD
+}
+
+function isBackedOff(failures, sourceId) {
+  return (failures[sourceId]?.consecutive || 0) >= BACKOFF_THRESHOLD
+}
+
+// ── Scheduling — split batch: refresh + discovery ────────────────────────────
+
+function pickWork(sources, counties, limit, failures) {
+  const refreshPairs = []
+  const discoveryPairs = []
+  const disabledSources = new Set()
 
   for (const source of sources) {
+    if (isDisabled(failures, source.id)) {
+      disabledSources.add(source.id)
+      continue
+    }
+
     for (const county of counties) {
       const age = getFragmentAge(source, county.fips)
-      pairs.push({ source, county, age })
+
+      if (age === Infinity) {
+        // Never scraped — discovery pool
+        discoveryPairs.push({ source, county, age })
+      } else {
+        // Previously scraped — refresh pool
+        refreshPairs.push({ source, county, age })
+      }
     }
   }
 
-  // Never-scraped first (Infinity), then oldest
-  pairs.sort((a, b) => b.age - a.age)
-  return pairs.slice(0, limit)
+  // Sort both pools: oldest first
+  refreshPairs.sort((a, b) => b.age - a.age)
+  discoveryPairs.sort((a, b) => {
+    // Deprioritize backed-off sources within discovery
+    const aBackoff = isBackedOff(failures, a.source.id) ? 1 : 0
+    const bBackoff = isBackedOff(failures, b.source.id) ? 1 : 0
+    if (aBackoff !== bBackoff) return aBackoff - bBackoff
+    return b.age - a.age
+  })
+
+  // For backed-off sources in discovery, limit to 1 pair per source
+  const backedOffSeen = new Set()
+  const filteredDiscovery = discoveryPairs.filter(item => {
+    if (isBackedOff(failures, item.source.id)) {
+      if (backedOffSeen.has(item.source.id)) return false
+      backedOffSeen.add(item.source.id)
+    }
+    return true
+  })
+
+  // Allocate batch slots
+  const refreshSlots = Math.min(
+    Math.ceil(limit * REFRESH_PCT),
+    refreshPairs.length
+  )
+  const discoverySlots = Math.min(
+    limit - refreshSlots,
+    filteredDiscovery.length
+  )
+
+  // If refresh pool is empty (first run), give all to discovery
+  const actualRefresh = refreshPairs.slice(0, refreshSlots || 0)
+  const actualDiscovery = filteredDiscovery.slice(0, discoverySlots || limit)
+
+  const work = [...actualRefresh, ...actualDiscovery]
+
+  // Log scheduling decisions
+  console.log(`\n── Scheduling ──────────────────────────────`)
+  console.log(`  Refresh pool:   ${refreshPairs.length} pairs → ${actualRefresh.length} selected`)
+  console.log(`  Discovery pool: ${discoveryPairs.length} pairs → ${actualDiscovery.length} selected`)
+  console.log(`  Backed-off:     ${backedOffSeen.size} sources (limited to 1 pair each)`)
+  console.log(`  Disabled:       ${disabledSources.size} sources (>${DISABLE_THRESHOLD} consecutive failures)`)
+  if (disabledSources.size > 0) {
+    console.log(`    ${[...disabledSources].slice(0, 10).join(', ')}${disabledSources.size > 10 ? '...' : ''}`)
+  }
+  console.log(`  Total work:     ${work.length} items\n`)
+
+  return work
 }
 
 // ── Write fragment to all layer directories ──────────────────────────────────
@@ -116,7 +212,6 @@ function writeFragment(source, fips, countyName, data) {
       mkdirSync(dirname(paths[i]), { recursive: true })
       copyFileSync(paths[0], paths[i])
     } catch {
-      // If copy fails, write directly
       writeJSON(paths[i], fragment)
     }
   }
@@ -137,9 +232,11 @@ async function run() {
     mkdirSync(join(DATA, dir), { recursive: true })
   }
   mkdirSync(join(DATA, 'raw'), { recursive: true })
+  mkdirSync(META, { recursive: true })
 
   const sources = ALL_SOURCES
-  const work = pickWork(sources, COUNTIES, BATCH_LIMIT)
+  const failures = loadFailures()
+  const work = pickWork(sources, COUNTIES, BATCH_LIMIT, failures)
 
   console.log(`Sources: ${sources.length}`)
   console.log(`Counties: ${COUNTIES.length}`)
@@ -169,9 +266,11 @@ async function run() {
         for (const layer of (source.layers || [])) {
           layerHits[layer] = (layerHits[layer] || 0) + 1
         }
+        recordSuccess(failures, source.id)
         console.log('OK')
       } else {
         console.log(`SKIP — ${result.error}`)
+        recordFailure(failures, source.id, result.error)
         if (result.needs_key) {
           gaps.push({
             source: source.id, fips: county.fips, county: county.name,
@@ -184,6 +283,7 @@ async function run() {
       }
     } catch (err) {
       console.log(`ERROR — ${err.message}`)
+      recordFailure(failures, source.id, err.message)
       failed++
     }
 
@@ -191,6 +291,9 @@ async function run() {
   }
 
   // ── Update metadata ──────────────────────────────────────────────────────
+
+  // Save failure tracking
+  saveFailures(failures)
 
   const sourcesPath = join(META, 'sources.json')
   const existingSources = readJSON(sourcesPath) || {}
@@ -229,6 +332,21 @@ async function run() {
   for (const [layer, count] of Object.entries(layerHits).sort((a, b) => a[0] - b[0])) {
     console.log(`    ${layer}. ${layerNames[layer]}: ${count} new fragments`)
   }
+
+  // Report failure summary
+  const failedSources = Object.entries(failures)
+    .filter(([, f]) => f.consecutive > 0)
+    .sort((a, b) => b[1].consecutive - a[1].consecutive)
+  if (failedSources.length > 0) {
+    console.log('\n  Source failure summary:')
+    for (const [sid, f] of failedSources.slice(0, 15)) {
+      const status = f.consecutive >= DISABLE_THRESHOLD ? 'DISABLED'
+        : f.consecutive >= BACKOFF_THRESHOLD ? 'BACKED OFF'
+        : 'failing'
+      console.log(`    ${sid}: ${f.consecutive} consecutive (${status}) — ${f.last_error}`)
+    }
+  }
+
   console.log('────────────────────────────────────────────\n')
 
   return { scraped, failed, gaps: gapsLogged, total_fragments: countAllFragments() }

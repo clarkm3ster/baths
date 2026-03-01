@@ -2,9 +2,7 @@
  * FRAGMENT — Education Data Sources (Layer 7: Education)
  *
  * NCES: Common Core of Data (school districts), IPEDS (colleges)
- * College Scorecard: College outcomes data
  * Head Start: Early childhood program data
- * Title I: Federal education funding
  *
  * The education layer — from pre-K through workforce development.
  */
@@ -24,7 +22,6 @@ export default [
     layers: [7],
     url: (fips) => {
       const state = stateFips(fips)
-      const county = countyFips(fips)
       return `https://educationdata.urban.org/api/v1/schools/ccd/directory/2022/?fips=${state}&county_code=${fips}&limit=100`
     },
     transform: (data) => {
@@ -64,34 +61,6 @@ export default [
         federal_revenue_pct: totalRevenue > 0
           ? Math.round(results.reduce((s, r) => s + (r.rev_fed_total || 0), 0) / totalRevenue * 1000) / 10
           : null,
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // College Scorecard — College Outcomes
-  // Uses data.gov API key (DEMO_KEY works for limited queries)
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'college-scorecard',
-    label: 'College Scorecard Institutions',
-    layers: [6, 7],
-    url: (fips) => {
-      const state = stateAbbrev(fips)
-      return `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=DEMO_KEY&school.state=${state}&fields=school.name,school.city,school.state,latest.admissions.admission_rate.overall,latest.cost.avg_net_price.overall,latest.earnings.10_yrs_after_entry.median,latest.student.size,latest.completion.rate_suppressed.overall&per_page=50`
-    },
-    transform: (data) => {
-      const results = data?.results || []
-      if (results.length === 0) return { note: 'No College Scorecard results' }
-      const withEarnings = results.filter(r => r['latest.earnings.10_yrs_after_entry.median'])
-      return {
-        institutions: results.length,
-        avg_admission_rate: _avg(results.map(r => r['latest.admissions.admission_rate.overall'])),
-        avg_net_price: _avg(results.map(r => r['latest.cost.avg_net_price.overall'])),
-        median_earnings_10yr: _avg(withEarnings.map(r => r['latest.earnings.10_yrs_after_entry.median'])),
-        avg_completion_rate: _avg(results.map(r => r['latest.completion.rate_suppressed.overall'])),
-        total_enrollment: results.reduce((s, r) => s + (r['latest.student.size'] || 0), 0),
       }
     },
   }),
@@ -146,39 +115,9 @@ export default [
       }
     },
   }),
-
-  // Libraries: see nonprofit-services.mjs (imls-public-libraries — real SODA scraper)
-
-  // ══════════════════════════════════════════════════════════════════
-  // Workforce Development — DOL CareerOneStop
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'dol-career-onestop',
-    label: 'DOL CareerOneStop Centers',
-    layers: [6, 7],
-    url: (fips) => {
-      const state = stateAbbrev(fips)
-      return `https://api.careeronestop.org/v1/ajcfinder/${state}?radius=50&pageSize=50`
-    },
-    transform: (data) => {
-      // CareerOneStop needs API key — log as available with key
-      return {
-        note: 'CareerOneStop API — requires free API key from careeronestop.org',
-        available: false,
-        needs_key: true,
-      }
-    },
-  }),
 ]
 
 // ── Helpers ──────────────────────────────────────────────────────
-
-function _avg(arr) {
-  const nums = arr.filter(n => n != null && !isNaN(n))
-  if (nums.length === 0) return null
-  return Math.round(nums.reduce((a, b) => a + b, 0) / nums.length * 100) / 100
-}
 
 function _groupCount(arr, field) {
   const counts = {}

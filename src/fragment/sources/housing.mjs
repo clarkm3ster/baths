@@ -1,12 +1,9 @@
 /**
  * FRAGMENT — Housing Data Sources (Layer 5: Housing)
  *
- * HUD: Fair Market Rents, Point-in-Time homeless counts, CHAS
- * FHFA: House Price Index
- * HMDA: Home mortgage data
- * Census Building Permits
- * USPS Vacancy Data
- * Eviction data
+ * HUD: Fair Market Rents, Point-in-Time homeless counts, LIHTC, Public Housing
+ * FEMA: Disaster declarations, Individual housing assistance
+ * Census: Building permits
  *
  * Housing is where the dome meets the ground.
  */
@@ -73,24 +70,6 @@ export default [
   }),
 
   // ══════════════════════════════════════════════════════════════════
-  // FHFA House Price Index
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'fhfa-house-price-index',
-    label: 'FHFA House Price Index',
-    layers: [3, 5],
-    url: (fips) => {
-      const state = stateAbbrev(fips)
-      return `https://www.fhfa.gov/DataTools/Downloads/Documents/HPI/HPI_AT_state.csv`
-    },
-    transform: (data) => {
-      // This endpoint returns CSV; if JSON parsing fails, note as gap
-      return { note: 'FHFA HPI — CSV endpoint, JSON transform needed', available: false }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
   // Census Building Permits Survey
   // ══════════════════════════════════════════════════════════════════
 
@@ -116,44 +95,7 @@ export default [
   }),
 
   // ══════════════════════════════════════════════════════════════════
-  // HMDA — Home Mortgage Disclosure Act (via CFPB)
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'hmda-mortgage-data',
-    label: 'HMDA Home Mortgage Disclosure',
-    layers: [3, 5],
-    url: (fips) => {
-      const state = stateFips(fips)
-      const county = countyFips(fips)
-      return `https://ffiec.cfpb.gov/v2/data-browser-api/view/csv?states=${state}&counties=${fips}&years=2022`
-    },
-    transform: (data) => {
-      // HMDA returns CSV format; note availability
-      return { note: 'HMDA data available via CFPB Data Browser', format: 'csv', available: true }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // HUD CHAS — Comprehensive Housing Affordability Strategy
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'hud-chas',
-    label: 'HUD CHAS Housing Affordability',
-    layers: [3, 5],
-    url: (fips) => `https://www.huduser.gov/portal/datasets/cp/CHAS/data_querytool.html`,
-    transform: () => {
-      return {
-        note: 'HUD CHAS — interactive query tool, no direct REST API',
-        available: false,
-        needs_scraping: true,
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // USPS Vacancy Data (HUD aggregated)
+  // HUD/USPS Vacancy Data
   // ══════════════════════════════════════════════════════════════════
 
   restJSON({

@@ -1,63 +1,63 @@
 {
-  "generated_at": "2026-02-28T20:33:33.462Z",
-  "total_sources": 142,
+  "generated_at": "2026-03-01T06:43:14.188Z",
+  "total_sources": 120,
   "total_counties": 28,
   "total_fragments": 234,
-  "max_possible_fragments": 3976,
+  "max_possible_fragments": 3360,
   "storage": "layer-based",
   "by_layer": {
     "1": {
       "name": "Legal",
       "directory": "layer-01-legal",
-      "sources": 31,
+      "sources": 25,
       "fragments": 5
     },
     "2": {
       "name": "Systems",
       "directory": "layer-02-systems",
-      "sources": 8,
+      "sources": 4,
       "fragments": 5
     },
     "3": {
       "name": "Fiscal",
       "directory": "layer-03-fiscal",
-      "sources": 30,
+      "sources": 26,
       "fragments": 59
     },
     "4": {
       "name": "Health",
       "directory": "layer-04-health",
-      "sources": 34,
+      "sources": 32,
       "fragments": 10
     },
     "5": {
       "name": "Housing",
       "directory": "layer-05-housing",
-      "sources": 30,
+      "sources": 27,
       "fragments": 69
     },
     "6": {
       "name": "Economic",
       "directory": "layer-06-economic",
-      "sources": 33,
+      "sources": 30,
       "fragments": 38
     },
     "7": {
       "name": "Education",
       "directory": "layer-07-education",
-      "sources": 18,
+      "sources": 16,
       "fragments": 10
     },
     "8": {
       "name": "Community",
       "directory": "layer-08-community",
-      "sources": 37,
+      "sources": 27,
       "fragments": 28
     },
     "9": {
       "name": "Environment",
       "directory": "layer-09-environment",
-      "sources": 20,
+      "sources": 15,
       "fragments": 10
     }
   },
@@ -610,39 +610,12 @@
       ],
       "fragments": 0
     },
-    "fhfa-house-price-index": {
-      "label": "FHFA House Price Index",
-      "api": "REST JSON",
-      "layers": [
-        3,
-        5
-      ],
-      "fragments": 0
-    },
     "census-building-permits": {
       "label": "Census Building Permits Survey",
       "api": "REST JSON",
       "layers": [
         5,
         6
-      ],
-      "fragments": 0
-    },
-    "hmda-mortgage-data": {
-      "label": "HMDA Home Mortgage Disclosure",
-      "api": "REST JSON",
-      "layers": [
-        3,
-        5
-      ],
-      "fragments": 0
-    },
-    "hud-chas": {
-      "label": "HUD CHAS Housing Affordability",
-      "api": "REST JSON",
-      "layers": [
-        3,
-        5
       ],
       "fragments": 0
     },
@@ -705,15 +678,6 @@
       ],
       "fragments": 0
     },
-    "epa-ejscreen": {
-      "label": "EPA EJSCREEN Environmental Justice",
-      "api": "REST JSON",
-      "layers": [
-        8,
-        9
-      ],
-      "fragments": 0
-    },
     "epa-tri": {
       "label": "EPA Toxic Release Inventory",
       "api": "REST JSON",
@@ -732,28 +696,11 @@
       ],
       "fragments": 0
     },
-    "epa-airnow": {
-      "label": "EPA AirNow Current Air Quality",
-      "api": "REST JSON",
-      "layers": [
-        4,
-        9
-      ],
-      "fragments": 0
-    },
     "epa-drinking-water": {
       "label": "EPA Safe Drinking Water Violations",
       "api": "REST JSON",
       "layers": [
         4,
-        9
-      ],
-      "fragments": 0
-    },
-    "usgs-water-quality": {
-      "label": "USGS Water Quality Monitoring Sites",
-      "api": "REST JSON",
-      "layers": [
         9
       ],
       "fragments": 0
@@ -780,14 +727,6 @@
       "api": "OpenFEMA API",
       "layers": [
         5,
-        9
-      ],
-      "fragments": 0
-    },
-    "noaa-climate-normals": {
-      "label": "NOAA 30-Year Climate Normals",
-      "api": "REST JSON",
-      "layers": [
         9
       ],
       "fragments": 0
@@ -921,15 +860,6 @@
       ],
       "fragments": 0
     },
-    "irs-soi-county": {
-      "label": "IRS Statistics of Income by County",
-      "api": "REST JSON",
-      "layers": [
-        3,
-        6
-      ],
-      "fragments": 0
-    },
     "nces-school-districts": {
       "label": "NCES School Districts (CCD)",
       "api": "REST JSON",
@@ -947,15 +877,6 @@
       ],
       "fragments": 0
     },
-    "college-scorecard": {
-      "label": "College Scorecard Institutions",
-      "api": "REST JSON",
-      "layers": [
-        6,
-        7
-      ],
-      "fragments": 0
-    },
     "ipeds-institutions": {
       "label": "IPEDS Postsecondary Institutions",
       "api": "REST JSON",
@@ -968,15 +889,6 @@
       "label": "Head Start Program Data",
       "api": "Socrata SODA (data.acf.hhs.gov)",
       "layers": [
-        7
-      ],
-      "fragments": 0
-    },
-    "dol-career-onestop": {
-      "label": "DOL CareerOneStop Centers",
-      "api": "REST JSON",
-      "layers": [
-        6,
         7
       ],
       "fragments": 0
@@ -1068,45 +980,12 @@
       ],
       "fragments": 0
     },
-    "sam-assistance-listings": {
-      "label": "SAM.gov Federal Assistance Listings",
-      "api": "REST JSON",
-      "layers": [
-        1,
-        2
-      ],
-      "fragments": 0
-    },
-    "congress-bills": {
-      "label": "Congress.gov Recent Bills",
-      "api": "REST JSON",
-      "layers": [
-        1
-      ],
-      "fragments": 0
-    },
-    "regulations-gov-dockets": {
-      "label": "Regulations.gov Open Comment Periods",
-      "api": "REST JSON",
-      "layers": [
-        1
-      ],
-      "fragments": 0
-    },
     "usaspending-social-programs": {
       "label": "USASpending Social Program Spending",
       "api": "USASpending.gov",
       "layers": [
         1,
         3
-      ],
-      "fragments": 0
-    },
-    "propublica-nonprofits": {
-      "label": "ProPublica Nonprofit Explorer",
-      "api": "REST JSON",
-      "layers": [
-        8
       ],
       "fragments": 0
     },
@@ -1127,33 +1006,6 @@
       ],
       "fragments": 0
     },
-    "tpl-park-access": {
-      "label": "Trust for Public Land ParkServe",
-      "api": "REST JSON",
-      "layers": [
-        8,
-        9
-      ],
-      "fragments": 0
-    },
-    "211-community-services": {
-      "label": "211 Community Services Directory",
-      "api": "REST JSON",
-      "layers": [
-        2,
-        8
-      ],
-      "fragments": 0
-    },
-    "fcc-broadband": {
-      "label": "FCC Broadband Deployment",
-      "api": "REST JSON",
-      "layers": [
-        2,
-        8
-      ],
-      "fragments": 0
-    },
     "election-data": {
       "label": "County-Level Election Data",
       "api": "REST JSON",
@@ -1170,38 +1022,11 @@
       ],
       "fragments": 0
     },
-    "fbi-crime-stats": {
-      "label": "FBI Uniform Crime Report",
-      "api": "REST JSON",
-      "layers": [
-        8
-      ],
-      "fragments": 0
-    },
-    "va-facilities": {
-      "label": "VA Health Care Facilities",
-      "api": "REST JSON",
-      "layers": [
-        1,
-        4,
-        8
-      ],
-      "fragments": 0
-    },
     "propublica-990-search": {
       "label": "ProPublica Nonprofit 990 Search",
       "api": "REST JSON",
       "layers": [
         3,
-        8
-      ],
-      "fragments": 0
-    },
-    "irs-eo-pub78": {
-      "label": "IRS Tax Exempt Organization Search",
-      "api": "REST JSON",
-      "layers": [
-        1,
         8
       ],
       "fragments": 0
@@ -1270,24 +1095,6 @@
       ],
       "fragments": 0
     },
-    "sam-gov-entity-search": {
-      "label": "SAM.gov Nonprofit Entity Registration",
-      "api": "REST JSON",
-      "layers": [
-        1,
-        2,
-        8
-      ],
-      "fragments": 0
-    },
-    "charitynavigator-api": {
-      "label": "Charity Navigator Ratings & Financials",
-      "api": "REST JSON",
-      "layers": [
-        8
-      ],
-      "fragments": 0
-    },
     "nces-private-schools": {
       "label": "NCES Private School Universe (PSS)",
       "api": "REST JSON",
@@ -1317,7 +1124,7 @@
     "17031": {
       "name": "Cook County (Chicago), IL",
       "fragments": 13,
-      "coverage_pct": 9
+      "coverage_pct": 11
     },
     "21013": {
       "name": "Bell County, KY",
@@ -1327,7 +1134,7 @@
     "24510": {
       "name": "Baltimore City, MD",
       "fragments": 13,
-      "coverage_pct": 9
+      "coverage_pct": 11
     },
     "26163": {
       "name": "Wayne County (Detroit), MI",
@@ -1347,12 +1154,12 @@
     "34017": {
       "name": "Hudson County, NJ",
       "fragments": 3,
-      "coverage_pct": 2
+      "coverage_pct": 3
     },
     "34023": {
       "name": "Middlesex County, NJ",
       "fragments": 3,
-      "coverage_pct": 2
+      "coverage_pct": 3
     },
     "36005": {
       "name": "Bronx County, NY",
@@ -1367,7 +1174,7 @@
     "36061": {
       "name": "New York County (Manhattan), NY",
       "fragments": 13,
-      "coverage_pct": 9
+      "coverage_pct": 11
     },
     "36081": {
       "name": "Queens County, NY",
@@ -1402,7 +1209,7 @@
     "42101": {
       "name": "Philadelphia, PA",
       "fragments": 13,
-      "coverage_pct": 9
+      "coverage_pct": 11
     },
     "48113": {
       "name": "Dallas County, TX",
@@ -1427,7 +1234,7 @@
     "06037": {
       "name": "Los Angeles County, CA",
       "fragments": 13,
-      "coverage_pct": 9
+      "coverage_pct": 11
     },
     "04013": {
       "name": "Maricopa County (Phoenix), AZ",

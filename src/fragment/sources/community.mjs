@@ -1,11 +1,9 @@
 /**
  * FRAGMENT — Community Data Sources (Layer 8: Community)
  *
- * IRS 990: Nonprofit organizations
- * Census population estimates
- * Voting/elections
- * Parks & recreation
- * Community development
+ * Census population estimates & poverty
+ * Harvard Dataverse election data
+ * AmeriCorps national service
  *
  * The community layer — connections, assets, social capital.
  */
@@ -14,39 +12,6 @@ import { restJSON, sodaAPI } from './factories.mjs'
 import { stateAbbrev, stateFips, countyFips } from '../lib.mjs'
 
 export default [
-
-  // ══════════════════════════════════════════════════════════════════
-  // IRS 990 — Nonprofit Organizations (via ProPublica)
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'propublica-nonprofits',
-    label: 'ProPublica Nonprofit Explorer',
-    layers: [8],
-    url: (fips) => {
-      const state = stateAbbrev(fips).toLowerCase()
-      return `https://projects.propublica.org/nonprofits/api/v2/search.json?state[id]=${state}&c_code[id]=3&per_page=100`
-    },
-    transform: (data) => {
-      const orgs = data?.organizations || []
-      const totalRevenue = orgs.reduce((s, o) => s + (o.income_amount || 0), 0)
-      const totalAssets = orgs.reduce((s, o) => s + (o.asset_amount || 0), 0)
-      return {
-        nonprofits: orgs.length,
-        total_count: data?.total_results || orgs.length,
-        total_revenue: totalRevenue,
-        total_assets: totalAssets,
-        ntee_codes: [...new Set(orgs.map(o => o.ntee_code).filter(Boolean))].slice(0, 20),
-        sample: orgs.slice(0, 15).map(o => ({
-          name: o.name,
-          city: o.city,
-          ntee_code: o.ntee_code,
-          income: o.income_amount,
-          assets: o.asset_amount,
-        })),
-      }
-    },
-  }),
 
   // ══════════════════════════════════════════════════════════════════
   // Census Population Estimates (Vintage 2023)
@@ -103,64 +68,6 @@ export default [
   }),
 
   // ══════════════════════════════════════════════════════════════════
-  // Trust for Public Land — Park Access
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'tpl-park-access',
-    label: 'Trust for Public Land ParkServe',
-    layers: [8, 9],
-    url: () => 'https://parkserve.tpl.org/api/',
-    transform: () => {
-      return {
-        note: 'TPL ParkServe — interactive map, limited REST API',
-        available: false,
-        needs_scraping: true,
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // 211 — Community Services Referral Data
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: '211-community-services',
-    label: '211 Community Services Directory',
-    layers: [2, 8],
-    url: () => 'https://www.211.org/',
-    transform: () => {
-      return {
-        note: '211 data — available through individual state/county 211 portals',
-        available: false,
-        needs_partnerships: true,
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // FCC Broadband Data — Fixed broadband deployment
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'fcc-broadband',
-    label: 'FCC Broadband Deployment',
-    layers: [2, 8],
-    url: (fips) => {
-      const state = stateFips(fips)
-      const county = countyFips(fips)
-      return `https://broadbandmap.fcc.gov/api/public/map/listCountyFiber?county_fips=${fips}&speed_download=25&speed_upload=3`
-    },
-    transform: (data) => {
-      if (data?.error) return { note: 'FCC Broadband Map API — may need different endpoint' }
-      return {
-        ...data,
-        note: 'FCC fixed broadband deployment data',
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
   // Election Data — MIT Election Lab (via Harvard Dataverse)
   // ══════════════════════════════════════════════════════════════════
 
@@ -203,58 +110,6 @@ export default [
           name: p.sponsor_name || p.program_name,
           city: p.city,
           program_type: p.program_type,
-        })),
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // Crime — FBI UCR (needs free API key)
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'fbi-crime-stats',
-    label: 'FBI Uniform Crime Report',
-    layers: [8],
-    url: (fips) => {
-      const state = stateAbbrev(fips).toLowerCase()
-      return `https://api.usa.gov/crime/fbi/cde/arrest/state/${state}/all?from=2020&to=2022&API_KEY=DEMO_KEY`
-    },
-    transform: (data) => {
-      if (data?.error || data?.message) return { note: 'FBI UCR API requires registered key from api.usa.gov', needs_key: true }
-      const entries = data?.data || data || []
-      if (!Array.isArray(entries)) return { note: 'FBI UCR API', data }
-      return {
-        years_covered: [...new Set(entries.map(e => e.data_year))],
-        total_arrests: entries.reduce((s, e) => s + (e.value || 0), 0),
-        note: 'State-level arrest data',
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // VA — Veterans Affairs Facilities
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'va-facilities',
-    label: 'VA Health Care Facilities',
-    layers: [1, 4, 8],
-    url: (fips) => {
-      const state = stateAbbrev(fips)
-      return `https://api.va.gov/facilities/v1?state=${state}&type=health&page=1&per_page=100`
-    },
-    headers: { apikey: 'DEMO_KEY' },
-    transform: (data) => {
-      const facilities = data?.data || []
-      if (!Array.isArray(facilities)) return { note: 'VA API requires key', needs_key: true }
-      return {
-        va_facilities: facilities.length,
-        types: [...new Set(facilities.map(f => f.attributes?.facilityType).filter(Boolean))],
-        sample: facilities.slice(0, 10).map(f => ({
-          name: f.attributes?.name,
-          city: f.attributes?.address?.physical?.city,
-          type: f.attributes?.facilityType,
         })),
       }
     },

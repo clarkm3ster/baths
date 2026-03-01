@@ -1,12 +1,12 @@
 /**
  * FRAGMENT — Economic Data Sources (Layer 6: Economic)
  *
- * BLS: QCEW, LAUS county-level, OES, CES, CPI
- * Census: County Business Patterns, Annual Business Survey
- * SBA: Small business loans
+ * BLS: LAUS county-level, CPI
+ * Census: County Business Patterns
  * FDIC: Bank branch data
  * USASpending: Federal spending by county
  * Treasury: Fiscal data
+ * SBA: Small business loans
  *
  * The economic layer — employment, wages, business, financial access.
  */
@@ -55,7 +55,7 @@ export default [
       const latest = s.data[0]
       return {
         series_id: s.seriesID,
-        employed: parseInt(latest.value) * 1000, // BLS reports in thousands
+        employed: parseInt(latest.value) * 1000,
         period: `${latest.year}-${latest.period}`,
       }
     },
@@ -175,7 +175,6 @@ export default [
     layers: [3, 6],
     url: (fips) => {
       const state = stateAbbrev(fips)
-      const county = countyFips(fips)
       return `https://banks.data.fdic.gov/api/locations?filters=STALP:${state} AND STCNTY:${fips}&limit=500&fields=UNINUMBR,NAMEFULL,ADDRESBR,CITYBR,STALPBR,ZIPBR,BRSERTYP&sort_by=UNINUMBR&sort_order=ASC`
     },
     transform: (data) => {
@@ -185,7 +184,6 @@ export default [
         bank_branches: results.length,
         unique_institutions: institutions.size,
         branch_types: [...new Set(results.map(r => r.data?.BRSERTYP).filter(Boolean))],
-        // Banking desert indicator: <5 branches per 10,000 people
         note: results.length < 5 ? 'POTENTIAL BANKING DESERT' : null,
       }
     },
@@ -252,7 +250,7 @@ export default [
       filters: {
         place_of_performance_locations: [{ country: 'USA', county: fips }],
         time_period: [{ start_date: '2023-10-01', end_date: '2024-09-30' }],
-        award_type_codes: ['02', '03', '04', '05'], // Grants
+        award_type_codes: ['02', '03', '04', '05'],
       },
       fields: ['Award ID', 'Recipient Name', 'Award Amount', 'Awarding Agency'],
       limit: 50,
@@ -337,27 +335,6 @@ export default [
         total_approved: totalApproved,
         avg_loan: rows.length > 0 ? Math.round(totalApproved / rows.length) : null,
         business_types: [...new Set(rows.map(r => r.businesstype).filter(Boolean))],
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // IRS Statistics of Income (SOI) — County-level tax data
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'irs-soi-county',
-    label: 'IRS Statistics of Income by County',
-    layers: [3, 6],
-    url: (fips) => {
-      const state = stateFips(fips)
-      return `https://www.irs.gov/statistics/soi-tax-stats-county-data`
-    },
-    transform: () => {
-      return {
-        note: 'IRS SOI county data — available as bulk download, no REST API',
-        available: false,
-        needs_bulk_download: true,
       }
     },
   }),

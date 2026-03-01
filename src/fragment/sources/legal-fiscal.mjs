@@ -1,18 +1,15 @@
 /**
  * FRAGMENT — Legal & Fiscal Data Sources (Layer 1: Legal, Layer 2: Systems, Layer 3: Fiscal)
  *
- * Federal Register: Proposed and final rules
- * eCFR: Code of Federal Regulations
- * Congress.gov: Legislation
- * Regulations.gov: Public comments on rules
- * SAM.gov: Federal assistance listings
- * USASpending: Federal obligations
+ * Federal Register: Proposed and final rules (free, no key)
+ * eCFR: Code of Federal Regulations (free, no key)
+ * USASpending: Federal obligations (free, no key)
  *
  * The legal layer is the foundation. Every right, entitlement, pathway.
  */
 
-import { restJSON, sodaAPI, usaSpend } from './factories.mjs'
-import { stateAbbrev, stateFips } from '../lib.mjs'
+import { restJSON, usaSpend } from './factories.mjs'
+import { stateAbbrev } from '../lib.mjs'
 
 export default [
 
@@ -100,7 +97,6 @@ export default [
     },
   }),
 
-  // Social programs regulations (Title 42 — Public Health, Title 45 — HHS)
   restJSON({
     id: 'ecfr-title-42',
     label: 'eCFR Title 42 (Public Health & Welfare)',
@@ -120,7 +116,6 @@ export default [
     },
   }),
 
-  // Housing regulations (Title 24 — HUD)
   restJSON({
     id: 'ecfr-title-24',
     label: 'eCFR Title 24 (Housing & Urban Development)',
@@ -135,78 +130,6 @@ export default [
           identifier: c.identifier,
           label: c.label,
           type: c.type,
-        })),
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // SAM.gov — Federal Assistance Listings (formerly CFDA)
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'sam-assistance-listings',
-    label: 'SAM.gov Federal Assistance Listings',
-    layers: [1, 2],
-    url: () => 'https://api.sam.gov/opportunities/v1/search?limit=100&api_key=DEMO_KEY&postedFrom=01/01/2024&postedTo=12/31/2024',
-    transform: (data) => {
-      // SAM.gov API may need registered key
-      if (data?.error) return { note: 'SAM.gov API requires registered API key', needs_key: true }
-      const results = data?.opportunitiesData || data?.results || []
-      return {
-        opportunities: results.length,
-        note: 'Federal assistance opportunities',
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // Congress.gov — Legislation via API
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'congress-bills',
-    label: 'Congress.gov Recent Bills',
-    layers: [1],
-    url: () => {
-      const congress = 118 // Current congress
-      return `https://api.congress.gov/v3/bill/${congress}?format=json&limit=50&sort=updateDate+desc&api_key=DEMO_KEY`
-    },
-    transform: (data) => {
-      const bills = data?.bills || []
-      return {
-        recent_bills: bills.length,
-        bills: bills.slice(0, 20).map(b => ({
-          number: b.number,
-          title: b.title?.slice(0, 200),
-          type: b.type,
-          introduced_date: b.introducedDate,
-          latest_action: b.latestAction?.text?.slice(0, 150),
-          latest_action_date: b.latestAction?.actionDate,
-        })),
-      }
-    },
-  }),
-
-  // ══════════════════════════════════════════════════════════════════
-  // Regulations.gov — Public Comments on Rulemaking
-  // ══════════════════════════════════════════════════════════════════
-
-  restJSON({
-    id: 'regulations-gov-dockets',
-    label: 'Regulations.gov Open Comment Periods',
-    layers: [1],
-    url: () => 'https://api.regulations.gov/v4/documents?filter[commentEndDate][ge]=2024-01-01&page[size]=50&api_key=DEMO_KEY',
-    transform: (data) => {
-      if (data?.errors) return { note: 'Regulations.gov API requires registered key', needs_key: true }
-      const docs = data?.data || []
-      return {
-        open_comment_periods: docs.length,
-        documents: docs.slice(0, 15).map(d => ({
-          title: d.attributes?.title?.slice(0, 200),
-          agency: d.attributes?.agencyId,
-          comment_end: d.attributes?.commentEndDate,
-          document_type: d.attributes?.documentType,
         })),
       }
     },
