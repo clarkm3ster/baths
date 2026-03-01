@@ -391,6 +391,44 @@ def get_systems(domain: Optional[str] = None):
     }
 
 
+@app.get("/api/data/performance")
+def get_performance_indicators(
+    agency: Optional[str] = None,
+    dome_dimension: Optional[str] = None,
+    citizen_only: bool = False,
+    source_type: Optional[str] = None,
+    fiscal_year: Optional[int] = None,
+    limit: int = 500,
+):
+    """Get federal performance indicators from APP/APR/CAP/APG.
+
+    Filters:
+      agency       — agency code (HHS, HUD, ED, DOL, SSA, VA, etc.)
+      dome_dimension — dome domain (health, housing, education, etc.)
+      citizen_only — if true, only return citizen-facing indicators
+      source_type  — cap_goal, apg, app_goal, apr_result
+      fiscal_year  — default all years
+    """
+    from data.store import get_store
+    store = get_store()
+    indicators = store.get_performance_indicators(
+        agency_code=agency,
+        dome_dimension=dome_dimension,
+        citizen_facing_only=citizen_only,
+        source_type=source_type,
+        fiscal_year=fiscal_year,
+        limit=limit,
+    )
+    total = store.performance_indicator_count()
+    citizen_count = store.performance_indicator_count(citizen_facing_only=True)
+    return {
+        "indicators": indicators,
+        "count": len(indicators),
+        "total_in_store": total,
+        "citizen_facing_count": citizen_count,
+    }
+
+
 @app.get("/api/data/parcels")
 def get_parcels(neighborhood: Optional[str] = None, vacant: Optional[bool] = None, limit: int = 50):
     """Get Philadelphia parcels from the data engine."""

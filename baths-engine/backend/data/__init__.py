@@ -27,6 +27,10 @@ from .enrichment import EnrichmentEngine
 from .scraper import ScrapeScheduler
 from .coordination import COORDINATION_MODELS, recommend_models
 from .flourishing import FRAMEWORKS, FLOURISHING_INDICATORS, get_flourishing_score
+from .performance import (
+    seed_performance_indicators, PerformanceGovScraper, AgencyAPRScraper,
+    is_citizen_facing, SEED_PERFORMANCE_INDICATORS,
+)
 
 logger = logging.getLogger("baths.data")
 
@@ -47,6 +51,7 @@ def initialize(store: DataStore | None = None):
     seed_costs(store)
     seed_systems(store)
     seed_parcels(store)
+    seed_performance_indicators(store)
 
     logger.info("Running initial enrichment...")
     enricher = EnrichmentEngine(store)
@@ -73,6 +78,10 @@ def get_scheduler() -> ScrapeScheduler:
         _scheduler.register(USASpendingScraper(store), timedelta(days=7))
         _scheduler.register(SystemsScraper(store), timedelta(days=7))
         _scheduler.register(PhillyParcelScraper(store), timedelta(hours=6))
+
+        # Performance scrapers — weekly (data updates quarterly at most)
+        _scheduler.register(PerformanceGovScraper(store), timedelta(days=7))
+        _scheduler.register(AgencyAPRScraper(store), timedelta(days=14))
 
     return _scheduler
 

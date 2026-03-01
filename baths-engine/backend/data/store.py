@@ -5,13 +5,14 @@ Every scrape writes here. Data only grows. The games read from the richest
 available dataset: scraped data when it exists, seed data as floor.
 
 Tables:
-  provisions     — legal provisions from eCFR / Federal Register
-  cost_points    — cost data from CMS, HUD, Vera, HCUP, published research
-  gov_systems    — federal/state/local data systems
-  system_links   — connections (and gaps) between systems
-  parcels        — Philadelphia parcel records
-  enrichments    — cross-references discovered by enrichment engine
-  scrape_runs    — log of every scrape (what, when, how many records)
+  provisions              — legal provisions from eCFR / Federal Register
+  cost_points             — cost data from CMS, HUD, Vera, HCUP, published research
+  gov_systems             — federal/state/local data systems
+  system_links            — connections (and gaps) between systems
+  parcels                 — Philadelphia parcel records
+  performance_indicators  — federal performance goals/indicators (APP/APR/CAP/APG)
+  enrichments             — cross-references discovered by enrichment engine
+  scrape_runs             — log of every scrape (what, when, how many records)
 """
 
 import sqlite3
@@ -105,6 +106,34 @@ CREATE TABLE IF NOT EXISTS parcels (
     scraped_at      TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS performance_indicators (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    indicator_id    TEXT NOT NULL,       -- stable ID: {agency_code}-{goal_slug}-{indicator_slug}
+    agency_code     TEXT NOT NULL,       -- e.g. HHS, HUD, ED, DOL, SSA, VA, USDA
+    agency_name     TEXT NOT NULL,
+    fiscal_year     INTEGER NOT NULL,    -- 2026
+    source_type     TEXT NOT NULL,       -- cap_goal, apg, app_goal, apr_result
+    goal_name       TEXT NOT NULL,       -- the performance goal text
+    goal_id         TEXT,                -- agency's own goal identifier if available
+    strategic_objective TEXT,            -- parent strategic objective
+    indicator_name  TEXT NOT NULL,       -- the measurable indicator text
+    indicator_unit  TEXT,                -- %, count, days, $, rate per 1000, etc.
+    target_value    REAL,                -- FY2026 target
+    actual_value    REAL,                -- most recent actual (FY2024 or FY2025)
+    actual_year     INTEGER,             -- year of actual_value
+    baseline_value  REAL,
+    baseline_year   INTEGER,
+    trend           TEXT,                -- improving, declining, flat, new
+    citizen_facing  INTEGER NOT NULL DEFAULT 0,  -- 1 = passes citizen-metric filter
+    beneficiary_population TEXT,         -- people, households, patients, students, veterans, etc.
+    dome_dimension  TEXT,                -- health, housing, economics, education, etc.
+    data_source     TEXT,                -- where the indicator data comes from
+    publication_url TEXT,                -- link to the APP/APR/Performance.gov page
+    tags            TEXT,                -- JSON array
+    scraped_at      TEXT NOT NULL,
+    UNIQUE(indicator_id, fiscal_year)
+);
+
 CREATE TABLE IF NOT EXISTS enrichments (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
     enrichment_type TEXT NOT NULL,   -- cross_ref, conflict, opportunity, pattern, gap
@@ -140,6 +169,11 @@ CREATE INDEX IF NOT EXISTS idx_parcels_zoning ON parcels(zoning);
 CREATE INDEX IF NOT EXISTS idx_parcels_vacant ON parcels(vacant);
 CREATE INDEX IF NOT EXISTS idx_parcels_neighborhood ON parcels(neighborhood);
 CREATE INDEX IF NOT EXISTS idx_enrichments_type ON enrichments(enrichment_type);
+CREATE INDEX IF NOT EXISTS idx_perf_agency ON performance_indicators(agency_code);
+CREATE INDEX IF NOT EXISTS idx_perf_fy ON performance_indicators(fiscal_year);
+CREATE INDEX IF NOT EXISTS idx_perf_citizen ON performance_indicators(citizen_facing);
+CREATE INDEX IF NOT EXISTS idx_perf_dome ON performance_indicators(dome_dimension);
+CREATE INDEX IF NOT EXISTS idx_perf_source ON performance_indicators(source_type);
 """
 
 
@@ -368,6 +402,82 @@ class DataStore:
     def parcel_count(self) -> int:
         return self._conn.execute("SELECT COUNT(*) FROM parcels").fetchone()[0]
 
+    # ── Performance Indicators ───────────────────────────────────────────
+
+    def upsert_performance_indicator(self, **kwargs) -> int:
+        kwargs.setdefault("scraped_at", _now())
+        kwargs.setdefault("citizen_facing", 0)
+        if isinstance(kwargs.get("tags"), list):
+            kwargs["tags"] = json.dumps(kwargs["tags"])
+        try:
+            cur = self._conn.execute("""
+                INSERT INTO performance_indicators (
+                    indicator_id, agency_code, agency_name, fiscal_year, source_type,
+                    goal_name, goal_id, strategic_objective, indicator_name,
+                    indicator_unit, target_value, actual_value, actual_year,
+                    baseline_value, baseline_year, trend, citizen_facing,
+                    beneficiary_population, dome_dimension, data_source,
+                    publication_url, tags, scraped_at
+                ) VALUES (
+                    :indicator_id, :agency_code, :agency_name, :fiscal_year, :source_type,
+                    :goal_name, :goal_id, :strategic_objective, :indicator_name,
+                    :indicator_unit, :target_value, :actual_value, :actual_year,
+                    :baseline_value, :baseline_year, :trend, :citizen_facing,
+                    :beneficiary_population, :dome_dimension, :data_source,
+                    :publication_url, :tags, :scraped_at
+                )
+                ON CONFLICT(indicator_id, fiscal_year) DO UPDATE SET
+                    goal_name=excluded.goal_name, indicator_name=excluded.indicator_name,
+                    target_value=excluded.target_value, actual_value=excluded.actual_value,
+                    actual_year=excluded.actual_year, trend=excluded.trend,
+                    citizen_facing=excluded.citizen_facing,
+                    beneficiary_population=excluded.beneficiary_population,
+                    dome_dimension=excluded.dome_dimension,
+                    publication_url=excluded.publication_url,
+                    tags=excluded.tags, scraped_at=excluded.scraped_at
+            """, kwargs)
+            self._conn.commit()
+            return cur.lastrowid
+        except Exception:
+            self._conn.rollback()
+            raise
+
+    def get_performance_indicators(self, agency_code: str | None = None,
+                                    dome_dimension: str | None = None,
+                                    citizen_facing_only: bool = False,
+                                    source_type: str | None = None,
+                                    fiscal_year: int | None = None,
+                                    limit: int = 500) -> list[dict]:
+        sql = "SELECT * FROM performance_indicators WHERE 1=1"
+        params = []
+        if agency_code:
+            sql += " AND agency_code = ?"
+            params.append(agency_code)
+        if dome_dimension:
+            sql += " AND dome_dimension = ?"
+            params.append(dome_dimension)
+        if citizen_facing_only:
+            sql += " AND citizen_facing = 1"
+        if source_type:
+            sql += " AND source_type = ?"
+            params.append(source_type)
+        if fiscal_year:
+            sql += " AND fiscal_year = ?"
+            params.append(fiscal_year)
+        sql += " ORDER BY agency_code, goal_name, indicator_name LIMIT ?"
+        params.append(limit)
+        rows = self._conn.execute(sql, params).fetchall()
+        return [dict(r) for r in rows]
+
+    def performance_indicator_count(self, citizen_facing_only: bool = False) -> int:
+        if citizen_facing_only:
+            return self._conn.execute(
+                "SELECT COUNT(*) FROM performance_indicators WHERE citizen_facing=1"
+            ).fetchone()[0]
+        return self._conn.execute(
+            "SELECT COUNT(*) FROM performance_indicators"
+        ).fetchone()[0]
+
     # ── Enrichments ─────────────────────────────────────────────────────
 
     def add_enrichment(self, **kwargs) -> int:
@@ -445,6 +555,8 @@ class DataStore:
             "gov_systems": self.system_count(),
             "system_links": self.link_count(),
             "parcels": self.parcel_count(),
+            "performance_indicators": self.performance_indicator_count(),
+            "citizen_facing_indicators": self.performance_indicator_count(citizen_facing_only=True),
             "enrichments": self.enrichment_count(),
             "total_scrape_runs": self._conn.execute(
                 "SELECT COUNT(*) FROM scrape_runs"
