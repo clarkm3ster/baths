@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "21013",
+  "county_name": "Bell County, KY",
+  "scraped_at": "2026-02-25T08:43:46.004Z",
+  "data": {
+    "pop_16_plus": 19663,
+    "in_labor_force": 8047,
+    "civilian_employed": 7246,
+    "civilian_unemployed": 801,
+    "not_in_labor_force": 11616,
+    "occupation_mgmt": 900,
+    "occupation_service": 490,
+    "occupation_production": 565
+  }
+}

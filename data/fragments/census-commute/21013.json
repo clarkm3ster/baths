@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "21013",
+  "county_name": "Bell County, KY",
+  "scraped_at": "2026-02-24T05:20:26.724Z",
+  "data": {
+    "workers_total": 6848,
+    "drove_alone": 5126,
+    "public_transit": 3,
+    "walked": 296,
+    "worked_from_home": 291,
+    "mean_travel_time": 160315,
+    "no_vehicle": 97,
+    "one_vehicle": 1218
+  }
+}

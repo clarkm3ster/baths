@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "36047",
+  "county_name": "Kings County (Brooklyn), NY",
+  "scraped_at": "2026-02-25T05:21:50.426Z",
+  "data": {
+    "pop_16_plus": 2135345,
+    "in_labor_force": 1360477,
+    "civilian_employed": 1260636,
+    "civilian_unemployed": 98832,
+    "not_in_labor_force": 774868,
+    "occupation_mgmt": 269080,
+    "occupation_service": 107942,
+    "occupation_production": 67014
+  }
+}

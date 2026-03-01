@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "53033",
+  "county_name": "King County (Seattle), WA",
+  "scraped_at": "2026-02-24T17:03:47.828Z",
+  "data": {
+    "total_households_internet": 916270,
+    "with_internet": 862849,
+    "broadband": 861743,
+    "no_internet": 35969,
+    "has_computer": 891895,
+    "has_smartphone_only": 857723,
+    "no_computer": 24375
+  }
+}

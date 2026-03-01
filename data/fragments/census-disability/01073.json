@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "01073",
+  "county_name": "Jefferson County (Birmingham), AL",
+  "scraped_at": "2026-02-23T05:24:09.885Z",
+  "data": {
+    "total_disability_pop": 665054,
+    "male_with_disability": 60,
+    "female_with_disability": 205,
+    "disability_under5": 21160,
+    "disability_5_17": 56242,
+    "disability_18_34": 75405,
+    "disability_65_74": 29357,
+    "disability_75_plus": 15501
+  }
+}

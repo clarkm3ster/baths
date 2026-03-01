@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "12086",
+  "county_name": "Miami-Dade County, FL",
+  "scraped_at": "2026-02-24T05:20:23.207Z",
+  "data": {
+    "workers_total": 1319578,
+    "drove_alone": 958955,
+    "public_transit": 44468,
+    "walked": 25731,
+    "worked_from_home": 137307,
+    "mean_travel_time": 37382820,
+    "no_vehicle": 54344,
+    "one_vehicle": 329834
+  }
+}

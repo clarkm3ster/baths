@@ -1,0 +1,18 @@
+{
+  "source": "bls-unemployment",
+  "source_label": "BLS State Unemployment",
+  "api": "BLS Public Data API",
+  "fips": "21013",
+  "county_name": "Bell County, KY",
+  "scraped_at": "2026-02-25T20:32:38.845Z",
+  "data": {
+    "state_fips": "21",
+    "series_id": "LASST210000000000003",
+    "latest_rate": 4.5,
+    "latest_period": "2025-M12",
+    "year_ago_rate": 4.5,
+    "year_ago_period": "2025-M12",
+    "change": 0,
+    "note": "State-level rate (county not available in public BLS tier)"
+  }
+}

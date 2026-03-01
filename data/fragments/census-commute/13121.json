@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "13121",
+  "county_name": "Fulton County (Atlanta), GA",
+  "scraped_at": "2026-02-24T05:20:24.026Z",
+  "data": {
+    "workers_total": 551789,
+    "drove_alone": 339639,
+    "public_transit": 28952,
+    "walked": 13409,
+    "worked_from_home": 124428,
+    "mean_travel_time": 12181475,
+    "no_vehicle": 30871,
+    "one_vehicle": 168032
+  }
+}

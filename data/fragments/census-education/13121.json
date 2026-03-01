@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "13121",
+  "county_name": "Fulton County (Atlanta), GA",
+  "scraped_at": "2026-02-23T16:53:55.250Z",
+  "data": {
+    "edu_pop_25plus": 730654,
+    "less_than_9th": 7897,
+    "high_school_diploma": 102316,
+    "some_college": 28221,
+    "bachelors": 242267,
+    "masters": 125451,
+    "doctorate": 17457,
+    "school_enrollment_total": 1027635,
+    "school_enrollment_public": 132628
+  }
+}

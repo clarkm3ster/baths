@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "36047",
+  "county_name": "Kings County (Brooklyn), NY",
+  "scraped_at": "2026-02-22T20:23:40.682Z",
+  "data": {
+    "total_disability_pop": 2665912,
+    "male_with_disability": 132,
+    "female_with_disability": 235,
+    "disability_under5": 93595,
+    "disability_5_17": 215448,
+    "disability_18_34": 335409,
+    "disability_65_74": 97816,
+    "disability_75_plus": 58583
+  }
+}

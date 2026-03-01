@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "42045",
+  "county_name": "Delaware County, PA",
+  "scraped_at": "2026-02-22T20:23:37.389Z",
+  "data": {
+    "total_disability_pop": 568324,
+    "male_with_disability": 217,
+    "female_with_disability": 65,
+    "disability_under5": 16952,
+    "disability_5_17": 47444,
+    "disability_18_34": 63911,
+    "disability_65_74": 25648,
+    "disability_75_plus": 14705
+  }
+}

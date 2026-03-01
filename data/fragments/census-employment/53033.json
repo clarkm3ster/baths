@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "53033",
+  "county_name": "King County (Seattle), WA",
+  "scraped_at": "2026-02-25T08:43:44.124Z",
+  "data": {
+    "pop_16_plus": 1856783,
+    "in_labor_force": 1299319,
+    "civilian_employed": 1238729,
+    "civilian_unemployed": 58530,
+    "not_in_labor_force": 557464,
+    "occupation_mgmt": 381636,
+    "occupation_service": 72144,
+    "occupation_production": 59317
+  }
+}

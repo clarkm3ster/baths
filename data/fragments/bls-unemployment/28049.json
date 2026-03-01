@@ -1,0 +1,18 @@
+{
+  "source": "bls-unemployment",
+  "source_label": "BLS State Unemployment",
+  "api": "BLS Public Data API",
+  "fips": "28049",
+  "county_name": "Hinds County (Jackson), MS",
+  "scraped_at": "2026-02-26T01:51:32.739Z",
+  "data": {
+    "state_fips": "28",
+    "series_id": "LASST280000000000003",
+    "latest_rate": 3.7,
+    "latest_period": "2025-M12",
+    "year_ago_rate": 3.7,
+    "year_ago_period": "2025-M12",
+    "change": 0,
+    "note": "State-level rate (county not available in public BLS tier)"
+  }
+}

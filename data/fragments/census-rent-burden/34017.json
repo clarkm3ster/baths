@@ -1,0 +1,16 @@
+{
+  "source": "census-rent-burden",
+  "source_label": "Census Rent Burden",
+  "api": "Census ACS 5-year",
+  "fips": "34017",
+  "county_name": "Hudson County, NJ",
+  "scraped_at": "2026-02-22T20:23:21.547Z",
+  "data": {
+    "rent_total": 196523,
+    "rent_30_35_pct": 16743,
+    "rent_35_40_pct": 11424,
+    "rent_40_50_pct": 14444,
+    "rent_50_plus_pct": 43352,
+    "rent_not_computed": 6227
+  }
+}

@@ -137,16 +137,16 @@
       "synergy_boost": 11
     },
     "transportation": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 90,
+      "raw_score": 90,
       "max_score": 100,
       "note": null,
       "raw_score_before_synergy": 10,
       "synergy_boost": 0
     },
     "infrastructure": {
-      "score": 10,
-      "raw_score": 10,
+      "score": 90,
+      "raw_score": 90,
       "max_score": 100,
       "note": null,
       "raw_score_before_synergy": 10,
@@ -323,8 +323,7 @@
       "domain": "health",
       "type": "fragment",
       "missing": [
-        "census-health-insurance",
-        "census-disability"
+        "census-health-insurance"
       ]
     },
     {
@@ -332,7 +331,6 @@
       "type": "condition",
       "missing": [
         "uninsured_estimate",
-        "disability_rate",
         "medicaid_enrolled"
       ]
     },
@@ -340,44 +338,7 @@
       "domain": "housing",
       "type": "fragment",
       "missing": [
-        "census-rent-burden",
         "hud-fmr"
-      ]
-    },
-    {
-      "domain": "housing",
-      "type": "condition",
-      "missing": [
-        "rent_burdened_pct"
-      ]
-    },
-    {
-      "domain": "economics",
-      "type": "fragment",
-      "missing": [
-        "census-employment",
-        "bls-unemployment"
-      ]
-    },
-    {
-      "domain": "economics",
-      "type": "condition",
-      "missing": [
-        "unemployment_rate"
-      ]
-    },
-    {
-      "domain": "education",
-      "type": "fragment",
-      "missing": [
-        "census-education"
-      ]
-    },
-    {
-      "domain": "education",
-      "type": "condition",
-      "missing": [
-        "bachelors_plus_pct"
       ]
     },
     {
@@ -400,37 +361,6 @@
       "type": "condition",
       "missing": [
         "no conditions defined"
-      ]
-    },
-    {
-      "domain": "transportation",
-      "type": "fragment",
-      "missing": [
-        "census-commute"
-      ]
-    },
-    {
-      "domain": "transportation",
-      "type": "condition",
-      "missing": [
-        "public_transit_pct",
-        "no_vehicle_pct",
-        "work_from_home_pct"
-      ]
-    },
-    {
-      "domain": "infrastructure",
-      "type": "fragment",
-      "missing": [
-        "census-internet"
-      ]
-    },
-    {
-      "domain": "infrastructure",
-      "type": "condition",
-      "missing": [
-        "broadband_pct",
-        "no_internet_pct"
       ]
     },
     {
@@ -460,37 +390,33 @@
       "missing": [
         "no conditions defined"
       ]
-    },
-    {
-      "domain": "purpose",
-      "type": "fragment",
-      "missing": [
-        "census-education",
-        "census-employment"
-      ]
-    },
-    {
-      "domain": "purpose",
-      "type": "condition",
-      "missing": [
-        "bachelors_plus_pct",
-        "unemployment_rate"
-      ]
     }
   ],
-  "gap_count": 21,
+  "gap_count": 10,
   "conditions": {
     "median_rent": 1722,
     "median_home_value": 486900,
     "vacancy_rate": 7,
     "ownership_rate": 32.2,
+    "rent_burdened_pct": 43.7,
+    "severely_burdened_pct": 22.1,
     "median_household_income": 86854,
     "per_capita_income": 51277,
     "poverty_rate": 14.2,
     "gini_index": 0.4994,
     "snap_households": 39238,
     "total_population": 712029,
-    "median_age": 35.6
+    "median_age": 35.6,
+    "disability_rate": 0,
+    "bachelors_plus_pct": 43.8,
+    "public_transit_pct": 33.5,
+    "work_from_home_pct": 15.5,
+    "no_vehicle_pct": 25,
+    "broadband_pct": 90.2,
+    "no_internet_pct": 8.1,
+    "unemployment_rate": 5.8,
+    "state_unemployment_rate": 5.4,
+    "state_unemployment_period": "2025-M12"
   },
   "panels": {
     "health": {

@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "28049",
+  "county_name": "Hinds County (Jackson), MS",
+  "scraped_at": "2026-02-24T08:42:54.098Z",
+  "data": {
+    "workers_total": 96567,
+    "drove_alone": 76337,
+    "public_transit": 456,
+    "walked": 1111,
+    "worked_from_home": 6393,
+    "mean_travel_time": 2068250,
+    "no_vehicle": 2021,
+    "one_vehicle": 25331
+  }
+}

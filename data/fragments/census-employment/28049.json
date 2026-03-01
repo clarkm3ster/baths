@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "28049",
+  "county_name": "Hinds County (Jackson), MS",
+  "scraped_at": "2026-02-25T08:43:47.641Z",
+  "data": {
+    "pop_16_plus": 179343,
+    "in_labor_force": 107753,
+    "civilian_employed": 99007,
+    "civilian_unemployed": 8350,
+    "not_in_labor_force": 71590,
+    "occupation_mgmt": 13379,
+    "occupation_service": 8707,
+    "occupation_production": 6735
+  }
+}

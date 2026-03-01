@@ -23,9 +23,9 @@
   "census-rent-burden": {
     "label": "Census rent burden",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T16:26:10.943Z",
-    "total_scrapes": null,
-    "counties_covered": 26
+    "last_scraped": "2026-02-22T20:23:41.182Z",
+    "total_scrapes": 2,
+    "counties_covered": 28
   },
   "census-health-insurance": {
     "label": "Census health insurance",
@@ -35,32 +35,44 @@
   "census-disability": {
     "label": "Census disability",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-23T08:45:26.909Z",
+    "total_scrapes": 18,
+    "counties_covered": 28
   },
   "census-education": {
     "label": "Census education",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-23T20:41:33.962Z",
+    "total_scrapes": 20,
+    "counties_covered": 28
   },
   "census-commute": {
     "label": "Census commute",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-24T12:59:46.168Z",
+    "total_scrapes": 22,
+    "counties_covered": 28
   },
   "census-internet": {
     "label": "Census internet",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-25T01:55:41.195Z",
+    "total_scrapes": 17,
+    "counties_covered": 28
   },
   "census-employment": {
     "label": "Census employment",
     "api": "Census ACS 5-year",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-25T12:58:46.119Z",
+    "total_scrapes": 19,
+    "counties_covered": 28
   },
   "bls-unemployment": {
     "label": "BLS State Unemployment",
     "api": "BLS Public Data API",
-    "last_scraped": "2026-02-22T03:49:49.784Z"
+    "last_scraped": "2026-02-26T01:51:37.689Z",
+    "total_scrapes": 21,
+    "counties_covered": 28
   },
   "hud-fmr": {
     "label": "HUD Fair Market Rents",

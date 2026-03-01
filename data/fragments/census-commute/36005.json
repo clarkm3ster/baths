@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "36005",
+  "county_name": "Bronx County, NY",
+  "scraped_at": "2026-02-24T01:53:07.414Z",
+  "data": {
+    "workers_total": 564284,
+    "drove_alone": 133425,
+    "public_transit": 309995,
+    "walked": 41506,
+    "worked_from_home": 38454,
+    "mean_travel_time": 23456755,
+    "no_vehicle": 260680,
+    "one_vehicle": 193902
+  }
+}

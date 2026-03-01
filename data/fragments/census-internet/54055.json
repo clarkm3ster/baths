@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "54055",
+  "county_name": "Mercer County, WV",
+  "scraped_at": "2026-02-24T20:31:46.754Z",
+  "data": {
+    "total_households_internet": 24471,
+    "with_internet": 20057,
+    "broadband": 19989,
+    "no_internet": 3870,
+    "has_computer": 21577,
+    "has_smartphone_only": 19115,
+    "no_computer": 2894
+  }
+}

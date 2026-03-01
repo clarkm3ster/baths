@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "34013",
+  "county_name": "Essex County, NJ",
+  "scraped_at": "2026-02-23T08:45:22.131Z",
+  "data": {
+    "total_disability_pop": 842469,
+    "male_with_disability": 130,
+    "female_with_disability": 71,
+    "disability_under5": 27628,
+    "disability_5_17": 75225,
+    "disability_18_34": 94710,
+    "disability_65_74": 29577,
+    "disability_75_plus": 17593
+  }
+}

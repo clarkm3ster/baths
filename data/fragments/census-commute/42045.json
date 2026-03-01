@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "42045",
+  "county_name": "Delaware County, PA",
+  "scraped_at": "2026-02-23T20:41:33.463Z",
+  "data": {
+    "workers_total": 279844,
+    "drove_alone": 189850,
+    "public_transit": 20832,
+    "walked": 8443,
+    "worked_from_home": 36694,
+    "mean_travel_time": 6976370,
+    "no_vehicle": 12055,
+    "one_vehicle": 66274
+  }
+}

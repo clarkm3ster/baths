@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "34023",
+  "county_name": "Middlesex County, NJ",
+  "scraped_at": "2026-02-23T20:41:32.336Z",
+  "data": {
+    "edu_pop_25plus": 591318,
+    "less_than_9th": 10988,
+    "high_school_diploma": 125365,
+    "some_college": 28116,
+    "bachelors": 156153,
+    "masters": 85932,
+    "doctorate": 11532,
+    "school_enrollment_total": 832922,
+    "school_enrollment_public": 113601
+  }
+}

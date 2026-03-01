@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "36005",
+  "county_name": "Bronx County, NY",
+  "scraped_at": "2026-02-24T17:03:42.809Z",
+  "data": {
+    "total_households_internet": 525387,
+    "with_internet": 440171,
+    "broadband": 439414,
+    "no_internet": 70023,
+    "has_computer": 481514,
+    "has_smartphone_only": 455749,
+    "no_computer": 43873
+  }
+}

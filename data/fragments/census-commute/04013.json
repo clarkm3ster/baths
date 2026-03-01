@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "04013",
+  "county_name": "Maricopa County (Phoenix), AZ",
+  "scraped_at": "2026-02-24T05:20:21.305Z",
+  "data": {
+    "workers_total": 2146216,
+    "drove_alone": 1477649,
+    "public_transit": 29407,
+    "walked": 29607,
+    "worked_from_home": 348098,
+    "mean_travel_time": 46994485,
+    "no_vehicle": 52211,
+    "one_vehicle": 433557
+  }
+}

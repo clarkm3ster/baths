@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "04013",
+  "county_name": "Maricopa County (Phoenix), AZ",
+  "scraped_at": "2026-02-24T17:03:44.554Z",
+  "data": {
+    "total_households_internet": 1665560,
+    "with_internet": 1519993,
+    "broadband": 1517233,
+    "no_internet": 108893,
+    "has_computer": 1604645,
+    "has_smartphone_only": 1526439,
+    "no_computer": 60915
+  }
+}

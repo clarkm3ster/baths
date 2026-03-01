@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "36005",
+  "county_name": "Bronx County, NY",
+  "scraped_at": "2026-02-25T05:21:52.422Z",
+  "data": {
+    "pop_16_plus": 1126809,
+    "in_labor_force": 657904,
+    "civilian_employed": 583452,
+    "civilian_unemployed": 73599,
+    "not_in_labor_force": 468905,
+    "occupation_mgmt": 64692,
+    "occupation_service": 86106,
+    "occupation_production": 34962
+  }
+}

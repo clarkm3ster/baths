@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "26163",
+  "county_name": "Wayne County (Detroit), MI",
+  "scraped_at": "2026-02-23T20:41:28.683Z",
+  "data": {
+    "edu_pop_25plus": 1205390,
+    "less_than_9th": 22754,
+    "high_school_diploma": 297593,
+    "some_college": 87380,
+    "bachelors": 192328,
+    "masters": 96057,
+    "doctorate": 11594,
+    "school_enrollment_total": 1714842,
+    "school_enrollment_public": 210072
+  }
+}

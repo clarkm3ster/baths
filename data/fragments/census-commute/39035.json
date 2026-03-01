@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "39035",
+  "county_name": "Cuyahoga County (Cleveland), OH",
+  "scraped_at": "2026-02-24T08:42:56.959Z",
+  "data": {
+    "workers_total": 592913,
+    "drove_alone": 436968,
+    "public_transit": 20395,
+    "walked": 15941,
+    "worked_from_home": 68612,
+    "mean_travel_time": 12514405,
+    "no_vehicle": 27541,
+    "one_vehicle": 161011
+  }
+}

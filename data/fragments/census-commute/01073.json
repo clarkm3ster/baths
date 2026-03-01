@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "01073",
+  "county_name": "Jefferson County (Birmingham), AL",
+  "scraped_at": "2026-02-24T08:42:55.170Z",
+  "data": {
+    "workers_total": 306222,
+    "drove_alone": 244136,
+    "public_transit": 1988,
+    "walked": 4413,
+    "worked_from_home": 26440,
+    "mean_travel_time": 6836560,
+    "no_vehicle": 6785,
+    "one_vehicle": 65237
+  }
+}

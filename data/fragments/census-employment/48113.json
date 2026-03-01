@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "48113",
+  "county_name": "Dallas County, TX",
+  "scraped_at": "2026-02-25T05:21:54.869Z",
+  "data": {
+    "pop_16_plus": 2014287,
+    "in_labor_force": 1389724,
+    "civilian_employed": 1319521,
+    "civilian_unemployed": 68708,
+    "not_in_labor_force": 624563,
+    "occupation_mgmt": 247332,
+    "occupation_service": 88540,
+    "occupation_production": 143669
+  }
+}

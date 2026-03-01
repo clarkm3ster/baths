@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "21013",
+  "county_name": "Bell County, KY",
+  "scraped_at": "2026-02-23T05:24:07.509Z",
+  "data": {
+    "total_disability_pop": 23667,
+    "male_with_disability": 43,
+    "female_with_disability": 24,
+    "disability_under5": 736,
+    "disability_5_17": 2065,
+    "disability_18_34": 2534,
+    "disability_65_74": 1249,
+    "disability_75_plus": 675
+  }
+}

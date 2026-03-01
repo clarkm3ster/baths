@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "34013",
+  "county_name": "Essex County, NJ",
+  "scraped_at": "2026-02-25T12:58:41.436Z",
+  "data": {
+    "pop_16_plus": 674180,
+    "in_labor_force": 446417,
+    "civilian_employed": 408082,
+    "civilian_unemployed": 38058,
+    "not_in_labor_force": 227763,
+    "occupation_mgmt": 81447,
+    "occupation_service": 30360,
+    "occupation_production": 29763
+  }
+}

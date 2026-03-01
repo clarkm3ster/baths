@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "26163",
+  "county_name": "Wayne County (Detroit), MI",
+  "scraped_at": "2026-02-24T20:31:49.528Z",
+  "data": {
+    "total_households_internet": 688461,
+    "with_internet": 591068,
+    "broadband": 589824,
+    "no_internet": 76698,
+    "has_computer": 637469,
+    "has_smartphone_only": 594601,
+    "no_computer": 50992
+  }
+}

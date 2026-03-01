@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "36081",
+  "county_name": "Queens County, NY",
+  "scraped_at": "2026-02-25T05:21:51.435Z",
+  "data": {
+    "pop_16_plus": 1942919,
+    "in_labor_force": 1237191,
+    "civilian_employed": 1149568,
+    "civilian_unemployed": 86855,
+    "not_in_labor_force": 705728,
+    "occupation_mgmt": 201321,
+    "occupation_service": 116240,
+    "occupation_production": 91680
+  }
+}

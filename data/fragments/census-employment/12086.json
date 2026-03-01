@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "12086",
+  "county_name": "Miami-Dade County, FL",
+  "scraped_at": "2026-02-25T05:21:55.718Z",
+  "data": {
+    "pop_16_plus": 2211003,
+    "in_labor_force": 1410119,
+    "civilian_employed": 1343356,
+    "civilian_unemployed": 64439,
+    "not_in_labor_force": 800884,
+    "occupation_mgmt": 236206,
+    "occupation_service": 108528,
+    "occupation_production": 126695
+  }
+}

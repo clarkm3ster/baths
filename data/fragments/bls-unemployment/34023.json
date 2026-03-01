@@ -1,0 +1,18 @@
+{
+  "source": "bls-unemployment",
+  "source_label": "BLS State Unemployment",
+  "api": "BLS Public Data API",
+  "fips": "34023",
+  "county_name": "Middlesex County, NJ",
+  "scraped_at": "2026-02-26T01:51:37.189Z",
+  "data": {
+    "state_fips": "34",
+    "series_id": "LASST340000000000003",
+    "latest_rate": 5.4,
+    "latest_period": "2025-M12",
+    "year_ago_rate": 5.4,
+    "year_ago_period": "2025-M12",
+    "change": 0,
+    "note": "State-level rate (county not available in public BLS tier)"
+  }
+}

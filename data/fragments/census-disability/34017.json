@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "34017",
+  "county_name": "Hudson County, NJ",
+  "scraped_at": "2026-02-23T08:45:22.921Z",
+  "data": {
+    "total_disability_pop": 707403,
+    "male_with_disability": 38,
+    "female_with_disability": 63,
+    "disability_under5": 23894,
+    "disability_5_17": 49111,
+    "disability_18_34": 104324,
+    "disability_65_74": 22579,
+    "disability_75_plus": 13349
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "04013",
+  "county_name": "Maricopa County (Phoenix), AZ",
+  "scraped_at": "2026-02-23T12:58:05.764Z",
+  "data": {
+    "edu_pop_25plus": 2987215,
+    "less_than_9th": 52643,
+    "high_school_diploma": 552954,
+    "some_college": 219923,
+    "bachelors": 655112,
+    "masters": 282668,
+    "doctorate": 42482,
+    "school_enrollment_total": 4282249,
+    "school_enrollment_public": 539399
+  }
+}

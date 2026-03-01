@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "01073",
+  "county_name": "Jefferson County (Birmingham), AL",
+  "scraped_at": "2026-02-24T20:31:48.696Z",
+  "data": {
+    "total_households_internet": 265794,
+    "with_internet": 231395,
+    "broadband": 231144,
+    "no_internet": 27332,
+    "has_computer": 246442,
+    "has_smartphone_only": 233119,
+    "no_computer": 19352
+  }
+}

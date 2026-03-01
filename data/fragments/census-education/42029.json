@@ -1,0 +1,19 @@
+{
+  "source": "census-education",
+  "source_label": "Census Education",
+  "api": "Census ACS 5-year",
+  "fips": "42029",
+  "county_name": "Chester County, PA",
+  "scraped_at": "2026-02-23T12:58:01.331Z",
+  "data": {
+    "edu_pop_25plus": 367451,
+    "less_than_9th": 2520,
+    "high_school_diploma": 63466,
+    "some_college": 14772,
+    "bachelors": 120444,
+    "masters": 62297,
+    "doctorate": 11104,
+    "school_enrollment_total": 519702,
+    "school_enrollment_public": 65828
+  }
+}

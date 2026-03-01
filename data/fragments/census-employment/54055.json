@@ -1,0 +1,18 @@
+{
+  "source": "census-employment",
+  "source_label": "Census Employment",
+  "api": "Census ACS 5-year",
+  "fips": "54055",
+  "county_name": "Mercer County, WV",
+  "scraped_at": "2026-02-25T08:43:46.825Z",
+  "data": {
+    "pop_16_plus": 48586,
+    "in_labor_force": 24161,
+    "civilian_employed": 23119,
+    "civilian_unemployed": 1010,
+    "not_in_labor_force": 24425,
+    "occupation_mgmt": 3024,
+    "occupation_service": 1802,
+    "occupation_production": 2329
+  }
+}

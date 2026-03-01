@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "36081",
+  "county_name": "Queens County, NY",
+  "scraped_at": "2026-02-23T01:55:59.185Z",
+  "data": {
+    "total_disability_pop": 2347232,
+    "male_with_disability": 529,
+    "female_with_disability": 218,
+    "disability_under5": 70144,
+    "disability_5_17": 171118,
+    "disability_18_34": 273503,
+    "disability_65_74": 101209,
+    "disability_75_plus": 61364
+  }
+}

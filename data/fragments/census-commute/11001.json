@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "11001",
+  "county_name": "District of Columbia",
+  "scraped_at": "2026-02-24T05:20:25.907Z",
+  "data": {
+    "workers_total": 366965,
+    "drove_alone": 108961,
+    "public_transit": 90524,
+    "walked": 37673,
+    "worked_from_home": 91835,
+    "mean_travel_time": 8392940,
+    "no_vehicle": 93663,
+    "one_vehicle": 167706
+  }
+}

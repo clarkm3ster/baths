@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "48201",
+  "county_name": "Harris County (Houston), TX",
+  "scraped_at": "2026-02-23T01:56:00.929Z",
+  "data": {
+    "total_disability_pop": 4700447,
+    "male_with_disability": 997,
+    "female_with_disability": 875,
+    "disability_under5": 169281,
+    "disability_5_17": 461569,
+    "disability_18_34": 596126,
+    "disability_65_74": 152776,
+    "disability_75_plus": 76980
+  }
+}

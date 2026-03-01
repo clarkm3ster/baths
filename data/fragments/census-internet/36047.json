@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "36047",
+  "county_name": "Kings County (Brooklyn), NY",
+  "scraped_at": "2026-02-24T12:59:44.896Z",
+  "data": {
+    "total_households_internet": 997957,
+    "with_internet": 862210,
+    "broadband": 861121,
+    "no_internet": 116326,
+    "has_computer": 912966,
+    "has_smartphone_only": 863017,
+    "no_computer": 84991
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "53033",
+  "county_name": "King County (Seattle), WA",
+  "scraped_at": "2026-02-23T05:24:05.903Z",
+  "data": {
+    "total_disability_pop": 2240808,
+    "male_with_disability": 313,
+    "female_with_disability": 285,
+    "disability_under5": 62522,
+    "disability_5_17": 164976,
+    "disability_18_34": 307926,
+    "disability_65_74": 86265,
+    "disability_75_plus": 48533
+  }
+}

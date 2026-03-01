@@ -1,0 +1,18 @@
+{
+  "source": "census-disability",
+  "source_label": "Census Disability",
+  "api": "Census ACS 5-year",
+  "fips": "11001",
+  "county_name": "District of Columbia",
+  "scraped_at": "2026-02-23T05:24:06.689Z",
+  "data": {
+    "total_disability_pop": 661596,
+    "male_with_disability": 341,
+    "female_with_disability": 64,
+    "disability_under5": 21273,
+    "disability_5_17": 41459,
+    "disability_18_34": 97156,
+    "disability_65_74": 20950,
+    "disability_75_plus": 12873
+  }
+}

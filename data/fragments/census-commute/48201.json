@@ -1,0 +1,18 @@
+{
+  "source": "census-commute",
+  "source_label": "Census Commute & Transportation",
+  "api": "Census ACS 5-year",
+  "fips": "48201",
+  "county_name": "Harris County (Houston), TX",
+  "scraped_at": "2026-02-24T01:53:08.299Z",
+  "data": {
+    "workers_total": 2239156,
+    "drove_alone": 1664435,
+    "public_transit": 48763,
+    "walked": 29131,
+    "worked_from_home": 217808,
+    "mean_travel_time": 58560065,
+    "no_vehicle": 78217,
+    "one_vehicle": 517846
+  }
+}

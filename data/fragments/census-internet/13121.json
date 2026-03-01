@@ -1,0 +1,17 @@
+{
+  "source": "census-internet",
+  "source_label": "Census Internet & Technology",
+  "api": "Census ACS 5-year",
+  "fips": "13121",
+  "county_name": "Fulton County (Atlanta), GA",
+  "scraped_at": "2026-02-24T17:03:47.030Z",
+  "data": {
+    "total_households_internet": 450856,
+    "with_internet": 412569,
+    "broadband": 412202,
+    "no_internet": 27431,
+    "has_computer": 432664,
+    "has_smartphone_only": 416538,
+    "no_computer": 18192
+  }
+}
