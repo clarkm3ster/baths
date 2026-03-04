@@ -38,8 +38,12 @@ def startup():
 # Architect: /api/provisions (CRUD)
 
 from .routes import provisions, ingest, taxonomy, graph
+from .studio.api import router as studio_router
+from .studio.layers_api import router as layers_router
 
 app.include_router(provisions.router)
 app.include_router(ingest.router)
 app.include_router(taxonomy.router)
 app.include_router(graph.router)
+app.include_router(studio_router, prefix="/api/studio")
+app.include_router(layers_router, prefix="/api/layers")
