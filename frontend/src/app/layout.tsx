@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "DOMES — Whole-Person Digital Twins",
+  title: "SPHERE/OS — Programmable Material Environments",
   description:
-    "The most comprehensive longitudinal representation of a single human life ever attempted.",
+    "Transforming vacant public land into programmable material environments through 9 sensory drivers",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="dark">
-      <body className="antialiased bg-navy-900 text-gray-200">{children}</body>
+    <html lang="en">
+      <body className="antialiased">
+        <div className="flex h-screen">
+          <Nav />
+          <main className="flex-1 overflow-auto">{children}</main>
+        </div>
+      </body>
     </html>
   );
 }

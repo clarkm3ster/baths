@@ -1,0 +1,125 @@
+{
+  "worlds": [
+    {
+      "key": "renaissance",
+      "title": "The Human Dome",
+      "prompt": "A grand Renaissance dome interior with golden afternoon light streaming through an oculus. Frescoes on the curved ceiling depict the human figure at the center of the cosmos. Marble columns, warm stone, a single person standing in the center looking up.",
+      "worldId": "9c4ef403-0dae-4f4a-bc50-106daf54642c",
+      "operationId": "049b6972-2bcd-4dab-8671-3a4da1141015",
+      "details": {
+        "world_id": "9c4ef403-0dae-4f4a-bc50-106daf54642c",
+        "display_name": "Renaissance Dome Interior Golden Light",
+        "tags": null,
+        "assets": {
+          "mesh": {
+            "collider_mesh_url": null
+          },
+          "imagery": {
+            "pano_url": "https://cdn.marble.worldlabs.ai/9c4ef403-0dae-4f4a-bc50-106daf54642c/1dad5339-8133-473c-857a-51b8cb4b2a16_pano/rgb_0.png"
+          },
+          "splats": {
+            "spz_urls": {
+              "500k": "https://cdn.marble.worldlabs.ai/9c4ef403-0dae-4f4a-bc50-106daf54642c/cb4d88b1-1f24-43ee-8c0a-8e0a801dcb85_sand_500k.spz",
+              "full_res": "https://cdn.marble.worldlabs.ai/9c4ef403-0dae-4f4a-bc50-106daf54642c/608a1f95-1e17-42f5-9654-4baf2acdde90_sand.spz",
+              "100k": "https://cdn.marble.worldlabs.ai/9c4ef403-0dae-4f4a-bc50-106daf54642c/77a3e64c-bdbb-4ad4-a5e1-b6b4a260fcfb_sand_100k.spz"
+            },
+            "semantics_metadata": null
+          },
+          "thumbnail_url": "https://cdn.marble.worldlabs.ai/9c4ef403-0dae-4f4a-bc50-106daf54642c/50d605dc-a977-4bf3-9abf-230318f05953_sand_mpi/thumbnail.webp",
+          "caption": "The scene is a grand Renaissance dome interior, rendered in a realistic and majestic style, evoking a sense of awe and historical grandeur. Golden afternoon light streams dramatically through a central oculus, illuminating the vast space. The curved ceiling is adorned with intricate frescoes, depicting the human figure at the center of the cosmos, surrounded by celestial and mythological elements. Massive marble columns, intricately carved with classical motifs, support the dome's structure, their polished surfaces reflecting the warm light. The walls are constructed from warm-toned stone, possibly travertine or sandstone, exhibiting subtle variations in texture and color. Arched alcoves and decorative cornices are integrated into the architecture, adding depth and visual interest. The floor is paved with large, geometric patterns of contrasting marble, leading the eye towards the dome's apex. Benches or low plinths are positioned along the perimeter, offering places for contemplation. The air is still, emphasizing the monumental scale and the sacred atmosphere of the space. The frescoes on the ceiling are arranged in concentric rings, with the central human figure directly beneath the oculus. The marble columns are evenly spaced around the circular base of the dome, supporting the transition from the vertical walls to the curved ceiling. The warm stone walls rise from the marble floor, forming the main structure of the interior. "
+        },
+        "created_at": "2026-02-16T23:44:55Z",
+        "updated_at": "2026-02-16T23:45:20Z",
+        "permission": null,
+        "world_prompt": {
+          "type": "text",
+          "text_prompt": "The scene is a grand Renaissance dome interior, rendered in a realistic and majestic style, evoking a sense of awe and historical grandeur. Golden afternoon light streams dramatically through a central oculus, illuminating the vast space. The curved ceiling is adorned with intricate frescoes, depicting the human figure at the center of the cosmos, surrounded by celestial and mythological elements. Massive marble columns, intricately carved with classical motifs, support the dome's structure, their polished surfaces reflecting the warm light. The walls are constructed from warm-toned stone, possibly travertine or sandstone, exhibiting subtle variations in texture and color. Arched alcoves and decorative cornices are integrated into the architecture, adding depth and visual interest. The floor is paved with large, geometric patterns of contrasting marble, leading the eye towards the dome's apex. Benches or low plinths are positioned along the perimeter, offering places for contemplation. The air is still, emphasizing the monumental scale and the sacred atmosphere of the space. The frescoes on the ceiling are arranged in concentric rings, with the central human figure directly beneath the oculus. The marble columns are evenly spaced around the circular base of the dome, supporting the transition from the vertical walls to the curved ceiling. The warm stone walls rise from the marble floor, forming the main structure of the interior. The 360 scene is faultless."
+        },
+        "world_marble_url": "https://marble.worldlabs.ai/world/9c4ef403-0dae-4f4a-bc50-106daf54642c",
+        "model": "Marble 0.1-mini"
+      },
+      "splatUrl": "https://cdn.marble.worldlabs.ai/9c4ef403-0dae-4f4a-bc50-106daf54642c/608a1f95-1e17-42f5-9654-4baf2acdde90_sand.spz"
+    },
+    {
+      "key": "broken-capitol",
+      "title": "The Broken Dome",
+      "prompt": "A decaying government Capitol rotunda interior, cracked plaster walls, harsh fluorescent lighting, a single plastic chair in the center, a 'TAKE A NUMBER' paper ticket dispenser on a metal stand. Institutional decay, bureaucratic nightmare.",
+      "worldId": "6c8b7768-8678-4ac5-8244-788e56b2eb8a",
+      "operationId": "0c099bd0-9dd2-44dd-8251-70eaa4c58443",
+      "details": {
+        "world_id": "6c8b7768-8678-4ac5-8244-788e56b2eb8a",
+        "display_name": "Decaying Capitol Rotunda Interior",
+        "tags": null,
+        "assets": {
+          "mesh": {
+            "collider_mesh_url": null
+          },
+          "imagery": {
+            "pano_url": "https://cdn.marble.worldlabs.ai/6c8b7768-8678-4ac5-8244-788e56b2eb8a/8031382b-8f0e-4b06-a895-435acb48951a_pano/rgb_0.png"
+          },
+          "splats": {
+            "spz_urls": {
+              "500k": "https://cdn.marble.worldlabs.ai/6c8b7768-8678-4ac5-8244-788e56b2eb8a/38161388-0382-459f-8f39-152bc86b28f0_sand_500k.spz",
+              "full_res": "https://cdn.marble.worldlabs.ai/6c8b7768-8678-4ac5-8244-788e56b2eb8a/057123b2-95b3-458e-b76c-647f90d62357_sand.spz",
+              "100k": "https://cdn.marble.worldlabs.ai/6c8b7768-8678-4ac5-8244-788e56b2eb8a/d88a416d-2384-4d30-bafd-0cb3b84d7313_sand_100k.spz"
+            },
+            "semantics_metadata": null
+          },
+          "thumbnail_url": "https://cdn.marble.worldlabs.ai/6c8b7768-8678-4ac5-8244-788e56b2eb8a/dcfdead6-bc13-4e9e-859c-3357451ad107_sand_mpi/thumbnail.webp",
+          "caption": "The scene is a decaying government Capitol rotunda interior, rendered in a stark, realistic style that emphasizes institutional decay and a bureaucratic nightmare. The overall tone is oppressive and desolate, reflecting neglect and inefficiency. The rotunda's once grand walls are now marred by cracked plaster, revealing layers of disrepair and age. Harsh fluorescent lighting, emanating from fixtures mounted high on the ceiling, casts an unforgiving glare across the entire space, highlighting every imperfection. In the precise center of the rotunda, a single, worn plastic chair stands isolated, its utilitarian form contrasting sharply with the remnants of classical architecture. Adjacent to the chair, a \"TAKE A NUMBER\" paper ticket dispenser rests on a flimsy metal stand, a symbol of endless waiting and impersonal service. The floor, likely once polished marble, is now dull and scuffed, showing signs of heavy foot traffic and minimal maintenance. Debris and dust accumulate in corners and along the base of the walls, further emphasizing the pervasive neglect. The rotunda's dome, though not explicitly detailed, is implied to be in a similar state of disrepair, with potential water stains or peeling paint. The cracked plaster walls extend around the entire circumference of the rotunda, creating a claustrophobic sense of enclosure. The plastic chair is positioned directly beneath the central fluorescent light fixture, casting a sharp, solitary shadow. The ticket dispenser stands a short distance from the chair, within easy reach. "
+        },
+        "created_at": "2026-02-16T23:45:26Z",
+        "updated_at": "2026-02-16T23:45:50Z",
+        "permission": null,
+        "world_prompt": {
+          "type": "text",
+          "text_prompt": "The scene is a decaying government Capitol rotunda interior, rendered in a stark, realistic style that emphasizes institutional decay and a bureaucratic nightmare. The overall tone is oppressive and desolate, reflecting neglect and inefficiency. The rotunda's once grand walls are now marred by cracked plaster, revealing layers of disrepair and age. Harsh fluorescent lighting, emanating from fixtures mounted high on the ceiling, casts an unforgiving glare across the entire space, highlighting every imperfection. In the precise center of the rotunda, a single, worn plastic chair stands isolated, its utilitarian form contrasting sharply with the remnants of classical architecture. Adjacent to the chair, a \"TAKE A NUMBER\" paper ticket dispenser rests on a flimsy metal stand, a symbol of endless waiting and impersonal service. The floor, likely once polished marble, is now dull and scuffed, showing signs of heavy foot traffic and minimal maintenance. Debris and dust accumulate in corners and along the base of the walls, further emphasizing the pervasive neglect. The rotunda's dome, though not explicitly detailed, is implied to be in a similar state of disrepair, with potential water stains or peeling paint. The cracked plaster walls extend around the entire circumference of the rotunda, creating a claustrophobic sense of enclosure. The plastic chair is positioned directly beneath the central fluorescent light fixture, casting a sharp, solitary shadow. The ticket dispenser stands a short distance from the chair, within easy reach. The 360 scene is faultless."
+        },
+        "world_marble_url": "https://marble.worldlabs.ai/world/6c8b7768-8678-4ac5-8244-788e56b2eb8a",
+        "model": "Marble 0.1-mini"
+      },
+      "splatUrl": "https://cdn.marble.worldlabs.ai/6c8b7768-8678-4ac5-8244-788e56b2eb8a/057123b2-95b3-458e-b76c-647f90d62357_sand.spz"
+    },
+    {
+      "key": "personal-dome",
+      "title": "The Future Dome",
+      "prompt": "A futuristic personal dome structure made of curved glass and brushed steel, flooded with natural daylight. Holographic data panels float in the air glowing blue. Living plants grow along the interior walls. One person works at a minimal desk.",
+      "worldId": "860b3cfc-1d0f-4591-aed8-021a276d3b56",
+      "operationId": "6ecbeb1d-1aa2-467e-bf00-b111cf2489b9",
+      "details": {
+        "world_id": "860b3cfc-1d0f-4591-aed8-021a276d3b56",
+        "display_name": "Futuristic Personal Dome Interior",
+        "tags": null,
+        "assets": {
+          "mesh": {
+            "collider_mesh_url": null
+          },
+          "imagery": {
+            "pano_url": "https://cdn.marble.worldlabs.ai/860b3cfc-1d0f-4591-aed8-021a276d3b56/3325566b-1fd0-4c8a-92c0-e9c32ac1846b_pano/rgb_0.png"
+          },
+          "splats": {
+            "spz_urls": {
+              "500k": "https://cdn.marble.worldlabs.ai/860b3cfc-1d0f-4591-aed8-021a276d3b56/97c76ade-c17a-4a9f-9927-2532de0569d4_sand_500k.spz",
+              "full_res": "https://cdn.marble.worldlabs.ai/860b3cfc-1d0f-4591-aed8-021a276d3b56/02f04ce4-2b88-4100-b347-e3009c9877a4_sand.spz",
+              "100k": "https://cdn.marble.worldlabs.ai/860b3cfc-1d0f-4591-aed8-021a276d3b56/2c7cd380-ef4c-4e02-a9d1-39be48ca4cb9_sand_100k.spz"
+            },
+            "semantics_metadata": null
+          },
+          "thumbnail_url": "https://cdn.marble.worldlabs.ai/860b3cfc-1d0f-4591-aed8-021a276d3b56/aecce2df-a0e1-4f61-b85f-da0060edd6c5_sand_mpi/thumbnail.webp",
+          "caption": "The scene is a futuristic personal dome structure, rendered in a highly realistic style, exuding an atmosphere of advanced technology and serene natural integration. The dome is constructed from large, curved glass panels seamlessly joined with brushed steel supports, allowing natural daylight to flood the interior. Holographic data panels, glowing with a vibrant blue light, float effortlessly in the air, displaying complex information. Lush living plants grow along the interior walls, creating a verdant contrast against the sleek, metallic surfaces and glass. A single, minimalist desk, crafted from a smooth, light-colored material, occupies a central position within the dome. The desk is uncluttered, featuring only essential tools and a single, ergonomic chair. The floor is a polished, reflective surface, mirroring the light and holographic projections. The curved glass panels form the primary structure of the dome, extending from the floor to the apex. The brushed steel elements provide structural integrity and aesthetic accents, framing the glass sections. The holographic data panels are dispersed throughout the space, some appearing near the desk, others floating higher within the dome. The living plants are integrated into vertical gardens along the inner circumference of the dome walls. The minimalist desk is positioned towards the center of the dome, facing outward, with the ergonomic chair tucked beneath it. "
+        },
+        "created_at": "2026-02-16T23:45:54Z",
+        "updated_at": "2026-02-16T23:46:19Z",
+        "permission": null,
+        "world_prompt": {
+          "type": "text",
+          "text_prompt": "The scene is a futuristic personal dome structure, rendered in a highly realistic style, exuding an atmosphere of advanced technology and serene natural integration. The dome is constructed from large, curved glass panels seamlessly joined with brushed steel supports, allowing natural daylight to flood the interior. Holographic data panels, glowing with a vibrant blue light, float effortlessly in the air, displaying complex information. Lush living plants grow along the interior walls, creating a verdant contrast against the sleek, metallic surfaces and glass. A single, minimalist desk, crafted from a smooth, light-colored material, occupies a central position within the dome. The desk is uncluttered, featuring only essential tools and a single, ergonomic chair. The floor is a polished, reflective surface, mirroring the light and holographic projections. The curved glass panels form the primary structure of the dome, extending from the floor to the apex. The brushed steel elements provide structural integrity and aesthetic accents, framing the glass sections. The holographic data panels are dispersed throughout the space, some appearing near the desk, others floating higher within the dome. The living plants are integrated into vertical gardens along the inner circumference of the dome walls. The minimalist desk is positioned towards the center of the dome, facing outward, with the ergonomic chair tucked beneath it. The 360 scene is faultless."
+        },
+        "world_marble_url": "https://marble.worldlabs.ai/world/860b3cfc-1d0f-4591-aed8-021a276d3b56",
+        "model": "Marble 0.1-mini"
+      },
+      "splatUrl": "https://cdn.marble.worldlabs.ai/860b3cfc-1d0f-4591-aed8-021a276d3b56/02f04ce4-2b88-4100-b347-e3009c9877a4_sand.spz"
+    }
+  ],
+  "generated_at": 1771285579.715589
+}

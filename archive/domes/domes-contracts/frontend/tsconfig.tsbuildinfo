@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/api/client.ts","./src/components/AgreementGenerator.tsx","./src/components/ComplianceDashboard.tsx","./src/components/ConsentCenter.tsx","./src/components/ExecutionTracker.tsx","./src/components/GapBrowser.tsx","./src/components/TemplateLibrary.tsx","./src/types/index.ts"],"version":"5.7.3"}

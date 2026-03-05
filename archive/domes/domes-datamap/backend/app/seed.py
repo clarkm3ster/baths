@@ -1,0 +1,1765 @@
+from sqlalchemy.orm import Session
+from app.models import System, Connection, Gap, Bridge
+
+
+def seed_systems(db: Session):
+    """Seed all 31 government data systems (21 original + 10 new)."""
+    systems = [
+        # ── HEALTH DOMAIN (8 systems) ──────────────────────────────────────
+        {
+            "id": "mmis",
+            "name": "Medicaid Management Information System",
+            "acronym": "MMIS",
+            "agency": "State Department of Human Services",
+            "domain": "health",
+            "description": "Core state system for processing Medicaid claims, managing eligibility, and tracking encounters. This is the backbone of public health insurance administration, holding detailed records on every Medicaid beneficiary including claims history, diagnoses, prescriptions, and demographic information.",
+            "data_standard": "X12",
+            "fields_held": (["claims", "eligibility", "encounters", "diagnoses", "prescriptions", "demographics"]),
+            "api_availability": "limited",
+            "update_frequency": "realtime",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "42 CFR Part 431", "State Medicaid Regulations"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["medicaid", "low_income", "disabled", "pregnant", "foster_child"]),
+        },
+        {
+            "id": "mco",
+            "name": "Managed Care Organization Systems",
+            "acronym": "MCO",
+            "agency": "Contracted Managed Care Organizations",
+            "domain": "health",
+            "description": "Private health plan systems that manage Medicaid beneficiaries enrolled in managed care. MCOs maintain their own member records, care plans, utilization reviews, and provider network data. Multiple MCOs may operate in a single state, each with their own proprietary system.",
+            "data_standard": "mixed",
+            "fields_held": (["member_enrollment", "care_plans", "utilization_reviews", "provider_networks", "claims"]),
+            "api_availability": "limited",
+            "update_frequency": "daily",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "MCO Contract Requirements", "State Managed Care Regulations"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["medicaid", "managed_care"]),
+        },
+        {
+            "id": "bha",
+            "name": "Behavioral Health Authority System",
+            "acronym": "BHA",
+            "agency": "State/County Behavioral Health Department",
+            "domain": "health",
+            "description": "Tracks substance use disorder treatment, mental health services, crisis events, and behavioral health assessments. Subject to the strictest federal privacy protections under 42 CFR Part 2, which historically prohibited sharing SUD treatment records without specific written patient consent.",
+            "data_standard": "custom",
+            "fields_held": (["sud_treatment", "mental_health_treatment", "crisis_events", "assessments", "medications"]),
+            "api_availability": "none",
+            "update_frequency": "manual",
+            "privacy_law": "42 CFR Part 2",
+            "privacy_laws": (["42 CFR Part 2", "HIPAA", "State Mental Health Act", "State SUD Confidentiality Law"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["mental_health", "substance_use", "crisis"]),
+        },
+        {
+            "id": "cmhc_ehr",
+            "name": "Community Mental Health Center EHR",
+            "acronym": "CMHC EHR",
+            "agency": "Community Mental Health Providers",
+            "domain": "health",
+            "description": "Electronic health records maintained by community mental health centers, containing clinical notes, treatment plans, therapy records, medication management, and diagnostic information. These provider-level systems hold the most detailed clinical picture of a person's mental health treatment.",
+            "data_standard": "HL7",
+            "fields_held": (["clinical_notes", "treatment_plans", "therapy_records", "medications", "diagnoses"]),
+            "api_availability": "limited",
+            "update_frequency": "daily",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "42 CFR Part 2", "State Mental Health Confidentiality"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["mental_health", "therapy"]),
+        },
+        {
+            "id": "hie",
+            "name": "Health Information Exchange",
+            "acronym": "HIE",
+            "agency": "State/Regional HIE Organization",
+            "domain": "health",
+            "description": "Regional or statewide platform enabling electronic sharing of health information among participating providers. HIEs aggregate hospital admissions, lab results, medications, allergies, and immunizations from participating healthcare organizations, providing a more complete picture of a patient's health across providers.",
+            "data_standard": "HL7_FHIR",
+            "fields_held": (["hospital_admissions", "lab_results", "medications", "allergies", "immunizations"]),
+            "api_availability": "public",
+            "update_frequency": "realtime",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "State HIE Privacy Law", "HITECH Act"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["any_healthcare"]),
+        },
+        {
+            "id": "pdmp",
+            "name": "Prescription Drug Monitoring Program",
+            "acronym": "PDMP",
+            "agency": "State Pharmacy Board",
+            "domain": "health",
+            "description": "State electronic database tracking controlled substance prescriptions. Used to identify patients at risk of opioid misuse, doctor shopping, or dangerous drug combinations. Contains detailed prescriber and dispensing history for all Schedule II-V controlled substances.",
+            "data_standard": "custom",
+            "fields_held": (["controlled_substances", "prescriber_info", "dispensing_history", "patient_alerts"]),
+            "api_availability": "limited",
+            "update_frequency": "daily",
+            "privacy_law": "State PDMP Law",
+            "privacy_laws": (["State PDMP Law", "HIPAA", "DEA Regulations"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["controlled_substances", "opioid_treatment"]),
+        },
+        {
+            "id": "va_system",
+            "name": "Veterans Health Administration",
+            "acronym": "VHA",
+            "agency": "Federal Department of Veterans Affairs",
+            "domain": "health",
+            "description": "Federal healthcare system for veterans, containing comprehensive health records including mental health treatment, disability ratings, medications, and appointments. Operates as a separate healthcare system from civilian infrastructure, creating data silos for dual-eligible veterans.",
+            "data_standard": "HL7_FHIR",
+            "fields_held": (["veteran_health_records", "medications", "mental_health", "disability_ratings", "appointments"]),
+            "api_availability": "limited",
+            "update_frequency": "daily",
+            "privacy_law": "Privacy Act",
+            "privacy_laws": (["Privacy Act", "38 USC 7332", "HIPAA", "VA Directive 6066"]),
+            "is_federal": True,
+            "state_operated": False,
+            "applies_when": (["veteran"]),
+        },
+        {
+            "id": "vital_records",
+            "name": "Vital Records System",
+            "acronym": "VR",
+            "agency": "State Department of Health",
+            "domain": "health",
+            "description": "State registry of birth certificates, death certificates, and marriage records. Critical for identity verification and eligibility determination across multiple benefit systems. Often maintained on legacy infrastructure with limited electronic data exchange capabilities.",
+            "data_standard": "flat_file",
+            "fields_held": (["birth_certificates", "death_certificates", "marriage_records"]),
+            "api_availability": "none",
+            "update_frequency": "monthly",
+            "privacy_law": "State Vital Records Act",
+            "privacy_laws": (["State Vital Records Act", "HIPAA"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["identity_verification", "eligibility"]),
+        },
+
+        # ── JUSTICE DOMAIN (5 systems) ─────────────────────────────────────
+        {
+            "id": "doc",
+            "name": "Department of Corrections System",
+            "acronym": "DOC",
+            "agency": "State Department of Corrections",
+            "domain": "justice",
+            "description": "State corrections system tracking incarcerated individuals including sentence information, facility assignments, internal health records, medications, disciplinary actions, and release dates. Health data within DOC is often siloed from community health systems, creating dangerous gaps in care continuity at release.",
+            "data_standard": "custom",
+            "fields_held": (["sentence_info", "facility", "health_records", "medications", "disciplinary", "release_date"]),
+            "api_availability": "none",
+            "update_frequency": "manual",
+            "privacy_law": "State Corrections Law",
+            "privacy_laws": (["State Corrections Law", "HIPAA", "ACA Medicaid Provisions"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["incarcerated", "recently_released"]),
+        },
+        {
+            "id": "cjis",
+            "name": "Criminal Justice Information System",
+            "acronym": "CJIS",
+            "agency": "FBI / State Police",
+            "domain": "justice",
+            "description": "Federal and state criminal justice database containing criminal history records, active warrants, sex offender registry data, fingerprints, and mugshots. Governed by strict FBI CJIS Security Policy and 28 CFR Part 20, with access limited to authorized criminal justice agencies.",
+            "data_standard": "custom",
+            "fields_held": (["criminal_history", "warrants", "sex_offender_registry", "fingerprints", "mugshots"]),
+            "api_availability": "internal",
+            "update_frequency": "realtime",
+            "privacy_law": "28 CFR Part 20",
+            "privacy_laws": (["28 CFR Part 20", "FBI CJIS Security Policy", "State Criminal Records Act"]),
+            "is_federal": True,
+            "state_operated": False,
+            "applies_when": (["criminal_record", "warrant", "sex_offense"]),
+        },
+        {
+            "id": "probation_parole",
+            "name": "Probation and Parole System",
+            "acronym": "P&P",
+            "agency": "State/County Probation Department",
+            "domain": "justice",
+            "description": "Tracks individuals on community supervision including probation conditions, check-in compliance, drug test results, employment status, and risk assessment scores. Probation officers often need health information to manage compliance but face significant legal barriers to obtaining it.",
+            "data_standard": "custom",
+            "fields_held": (["supervision_conditions", "check_ins", "drug_tests", "employment", "risk_assessments"]),
+            "api_availability": "none",
+            "update_frequency": "manual",
+            "privacy_law": "State Probation Law",
+            "privacy_laws": (["State Probation Law", "State Criminal Records Act"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["probation", "parole", "supervised_release"]),
+        },
+        {
+            "id": "court_cms",
+            "name": "Court Case Management System",
+            "acronym": "Court CMS",
+            "agency": "County Courts",
+            "domain": "justice",
+            "description": "County-level court system managing case dockets, court orders, sentences, plea agreements, and protective orders. Courts generate critical legal documents that affect a person's status across many other systems but typically share data only through manual processes.",
+            "data_standard": "custom",
+            "fields_held": (["dockets", "orders", "sentences", "plea_agreements", "protective_orders"]),
+            "api_availability": "none",
+            "update_frequency": "daily",
+            "privacy_law": "Court Records Act",
+            "privacy_laws": (["Court Records Act", "State Public Records Law", "Protective Order Confidentiality"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["court_involved", "protective_order"]),
+        },
+        {
+            "id": "sacwis",
+            "name": "SACWIS/CCWIS (Child Welfare Information System)",
+            "acronym": "SACWIS",
+            "agency": "State Child Welfare Agency",
+            "domain": "justice",
+            "description": "Statewide automated child welfare information system tracking abuse/neglect reports, investigations, foster care placements, adoption proceedings, family assessments, and safety plans. Children in this system often have the most complex cross-system needs and the most fragmented data.",
+            "data_standard": "custom",
+            "fields_held": (["abuse_reports", "investigations", "foster_placements", "adoption", "family_assessments", "safety_plans"]),
+            "api_availability": "none",
+            "update_frequency": "manual",
+            "privacy_law": "State Child Welfare Law",
+            "privacy_laws": (["State Child Welfare Law", "CAPTA", "Title IV-E", "AFCARS"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["child_welfare", "foster_care", "abuse_neglect"]),
+        },
+
+        # ── HOUSING DOMAIN (2 systems) ─────────────────────────────────────
+        {
+            "id": "hmis",
+            "name": "Homeless Management Information System",
+            "acronym": "HMIS",
+            "agency": "HUD / Continuum of Care",
+            "domain": "housing",
+            "description": "Federally mandated local information system that records data on people experiencing homelessness, including shelter stays, housing history, vulnerability assessments, chronic homelessness status, and services received. Required by HUD for Continuum of Care funding.",
+            "data_standard": "custom",
+            "fields_held": (["shelter_stays", "housing_history", "vulnerability_index", "chronic_homelessness", "services_received"]),
+            "api_availability": "limited",
+            "update_frequency": "daily",
+            "privacy_law": "HUD HMIS Standards",
+            "privacy_laws": (["HUD HMIS Data Standards", "CoC Privacy Policy", "VAWA Protections"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["homeless", "shelter", "housing_unstable"]),
+        },
+        {
+            "id": "pha",
+            "name": "Public Housing Authority System",
+            "acronym": "PHA",
+            "agency": "Local Public Housing Authority",
+            "domain": "housing",
+            "description": "Local system managing Section 8 housing choice vouchers, public housing units, waitlists, income verification, and lease compliance. PHAs operate independently with significant variation in technology infrastructure, often relying on flat file data exchange.",
+            "data_standard": "flat_file",
+            "fields_held": (["section_8_vouchers", "public_housing", "waitlists", "income_verification", "lease_compliance"]),
+            "api_availability": "none",
+            "update_frequency": "monthly",
+            "privacy_law": "HUD Regulations",
+            "privacy_laws": (["HUD Regulations", "Privacy Act", "State Public Housing Law"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["public_housing", "section_8", "housing_voucher"]),
+        },
+
+        # ── INCOME/BENEFITS DOMAIN (4 systems) ────────────────────────────
+        {
+            "id": "ssa",
+            "name": "Social Security Administration Systems",
+            "acronym": "SSA",
+            "agency": "Federal Social Security Administration",
+            "domain": "income",
+            "description": "Federal system managing SSI, SSDI, retirement benefits, survivor benefits, disability determinations, work history, and lifetime earnings records. SSA data is critical for eligibility determination in many state programs but federal-state data sharing is limited and slow.",
+            "data_standard": "custom",
+            "fields_held": (["ssi", "ssdi", "retirement", "survivors", "disability_determinations", "work_history", "earnings"]),
+            "api_availability": "limited",
+            "update_frequency": "monthly",
+            "privacy_law": "Privacy Act",
+            "privacy_laws": (["Privacy Act", "Social Security Act Section 1106", "State DUA Requirements"]),
+            "is_federal": True,
+            "state_operated": False,
+            "applies_when": (["disabled", "elderly", "survivor", "low_income_disabled"]),
+        },
+        {
+            "id": "snap_ebt",
+            "name": "SNAP/EBT System",
+            "acronym": "SNAP/EBT",
+            "agency": "State Department of Human Services",
+            "domain": "income",
+            "description": "State system managing Supplemental Nutrition Assistance Program eligibility, Electronic Benefit Transfer cards, benefit amounts, recertification schedules, and household composition. SNAP is the largest federal nutrition assistance program, often co-administered with Medicaid and TANF.",
+            "data_standard": "flat_file",
+            "fields_held": (["snap_eligibility", "ebt_cards", "benefit_amounts", "recertification", "household_composition"]),
+            "api_availability": "none",
+            "update_frequency": "daily",
+            "privacy_law": "Food Stamp Act",
+            "privacy_laws": (["Food Stamp Act", "7 CFR Part 272", "State DHS Privacy Policy"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["low_income", "food_insecurity"]),
+        },
+        {
+            "id": "tanf",
+            "name": "TANF System",
+            "acronym": "TANF",
+            "agency": "State Department of Human Services",
+            "domain": "income",
+            "description": "Temporary Assistance for Needy Families system tracking work requirements, sanctions, time limits, child care needs, and cash assistance. TANF has strict time limits and work requirements that interact with a person's status in multiple other systems.",
+            "data_standard": "flat_file",
+            "fields_held": (["work_requirements", "sanctions", "time_limits", "child_care_needs", "cash_assistance"]),
+            "api_availability": "none",
+            "update_frequency": "daily",
+            "privacy_law": "TANF Regulations",
+            "privacy_laws": (["TANF Federal Regulations", "State DHS Privacy Policy", "45 CFR Part 205"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["low_income", "children", "work_eligible"]),
+        },
+        {
+            "id": "unemployment",
+            "name": "Unemployment Insurance System",
+            "acronym": "UI",
+            "agency": "State Department of Labor",
+            "domain": "income",
+            "description": "State system managing unemployment insurance claims, eligibility, wage records, employer information, and benefit amounts. UI data includes detailed employment and wage history that could be valuable for eligibility determinations in other programs but is rarely shared electronically.",
+            "data_standard": "flat_file",
+            "fields_held": (["claims", "eligibility", "wage_records", "employer_info", "benefit_amounts"]),
+            "api_availability": "none",
+            "update_frequency": "weekly",
+            "privacy_law": "State UI Law",
+            "privacy_laws": (["State UI Law", "Federal Unemployment Tax Act", "20 CFR Part 603"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["unemployed", "job_seeking"]),
+        },
+
+        # ── EDUCATION DOMAIN (2 systems) ───────────────────────────────────
+        {
+            "id": "slds",
+            "name": "State Longitudinal Data System",
+            "acronym": "SLDS",
+            "agency": "State Department of Education",
+            "domain": "education",
+            "description": "Statewide education data system tracking student enrollment, attendance, test scores, graduation status, special education designation, and disciplinary actions. FERPA protections limit sharing of education records, creating barriers to coordinated services for students with cross-system needs.",
+            "data_standard": "custom",
+            "fields_held": (["enrollment", "attendance", "test_scores", "graduation", "special_education", "disciplinary"]),
+            "api_availability": "limited",
+            "update_frequency": "monthly",
+            "privacy_law": "FERPA",
+            "privacy_laws": (["FERPA", "State Student Privacy Law", "PPRA"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["school_age", "enrolled_student"]),
+        },
+        {
+            "id": "iep",
+            "name": "IEP/Special Education System",
+            "acronym": "IEP",
+            "agency": "School Districts",
+            "domain": "education",
+            "description": "District-level system managing Individualized Education Programs including evaluations, goals, accommodations, transition plans, and related services. IEP data is among the most sensitive education records and is critical for continuity when students move between schools, districts, or into/out of foster care.",
+            "data_standard": "custom",
+            "fields_held": (["iep_plans", "evaluations", "goals", "accommodations", "transition_plans", "related_services"]),
+            "api_availability": "none",
+            "update_frequency": "manual",
+            "privacy_law": "FERPA + IDEA",
+            "privacy_laws": (["FERPA", "IDEA", "State Special Education Law", "Section 504"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["special_education", "disability_student"]),
+        },
+
+        # ── ADDITIONAL HEALTH SYSTEMS ─────────────────────────────────────
+        {
+            "id": "ltss",
+            "name": "Long-Term Services and Supports System",
+            "acronym": "LTSS",
+            "agency": "State Department of Aging / DHS",
+            "domain": "health",
+            "description": "State system managing home and community-based services (HCBS) waivers, nursing facility level of care determinations, personal attendant services, and participant-directed budgets. Central to Olmstead compliance and the national shift from institutional to community-based care. Tracks waiver slots, service authorizations, and provider enrollments.",
+            "data_standard": "X12_837P",
+            "fields_held": (["waiver_enrollment", "service_authorizations", "level_of_care", "provider_network", "participant_budgets", "functional_assessments"]),
+            "api_availability": "limited",
+            "update_frequency": "daily",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "42 CFR Part 441", "State HCBS Waiver Regulations", "Olmstead Compliance Requirements"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["disabled", "elderly", "hcbs_waiver", "nursing_facility_eligible"]),
+        },
+        {
+            "id": "immunization_registry",
+            "name": "Immunization Information System",
+            "acronym": "IIS",
+            "agency": "State Department of Health",
+            "domain": "health",
+            "description": "Statewide registry of administered immunizations (childhood and adult) reported by healthcare providers, pharmacies, and public health clinics. Supports school entry requirements, outbreak response, and vaccine coverage monitoring. Governed by CDC immunization standards and state reporting mandates.",
+            "data_standard": "HL7_251",
+            "fields_held": (["immunization_history", "vaccine_inventory", "contraindications", "school_compliance", "provider_reports"]),
+            "api_availability": "public",
+            "update_frequency": "realtime",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "State Immunization Reporting Law", "CDC IIS Functional Standards"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["any_healthcare", "school_age", "child"]),
+        },
+        {
+            "id": "adt_notifications",
+            "name": "ADT Event Notification System",
+            "acronym": "ADT",
+            "agency": "Hospitals / CMS",
+            "domain": "health",
+            "description": "Hospital admit-discharge-transfer notification system mandated by the CMS Interoperability and Patient Access final rule (CMS-9115-F). Hospitals must send electronic ADT notifications to primary care providers and post-acute facilities. Uses HL7v2 ADT messages or FHIR Subscription framework. Critical for care transitions and readmission prevention.",
+            "data_standard": "HL7_ADT",
+            "fields_held": (["admission_events", "discharge_events", "transfer_events", "facility_info", "attending_provider"]),
+            "api_availability": "public",
+            "update_frequency": "realtime",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "CMS Interoperability Rule", "Condition of Participation"]),
+            "is_federal": True,
+            "state_operated": False,
+            "applies_when": (["any_healthcare", "hospital_event"]),
+        },
+        {
+            "id": "ncpdp_pharmacy",
+            "name": "Pharmacy Benefits System (NCPDP)",
+            "acronym": "PBM/NCPDP",
+            "agency": "State Medicaid / PBMs",
+            "domain": "health",
+            "description": "Pharmacy claims processing system using NCPDP SCRIPT and Telecommunication standards for point-of-sale drug claims, prior authorizations, formulary management, and drug utilization review. Processes real-time pharmacy transactions for Medicaid and commercial payers. Includes Medicaid Drug Rebate Program data.",
+            "data_standard": "NCPDP",
+            "fields_held": (["pharmacy_claims", "prior_authorizations", "formulary", "drug_utilization_review", "rebate_data"]),
+            "api_availability": "limited",
+            "update_frequency": "realtime",
+            "privacy_law": "HIPAA",
+            "privacy_laws": (["HIPAA", "Medicaid Drug Rebate Act", "State Pharmacy Practice Act"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["medicaid", "prescription_drugs"]),
+        },
+
+        # ── ADDITIONAL JUSTICE SYSTEM ──────────────────────────────────────
+        {
+            "id": "jms",
+            "name": "County Jail Management System",
+            "acronym": "JMS",
+            "agency": "County Sheriff / Corrections",
+            "domain": "justice",
+            "description": "County-level jail management system tracking bookings, housing assignments, medical screenings, court dates, bail status, and release dates. Unlike state DOC systems, county jails hold pre-trial detainees (presumed innocent) and short-sentence inmates. Most county JMS operate independently with minimal interoperability.",
+            "data_standard": "custom",
+            "fields_held": (["bookings", "housing", "medical_screening", "court_dates", "bail_status", "release_dates"]),
+            "api_availability": "none",
+            "update_frequency": "realtime",
+            "privacy_law": "State Corrections Law",
+            "privacy_laws": (["State Corrections Law", "State Public Records Act", "PREA Standards"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["pretrial", "county_jail", "short_sentence"]),
+        },
+
+        # ── ADDITIONAL HOUSING SYSTEM ──────────────────────────────────────
+        {
+            "id": "cdbg_home",
+            "name": "Community Development Block Grant / HOME System",
+            "acronym": "CDBG/HOME",
+            "agency": "City/County Community Development",
+            "domain": "housing",
+            "description": "HUD IDIS (Integrated Disbursement and Information System) and local tracking of CDBG and HOME Investment Partnership funds. Covers housing rehabilitation, homebuyer assistance, rental assistance, and community facility projects. Tracks projects, beneficiaries, and national objective compliance.",
+            "data_standard": "HUD_IDIS",
+            "fields_held": (["projects", "beneficiaries", "fund_disbursements", "income_certifications", "national_objective"]),
+            "api_availability": "limited",
+            "update_frequency": "monthly",
+            "privacy_law": "HUD Regulations",
+            "privacy_laws": (["HUD Regulations", "Privacy Act", "State Grant Management"]),
+            "is_federal": False,
+            "state_operated": False,
+            "applies_when": (["low_income", "housing_rehabilitation", "homebuyer"]),
+        },
+
+        # ── ADDITIONAL INCOME SYSTEM ───────────────────────────────────────
+        {
+            "id": "wic",
+            "name": "WIC Management Information System",
+            "acronym": "WIC MIS",
+            "agency": "State Department of Health",
+            "domain": "income",
+            "description": "Women, Infants, and Children supplemental nutrition program system tracking participant enrollment, nutrition risk assessments, food package prescriptions, breastfeeding support, and vendor management. WIC participants are categorically eligible for Medicaid and SNAP but enrollment is rarely coordinated.",
+            "data_standard": "flat_file",
+            "fields_held": (["participant_enrollment", "nutrition_assessments", "food_packages", "breastfeeding_support", "vendor_data"]),
+            "api_availability": "none",
+            "update_frequency": "daily",
+            "privacy_law": "WIC Privacy Regulations",
+            "privacy_laws": (["7 CFR Part 246", "State WIC Privacy Policy", "HIPAA (health assessments)"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["pregnant", "infant", "child_under_5", "low_income"]),
+        },
+        {
+            "id": "child_support",
+            "name": "Child Support Enforcement System",
+            "acronym": "CSE",
+            "agency": "State Child Support Agency",
+            "domain": "income",
+            "description": "State system managing child support orders, payment tracking, income withholding, paternity establishment, and interstate case management. Connected to Federal Parent Locator Service (FPLS) for interstate enforcement. Critical intersection between justice, income, and child welfare systems.",
+            "data_standard": "flat_file",
+            "fields_held": (["support_orders", "payment_history", "income_withholding", "paternity", "interstate_cases", "arrears"]),
+            "api_availability": "limited",
+            "update_frequency": "daily",
+            "privacy_law": "45 CFR Part 303",
+            "privacy_laws": (["45 CFR Part 303", "State CSE Law", "Federal Parent Locator Service"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["child_support", "non_custodial_parent", "custodial_parent"]),
+        },
+
+        # ── ADDITIONAL EDUCATION SYSTEM ────────────────────────────────────
+        {
+            "id": "early_intervention",
+            "name": "Early Intervention System (Part C IDEA)",
+            "acronym": "EI",
+            "agency": "State Department of Health / Education",
+            "domain": "education",
+            "description": "IDEA Part C early intervention tracking system for infants and toddlers (birth to age 3) with developmental delays. Manages Individualized Family Service Plans (IFSPs), service coordination, provider networks, and transition to Part B (preschool). Critical handoff point between health and education systems.",
+            "data_standard": "custom",
+            "fields_held": (["ifsp_plans", "developmental_assessments", "service_coordination", "provider_network", "transition_plans"]),
+            "api_availability": "none",
+            "update_frequency": "manual",
+            "privacy_law": "FERPA + IDEA Part C",
+            "privacy_laws": (["FERPA", "IDEA Part C", "34 CFR Part 303", "State Early Intervention Act"]),
+            "is_federal": False,
+            "state_operated": True,
+            "applies_when": (["infant", "toddler", "developmental_delay"]),
+        },
+    ]
+
+    for sys_data in systems:
+        system = System(**sys_data)
+        db.add(system)
+    db.flush()
+
+
+def seed_connections(db: Session):
+    """Seed all 21 system connections (13 original + 8 new)."""
+    connections = [
+        # 1. mmis <-> mco
+        {
+            "source_id": "mmis",
+            "target_id": "mco",
+            "direction": "bidirectional",
+            "format": "X12",
+            "frequency": "daily",
+            "data_shared": (["eligibility", "claims", "encounters"]),
+            "governing_agreement": "MCO Contract",
+            "privacy_law": "HIPAA",
+            "reliability": "high",
+            "description": "Core managed care data exchange between state Medicaid and contracted MCOs. Eligibility files flow to MCOs; encounter and claims data flows back to MMIS for federal reporting and rate setting.",
+        },
+        # 2. hie -> mmis
+        {
+            "source_id": "hie",
+            "target_id": "mmis",
+            "direction": "unidirectional",
+            "format": "HL7",
+            "frequency": "batch",
+            "data_shared": (["admission_notifications", "discharge_summaries"]),
+            "governing_agreement": "State HIE Participation Agreement",
+            "privacy_law": "HIPAA",
+            "reliability": "moderate",
+            "description": "HIE sends admission/discharge/transfer notifications to Medicaid for care coordination and cost management. Enables MMIS to track hospital utilization patterns.",
+        },
+        # 3. hie <-> mco
+        {
+            "source_id": "hie",
+            "target_id": "mco",
+            "direction": "bidirectional",
+            "format": "FHIR",
+            "frequency": "realtime",
+            "data_shared": (["lab_results", "hospital_events", "medications"]),
+            "governing_agreement": "HIE Data Use Agreement",
+            "privacy_law": "HIPAA",
+            "reliability": "moderate",
+            "description": "Real-time clinical data exchange between HIE and managed care organizations. MCOs receive alerts on member hospital events; HIE receives care plan and authorization data.",
+        },
+        # 4. pdmp -> hie
+        {
+            "source_id": "pdmp",
+            "target_id": "hie",
+            "direction": "unidirectional",
+            "format": "custom",
+            "frequency": "daily",
+            "data_shared": (["controlled_substance_prescriptions"]),
+            "governing_agreement": "State PDMP Integration Agreement",
+            "privacy_law": "State PDMP Law",
+            "reliability": "moderate",
+            "description": "PDMP data feeds into HIE to provide prescribers with controlled substance history at the point of care, supporting opioid prescribing guidelines and patient safety.",
+        },
+        # 5. mmis <-> snap_ebt
+        {
+            "source_id": "mmis",
+            "target_id": "snap_ebt",
+            "direction": "bidirectional",
+            "format": "flat_file",
+            "frequency": "batch",
+            "data_shared": (["eligibility", "demographics"]),
+            "governing_agreement": "Interagency DUA",
+            "privacy_law": "HIPAA",
+            "reliability": "moderate",
+            "description": "Shared eligibility and demographic data between Medicaid and SNAP systems within the same state agency. Enables joint eligibility determinations and reduces duplicate data entry for applicants.",
+        },
+        # 6. snap_ebt <-> tanf
+        {
+            "source_id": "snap_ebt",
+            "target_id": "tanf",
+            "direction": "bidirectional",
+            "format": "flat_file",
+            "frequency": "realtime",
+            "data_shared": (["eligibility", "household", "income"]),
+            "governing_agreement": "Same Agency System",
+            "privacy_law": "DHS Policy",
+            "reliability": "high",
+            "description": "Tightly integrated systems within the same state DHS agency. SNAP and TANF share eligibility, household composition, and income data in real-time for coordinated benefit administration.",
+        },
+        # 7. ssa -> mmis
+        {
+            "source_id": "ssa",
+            "target_id": "mmis",
+            "direction": "unidirectional",
+            "format": "flat_file",
+            "frequency": "monthly",
+            "data_shared": (["ssi_eligibility", "disability_status"]),
+            "governing_agreement": "Federal-State Agreement",
+            "privacy_law": "Privacy Act + HIPAA",
+            "reliability": "high",
+            "description": "Federal SSA transmits SSI eligibility and disability status data to state Medicaid systems. SSI recipients are categorically eligible for Medicaid in most states, making this a critical eligibility data source.",
+        },
+        # 8. cjis <-> court_cms
+        {
+            "source_id": "cjis",
+            "target_id": "court_cms",
+            "direction": "bidirectional",
+            "format": "custom",
+            "frequency": "batch",
+            "data_shared": (["criminal_history", "dispositions", "warrants"]),
+            "governing_agreement": "CJIS Security Agreement",
+            "privacy_law": "28 CFR Part 20",
+            "reliability": "high",
+            "description": "Criminal history and disposition data flows between federal/state CJIS and county court systems. Courts submit dispositions; CJIS provides rap sheets and warrant checks.",
+        },
+        # 9. doc -> probation_parole
+        {
+            "source_id": "doc",
+            "target_id": "probation_parole",
+            "direction": "unidirectional",
+            "format": "custom",
+            "frequency": "batch",
+            "data_shared": (["release_dates", "conditions", "risk_scores"]),
+            "governing_agreement": "DOC-Probation MOU",
+            "privacy_law": "State Corrections Law",
+            "reliability": "moderate",
+            "description": "DOC transmits release information, supervision conditions, and risk assessment scores to probation/parole for transition planning. Often delayed and incomplete.",
+        },
+        # 10. sacwis <-> court_cms
+        {
+            "source_id": "sacwis",
+            "target_id": "court_cms",
+            "direction": "bidirectional",
+            "format": "custom",
+            "frequency": "manual",
+            "data_shared": (["court_orders", "placement_decisions", "hearing_dates"]),
+            "governing_agreement": "CW-Court Protocol",
+            "privacy_law": "State Child Welfare Law",
+            "reliability": "low",
+            "description": "Child welfare and court systems exchange placement decisions, court orders, and hearing schedules. Often relies on manual processes -- caseworkers physically carrying documents between systems.",
+        },
+        # 11. slds <-> iep
+        {
+            "source_id": "slds",
+            "target_id": "iep",
+            "direction": "bidirectional",
+            "format": "custom",
+            "frequency": "batch",
+            "data_shared": (["enrollment", "special_ed_status", "accommodations"]),
+            "governing_agreement": "Intra-Agency Agreement",
+            "privacy_law": "FERPA",
+            "reliability": "moderate",
+            "description": "State education data system exchanges enrollment and special education status with district-level IEP systems. Enables tracking of special education students across district boundaries.",
+        },
+        # 12. mmis <-> vital_records
+        {
+            "source_id": "mmis",
+            "target_id": "vital_records",
+            "direction": "unidirectional",
+            "format": "flat_file",
+            "frequency": "monthly",
+            "data_shared": (["birth_records", "death_records"]),
+            "governing_agreement": "State DUA",
+            "privacy_law": "Vital Records Act",
+            "reliability": "moderate",
+            "description": "Vital records shares birth and death data with Medicaid for auto-enrollment of newborns and termination of deceased beneficiaries. Critical for maintaining accurate enrollment counts.",
+        },
+        # 13. hie <-> cmhc_ehr
+        {
+            "source_id": "hie",
+            "target_id": "cmhc_ehr",
+            "direction": "bidirectional",
+            "format": "HL7",
+            "frequency": "daily",
+            "data_shared": (["clinical_summaries", "medications", "lab_results"]),
+            "governing_agreement": "HIE Participation",
+            "privacy_law": "HIPAA",
+            "reliability": "moderate",
+            "description": "Community mental health centers exchange clinical summaries, medication lists, and lab results through the HIE. Enables primary care providers to see behavioral health context and vice versa.",
+        },
+        # 14. mmis <-> ltss
+        {
+            "source_id": "mmis",
+            "target_id": "ltss",
+            "direction": "bidirectional",
+            "format": "X12_837P",
+            "frequency": "daily",
+            "data_shared": (["waiver_eligibility", "service_authorizations", "claims", "level_of_care"]),
+            "governing_agreement": "HCBS Waiver State Plan",
+            "privacy_law": "HIPAA",
+            "reliability": "moderate",
+            "description": "Medicaid and LTSS exchange waiver eligibility, service authorizations, and claims data. MMIS authorizes HCBS waiver services; LTSS submits claims back to MMIS. Critical for Olmstead compliance tracking.",
+        },
+        # 15. hie <-> adt_notifications
+        {
+            "source_id": "adt_notifications",
+            "target_id": "hie",
+            "direction": "unidirectional",
+            "format": "HL7_ADT",
+            "frequency": "realtime",
+            "data_shared": (["admission_events", "discharge_events", "transfer_events"]),
+            "governing_agreement": "CMS Condition of Participation",
+            "privacy_law": "HIPAA",
+            "reliability": "high",
+            "description": "Hospitals send real-time ADT notifications to the HIE per CMS Interoperability Rule (CMS-9115-F). ADT messages trigger care coordination workflows for managed care plans and primary care providers.",
+        },
+        # 16. mmis <-> ncpdp_pharmacy
+        {
+            "source_id": "mmis",
+            "target_id": "ncpdp_pharmacy",
+            "direction": "bidirectional",
+            "format": "NCPDP",
+            "frequency": "realtime",
+            "data_shared": (["pharmacy_claims", "formulary", "prior_authorizations", "drug_rebate_data"]),
+            "governing_agreement": "Medicaid PBM Contract",
+            "privacy_law": "HIPAA",
+            "reliability": "high",
+            "description": "Real-time point-of-sale pharmacy claims processing using NCPDP Telecommunication Standard. MMIS adjudicates drug claims, manages formulary, and processes Medicaid Drug Rebate Program data.",
+        },
+        # 17. hie <-> immunization_registry
+        {
+            "source_id": "hie",
+            "target_id": "immunization_registry",
+            "direction": "bidirectional",
+            "format": "HL7_251",
+            "frequency": "daily",
+            "data_shared": (["immunization_history", "forecast", "contraindications"]),
+            "governing_agreement": "State Health Department DUA",
+            "privacy_law": "HIPAA",
+            "reliability": "high",
+            "description": "HIE integrates with the state immunization registry to provide immunization history at point of care and report newly administered vaccines. Supports school compliance verification and outbreak response.",
+        },
+        # 18. jms <-> court_cms
+        {
+            "source_id": "jms",
+            "target_id": "court_cms",
+            "direction": "bidirectional",
+            "format": "custom",
+            "frequency": "daily",
+            "data_shared": (["booking_data", "court_dates", "bail_status", "release_orders"]),
+            "governing_agreement": "County Justice Integration Agreement",
+            "privacy_law": "State Criminal Records Act",
+            "reliability": "moderate",
+            "description": "County jail and court systems exchange booking data, court scheduling, bail status, and release orders. Often the most functional justice data exchange because both operate at the county level under the same government.",
+        },
+        # 19. mmis <-> wic
+        {
+            "source_id": "mmis",
+            "target_id": "wic",
+            "direction": "bidirectional",
+            "format": "flat_file",
+            "frequency": "batch",
+            "data_shared": (["eligibility", "demographics", "pregnancy_status"]),
+            "governing_agreement": "State Health-DHS Interagency Agreement",
+            "privacy_law": "HIPAA",
+            "reliability": "moderate",
+            "description": "Medicaid and WIC share eligibility data for adjunctive eligibility (Medicaid recipients are automatically WIC income-eligible). Reduces redundant income verification and increases WIC participation rates among eligible families.",
+        },
+        # 20. child_support <-> tanf
+        {
+            "source_id": "child_support",
+            "target_id": "tanf",
+            "direction": "bidirectional",
+            "format": "flat_file",
+            "frequency": "daily",
+            "data_shared": (["support_orders", "payment_status", "paternity", "income_data"]),
+            "governing_agreement": "Federal TANF-CSE Coordination Requirement",
+            "privacy_law": "45 CFR Part 303",
+            "reliability": "high",
+            "description": "TANF and Child Support Enforcement share data as required by federal law. TANF recipients must cooperate with CSE as condition of benefits. CSE provides payment data that affects TANF benefit calculations.",
+        },
+        # 21. early_intervention <-> iep
+        {
+            "source_id": "early_intervention",
+            "target_id": "iep",
+            "direction": "unidirectional",
+            "format": "custom",
+            "frequency": "manual",
+            "data_shared": (["ifsp_plans", "developmental_assessments", "transition_plans"]),
+            "governing_agreement": "IDEA Part C to Part B Transition Agreement",
+            "privacy_law": "FERPA + IDEA",
+            "reliability": "low",
+            "description": "Early intervention transfers child records to school district IEP systems at age 3 transition. Federal law requires smooth transition but implementation is often manual with significant data loss during handoff.",
+        },
+    ]
+
+    for conn_data in connections:
+        conn = Connection(**conn_data)
+        db.add(conn)
+    db.flush()
+
+
+def seed_gaps_and_bridges(db: Session):
+    """Seed all 22 gaps and their bridge solutions (18 original + 4 new)."""
+
+    # ── Gap 1: DOC <-> MMIS ────────────────────────────────────────────
+    gap1 = Gap(
+        system_a_id="doc",
+        system_b_id="mmis",
+        barrier_type="legal",
+        barrier_law="Medicaid Inmate Exclusion Policy",
+        barrier_description="Federal Medicaid law prohibits payment for services to incarcerated individuals (the 'inmate exclusion policy'). This means Medicaid coverage is typically terminated -- not just suspended -- upon incarceration, creating a catastrophic gap in health coverage at release.",
+        impact="People leave prison with no health insurance, no prescriptions, no continuity of care. Medications for chronic conditions (HIV, hepatitis C, diabetes, mental illness) are interrupted. Studies show the first two weeks post-release have the highest mortality risk, with overdose death rates 129x the general population.",
+        severity="critical",
+        cost_to_bridge="$2-5M",
+        timeline_to_bridge="18-24 months",
+        consent_closable=True,
+        consent_mechanism="HIPAA Authorization for Release of Medical Records",
+        what_it_would_take="State policy change to suspend (not terminate) Medicaid during incarceration, pre-release enrollment system, FHIR-based health record transfer from DOC to community providers, and standardized HIPAA authorization signed before release.",
+        applies_when=(["incarcerated", "recently_released", "medicaid"]),
+    )
+    db.add(gap1)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap1.id,
+        bridge_type="technical",
+        title="Pre-Release Medicaid Enrollment System",
+        description="FHIR API connecting DOC health records to state Medicaid enrollment system, enabling automatic Medicaid reinstatement 90 days before release with health record transfer to designated community providers.",
+        technical_requirements="FHIR R4 API on DOC EHR, Medicaid eligibility service endpoint, secure transport layer, patient matching algorithm, provider directory integration",
+        legal_requirements="State Medicaid Plan Amendment, DOC-DHS Interagency Agreement, HIPAA Business Associate Agreement",
+        estimated_cost="$2-5M",
+        timeline="18-24 months",
+        who_pays="State Medicaid Agency (90/10 federal match for systems)",
+        priority_score=9.5,
+        impact_score=10.0,
+        effort_score=7.0,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap1.id,
+        bridge_type="legal",
+        title="Medicaid Suspension (Not Termination) Policy",
+        description="Change state policy to suspend rather than terminate Medicaid eligibility during incarceration, enabling immediate reinstatement upon release without re-application.",
+        technical_requirements="MMIS configuration change to add 'suspended' status, automated reinstatement trigger on release notification",
+        legal_requirements="State Medicaid Plan Amendment, CMS approval, state legislative action if required by state law",
+        estimated_cost="$100K",
+        timeline="6-12 months",
+        who_pays="State Legislature / Medicaid Agency",
+        priority_score=9.0,
+        impact_score=9.0,
+        effort_score=4.0,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap1.id,
+        bridge_type="consent",
+        title="Pre-Release Health Record Transfer",
+        description="Standardized HIPAA authorization signed 90 days before release, enabling transfer of DOC health records to designated community health providers before the person leaves custody.",
+        technical_requirements="Standardized release form, secure document transfer mechanism (Direct messaging or fax gateway), provider directory",
+        legal_requirements="HIPAA-compliant authorization form, DOC policy change to implement 90-day pre-release process",
+        estimated_cost="$50K",
+        timeline="3-6 months",
+        who_pays="DOC / Reentry Services",
+        priority_score=8.0,
+        impact_score=7.0,
+        effort_score=2.0,
+        status="proposed",
+    ))
+
+    # ── Gap 2: DOC <-> BHA ─────────────────────────────────────────────
+    gap2 = Gap(
+        system_a_id="doc",
+        system_b_id="bha",
+        barrier_type="legal",
+        barrier_law="42 CFR Part 2",
+        barrier_description="Federal regulation 42 CFR Part 2 prohibits disclosure of substance use disorder treatment records without specific written patient consent. DOC health records containing SUD treatment cannot be shared with community behavioral health providers without consent that names the specific recipient.",
+        impact="People on medication-assisted treatment (MAT) for opioid use disorder lose access to methadone or buprenorphine upon release because community providers cannot access DOC treatment records. This gap kills people -- MAT interruption dramatically increases overdose risk.",
+        severity="critical",
+        cost_to_bridge="$1-3M",
+        timeline_to_bridge="12-18 months",
+        consent_closable=True,
+        consent_mechanism="42 CFR Part 2 Specific Consent",
+        what_it_would_take="Pre-release 42 CFR Part 2 consent protocol naming community providers, secure treatment record transfer system, and DOC-BHA interagency agreement for MAT continuity.",
+        applies_when=(["incarcerated", "recently_released", "substance_use", "mental_health"]),
+    )
+    db.add(gap2)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap2.id,
+        bridge_type="consent",
+        title="MAT Continuity Consent Protocol",
+        description="Standardized pre-release 42 CFR Part 2 consent form signed by incarcerated individuals on MAT, naming their designated community behavioral health provider as an authorized recipient of SUD treatment records.",
+        technical_requirements="Consent management platform, provider directory integration, secure document transfer",
+        legal_requirements="42 CFR Part 2 compliant consent form, DOC-BHA MOU, provider enrollment process",
+        estimated_cost="$50K",
+        timeline="3-6 months",
+        who_pays="DOC + BHA jointly",
+        priority_score=9.0,
+        impact_score=9.0,
+        effort_score=2.0,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap2.id,
+        bridge_type="technical",
+        title="Corrections-to-Community Treatment Bridge",
+        description="Secure data exchange platform connecting DOC behavioral health records to community SUD/MH treatment providers, with consent management built in and 42 CFR Part 2 audit trail.",
+        technical_requirements="Consent management system, secure API gateway, audit logging, DOC EHR integration, BHA system integration",
+        legal_requirements="42 CFR Part 2 compliant architecture, DOC-BHA Data Use Agreement, BAA with technology vendor",
+        estimated_cost="$1-3M",
+        timeline="12-18 months",
+        who_pays="State (SAMHSA grant eligible)",
+        priority_score=8.0,
+        impact_score=9.0,
+        effort_score=6.0,
+        status="proposed",
+    ))
+
+    # ── Gap 3: Probation/Parole <-> BHA ────────────────────────────────
+    gap3 = Gap(
+        system_a_id="probation_parole",
+        system_b_id="bha",
+        barrier_type="legal",
+        barrier_law="42 CFR Part 2",
+        barrier_description="Probation officers often need to verify treatment compliance as a condition of supervision, but 42 CFR Part 2 prohibits BH providers from confirming or denying a person's participation in SUD treatment to criminal justice entities without specific consent.",
+        impact="Probation officers cannot verify treatment attendance, leading to unnecessary violations, revocations, and re-incarceration for people who are actually complying with treatment. People are sent back to prison for 'failure to verify' when they are in fact receiving treatment.",
+        severity="high",
+        cost_to_bridge="$200K-500K",
+        timeline_to_bridge="6-12 months",
+        consent_closable=True,
+        consent_mechanism="Limited Scope Compliance-Only Disclosure",
+        what_it_would_take="Standardized consent form allowing compliance-only disclosure (attendance, not clinical details), 42 CFR Part 2 modernization implementation, and probation-BHA protocol agreement.",
+        applies_when=(["probation", "parole", "substance_use", "court_ordered_treatment"]),
+    )
+    db.add(gap3)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap3.id,
+        bridge_type="consent",
+        title="Compliance-Only Consent Form",
+        description="Standardized consent allowing BH provider to share only treatment attendance data (not clinical details) with probation officer. Satisfies 42 CFR Part 2 while giving PO the verification needed.",
+        technical_requirements="Simple secure portal or fax-based attendance verification system",
+        legal_requirements="42 CFR Part 2 compliant consent form limiting disclosure to attendance only, BHA-Probation protocol agreement",
+        estimated_cost="$25K",
+        timeline="2-3 months",
+        who_pays="BHA",
+        priority_score=8.5,
+        impact_score=8.0,
+        effort_score=1.5,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap3.id,
+        bridge_type="legal",
+        title="42 CFR Part 2 Modernization Implementation",
+        description="Implement the 2024 SAMHSA final rule changes that better align 42 CFR Part 2 with HIPAA, allowing broader sharing of SUD treatment records under standard HIPAA treatment/payment/operations permissions.",
+        technical_requirements="Policy updates, staff training, system configuration changes, consent form updates",
+        legal_requirements="State-level implementation guidance, updated provider policies, staff training on new rules",
+        estimated_cost="$200K",
+        timeline="6-12 months",
+        who_pays="State Behavioral Health Authority",
+        priority_score=7.0,
+        impact_score=7.0,
+        effort_score=5.0,
+        status="proposed",
+    ))
+
+    # ── Gap 4: Probation/Parole <-> MMIS ──────────────────────────────
+    gap4 = Gap(
+        system_a_id="probation_parole",
+        system_b_id="mmis",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="No technical interface exists between probation/parole systems and Medicaid. People on community supervision who are eligible for Medicaid have no automated pathway to enroll or verify coverage, resulting in manual processes that often fail.",
+        impact="People on probation/parole who are Medicaid-eligible often don't know it or can't navigate enrollment. Without health coverage, court-ordered treatment requirements become impossible to fulfill, leading to violations and re-incarceration.",
+        severity="high",
+        cost_to_bridge="$500K-1M",
+        timeline_to_bridge="12-18 months",
+        consent_closable=False,
+        consent_mechanism=None,
+        what_it_would_take="Real-time API integration between probation case management and Medicaid eligibility systems, with automated eligibility screening and enrollment assistance built into the probation intake process.",
+        applies_when=(["probation", "parole", "medicaid", "low_income"]),
+    )
+    db.add(gap4)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap4.id,
+        bridge_type="technical",
+        title="Probation-Medicaid Eligibility API",
+        description="Real-time API enabling probation officers to check Medicaid eligibility and initiate enrollment directly from the probation case management system during intake.",
+        technical_requirements="REST API on MMIS eligibility service, probation system integration, secure authentication, patient matching",
+        legal_requirements="Interagency Data Use Agreement between DOC/Probation and DHS/Medicaid, HIPAA BAA",
+        estimated_cost="$500K-1M",
+        timeline="12-18 months",
+        who_pays="State DHS + DOC jointly",
+        priority_score=7.5,
+        impact_score=8.0,
+        effort_score=5.0,
+        status="proposed",
+    ))
+
+    # ── Gap 5: HMIS <-> MMIS ──────────────────────────────────────────
+    gap5 = Gap(
+        system_a_id="hmis",
+        system_b_id="mmis",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="No data exchange exists between homeless services and Medicaid systems. Housing status -- one of the strongest predictors of health outcomes -- is invisible to the health system, and health needs are invisible to housing providers.",
+        impact="People experiencing homelessness cycle between ERs and shelters with no coordinated response. MCOs cannot identify members who are homeless to deploy housing-focused care coordination. Housing providers cannot identify medical needs driving shelter utilization.",
+        severity="critical",
+        cost_to_bridge="$1-3M",
+        timeline_to_bridge="12-24 months",
+        consent_closable=True,
+        consent_mechanism="Housing Status Data Sharing Authorization",
+        what_it_would_take="Community Information Exchange (CIE) platform connecting HMIS to HIE/Medicaid, standardized housing status data elements, person-level consent for cross-sector sharing, and sustainable funding model.",
+        applies_when=(["homeless", "housing_unstable", "medicaid", "any_healthcare"]),
+    )
+    db.add(gap5)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap5.id,
+        bridge_type="technical",
+        title="HMIS-HIE Bridge (CIE Standard)",
+        description="Community Information Exchange connecting HMIS housing data to state HIE, enabling health providers to see housing status and housing providers to see relevant health needs.",
+        technical_requirements="CIE platform (e.g., Unite Us, Aunt Bertha/findhelp), HMIS API, HIE integration, FHIR social determinants resources, patient matching",
+        legal_requirements="Multi-party Data Use Agreement, HMIS-HIE data governance framework, HUD approval for HMIS data sharing",
+        estimated_cost="$1-3M",
+        timeline="12-24 months",
+        who_pays="HUD + State Medicaid (joint funding)",
+        priority_score=9.0,
+        impact_score=10.0,
+        effort_score=7.0,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap5.id,
+        bridge_type="consent",
+        title="Housing Status Sharing Authorization",
+        description="Person authorizes HMIS to share their housing status with their Medicaid MCO, enabling housing-focused care coordination without full system integration.",
+        technical_requirements="Consent management form, secure fax or portal for status sharing, MCO care coordination intake",
+        legal_requirements="HUD-compliant consent form, MCO agreement to accept and act on housing data",
+        estimated_cost="$50K",
+        timeline="3-6 months",
+        who_pays="Continuum of Care",
+        priority_score=8.0,
+        impact_score=7.0,
+        effort_score=2.0,
+        status="proposed",
+    ))
+
+    # ── Gap 6: HMIS <-> BHA ───────────────────────────────────────────
+    gap6 = Gap(
+        system_a_id="hmis",
+        system_b_id="bha",
+        barrier_type="political",
+        barrier_law=None,
+        barrier_description="Housing and behavioral health systems operate under different agencies, funding streams, and political leadership. Despite serving many of the same people, there is no shared data infrastructure and limited institutional will to build one.",
+        impact="People with co-occurring homelessness and behavioral health conditions fall through the cracks between systems. Housing providers don't know a person's treatment status; BH providers don't know a person is sleeping outside. The result is fragmented, reactive crisis response instead of coordinated care.",
+        severity="high",
+        cost_to_bridge="$500K-2M",
+        timeline_to_bridge="12-24 months",
+        consent_closable=True,
+        consent_mechanism="Cross-Agency Service Authorization",
+        what_it_would_take="Political leadership committing both agencies to shared platform, CIE implementation connecting housing and BH data, cross-agency governance structure, and sustainable funding.",
+        applies_when=(["homeless", "housing_unstable", "mental_health", "substance_use"]),
+    )
+    db.add(gap6)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap6.id,
+        bridge_type="technical",
+        title="Community Information Exchange Platform",
+        description="Shared CIE platform connecting housing services, behavioral health, and social services data with consent-based cross-referral and care coordination capabilities.",
+        technical_requirements="CIE platform procurement, HMIS integration, BHA system integration, consent management, closed-loop referral tracking",
+        legal_requirements="Multi-agency Data Governance Agreement, 42 CFR Part 2 consent workflow for SUD data, HUD HMIS compliance",
+        estimated_cost="$500K-2M",
+        timeline="12-24 months",
+        who_pays="City/County (SAMHSA, HUD, Medicaid waiver funding)",
+        priority_score=7.5,
+        impact_score=8.0,
+        effort_score=6.0,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap6.id,
+        bridge_type="consent",
+        title="Cross-Agency Service Release",
+        description="Person authorizes housing and behavioral health providers to share service information for coordinated care. Simple paper consent enabling warm handoffs without full system integration.",
+        technical_requirements="Standardized consent form, basic tracking spreadsheet or shared portal",
+        legal_requirements="42 CFR Part 2 compliant consent (if SUD involved), HMIS release, agency-level MOUs",
+        estimated_cost="$25K",
+        timeline="2-3 months",
+        who_pays="Participating agencies",
+        priority_score=7.0,
+        impact_score=6.0,
+        effort_score=1.5,
+        status="proposed",
+    ))
+
+    # ── Gap 7: PHA <-> MMIS ───────────────────────────────────────────
+    gap7 = Gap(
+        system_a_id="pha",
+        system_b_id="mmis",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="Public housing and Medicaid systems have no data exchange. Housing stability is a critical health determinant, but health plans cannot identify members in public housing, and PHAs cannot leverage health data for housing-related services.",
+        impact="Public housing residents with chronic health conditions receive no targeted health outreach. PHAs cannot demonstrate the health impacts of housing stability for funding justification. Opportunities for housing-based health interventions are missed.",
+        severity="moderate",
+        cost_to_bridge="$300K-800K",
+        timeline_to_bridge="12-18 months",
+        consent_closable=True,
+        consent_mechanism="Bidirectional Housing-Health Release",
+        what_it_would_take="Federal HUD-HHS data matching initiative, local PHA-MCO partnership agreements, and standardized consent for bidirectional housing-health data sharing.",
+        applies_when=(["public_housing", "section_8", "medicaid"]),
+    )
+    db.add(gap7)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap7.id,
+        bridge_type="technical",
+        title="HUD-HHS Data Matching Initiative",
+        description="Federal data matching program linking public housing residents to Medicaid enrollment data, enabling targeted health interventions and demonstrating housing-health connections.",
+        technical_requirements="Secure data matching environment, PHA tenant data extract, MMIS enrollment extract, probabilistic matching algorithm, de-identification for aggregate analysis",
+        legal_requirements="Federal Computer Matching Agreement, HUD-HHS MOU, IRB approval for research use, individual consent for intervention programs",
+        estimated_cost="$300K-800K",
+        timeline="12-18 months",
+        who_pays="HUD + HHS (joint federal initiative)",
+        priority_score=6.0,
+        impact_score=6.0,
+        effort_score=5.0,
+        status="proposed",
+    ))
+
+    # ── Gap 8: IEP <-> BHA ───────────────────────────────────────────
+    gap8 = Gap(
+        system_a_id="iep",
+        system_b_id="bha",
+        barrier_type="legal",
+        barrier_law="FERPA",
+        barrier_description="FERPA restricts sharing of education records (including IEP data) outside the educational context. 42 CFR Part 2 restricts sharing of SUD treatment data. Together, these create a double-lock preventing coordination between schools and behavioral health providers.",
+        impact="Children receiving both special education services and behavioral health treatment have fragmented care plans. School counselors cannot see what a child's therapist is doing; therapists cannot see IEP goals. Children with trauma histories repeat their stories to every new provider.",
+        severity="high",
+        cost_to_bridge="$300K-800K",
+        timeline_to_bridge="6-12 months",
+        consent_closable=True,
+        consent_mechanism="FERPA Release for Behavioral Health Coordination",
+        what_it_would_take="Parental FERPA consent plus digital shared care plan platform connecting school and behavioral health data, with dual consent workflow for any SUD-related information.",
+        applies_when=(["special_education", "mental_health", "substance_use", "school_age"]),
+    )
+    db.add(gap8)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap8.id,
+        bridge_type="consent",
+        title="Shared Care Plan Platform (School-BH)",
+        description="Digital shared care plan platform where parents consent to school and behavioral health providers sharing treatment goals, progress notes, and accommodations for coordinated care.",
+        technical_requirements="Web-based care plan platform, FERPA-compliant consent workflow, role-based access control, audit logging",
+        legal_requirements="FERPA release form, 42 CFR Part 2 consent (if SUD), parental consent under IDEA, school district policy approval",
+        estimated_cost="$300K-800K",
+        timeline="6-12 months",
+        who_pays="School District + BHA (SAMHSA School-Based MH grant eligible)",
+        priority_score=7.0,
+        impact_score=7.0,
+        effort_score=4.0,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap8.id,
+        bridge_type="legal",
+        title="FERPA-42 CFR Part 2 Dual Consent",
+        description="Combined consent form satisfying both FERPA and 42 CFR Part 2 requirements, enabling bidirectional school-behavioral health data sharing with a single parental signature.",
+        technical_requirements="Consent form template, staff training materials, tracking system for consent status",
+        legal_requirements="Legal review confirming dual compliance, school board approval, BHA policy approval",
+        estimated_cost="$50K",
+        timeline="3-6 months",
+        who_pays="Legal counsel (school district + BHA)",
+        priority_score=6.5,
+        impact_score=6.0,
+        effort_score=2.0,
+        status="proposed",
+    ))
+
+    # ── Gap 9: IEP <-> MMIS ──────────────────────────────────────────
+    gap9 = Gap(
+        system_a_id="iep",
+        system_b_id="mmis",
+        barrier_type="legal",
+        barrier_law="FERPA",
+        barrier_description="FERPA prevents education systems from sharing IEP data with Medicaid without parental consent. Schools can bill Medicaid for IEP-related health services but the billing process is manual, error-prone, and most eligible services go unbilled.",
+        impact="Schools lose millions in Medicaid reimbursement for speech therapy, occupational therapy, counseling, and other IEP services they are already providing. This funding gap means fewer resources for special education students.",
+        severity="moderate",
+        cost_to_bridge="$1-5M",
+        timeline_to_bridge="18-24 months",
+        consent_closable=True,
+        consent_mechanism="Parent Consent for School-Based Medicaid Billing",
+        what_it_would_take="Automated school-based Medicaid billing integration, parental consent at IEP enrollment, standardized service codes, and state DOE-DHS partnership for implementation.",
+        applies_when=(["special_education", "medicaid", "school_age"]),
+    )
+    db.add(gap9)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap9.id,
+        bridge_type="technical",
+        title="School-Based Medicaid Billing Integration",
+        description="Direct electronic claims submission from school IEP systems to Medicaid, with parental consent captured at IEP enrollment and automated service-to-code mapping.",
+        technical_requirements="IEP system claims module, X12 837 claim generation, MMIS intake API, service-to-CPT code mapping, Medicaid eligibility verification",
+        legal_requirements="Parental consent form (FERPA + Medicaid), State Plan Amendment for school-based services, DOE-DHS Interagency Agreement",
+        estimated_cost="$1-5M",
+        timeline="18-24 months",
+        who_pays="State DOE + DHS (enhanced federal match for Medicaid systems)",
+        priority_score=6.0,
+        impact_score=6.0,
+        effort_score=7.0,
+        status="proposed",
+    ))
+
+    # ── Gap 10: SACWIS <-> MMIS ──────────────────────────────────────
+    gap10 = Gap(
+        system_a_id="sacwis",
+        system_b_id="mmis",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="Child welfare and Medicaid systems lack real-time integration. When a child enters foster care or changes placement, there is no automated process to transfer Medicaid coverage or health records. Children in foster care are categorically eligible for Medicaid but often experience coverage gaps during transitions.",
+        impact="Foster children experience gaps in health coverage during placement changes, sometimes going weeks without access to medications or therapy. Health records don't follow children across placements, leading to duplicated assessments, missed diagnoses, and over-medication.",
+        severity="critical",
+        cost_to_bridge="$2-5M",
+        timeline_to_bridge="18-24 months",
+        consent_closable=False,
+        consent_mechanism=None,
+        what_it_would_take="Real-time SACWIS-MMIS interface triggered by placement events, portable health record ('health passport') following each child, and automated Medicaid transfer on placement change.",
+        applies_when=(["foster_care", "child_welfare", "medicaid"]),
+    )
+    db.add(gap10)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap10.id,
+        bridge_type="technical",
+        title="Real-Time SACWIS-MMIS Interface + Health Passport",
+        description="Automated interface that triggers Medicaid coverage transfer and health record compilation when SACWIS records a placement change, creating a portable health passport for each foster child.",
+        technical_requirements="SACWIS event notification service, MMIS enrollment API, FHIR-based health record aggregation, health passport web portal, provider notification system",
+        legal_requirements="Interagency Agreement (CW-DHS), HIPAA BAA, Title IV-E compliance, state child welfare policy update",
+        estimated_cost="$2-5M",
+        timeline="18-24 months",
+        who_pays="State CW Agency + DHS (Title IV-E administrative match + Medicaid systems match)",
+        priority_score=9.0,
+        impact_score=10.0,
+        effort_score=7.0,
+        status="proposed",
+    ))
+
+    # ── Gap 11: SACWIS <-> BHA ───────────────────────────────────────
+    gap11 = Gap(
+        system_a_id="sacwis",
+        system_b_id="bha",
+        barrier_type="political",
+        barrier_law=None,
+        barrier_description="Child welfare and behavioral health agencies operate in separate silos despite serving overlapping populations. Parents involved in CW cases often have SUD/MH conditions, but agencies lack shared data infrastructure and face political tensions around information sharing.",
+        impact="Caseworkers make safety decisions about children without knowing a parent's treatment status. Parents in recovery are penalized because their progress is invisible to the child welfare system. Children's behavioral health needs go unaddressed because CW caseworkers lack clinical context.",
+        severity="critical",
+        cost_to_bridge="$1-3M",
+        timeline_to_bridge="12-18 months",
+        consent_closable=True,
+        consent_mechanism="Parent Treatment Progress Release",
+        what_it_would_take="Cross-agency governance agreement, shared case management platform, 42 CFR Part 2 consent workflow for parent SUD data, and political leadership committing both agencies to collaboration.",
+        applies_when=(["child_welfare", "foster_care", "substance_use", "mental_health"]),
+    )
+    db.add(gap11)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap11.id,
+        bridge_type="technical",
+        title="Wraparound Care Coordination Platform",
+        description="Shared case management platform enabling child welfare caseworkers and behavioral health providers to coordinate care for families in the CW system, with consent-based data sharing and role-based access.",
+        technical_requirements="Multi-tenant care coordination platform, SACWIS integration, BHA system integration, consent management, role-based access, audit logging",
+        legal_requirements="Cross-agency Data Governance Agreement, 42 CFR Part 2 consent workflow, child welfare confidentiality compliance, BAA with vendor",
+        estimated_cost="$1-3M",
+        timeline="12-18 months",
+        who_pays="State (Title IV-E + SAMHSA funding)",
+        priority_score=8.5,
+        impact_score=9.0,
+        effort_score=6.0,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap11.id,
+        bridge_type="consent",
+        title="Parent Treatment Progress Authorization",
+        description="Parent authorizes behavioral health provider to share treatment attendance and progress (not clinical details) with child welfare caseworker, demonstrating compliance with case plan requirements.",
+        technical_requirements="Standardized authorization form, secure communication channel (portal or fax), progress report template",
+        legal_requirements="42 CFR Part 2 compliant consent form, CW-BHA protocol agreement, parent rights notification",
+        estimated_cost="$25K",
+        timeline="2-3 months",
+        who_pays="Participating agencies",
+        priority_score=8.0,
+        impact_score=7.0,
+        effort_score=1.5,
+        status="proposed",
+    ))
+
+    # ── Gap 12: VA <-> HIE ───────────────────────────────────────────
+    gap12 = Gap(
+        system_a_id="va_system",
+        system_b_id="hie",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="The VA healthcare system operates separately from civilian health infrastructure. Most state HIEs do not receive VA data, meaning community providers treating veterans cannot see VA health records and VA providers cannot see community health records.",
+        impact="Veterans receiving care from both VA and community providers have fragmented health records. Duplicate tests are ordered, dangerous drug interactions are missed, and care is poorly coordinated. Veterans in rural areas who use both VA telehealth and local providers are especially at risk.",
+        severity="high",
+        cost_to_bridge="$500K-2M",
+        timeline_to_bridge="12-18 months",
+        consent_closable=True,
+        consent_mechanism="VA Form 10-5345 Authorization",
+        what_it_would_take="VA-state HIE FHIR integration through VA Community Care network, veteran consent via VA Form 10-5345, and sustainable funding for ongoing data exchange.",
+        applies_when=(["veteran", "any_healthcare"]),
+    )
+    db.add(gap12)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap12.id,
+        bridge_type="technical",
+        title="VA-State HIE FHIR Integration",
+        description="Connect VA Community Care network to state HIE using FHIR APIs, enabling bidirectional health data exchange between VA and civilian providers.",
+        technical_requirements="VA Lighthouse FHIR API, state HIE FHIR endpoint, patient matching between VA and state MPI, consent management",
+        legal_requirements="VA-State HIE Data Sharing Agreement, veteran consent (VA Form 10-5345), HIPAA BAA",
+        estimated_cost="$500K-2M",
+        timeline="12-18 months",
+        who_pays="VA + State (VA MISSION Act funding)",
+        priority_score=7.0,
+        impact_score=7.0,
+        effort_score=5.0,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap12.id,
+        bridge_type="consent",
+        title="VA Health Record Sharing Authorization",
+        description="Streamlined process for veterans to sign VA Form 10-5345 naming state HIE as authorized recipient of VA health records, enabling community providers to access VA data.",
+        technical_requirements="Digital consent capture, VA form processing integration, HIE patient matching",
+        legal_requirements="VA Form 10-5345 (standard VA authorization), VA privacy officer approval, HIE data governance update",
+        estimated_cost="$10K",
+        timeline="1-2 months",
+        who_pays="VA",
+        priority_score=6.5,
+        impact_score=5.0,
+        effort_score=1.0,
+        status="proposed",
+    ))
+
+    # ── Gap 13: VA <-> MMIS ──────────────────────────────────────────
+    gap13 = Gap(
+        system_a_id="va_system",
+        system_b_id="mmis",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="Veterans who are dually eligible for VA healthcare and Medicaid have data in both systems with no automated sharing. Neither system knows what the other is providing, leading to duplicated services and missed coordination opportunities.",
+        impact="Dual-eligible veterans receive duplicated lab tests, imaging, and prescriptions because neither system can see the other's records. Medicaid pays for services VA could provide and vice versa. Care coordination between VA and state Medicaid MCOs is essentially nonexistent.",
+        severity="moderate",
+        cost_to_bridge="$1-3M",
+        timeline_to_bridge="18-24 months",
+        consent_closable=True,
+        consent_mechanism="Dual VA-Medicaid Consent",
+        what_it_would_take="Federal-state data matching initiative for dual VA-Medicaid beneficiaries, with consent-based bidirectional data sharing and care coordination protocols.",
+        applies_when=(["veteran", "medicaid", "disabled"]),
+    )
+    db.add(gap13)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap13.id,
+        bridge_type="technical",
+        title="Dual-Eligible Veteran Data Bridge",
+        description="Federal-state data matching program identifying dual VA-Medicaid beneficiaries and enabling coordinated benefits administration and care coordination.",
+        technical_requirements="Secure data matching environment, VA enrollment extract, MMIS enrollment extract, probabilistic matching, care coordination alert system",
+        legal_requirements="VA-CMS-State tripartite agreement, veteran consent, HIPAA/Privacy Act compliance, IRB if research component",
+        estimated_cost="$1-3M",
+        timeline="18-24 months",
+        who_pays="VA + CMS + State (joint federal-state initiative)",
+        priority_score=5.5,
+        impact_score=6.0,
+        effort_score=7.0,
+        status="proposed",
+    ))
+
+    # ── Gap 14: SSA <-> BHA ──────────────────────────────────────────
+    gap14 = Gap(
+        system_a_id="ssa",
+        system_b_id="bha",
+        barrier_type="legal",
+        barrier_law="Privacy Act + 42 CFR Part 2",
+        barrier_description="People applying for SSI disability based on mental health or SUD conditions need treatment records as evidence, but 42 CFR Part 2 prevents SUD providers from sharing records with SSA without specific consent, and the Privacy Act limits what SSA can share back.",
+        impact="Disability applications are denied or delayed for months because SSA cannot obtain treatment records. People with severe mental illness or SUD wait years for benefits they are entitled to, living in poverty and often becoming homeless during the wait.",
+        severity="high",
+        cost_to_bridge="$200K-500K",
+        timeline_to_bridge="6-12 months",
+        consent_closable=True,
+        consent_mechanism="42 CFR Part 2 Consent Naming SSA",
+        what_it_would_take="Integrated consent process embedded in SSI application, streamlined evidence submission from BH providers to SSA, and federal guidance clarifying permitted disclosures.",
+        applies_when=(["disabled", "mental_health", "substance_use", "ssi_application"]),
+    )
+    db.add(gap14)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap14.id,
+        bridge_type="consent",
+        title="SSI Application Integrated Consent",
+        description="Embed 42 CFR Part 2 specific consent in the SSI disability application process, so applicants authorize SUD treatment records to be shared with SSA as part of the disability evidence package.",
+        technical_requirements="SSA form integration, consent management, secure evidence submission portal for BH providers",
+        legal_requirements="42 CFR Part 2 compliant consent language in SSA forms, SAMHSA-SSA interagency agreement, federal register notice",
+        estimated_cost="$200K",
+        timeline="6-12 months",
+        who_pays="SSA + SAMHSA (federal agencies)",
+        priority_score=7.0,
+        impact_score=7.0,
+        effort_score=3.0,
+        status="proposed",
+    ))
+    db.add(Bridge(
+        gap_id=gap14.id,
+        bridge_type="legal",
+        title="Streamlined Disability Evidence Process",
+        description="Allow behavioral health providers to submit standardized treatment summaries directly to SSA through a secure portal, reducing the burden on applicants and accelerating disability determinations.",
+        technical_requirements="Secure provider portal, standardized treatment summary template, SSA evidence intake API, provider authentication",
+        legal_requirements="SSA regulatory change, provider enrollment process, 42 CFR Part 2 compliance framework",
+        estimated_cost="$300K",
+        timeline="12-18 months",
+        who_pays="SSA",
+        priority_score=6.0,
+        impact_score=6.0,
+        effort_score=5.0,
+        status="proposed",
+    ))
+
+    # ── Gap 15: DOC <-> HIE ──────────────────────────────────────────
+    gap15 = Gap(
+        system_a_id="doc",
+        system_b_id="hie",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="Corrections health systems are not connected to state Health Information Exchanges. Prisons and jails operate separate EHRs that do not participate in HIE data sharing, creating a complete information blackout during incarceration.",
+        impact="When people enter prison, their community health history is invisible to corrections providers. When they leave, their corrections health history is invisible to community providers. Chronic disease management is disrupted in both directions.",
+        severity="high",
+        cost_to_bridge="$1-3M",
+        timeline_to_bridge="12-18 months",
+        consent_closable=True,
+        consent_mechanism="HIPAA Authorization",
+        what_it_would_take="Connect DOC EHR to state HIE, enable query-based exchange for intake health history, and push discharge summaries to HIE for community provider access upon release.",
+        applies_when=(["incarcerated", "recently_released", "any_healthcare"]),
+    )
+    db.add(gap15)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap15.id,
+        bridge_type="technical",
+        title="Corrections Health-HIE Bridge",
+        description="Connect DOC electronic health record system to state HIE, enabling bidirectional health data exchange at intake (community records in) and release (corrections records out).",
+        technical_requirements="DOC EHR HL7/FHIR interface, HIE onboarding, patient matching, consent management, discharge summary automation",
+        legal_requirements="DOC-HIE Participation Agreement, HIPAA BAA, inmate consent policy, state HIE governance board approval",
+        estimated_cost="$1-3M",
+        timeline="12-18 months",
+        who_pays="DOC + HIE (SAMHSA Reentry funding eligible)",
+        priority_score=8.0,
+        impact_score=8.0,
+        effort_score=6.0,
+        status="proposed",
+    ))
+
+    # ── Gap 16: HMIS <-> SACWIS ──────────────────────────────────────
+    gap16 = Gap(
+        system_a_id="hmis",
+        system_b_id="sacwis",
+        barrier_type="political",
+        barrier_law=None,
+        barrier_description="Housing and child welfare systems do not share data despite the critical link between family homelessness and child welfare involvement. Different agencies, different funding streams, and different political constituencies prevent integration.",
+        impact="Families experiencing homelessness are at elevated risk of child welfare involvement, but CW agencies cannot proactively offer support. When families enter shelter, CW is not notified to offer prevention services. When CW-involved families lose housing, there is no automatic housing referral.",
+        severity="high",
+        cost_to_bridge="$500K-1M",
+        timeline_to_bridge="12-18 months",
+        consent_closable=True,
+        consent_mechanism="Cross-Agency Housing-CW Release",
+        what_it_would_take="Data exchange between HMIS and SACWIS for family-level housing status, automated referral pathways, cross-agency governance, and political commitment from both agency heads.",
+        applies_when=(["homeless", "housing_unstable", "child_welfare", "foster_care"]),
+    )
+    db.add(gap16)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap16.id,
+        bridge_type="technical",
+        title="Housing-Child Welfare Data Exchange",
+        description="Automated notification system alerting child welfare when families with open cases enter or exit shelter, and alerting housing providers when CW-involved families need housing assistance.",
+        technical_requirements="HMIS event notification API, SACWIS intake integration, family matching algorithm, bidirectional alert system",
+        legal_requirements="HUD-CW Interagency Agreement, HMIS data sharing policy update, CW confidentiality compliance, family consent",
+        estimated_cost="$500K-1M",
+        timeline="12-18 months",
+        who_pays="HUD + State CW Agency (Title IV-E prevention funding)",
+        priority_score=7.0,
+        impact_score=7.0,
+        effort_score=5.0,
+        status="proposed",
+    ))
+
+    # ── Gap 17: SNAP/EBT <-> HMIS ───────────────────────────────────
+    gap17 = Gap(
+        system_a_id="snap_ebt",
+        system_b_id="hmis",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="SNAP and HMIS have no data connection. People experiencing homelessness who are SNAP-eligible must navigate separate application processes, and HMIS intake cannot verify SNAP status or facilitate enrollment.",
+        impact="Homeless individuals miss SNAP benefits they are entitled to because enrollment is not integrated with shelter intake. HMIS providers spend hours on phone calls manually verifying benefit status that could be automated.",
+        severity="moderate",
+        cost_to_bridge="$200K-500K",
+        timeline_to_bridge="6-12 months",
+        consent_closable=True,
+        consent_mechanism="Benefits-Housing Authorization",
+        what_it_would_take="API or file exchange between SNAP eligibility system and HMIS, with authorization from the individual to share benefit status with housing providers.",
+        applies_when=(["homeless", "housing_unstable", "low_income", "food_insecurity"]),
+    )
+    db.add(gap17)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap17.id,
+        bridge_type="technical",
+        title="Benefits-Housing Status Bridge",
+        description="Data exchange enabling HMIS to verify SNAP eligibility during shelter intake and SNAP to receive housing status for expedited benefit processing for homeless individuals.",
+        technical_requirements="SNAP eligibility API or batch file exchange, HMIS integration, person matching, consent capture at intake",
+        legal_requirements="DHS-CoC Data Use Agreement, Food Stamp Act compliance, individual authorization form",
+        estimated_cost="$200K-500K",
+        timeline="6-12 months",
+        who_pays="DHS + Continuum of Care",
+        priority_score=5.5,
+        impact_score=5.0,
+        effort_score=4.0,
+        status="proposed",
+    ))
+
+    # ── Gap 18: Unemployment <-> MMIS ────────────────────────────────
+    gap18 = Gap(
+        system_a_id="unemployment",
+        system_b_id="mmis",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="Unemployment insurance and Medicaid systems have no automated connection. People who lose their jobs and employer-sponsored health insurance are not automatically screened for Medicaid eligibility, creating a coverage gap during the most vulnerable transition period.",
+        impact="Workers who lose jobs and health insurance simultaneously must separately navigate unemployment and Medicaid applications. Many don't know they are Medicaid-eligible. The coverage gap during job loss leads to delayed care, worsening conditions, and medical debt.",
+        severity="moderate",
+        cost_to_bridge="$300K-800K",
+        timeline_to_bridge="12-18 months",
+        consent_closable=False,
+        consent_mechanism=None,
+        what_it_would_take="Automated screening of UI claimants for Medicaid eligibility, with streamlined enrollment pathway and data exchange between state labor and human services departments.",
+        applies_when=(["unemployed", "job_seeking", "low_income"]),
+    )
+    db.add(gap18)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap18.id,
+        bridge_type="technical",
+        title="Workforce-Health Coverage Bridge",
+        description="Automated system that screens unemployment insurance recipients for Medicaid eligibility at the time of UI claim filing, with warm handoff to Medicaid enrollment.",
+        technical_requirements="UI system integration, Medicaid eligibility screening API, application pre-population, notification system",
+        legal_requirements="Interagency Agreement (Labor-DHS), UI data sharing authorization (20 CFR Part 603), applicant consent",
+        estimated_cost="$300K-800K",
+        timeline="12-18 months",
+        who_pays="State Labor + DHS (ACA Navigator funding eligible)",
+        priority_score=6.0,
+        impact_score=6.0,
+        effort_score=5.0,
+        status="proposed",
+    ))
+
+    # ── Gap 19: LTSS <-> DOC ──────────────────────────────────────────
+    gap19 = Gap(
+        system_a_id="ltss",
+        system_b_id="doc",
+        barrier_type="legal",
+        barrier_law="Medicaid Inmate Exclusion + HCBS Waiver Rules",
+        barrier_description="Incarcerated individuals with disabilities who were receiving HCBS waiver services have their waiver slots terminated (not suspended) upon incarceration. Upon release, they must re-apply and often face multi-year waitlists, losing community-based supports that kept them out of institutional care.",
+        impact="People with disabilities cycle between community and incarceration, losing HCBS waiver services each time. Upon release, without waiver services, they are more likely to be institutionalized in nursing facilities (at 3x the cost) or become homeless. Violates Olmstead principles for returning citizens with disabilities.",
+        severity="critical",
+        cost_to_bridge="$1-3M",
+        timeline_to_bridge="12-24 months",
+        consent_closable=True,
+        consent_mechanism="HIPAA Authorization + Waiver Reservation Agreement",
+        what_it_would_take="State policy to reserve HCBS waiver slots during incarceration, pre-release LTSS assessment and service plan development, and automated reinstatement upon release notification from DOC.",
+        applies_when=(["incarcerated", "disabled", "hcbs_waiver", "recently_released"]),
+    )
+    db.add(gap19)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap19.id,
+        bridge_type="legal",
+        title="HCBS Waiver Slot Reservation Policy",
+        description="State policy change to reserve HCBS waiver slots for up to 24 months during incarceration, with automatic reinstatement upon release. Prevents costly institutional placement and supports community reintegration.",
+        technical_requirements="LTSS system modification for 'reserved' status, DOC release notification integration, automated reinstatement workflow",
+        legal_requirements="HCBS Waiver Amendment, CMS approval, State Medicaid Plan Amendment, DOC-DHS Interagency Agreement",
+        estimated_cost="$500K-1M",
+        timeline="12-18 months",
+        who_pays="State Medicaid Agency (cost-neutral — community savings offset)",
+        priority_score=8.5,
+        impact_score=9.0,
+        effort_score=5.0,
+        status="proposed",
+    ))
+
+    # ── Gap 20: JMS <-> MMIS ──────────────────────────────────────────
+    gap20 = Gap(
+        system_a_id="jms",
+        system_b_id="mmis",
+        barrier_type="technical",
+        barrier_law="Medicaid Inmate Exclusion Policy",
+        barrier_description="County jails have no automated connection to Medicaid. Pre-trial detainees (who have not been convicted) lose Medicaid coverage within days of booking despite being legally presumed innocent. Average county jail stay is 26 days — short enough that re-enrollment is impractical but long enough for medication interruptions.",
+        impact="Pre-trial detainees lose medications for chronic conditions including diabetes, hypertension, HIV, and mental illness. County jails must pay for healthcare out of county budgets instead of Medicaid. People released from jail face weeks without coverage while re-applying.",
+        severity="high",
+        cost_to_bridge="$500K-2M",
+        timeline_to_bridge="12-18 months",
+        consent_closable=False,
+        consent_mechanism=None,
+        what_it_would_take="CMS guidance clarifying Medicaid suspension (vs termination) for pre-trial detainees, county JMS integration with state Medicaid eligibility system, automated suspension/reinstatement triggers.",
+        applies_when=(["pretrial", "county_jail", "medicaid"]),
+    )
+    db.add(gap20)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap20.id,
+        bridge_type="technical",
+        title="County Jail-Medicaid Suspension Bridge",
+        description="Automated system connecting county JMS booking/release events to Medicaid eligibility system, enabling real-time suspension at booking and reinstatement at release for pre-trial detainees.",
+        technical_requirements="JMS booking API, Medicaid eligibility service, person matching, event-driven architecture, multi-county deployment",
+        legal_requirements="CMS State Plan Amendment for suspension policy, County-State DUA, HIPAA BAA",
+        estimated_cost="$500K-2M",
+        timeline="12-18 months",
+        who_pays="State Medicaid (90/10 federal match) + County match",
+        priority_score=8.0,
+        impact_score=8.0,
+        effort_score=6.0,
+        status="proposed",
+    ))
+
+    # ── Gap 21: Early Intervention <-> SACWIS ─────────────────────────
+    gap21 = Gap(
+        system_a_id="early_intervention",
+        system_b_id="sacwis",
+        barrier_type="legal",
+        barrier_law="FERPA + CAPTA",
+        barrier_description="FERPA protects early intervention records, while CAPTA governs child welfare records. Children in foster care who need early intervention services face a fragmented referral process — child welfare caseworkers cannot automatically access EI developmental screenings, and EI providers cannot see child welfare placement history.",
+        impact="Foster children with developmental delays are identified late or not at all because the EI referral pathway is not connected to child welfare intake. IDEA Part C requires referral within 2 days of a substantiated abuse/neglect report, but without system integration this timeline is rarely met.",
+        severity="high",
+        cost_to_bridge="$300K-800K",
+        timeline_to_bridge="6-12 months",
+        consent_closable=True,
+        consent_mechanism="Interagency Consent (foster parent / agency consent)",
+        what_it_would_take="Automated referral from SACWIS to EI upon substantiated abuse/neglect report for children under 3, bidirectional status updates, and shared developmental screening results with appropriate consent.",
+        applies_when=(["foster_care", "infant", "toddler", "developmental_delay", "abuse_neglect"]),
+    )
+    db.add(gap21)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap21.id,
+        bridge_type="technical",
+        title="CAPTA-IDEA Automated Referral Bridge",
+        description="Automated system generating EI referrals from substantiated abuse/neglect reports in SACWIS for children under 3, with bidirectional status tracking and developmental screening result sharing.",
+        technical_requirements="SACWIS event trigger for substantiated reports, EI referral API, child matching, consent management, status notification system",
+        legal_requirements="CAPTA referral compliance documentation, FERPA exception for child welfare, interagency MOU, consent from foster parent or agency",
+        estimated_cost="$300K-800K",
+        timeline="6-12 months",
+        who_pays="ACF (CAPTA funds) + State EI Agency (IDEA Part C funds)",
+        priority_score=7.5,
+        impact_score=8.0,
+        effort_score=4.0,
+        status="proposed",
+    ))
+
+    # ── Gap 22: WIC <-> Immunization Registry ─────────────────────────
+    gap22 = Gap(
+        system_a_id="wic",
+        system_b_id="immunization_registry",
+        barrier_type="technical",
+        barrier_law=None,
+        barrier_description="WIC clinics serve the same population (pregnant women, infants, children under 5) that needs immunizations, but WIC MIS and the immunization registry are not connected. WIC nutritionists cannot check immunization status during visits, missing a critical public health touchpoint for vaccine outreach.",
+        impact="WIC visits are a missed opportunity for immunization screening and referral. Under-immunized children continue to be seen at WIC clinics without vaccination reminders. States with WIC-IIS integration show 5-10% higher childhood immunization rates.",
+        severity="moderate",
+        cost_to_bridge="$200K-500K",
+        timeline_to_bridge="6-12 months",
+        consent_closable=False,
+        consent_mechanism=None,
+        what_it_would_take="HL7 interface between WIC MIS and state IIS, immunization status query at WIC check-in, automated referral for under-immunized children, and WIC nutritionist training on immunization counseling.",
+        applies_when=(["infant", "child_under_5", "pregnant", "immunization"]),
+    )
+    db.add(gap22)
+    db.flush()
+
+    db.add(Bridge(
+        gap_id=gap22.id,
+        bridge_type="technical",
+        title="WIC-Immunization Integration",
+        description="HL7 interface enabling WIC clinics to query immunization status during WIC appointments and generate referrals for under-immunized children, leveraging WIC's high-touch relationship with families.",
+        technical_requirements="HL7 2.5.1 VXQ/VXR query-response interface, WIC MIS integration, IIS web services, immunization forecast engine",
+        legal_requirements="State Health Department authorization, WIC-IIS data sharing agreement, WIC policy update for immunization screening",
+        estimated_cost="$200K-500K",
+        timeline="6-12 months",
+        who_pays="CDC Immunization Grant + USDA WIC Technology funds",
+        priority_score=6.0,
+        impact_score=6.0,
+        effort_score=3.0,
+        status="proposed",
+    ))
+
+    db.commit()
+
+
+def seed_all(db: Session):
+    """Run all seed functions."""
+    # Check if data already exists
+    existing = db.query(System).first()
+    if existing:
+        return False
+
+    seed_systems(db)
+    seed_connections(db)
+    seed_gaps_and_bridges(db)
+    return True
