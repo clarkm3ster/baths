@@ -297,6 +297,48 @@ def api_narrative_synthesis(body: NarrativeBody):
     }
 
 
+# ── Full Packet (aggregated endpoint for frontend) ───────────────
+
+_PERSON_ID_TO_NAME = {
+    "marcus-thompson": "marcus",
+    "sarah-chen": "sarah",
+    "james-williams": "james",
+    "maria-rodriguez": "maria",
+    "robert-jackson": "robert",
+    "1": "marcus", "2": "sarah", "3": "james", "4": "maria", "5": "robert",
+}
+
+
+@router.get("/full_packet/{person_id}")
+def api_full_packet(person_id: str):
+    """Aggregated full packet: all 10 layers for one person in a single response.
+
+    Accepts person_id (e.g. 'marcus-thompson'), short name ('marcus'), or
+    numeric ID ('1'-'5').  Powers the entire person detail page with one fetch.
+    """
+    from app.studio.seed_scenarios import build_scenario, PROFILES
+
+    name = _PERSON_ID_TO_NAME.get(person_id, person_id)
+    if name not in PROFILES:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Unknown person '{person_id}'. Available: {list(PROFILES.keys())}",
+        )
+    return build_scenario(name)
+
+
+@router.get("/full_packet")
+def api_full_packet_list():
+    """List all available persons for full_packet queries."""
+    from app.studio.seed_scenarios import PROFILES
+    return {
+        "persons": [
+            {"id": p["person_id"], "name": p["name"], "key": key}
+            for key, p in PROFILES.items()
+        ]
+    }
+
+
 # ── Demo / Scenarios ──────────────────────────────────────────────
 
 @router.get("/demo/{person_name}")
