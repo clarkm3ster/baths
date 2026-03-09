@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BATHS Studio Suite</title>
+<meta name="description" content="BATHS — A Civic Production Company. Cosm × Chron = Flourishing.">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="data.js" defer></script>
+<script src="stripboard.js" defer></script>
+<script src="duomo.js" defer></script>
+<script src="thauma.js" defer></script>
+<script src="finance.js" defer></script>
+<script src="console.js" defer></script>
+
+<style>
+/* ═══════════════════════════════════════════
+   BATHS DESIGN SYSTEM
+   A24 meets Apple — cinematic, dark, premium
+   ═══════════════════════════════════════════ */
+
+/* ── CSS Variables ── */
+:root {
+  --bg: #0a0a0f;
+  --bg-elevated: #111118;
+  --bg-surface: #16161f;
+  --gold: #c9a84c;
+  --gold-dim: rgba(201,168,76,0.3);
+  --gold-glow: rgba(201,168,76,0.08);
+  --gold-bright: #dabb6a;
+  --ivory: #f5f0e8;
+  --ivory-muted: rgba(245,240,232,0.5);
+  --ivory-faint: rgba(245,240,232,0.25);
+  --card-bg: rgba(201,168,76,0.04);
+  --card-border: rgba(201,168,76,0.12);
+  --card-hover-border: rgba(201,168,76,0.35);
+  --card-hover-glow: rgba(201,168,76,0.06);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+  --nav-height: 72px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-base: 0.35s var(--ease-out);
+  --transition-slow: 0.6s var(--ease-out);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --max-width: 1280px;
+  --duomo-color: #c9a84c;
+  --thauma-color: #7aa2c4;
+  --finance-color: #6abf8a;
+  --console-color: #b87acc;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--ivory);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+a { color: var(--gold); text-decoration: none; transition: color var(--transition-fast); }
+a:hover { color: var(--gold-bright); }
+img { max-width: 100%; display: block; }
+ul, ol { list-style: none; }
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 { font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; color: var(--ivory); }
+h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+p { color: var(--ivory-muted); line-height: 1.7; }
+.serif { font-family: var(--font-serif); }
+.mono { font-family: var(--font-mono); font-size: 0.88em; }
+.text-gold { color: var(--gold); }
+.text-muted { color: var(--ivory-faint); }
+.text-center { text-align: center; }
+
+/* ── Navigation ── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+  background: rgba(10,10,15,0.82);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+  transition: background var(--transition-base);
+}
+.nav-brand {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  white-space: nowrap;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.nav-link {
+  padding: 0.5rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory-faint);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.nav-link:hover {
+  color: var(--ivory);
+  background: var(--gold-glow);
+}
+.nav-link.active {
+  color: var(--gold);
+  border-color: var(--gold-dim);
+  background: var(--gold-glow);
+}
+
+/* ── Hamburger ── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 6px;
+  z-index: 1010;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--ivory);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+.nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 0; right: 0;
+    width: 260px; height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: calc(var(--nav-height) + 1.5rem) 1.5rem 2rem;
+    gap: 0.5rem;
+    background: rgba(10,10,15,0.96);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border-left: 1px solid var(--card-border);
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+  }
+  .nav-links.open { transform: translateX(0); }
+  .nav-link { width: 100%; font-size: 0.85rem; padding: 0.75rem 1rem; }
+}
+
+/* ── Sections ── */
+.baths-section {
+  min-height: 100vh;
+  padding-top: var(--nav-height);
+}
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ── Portal Hero ── */
+.portal-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(100vh - var(--nav-height));
+  padding: 4rem 1.5rem;
+  position: relative;
+}
+.portal-hero::before {
+  content: '';
+  position: absolute;
+  top: 20%; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0.6;
+}
+.hero-title {
+  font-size: clamp(5rem, 14vw, 10rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--gold) 0%, #e8d48b 40%, var(--gold) 70%, #a8893a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ivory-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 2.5rem;
+}
+.hero-equation {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.8vw, 1.6rem);
+  color: var(--ivory);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+}
+.hero-equation em { color: var(--gold); font-style: normal; font-weight: 500; }
+.hero-description {
+  max-width: 580px;
+  font-size: clamp(0.92rem, 1.5vw, 1.05rem);
+  color: var(--ivory-faint);
+  line-height: 1.8;
+  margin-bottom: 3.5rem;
+}
+
+/* ── Card System ── */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--card-hover-glow), transparent 50%);
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+.card:hover {
+  border-color: var(--card-hover-border);
+  transform: translateY(-2px);
+}
+.card:hover::before { opacity: 1; }
+.card-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.card h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: 0.75rem;
+}
+.card p {
+  font-size: 0.92rem;
+  color: var(--ivory-faint);
+  line-height: 1.7;
+}
+
+/* ── Grids ── */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1rem, 2.5vw, 1.5rem); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2.5vw, 1.5rem); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2.5vw, 1.5rem); }
+@media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ── Product Cards (Portal) ── */
+.product-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 4rem; }
+.product-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 4vw, 3rem);
+  transition: all var(--transition-base);
+  position: relative;
+}
+.product-card:hover {
+  border-color: var(--card-hover-border);
+  box-shadow: 0 0 60px -15px var(--gold-glow);
+  transform: translateY(-3px);
+}
+.product-card .product-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--gold-dim);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: var(--font-serif);
+}
+.product-card h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+.product-card .product-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--gold-dim);
+  font-size: 0.92rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+.product-card .product-desc {
+  font-size: 0.9rem;
+  color: var(--ivory-faint);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) { .product-cards { grid-template-columns: 1fr; } }
+
+/* ── Stats Row ── */
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2.5rem;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+}
+.stat-item {
+  text-align: center;
+  white-space: nowrap;
+}
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--ivory);
+  letter-spacing: -0.01em;
+}
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ivory-faint);
+  margin-top: 0.25rem;
+}
+
+/* ── Buttons ── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+}
+.btn-gold:hover {
+  background: var(--gold-glow);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+  box-shadow: 0 0 20px -5px var(--gold-glow);
+}
+.btn-gold .arrow { transition: transform var(--transition-fast); }
+.btn-gold:hover .arrow { transform: translateX(3px); }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-sm);
+  background: var(--gold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+}
+.btn-primary:hover {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+  box-shadow: 0 0 30px -5px var(--gold-dim);
+}
+
+/* ── Tags & Badges ── */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: 1px solid;
+}
+.tag-duomo { color: var(--duomo-color); border-color: rgba(201,168,76,0.3); background: rgba(201,168,76,0.06); }
+.tag-thauma { color: var(--thauma-color); border-color: rgba(122,162,196,0.3); background: rgba(122,162,196,0.06); }
+.tag-finance { color: var(--finance-color); border-color: rgba(106,191,138,0.3); background: rgba(106,191,138,0.06); }
+.tag-console { color: var(--console-color); border-color: rgba(184,122,204,0.3); background: rgba(184,122,204,0.06); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-sm);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--ivory-muted);
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: rgba(201,168,76,0.04);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+.tab-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ivory-faint);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+.tab-btn:hover { color: var(--ivory); background: var(--gold-glow); }
+.tab-btn.active {
+  color: var(--gold);
+  background: rgba(201,168,76,0.1);
+  border: 1px solid var(--gold-dim);
+}
+
+/* ── Tables ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+thead th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold-dim);
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.65rem 1rem;
+  color: var(--ivory-muted);
+  border-bottom: 1px solid rgba(201,168,76,0.06);
+}
+tbody tr:hover td { background: var(--gold-glow); }
+
+/* ── Charts ── */
+.chart-container {
+  position: relative;
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.chart-container canvas { max-height: 360px; }
+
+/* ── Scroll Animations ── */
+.animate-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-in:nth-child(2) { transition-delay: 0.08s; }
+.animate-in:nth-child(3) { transition-delay: 0.16s; }
+.animate-in:nth-child(4) { transition-delay: 0.24s; }
+.animate-in:nth-child(5) { transition-delay: 0.32s; }
+.animate-in:nth-child(6) { transition-delay: 0.4s; }
+
+/* ── Footer ── */
+.site-footer {
+  padding: 3rem clamp(1.5rem, 4vw, 3rem);
+  border-top: 1px solid var(--card-border);
+  text-align: center;
+}
+.site-footer p {
+  font-size: 0.78rem;
+  color: var(--ivory-faint);
+  margin-bottom: 0.4rem;
+}
+.site-footer a {
+  font-size: 0.72rem;
+  color: var(--ivory-faint);
+  transition: color var(--transition-fast);
+}
+.site-footer a:hover { color: var(--gold); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ── Selection ── */
+::selection { background: rgba(201,168,76,0.25); color: var(--ivory); }
+
+/* ── Utility ── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); border: 0;
+}
+.divider {
+  height: 1px;
+  background: var(--card-border);
+  margin: 2.5rem 0;
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════ Navigation ════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a class="nav-brand" href="#portal">BATHS STUDIO</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a class="nav-link active" href="#portal" data-section="portal">Portal</a>
+    <a class="nav-link" href="#duomo" data-section="duomo">Duomo</a>
+    <a class="nav-link" href="#thauma" data-section="thauma">Thauma</a>
+    <a class="nav-link" href="#finance" data-section="finance">Finance</a>
+    <a class="nav-link" href="#console" data-section="console">Console</a>
+  </div>
+</nav>
+
+<!-- ════════════════════ Portal ════════════════════ -->
+<section id="portal" class="baths-section">
+  <div class="portal-hero">
+    <h1 class="hero-title animate-in">BATHS</h1>
+    <p class="hero-subtitle animate-in">A Civic Production Company</p>
+    <div class="hero-equation animate-in">
+      <em>Cosm</em>&nbsp; × &nbsp;<em>Chron</em>&nbsp; = &nbsp;<em>Flourishing</em>
+    </div>
+    <p class="hero-description animate-in">
+      BATHS builds civic infrastructure that weaves together the spatial 
+      and the temporal — places and lifetimes — into a unified system for 
+      human flourishing. Two product lines, one mission.
+    </p>
+
+    <div class="product-cards">
+      <div class="product-card animate-in">
+        <div class="product-icon">D</div>
+        <h3>DUOMO</h3>
+        <p class="product-tagline">An Architectural Symphony for Human Flourishing</p>
+        <p class="product-desc">
+          Person-focused. DUOMO composes whole-person digital twins across 
+          provisions, enrichments, and services — orchestrating civic systems 
+          into coherent individual journeys.
+        </p>
+        <button class="btn-gold" onclick="location.hash='duomo'">
+          Enter Duomo <span class="arrow">&rarr;</span>
+        </button>
+      </div>
+      <div class="product-card animate-in">
+        <div class="product-icon">T</div>
+        <h3>THAUMA</h3>
+        <p class="product-tagline">A Programmable Space for Wonder</p>
+        <p class="product-desc">
+          Place-focused. THAUMA activates public spaces through programmable 
+          parcels, spatial engines, and event orchestration — transforming 
+          civic geography into living infrastructure.
+        </p>
+        <button class="btn-gold" onclick="location.hash='thauma'">
+          Enter Thauma <span class="arrow">&rarr;</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="stats-row animate-in">
+      <div class="stat-item">
+        <div class="stat-value">5,126</div>
+        <div class="stat-label">Provisions</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">31</div>
+        <div class="stat-label">Systems</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">14</div>
+        <div class="stat-label">Parcels</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">4,898</div>
+        <div class="stat-label">Enrichments</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">28</div>
+        <div class="stat-label">Counties</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">17</div>
+        <div class="stat-label">Services</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ App Containers ════════════════════ -->
+<div id="duomo-app" class="baths-section" style="display:none"></div>
+<div id="thauma-app" class="baths-section" style="display:none"></div>
+<div id="finance-app" class="baths-section" style="display:none"></div>
+<div id="console-app" class="baths-section" style="display:none"></div>
+
+<!-- ════════════════════ Footer ════════════════════ -->
+<footer class="site-footer">
+  <p>&copy; 2026 BATHS — A Civic Production Company</p>
+  <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+</footer>
+
+<!-- ════════════════════ Router ════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  var rendered = {};
+  var sections = {
+    portal:  document.getElementById('portal'),
+    duomo:   document.getElementById('duomo-app'),
+    thauma:  document.getElementById('thauma-app'),
+    finance: document.getElementById('finance-app'),
+    console: document.getElementById('console-app')
+  };
+  var navLinks = document.querySelectorAll('.nav-link');
+  var navToggle = document.getElementById('navToggle');
+  var navLinksEl = document.getElementById('navLinks');
+
+  function getHash() {
+    var h = location.hash.replace('#', '') || 'portal';
+    return sections[h] ? h : 'portal';
+  }
+
+  function navigate() {
+    var target = getHash();
+
+    /* hide all sections */
+    Object.keys(sections).forEach(function (key) {
+      sections[key].style.display = 'none';
+    });
+
+    /* show target */
+    sections[target].style.display = '';
+
+    /* lazy-render modules on first visit (only mark rendered if fn exists) */
+    if (!rendered[target]) {
+      var fn = null;
+      if (target === 'duomo')   fn = window.renderDuomo;
+      if (target === 'thauma')  fn = window.renderThauma;
+      if (target === 'finance') fn = window.renderFinance;
+      if (target === 'console') fn = window.renderConsole;
+      if (typeof fn === 'function') {
+        rendered[target] = true;
+        fn(sections[target]);
+      }
+    }
+
+    /* update nav active state */
+    navLinks.forEach(function (link) {
+      link.classList.toggle('active', link.getAttribute('data-section') === target);
+    });
+
+    /* close mobile menu */
+    navLinksEl.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+
+    /* scroll to top */
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    /* re-observe animations */
+    observeAnimations();
+  }
+
+  /* ── Hash listener ── */
+  window.addEventListener('hashchange', navigate);
+
+  /* ── Mobile menu toggle ── */
+  navToggle.addEventListener('click', function () {
+    var isOpen = navLinksEl.classList.toggle('open');
+    navToggle.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  /* close menu on link click (mobile) */
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinksEl.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ── Scroll animation observer ── */
+  function observeAnimations() {
+    var els = document.querySelectorAll('.animate-in:not(.visible)');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { observer.observe(el); });
+  }
+
+  /* ── Card glow tracking ── */
+  document.addEventListener('mousemove', function (e) {
+    var cards = document.querySelectorAll('.card, .product-card');
+    cards.forEach(function (card) {
+      var rect = card.getBoundingClientRect();
+      card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+      card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+    });
+  });
+
+  /* ── Init ── */
+  navigate();
+
+  /* Re-navigate once deferred scripts finish loading.
+     Inline scripts run immediately; defer scripts execute after
+     parsing but their order vs inline is not guaranteed across
+     all browsers. This listener catches the case where the
+     initial navigate() ran before render functions existed. */
+  window.addEventListener('load', function () {
+    var target = getHash();
+    if (target !== 'portal' && !rendered[target]) {
+      navigate();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
