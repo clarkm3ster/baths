@@ -15,7 +15,7 @@
     "neighborhood": "Center City",
     "council_district": 1,
     "extra": "{\"stories\": 40, \"use_code\": \"Office\", \"year_built\": 1990}",
-    "scraped_at": "2026-03-16T10:49:15.852243+00:00"
+    "scraped_at": "2026-03-16T14:55:07.521597+00:00"
   },
   {
     "id": 14,
@@ -33,7 +33,7 @@
     "neighborhood": "University City",
     "council_district": 3,
     "extra": "{\"stories\": 8, \"use_code\": \"Educational/Research\", \"year_built\": 2005}",
-    "scraped_at": "2026-03-16T10:49:15.860879+00:00"
+    "scraped_at": "2026-03-16T14:55:07.528964+00:00"
   },
   {
     "id": 8,
@@ -51,7 +51,7 @@
     "neighborhood": "South Broad",
     "council_district": 2,
     "extra": "{\"stories\": 1, \"use_code\": \"Entertainment\", \"year_built\": 1996}",
-    "scraped_at": "2026-03-16T10:49:15.856858+00:00"
+    "scraped_at": "2026-03-16T14:55:07.525651+00:00"
   },
   {
     "id": 2,
@@ -69,7 +69,7 @@
     "neighborhood": "Center City East",
     "council_district": 1,
     "extra": "{\"use_code\": \"Vacant Commercial\", \"opportunity_zone\": true}",
-    "scraped_at": "2026-03-16T10:49:15.853161+00:00"
+    "scraped_at": "2026-03-16T14:55:07.522188+00:00"
   },
   {
     "id": 3,
@@ -87,7 +87,7 @@
     "neighborhood": "North Central",
     "council_district": 5,
     "extra": "{\"stories\": 4, \"use_code\": \"Educational\", \"year_built\": 1965}",
-    "scraped_at": "2026-03-16T10:49:15.853722+00:00"
+    "scraped_at": "2026-03-16T14:55:07.522804+00:00"
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "neighborhood": "Germantown",
     "council_district": 8,
     "extra": "{\"stories\": 3, \"use_code\": \"Institutional/Community\", \"year_built\": 1890, \"historic\": true}",
-    "scraped_at": "2026-03-16T10:49:15.859529+00:00"
+    "scraped_at": "2026-03-16T14:55:07.527835+00:00"
   },
   {
     "id": 6,
@@ -123,7 +123,7 @@
     "neighborhood": "Cobbs Creek",
     "council_district": 3,
     "extra": "{\"stories\": 2, \"use_code\": \"Commercial\", \"year_built\": 1945, \"septa_access\": true}",
-    "scraped_at": "2026-03-16T10:49:15.855750+00:00"
+    "scraped_at": "2026-03-16T14:55:07.524538+00:00"
   },
   {
     "id": 10,
@@ -141,7 +141,7 @@
     "neighborhood": "Kensington",
     "council_district": 7,
     "extra": "{\"use_code\": \"Vacant Industrial\", \"brownfield\": true, \"opportunity_zone\": true, \"near_transit\": true}",
-    "scraped_at": "2026-03-16T10:49:15.858129+00:00"
+    "scraped_at": "2026-03-16T14:55:07.526717+00:00"
   },
   {
     "id": 9,
@@ -159,7 +159,7 @@
     "neighborhood": "Passyunk Square",
     "council_district": 2,
     "extra": "{\"stories\": 3, \"use_code\": \"Mixed Use Residential\", \"year_built\": 1910}",
-    "scraped_at": "2026-03-16T10:49:15.857537+00:00"
+    "scraped_at": "2026-03-16T14:55:07.526170+00:00"
   },
   {
     "id": 11,
@@ -177,7 +177,7 @@
     "neighborhood": "Port Richmond",
     "council_district": 7,
     "extra": "{\"stories\": 2, \"use_code\": \"Commercial\", \"year_built\": 1935}",
-    "scraped_at": "2026-03-16T10:49:15.858715+00:00"
+    "scraped_at": "2026-03-16T14:55:07.527312+00:00"
   },
   {
     "id": 5,
@@ -195,7 +195,7 @@
     "neighborhood": "North Philadelphia",
     "council_district": 7,
     "extra": "{\"stories\": 2, \"use_code\": \"Mixed Use\", \"year_built\": 1920, \"needs_rehab\": true}",
-    "scraped_at": "2026-03-16T10:49:15.854910+00:00"
+    "scraped_at": "2026-03-16T14:55:07.523917+00:00"
   },
   {
     "id": 13,
@@ -213,7 +213,7 @@
     "neighborhood": "Germantown",
     "council_district": 8,
     "extra": "{\"use_code\": \"Vacant Residential\", \"land_bank\": true, \"community_garden_potential\": true}",
-    "scraped_at": "2026-03-16T10:49:15.860300+00:00"
+    "scraped_at": "2026-03-16T14:55:07.528375+00:00"
   },
   {
     "id": 4,
@@ -231,7 +231,7 @@
     "neighborhood": "Strawberry Mansion",
     "council_district": 5,
     "extra": "{\"use_code\": \"Vacant Residential\", \"land_bank\": true, \"eligible_garden\": true}",
-    "scraped_at": "2026-03-16T10:49:15.854389+00:00"
+    "scraped_at": "2026-03-16T14:55:07.523376+00:00"
   },
   {
     "id": 7,
@@ -249,6 +249,6 @@
     "neighborhood": "Overbrook",
     "council_district": 3,
     "extra": "{\"use_code\": \"Vacant Residential\", \"land_bank\": true}",
-    "scraped_at": "2026-03-16T10:49:15.856367+00:00"
+    "scraped_at": "2026-03-16T14:55:07.525079+00:00"
   }
 ]
