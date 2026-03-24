@@ -10,7 +10,7 @@
     "source": "USDA FNS Budget Summary, FY2024",
     "source_year": 2024,
     "source_url": "https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap",
-    "scraped_at": "2026-03-24T10:44:47.722327+00:00"
+    "scraped_at": "2026-03-24T14:52:59.940990+00:00"
   },
   {
     "id": 33,
@@ -23,7 +23,7 @@
     "source": "USDA FNS, SNAP monthly data, FY2024 average",
     "source_year": 2024,
     "source_url": "https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap",
-    "scraped_at": "2026-03-24T10:44:47.721689+00:00"
+    "scraped_at": "2026-03-24T14:52:59.940360+00:00"
   },
   {
     "id": 22,
@@ -36,7 +36,7 @@
     "source": "HUD FY2024 FMR \u2014 Philadelphia-Camden-Wilmington MSA",
     "source_year": 2024,
     "source_url": "https://www.huduser.gov/portal/datasets/fmr.html",
-    "scraped_at": "2026-03-24T10:44:47.714424+00:00"
+    "scraped_at": "2026-03-24T14:52:59.934092+00:00"
   },
   {
     "id": 21,
@@ -49,7 +49,7 @@
     "source": "HUD FY2024 Fair Market Rents",
     "source_year": 2024,
     "source_url": "https://www.huduser.gov/portal/datasets/fmr.html",
-    "scraped_at": "2026-03-24T10:44:47.713950+00:00"
+    "scraped_at": "2026-03-24T14:52:59.933551+00:00"
   },
   {
     "id": 35,
@@ -62,7 +62,7 @@
     "source": "USDA FNS WIC Program data, FY2023",
     "source_year": 2023,
     "source_url": "https://www.fns.usda.gov/pd/wic-program",
-    "scraped_at": "2026-03-24T10:44:47.722826+00:00"
+    "scraped_at": "2026-03-24T14:52:59.941477+00:00"
   },
   {
     "id": 32,
@@ -75,7 +75,7 @@
     "source": "NCES/CSEF Special Education Expenditure Project, adjusted 2023",
     "source_year": 2023,
     "source_url": "https://nces.ed.gov/programs/specialed/",
-    "scraped_at": "2026-03-24T10:44:47.721131+00:00"
+    "scraped_at": "2026-03-24T14:52:59.939797+00:00"
   },
   {
     "id": 31,
@@ -88,7 +88,7 @@
     "source": "NCES Digest of Education Statistics, 2022-23",
     "source_year": 2023,
     "source_url": "https://nces.ed.gov/programs/digest/",
-    "scraped_at": "2026-03-24T10:44:47.720634+00:00"
+    "scraped_at": "2026-03-24T14:52:59.939216+00:00"
   },
   {
     "id": 28,
@@ -101,7 +101,7 @@
     "source": "Aggregate estimate: ~5.5M multi-system individuals \u00d7 $36K average coordination savings. Consistent with GAO-23-106326 findings on improper payments and duplication.",
     "source_year": 2023,
     "source_url": "https://www.gao.gov/products/gao-23-106326",
-    "scraped_at": "2026-03-24T10:44:47.718642+00:00"
+    "scraped_at": "2026-03-24T14:52:59.937641+00:00"
   },
   {
     "id": 27,
@@ -114,7 +114,7 @@
     "source": "Difference: uncoordinated ($78,168) - coordinated ($41,832)",
     "source_year": 2023,
     "source_url": "",
-    "scraped_at": "2026-03-24T10:44:47.717132+00:00"
+    "scraped_at": "2026-03-24T14:52:59.937073+00:00"
   },
   {
     "id": 26,
@@ -127,7 +127,7 @@
     "source": "Calculated: super-utilizer cost \u00d7 0.535 (documented reduction from coordination programs)",
     "source_year": 2023,
     "source_url": "",
-    "scraped_at": "2026-03-24T10:44:47.716513+00:00"
+    "scraped_at": "2026-03-24T14:52:59.936476+00:00"
   },
   {
     "id": 24,
@@ -140,7 +140,7 @@
     "source": "Harvard JCHS State of the Nation's Housing 2023",
     "source_year": 2023,
     "source_url": "https://www.jchs.harvard.edu/state-nations-housing-2023",
-    "scraped_at": "2026-03-24T10:44:47.715555+00:00"
+    "scraped_at": "2026-03-24T14:52:59.935241+00:00"
   },
   {
     "id": 23,
@@ -153,7 +153,7 @@
     "source": "HUD Picture of Subsidized Households, 2023",
     "source_year": 2023,
     "source_url": "https://www.huduser.gov/portal/datasets/assoc/",
-    "scraped_at": "2026-03-24T10:44:47.714948+00:00"
+    "scraped_at": "2026-03-24T14:52:59.934590+00:00"
   },
   {
     "id": 20,
@@ -166,7 +166,7 @@
     "source": "HUD Costs Associated with First-Time Homelessness, 2017; adjusted to 2023 dollars",
     "source_year": 2023,
     "source_url": "https://www.huduser.gov/portal/publications/homeless/costs-homeless.html",
-    "scraped_at": "2026-03-24T10:44:47.713369+00:00"
+    "scraped_at": "2026-03-24T14:52:59.933003+00:00"
   },
   {
     "id": 19,
@@ -179,7 +179,7 @@
     "source": "National Alliance to End Homelessness, State of Homelessness 2023",
     "source_year": 2023,
     "source_url": "https://endhomelessness.org/homelessness-in-america/homelessness-statistics/state-of-homelessness/",
-    "scraped_at": "2026-03-24T10:44:47.712911+00:00"
+    "scraped_at": "2026-03-24T14:52:59.932491+00:00"
   },
   {
     "id": 18,
@@ -192,7 +192,7 @@
     "source": "NYC Independent Budget Office, 2023",
     "source_year": 2023,
     "source_url": "https://www.ibo.nyc.ny.us/",
-    "scraped_at": "2026-03-24T10:44:47.712439+00:00"
+    "scraped_at": "2026-03-24T14:52:59.931804+00:00"
   },
   {
     "id": 17,
@@ -205,7 +205,7 @@
     "source": "HUD 2023 Annual Homeless Assessment Report",
     "source_year": 2023,
     "source_url": "https://www.huduser.gov/portal/sites/default/files/pdf/2023-AHAR-Part-1.pdf",
-    "scraped_at": "2026-03-24T10:44:47.711785+00:00"
+    "scraped_at": "2026-03-24T14:52:59.931294+00:00"
   },
   {
     "id": 16,
@@ -218,7 +218,7 @@
     "source": "Vera Institute aggregate estimate, 2023",
     "source_year": 2023,
     "source_url": "https://www.vera.org/publications/price-of-prisons",
-    "scraped_at": "2026-03-24T10:44:47.711225+00:00"
+    "scraped_at": "2026-03-24T14:52:59.930703+00:00"
   },
   {
     "id": 15,
@@ -231,7 +231,7 @@
     "source": "Vera Institute, The New Dynamics of Mass Incarceration, 2023",
     "source_year": 2023,
     "source_url": "https://www.vera.org/publications/the-new-dynamics-of-mass-incarceration",
-    "scraped_at": "2026-03-24T10:44:47.710753+00:00"
+    "scraped_at": "2026-03-24T14:52:59.930076+00:00"
   },
   {
     "id": 14,
@@ -244,7 +244,7 @@
     "source": "LAO California, Fiscal year 2022-23",
     "source_year": 2023,
     "source_url": "https://lao.ca.gov/PolicyAreas/CJ/6_cj_inmatecost",
-    "scraped_at": "2026-03-24T10:44:47.710134+00:00"
+    "scraped_at": "2026-03-24T14:52:59.929504+00:00"
   },
   {
     "id": 13,
@@ -257,7 +257,7 @@
     "source": "Vera Institute, Price of Prisons state data, 2023",
     "source_year": 2023,
     "source_url": "https://www.vera.org/publications/price-of-prisons",
-    "scraped_at": "2026-03-24T10:44:47.709545+00:00"
+    "scraped_at": "2026-03-24T14:52:59.928927+00:00"
   },
   {
     "id": 12,
@@ -270,7 +270,7 @@
     "source": "Vera Institute, Price of Prisons state data, 2023",
     "source_year": 2023,
     "source_url": "https://www.vera.org/publications/price-of-prisons",
-    "scraped_at": "2026-03-24T10:44:47.709088+00:00"
+    "scraped_at": "2026-03-24T14:52:59.928300+00:00"
   },
   {
     "id": 11,
@@ -283,7 +283,7 @@
     "source": "Vera Institute, The Price of Prisons, 2023 update",
     "source_year": 2023,
     "source_url": "https://www.vera.org/publications/price-of-prisons",
-    "scraped_at": "2026-03-24T10:44:47.708550+00:00"
+    "scraped_at": "2026-03-24T14:52:59.927742+00:00"
   },
   {
     "id": 7,
@@ -296,7 +296,7 @@
     "source": "Kushel & Miaskowski, 'Navigating the Healthcare System', Health Affairs, 2006; updated by NHCHC 2023",
     "source_year": 2023,
     "source_url": "https://nhchc.org/understanding-homelessness/health-impacts/",
-    "scraped_at": "2026-03-24T10:44:47.706166+00:00"
+    "scraped_at": "2026-03-24T14:52:59.924924+00:00"
   },
   {
     "id": 30,
@@ -309,7 +309,7 @@
     "source": "USDA FNS, SNAP Quality Control data; CBPP analysis 2022",
     "source_year": 2022,
     "source_url": "https://www.cbpp.org/research/food-assistance/snap-is-effective-and-efficient",
-    "scraped_at": "2026-03-24T10:44:47.719929+00:00"
+    "scraped_at": "2026-03-24T14:52:59.938672+00:00"
   },
   {
     "id": 29,
@@ -322,7 +322,7 @@
     "source": "CMS 64 Financial Management Report data, FY2022",
     "source_year": 2022,
     "source_url": "https://www.medicaid.gov/medicaid/financial-management/state-expenditure-reporting-for-medicaid-chip/index.html",
-    "scraped_at": "2026-03-24T10:44:47.719228+00:00"
+    "scraped_at": "2026-03-24T14:52:59.938100+00:00"
   },
   {
     "id": 10,
@@ -335,7 +335,7 @@
     "source": "Federal Bureau of Prisons, Annual Determination of Average Cost of Incarceration, FY2022",
     "source_year": 2022,
     "source_url": "https://www.federalregister.gov/documents/2023/11/01/2023-24050/annual-determination-of-average-cost-of-incarceration-fee",
-    "scraped_at": "2026-03-24T10:44:47.707956+00:00"
+    "scraped_at": "2026-03-24T14:52:59.926730+00:00"
   },
   {
     "id": 9,
@@ -348,7 +348,7 @@
     "source": "SAMHSA Behavioral Health Spending Projections, 2022",
     "source_year": 2022,
     "source_url": "https://store.samhsa.gov/product/behavioral-health-spending",
-    "scraped_at": "2026-03-24T10:44:47.707260+00:00"
+    "scraped_at": "2026-03-24T14:52:59.925967+00:00"
   },
   {
     "id": 8,
@@ -361,7 +361,7 @@
     "source": "Billings et al., 'Impact of Socioeconomic Status on Hospital Use in NYC', Health Affairs, 2000; updated by NEJM Catalyst 2022",
     "source_year": 2022,
     "source_url": "https://catalyst.nejm.org/doi/full/10.1056/CAT.22.0222",
-    "scraped_at": "2026-03-24T10:44:47.706637+00:00"
+    "scraped_at": "2026-03-24T14:52:59.925517+00:00"
   },
   {
     "id": 5,
@@ -374,7 +374,7 @@
     "source": "CMS Medicaid Actuarial Report, FY2022",
     "source_year": 2022,
     "source_url": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicaid-actuarial-report",
-    "scraped_at": "2026-03-24T10:44:47.705113+00:00"
+    "scraped_at": "2026-03-24T14:52:59.923922+00:00"
   },
   {
     "id": 4,
@@ -387,7 +387,7 @@
     "source": "CMS Medicaid Actuarial Report, FY2022",
     "source_year": 2022,
     "source_url": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicaid-actuarial-report",
-    "scraped_at": "2026-03-24T10:44:47.704588+00:00"
+    "scraped_at": "2026-03-24T14:52:59.923360+00:00"
   },
   {
     "id": 3,
@@ -400,7 +400,7 @@
     "source": "CMS Medicaid Actuarial Report, FY2022",
     "source_year": 2022,
     "source_url": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicaid-actuarial-report",
-    "scraped_at": "2026-03-24T10:44:47.703943+00:00"
+    "scraped_at": "2026-03-24T14:52:59.922783+00:00"
   },
   {
     "id": 2,
@@ -413,7 +413,7 @@
     "source": "CMS Medicaid Actuarial Report, FY2022",
     "source_year": 2022,
     "source_url": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicaid-actuarial-report",
-    "scraped_at": "2026-03-24T10:44:47.703257+00:00"
+    "scraped_at": "2026-03-24T14:52:59.922218+00:00"
   },
   {
     "id": 1,
@@ -426,7 +426,7 @@
     "source": "CMS National Health Expenditure Data, 2022",
     "source_year": 2022,
     "source_url": "https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data",
-    "scraped_at": "2026-03-24T10:44:47.701225+00:00"
+    "scraped_at": "2026-03-24T14:52:59.921559+00:00"
   },
   {
     "id": 25,
@@ -439,7 +439,7 @@
     "source": "Camden Coalition / Finkelstein et al. NEJM 2020 + supplemental cost analysis",
     "source_year": 2020,
     "source_url": "https://www.nejm.org/doi/full/10.1056/NEJMsa1916533",
-    "scraped_at": "2026-03-24T10:44:47.716022+00:00"
+    "scraped_at": "2026-03-24T14:52:59.935865+00:00"
   },
   {
     "id": 6,
@@ -452,6 +452,6 @@
     "source": "HCUP Statistical Brief #268, 2020 ED Visits",
     "source_year": 2020,
     "source_url": "https://hcup-us.ahrq.gov/reports/statbriefs/sb268-ED-Costs-2017-2020.jsp",
-    "scraped_at": "2026-03-24T10:44:47.705669+00:00"
+    "scraped_at": "2026-03-24T14:52:59.924405+00:00"
   }
 ]
