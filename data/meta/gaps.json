@@ -5,59 +5,59 @@
       "source": "hud-fmr",
       "fips": "42045",
       "county": "Delaware County, PA",
-      "reason": "HTTP 401",
+      "reason": "HTTP 500",
       "needs_key": true,
-      "logged_at": "2026-03-31T02:05:22.005Z"
+      "logged_at": "2026-03-31T05:42:49.051Z"
     },
     {
       "source": "hud-fmr",
       "fips": "42091",
       "county": "Montgomery County, PA",
-      "reason": "HTTP 401",
+      "reason": "HTTP 500",
       "needs_key": true,
-      "logged_at": "2026-03-31T02:05:22.578Z"
+      "logged_at": "2026-03-31T05:42:50.610Z"
     },
     {
       "source": "hud-fmr",
       "fips": "42017",
       "county": "Bucks County, PA",
-      "reason": "HTTP 401",
+      "reason": "HTTP 500",
       "needs_key": true,
-      "logged_at": "2026-03-31T02:05:23.149Z"
+      "logged_at": "2026-03-31T05:42:52.150Z"
     },
     {
       "source": "hud-fmr",
       "fips": "42029",
       "county": "Chester County, PA",
-      "reason": "HTTP 401",
+      "reason": "HTTP 500",
       "needs_key": true,
-      "logged_at": "2026-03-31T02:05:23.722Z"
+      "logged_at": "2026-03-31T05:42:53.690Z"
     },
     {
       "source": "hud-fmr",
       "fips": "36047",
       "county": "Kings County (Brooklyn), NY",
-      "reason": "HTTP 401",
+      "reason": "HTTP 500",
       "needs_key": true,
-      "logged_at": "2026-03-31T02:05:24.302Z"
+      "logged_at": "2026-03-31T05:42:55.224Z"
     },
     {
       "source": "hud-fmr",
       "fips": "36081",
       "county": "Queens County, NY",
-      "reason": "HTTP 401",
+      "reason": "HTTP 500",
       "needs_key": true,
-      "logged_at": "2026-03-31T02:05:24.874Z"
+      "logged_at": "2026-03-31T05:42:56.755Z"
     },
     {
       "source": "hud-fmr",
       "fips": "36005",
       "county": "Bronx County, NY",
-      "reason": "HTTP 401",
+      "reason": "HTTP 500",
       "needs_key": true,
-      "logged_at": "2026-03-31T02:05:25.446Z"
+      "logged_at": "2026-03-31T05:42:58.290Z"
     }
   ],
-  "last_updated": "2026-03-31T02:05:25.951Z",
+  "last_updated": "2026-03-31T05:42:58.795Z",
   "total": 8
 }
