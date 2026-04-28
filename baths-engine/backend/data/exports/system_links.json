@@ -8,7 +8,7 @@
     "latency": "daily",
     "consent_barrier": "none",
     "legal_authority": "IRC \u00a7 6103(l)(1) \u2014 SSA access to tax data",
-    "scraped_at": "2026-04-28T18:32:08.856518+00:00"
+    "scraped_at": "2026-04-28T22:20:13.386193+00:00"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "latency": "daily",
     "consent_barrier": "none",
     "legal_authority": "SSA \u00a7 1818/1836 \u2014 Medicare enrollment via SSA",
-    "scraped_at": "2026-04-28T18:32:08.857089+00:00"
+    "scraped_at": "2026-04-28T22:20:13.386661+00:00"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "latency": "quarterly",
     "consent_barrier": "none",
     "legal_authority": "SSA \u00a7 1137 \u2014 wage/UI cross-match for benefit verification",
-    "scraped_at": "2026-04-28T18:32:08.857684+00:00"
+    "scraped_at": "2026-04-28T22:20:13.387005+00:00"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "latency": "monthly",
     "consent_barrier": "none",
     "legal_authority": "Food & Nutrition Act \u00a7 11(e)(19) \u2014 SSI categorical eligibility",
-    "scraped_at": "2026-04-28T18:32:08.858270+00:00"
+    "scraped_at": "2026-04-28T22:20:13.387356+00:00"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "latency": "daily",
     "consent_barrier": "none",
     "legal_authority": "ACA \u00a7 1413 \u2014 IRS income data for Medicaid MAGI determination",
-    "scraped_at": "2026-04-28T18:32:08.858826+00:00"
+    "scraped_at": "2026-04-28T22:20:13.387695+00:00"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "latency": "realtime",
     "consent_barrier": "none",
     "legal_authority": "MISSION Act \u2014 VA community care coordination with Medicare",
-    "scraped_at": "2026-04-28T18:32:08.859374+00:00"
+    "scraped_at": "2026-04-28T22:20:13.388113+00:00"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "latency": "monthly",
     "consent_barrier": "individual",
     "legal_authority": "PIH Notice 2015-19 \u2014 PHA access to criminal records for screening",
-    "scraped_at": "2026-04-28T18:32:08.862253+00:00"
+    "scraped_at": "2026-04-28T22:20:13.388453+00:00"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "latency": "none",
     "consent_barrier": "individual",
     "legal_authority": "42 CFR \u00a7 431.300 limits; no statutory authority for routine sharing",
-    "scraped_at": "2026-04-28T18:32:08.862791+00:00"
+    "scraped_at": "2026-04-28T22:20:13.388811+00:00"
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "latency": "none",
     "consent_barrier": "agency",
     "legal_authority": "Express lane eligibility (42 U.S.C. \u00a7 1396a(e)(13)) \u2014 CHIP/Medicaid can use SNAP data",
-    "scraped_at": "2026-04-28T18:32:08.863329+00:00"
+    "scraped_at": "2026-04-28T22:20:13.389138+00:00"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "latency": "none",
     "consent_barrier": "individual",
     "legal_authority": "SSVF program allows data sharing with consent; no universal authority",
-    "scraped_at": "2026-04-28T18:32:08.864045+00:00"
+    "scraped_at": "2026-04-28T22:20:13.389596+00:00"
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "latency": "none",
     "consent_barrier": "statutory",
     "legal_authority": "FERPA restricts; would require statutory change or individual consent",
-    "scraped_at": "2026-04-28T18:32:08.866255+00:00"
+    "scraped_at": "2026-04-28T22:20:13.389959+00:00"
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "latency": "none",
     "consent_barrier": "statutory",
     "legal_authority": "42 CFR Part 2 (SUD records); HIPAA minimum necessary; 28 CFR Part 20",
-    "scraped_at": "2026-04-28T18:32:08.866857+00:00"
+    "scraped_at": "2026-04-28T22:20:13.390295+00:00"
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "latency": "none",
     "consent_barrier": "statutory",
     "legal_authority": "IRC \u00a7 6103 \u2014 strict limits on IRS data disclosure; HUD not listed",
-    "scraped_at": "2026-04-28T18:32:08.867477+00:00"
+    "scraped_at": "2026-04-28T22:20:13.390667+00:00"
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "latency": "none",
     "consent_barrier": "statutory",
     "legal_authority": "FERPA \u00a7 99.31 \u2014 no exception for health/social services routine sharing",
-    "scraped_at": "2026-04-28T18:32:08.868065+00:00"
+    "scraped_at": "2026-04-28T22:20:13.390989+00:00"
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
     "latency": "none",
     "consent_barrier": "statutory",
     "legal_authority": "TANF confidentiality rules (45 CFR \u00a7 265.6); no authorization for justice sharing",
-    "scraped_at": "2026-04-28T18:32:08.868590+00:00"
+    "scraped_at": "2026-04-28T22:20:13.391388+00:00"
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
     "latency": "realtime",
     "consent_barrier": "individual",
     "legal_authority": "HUD CoC requirements; HMIS Data Standards",
-    "scraped_at": "2026-04-28T18:32:08.869156+00:00"
+    "scraped_at": "2026-04-28T22:20:13.391840+00:00"
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
     "latency": "none",
     "consent_barrier": "none",
     "legal_authority": "Property data is public; no legal barrier, just no integration built",
-    "scraped_at": "2026-04-28T18:32:08.869671+00:00"
+    "scraped_at": "2026-04-28T22:20:13.392289+00:00"
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
     "latency": "daily",
     "consent_barrier": "none",
     "legal_authority": "PA DHS integrated eligibility \u2014 COMPASS feeds PA MMIS",
-    "scraped_at": "2026-04-28T18:32:08.870357+00:00"
+    "scraped_at": "2026-04-28T22:20:13.392624+00:00"
   },
   {
     "id": 19,
@@ -206,6 +206,6 @@
     "latency": "daily",
     "consent_barrier": "none",
     "legal_authority": "PA DHS administers SNAP through COMPASS; same agency",
-    "scraped_at": "2026-04-28T18:32:08.871005+00:00"
+    "scraped_at": "2026-04-28T22:20:13.392966+00:00"
   }
 ]
