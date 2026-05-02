@@ -11,7 +11,7 @@
     "annual_records": 1400000,
     "api_endpoint": "",
     "consent_required": "agency",
-    "scraped_at": "2026-05-02T14:19:22.492562+00:00"
+    "scraped_at": "2026-05-02T18:17:35.877593+00:00"
   },
   {
     "id": 15,
@@ -25,7 +25,7 @@
     "annual_records": 1000000,
     "api_endpoint": "",
     "consent_required": "agency",
-    "scraped_at": "2026-05-02T14:19:22.491985+00:00"
+    "scraped_at": "2026-05-02T18:17:35.877103+00:00"
   },
   {
     "id": 6,
@@ -39,7 +39,7 @@
     "annual_records": 66700000,
     "api_endpoint": "https://www2.ccwdata.org/",
     "consent_required": "agency",
-    "scraped_at": "2026-05-02T14:19:22.430165+00:00"
+    "scraped_at": "2026-05-02T18:17:35.872282+00:00"
   },
   {
     "id": 5,
@@ -53,7 +53,7 @@
     "annual_records": 66700000,
     "api_endpoint": "",
     "consent_required": "statutory",
-    "scraped_at": "2026-05-02T14:19:22.429640+00:00"
+    "scraped_at": "2026-05-02T18:17:35.871778+00:00"
   },
   {
     "id": 4,
@@ -67,7 +67,7 @@
     "annual_records": 94000000,
     "api_endpoint": "",
     "consent_required": "agency",
-    "scraped_at": "2026-05-02T14:19:22.428730+00:00"
+    "scraped_at": "2026-05-02T18:17:35.871165+00:00"
   },
   {
     "id": 19,
@@ -81,7 +81,7 @@
     "annual_records": 580000,
     "api_endpoint": "https://phl.carto.com/api/v2/sql",
     "consent_required": "none",
-    "scraped_at": "2026-05-02T14:19:22.494065+00:00"
+    "scraped_at": "2026-05-02T18:17:35.879144+00:00"
   },
   {
     "id": 18,
@@ -95,7 +95,7 @@
     "annual_records": 15000,
     "api_endpoint": "",
     "consent_required": "individual",
-    "scraped_at": "2026-05-02T14:19:22.493587+00:00"
+    "scraped_at": "2026-05-02T18:17:35.878674+00:00"
   },
   {
     "id": 13,
@@ -109,7 +109,7 @@
     "annual_records": 43000000,
     "api_endpoint": "",
     "consent_required": "statutory",
-    "scraped_at": "2026-05-02T14:19:22.434008+00:00"
+    "scraped_at": "2026-05-02T18:17:35.875999+00:00"
   },
   {
     "id": 7,
@@ -123,7 +123,7 @@
     "annual_records": 4700000,
     "api_endpoint": "",
     "consent_required": "agency",
-    "scraped_at": "2026-05-02T14:19:22.430707+00:00"
+    "scraped_at": "2026-05-02T18:17:35.872850+00:00"
   },
   {
     "id": 8,
@@ -137,7 +137,7 @@
     "annual_records": 1600000,
     "api_endpoint": "",
     "consent_required": "individual",
-    "scraped_at": "2026-05-02T14:19:22.431321+00:00"
+    "scraped_at": "2026-05-02T18:17:35.873423+00:00"
   },
   {
     "id": 11,
@@ -151,7 +151,7 @@
     "annual_records": 160000000,
     "api_endpoint": "",
     "consent_required": "statutory",
-    "scraped_at": "2026-05-02T14:19:22.433001+00:00"
+    "scraped_at": "2026-05-02T18:17:35.874965+00:00"
   },
   {
     "id": 12,
@@ -165,7 +165,7 @@
     "annual_records": 9100000,
     "api_endpoint": "",
     "consent_required": "statutory",
-    "scraped_at": "2026-05-02T14:19:22.433519+00:00"
+    "scraped_at": "2026-05-02T18:17:35.875510+00:00"
   },
   {
     "id": 14,
@@ -179,7 +179,7 @@
     "annual_records": 83000000,
     "api_endpoint": "",
     "consent_required": "statutory",
-    "scraped_at": "2026-05-02T14:19:22.440778+00:00"
+    "scraped_at": "2026-05-02T18:17:35.876553+00:00"
   },
   {
     "id": 9,
@@ -193,7 +193,7 @@
     "annual_records": 160000000,
     "api_endpoint": "",
     "consent_required": "statutory",
-    "scraped_at": "2026-05-02T14:19:22.431897+00:00"
+    "scraped_at": "2026-05-02T18:17:35.873909+00:00"
   },
   {
     "id": 17,
@@ -207,7 +207,7 @@
     "annual_records": 3500000,
     "api_endpoint": "https://www.compass.state.pa.us/compass.web/Public/CMPHome",
     "consent_required": "individual",
-    "scraped_at": "2026-05-02T14:19:22.493046+00:00"
+    "scraped_at": "2026-05-02T18:17:35.878070+00:00"
   },
   {
     "id": 2,
@@ -221,7 +221,7 @@
     "annual_records": 70000000,
     "api_endpoint": "",
     "consent_required": "statutory",
-    "scraped_at": "2026-05-02T14:19:22.427685+00:00"
+    "scraped_at": "2026-05-02T18:17:35.870061+00:00"
   },
   {
     "id": 1,
@@ -235,7 +235,7 @@
     "annual_records": 450000000,
     "api_endpoint": "",
     "consent_required": "statutory",
-    "scraped_at": "2026-05-02T14:19:22.427032+00:00"
+    "scraped_at": "2026-05-02T18:17:35.869375+00:00"
   },
   {
     "id": 3,
@@ -249,7 +249,7 @@
     "annual_records": 7400000,
     "api_endpoint": "",
     "consent_required": "statutory",
-    "scraped_at": "2026-05-02T14:19:22.428205+00:00"
+    "scraped_at": "2026-05-02T18:17:35.870671+00:00"
   },
   {
     "id": 10,
@@ -263,6 +263,6 @@
     "annual_records": 22000000,
     "api_endpoint": "",
     "consent_required": "agency",
-    "scraped_at": "2026-05-02T14:19:22.432412+00:00"
+    "scraped_at": "2026-05-02T18:17:35.874402+00:00"
   }
 ]
