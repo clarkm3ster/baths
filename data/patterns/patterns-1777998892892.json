@@ -1,0 +1,314 @@
+{
+  "generated_at": "2026-05-05T16:34:52.890Z",
+  "dome_count": 168,
+  "geographic_deltas": [
+    {
+      "archetype": "marcus",
+      "highest_delta": {
+        "fips": "53033",
+        "county": "King County (Seattle), WA",
+        "delta": 22669
+      },
+      "lowest_delta": {
+        "fips": "28049",
+        "county": "Hinds County (Jackson), MS",
+        "delta": 14869
+      },
+      "spread": 7800
+    },
+    {
+      "archetype": "elena",
+      "highest_delta": {
+        "fips": "53033",
+        "county": "King County (Seattle), WA",
+        "delta": 23240
+      },
+      "lowest_delta": {
+        "fips": "21013",
+        "county": "Bell County, KY",
+        "delta": 14504
+      },
+      "spread": 8736
+    },
+    {
+      "archetype": "james",
+      "highest_delta": {
+        "fips": "53033",
+        "county": "King County (Seattle), WA",
+        "delta": 17954
+      },
+      "lowest_delta": {
+        "fips": "21013",
+        "county": "Bell County, KY",
+        "delta": 9580
+      },
+      "spread": 8374
+    },
+    {
+      "archetype": "rivera",
+      "highest_delta": {
+        "fips": "53033",
+        "county": "King County (Seattle), WA",
+        "delta": 13186
+      },
+      "lowest_delta": {
+        "fips": "34017",
+        "county": "Hudson County, NJ",
+        "delta": 9130
+      },
+      "spread": 4056
+    },
+    {
+      "archetype": "aisha",
+      "highest_delta": {
+        "fips": "53033",
+        "county": "King County (Seattle), WA",
+        "delta": 19252
+      },
+      "lowest_delta": {
+        "fips": "21013",
+        "county": "Bell County, KY",
+        "delta": 10877
+      },
+      "spread": 8375
+    }
+  ],
+  "common_gaps": {
+    "nutrition:fragment": 168,
+    "safety:fragment": 168,
+    "safety:condition": 168,
+    "environment:fragment": 168,
+    "environment:condition": 168,
+    "legal:fragment": 168,
+    "legal:condition": 168,
+    "health:fragment": 138,
+    "health:condition": 138,
+    "housing:fragment": 138
+  },
+  "program_clusters": {
+    "Medicaid": 112,
+    "CHIP": 84,
+    "SNAP": 112,
+    "EITC": 140,
+    "WIC": 84,
+    "LIHEAP": 140,
+    "Free School Lunch": 56,
+    "Section 8 HCV": 110,
+    "Pell Grant": 56,
+    "Reduced School Lunch": 28
+  },
+  "archetype_patterns": {
+    "marcus": {
+      "domes": 28,
+      "avg_cosm": 10,
+      "avg_delta": 18811,
+      "avg_programs": 7.8
+    },
+    "elena": {
+      "domes": 28,
+      "avg_cosm": 10,
+      "avg_delta": 19762,
+      "avg_programs": 9
+    },
+    "james": {
+      "domes": 28,
+      "avg_cosm": 10,
+      "avg_delta": 14490,
+      "avg_programs": 5
+    },
+    "rivera": {
+      "domes": 28,
+      "avg_cosm": 10,
+      "avg_delta": 9523,
+      "avg_programs": 5.2
+    },
+    "aisha": {
+      "domes": 28,
+      "avg_cosm": 10,
+      "avg_delta": 15787,
+      "avg_programs": 6
+    },
+    "median": {
+      "domes": 28,
+      "avg_cosm": 10,
+      "avg_delta": 0,
+      "avg_programs": 0
+    }
+  },
+  "cosm_distribution": {
+    "min": 10,
+    "max": 10,
+    "median": 10,
+    "by_geography": {
+      "11001": {
+        "name": "District of Columbia",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 88925
+      },
+      "12086": {
+        "name": "Miami-Dade County, FL",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 84082
+      },
+      "13121": {
+        "name": "Fulton County (Atlanta), GA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 81736
+      },
+      "17031": {
+        "name": "Cook County (Chicago), IL",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 72325
+      },
+      "21013": {
+        "name": "Bell County, KY",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 58960
+      },
+      "24510": {
+        "name": "Baltimore City, MD",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 67952
+      },
+      "26163": {
+        "name": "Wayne County (Detroit), MI",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 69605
+      },
+      "28049": {
+        "name": "Hinds County (Jackson), MS",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 66735
+      },
+      "34013": {
+        "name": "Essex County, NJ",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 78616
+      },
+      "34017": {
+        "name": "Hudson County, NJ",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 86553
+      },
+      "34023": {
+        "name": "Middlesex County, NJ",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 89718
+      },
+      "36005": {
+        "name": "Bronx County, NY",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 74167
+      },
+      "36047": {
+        "name": "Kings County (Brooklyn), NY",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 86379
+      },
+      "36061": {
+        "name": "New York County (Manhattan), NY",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 90972
+      },
+      "36081": {
+        "name": "Queens County, NY",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 89673
+      },
+      "39035": {
+        "name": "Cuyahoga County (Cleveland), OH",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 67333
+      },
+      "42017": {
+        "name": "Bucks County, PA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 81044
+      },
+      "42029": {
+        "name": "Chester County, PA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 85411
+      },
+      "42045": {
+        "name": "Delaware County, PA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 74947
+      },
+      "42091": {
+        "name": "Montgomery County, PA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 82698
+      },
+      "42101": {
+        "name": "Philadelphia, PA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 68664
+      },
+      "48113": {
+        "name": "Dallas County, TX",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 77868
+      },
+      "48201": {
+        "name": "Harris County (Houston), TX",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 75247
+      },
+      "53033": {
+        "name": "King County (Seattle), WA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 96301
+      },
+      "54055": {
+        "name": "Mercer County, WV",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 62485
+      },
+      "06037": {
+        "name": "Los Angeles County, CA",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 85929
+      },
+      "04013": {
+        "name": "Maricopa County (Phoenix), AZ",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 79440
+      },
+      "01073": {
+        "name": "Jefferson County (Birmingham), AL",
+        "domes": 6,
+        "avg_cosm": 10,
+        "total_delta": 70679
+      }
+    }
+  },
+  "savings_total": 2194444
+}
