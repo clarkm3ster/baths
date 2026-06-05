@@ -12,7 +12,7 @@
     "dome_dimension": "interoperability",
     "tags": "[\"ONC\", \"FHIR\", \"USCDI\", \"information blocking\", \"Cures Act\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.929922+00:00"
+    "scraped_at": "2026-06-05T23:01:39.961599+00:00"
   },
   {
     "id": 29,
@@ -27,7 +27,7 @@
     "dome_dimension": "interoperability",
     "tags": "[\"MITA\", \"Medicaid IT\", \"FFP\", \"interoperability\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.929126+00:00"
+    "scraped_at": "2026-06-05T23:01:39.961244+00:00"
   },
   {
     "id": 28,
@@ -42,7 +42,7 @@
     "dome_dimension": "data_privacy",
     "tags": "[\"HIPAA\", \"disclosure\", \"consent\", \"privacy\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.928402+00:00"
+    "scraped_at": "2026-06-05T23:01:39.960787+00:00"
   },
   {
     "id": 27,
@@ -57,7 +57,7 @@
     "dome_dimension": "data_privacy",
     "tags": "[\"Part 2\", \"SUD\", \"confidentiality\", \"consent\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.927684+00:00"
+    "scraped_at": "2026-06-05T23:01:39.960438+00:00"
   },
   {
     "id": 26,
@@ -72,7 +72,7 @@
     "dome_dimension": "justice",
     "tags": "[\"BOP\", \"classification\", \"security level\", \"reentry\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.927022+00:00"
+    "scraped_at": "2026-06-05T23:01:39.960044+00:00"
   },
   {
     "id": 25,
@@ -87,7 +87,7 @@
     "dome_dimension": "justice",
     "tags": "[\"PREA\", \"prisons\", \"safety\", \"standards\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.926368+00:00"
+    "scraped_at": "2026-06-05T23:01:39.959639+00:00"
   },
   {
     "id": 24,
@@ -102,7 +102,7 @@
     "dome_dimension": "education",
     "tags": "[\"IDEA\", \"IEP\", \"special education\", \"disabilities\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.925603+00:00"
+    "scraped_at": "2026-06-05T23:01:39.959209+00:00"
   },
   {
     "id": 23,
@@ -117,7 +117,7 @@
     "dome_dimension": "education",
     "tags": "[\"FERPA\", \"privacy\", \"education records\", \"data sharing\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.925036+00:00"
+    "scraped_at": "2026-06-05T23:01:39.958774+00:00"
   },
   {
     "id": 22,
@@ -132,7 +132,7 @@
     "dome_dimension": "employment",
     "tags": "[\"WIOA\", \"nondiscrimination\", \"equal opportunity\", \"disability\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.924406+00:00"
+    "scraped_at": "2026-06-05T23:01:39.958371+00:00"
   },
   {
     "id": 21,
@@ -147,7 +147,7 @@
     "dome_dimension": "employment",
     "tags": "[\"WIOA\", \"training\", \"ITA\", \"credentials\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.923728+00:00"
+    "scraped_at": "2026-06-05T23:01:39.958007+00:00"
   },
   {
     "id": 20,
@@ -162,7 +162,7 @@
     "dome_dimension": "employment",
     "tags": "[\"WIOA\", \"American Job Center\", \"one-stop\", \"workforce\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.922914+00:00"
+    "scraped_at": "2026-06-05T23:01:39.957603+00:00"
   },
   {
     "id": 19,
@@ -177,7 +177,7 @@
     "dome_dimension": "food",
     "tags": "[\"WIC\", \"nutrition\", \"maternal\", \"children\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.922137+00:00"
+    "scraped_at": "2026-06-05T23:01:39.957199+00:00"
   },
   {
     "id": 18,
@@ -192,7 +192,7 @@
     "dome_dimension": "food",
     "tags": "[\"SNAP\", \"income\", \"deductions\", \"benefit calculation\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.921477+00:00"
+    "scraped_at": "2026-06-05T23:01:39.956766+00:00"
   },
   {
     "id": 17,
@@ -207,7 +207,7 @@
     "dome_dimension": "food",
     "tags": "[\"SNAP\", \"application\", \"expedited\", \"food stamps\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.920712+00:00"
+    "scraped_at": "2026-06-05T23:01:39.956404+00:00"
   },
   {
     "id": 16,
@@ -222,7 +222,7 @@
     "dome_dimension": "income",
     "tags": "[\"SSDI\", \"disability\", \"insurance\", \"work credits\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.919700+00:00"
+    "scraped_at": "2026-06-05T23:01:39.955987+00:00"
   },
   {
     "id": 15,
@@ -237,7 +237,7 @@
     "dome_dimension": "income",
     "tags": "[\"TANF\", \"work requirements\", \"time limits\", \"welfare\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.919013+00:00"
+    "scraped_at": "2026-06-05T23:01:39.955474+00:00"
   },
   {
     "id": 14,
@@ -252,7 +252,7 @@
     "dome_dimension": "income",
     "tags": "[\"SSI\", \"resource limits\", \"asset test\", \"poverty trap\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.918310+00:00"
+    "scraped_at": "2026-06-05T23:01:39.954982+00:00"
   },
   {
     "id": 13,
@@ -267,7 +267,7 @@
     "dome_dimension": "income",
     "tags": "[\"SSI\", \"disability\", \"cash assistance\", \"resource limits\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.917412+00:00"
+    "scraped_at": "2026-06-05T23:01:39.954632+00:00"
   },
   {
     "id": 12,
@@ -282,7 +282,7 @@
     "dome_dimension": "housing",
     "tags": "[\"FMR\", \"rent\", \"payment standard\", \"Section 8\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.916849+00:00"
+    "scraped_at": "2026-06-05T23:01:39.954224+00:00"
   },
   {
     "id": 11,
@@ -297,7 +297,7 @@
     "dome_dimension": "housing",
     "tags": "[\"income\", \"rent calculation\", \"cliff effects\", \"eligibility\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.916182+00:00"
+    "scraped_at": "2026-06-05T23:01:39.953806+00:00"
   },
   {
     "id": 10,
@@ -312,7 +312,7 @@
     "dome_dimension": "housing",
     "tags": "[\"CoC\", \"permanent supportive housing\", \"rapid re-housing\", \"HMIS\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.915578+00:00"
+    "scraped_at": "2026-06-05T23:01:39.953420+00:00"
   },
   {
     "id": 9,
@@ -327,7 +327,7 @@
     "dome_dimension": "housing",
     "tags": "[\"homelessness\", \"definition\", \"CoC\", \"McKinney-Vento\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.914982+00:00"
+    "scraped_at": "2026-06-05T23:01:39.953003+00:00"
   },
   {
     "id": 8,
@@ -342,7 +342,7 @@
     "dome_dimension": "housing",
     "tags": "[\"section 8\", \"vouchers\", \"rental assistance\", \"PHA\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.914268+00:00"
+    "scraped_at": "2026-06-05T23:01:39.952584+00:00"
   },
   {
     "id": 7,
@@ -357,7 +357,7 @@
     "dome_dimension": "healthcare",
     "tags": "[\"HIPAA\", \"privacy\", \"PHI\", \"data sharing\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.913538+00:00"
+    "scraped_at": "2026-06-05T23:01:39.952111+00:00"
   },
   {
     "id": 6,
@@ -372,7 +372,7 @@
     "dome_dimension": "healthcare",
     "tags": "[\"medicaid\", \"privacy\", \"data sharing\", \"confidentiality\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.912903+00:00"
+    "scraped_at": "2026-06-05T23:01:39.951675+00:00"
   },
   {
     "id": 5,
@@ -387,7 +387,7 @@
     "dome_dimension": "healthcare",
     "tags": "[\"medicare\", \"advantage\", \"managed care\", \"capitation\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.912273+00:00"
+    "scraped_at": "2026-06-05T23:01:39.951225+00:00"
   },
   {
     "id": 4,
@@ -402,7 +402,7 @@
     "dome_dimension": "healthcare",
     "tags": "[\"medicaid\", \"services\", \"medical necessity\", \"adequacy\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.911521+00:00"
+    "scraped_at": "2026-06-05T23:01:39.950818+00:00"
   },
   {
     "id": 3,
@@ -417,7 +417,7 @@
     "dome_dimension": "healthcare",
     "tags": "[\"medicaid\", \"managed care\", \"capitation\", \"contracts\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.910618+00:00"
+    "scraped_at": "2026-06-05T23:01:39.950373+00:00"
   },
   {
     "id": 2,
@@ -432,7 +432,7 @@
     "dome_dimension": "healthcare",
     "tags": "[\"medicaid\", \"pregnancy\", \"maternal health\", \"eligibility\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.909854+00:00"
+    "scraped_at": "2026-06-05T23:01:39.949907+00:00"
   },
   {
     "id": 1,
@@ -447,6 +447,6 @@
     "dome_dimension": "healthcare",
     "tags": "[\"medicaid\", \"eligibility\", \"MAGI\", \"ACA\"]",
     "effective_date": null,
-    "scraped_at": "2026-06-05T19:46:22.908907+00:00"
+    "scraped_at": "2026-06-05T23:01:39.949359+00:00"
   }
 ]
