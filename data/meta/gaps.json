@@ -7,7 +7,7 @@
       "county": "Delaware County, PA",
       "reason": "HTTP 401",
       "needs_key": true,
-      "logged_at": "2026-06-24T00:41:26.562Z"
+      "logged_at": "2026-06-24T05:21:50.014Z"
     },
     {
       "source": "hud-fmr",
@@ -15,7 +15,7 @@
       "county": "Montgomery County, PA",
       "reason": "HTTP 401",
       "needs_key": true,
-      "logged_at": "2026-06-24T00:41:27.188Z"
+      "logged_at": "2026-06-24T05:21:50.643Z"
     },
     {
       "source": "hud-fmr",
@@ -23,7 +23,7 @@
       "county": "Bucks County, PA",
       "reason": "HTTP 401",
       "needs_key": true,
-      "logged_at": "2026-06-24T00:41:27.868Z"
+      "logged_at": "2026-06-24T05:21:51.271Z"
     },
     {
       "source": "hud-fmr",
@@ -31,7 +31,7 @@
       "county": "Chester County, PA",
       "reason": "HTTP 401",
       "needs_key": true,
-      "logged_at": "2026-06-24T00:41:28.454Z"
+      "logged_at": "2026-06-24T05:21:53.677Z"
     },
     {
       "source": "hud-fmr",
@@ -39,7 +39,7 @@
       "county": "Kings County (Brooklyn), NY",
       "reason": "HTTP 401",
       "needs_key": true,
-      "logged_at": "2026-06-24T00:41:29.041Z"
+      "logged_at": "2026-06-24T05:21:54.310Z"
     },
     {
       "source": "hud-fmr",
@@ -47,7 +47,7 @@
       "county": "Queens County, NY",
       "reason": "HTTP 401",
       "needs_key": true,
-      "logged_at": "2026-06-24T00:41:29.622Z"
+      "logged_at": "2026-06-24T05:21:54.936Z"
     },
     {
       "source": "hud-fmr",
@@ -55,9 +55,9 @@
       "county": "Bronx County, NY",
       "reason": "HTTP 401",
       "needs_key": true,
-      "logged_at": "2026-06-24T00:41:30.208Z"
+      "logged_at": "2026-06-24T05:21:55.564Z"
     }
   ],
-  "last_updated": "2026-06-24T00:41:30.713Z",
+  "last_updated": "2026-06-24T05:21:56.070Z",
   "total": 8
 }
